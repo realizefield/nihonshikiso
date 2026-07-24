@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>①日本列島のはじまり ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a2318}
+  .unit-header{background:linear-gradient(135deg,#8b3322,#c87000);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+
+  /* モードタブ */
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #d4956a;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.2s;flex:1;min-width:130px;text-align:center}
+  .mode-tab.active{background:#8b3322;color:#fff;border-color:#8b3322;box-shadow:0 3px 0 #6a2318}
+  .mode-tab:hover:not(.active){background:#fdebd0}
+
+  /* パネル */
+  .panel{background:#fff;border-radius:12px;border:1px solid #d4956a;padding:22px;margin-bottom:14px}
+  .unit-desc{background:#fff8f0;border-left:4px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:14px;color:#555;line-height:1.8}
+
+  /* フラッシュカード */
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #d4956a;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.15s}
+  .fc-timer-btn.active{background:#8b3322;color:#fff;border-color:#8b3322}
+  .fc-timer-btn:hover:not(.active){background:#fdebd0}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(200,112,0,0.15);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#8b3322}
+  .fc-card .fc-hint{font-size:13px;color:#6a4f00;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:11px 32px;background:#8b3322;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #d4956a;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
+
+  /* 4択ドリル */
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318;display:none}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#8b3322;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+
+  /* 確認テスト */
+  .test-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+  .test-title{font-size:17px;font-weight:bold;color:#8b3322}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .test-choice.selected{border-color:#1a4f7a;background:#e0f0ff;color:#1a4f7a;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .test-submit{background:#8b3322;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #6a2318;margin-top:18px;width:100%}
+  .test-submit:hover{background:#6a2318}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#8b3322;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#c87000,#f4a261);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-link">← 目次へ戻る</a>
+
+<div class="unit-header">
+  <div class="unit-num">第１章 原始・古代｜単元①</div>
+  <h1>日本列島のはじまり——石器から稲作へ</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 9枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 5問</span>
+    <span class="stat-chip">📋 確認テスト 8問</span>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+// =========================================================
+//  単元データ：① 日本列島のはじまり——石器から稲作へ
+// =========================================================
+const UNIT = {
+  title: "日本列島のはじまり——石器から稲作へ",
+  topics: ["岩宿遺跡・縄文時代・三内丸山遺跡", "弥生時代・吉野ヶ里遺跡・稲作"],
+  flashCards: [
+    {q:"1949年，群馬県で打製石器を発見し，日本に旧石器時代があることを証明した遺跡は？", a:"岩宿遺跡", hint:"相沢忠洋が関東ローム層で発見"},
+    {q:"旧石器時代の別名は？（土器を持たない時代）", a:"先土器時代", hint:"「土器が先にない時代」"},
+    {q:"縄文時代から使われた，表面を磨いた石器は？", a:"磨製石器", hint:"弥生時代でも引き続き使用"},
+    {q:"縄目模様の黒褐色でもろい，縄文時代の土器は？", a:"縄文土器", hint:"600〜700℃の低温焼成"},
+    {q:"縄文人が住んだ，地面を掘り下げた住居は？", a:"竪穴式住居", hint:"寒さをしのぎやすい構造"},
+    {q:"縄文人の定住・栽培・大型建築を示す青森県の遺跡は？", a:"三内丸山遺跡", hint:"1992年から本格発掘"},
+    {q:"弥生時代に大陸から伝わった農業は？", a:"稲作", hint:"水田で米を作る"},
+    {q:"弥生時代の薄くて丈夫な土器は？", a:"弥生土器", hint:"高温焼成・赤褐色"},
+    {q:"弥生時代の集落の様子を伝える佐賀県の遺跡は？", a:"吉野ヶ里遺跡", hint:"柵と濠で囲まれた防衛型集落"},
+  ],
+  drillQuiz: [
+    {q:"1949年，日本に旧石器時代があったことを証明した群馬県の遺跡はどれですか？",
+     choices:["吉野ヶ里遺跡","三内丸山遺跡","岩宿遺跡","大森貝塚"],ans:2,
+     exp:"岩宿遺跡で相沢忠洋が関東ローム層から打製石器を発見。日本にも旧石器時代（先土器時代）があることが証明されました。"},
+    {q:"縄文土器の特徴として正しいのはどれですか？",
+     choices:["薄くて丈夫・高温・赤褐色","縄目模様・低温・黒褐色・もろい","ろくろで成形・左右対称","白くて硬い"],ans:1,
+     exp:"縄文土器は縄目模様が特徴。低温（600〜700℃）で焼くため黒褐色でもろいです。高温・丈夫なのは弥生土器です。"},
+    {q:"縄文人の定住・栽培・大型建築を示した青森県の遺跡はどれですか？",
+     choices:["岩宿遺跡","吉野ヶ里遺跡","大森貝塚","三内丸山遺跡"],ans:3,
+     exp:"三内丸山遺跡では，縄文人が定住し，栗を栽培し，高さ10mの六本柱の大型建物を建てていたことが分かりました。"},
+    {q:"弥生時代の集落の様子を示す佐賀県の遺跡はどれですか？",
+     choices:["岩宿遺跡","三内丸山遺跡","吉野ヶ里遺跡","大森貝塚"],ans:2,
+     exp:"吉野ヶ里遺跡は環濠集落（柵と濠で囲まれた集落）。弥生時代に土地・食料をめぐる争いがあったことを示します。"},
+    {q:"大陸から稲作が伝わったのはいつの時代ですか？",
+     choices:["旧石器時代","縄文時代","弥生時代","古墳時代"],ans:2,
+     exp:"稲作は紀元前4〜3世紀ごろ，大陸から北九州に伝わりました。稲作の伝来が弥生時代の始まりとされます。"},
+  ],
+  testQuiz: [
+    {q:"旧石器時代の別名は何か？",choices:["縄文時代","先土器時代","打製石器時代","古墳時代"],ans:1},
+    {q:"岩宿遺跡で打製石器を発見した人物は誰か？",choices:["梅原末治","相沢忠洋","浜田耕作","坪井正五郎"],ans:1},
+    {q:"縄文土器の焼成温度として正しいのはどれか？",choices:["1200℃以上","1000〜1100℃","600〜700℃","400℃以下"],ans:2},
+    {q:"弥生土器の特徴はどれか？",choices:["縄目模様・黒褐色・もろい","薄くて丈夫・赤褐色・高温焼成","厚くて丈夫・白色","細くて透明"],ans:1},
+    {q:"三内丸山遺跡が示す縄文人の特徴はどれか？",choices:["移動生活をしていた","定住して栽培・大型建物を作っていた","稲作を始めていた","金属器を使っていた"],ans:1},
+    {q:"吉野ヶ里遺跡はどこにあるか？",choices:["青森県","群馬県","佐賀県","大阪府"],ans:2},
+    {q:"弥生時代に稲作とともに伝わったものはどれか？",choices:["縄文土器","磨製石器のみ","金属器（青銅器・鉄器）","火起こし"],ans:2},
+    {q:"竪穴式住居はどの時代から使われたか？",choices:["弥生時代のみ","旧石器時代のみ","縄文時代から（弥生時代にも続く）","古墳時代のみ"],ans:2},
+  ],
+};
+
+// =========================================================
+//  状態変数
+// =========================================================
+let currentMode = 'flash';
+
+// フラッシュカード
+let fcCards = [];
+let fcIndex = 0;
+let fcOk = 0;
+let fcNg = 0;
+let fcFlipped = false;
+let fcTimerSec = 0;
+let fcTimerCount = 0;
+let fcTimerInterval = null;
+
+// 4択ドリル
+let drillQs = [];
+let drillIndex = 0;
+let drillScore = 0;
+let drillAnswered = false;
+
+// 確認テスト
+let testSelections = {};
+let testSubmitted = false;
+
+// =========================================================
+//  モード切り替え
+// =========================================================
+function selectMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i) => {
+    t.classList.toggle('active', ['flash','drill','test'][i] === mode);
+  });
+  renderContent();
+}
+
+function renderContent() {
+  const area = document.getElementById('content-area');
+  if (currentMode === 'flash') renderFlash(area);
+  else if (currentMode === 'drill') renderDrill(area);
+  else renderTest(area);
+}
+
+// =========================================================
+//  ユーティリティ
+// =========================================================
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function fireConfetti() {
+  const colors = ['#8b3322','#c87000','#f4d03f','#2d8a30','#e8d5c8','#fff'];
+  for (let i = 0; i < 80; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    const size = 8 + Math.random() * 10;
+    el.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 4000);
+  }
+}
+
+// =========================================================
+//  フラッシュカード
+// =========================================================
+function initFlash() {
+  fcCards = shuffle([...UNIT.flashCards]);
+  fcIndex = 0; fcOk = 0; fcNg = 0; fcFlipped = false;
+}
+
+function renderFlash(area) {
+  initFlash();
+  area.innerHTML = `
+  <div class="panel">
+    <div class="fc-timer-row">
+      <span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span>
+      <button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button>
+      <button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button>
+      <button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button>
+      <button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button>
+    </div>
+    <div id="fc-wrap">${buildFlashCard()}</div>
+  </div>`;
+  startCardTimer();
+}
+
+function buildFlashCard() {
+  if (fcIndex >= fcCards.length) {
+    const total = fcCards.length;
+    const pct = Math.round(fcOk / total * 100);
+    clearInterval(fcTimerInterval); fcTimerInterval = null;
+    if (pct === 100) fireConfetti();
+    return `
+      <div class="fc-result" style="display:block">
+        <div style="font-size:40px;font-weight:bold;color:#8b3322;margin-bottom:8px">${pct}%</div>
+        <div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div>
+        <p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p>
+        <button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button>
+      </div>`;
+  }
+  const card = fcCards[fcIndex];
+  return `
+    <div class="fc-progress">📖 ${fcIndex + 1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div>
+    <div class="fc-card" id="fc-card" onclick="flipCard()">
+      <span id="fc-countdown" class="fc-countdown" style="display:none"></span>
+      <div class="fc-front">${card.q}</div>
+      <div class="fc-back">${card.a}</div>
+      <div class="fc-hint">💡 ${card.hint}</div>
+      <span class="tap-hint">タップして確認</span>
+    </div>
+    <div class="fc-btns" id="fc-btns" style="display:none">
+      <button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button>
+      <button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button>
+    </div>`;
+}
+
+function flipCard() {
+  if (fcFlipped) return;
+  fcFlipped = true;
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  const card = document.getElementById('fc-card');
+  if (card) card.classList.add('flipped');
+  const cd = document.getElementById('fc-countdown');
+  if (cd) cd.style.display = 'none';
+  const btns = document.getElementById('fc-btns');
+  if (btns) btns.style.display = 'flex';
+}
+
+function fcAnswer(ok) {
+  if (ok) fcOk++; else fcNg++;
+  fcIndex++;
+  fcFlipped = false;
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  document.getElementById('fc-wrap').innerHTML = buildFlashCard();
+  startCardTimer();
+}
+
+function setFcTimer(sec) {
+  fcTimerSec = sec;
+  document.querySelectorAll('.fc-timer-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.sec) === sec);
+  });
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  if (!fcFlipped) startCardTimer();
+}
+
+function startCardTimer() {
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  if (fcTimerSec === 0 || fcFlipped) return;
+  fcTimerCount = fcTimerSec;
+  const cd = document.getElementById('fc-countdown');
+  if (cd) { cd.style.display = 'block'; cd.textContent = fcTimerCount; }
+  fcTimerInterval = setInterval(() => {
+    fcTimerCount--;
+    const el = document.getElementById('fc-countdown');
+    if (el) el.textContent = fcTimerCount > 0 ? fcTimerCount : '';
+    if (fcTimerCount <= 0) {
+      clearInterval(fcTimerInterval); fcTimerInterval = null;
+      flipCard();
+    }
+  }, 1000);
+}
+
+// =========================================================
+//  4択ドリル
+// =========================================================
+function renderDrill(area) {
+  drillQs = shuffle([...UNIT.drillQuiz]);
+  drillIndex = 0; drillScore = 0; drillAnswered = false;
+  area.innerHTML = `<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;
+}
+
+function buildDrillQ() {
+  const result = document.getElementById('drill-result-wrap');
+  if (result) return;
+  if (drillIndex >= drillQs.length) {
+    const pct = Math.round(drillScore / drillQs.length * 100);
+    if (pct === 100) fireConfetti();
+    return `
+      <div class="drill-result" style="display:block">
+        <div class="drill-result-score">${drillScore} / ${drillQs.length}</div>
+        <div class="drill-result-msg">${pct >= 80 ? '🎉 よくできました！' : pct >= 60 ? '👍 もう少しです！' : '📚 復習しましょう！'}</div>
+        <button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button>
+      </div>`;
+  }
+  const q = drillQs[drillIndex];
+  const choices = q.choices.map((c, i) =>
+    `<div class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</div>`
+  ).join('');
+  return `
+    <div class="drill-prog">${drillIndex + 1} / ${drillQs.length}問</div>
+    <div class="drill-q-num">問題 ${drillIndex + 1}</div>
+    <div class="drill-q">${q.q}</div>
+    <div class="drill-choices" id="drill-choices">${choices}</div>
+    <div class="drill-exp" id="drill-exp"></div>
+    <button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+
+function drillAnswer(idx) {
+  if (drillAnswered) return;
+  drillAnswered = true;
+  const q = drillQs[drillIndex];
+  const choices = document.querySelectorAll('.drill-choice');
+  choices.forEach((el, i) => {
+    if (i === q.ans) el.classList.add('correct');
+    else if (i === idx && i !== q.ans) el.classList.add('wrong');
+    else el.classList.add('reveal');
+  });
+  if (idx === q.ans) drillScore++;
+  const exp = document.getElementById('drill-exp');
+  if (exp) {
+    exp.classList.add('show');
+    exp.innerHTML = `<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;
+  }
+  const next = document.getElementById('drill-next');
+  if (next) next.style.display = 'inline-block';
+}
+
+function drillNext() {
+  drillIndex++;
+  drillAnswered = false;
+  const panel = document.getElementById('drill-panel');
+  if (panel) panel.innerHTML = buildDrillQ();
+}
+
+// =========================================================
+//  確認テスト
+// =========================================================
+function renderTest(area) {
+  testSelections = {}; testSubmitted = false;
+  const qs = UNIT.testQuiz;
+  const qHtml = qs.map((q, qi) => {
+    const cHtml = q.choices.map((c, ci) =>
+      `<div class="test-choice" data-qi="${qi}" data-ci="${ci}" onclick="testSelect(${qi},${ci})">${['①','②','③','④'][ci]} ${c}</div>`
+    ).join('');
+    return `
+      <div class="test-q-block">
+        <div class="test-q"><span class="test-q-num">${qi+1}</span>${q.q}</div>
+        <div class="test-choices" id="test-choices-${qi}">${cHtml}</div>
+      </div>`;
+  }).join('');
+  area.innerHTML = `
+    <div class="panel">
+      <div class="test-header"><span class="test-title">📋 確認テスト（全${qs.length}問）</span></div>
+      <div id="test-qs">${qHtml}</div>
+      <button class="test-submit" onclick="testSubmit()">採点する</button>
+      <div class="test-result-wrap" id="test-result"></div>
+    </div>`;
+}
+
+function testSelect(qi, ci) {
+  if (testSubmitted) return;
+  testSelections[qi] = ci;
+  document.querySelectorAll(`[data-qi="${qi}"]`).forEach(el => el.classList.remove('selected'));
+  document.querySelector(`[data-qi="${qi}"][data-ci="${ci}"]`).classList.add('selected');
+}
+
+function testSubmit() {
+  const qs = UNIT.testQuiz;
+  const unanswered = qs.filter((_, i) => testSelections[i] === undefined);
+  if (unanswered.length > 0) {
+    alert(`まだ${unanswered.length}問が未回答です。`);
+    return;
+  }
+  testSubmitted = true;
+  let score = 0;
+  const reviewItems = [];
+  qs.forEach((q, qi) => {
+    const sel = testSelections[qi];
+    const correct = sel === q.ans;
+    if (correct) score++;
+    document.querySelectorAll(`[data-qi="${qi}"]`).forEach((el, ci) => {
+      if (ci === q.ans) el.classList.add('correct');
+      else if (ci === sel) el.classList.add('wrong');
+      else el.classList.add('reveal');
+    });
+    reviewItems.push({correct, q: q.q, ans: q.choices[q.ans]});
+  });
+  const pct = Math.round(score / qs.length * 100);
+  const badge = pct === 100 ? 'A 完璧！' : pct >= 75 ? 'B よくできました' : pct >= 50 ? 'C もう少し' : 'D 要復習';
+  if (pct === 100) fireConfetti();
+  const reviewHtml = reviewItems.map((r,i) =>
+    `<div class="test-review-item ${r.correct?'ok':'ng'}">
+      <strong>${i+1}. ${r.correct?'✅':'❌'}</strong> ${r.q}
+      ${!r.correct ? `<br><span style="color:#c00">正解：${r.ans}</span>` : ''}
+    </div>`
+  ).join('');
+  document.querySelector('.test-submit').style.display = 'none';
+  const res = document.getElementById('test-result');
+  res.style.display = 'block';
+  res.innerHTML = `
+    <div class="test-result-score">${score} / ${qs.length}</div>
+    <div class="test-result-sub">${pct}点</div>
+    <div class="test-badge">${badge}</div>
+    <br>
+    <button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>
+    <div class="test-review">${reviewHtml}</div>`;
+  res.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// =========================================================
+//  初期表示
+// =========================================================
+renderContent();
+</script>
+</body>
+</html>

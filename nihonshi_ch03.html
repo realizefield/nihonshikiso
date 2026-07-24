@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：第３章 奈良時代</title>
+<style>
+  body{font-family:"Meiryo",sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding-bottom:220px}
+  h1{border-bottom:3px solid #8b3322;padding-bottom:8px;font-size:24px;color:#1a1a2e}
+  h2{margin-top:20px;margin-bottom:8px;font-size:19px;border-left:5px solid #8b3322;padding-left:10px;color:#1a1a2e}
+  .back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:12px;text-decoration:none}
+  .back-to-index:hover{background:#6a2318}
+  .section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #d4956a;margin-bottom:16px;position:relative}
+  .section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px}
+  .label-sec1{background:#1a4f7a}
+  .label-sec2{background:#7a4f00}
+  .label-sec3{background:#3d2b7a}
+  .blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b3322;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b3322;vertical-align:middle;position:relative;padding:0 2px}
+  .blank-display{display:inline-block}
+  .blank.correct{background-color:#fdebd0}
+  .blank.wrong{background-color:#fdd;border-color:#c00}
+  .blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}
+  .blank.placed{background-color:#fff3e0}
+  .kw{display:inline-block;position:relative;border-bottom:2px dashed #8b3322;cursor:help;color:#8b3322;font-weight:bold;line-height:1.4}
+  .blank.kw{border-bottom:2px solid #8b3322;cursor:pointer}
+  .blank.kw.challenge-active{cursor:pointer}
+  .kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:280px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+  .kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+  @media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+  .kw.active .kw-pop{visibility:visible;opacity:1}
+  .kw-title{display:block;font-weight:bold;font-size:14px;color:#f4a261;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+  .kw-yomi{display:block;font-size:12px;color:#aad4ff;margin-bottom:4px}
+  .kw-body{display:block;font-size:13px;color:#ddd}
+  .why-box{background:#fff8f0;border-left:5px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .why-box .label{font-weight:bold;color:#8b3322;margin-right:4px}
+  .result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+  .cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+  .key-point{background:#fdf5ec;border-left:5px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .key-point strong{color:#8b3322}
+  .timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .tl-item{background:#fdf5ec;border:1.5px solid #d4956a;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b3322;font-weight:bold}
+  .tax-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+  .tax-table th{background:#8b3322;color:#fff;padding:8px 10px;text-align:left}
+  .tax-table td{border:1px solid #d4956a;padding:8px 10px;vertical-align:top;line-height:1.8}
+  .tax-table tr:nth-child(even) td{background:#fdf5ec}
+  .sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fdf5ec;border:1.5px solid #d4956a;border-radius:10px;padding:10px 14px;margin-top:14px}
+  .sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b3322;color:#fff;box-shadow:0 2px 0 #6a2318}
+  .sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+  .sec-btn.challenge:hover{background:#a85e00}
+  .sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+  .sec-status.pass{color:#1a6b22}
+  .sec-status.fail{color:#c00}
+  .demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+  .demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+  #challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#2a0e06,#4a1a0a);border-top:3px solid #c4572a;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+  #challenge-chip-bar.visible{display:block}
+  #ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+  #ccb-label{font-size:13px;font-weight:bold;color:#f4a261}
+  #ccb-hint{font-size:12px;color:#ffccaa;flex:1;text-align:center}
+  #ccb-count{font-size:12px;color:#ffccaa;white-space:nowrap}
+  #ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+  .challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #c4572a;background:#8b3322;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+  .challenge-chip:hover{border-color:#f4a261;background:#a84030}
+  .challenge-chip.selected{border-color:#f4d03f;background:#a84030;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+  #ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+  #ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333}
+  #ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+  #ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+  #ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+  #ccb-demo-return{display:none;margin-top:6px;text-align:center}
+  #ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15}
+  #oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a4e);border:3px solid #f4a261;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+  .oshii-main{font-size:36px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+  .oshii-sub{font-size:18px;color:#f0f0f0;margin-bottom:6px}
+  .oshii-tip{font-size:12px;color:#888;margin-top:8px}
+  .mini-quiz-wrap{margin-top:14px}
+  .mini-quiz-toggle{width:100%;text-align:left;background:#fdf5ec;border:1.5px solid #d4956a;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b3322;display:flex;align-items:center;justify-content:space-between}
+  .mini-quiz-toggle .arrow{transition:transform 0.2s}
+  .mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+  .mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #d4956a;border-radius:10px}
+  .mini-quiz-body.open{display:block}
+  /* ===== 七道駅路モーダル ===== */
+  .road-modal-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1a4f7a,#1a6b22);color:#fff;border:none;border-radius:12px;padding:13px 22px;font-size:16px;font-weight:bold;cursor:pointer;margin:14px 0;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:all 0.2s;width:100%;justify-content:flex-start}
+  .road-modal-btn:hover{background:linear-gradient(135deg,#13395a,#145218);box-shadow:0 6px 18px rgba(0,0,0,0.3);transform:translateY(-1px)}
+  .road-modal-btn .btn-arrow{margin-left:auto;font-size:18px}
+  .road-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:8000;align-items:center;justify-content:center}
+  .road-modal-overlay.open{display:flex}
+  .road-modal-box{background:#fff;border-radius:16px;max-width:680px;width:92vw;max-height:88vh;overflow-y:auto;padding:28px 28px 24px;position:relative;box-shadow:0 16px 60px rgba(0,0,0,0.4)}
+  .road-modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:24px;cursor:pointer;color:#555;line-height:1}
+  .road-modal-close:hover{color:#c00}
+  .road-modal-title{font-size:18px;font-weight:bold;color:#1a4f7a;border-bottom:3px solid #1a4f7a;padding-bottom:10px;margin-bottom:16px;padding-right:36px}
+  .road-modal-body{font-size:15px;line-height:2.0;color:#222}
+  .road-modal-body .why-box{margin:12px 0}
+  .road-modal-body .kw{display:inline-block;position:relative;border-bottom:2px dashed #8b3322;cursor:help;color:#8b3322;font-weight:bold;line-height:1.4}
+  /* ===== 時代の流れまとめ ===== */
+  .flow-summary{background:linear-gradient(135deg,#f0f7ff,#fff8f0);border:2px solid #8b3322;border-radius:14px;padding:18px 20px 14px;margin:18px 0}
+  .flow-summary-title{font-size:15px;font-weight:bold;color:#8b3322;margin-bottom:14px;display:flex;align-items:center;gap:8px;border-bottom:2px dashed #d4956a;padding-bottom:8px}
+  .flow-steps{display:flex;flex-direction:column;gap:0}
+  .flow-step{display:flex;align-items:flex-start;gap:10px}
+  .flow-year{min-width:68px;background:#8b3322;color:#fff;border-radius:6px;padding:3px 8px;font-size:12px;font-weight:bold;text-align:center;margin-top:2px;white-space:nowrap;flex-shrink:0}
+  .flow-year.blue{background:#1a4f7a}
+  .flow-year.green{background:#1a6b22}
+  .flow-year.brown{background:#7a4f00}
+  .flow-year.purple{background:#3d2b7a}
+  .flow-content{font-size:14px;line-height:1.8;color:#333;flex:1}
+  .flow-content strong{color:#8b3322}
+  .flow-content .blue-kw{color:#1a4f7a;font-weight:bold}
+  .flow-content .green-kw{color:#1a6b22;font-weight:bold}
+  .flow-arrow{text-align:center;color:#d4956a;font-size:18px;line-height:1.2;margin:1px 0 1px 33px}
+  .flow-note{font-size:12px;background:#fff8f0;border-left:3px solid #d4956a;padding:6px 10px;border-radius:0 6px 6px 0;margin-top:10px;color:#555;line-height:1.7}
+  .mq-block{margin-bottom:18px}
+  .mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+  .mq-qnum{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+  .mq-choices{display:flex;flex-direction:column;gap:7px}
+  .mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+  .mq-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .mq-choice.selected{border-color:#8b3322;background:#fdebd0;font-weight:bold}
+  .mq-choice.correct{border-color:#1a6b22!important;background:#d0f0d8!important;color:#1a4015}
+  .mq-choice.wrong{border-color:#c00!important;background:#fdd!important;color:#900}
+  .mq-choice.show-ans{border-color:#1a6b22!important;background:#e8f8ec!important}
+  .mq-num{font-weight:bold;margin-right:6px;color:#8b3322}
+  .mq-divider{border:none;border-top:1px solid #e0ccc0;margin:14px 0}
+  .mq-btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .mq-btn{padding:8px 20px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b3322;color:#fff;box-shadow:0 2px 0 #6a2318}
+  .mq-btn.reset{background:#888;box-shadow:0 2px 0 #666}
+  .mq-result-wrap{margin-top:12px}
+  .mq-result-inner{padding:14px 18px;border-radius:10px;text-align:center}
+  .mq-result-inner.pass{background:#d0f0d8;border:2px solid #1a6b22}
+  .mq-result-inner.fail{background:#fdd;border:2px solid #c00}
+  .mq-result-msg{font-size:17px;font-weight:bold;margin-bottom:4px}
+  .mq-result-score{font-size:15px;font-weight:bold;margin-bottom:2px}
+  .mq-result-sub{font-size:13px;color:#555}
+  .final-section{background-color:#fff;border-radius:8px;padding:20px;border:2px solid #8b3322;margin-bottom:16px}
+  #final-quiz-area .mq-block{margin-bottom:24px}
+  #final-result-row{margin-top:16px}
+  #checklist-area{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+  .check-bar-wrap{margin:10px 0;background:#e0ccc0;border-radius:8px;height:14px;overflow:hidden}
+  #check-bar{height:100%;background:#8b3322;border-radius:8px;transition:width 0.3s}
+  #check-count{font-size:13px;font-weight:bold;color:#8b3322;margin-top:4px}
+  button{padding:10px 20px;border-radius:8px;border:none;background-color:#8b3322;color:#fff;cursor:pointer;font-size:15px;font-weight:bold;box-shadow:0 3px 0 #6a2318}
+  .confetti-piece{position:fixed;top:-12px;opacity:0;animation:cfall linear forwards;border-radius:3px;pointer-events:none;z-index:9999}
+  @keyframes cfall{0%{top:-12px;opacity:1;transform:rotate(0deg)}100%{top:110vh;opacity:0.2;transform:rotate(720deg)}}
+</style>
+</head>
+<body>
+
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub" id="oshii-sub-text"></div>
+  <div class="oshii-tip">タップして閉じる</div>
+</div>
+
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🗂️ 語群 <span id="ccb-secname-label"></span></span>
+    <span id="ccb-hint">語句を選んでタップ → 空欄をタップで入れる</span>
+    <span id="ccb-count"></span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 採点する</button>
+  </div>
+  <div id="ccb-demo-return">
+    <button onclick="exitDemo()">↩ チャレンジに戻る</button>
+  </div>
+</div>
+
+<a class="back-to-index" href="nihonshi_index.html">← 単元一覧に戻る</a>
+<h1>🏯 第３章　奈良時代</h1>
+
+<div class="timeline-bar">
+  <span class="tl-item">708年▶和同開珎鋳造</span>
+  <span class="tl-item">710年▶平城京遷都</span>
+  <span class="tl-item">723年▶三世一身法</span>
+  <span class="tl-item">724年▶聖武天皇即位</span>
+  <span class="tl-item">741年▶国分寺建立の詔</span>
+  <span class="tl-item">743年▶墾田永年私財法・大仏造立の詔</span>
+  <span class="tl-item">752年▶東大寺大仏開眼</span>
+  <span class="tl-item">759年▶唐招提寺建立</span>
+</div>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label label-sec1">第１節</span>
+  <h2>平城京への遷都と土地制度の変化（710〜743年）</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">
+    📖 手本です — タップしてチャレンジに戻る ▶
+  </div>
+
+  <div class="why-box">
+    <span class="label">🏯 なぜ藤原京を捨てたのか——遷都の理由</span>
+    694年に完成したばかりの<span class="kw">藤原京（ふじわらきょう）<span class="kw-pop"><span class="kw-title">藤原京（ふじわらきょう）</span><span class="kw-yomi">📖 読み：ふじわらきょう</span><span class="kw-body">持統天皇が694年に完成させた，唐の長安を模した日本初の本格的な都城（現・奈良県橿原市）。碁盤目状の道路（条坊制）を持つ本格的な都だったが，わずか16年で平城京に捨てられた。「藤原」の名は中臣鎌足（藤原鎌足）の邸宅があった地名に由来するとも言われる。</span></span></span>を，なぜわずか16年で捨てたのでしょうか。大きく３つの理由があります。<br><br>
+
+    <span class="kw">①地理的な限界<span class="kw-pop"><span class="kw-title">藤原京の地理的問題</span><span class="kw-body">藤原京（現・奈良県橿原市）は，東に<b>天香久山（あまのかぐやま）</b>，西に<b>畝傍山（うねびやま）</b>，北に<b>耳成山（みみなしやま）</b>という「大和三山（やまとさんざん）」に三方を囲まれた，風光明媚な場所でした。しかしこれが問題で，三方を山に囲まれているため都の拡張ができず，増え続ける人口に対応できませんでした。また北側は地盤が低くて水はけが悪く，大雨のたびに洪水や浸水が起きやすい低湿地帯でした。汚水の排水も困難で，衛生状態が悪化しやすかったのです。</span></span></span>：藤原京は<span class="kw">大和三山（やまとさんざん）<span class="kw-pop"><span class="kw-title">大和三山（やまとさんざん）</span><span class="kw-yomi">📖 読み：やまとさんざん</span><span class="kw-body">天香久山（あまのかぐやま）・畝傍山（うねびやま）・耳成山（みみなしやま）の三山。万葉集にも詠まれた景勝地だが，この三山に囲まれているため藤原京は拡張できず，北側の地盤は低湿地で排水も悪かった。</span></span></span>に三方を囲まれており，都を広げることができませんでした。北側は低湿地で洪水や悪臭が問題となり，人口増加とともに都が狭すぎることも明らかになっていました。<br><br>
+
+    <span class="kw">②律令国家の威信を高める必要<span class="kw-pop"><span class="kw-title">なぜもっと大きな都が必要だったのか</span><span class="kw-body">大宝律令（701年）によって律令国家が完成した日本は，唐の長安（現在の中国・西安）のような壮大な都城を持つことで，国内外に「日本も一流の文明国だ」と示す必要がありました。藤原京はすでに当時の日本最大の都市でしたが，唐の長安（南北約9km・東西約9km）と比べると規模が大きく劣っていました。平城京はその約3倍の面積（南北約5km・東西約6km）に拡張されました。</span></span></span>：701年に大宝律令が完成し，律令国家として一人前の体裁を整えた日本は，唐の長安に匹敵する壮大な都を持つことで，国内外に律令国家の威信を示す必要がありました。<br><br>
+
+    <span class="kw">③銅の発見と財源確保<span class="kw-pop"><span class="kw-title">和銅（わどう）の発見（708年）</span><span class="kw-body">708年，武蔵国（むさしのくに，現在の埼玉県秩父市付近）で自然銅（にぎあか）の塊が発見されました。朝廷はこれを吉祥（めでたい前兆）と受け取り，年号を「和銅（わどう）」に改元しました。この銅が，和同開珎（わどうかいちん）の鋳造原料となっただけでなく，平城京建設の財源確保に向けた動きの弾みをつけました。新しい都を建設するには莫大な費用と資材が必要だったため，銅の発見はまさに「渡りに船」でした。</span></span></span>：708年，武蔵国（現・埼玉県）で大量の<span class="kw">自然銅（にぎあか）<span class="kw-pop"><span class="kw-title">自然銅（にぎあか）</span><span class="kw-yomi">📖 読み：にぎあか</span><span class="kw-body">精錬（せいれん）なしにそのまま使える高純度の銅の塊。古代では「吉祥（きっしょう）＝めでたい知らせ」と受け止められた。この発見が年号「和銅（わどう）」の由来となり，和同開珎の鋳造と平城京建設の後押しとなった。</span></span></span>が発見されました。朝廷はこれを吉祥と捉え，年号を「和銅」に改め，新都建設への機運が一気に高まりました。
+  </div>
+
+  <div class="cause-box">
+    <span class="label">👑 遷都までの経緯——文武天皇の急死と元明天皇の決断</span>
+    遷都計画を進めたのは，<span class="kw">藤原不比等（ふじわらのふひと）<span class="kw-pop"><span class="kw-title">藤原不比等（ふじわらのふひと）</span><span class="kw-yomi">📖 読み：ふじわらのふひと</span><span class="kw-body">藤原鎌足（中臣鎌足）の息子（659〜720年）。大宝律令（701年）の編纂を主導し，平城京の建設計画を推進した。娘の宮子（みやこ）を文武天皇の夫人とし，生まれた子が後の聖武天皇。藤原氏が天皇家と血縁を結ぶことで政治権力を握る「藤原氏の外戚（がいせき）支配」の礎を築いた。720年に没するが，その後も4人の息子（藤原四兄弟）が政権を握り続けた。</span></span></span>です。大宝律令を主導したこの人物は，唐の長安をさらに精密に模した新都建設を構想していました。<br><br>
+
+    しかし，707年に<span class="kw">文武天皇（もんむてんのう）<span class="kw-pop"><span class="kw-title">文武天皇（もんむてんのう）</span><span class="kw-yomi">📖 読み：もんむてんのう</span><span class="kw-body">第42代天皇（在位697〜707年）。わずか25歳で急逝した。大宝律令（701年）を完成させた天皇として知られる。息子はまだ幼く（後の聖武天皇，当時7歳），次の天皇にはなれなかった。そのため，文武天皇の母である元明天皇（げんめいてんのう）が代わりに即位することになった（中継ぎの女性天皇）。</span></span></span>がわずか25歳で急逝するという事態が起きました。息子（後の聖武天皇）はまだ幼かったため，文武天皇の母である<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">元明天皇</span><span class="kw-pop"><span class="kw-title">元明天皇（げんめいてんのう）</span><span class="kw-yomi">📖 読み：げんめいてんのう</span><span class="kw-body">第43代天皇（在位707〜715年）。女性天皇。息子・文武天皇が25歳で急死したため，孫（後の聖武天皇）が成長するまでの「中継ぎ」として即位した。藤原不比等の強い後押しもあり，710年に平城京に遷都。古事記（712年）の編纂を命じ，律令国家の基盤整備に尽力した。</span></span></span>が「中継ぎ」として即位しました。元明天皇は藤原不比等と連携し，710年についに<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">平城京</span><span class="kw-pop"><span class="kw-title">平城京（へいじょうきょう）</span><span class="kw-yomi">📖 読み：へいじょうきょう</span><span class="kw-body">710年に元明天皇が遷都した都。現在の奈良市に位置し，唐の長安にならって建設された。南北約5km・東西約6kmの広大な敷地に，朱雀大路（すざくおおじ）と呼ばれる幅70mの大通りが南北に貫いた。藤原不比等が建設を主導し，平城京の東側（外京〔げきょう〕）には藤原氏の氏寺（うじでら）である興福寺（こうふくじ）も移転した。奈良時代（710〜784年）を通じて都として機能した。</span></span></span>（現・奈良市）への遷都を断行しました。<br><br>
+
+    こうして生まれた平城京は，朱雀大路（すざくおおじ，幅70m）が南北に貫く唐の長安を模した壮大な都城となりました。この遷都にあわせ，708年には日本初の<span class="kw">流通貨幣<span class="kw-pop"><span class="kw-title">流通貨幣とは</span><span class="kw-body">物を売買するためのお金のこと。それ以前の日本では，米・布・絹などの物品が交換手段として使われていた。貨幣の流通によって商品経済が発展し，国家は税や労役を貨幣で管理できるようになった。</span></span></span>として<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">和同開珎</span><span class="kw-pop"><span class="kw-title">和同開珎（わどうかいちん）</span><span class="kw-yomi">📖 読み：わどうかいちん（わどうかいほう）</span><span class="kw-body">708年に鋳造された日本最初の流通貨幣（銅銭）。「和同」は年号「和銅（わどう）」から，「開珎（かいちん）」は「通宝（つうほう）」の意味。唐の開元通宝をお手本にしている。当初は民間にあまり普及せず，奈良・平安時代を通じて12種類の皇朝十二銭（こうちょうじゅうにせん）が鋳造された。</span></span></span>（わどうかいちん）が鋳造されました。これは銅銭（どうせん）で，商業活動を活発にするためのものです。
+  </div>
+
+  <button class="road-modal-btn" onclick="openRoadModal()">
+    🛣️ 七道駅路とは——奈良時代の「高速道路」とは？
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="why-box">
+    <span class="label">🌾 土地不足という大問題</span>
+    律令国家では<span class="kw">班田収授法（はんでんしゅうじゅほう）<span class="kw-pop"><span class="kw-title">班田収授法（はんでんしゅうじゅほう）</span><span class="kw-yomi">📖 読み：はんでんしゅうじゅほう</span><span class="kw-body">6年ごとに作成する戸籍（こせき）をもとに，6歳以上の男女に口分田（くぶんでん）を支給し，死亡後は国家に返還させる制度。男子に2段（たん），女子にその3分の2を与えた。農民に土地を与えることで税収（租）を確保する律令国家の根幹。しかし人口増加に伴い口分田が不足していった。</span></span></span>によって，すべての農民に<span class="kw">口分田（くぶんでん）<span class="kw-pop"><span class="kw-title">口分田（くぶんでん）</span><span class="kw-yomi">📖 読み：くぶんでん</span><span class="kw-body">班田収授法で農民に与えられる田地。「口（くち）」つまり「人数」に応じて分配された。男子2段・女子はその3分の2。農民は生きている間この土地を耕すことができるが，死亡後は必ず国家に返さなければならない。この「公地」の原則が，後の三世一身法や墾田永年私財法によって崩れていく。</span></span></span>を支給しなければなりません。しかし，<strong>人口が増えるにつれて口分田が足りなくなってきました。</strong><br><br>
+    そこで政府は新しい田を開墾させる政策をとりました。<br>
+    ▶ 723年，<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">三世一身法</span><span class="kw-pop"><span class="kw-title">三世一身法（さんぜいっしんのほう）</span><span class="kw-yomi">📖 読み：さんぜいっしんのほう</span><span class="kw-body">723年に出された法令。新たに用水路（かんがい施設）を作って開墾した土地は孫の代（三代）まで私有を認め，既存の用水路を利用した開墾は本人一代限りとした。しかし，「3代後には土地が取り上げられる」とわかっているため，農民が真剣に開墾しないという問題が残った。この欠点を補うために743年に墾田永年私財法が制定された。</span></span></span>（さんぜいっしんのほう）を定めました。<span class="kw">新しく用水路を作って開墾した土地<span class="kw-pop"><span class="kw-title">開墾とは</span><span class="kw-body">それまで耕されていなかった荒地を切り開いて田畑にすること。古代は水がなければ稲作ができないため，用水路（水を引くための水路）の建設が必要だった。用水路建設には多大な費用と労力がかかるため，それに見合う恩恵（土地の私有）が必要だった。</span></span></span>は，<strong>本人・子・孫の三代まで私有</strong>を認めます。<br>
+    しかし問題が残りました。「三代後に取り上げられるなら，必死で開墾しても無駄だ」と感じる農民が多く，開墾が進みませんでした。
+  </div>
+
+  <div class="result-box">
+    <span class="label">⚖️ 墾田永年私財法（743年）と荘園の誕生</span>
+    723年の三世一身法の限界を超えるため，743年に<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">墾田永年私財法</span><span class="kw-pop"><span class="kw-title">墾田永年私財法（こんでんえいねんしざいほう）</span><span class="kw-yomi">📖 読み：こんでんえいねんしざいほう</span><span class="kw-body">743年に聖武天皇の時代に出された法令。新たに開墾した土地（墾田）は，その人が永久に私有（自分のもの）にしていいと定めた画期的な法律。これにより「開墾すれば永遠に自分のもの」になるため，開墾が爆発的に進んだ。しかし同時に深刻な副作用が生まれた――力のある貴族や寺社が大規模な開墾を進め，広大な土地を手に入れた。これが「荘園（しょうえん）」の始まりである。</span></span></span>（こんでんえいねんしざいほう）が出されました。<br>
+    <span class="cause-box" style="margin:10px 0">
+      <span class="label">💡 なぜ荘園が問題なのか？</span>
+      力のある貴族・大寺院・有力豪族は<span class="kw">資金と労働力<span class="kw-pop"><span class="kw-title">資金と労働力</span><span class="kw-body">貴族や大寺院は，農民を使って大規模な開墾を行う経済力があった。農民はお金や保護を得るかわりに貴族の土地で働いた。こうして「貴族の私有地 = 荘園」が各地に広がっていった。</span></span></span>を持つため，大規模に開墾を進め，広大な<span class="kw">荘園（しょうえん）<span class="kw-pop"><span class="kw-title">荘園（しょうえん）</span><span class="kw-yomi">📖 読み：しょうえん</span><span class="kw-body">貴族・大寺院・有力豪族が私的に所有する土地。墾田永年私財法をきっかけに拡大した。荘園には国家の税が及ばない「不輸（ふゆ）の権」や，国の役人が立ち入れない「不入（ふにゅう）の権」が認められるようになっていく。これにより律令国家の根本原則「公地公民（こうちこうみん）」——土地も人民もすべて国家のもの——が崩壊に向かった。</span></span></span>を手に入れました。<br>
+      ▶ 荘園は国家の税（租）が免除されました → <strong>律令国家の「公地公民」制が崩れていく</strong>原因になりました。
+    </span>
+  </div>
+
+  <!-- 流れまとめ①  -->
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第１節の時代の流れ——平城京と土地制度</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-year">694年</span>
+        <div class="flow-content">持統天皇が<strong>藤原京</strong>（現・奈良県橿原市）に遷都。しかし湿地帯の問題や規模の限界が浮上。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year">707年</span>
+        <div class="flow-content"><strong>文武天皇</strong>が25歳で急逝。息子はまだ幼いため，母の<span class="blue-kw">元明天皇</span>が「中継ぎ」として即位。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year">708年</span>
+        <div class="flow-content">日本初の流通貨幣<strong>和同開珎</strong>（わどうかいちん）が鋳造される。商業・経済の基盤づくり。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">710年</span>
+        <div class="flow-content">元明天皇，唐の長安を手本に<strong>平城京</strong>（現・奈良市）へ遷都。⭐ <strong>奈良時代の始まり</strong>。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">723年</span>
+        <div class="flow-content"><strong>三世一身法</strong>：新たに開墾した土地を<u>3代まで私有</u>と認める。→ しかし「3代後に没収」のため効果薄。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">743年</span>
+        <div class="flow-content"><strong>墾田永年私財法</strong>：開墾した土地を<u>永久に私有</u>できると認める。→ 開墾は進んだが…</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year" style="background:#c00">結果</span>
+        <div class="flow-content">貴族・大寺院が大規模開墾を進め<strong>荘園（しょうえん）</strong>が拡大。→ 律令国家の「<strong>公地公民</strong>」制が崩れ始める。</div>
+      </div>
+    </div>
+    <div class="flow-note">💡 ポイント：奈良時代は律令国家として整備が進んだが，土地制度の変化（三世一身法→墾田永年私財法）によって公地公民の原則が崩壊していく「転換点」でもある。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge(1)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 ミニテスト①（平城京・土地制度）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh07.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label label-sec2">第２節</span>
+  <h2>聖武天皇と仏教による国家鎮護（724〜756年）</h2>
+
+  <div class="demo-banner" id="demo-banner-2" onclick="exitDemo()">
+    📖 手本です — タップしてチャレンジに戻る ▶
+  </div>
+
+  <div class="cause-box">
+    <span class="label">😰 相次ぐ社会不安（724〜740年代）</span>
+    724年に即位した<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">聖武天皇</span><span class="kw-pop"><span class="kw-title">聖武天皇（しょうむてんのう）</span><span class="kw-yomi">📖 読み：しょうむてんのう</span><span class="kw-body">第45代天皇（在位724〜749年）。奈良時代を代表する天皇。深い仏教への信仰を持ち，「三宝（仏・法・僧）の奴（やっこ）」と自称するほどだった。東大寺の大仏建立を命じ，全国に国分寺・国分尼寺を建てた。晩年に退位し，日本初の上皇（太上天皇）として政務に関わった。皇后は光明皇后（こうみょうこうごう）。</span></span></span>の治世は，社会不安が次々と押し寄せました。<br><br>
+    ▶ <span class="kw">天然痘（てんねんとう）の大流行<span class="kw-pop"><span class="kw-title">天然痘（てんねんとう）の大流行</span><span class="kw-yomi">📖 読み：てんねんとう</span><span class="kw-body">735〜737年，天然痘が日本全土に流行し，人口の3割（推定100万人以上）が死亡したともいわれる大惨事。当時，藤原不比等の4人の息子（藤原四兄弟）も全員，天然痘で相次いで亡くなった。現代でいう「コロナパンデミック」を超えるほどの衝撃があった。</span></span></span>（735〜737年）：推定100万人以上が死亡。有力な貴族も次々と亡くなった。<br>
+    ▶ <span class="kw">藤原広嗣（ふじわらのひろつぐ）の乱<span class="kw-pop"><span class="kw-title">藤原広嗣の乱（740年）</span><span class="kw-body">藤原氏の一族・藤原広嗣（ふじわらのひろつぐ）が，九州（大宰府）で朝廷に対して反乱を起こした事件。政府によって鎮圧されたが，聖武天皇は精神的に追い詰められ，740年から744年の間に奈良→恭仁京→難波宮→紫香楽宮と頻繁に遷都を繰り返した（「彷徨の遷都」）。</span></span></span>（740年）：九州での反乱。天皇は精神的に追い詰められた。<br><br>
+    聖武天皇は，これらの社会不安の原因を「仏の教えが守られていないから」と考え，<strong>仏教の力で国家を守ろう</strong>（<span class="kw">鎮護国家（ちんごこっか）<span class="kw-pop"><span class="kw-title">鎮護国家（ちんごこっか）</span><span class="kw-yomi">📖 読み：ちんごこっか</span><span class="kw-body">仏法（ぶっぽう）の力によって国家を守り，安定させようとする考え方。聖武天皇は「国分寺・国分尼寺の建立」と「東大寺の大仏建立」によって，仏の加護を全国に広げようとした。奈良時代の政治・文化の中心にある思想。</span></span></span>）という方針を打ち出しました。
+  </div>
+
+  <button class="road-modal-btn" onclick="openHokouModal()" style="background:linear-gradient(135deg,#7a4f00,#8b3322)">
+    🚶 どうして聖武天皇は即位後も平城京に入らなかったのか？
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="why-box">
+    <span class="label">🙏 国分寺・国分尼寺をなぜ建てたのか（741年）</span>
+    741年，聖武天皇は全国の国（今の都道府県にあたる行政単位）ごとに，<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">国分寺</span><span class="kw-pop"><span class="kw-title">国分寺（こくぶんじ）</span><span class="kw-yomi">📖 読み：こくぶんじ</span><span class="kw-body">741年に聖武天皇が詔（みことのり）によって全国の各国（令制国）に建立を命じた寺。正式名称は「金光明四天王護国之寺（こんこうみょうしてんのうごこくのてら）」。尼寺は「法華滅罪之寺（ほっけめつざいのてら）」が正式名称で，国分尼寺と呼ばれた。全国60か所以上に造営され，各地の仏教拠点として機能した。東大寺は国分寺の総本山（総国分寺）にあたる。</span></span></span>（男性僧の寺）と<span class="kw">国分尼寺（こくぶんにじ）<span class="kw-pop"><span class="kw-title">国分尼寺（こくぶんにじ）</span><span class="kw-yomi">📖 読み：こくぶんにじ</span><span class="kw-body">国分寺と同じく741年の詔で建立を命じられた，尼僧（にそう＝女性の出家者）のための寺。全国各国に建てられ，国分寺と対をなす。正式名称は「法華滅罪之寺（ほっけめつざいのてら）」。</span></span></span>（尼僧の寺）を建てるよう命じました。では，なぜこれほど大規模な寺を全国に建てる必要があったのでしょうか？<br><br>
+
+    <div class="cause-box" style="margin:8px 0">
+      <span class="label">📖 根拠となったお経——金光明最勝王経</span>
+      聖武天皇が根拠にしたのは<span class="kw">金光明最勝王経（こんこうみょうさいしょうおうきょう）<span class="kw-pop"><span class="kw-title">金光明最勝王経（こんこうみょうさいしょうおうきょう）</span><span class="kw-yomi">📖 読み：こんこうみょうさいしょうおうきょう</span><span class="kw-body">インドで生まれ，唐（中国）を経て日本に伝わった仏教の経典（お経）。この経典には「この経典を国中で読誦（どくじゅ）すれば，四天王（してんのう）が国を守護し，疫病・天災・外敵から国民を守ってくれる」という内容が書かれていた。聖武天皇はこの経典を信じ，全国の国分寺で毎日このお経を読み上げさせることで，日本全国を仏法の力で守ろうとした。国分寺の正式名称「金光明四天王護国之寺」の「金光明」は，この経典から来ている。</span></span></span>というお経です。このお経には「このお経を国中で読み上げれば，<span class="kw">四天王（してんのう）<span class="kw-pop"><span class="kw-title">四天王（してんのう）</span><span class="kw-yomi">📖 読み：してんのう</span><span class="kw-body">仏教において世界（仏の世界）の四方を守る神。持国天（じこくてん，東）・増長天（ぞうちょうてん，南）・広目天（こうもくてん，西）・多聞天（たもんてん，北）の四神。国分寺の正式名称「金光明四天王護国之寺」の「四天王」はここから来ている。「大阪四天王寺（してんのうじ）」も同じ由来。</span></span></span>が国を守ってくれる」と書かれていました。聖武天皇はこれを信じ，全国の国分寺の僧に毎日このお経を読み上げさせることで，日本全国を仏の力で包もうとしたのです。
+    </div>
+
+    <div class="result-box" style="margin:8px 0">
+      <span class="label">✅ 国分寺が果たした４つの役割</span>
+      ▶ <strong>疫病・天災からの守護</strong>：天然痘の再流行を仏の力で防ぐ。<br>
+      ▶ <strong>怨霊・悪霊の鎮魂（ちんこん）</strong>：国中で死んだ人々の霊を慰め，祟り（たたり）を封じる。<br>
+      ▶ <strong>地方への国家権威の誇示</strong>：豪華な寺を地方豪族の拠点に建てることで，「天皇の力はここまで届いている」と示す——現代でいえば，各県に大使館を置くようなイメージ。<br>
+      ▶ <strong>仏教教育・文化の普及</strong>：全国60か所以上の国分寺が，仏典（お経）の写経・法会（ほうえ）を通じて地方にも仏教文化を広める拠点となった。<br><br>
+      全国の国分寺の司令塔（総本山）として奈良に建てられたのが<span class="kw">東大寺（とうだいじ）<span class="kw-pop"><span class="kw-title">東大寺（とうだいじ）</span><span class="kw-body">全国の国分寺の総本山として奈良に建立。大仏殿（世界最大級の木造建築）を中心とした大寺院。現代でも世界遺産として残っており，毎年多くの観光客が訪れる。</span></span></span>です。東大寺は「総国分寺（そうこくぶんじ）」とも呼ばれ，全国の国分寺ネットワークのトップに立ちました。
+    </div>
+  </div>
+
+  <div class="result-box">
+    <span class="label">🏛️ 東大寺と大仏の建立（743〜752年）</span>
+    743年，聖武天皇はさらに奈良（平城京）に<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">東大寺</span><span class="kw-pop"><span class="kw-title">東大寺（とうだいじ）</span><span class="kw-yomi">📖 読み：とうだいじ</span><span class="kw-body">聖武天皇が743年に建立を命じた大寺院。現在の奈良市に現存し，世界最大級の木造建築「大仏殿（だいぶつでん）」を持つ。全国の国分寺の総本山（そうほんざん）として位置づけられた。752年に大仏開眼供養（かいげんくよう）が行われ，インド・唐など海外からも僧侶が招かれた国際的な式典だった。1998年に世界遺産に登録されている。</span></span></span>を建立し，高さ約15mの盧舎那仏（るしゃなぶつ），いわゆる<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">大仏</span><span class="kw-pop"><span class="kw-title">奈良の大仏（だいぶつ）</span><span class="kw-yomi">📖 読み：だいぶつ</span><span class="kw-body">東大寺の本尊「盧舎那仏（るしゃなぶつ）」のこと。高さ約15m（台座含む約18m），重量約380トンという巨大な金銅仏（こんどうぶつ）。制作には延べ260万人以上が関わったとされる。752年に開眼供養（かいげんくよう，目を入れて完成させる儀式）が行われた。「おれの大仏が完成したら，人々の不安が消えるはずだ」という聖武天皇の切実な願いが込められた。現在でも奈良を代表する観光スポット。</span></span></span>の造立を命じました。<br>
+    制作には延べ<span class="kw">260万人以上<span class="kw-pop"><span class="kw-title">大仏建立に関わった人数</span><span class="kw-body">大仏建立には銅の採掘・精錬・鋳造・金メッキ・建設作業など多くの工程があった。記録によれば延べ260万人以上が動員されたとされ，当時の日本の国家総力をあげた一大プロジェクトだった。僧侶の行基（ぎょうき）が庶民への布教（ふきょう）をしながら工事への協力を呼びかけた。</span></span></span>が関わり，752年についに<span class="kw">開眼供養（かいげんくよう）<span class="kw-pop"><span class="kw-title">開眼供養（かいげんくよう）</span><span class="kw-yomi">📖 読み：かいげんくよう</span><span class="kw-body">仏像の目に最後に墨（すみ）を入れて仏像に魂を宿らせる儀式。752年に行われた東大寺大仏の開眼供養は，インド・唐・東南アジアなど各国の高僧も参列した国際的な大イベントだった。退位後の聖武上皇と光明皇太后も出席した。</span></span></span>が行われました。<br><br>
+    <div class="cause-box" style="margin:10px 0">
+      <span class="label">⚠️ 荘園（しょうえん）の広がり</span>
+      東大寺・国分寺建設には莫大な費用がかかりました。これらの寺院は費用を賄うために<strong>大規模な土地開墾</strong>を行い，広大な<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">荘園</span><span class="kw-pop"><span class="kw-title">荘園（しょうえん）</span><span class="kw-yomi">📖 読み：しょうえん</span><span class="kw-body">墾田永年私財法（743年）によって私有が認められた開墾地。貴族・大寺院・有力豪族が大規模な開墾を進め，広大な荘園を手に入れた。荘園は国家の税（租）が免除される「不輸の権（ふゆのけん）」を得るようになり，律令国家の財政基盤を根底から揺るがした。平安時代にかけてさらに拡大し，武士の台頭の一因にもなる。</span></span></span>を所有するようになりました。<br>
+      ▶ 荘園が広がる ＝ 国家に税を収めない私有地が増える ＝ <strong>律令国家の財政が弱体化</strong>していきます。
+    </div>
+  </div>
+
+  <!-- 流れまとめ②  -->
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第２節の時代の流れ——聖武天皇と仏教による国家鎮護</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-year blue">724年</span>
+        <div class="flow-content"><span class="blue-kw">聖武天皇</span>即位。仏教への強い信仰を持つ天皇。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year" style="background:#c00">735〜737</span>
+        <div class="flow-content"><strong>天然痘の大流行</strong>。推定100万人以上死亡。藤原四兄弟も全員死去。→ 聖武天皇，平城京を「呪われた都」と感じる。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">740年</span>
+        <div class="flow-content"><strong>藤原広嗣の乱</strong>（九州）。鎮圧されたが，天皇は精神的に打ちのめされる。→ <strong>彷徨の遷都</strong>開始（恭仁京・難波宮・紫香楽宮を転々）。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">741年</span>
+        <div class="flow-content">全国に<strong>国分寺・国分尼寺</strong>建立の詔。仏教の力（鎮護国家）で災いを退けようとした。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">743年</span>
+        <div class="flow-content">紫香楽宮で<strong>大仏造立の詔</strong>。同年，<strong>墾田永年私財法</strong>も発布 → 荘園拡大へ。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">745年</span>
+        <div class="flow-content">山火事・地震が相次ぎ，ついに<strong>平城京へ帰還</strong>。その後は遷都せず。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">752年</span>
+        <div class="flow-content"><strong>東大寺大仏（盧舎那仏）の開眼供養</strong>。延べ260万人以上が建設に関わった国家プロジェクト完成。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year" style="background:#c00">結果</span>
+        <div class="flow-content">東大寺・国分寺が莫大な土地を開墾 → <strong>荘園</strong>が拡大 → 律令国家の財政が弱体化。</div>
+      </div>
+    </div>
+    <div class="flow-note">💡 ポイント：聖武天皇は「仏教の力で国を守る（鎮護国家）」という思想をもとに，国分寺・大仏建立という一大事業を行った。しかしその費用が荘園拡大を招き，律令国家の財政を圧迫するという皮肉な結果も生んだ。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge(2)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 ミニテスト②（聖武天皇・仏教政策）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh08.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label label-sec3">第３節</span>
+  <h2>天平文化——国際色豊かな仏教文化（8世紀）</h2>
+
+  <div class="demo-banner" id="demo-banner-3" onclick="exitDemo()">
+    📖 手本です — タップしてチャレンジに戻る ▶
+  </div>
+
+  <div class="cause-box">
+    <span class="label">🌏 天平文化とは何か</span>
+    奈良時代，特に聖武天皇の時代（<span class="kw">天平（てんぴょう）年間<span class="kw-pop"><span class="kw-title">天平（てんぴょう）年間</span><span class="kw-yomi">📖 読み：てんぴょう</span><span class="kw-body">729〜749年の年号。この時代に最も盛んに文化が花開いたため，奈良時代の文化全体を「天平文化」と呼ぶ。遣唐使を通じて唐や，さらには西アジア・インドの文化も伝わり，国際色豊かな文化が形成された。</span></span></span>）に花開いた文化を<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">天平文化</span><span class="kw-pop"><span class="kw-title">天平文化（てんぴょうぶんか）</span><span class="kw-yomi">📖 読み：てんぴょうぶんか</span><span class="kw-body">奈良時代（特に聖武天皇の時代）に栄えた文化。特徴は「国際性」と「仏教性」の2点。①国際性：遣唐使（けんとうし）がもたらした唐の文化だけでなく，唐を通じてシルクロードの向こう側，インド・ペルシャ・ギリシャの文化も伝わった。②仏教性：東大寺・国分寺の建立に象徴されるように，仏教が文化の中心を担った。代表的な文物として，古事記・日本書紀・万葉集・正倉院（しょうそういん）の宝物などがある。</span></span></span>といいます。<br>
+    遣唐使（けんとうし）が唐から持ち帰った文化だけでなく，<span class="kw">シルクロード<span class="kw-pop"><span class="kw-title">シルクロード</span><span class="kw-body">古代ローマ・ペルシャ（イラン）・インド・中国（唐）・日本へと東西をつなぐ交易路。絹・香辛料・宝石・文化・宗教（仏教・キリスト教・イスラム教）などが行き来した。正倉院（しょうそういん）に残る宝物の中には，ペルシャやギリシャの影響を受けた器物も多く，日本がシルクロードの終着点だったことがわかる。</span></span></span>を経由した西アジア・インドの文化もこの時代に伝わり，<strong>非常に国際色豊かな文化</strong>が生まれました。
+  </div>
+
+  <div class="why-box">
+    <span class="label">🛶 鑑真の来日と唐招提寺（759年）</span>
+    唐（中国）の高僧<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">鑑真</span><span class="kw-pop"><span class="kw-title">鑑真（がんじん）</span><span class="kw-yomi">📖 読み：がんじん</span><span class="kw-body">唐の高名な僧侶（688〜763年）。日本からの招きに応じて渡日しようとしたが，嵐・難破・失明などの苦難にあいながら，5度の失敗の後，753年に6度目にしてついに日本への渡航に成功した（当時66歳）。日本に正式な授戒（じゅかい＝出家の儀式）の制度をもたらし，東大寺に「戒壇（かいだん）」を設けて正式な仏教の受戒の場を整えた。759年に奈良に唐招提寺を建立した。その功績を称えた肖像彫刻（乾漆像）は現在も唐招提寺に伝わり，国宝となっている。</span></span></span>（がんじん）は，日本仏教界に正しい戒律（かいりつ）を伝えるため，嵐・難破・失明という数々の苦難を乗り越えながら753年についに来日しました。<br>
+    来日後，鑑真は759年に奈良に<span class="blank kw" data-id="M" onclick="blankClicked(event,'M')"><span class="blank-display">唐招提寺</span><span class="kw-pop"><span class="kw-title">唐招提寺（とうしょうだいじ）</span><span class="kw-yomi">📖 読み：とうしょうだいじ</span><span class="kw-body">759年に鑑真（がんじん）が奈良（平城京）に建立した寺院。「唐（から）の招提（しょうだい＝寺の意味）」つまり「唐から来た人が建てた寺」の意味。奈良時代の建築様式を今に伝える金堂（こんどう）は国宝に指定されている。1998年に「古都奈良の文化財」として世界遺産に登録された。境内には鑑真の乾漆（かんしつ）肖像（国宝）が保存されている。</span></span></span>（とうしょうだいじ）を建立しました。<br>
+    鑑真がもたらしたもの：唐の仏教の戒律（正式な出家の手続き）・医薬品（薬草の知識）・建築技術など，日本文化の発展に多大な貢献をしました。
+  </div>
+
+  <div class="result-box">
+    <span class="label">🏺 正倉院——シルクロードの終着駅（8世紀）</span>
+    聖武天皇の皇后・<span class="kw">光明皇后（こうみょうこうごう）<span class="kw-pop"><span class="kw-title">光明皇后（こうみょうこうごう）</span><span class="kw-yomi">📖 読み：こうみょうこうごう</span><span class="kw-body">聖武天皇の皇后。藤原不比等の娘で，初めて皇族以外から皇后となった人物。悲田院（ひでんいん）・施薬院（せやくいん）を設けて貧しい人々を支援するなど，慈悲深い政治を行った。聖武天皇崩御後，その遺品約9000点を東大寺に献納し，正倉院に保管させた。</span></span></span>は，756年に崩御した聖武天皇の遺品約9000点を東大寺（盧舎那仏）に献納しました。これらの宝物を保管しているのが<span class="blank kw" data-id="N" onclick="blankClicked(event,'N')"><span class="blank-display">正倉院</span><span class="kw-pop"><span class="kw-title">正倉院（しょうそういん）</span><span class="kw-yomi">📖 読み：しょうそういん</span><span class="kw-body">東大寺境内にある宝物庫（ほうもつこ）。光明皇后が献納した聖武天皇の遺品を中心に，約9000点もの宝物が1200年以上にわたって保存されている。宝物の中にはペルシャ・ギリシャ・インドの影響を受けた器物も多く，奈良がシルクロードの東の終着点だったことを示している。そのため「シルクロードの終着駅（終着点）」と呼ばれる。1998年に世界遺産に登録。現在も毎年秋に「正倉院展」が開催される。</span></span></span>です。<br>
+    正倉院に収蔵された宝物の中にはペルシャ（現在のイラン）・ギリシャ・インドの影響を受けたガラス器・楽器・テキスタイルなども多く含まれており，正倉院は「<strong>シルクロードの終着駅</strong>」と呼ばれています。
+  </div>
+
+  <div class="cause-box">
+    <span class="label">📚 奈良時代の文学——古事記・日本書紀・万葉集</span>
+    奈良時代には，国家の歴史や日本人の心を記した重要な書物が次々と完成しました。<br><br>
+    ▶ <span class="kw">古事記（こじき）712年<span class="kw-pop"><span class="kw-title">古事記（こじき）</span><span class="kw-yomi">📖 読み：こじき</span><span class="kw-body">712年に完成した，日本最古の歴史書。元明天皇が太安万侶（おおのやすまろ）に命じ，稗田阿礼（ひえだのあれ）の記憶をもとに編纂させた。神話から推古天皇の時代までを記す。ヤマトタケルノミコトや因幡の白兎（いなばのしろうさぎ）など，有名な神話が多く収められている。漢字の音だけを借りた「万葉仮名」の先駆けで記されている。</span></span></span>：元明天皇が<span class="kw">太安万侶（おおのやすまろ）<span class="kw-pop"><span class="kw-title">太安万侶（おおのやすまろ）</span><span class="kw-yomi">📖 読み：おおのやすまろ</span><span class="kw-body">奈良時代の官人（かんじん）。元明天皇の命で，稗田阿礼（ひえだのあれ）が暗唱した神話・歴史を書き記し，712年に古事記を完成させた。1979年，奈良県奈良市で太安万侶の墓誌（ぼし）が発見され，実在が確認された。</span></span></span>に命じた日本最古の歴史書です。神話から推古天皇の時代まで記しています。<br>
+    ▶ <span class="kw">日本書紀（にほんしょき）720年<span class="kw-pop"><span class="kw-title">日本書紀（にほんしょき）</span><span class="kw-yomi">📖 読み：にほんしょき</span><span class="kw-body">720年に完成した日本初の本格的な「正史（せいし）」（国家が公式に認めた歴史書）。元正天皇が舎人親王（とねりしんのう）に命じて編纂させた。古事記と違い，漢文（かんぶん）で書かれ，神話から持統天皇の時代まで記す。中国・朝鮮の歴史書を参照しながら，日本国家の正統性（せいとうせい）を対外的にアピールする意図もあった。</span></span></span>：元正天皇が<span class="kw">舎人親王（とねりしんのう）<span class="kw-pop"><span class="kw-title">舎人親王（とねりしんのう）</span><span class="kw-yomi">📖 読み：とねりしんのう</span><span class="kw-body">天武天皇の皇子（おうじ）。元正天皇の命で720年に日本書紀を完成させた。日本書紀は漢文で書かれた公式の歴史書で，中国への対外発信も意識した内容になっている。</span></span></span>に命じた，漢文で書かれた日本最初の正式な歴史書です。<br>
+    ▶ <span class="blank kw" data-id="O" onclick="blankClicked(event,'O')"><span class="blank-display">万葉集</span><span class="kw-pop"><span class="kw-title">万葉集（まんようしゅう）</span><span class="kw-yomi">📖 読み：まんようしゅう</span><span class="kw-body">8世紀後半（奈良時代）に成立した，日本最古の歌集。天皇・貴族から防人（さきもり）・農民まで，様々な身分の人々が詠んだ約4500首もの和歌（やまとうた）を収録。長歌・短歌・旋頭歌（せどうか）など多様な形式がある。代表的な歌人は柿本人麻呂（かきのもとのひとまろ）・山上憶良（やまのうえのおくら）・大伴家持（おおとものやかもち）など。漢字の音・訓を使って日本語を表記する「万葉仮名（まんようがな）」が用いられた。2019年の令和（れいわ）の元号もこの万葉集から採られた。</span></span></span>：日本最古の<strong>歌集</strong>。約4500首の和歌を収録しています。天皇から農民・防人（さきもり）まで幅広い人々の歌を集めました。漢字の音・訓を借りた「万葉仮名（まんようがな）」で書かれています。2019年の令和（れいわ）という元号もここから採られました。
+  </div>
+
+  <!-- 流れまとめ③  -->
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第３節の時代の流れ——天平文化の形成</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-year blue">700年代</span>
+        <div class="flow-content"><strong>遣唐使</strong>が唐から仏教・建築・絵画・文学などの文化を持ち帰る。唐を通じて<span class="green-kw">シルクロード</span>経由のペルシャ・インド文化も伝来。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">712年</span>
+        <div class="flow-content"><strong>古事記</strong>完成（元明天皇の命・太安万侶編纂）。日本最古の歴史書。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">720年</span>
+        <div class="flow-content"><strong>日本書紀</strong>完成（元正天皇の命・舎人親王編纂）。漢文で書かれた正式な歴史書。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">741年</span>
+        <div class="flow-content">国分寺・国分尼寺を全国に建立。仏教が文化の中心となる。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">752年</span>
+        <div class="flow-content">東大寺<strong>大仏開眼供養</strong>。インド・唐・東南アジアの僧侶も参列した国際的式典。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">753年</span>
+        <div class="flow-content">唐の高僧<strong>鑑真</strong>，5度の失敗・失明を乗り越えて来日。戒律・医薬・建築技術を伝える。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">756年</span>
+        <div class="flow-content">聖武天皇崩御。光明皇后が遺品約9000点を<strong>正倉院</strong>に献納。→「シルクロードの終着駅」</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">759年</span>
+        <div class="flow-content">鑑真，<strong>唐招提寺</strong>を建立。奈良時代の建築様式を現代に伝える（世界遺産）。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year purple">8世紀後半</span>
+        <div class="flow-content"><strong>万葉集</strong>成立。天皇から農民・防人まで約4500首を収録。万葉仮名で記された日本最古の歌集。</div>
+      </div>
+    </div>
+    <div class="flow-note">💡 ポイント：天平文化の特徴は「<strong>国際性</strong>」（唐＋シルクロード文化の融合）と「<strong>仏教性</strong>」（東大寺・国分寺が文化の拠点）の2点。万葉集が「令和」の元号の由来になったように，現代の日本文化にまでつながっている。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge(3)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 ミニテスト③（天平文化）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh09.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 まとめテスト（10問）——第３章 奈良時代</h2>
+  <p style="font-size:14px;color:#555;margin-bottom:14px">8問以上で合格です。</p>
+  <div id="final-quiz-area"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+  <div id="final-result-row"></div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="final-section">
+  <h2>☑️ 理解度チェックリスト</h2>
+  <p style="font-size:14px;color:#555;margin-bottom:10px">自分の言葉で説明できたらチェック！</p>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<script>
+/* ========= チャレンジ用データ ========= */
+const allAnswers = {
+  "A":"元明天皇", "B":"平城京", "C":"和同開珎", "D":"三世一身法", "E":"墾田永年私財法",
+  "F":"聖武天皇", "G":"国分寺", "H":"東大寺", "I":"大仏", "J":"荘園",
+  "K":"天平文化", "L":"鑑真", "M":"唐招提寺", "N":"正倉院", "O":"万葉集"
+};
+
+const secAnswers = {
+  1: ["A","B","C","D","E"],
+  2: ["F","G","H","I","J"],
+  3: ["K","L","M","N","O"]
+};
+
+const wordBank = {
+  1: ["元明天皇","平城京","和同開珎","三世一身法","墾田永年私財法"],
+  2: ["聖武天皇","国分寺","東大寺","大仏","荘園"],
+  3: ["天平文化","鑑真","唐招提寺","正倉院","万葉集"]
+};
+
+const secNames = {
+  1: "①平城京・土地制度",
+  2: "②聖武天皇・仏教政策",
+  3: "③天平文化"
+};
+
+let activeChallengeSection = null;
+const challengeStates = {
+  1: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  2: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  3: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null}
+};
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function getBlankEl(id) { return document.querySelector(`.blank[data-id="${id}"]`); }
+function getDisplayEl(id) {
+  const el = getBlankEl(id);
+  return el ? el.querySelector('.blank-display') : null;
+}
+
+function startChallenge(sec) {
+  if (activeChallengeSection && activeChallengeSection !== sec) endChallenge(activeChallengeSection);
+  activeChallengeSection = sec;
+  const st = challengeStates[sec];
+  st.active = true; st.demoMode = false; st.demoSnapshot = null;
+  st.chipBank = shuffle(wordBank[sec]); st.placedWords = {}; st.selectedChipIdx = null;
+  secAnswers[sec].forEach(id => {
+    const disp = getDisplayEl(id); if (disp) disp.textContent = '';
+    const el = getBlankEl(id); if (el) el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status = document.getElementById(`sec-status-${sec}`); if (status) { status.textContent=''; status.className='sec-status'; }
+  const btn = document.getElementById(`chal-btn-${sec}`);
+  if (btn) { btn.textContent='⏹ やめる'; btn.style.background='#555'; btn.onclick=()=>endChallenge(sec); }
+  showChipBar(sec);
+  document.getElementById('ccb-secname-label').textContent = secNames[sec] || '';
+}
+
+function endChallenge(sec) {
+  const st = challengeStates[sec]; if (!st) return;
+  st.active = false; st.demoMode = false; st.demoSnapshot = null;
+  const banner = document.getElementById(`demo-banner-${sec}`); if (banner) banner.style.display='none';
+  secAnswers[sec].forEach(id => {
+    const disp = getDisplayEl(id); if (disp) disp.textContent = allAnswers[id];
+    const el = getBlankEl(id); if (el) el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const btn = document.getElementById(`chal-btn-${sec}`);
+  if (btn) { btn.textContent='🎯 チャレンジ！'; btn.style.background=''; btn.onclick=()=>startChallenge(sec); }
+  if (activeChallengeSection === sec) { activeChallengeSection = null; hideChipBar(); }
+}
+
+function showChipBar(sec) {
+  const bar = document.getElementById('challenge-chip-bar'); bar.classList.add('visible');
+  const controls = document.getElementById('ccb-controls'); const demoReturn = document.getElementById('ccb-demo-return');
+  const st = challengeStates[sec];
+  if (st.demoMode) { controls.style.display='none'; demoReturn.style.display='block'; }
+  else { controls.style.display='flex'; demoReturn.style.display='none'; }
+  renderChips(sec); updateCcbHint(sec);
+}
+
+function hideChipBar() { document.getElementById('challenge-chip-bar').classList.remove('visible'); }
+
+function renderChips(sec) {
+  const st = challengeStates[sec];
+  const container = document.getElementById('ccb-chips'); container.innerHTML = '';
+  st.chipBank.forEach((word, idx) => {
+    const chip = document.createElement('div');
+    chip.className = 'challenge-chip' + (idx === st.selectedChipIdx ? ' selected' : '');
+    chip.textContent = word; chip.onclick = () => tapChip(sec, idx);
+    container.appendChild(chip);
+  });
+  document.getElementById('ccb-count').textContent = `残り ${st.chipBank.length}語`;
+}
+
+function updateCcbHint(sec) {
+  const st = challengeStates[sec]; const hint = document.getElementById('ccb-hint');
+  if (st.demoMode) hint.textContent = '手本表示中';
+  else if (st.selectedChipIdx !== null) hint.textContent = `「${st.chipBank[st.selectedChipIdx]}」を選択中 → 空欄をタップ`;
+  else hint.textContent = '語句を選んでください';
+}
+
+function tapChip(sec, idx) {
+  const st = challengeStates[sec]; if (st.demoMode) return;
+  st.selectedChipIdx = (st.selectedChipIdx === idx) ? null : idx;
+  renderChips(sec); updateCcbHint(sec);
+}
+
+function blankClicked(e, id) {
+  e.stopPropagation();
+  const sec = getSecForId(id);
+  if (sec && challengeStates[sec].active && !challengeStates[sec].demoMode) {
+    handleBlankTap(sec, id);
+  } else {
+    const el = getBlankEl(id); if (!el) return;
+    document.querySelectorAll('.kw.active').forEach(k => { if(k!==el) k.classList.remove('active'); });
+    el.classList.toggle('active');
+  }
+}
+
+function handleBlankTap(sec, id) {
+  const st = challengeStates[sec]; const disp = getDisplayEl(id); const el = getBlankEl(id);
+  if (st.selectedChipIdx !== null) {
+    const word = st.chipBank[st.selectedChipIdx];
+    const existing = st.placedWords[id];
+    if (existing !== undefined) st.chipBank.push(existing);
+    st.chipBank.splice(st.selectedChipIdx, 1);
+    st.placedWords[id] = word; st.selectedChipIdx = null;
+    if (disp) disp.textContent = word; if (el) el.classList.add('placed');
+  } else {
+    const existing = st.placedWords[id];
+    if (existing !== undefined) {
+      st.chipBank.push(existing); delete st.placedWords[id];
+      if (disp) disp.textContent = ''; if (el) el.classList.remove('placed');
+    }
+  }
+  renderChips(sec); updateCcbHint(sec);
+}
+
+function getSecForId(id) {
+  for (const [s, ids] of Object.entries(secAnswers)) { if (ids.includes(id)) return parseInt(s); }
+  return null;
+}
+
+function judgeChallenge() {
+  const sec = activeChallengeSection; if (!sec) return;
+  const st = challengeStates[sec]; const ids = secAnswers[sec]; let correct = 0;
+  ids.forEach(id => {
+    const placed = st.placedWords[id]; const ans = allAnswers[id];
+    const el = getBlankEl(id); const disp = getDisplayEl(id);
+    if (placed === ans) {
+      correct++;
+      if (el) { el.classList.add('correct'); el.classList.remove('wrong','placed'); }
+    } else {
+      if (placed !== undefined) {
+        st.chipBank.push(placed); delete st.placedWords[id];
+        if (disp) disp.textContent = '';
+        if (el) { el.classList.remove('correct','placed'); el.classList.add('wrong'); }
+      } else { if (el) el.classList.add('wrong'); }
+    }
+  });
+  const total = ids.length; const status = document.getElementById(`sec-status-${sec}`);
+  if (correct === total) {
+    if (status) { status.textContent=`✅ 全問正解！（${correct}/${total}）`; status.className='sec-status pass'; }
+    launchConfetti(); st.active = false; activeChallengeSection = null; hideChipBar();
+    const btn = document.getElementById(`chal-btn-${sec}`);
+    if (btn) { btn.textContent='🎯 もう一度'; btn.style.background=''; btn.onclick=()=>startChallenge(sec); }
+  } else {
+    showOshii(correct, total);
+    if (status) { status.textContent=`${correct}/${total} 正解。もう少し！`; status.className='sec-status fail'; }
+    setTimeout(() => {
+      ids.forEach(id => { const el = getBlankEl(id); if (el && el.classList.contains('wrong')) el.classList.remove('wrong'); });
+      renderChips(sec); updateCcbHint(sec);
+    }, 1800);
+  }
+}
+
+function showOshii(correct, total) {
+  const pop = document.getElementById('oshii-popup');
+  document.getElementById('oshii-sub-text').textContent = `${correct} / ${total} 正解`;
+  pop.style.display = 'block'; setTimeout(() => { pop.style.display = 'none'; }, 2500);
+}
+
+function showDemo() {
+  const sec = activeChallengeSection; if (!sec) return;
+  const st = challengeStates[sec]; st.demoMode = true;
+  st.demoSnapshot = { chipBank:[...st.chipBank], placedWords:{...st.placedWords}, selectedChipIdx:st.selectedChipIdx };
+  secAnswers[sec].forEach(id => {
+    const disp = getDisplayEl(id); if (disp) disp.textContent = allAnswers[id];
+    const el = getBlankEl(id); if (el) { el.classList.remove('placed','correct','wrong'); el.classList.add('demo-fill'); }
+  });
+  const banner = document.getElementById(`demo-banner-${sec}`); if (banner) banner.style.display='block';
+  showChipBar(sec);
+}
+
+function exitDemo() {
+  const sec = activeChallengeSection; if (!sec) return;
+  const st = challengeStates[sec]; if (!st.demoMode) return; st.demoMode = false;
+  const banner = document.getElementById(`demo-banner-${sec}`); if (banner) banner.style.display='none';
+  if (st.demoSnapshot) {
+    st.chipBank = st.demoSnapshot.chipBank; st.placedWords = st.demoSnapshot.placedWords;
+    st.selectedChipIdx = st.demoSnapshot.selectedChipIdx; st.demoSnapshot = null;
+  }
+  secAnswers[sec].forEach(id => {
+    const disp = getDisplayEl(id); const el = getBlankEl(id);
+    if (el) el.classList.remove('demo-fill','correct','wrong');
+    if (st.placedWords[id] !== undefined) { if (disp) disp.textContent = st.placedWords[id]; if (el) el.classList.add('placed'); }
+    else { if (disp) disp.textContent = ''; if (el) el.classList.remove('placed'); }
+  });
+  showChipBar(sec);
+}
+
+function resetChallenge() {
+  const sec = activeChallengeSection; if (!sec) return;
+  const st = challengeStates[sec]; st.demoMode = false; st.demoSnapshot = null; st.placedWords = {}; st.selectedChipIdx = null;
+  st.chipBank = shuffle(wordBank[sec]);
+  const banner = document.getElementById(`demo-banner-${sec}`); if (banner) banner.style.display='none';
+  secAnswers[sec].forEach(id => {
+    const disp = getDisplayEl(id); if (disp) disp.textContent = '';
+    const el = getBlankEl(id); if (el) el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status = document.getElementById(`sec-status-${sec}`); if (status) { status.textContent=''; status.className='sec-status'; }
+  showChipBar(sec);
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.closest('#challenge-chip-bar')) return;
+  if (e.target.closest('#oshii-popup')) return;
+  const kw = e.target.closest('.kw');
+  document.querySelectorAll('.kw.active').forEach(el => { if (el !== kw) el.classList.remove('active'); });
+  if (kw && !kw.classList.contains('blank')) kw.classList.toggle('active');
+});
+
+/* ========= ミニテスト ========= */
+const mqData = {
+  1: [
+    {q:"710年，元明天皇が遷都した都はどれですか？",
+     choices:["藤原京","難波宮","平城京","平安京"],ans:2,
+     exp:"平城京（へいじょうきょう）は現在の奈良市に位置し，唐の長安にならって建設された。南北約5km・東西約6kmの広大な都城で，奈良時代（710〜784年）の政治の中心でした。"},
+    {q:"708年に鋳造された日本最初の流通貨幣（銅銭）はどれですか？",
+     choices:["富本銭","永楽通宝","和同開珎","寛永通宝"],ans:2,
+     exp:"和同開珎（わどうかいちん）は708年に鋳造された日本初の流通貨幣。唐の「開元通宝」をモデルにした銅銭で，商業活動の活発化を目的として作られました。"},
+    {q:"723年に出された，新しく用水路を作って開墾した土地を三代まで私有できるとした法律はどれですか？",
+     choices:["墾田永年私財法","三世一身法","班田収授法","均田法"],ans:1,
+     exp:"三世一身法（さんぜいっしんのほう）は723年の法律。「新しく用水路を掘って開墾した土地は本人・子・孫の3代まで私有を認める」としましたが，3代後に没収されるため農民が積極的に開墾しない問題が残りました。"},
+    {q:"743年に出された，新たに開墾した土地を永久に私有できると定めた法律はどれですか？",
+     choices:["三世一身法","班田収授法","大宝律令","墾田永年私財法"],ans:3,
+     exp:"墾田永年私財法（こんでんえいねんしざいほう）は743年に出された法律。開墾した土地の永久私有を認めたため，資金と労働力を持つ貴族・大寺院が広大な荘園を形成し，律令国家の「公地公民制」が崩れていく原因になりました。"}
+  ],
+  2: [
+    {q:"724年に即位し，仏教による国家鎮護を目指して東大寺の大仏建立を命じた天皇は誰ですか？",
+     choices:["元明天皇","持統天皇","聖武天皇","桓武天皇"],ans:2,
+     exp:"聖武天皇（しょうむてんのう，在位724〜749年）は，相次ぐ天然痘の流行や政変に苦しむ中，仏教の力で国家を安定させようとしました（鎮護国家思想）。741年に国分寺・国分尼寺建立，743年に東大寺大仏造立を命じました。"},
+    {q:"741年に聖武天皇が全国の各国に建立を命じた，男性僧の寺はどれですか？",
+     choices:["唐招提寺","東大寺","国分寺","法隆寺"],ans:2,
+     exp:"国分寺（こくぶんじ）は741年に全国の国（令制国）ごとに建立を命じられた寺。東大寺がその総本山（総国分寺）にあたります。全国60か所以上に造営され，仏法の加護を日本全土に広めることが目的でした。"},
+    {q:"聖武天皇が743年に奈良（平城京）に建立を命じた，全国国分寺の総本山はどれですか？",
+     choices:["薬師寺","法隆寺","東大寺","唐招提寺"],ans:2,
+     exp:"東大寺（とうだいじ）は743年に聖武天皇が建立を命じた大寺院。752年に高さ約15mの大仏（盧舎那仏）の開眼供養が行われました。現在も奈良を代表する世界遺産として知られています。"},
+    {q:"墾田永年私財法（743年）が律令国家に与えた最も大きな問題は何ですか？",
+     choices:["農民が農業をやめた","貴族・寺院の荘園が拡大し，公地公民制が崩れた","天皇の権力が弱まった","外国からの侵略を招いた"],ans:1,
+     exp:"墾田永年私財法により，資金・労働力を持つ貴族や大寺院が大規模な開墾を進め，広大な荘園（しょうえん）を獲得しました。荘園は国家の税が免除されるため，律令国家の根本原則「公地公民制」が崩壊に向かいました。"}
+  ],
+  3: [
+    {q:"奈良時代の聖武天皇の時代を中心とする国際色豊かな仏教文化を何といいますか？",
+     choices:["飛鳥文化","白鳳文化","天平文化","国風文化"],ans:2,
+     exp:"天平文化（てんぴょうぶんか）は奈良時代に栄えた文化。遣唐使がもたらした唐の文化に加え，シルクロードを通じてインド・ペルシャの影響も受けた，非常に国際色豊かな仏教文化です。"},
+    {q:"5度の失敗と失明の苦難を乗り越えて日本に渡来し，唐招提寺を建立した唐の高僧は誰ですか？",
+     choices:["空海","行基","鑑真","最澄"],ans:2,
+     exp:"鑑真（がんじん，688〜763年）は唐の高僧。5回の渡航失敗と失明の苦難を経て，753年についに来日しました。日本に正式な授戒制度をもたらし，759年に奈良に唐招提寺（とうしょうだいじ）を建立しました。"},
+    {q:"光明皇后が聖武天皇の遺品約9000点を献納した，「シルクロードの終着駅」と呼ばれる宝物庫はどれですか？",
+     choices:["唐招提寺","法隆寺宝物館","正倉院","東大寺南大門"],ans:2,
+     exp:"正倉院（しょうそういん）は東大寺境内にある宝物庫。光明皇后が756年に聖武天皇の遺品を献納した。ペルシャ・インド・ギリシャの影響を受けた宝物も多く，「シルクロードの終着駅」と呼ばれます。"},
+    {q:"奈良時代に成立した，天皇から農民まで幅広い人々の約4500首の和歌を収めた日本最古の歌集はどれですか？",
+     choices:["古今和歌集","万葉集","新古今和歌集","土佐日記"],ans:1,
+     exp:"万葉集（まんようしゅう）は8世紀後半に成立した日本最古の歌集。天皇・貴族から防人（さきもり）・農民まで幅広い人々の約4500首を収録。漢字の音・訓を借りた「万葉仮名」で書かれています。令和の元号もここから採られました。"}
+  ]
+};
+
+const mqSelections = {};
+
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id); if (!body) return;
+  const isOpen = body.classList.contains('open');
+  if (isOpen) { body.classList.remove('open'); if (btn) btn.classList.remove('open'); }
+  else {
+    body.classList.add('open'); if (btn) btn.classList.add('open');
+    const sec = parseInt(id.replace('mq',''));
+    if (!body.innerHTML.trim()) renderMQ(body, sec);
+  }
+}
+
+function renderMQ(container, sec) {
+  const qs = mqData[sec]; if (!qs) return;
+  let html = '';
+  qs.forEach((q, qi) => {
+    html += `<div class="mq-block" id="mq${sec}_${qi}">`;
+    html += `<div class="mq-q"><span class="mq-qnum">問${qi+1}</span>${q.q}</div>`;
+    html += `<div class="mq-choices">`;
+    q.choices.forEach((c, ci) => {
+      html += `<div class="mq-choice" id="mq${sec}_${qi}_${ci}" onclick="selectMQ(${sec},${qi},${ci})"><span class="mq-num">${ci+1}</span>${c}</div>`;
+    });
+    html += `</div></div>`;
+    if (qi < qs.length-1) html += `<hr class="mq-divider">`;
+  });
+  html += `<div class="mq-btn-row"><button class="mq-btn" onclick="judgeMQ(${sec})">✅ 採点する</button><button class="mq-btn reset" onclick="resetMQ(${sec})">↩ リセット</button></div>`;
+  html += `<div class="mq-result-wrap" id="mq-result-${sec}"></div>`;
+  container.innerHTML = html;
+}
+
+function selectMQ(sec, qi, ci) {
+  if (!mqSelections[sec]) mqSelections[sec] = {};
+  mqSelections[sec][qi] = ci;
+  const qs = mqData[sec];
+  qs.forEach((_, i) => {
+    _.choices.forEach((__, j) => {
+      const el = document.getElementById(`mq${sec}_${i}_${j}`);
+      if (el) el.classList.toggle('selected', i === qi && j === ci);
+    });
+  });
+}
+
+function judgeMQ(sec) {
+  const qs = mqData[sec]; const sel = mqSelections[sec] || {};
+  let correct = 0;
+  qs.forEach((q, qi) => {
+    q.choices.forEach((_, ci) => {
+      const el = document.getElementById(`mq${sec}_${qi}_${ci}`);
+      if (!el) return;
+      el.classList.remove('selected','correct','wrong','show-ans');
+      if (ci === q.ans) el.classList.add('show-ans');
+      if (sel[qi] !== undefined) {
+        if (ci === sel[qi] && ci === q.ans) { el.classList.add('correct'); correct++; }
+        else if (ci === sel[qi] && ci !== q.ans) el.classList.add('wrong');
+      }
+    });
+  });
+  const total = qs.length;
+  const resDiv = document.getElementById(`mq-result-${sec}`);
+  if (resDiv) {
+    const pass = correct === total;
+    resDiv.innerHTML = `<div class="mq-result-inner ${pass?'pass':'fail'}"><div class="mq-result-msg">${pass?'🎉 全問正解！':'📚 解説を読んで確認しよう'}</div><div class="mq-result-score">${correct} / ${total} 正解</div></div>`;
+  }
+}
+
+function resetMQ(sec) {
+  if (mqSelections[sec]) delete mqSelections[sec];
+  const qs = mqData[sec]; if (!qs) return;
+  qs.forEach((q, qi) => {
+    q.choices.forEach((_, ci) => {
+      const el = document.getElementById(`mq${sec}_${qi}_${ci}`);
+      if (el) el.classList.remove('selected','correct','wrong','show-ans');
+    });
+  });
+  const resDiv = document.getElementById(`mq-result-${sec}`); if (resDiv) resDiv.innerHTML = '';
+}
+
+/* ========= まとめテスト ========= */
+const finalData = [
+  {q:"710年に元明天皇が遷都した都はどれですか？",choices:["藤原京","難波宮","平城京","平安京"],ans:2},
+  {q:"708年に鋳造された日本最初の流通貨幣はどれですか？",choices:["富本銭","和同開珎","寛永通宝","永楽通宝"],ans:1},
+  {q:"723年に出された，新たに用水路を掘って開墾した土地を三代まで私有できるとした法令はどれですか？",choices:["墾田永年私財法","班田収授法","三世一身法","大宝律令"],ans:2},
+  {q:"743年に出された，開墾した土地を永久に私有できると定めた法令はどれですか？",choices:["三世一身法","班田収授法","墾田永年私財法","荘園令"],ans:2},
+  {q:"724年に即位し，国分寺建立と東大寺大仏造立を命じた天皇は誰ですか？",choices:["元明天皇","持統天皇","桓武天皇","聖武天皇"],ans:3},
+  {q:"741年に全国の各国に建立を命じられた，男性僧の寺はどれですか？",choices:["唐招提寺","法隆寺","国分寺","東大寺"],ans:2},
+  {q:"奈良の東大寺に建立された，高さ約15mの巨大な仏像を何といいますか？",choices:["弥勒菩薩","阿弥陀仏","観世音菩薩","大仏（盧舎那仏）"],ans:3},
+  {q:"5度の失敗と失明を乗り越えて日本に渡来し，唐招提寺を建立した唐の高僧はだれですか？",choices:["行基","空海","鑑真","最澄"],ans:2},
+  {q:"光明皇后が聖武天皇の遺品を献納した，「シルクロードの終着駅」と呼ばれる宝物庫はどれですか？",choices:["法隆寺宝物殿","正倉院","唐招提寺","薬師寺"],ans:1},
+  {q:"奈良時代に成立した，日本最古の歌集はどれですか？",choices:["古今和歌集","新古今和歌集","万葉集","土佐日記"],ans:2}
+];
+
+let finalSel = {};
+
+function initFinal() {
+  const area = document.getElementById('final-quiz-area'); if (!area) return;
+  let html = '';
+  finalData.forEach((q, qi) => {
+    html += `<div class="mq-block"><div class="mq-q"><span class="mq-qnum">問${qi+1}</span>${q.q}</div><div class="mq-choices">`;
+    q.choices.forEach((c, ci) => {
+      html += `<div class="mq-choice" id="fq_${qi}_${ci}" onclick="selFinal(${qi},${ci})"><span class="mq-num">${ci+1}</span>${c}</div>`;
+    });
+    html += `</div></div>`;
+    if (qi < finalData.length-1) html += `<hr class="mq-divider">`;
+  });
+  area.innerHTML = html;
+}
+
+function selFinal(qi, ci) {
+  finalSel[qi] = ci;
+  finalData[qi].choices.forEach((_, j) => {
+    const el = document.getElementById(`fq_${qi}_${j}`);
+    if (el) el.classList.toggle('selected', j === ci);
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalData.forEach((q, qi) => {
+    q.choices.forEach((_, ci) => {
+      const el = document.getElementById(`fq_${qi}_${ci}`); if (!el) return;
+      el.classList.remove('selected','correct','wrong','show-ans');
+      if (ci === q.ans) el.classList.add('show-ans');
+      if (finalSel[qi] !== undefined) {
+        if (ci === finalSel[qi] && ci === q.ans) { el.classList.add('correct'); correct++; }
+        else if (ci === finalSel[qi] && ci !== q.ans) el.classList.add('wrong');
+      }
+    });
+  });
+  const total = finalData.length; const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  if (row) row.innerHTML = `<div class="mq-result-inner ${pass?'pass':'fail'}" style="margin-top:10px"><div class="mq-result-msg">${pass?'🎉 合格！よくできました！':'📚 もう一度テキストを読み直しましょう'}</div><div class="mq-result-score">${correct} / ${total} 正解（合格ライン8問以上）</div></div>`;
+  if (pass) launchConfetti();
+}
+
+function resetFinal() {
+  finalSel = {};
+  finalData.forEach((q, qi) => {
+    q.choices.forEach((_, ci) => {
+      const el = document.getElementById(`fq_${qi}_${ci}`);
+      if (el) el.classList.remove('selected','correct','wrong','show-ans');
+    });
+  });
+  const row = document.getElementById('final-result-row'); if (row) row.innerHTML = '';
+}
+
+/* ========= チェックリスト ========= */
+const checkItems = [
+  "元明天皇が710年に平城京（奈良）に遷都した理由を説明できる",
+  "和同開珎が作られた目的（商業活動の促進）を説明できる",
+  "三世一身法の内容と問題点（3代後に没収）を説明できる",
+  "墾田永年私財法が律令国家に与えた影響（荘園の拡大→公地公民制の崩壊）を説明できる",
+  "聖武天皇が国分寺・東大寺を建てた目的（鎮護国家）を説明できる",
+  "鑑真が日本に来た目的と唐招提寺建立について説明できる",
+  "正倉院が「シルクロードの終着駅」と呼ばれる理由を説明できる",
+  "万葉集の特徴（日本最古の歌集・約4500首・万葉仮名）を説明できる"
+];
+
+let checkState = new Array(checkItems.length).fill(false);
+
+function renderChecklist() {
+  const area = document.getElementById('checklist-area'); if (!area) return;
+  let html = '';
+  checkItems.forEach((item, i) => {
+    html += `<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 10px;border-radius:8px;background:${checkState[i]?'#d0f0d8':'#fdf5ec'};border:1.5px solid ${checkState[i]?'#1a6b22':'#d4956a'};transition:all 0.2s">
+      <input type="checkbox" ${checkState[i]?'checked':''} onchange="toggleCheck(${i})" style="margin-top:3px;width:18px;height:18px;accent-color:#1a6b22">
+      <span style="font-size:14px;line-height:1.7">${item}</span>
+    </label>`;
+  });
+  area.innerHTML = html;
+  const done = checkState.filter(Boolean).length;
+  document.getElementById('check-count').textContent = `${done} / ${checkItems.length} チェック済み`;
+  document.getElementById('check-bar').style.width = `${(done/checkItems.length)*100}%`;
+}
+
+function toggleCheck(i) {
+  checkState[i] = !checkState[i]; renderChecklist();
+  if (checkState.every(Boolean)) launchConfetti();
+}
+
+/* ========= 彷徨の遷都モーダル ========= */
+function openHokouModal() {
+  document.getElementById('hokou-modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeHokouModal() {
+  document.getElementById('hokou-modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ========= 七道駅路モーダル ========= */
+function openRoadModal() {
+  document.getElementById('road-modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeRoadModal() {
+  document.getElementById('road-modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeRoadModal(); closeHokouModal(); } });
+
+/* ========= 花吹雪 ========= */
+function launchConfetti() {
+  const colors=['#f4a261','#e76f51','#2a9d8f','#e9c46a','#264653','#a8dadc','#457b9d'];
+  for (let i=0; i<60; i++) {
+    const el = document.createElement('div'); el.className='confetti-piece';
+    el.style.cssText = `left:${Math.random()*100}vw;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+/* ========= 初期化 ========= */
+initFinal();
+renderChecklist();
+</script>
+
+<!-- ===== 彷徨の遷都モーダル ===== -->
+<div class="road-modal-overlay" id="hokou-modal-overlay" onclick="if(event.target===this)closeHokouModal()">
+  <div class="road-modal-box">
+    <button class="road-modal-close" onclick="closeHokouModal()">✕</button>
+    <div class="road-modal-title" style="color:#7a4f00;border-bottom-color:#7a4f00">🚶 彷徨の遷都——聖武天皇はなぜ平城京を離れたのか？</div>
+    <div class="road-modal-body">
+      <p>724年に即位した聖武天皇ですが，実は<strong>740〜745年の約５年間，平城京（奈良）をほとんど離れて</strong>各地を転々としました。この不思議な行動を<strong>彷徨の遷都（ほうこうのせんと）</strong>と呼びます。</p>
+
+      <div class="cause-box" style="margin:12px 0">
+        <span class="label">😱 理由①：平城京が「呪われた都」に見えた</span>
+        735〜737年に天然痘が大流行し，推定100万人以上が死亡しました。藤原不比等の４人の息子（<strong>藤原四兄弟</strong>：武智麻呂・房前・宇合・麻呂）も全員，天然痘で相次いで亡くなりました。<br><br>
+        平城京の中で次々と有力者が死んでいく——聖武天皇の目には，平城京が<strong>怨霊（おんりょう）に取り憑かれた都</strong>に見えたのです。<br>
+        <span style="font-size:13px;color:#666">※ 当時の天皇・貴族にとって怨霊は「現代人が細菌・ウイルスを信じるのと同じくらいリアルな恐怖」でした。</span>
+      </div>
+
+      <div class="cause-box" style="margin:12px 0">
+        <span class="label">⚔️ 理由②：藤原広嗣の乱（740年）による精神的打撃</span>
+        740年，九州（大宰府）で<strong>藤原広嗣（ふじわらのひろつぐ）</strong>が反乱を起こしました。鎮圧されたものの，聖武天皇は「自分の治世で貴族が反乱を起こした」という事実に精神的に大きく打ちのめされました。「平城京にいては次の反乱が起きる」という危機感もありました。<br>
+        <span style="font-size:13px;color:#666">→ この乱の直後から，彷徨の遷都が始まります。</span>
+      </div>
+
+      <div class="result-box" style="margin:12px 0">
+        <span class="label">🗺️ 転々とした場所（740〜745年）</span>
+        聖武天皇はこの5年間に3か所の「新都」を次々と建設しました。<br><br>
+        <div style="display:grid;gap:10px;margin-top:6px">
+          <div style="background:#fff8f0;border-radius:8px;padding:10px 14px;border-left:4px solid #c87000">
+            <strong>▶ 740年：恭仁京（くにきょう）</strong>　現・京都府木津川市<br>
+            <span style="font-size:13px;color:#555">平城京から逃げるように北上。建設途中で放棄された。</span>
+          </div>
+          <div style="background:#fff8f0;border-radius:8px;padding:10px 14px;border-left:4px solid #c87000">
+            <strong>▶ 742年：難波宮（なにわのみや）</strong>　現・大阪府<br>
+            <span style="font-size:13px;color:#555">「副都（ふくと）」として一時使用。現在，大阪城公園内に史跡として保存。</span>
+          </div>
+          <div style="background:#fff3e0;border-radius:8px;padding:10px 14px;border-left:4px solid #8b3322">
+            <strong>▶ 743年：紫香楽宮（しがらきのみや）</strong>　現・滋賀県甲賀市信楽<br>
+            <span style="font-size:13px;color:#555"><strong>ここで大仏造立の詔（743年）が出された！</strong>　しかし山火事・地震が相次ぎ，さらに不安に。</span>
+          </div>
+          <div style="background:#efffea;border-radius:8px;padding:10px 14px;border-left:4px solid #1a6b22">
+            <strong>▶ 745年：平城京（奈良）へ帰還</strong><br>
+            <span style="font-size:13px;color:#555">相次ぐ山火事・地震・反乱に恐れ，ついに平城京へ。その後は二度と遷都しなかった。</span>
+          </div>
+        </div>
+        <p style="margin-top:14px;font-size:14px">この彷徨の遷都は，何度も宮殿建設が繰り返されたため農民に莫大な負担をかけましたが，一方で<strong>「仏教の力で自分と国を守りたい」</strong>という聖武天皇の切実な願いの表れでもありました。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 七道駅路モーダル ===== -->
+<div class="road-modal-overlay" id="road-modal-overlay" onclick="if(event.target===this)closeRoadModal()">
+  <div class="road-modal-box">
+    <button class="road-modal-close" onclick="closeRoadModal()">✕</button>
+    <div class="road-modal-title">🛣️ 七道駅路——律令国家の「高速道路」ネットワーク</div>
+    <div class="road-modal-body">
+      <p>平城京への遷都とともに，国家は首都と全国を結ぶ広大な道路網を整備しました。これが<strong>七道駅路（しちどうえきろ）</strong>です。</p>
+      <p>平城京（奈良）を中心に，東海道・東山道・北陸道・山陰道・山陽道・南海道・西海道の<strong>７本の幹線道路</strong>が全国へ放射状に伸びました。この７道に，都に近い大和・山城・摂津・河内・和泉の５か国を加えたものが<strong>「五畿七道（ごきしちどう）」</strong>と呼ばれ，律令国家の行政区画の基本となりました。</p>
+
+      <p>道路の幅はなんと<strong>主要幹線（大路）で最大約12丈（約36メートル）</strong>——現代の東名高速道路（片側3車線，幅約30〜35m）に匹敵する広さです。<br>
+      <span style="font-size:13px;color:#666">※ 実際の発掘調査では10〜20m程度のものが多く，記録と実態に差がある場合もあります。</span></p>
+
+      <div class="why-box">
+        <span class="label">🤔 なぜそんなに広い道路が必要だったのか？</span>
+        ▶ <strong>軍隊の移動</strong>：反乱・外敵侵入の際，多数の軍隊と兵器・食料を一気に輸送できるようにするため。騎馬武者・歩兵・荷車が一斉に行軍するには，広い道が不可欠でした。<br>
+        ▶ <strong>税（租庸調）の輸送</strong>：全国から集めた税品（米・布・特産物）を大量の荷車で都へ運ぶため。官道は「物流の大動脈」でもありました。<br>
+        ▶ <strong>命令・情報の伝達（駅制）</strong>：約16km（30里）ごとに「駅家（うまや）」を設置し，緊急の使者が馬を乗り換えて情報を素早く伝えました。「日本全国を1〜2週間で走り抜ける」速度だったと言われます。「<strong>駅伝（えきでん）</strong>」という言葉の語源もここにあります。<br>
+        ▶ <strong>天皇・官人の権威の誇示</strong>：幅の広い整備された官道は「律令国家の力」を地方の民衆に見せつける効果がありました。
+      </div>
+
+      <p style="margin-top:14px">🗾 <strong>現代に残る七道の名前</strong></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:14px;background:#f5f9ff;padding:12px 16px;border-radius:10px;border:1.5px solid #b0c8e8">
+        <div>🏯 <strong>東海道</strong>（とうかいどう）<br><span style="font-size:12px;color:#555">平城京〜東国（関東）。現・JR東海道本線のルート</span></div>
+        <div>🏔️ <strong>東山道</strong>（とうさんどう）<br><span style="font-size:12px;color:#555">平城京〜信州・東北を結ぶ内陸の道</span></div>
+        <div>❄️ <strong>北陸道</strong>（ほくりくどう）<br><span style="font-size:12px;color:#555">平城京〜越前・越後（北陸）</span></div>
+        <div>🌊 <strong>山陰道</strong>（さんいんどう）<br><span style="font-size:12px;color:#555">平城京〜丹波・出雲（山陰）</span></div>
+        <div>⭐ <strong>山陽道</strong>（さんようどう）<br><span style="font-size:12px;color:#555">最重要幹線。平城京〜九州。現・JR山陽本線のルート</span></div>
+        <div>🌺 <strong>南海道</strong>（なんかいどう）<br><span style="font-size:12px;color:#555">大阪〜四国・紀伊</span></div>
+        <div style="grid-column:1/-1">🌏 <strong>西海道</strong>（さいかいどう）<br><span style="font-size:12px;color:#555">九州全体。大宰府（太宰府）が管轄。</span></div>
+      </div>
+      <p style="font-size:13px;color:#666;margin-top:10px">これらの名前は江戸時代の「東海道五十三次」など，現代にまで受け継がれています。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

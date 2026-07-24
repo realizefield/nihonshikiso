@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>GAMBA 日本史基礎 単元表</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;background:#fdf5ec;color:#1a1a2e;min-height:100vh;font-size:15px}
+
+/* ══ ヘッダー ══ */
+.top-header{background:linear-gradient(135deg,#8b3322 0%,#6a2318 100%);color:#fff;padding:16px 16px 0;text-align:center}
+.top-header h1{font-size:1.15rem;font-weight:800;letter-spacing:.04em}
+.top-header p{font-size:.78rem;margin-top:3px;opacity:.85}
+.summary-bar{background:rgba(0,0,0,.22);margin-top:12px;padding:9px 14px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;font-size:.78rem;color:#fff}
+.sum-item{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.sum-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sum-dot-a{background:#4ade80}.sum-dot-b{background:#fbbf24}.sum-dot-c{background:#f87171}.sum-dot-n{background:#94a3b8}
+.sum-count{font-weight:800;font-size:1rem;min-width:18px;text-align:center}
+
+/* ══ ラップ ══ */
+.wrap{max-width:960px;margin:0 auto;padding:14px 12px 70px}
+
+/* ══ 進捗バー ══ */
+.progress-wrap{background:#fff;border-radius:14px;border:1px solid #f0c880;padding:13px 16px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.progress-lbl{font-size:.8rem;font-weight:800;color:#8b3322;margin-bottom:8px}
+.progress-bar-bg{background:#fde8c0;border-radius:20px;height:12px;overflow:hidden}
+.progress-bar-fill{background:linear-gradient(90deg,#8b3322,#c87000);height:100%;border-radius:20px;transition:.6s}
+.progress-pct{font-size:.8rem;font-weight:700;color:#8b3322;margin-top:5px;text-align:right}
+
+/* ══ タブ ══ */
+.tab-nav{background:rgba(255,255,255,.97);border-bottom:2px solid #f0c880;padding:8px 12px;display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:0;z-index:300;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tnav{font-family:inherit;font-size:.8em;font-weight:700;padding:7px 18px;border:2px solid #f0c880;border-radius:50px;background:#fff;color:#6b7a99;cursor:pointer;transition:.14s}
+.tnav:hover{border-color:#8b3322;color:#8b3322}
+.tnav.on{background:#8b3322;color:#fff;border-color:#8b3322}
+.tab-sec{display:none}.tab-sec.on{display:block}
+
+/* ══ 章ブロック ══ */
+.unit{background:#fff;border-radius:14px;border:1px solid #f0c880;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.05);overflow:hidden}
+.unit-hd{padding:11px 16px;display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#8b3322,#c87000);color:#fff}
+.unit-num{background:rgba(255,255,255,.2);border-radius:7px;padding:3px 10px;font-size:.78rem;font-weight:800;white-space:nowrap}
+.unit-title{font-size:1rem;font-weight:800;flex:1}
+.unit-badge{font-size:.72rem;background:rgba(255,255,255,.25);border-radius:999px;padding:2px 9px;font-weight:700;white-space:nowrap}
+.unit-body{padding:12px 14px}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+
+/* ══ 単元カード ══ */
+.sec-card{border-radius:10px;border:1.5px solid #f0c880;overflow:hidden;transition:.18s;background:#fff;display:flex;flex-direction:column}
+.sec-card:hover{box-shadow:0 3px 14px rgba(139,51,34,.15);transform:translateY(-1px)}
+
+.sc-hd{background:#fff8f0;border-bottom:2px solid #8b3322;padding:9px 12px;display:flex;align-items:center;gap:8px}
+.sc-num{background:#8b3322;color:#fff;border-radius:7px;padding:3px 9px;font-size:.75rem;font-weight:800;flex-shrink:0}
+.sc-title{font-size:.83rem;font-weight:800;flex:1;color:#6a2318;line-height:1.3}
+.sc-status{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:50px;white-space:nowrap;flex-shrink:0;background:#e2e8f0;color:#64748b;border:1px solid #cbd5e1}
+.sc-status.done{background:#dcfce7;color:#16a34a;border-color:#16a34a}
+.sc-status.partial{background:#fef3c7;color:#92400e;border-color:#fbbf24}
+.sc-status.studying{background:#dbeafe;color:#1d4ed8;border-color:#3b82f6}
+
+.sc-body{padding:8px 12px;background:#fff;flex:1}
+.sc-topics{list-style:none;margin:0;padding:0}
+.sc-topics li{font-size:.78rem;color:#475569;padding:2px 0;border-bottom:1px solid #fff8f0;line-height:1.5}
+.sc-topics li:last-child{border-bottom:none}
+.sc-topics li::before{content:"・";color:#8b3322}
+
+.sc-meta{display:flex;align-items:center;gap:12px;padding:4px 12px 6px;font-size:.72rem;color:#64748b;background:#fffdf8;border-top:1px dashed #f0c880}
+.sc-meta-item{display:flex;align-items:center;gap:3px}
+.sc-meta-val{font-weight:700;color:#6a2318}
+
+.sc-btn-row{display:flex;gap:5px;padding:8px 12px 0;flex-wrap:wrap}
+.sc-btn{flex:1;min-width:60px;text-align:center;padding:8px 4px;border-radius:8px;font-size:.78rem;font-weight:800;text-decoration:none;transition:.13s;border:none;cursor:pointer;display:block;color:#fff;font-family:inherit;background:#8b3322}
+.sc-btn:hover{background:#6a2318}
+.sc-btn-drill{background:#c87000}
+.sc-btn-drill:hover{background:#9a5800}
+.sc-btn-soon{background:#cbd5e1;color:#fff;cursor:not-allowed;pointer-events:none}
+
+.abc-row{display:flex;gap:5px;padding:8px 12px 10px}
+.abc-lbl{font-size:.68rem;color:#64748b;font-weight:700;align-self:center;margin-right:2px;white-space:nowrap}
+.abc-btn{flex:1;padding:7px 2px;border-radius:20px;font-size:.75rem;font-weight:800;font-family:inherit;cursor:pointer;transition:.13s;border:2px solid;text-align:center;background:#fff}
+.abc-a{border-color:#16a34a;color:#16a34a}.abc-a.sel{background:#16a34a;color:#fff}
+.abc-b{border-color:#d97706;color:#d97706}.abc-b.sel{background:#d97706;color:#fff}
+.abc-c{border-color:#dc2626;color:#dc2626}.abc-c.sel{background:#dc2626;color:#fff}
+.abc-btn:hover{opacity:.8}
+
+.sec-card.s-a{border-color:#16a34a}.sec-card.s-a .sc-hd{background:#dcfce7!important;border-bottom-color:#16a34a!important}
+.sec-card.s-b{border-color:#d97706}.sec-card.s-b .sc-hd{background:#fef3c7!important;border-bottom-color:#d97706!important}
+.sec-card.s-c{border-color:#dc2626}.sec-card.s-c .sc-hd{background:#fee2e2!important;border-bottom-color:#dc2626!important}
+
+/* ══ ドリルバナー ══ */
+.drill-banner{background:linear-gradient(135deg,#1a1a2e 0%,#2d1a4e 100%);border-radius:14px;padding:18px 22px;margin-bottom:18px;color:#fff;display:flex;align-items:center;gap:16px;box-shadow:0 3px 14px rgba(0,0,0,.18)}
+.drill-icon{font-size:2.4rem;flex-shrink:0}
+.drill-info{flex:1}
+.drill-info h3{font-size:.98rem;font-weight:800;margin-bottom:4px}
+.drill-info p{font-size:.77rem;opacity:.8;line-height:1.5}
+.drill-go{background:linear-gradient(135deg,#c87000,#f4a261);color:#fff;border:none;border-radius:10px;padding:11px 22px;font-size:.85rem;font-weight:800;cursor:pointer;text-decoration:none;white-space:nowrap;font-family:inherit;flex-shrink:0}
+.drill-go:hover{opacity:.88}
+
+/* ══ 学習記録タブ ══ */
+.record-wrap{background:#fff;border-radius:14px;border:1px solid #f0c880;padding:14px 16px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.record-title{font-size:.88rem;font-weight:800;color:#8b3322;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid #fde8c0}
+.prog-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #fff8f0}
+.prog-row:last-child{border-bottom:none}
+.prog-num{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#8b3322,#c87000);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700}
+.prog-title{flex:1;font-size:.82rem;font-weight:700;line-height:1.4}
+.prog-grade{font-size:.73em;font-weight:700;padding:3px 10px;border-radius:50px;background:#fff8f0;color:#64748b;border:1px solid #f0c880;white-space:nowrap}
+.prog-grade.a{background:#16a34a;color:#fff;border-color:#16a34a}
+.prog-grade.b{background:#d97706;color:#fff;border-color:#d97706}
+.prog-grade.c{background:#dc2626;color:#fff;border-color:#dc2626}
+.prog-meta{font-size:.68em;color:#64748b;white-space:nowrap}
+
+.cal-grid{display:flex;flex-wrap:wrap;gap:4px}
+.cal-day{width:15px;height:15px;border-radius:4px;background:#fde8c0}
+.cal-day.s1{background:#f9c56b}.cal-day.s2{background:#e09200}
+.cal-day.s3{background:#b36e00}.cal-day.s4{background:#7a4800}
+.cal-lbl{display:flex;gap:5px;align-items:center;margin-top:10px;font-size:.68em;color:#64748b}
+.cld{width:11px;height:11px;border-radius:3px}
+
+/* モーダル */
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:900;align-items:center;justify-content:center}
+.modal-ov.open{display:flex}
+.modal-box{background:#fff;border-radius:18px;padding:34px 38px;text-align:center;max-width:340px;width:90%;box-shadow:0 16px 56px rgba(0,0,0,.22);position:relative;overflow:hidden}
+.modal-box::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#8b3322,#c87000,#8b3322)}
+.modal-emoji{font-size:3em;margin-bottom:12px}
+.modal-title{font-size:1.2em;font-weight:900;margin-bottom:8px}
+.modal-sub{font-size:.87em;color:#64748b;margin-bottom:22px;line-height:1.6}
+.modal-close{font-family:inherit;font-size:.9em;font-weight:700;background:linear-gradient(135deg,#8b3322,#c87000);color:#fff;border:none;border-radius:50px;padding:11px 32px;cursor:pointer}
+
+canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:none}
+
+@media(max-width:480px){
+  .unit-title{font-size:.9rem}
+  .sec-grid{grid-template-columns:1fr}
+  .sc-btn{font-size:.73rem;padding:7px 2px}
+  .drill-banner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<canvas id="cnf"></canvas>
+
+<!-- ══ ヘッダー ══ -->
+<div class="top-header">
+  <h1>📗 GAMBA 日本史基礎 単元表</h1>
+  <p>高認・大学受験対策 — 原始古代から平安時代まで</p>
+  <div class="summary-bar">
+    <div class="sum-item"><span class="sum-dot sum-dot-a"></span>A 完璧 <span class="sum-count" id="cnt-a">0</span></div>
+    <div class="sum-item"><span class="sum-dot sum-dot-b"></span>B 良好 <span class="sum-count" id="cnt-b">0</span></div>
+    <div class="sum-item"><span class="sum-dot sum-dot-c"></span>C 要復習 <span class="sum-count" id="cnt-c">0</span></div>
+    <div class="sum-item"><span class="sum-dot sum-dot-n"></span>未学習 <span class="sum-count" id="cnt-n">12</span></div>
+  </div>
+</div>
+
+<!-- ══ タブ ══ -->
+<div class="tab-nav">
+  <button class="tnav on" onclick="switchTab('tab-units',this)">📋 単元表</button>
+  <button class="tnav"    onclick="switchTab('tab-record',this)">📅 学習記録</button>
+</div>
+
+<div class="wrap">
+<div class="tab-sec on" id="tab-units">
+
+  <!-- 進捗バー -->
+  <div class="progress-wrap">
+    <div class="progress-lbl">📊 習熟度（全12単元）</div>
+    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progFill" style="width:0%"></div></div>
+    <div class="progress-pct" id="progPct">0%　A評価 <span id="progNote">0 / 12</span> 単元</div>
+  </div>
+
+  <!-- ドリルバナー -->
+  <div class="drill-banner">
+    <div class="drill-icon">📝</div>
+    <div class="drill-info">
+      <h3>ドリル＆確認テスト（第１〜４章）</h3>
+      <p>フラッシュカード・4択ドリル・確認テストで理解を定着させよう。単元ごとに分かれているので苦手なところを重点的に。</p>
+    </div>
+    <a class="drill-go" href="nihonshi_drill_nh01.html">ドリルへ →</a>
+  </div>
+
+  <!-- 第1章 -->
+  <div class="unit">
+    <div class="unit-hd">
+      <span class="unit-num">第1章</span>
+      <span class="unit-title">原始・古代</span>
+      <span class="unit-badge">①〜③</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch1"></div>
+    </div>
+  </div>
+
+  <!-- 第2章 -->
+  <div class="unit">
+    <div class="unit-hd">
+      <span class="unit-num">第2章</span>
+      <span class="unit-title">律令国家の成立</span>
+      <span class="unit-badge">④〜⑥</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch2"></div>
+    </div>
+  </div>
+
+  <!-- 第3章 -->
+  <div class="unit">
+    <div class="unit-hd">
+      <span class="unit-num">第3章</span>
+      <span class="unit-title">奈良時代</span>
+      <span class="unit-badge">⑦〜⑨</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch3"></div>
+    </div>
+  </div>
+
+  <!-- 第4章 -->
+  <div class="unit">
+    <div class="unit-hd">
+      <span class="unit-num">第4章</span>
+      <span class="unit-title">平安時代</span>
+      <span class="unit-badge">⑩〜⑫</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch4"></div>
+    </div>
+  </div>
+
+</div><!-- /tab-units -->
+
+<!-- 学習記録タブ -->
+<div class="tab-sec" id="tab-record">
+  <div class="record-wrap">
+    <div class="record-title">📊 単元別　理解度一覧</div>
+    <div id="progList"></div>
+  </div>
+  <div class="record-wrap">
+    <div class="record-title">📅 学習カレンダー（過去84日）</div>
+    <div class="cal-grid" id="calGrid"></div>
+    <div class="cal-lbl">
+      <span>少</span>
+      <div class="cld" style="background:#fde8c0"></div>
+      <div class="cld cal-day s1"></div>
+      <div class="cld cal-day s2"></div>
+      <div class="cld cal-day s3"></div>
+      <div class="cld cal-day s4"></div>
+      <span>多</span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<!-- 達成モーダル -->
+<div class="modal-ov" id="achieveModal">
+  <div class="modal-box">
+    <div class="modal-emoji" id="achEmoji">🎉</div>
+    <div class="modal-title" id="achTitle">達成！</div>
+    <div class="modal-sub"   id="achSub"></div>
+    <button class="modal-close" onclick="closeAchieve()">とじる</button>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+const UNITS = [
+  // 第1章
+  {id:'nh01',num:'①', title:'日本列島のはじまり——石器から稲作へ',
+   sub:['岩宿遺跡・縄文時代・三内丸山遺跡','弥生時代・吉野ヶ里遺跡・稲作'],
+   file:'nihonshi_ch01.html', drill:'nihonshi_drill_nh01.html', group:'ch1'},
+  {id:'nh02',num:'②', title:'中国の歴史書が伝える「倭国」の姿',
+   sub:['奴国の金印・倭国大乱・卑弥呼','邪馬台国・前方後円墳・大和政権'],
+   file:'nihonshi_ch01.html', drill:'nihonshi_drill_nh02.html', group:'ch1'},
+  {id:'nh03',num:'③', title:'天皇中心の国家——聖徳太子と大化の改新',
+   sub:['冠位十二階・憲法十七条・遣隋使','大化の改新・班田収授法・法隆寺'],
+   file:'nihonshi_ch01.html', drill:'nihonshi_drill_nh03.html', group:'ch1'},
+  // 第2章
+  {id:'nh04',num:'④', title:'白村江の戦いと天智天皇の防衛政策',
+   sub:['水城・大野城・近江大津宮','庚午年籍・近江令'],
+   file:'nihonshi_ch02.html', drill:'nihonshi_drill_nh04.html', group:'ch2'},
+  {id:'nh05',num:'⑤', title:'壬申の乱と天武・持統天皇',
+   sub:['壬申の乱・天武天皇・伊勢神宮','藤原京・飛鳥浄御原令・持統天皇'],
+   file:'nihonshi_ch02.html', drill:'nihonshi_drill_nh05.html', group:'ch2'},
+  {id:'nh06',num:'⑥', title:'律令国家の完成——大宝律令と税制',
+   sub:['藤原不比等・大宝律令・班田収授法','租・調・庸・雑徭'],
+   file:'nihonshi_ch02.html', drill:'nihonshi_drill_nh06.html', group:'ch2'},
+  // 第3章
+  {id:'nh07',num:'⑦', title:'平城京への遷都と土地制度の変化',
+   sub:['元明天皇・和同開珎・平城京','三世一身法・墾田永年私財法・荘園'],
+   file:'nihonshi_ch03.html', drill:'nihonshi_drill_nh07.html', group:'ch3'},
+  {id:'nh08',num:'⑧', title:'聖武天皇と仏教による国家鎮護',
+   sub:['聖武天皇・国分寺・東大寺','盧舎那仏・鎮護国家・鑑真'],
+   file:'nihonshi_ch03.html', drill:'nihonshi_drill_nh08.html', group:'ch3'},
+  {id:'nh09',num:'⑨', title:'天平文化——国際色豊かな仏教文化',
+   sub:['正倉院・天平文化・光明皇后','万葉集・大伴家持・万葉仮名'],
+   file:'nihonshi_ch03.html', drill:'nihonshi_drill_nh09.html', group:'ch3'},
+  // 第4章
+  {id:'nh10',num:'⑩', title:'平安京遷都と桓武天皇の政治',
+   sub:['桓武天皇・坂上田村麻呂・征夷大将軍','最澄・空海・菅原道真'],
+   file:'nihonshi_ch04.html', drill:'nihonshi_drill_nh10.html', group:'ch4'},
+  {id:'nh11',num:'⑪', title:'摂関政治と院政——藤原氏の全盛と武士の台頭',
+   sub:['平将門・藤原道長・摂関政治','後三条天皇・延久の荘園整理令・白河上皇'],
+   file:'nihonshi_ch04.html', drill:'nihonshi_drill_nh11.html', group:'ch4'},
+  {id:'nh12',num:'⑫', title:'国風文化——日本独自の美と文学',
+   sub:['紫式部・清少納言・平仮名・国風文化','末法思想・浄土教・平等院鳳凰堂'],
+   file:'nihonshi_ch04.html', drill:'nihonshi_drill_nh12.html', group:'ch4'},
+];
+
+const DONE_FILES = [
+  'nihonshi_ch01.html','nihonshi_ch02.html',
+  'nihonshi_ch03.html','nihonshi_ch04.html'
+];
+
+const LS_KEY = 'nihonshi_gamba_v1';
+const LS_CAL = 'nihonshi_cal_v1';
+let STATUS = {};
+try{ const s = localStorage.getItem(LS_KEY); if(s) STATUS = JSON.parse(s); }catch(e){}
+function saveStatus(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(STATUS)); }catch(e){} }
+function getGrade(id){ return (STATUS[id]||{}).grade||''; }
+function getCount(id){ return (STATUS[id]||{}).count||0; }
+function getLast(id){  return (STATUS[id]||{}).last||''; }
+
+/* ── カード生成 ── */
+function buildCards(){
+  ['ch1','ch2','ch3','ch4'].forEach(g => {
+    const el = document.getElementById('grid-'+g);
+    if(!el) return;
+    el.innerHTML = UNITS.filter(u => u.group === g).map(u => {
+      const done  = DONE_FILES.includes(u.file);
+      const topics = u.sub.map(s => `<li>${s}</li>`).join('');
+      const grade  = getGrade(u.id);
+      const cnt    = getCount(u.id);
+      const last   = getLast(u.id);
+
+      let statusCls = '', statusTxt = '未学習';
+      if(!done){ statusTxt = '🔜 準備中'; }
+      else if(grade==='a'){ statusCls='done';    statusTxt='✅ 完璧'; }
+      else if(grade==='b'){ statusCls='partial'; statusTxt='📘 良好'; }
+      else if(grade==='c'){ statusCls='partial'; statusTxt='📌 要復習'; }
+      else if(cnt>0){       statusCls='studying';statusTxt='学習中'; }
+
+      const btns = done
+        ? `<a class="sc-btn" href="${u.file}">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="${u.drill}">✏️ ドリルへ</a>`
+        : `<span class="sc-btn sc-btn-soon">📖 準備中</span>`;
+      const dis = done ? '' : 'disabled';
+
+      return `<div class="sec-card${grade?' s-'+grade:''}" data-id="${u.id}">
+  <div class="sc-hd">
+    <span class="sc-num">${u.num}</span>
+    <span class="sc-title">${u.title}</span>
+    <span class="sc-status ${statusCls}" id="st-${u.id}">${statusTxt}</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics">${topics}</ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-${u.id}">${cnt}</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-${u.id}">${last||'─'}</span></div>
+  </div>
+  <div class="sc-btn-row">${btns}</div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a${grade==='a'?' sel':''}" onclick="setABC('${u.id}','a',this)" ${dis}>A 完璧</button>
+    <button class="abc-btn abc-b${grade==='b'?' sel':''}" onclick="setABC('${u.id}','b',this)" ${dis}>B 良好</button>
+    <button class="abc-btn abc-c${grade==='c'?' sel':''}" onclick="setABC('${u.id}','c',this)" ${dis}>C 復習</button>
+  </div>
+</div>`;
+    }).join('');
+  });
+}
+
+/* ── ABC評価 ── */
+function setABC(id, grade, btn){
+  if(!STATUS[id]) STATUS[id] = {};
+  const prev = getGrade(id);
+  if(prev === grade){
+    STATUS[id].grade = '';
+  } else {
+    STATUS[id].grade = grade;
+    STATUS[id].count = (STATUS[id].count||0) + 1;
+    STATUS[id].last  = new Date().toISOString().slice(0,10);
+  }
+  saveStatus(); recordCal(); render();
+  if(grade === 'a' && prev !== 'a') launchConfetti();
+}
+
+function recordCal(){
+  try{
+    const cal = JSON.parse(localStorage.getItem(LS_CAL)||'{}');
+    const t = new Date().toISOString().slice(0,10);
+    cal[t] = (cal[t]||0) + 1;
+    localStorage.setItem(LS_CAL, JSON.stringify(cal));
+  }catch(e){}
+}
+
+/* ── レンダリング ── */
+function render(){
+  let ca=0,cb=0,cc=0,cn=0;
+  UNITS.forEach(u => {
+    const g    = getGrade(u.id);
+    const cnt  = getCount(u.id);
+    const last = getLast(u.id);
+    const done = DONE_FILES.includes(u.file);
+
+    const card = document.querySelector(`[data-id="${u.id}"]`);
+    if(card){
+      card.classList.remove('s-a','s-b','s-c');
+      if(g) card.classList.add('s-'+g);
+      card.querySelectorAll('.abc-btn').forEach(b => {
+        b.classList.remove('sel');
+        if(b.classList.contains('abc-'+g)) b.classList.add('sel');
+      });
+    }
+
+    const ce = document.getElementById('cnt-'+u.id);  if(ce)  ce.textContent  = cnt;
+    const le = document.getElementById('last-'+u.id); if(le)  le.textContent  = last||'─';
+
+    const st = document.getElementById('st-'+u.id);
+    if(st && done){
+      if(g==='a'){     st.className='sc-status done';    st.textContent='✅ 完璧'; }
+      else if(g==='b'){st.className='sc-status partial'; st.textContent='📘 良好'; }
+      else if(g==='c'){st.className='sc-status partial'; st.textContent='📌 要復習'; }
+      else if(cnt>0){  st.className='sc-status studying';st.textContent='学習中'; }
+      else{            st.className='sc-status';         st.textContent='未学習'; }
+    }
+
+    if(!done) return;
+    if(g==='a') ca++; else if(g==='b') cb++; else if(g==='c') cc++; else cn++;
+  });
+
+  const total = 12;
+  document.getElementById('cnt-a').textContent = ca;
+  document.getElementById('cnt-b').textContent = cb;
+  document.getElementById('cnt-c').textContent = cc;
+  document.getElementById('cnt-n').textContent = cn;
+  const pct = Math.round((ca*100 + cb*60 + cc*30) / total);
+  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progPct').textContent  = pct + '%　A評価 ';
+  document.getElementById('progNote').textContent = ca + ' / ' + total;
+  renderProgList();
+  renderCalendar();
+}
+
+function renderProgList(){
+  const list = document.getElementById('progList');
+  if(!list) return;
+  list.innerHTML = UNITS.map(u => {
+    const g = getGrade(u.id);
+    return `<div class="prog-row">
+  <div class="prog-num">${u.num}</div>
+  <div class="prog-title">${u.title}</div>
+  <span class="prog-grade ${g}">${g.toUpperCase()||'─'}</span>
+  <span class="prog-meta">${getCount(u.id)}回　${getLast(u.id)||'─'}</span>
+</div>`;
+  }).join('');
+}
+
+function renderCalendar(){
+  const cal  = JSON.parse(localStorage.getItem(LS_CAL)||'{}');
+  const grid = document.getElementById('calGrid');
+  let html = '';
+  for(let i=83; i>=0; i--){
+    const d = new Date(); d.setDate(d.getDate()-i);
+    const k = d.toISOString().slice(0,10);
+    const v = cal[k]||0;
+    const cls = v>=4?'s4':v>=3?'s3':v>=2?'s2':v>=1?'s1':'';
+    html += `<div class="cal-day ${cls}" title="${k}：${v}回"></div>`;
+  }
+  grid.innerHTML = html;
+}
+
+function switchTab(id, btn){
+  document.querySelectorAll('.tab-sec').forEach(s => s.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  document.querySelectorAll('.tnav').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  window.scrollTo(0,0);
+}
+
+function closeAchieve(){ document.getElementById('achieveModal').classList.remove('open'); }
+
+function launchConfetti(){
+  const cv = document.getElementById('cnf');
+  cv.width = innerWidth; cv.height = innerHeight; cv.style.display = 'block';
+  const ctx = cv.getContext('2d');
+  const cols = ['#8b3322','#c87000','#f4a261','#fbbf24','#f87171','#34d399','#60a5fa','#a78bfa'];
+  let ps = [];
+  function mk(x,y,vx,vy){ return{x,y,vx,vy,s:Math.random()*8+5,c:cols[Math.floor(Math.random()*cols.length)],rot:Math.random()*6,vr:(Math.random()-.5)*.3,sw:Math.random()*6}; }
+  for(let i=0;i<90;i++){
+    ps.push(mk(0,cv.height,4+Math.random()*8,-(10+Math.random()*10)));
+    ps.push(mk(cv.width,cv.height,-(4+Math.random()*8),-(10+Math.random()*10)));
+  }
+  for(let i=0;i<120;i++){ ps.push(mk(Math.random()*cv.width,-Math.random()*cv.height*.4,(Math.random()-.5)*2,1.5+Math.random()*2)); }
+  let f = 0;
+  (function loop(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    ps.forEach(p => {
+      p.vy+=.18; p.sw+=.06; p.x+=p.vx+Math.sin(p.sw)*1.5; p.y+=p.vy; p.rot+=p.vr;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+      ctx.fillStyle=p.c; ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s); ctx.restore();
+    });
+    f++;
+    if(f<380) requestAnimationFrame(loop);
+    else{ ctx.clearRect(0,0,cv.width,cv.height); cv.style.display='none'; }
+  })();
+}
+
+buildCards();
+render();
+</script>
+</body>
+</html>

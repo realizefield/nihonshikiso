@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：第４章 平安時代</title>
+<style>
+  body{font-family:"Meiryo",sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding-bottom:220px}
+  h1{border-bottom:3px solid #8b3322;padding-bottom:8px;font-size:24px;color:#1a1a2e}
+  h2{margin-top:20px;margin-bottom:8px;font-size:19px;border-left:5px solid #8b3322;padding-left:10px;color:#1a1a2e}
+  .back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:12px;text-decoration:none}
+  .back-to-index:hover{background:#6a2318}
+  .section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #d4956a;margin-bottom:16px;position:relative}
+  .section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px}
+  .label-sec1{background:#1a4f7a}
+  .label-sec2{background:#7a4f00}
+  .label-sec3{background:#3d2b7a}
+  .blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b3322;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b3322;vertical-align:middle;position:relative;padding:0 2px}
+  .blank-display{display:inline-block}
+  .blank.correct{background-color:#fdebd0}
+  .blank.wrong{background-color:#fdd;border-color:#c00}
+  .blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}
+  .blank.placed{background-color:#fff3e0}
+  .kw{display:inline-block;position:relative;border-bottom:2px dashed #8b3322;cursor:help;color:#8b3322;font-weight:bold;line-height:1.4}
+  .blank.kw{border-bottom:2px solid #8b3322;cursor:pointer}
+  .blank.kw.challenge-active{cursor:pointer}
+  .kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:280px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+  .kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+  @media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+  .kw.active .kw-pop{visibility:visible;opacity:1}
+  .kw-title{display:block;font-weight:bold;font-size:14px;color:#f4a261;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+  .kw-yomi{display:block;font-size:12px;color:#aad4ff;margin-bottom:4px}
+  .kw-body{display:block;font-size:13px;color:#ddd}
+  .why-box{background:#fff8f0;border-left:5px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .why-box .label{font-weight:bold;color:#8b3322;margin-right:4px}
+  .result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+  .cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+  .key-point{background:#fdf5ec;border-left:5px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+  .key-point strong{color:#8b3322}
+  .timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .tl-item{background:#fdf5ec;border:1.5px solid #d4956a;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b3322;font-weight:bold}
+  .sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fdf5ec;border:1.5px solid #d4956a;border-radius:10px;padding:10px 14px;margin-top:14px}
+  .sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b3322;color:#fff;box-shadow:0 2px 0 #6a2318}
+  .sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+  .sec-btn.challenge:hover{background:#a85e00}
+  .sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+  .sec-status.pass{color:#1a6b22}
+  .sec-status.fail{color:#c00}
+  .demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+  .demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+  #challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#2a0e06,#4a1a0a);border-top:3px solid #c4572a;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+  #challenge-chip-bar.visible{display:block}
+  #ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+  #ccb-label{font-size:13px;font-weight:bold;color:#f4a261}
+  #ccb-hint{font-size:12px;color:#ffccaa;flex:1;text-align:center}
+  #ccb-count{font-size:12px;color:#ffccaa;white-space:nowrap}
+  #ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+  .challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #c4572a;background:#8b3322;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+  .challenge-chip:hover{border-color:#f4a261;background:#a84030}
+  .challenge-chip.selected{border-color:#f4d03f;background:#a84030;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+  #ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+  #ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333}
+  #ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+  #ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+  #ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+  #ccb-demo-return{display:none;margin-top:6px;text-align:center}
+  #ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15}
+  #oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a4e);border:3px solid #f4a261;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+  .oshii-main{font-size:36px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+  .oshii-sub{font-size:18px;color:#f0f0f0;margin-bottom:6px}
+  .oshii-tip{font-size:12px;color:#888;margin-top:8px}
+  .mini-quiz-wrap{margin-top:14px}
+  .mini-quiz-toggle{width:100%;text-align:left;background:#fdf5ec;border:1.5px solid #d4956a;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b3322;display:flex;align-items:center;justify-content:space-between}
+  .mini-quiz-toggle .arrow{transition:transform 0.2s}
+  .mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+  .mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #d4956a;border-radius:10px}
+  .mini-quiz-body.open{display:block}
+  .mq-block{margin-bottom:18px}
+  .mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+  .mq-qnum{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+  .mq-choices{display:flex;flex-direction:column;gap:7px}
+  .mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+  .mq-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none}
+  .mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .final-section{background:#fff;border-radius:8px;padding:20px;border:2px solid #8b3322;margin-bottom:16px}
+  .mq-btn-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .mq-btn{padding:10px 22px;border-radius:8px;border:none;font-size:15px;font-weight:bold;cursor:pointer;background:#8b3322;color:#fff;box-shadow:0 2px 0 #6a2318}
+  .mq-btn.reset{background:#888;box-shadow:0 2px 0 #555}
+  .check-bar-wrap{background:#eee;border-radius:20px;height:12px;margin:8px 0;overflow:hidden}
+  #check-bar{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  #check-count{font-size:13px;color:#555;margin-bottom:10px}
+  #checklist-area{display:flex;flex-direction:column;gap:8px}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+  /* ===== モーダル ===== */
+  .modal-btn{display:inline-flex;align-items:center;gap:10px;color:#fff;border:none;border-radius:12px;padding:13px 22px;font-size:16px;font-weight:bold;cursor:pointer;margin:14px 0;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:all 0.2s;width:100%;justify-content:flex-start}
+  .modal-btn:hover{box-shadow:0 6px 18px rgba(0,0,0,0.3);transform:translateY(-1px)}
+  .modal-btn .btn-arrow{margin-left:auto;font-size:18px}
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:8000;align-items:center;justify-content:center}
+  .modal-overlay.open{display:flex}
+  .modal-box{background:#fff;border-radius:16px;max-width:680px;width:92vw;max-height:88vh;overflow-y:auto;padding:28px 28px 24px;position:relative;box-shadow:0 16px 60px rgba(0,0,0,0.4)}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:24px;cursor:pointer;color:#555;line-height:1}
+  .modal-close:hover{color:#c00}
+  .modal-title{font-size:18px;font-weight:bold;border-bottom:3px solid;padding-bottom:10px;margin-bottom:16px;padding-right:36px}
+  .modal-body{font-size:15px;line-height:2.0;color:#222}
+  .modal-body .cause-box{margin:12px 0}
+  .modal-body .result-box{margin:12px 0}
+  /* ===== 時代の流れまとめ ===== */
+  .flow-summary{background:linear-gradient(135deg,#f0f7ff,#fff8f0);border:2px solid #8b3322;border-radius:14px;padding:18px 20px 14px;margin:18px 0}
+  .flow-summary-title{font-size:15px;font-weight:bold;color:#8b3322;margin-bottom:14px;display:flex;align-items:center;gap:8px;border-bottom:2px dashed #d4956a;padding-bottom:8px}
+  .flow-steps{display:flex;flex-direction:column;gap:0}
+  .flow-step{display:flex;align-items:flex-start;gap:10px}
+  .flow-year{min-width:68px;background:#8b3322;color:#fff;border-radius:6px;padding:3px 8px;font-size:12px;font-weight:bold;text-align:center;margin-top:2px;white-space:nowrap;flex-shrink:0}
+  .flow-year.blue{background:#1a4f7a}
+  .flow-year.green{background:#1a6b22}
+  .flow-year.brown{background:#7a4f00}
+  .flow-year.purple{background:#3d2b7a}
+  .flow-content{font-size:14px;line-height:1.8;color:#333;flex:1}
+  .flow-content strong{color:#8b3322}
+  .flow-arrow{text-align:center;color:#d4956a;font-size:18px;line-height:1.2;margin:1px 0 1px 33px}
+  .flow-note{font-size:12px;background:#fff8f0;border-left:3px solid #d4956a;padding:6px 10px;border-radius:0 6px 6px 0;margin-top:10px;color:#555;line-height:1.7}
+</style>
+</head>
+<body>
+
+<a class="back-to-index" href="nihonshi_index.html">← 目次へ戻る</a>
+
+<h1>📜 第４章　平安時代——摂関政治と国風文化（794〜1185年）</h1>
+
+<div class="timeline-bar">
+  <span class="tl-item">794年 平安京遷都</span>
+  <span class="tl-item">894年 遣唐使廃止</span>
+  <span class="tl-item">935年 平将門の乱</span>
+  <span class="tl-item">1016年 藤原道長 摂政</span>
+  <span class="tl-item">1086年 院政開始</span>
+  <span class="tl-item">1167年 平清盛 太政大臣</span>
+  <span class="tl-item">1185年 壇ノ浦の戦い</span>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 チャレンジ中：<span id="ccb-secname-label"></span></span>
+    <span id="ccb-hint">語句を選んでください</span>
+    <span id="ccb-count"></span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button class="sec-btn" id="ccb-btn-judge" onclick="judgeChallenge()">✅ 採点</button>
+    <button class="sec-btn" id="ccb-btn-demo" onclick="showDemo()">👀 手本を見る</button>
+    <button class="sec-btn" id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+  </div>
+  <div id="ccb-demo-return">
+    <button class="sec-btn" onclick="exitDemo()">▶ チャレンジに戻る</button>
+  </div>
+</div>
+
+<!-- おしいポップアップ -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">😅 おしい！</div>
+  <div class="oshii-sub" id="oshii-msg"></div>
+  <div class="oshii-tip">タップして閉じる</div>
+</div>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label label-sec1">第１節</span>
+  <h2>平安京遷都と桓武天皇の政治（794〜894年）</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">
+    📖 手本です — タップしてチャレンジに戻る ▶
+  </div>
+
+  <div class="why-box">
+    <span class="label">🏯 なぜ平城京を捨てたのか——平安京遷都の理由</span>
+    奈良時代の末，仏教勢力が政治に深く関わるようになりました。特に道鏡（どうきょう）という僧侶は，天皇の病気を治したことで天皇家に近づき，ついには「天皇になろうとした」と伝えられるほど権力を握りました。<br><br>
+    このような仏教勢力の政治介入を断ち切るため，また，相次ぐ災害や疫病からの再出発を図るため，<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">桓武天皇</span><span class="kw-pop"><span class="kw-title">桓武天皇（かんむてんのう）</span><span class="kw-yomi">📖 読み：かんむてんのう</span><span class="kw-body">第50代天皇（在位781〜806年）。平安時代を開いた天皇。まず784年に長岡京（ながおかきょう，京都府）へ遷都したが，工事の責任者が暗殺されるなど不吉な出来事が続き断念。794年に現在の京都に平安京を建設した。蝦夷討伐にも力を入れ，坂上田村麻呂を征夷大将軍に任命した。</span></span></span>は794年，現在の京都に<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">平安京</span><span class="kw-pop"><span class="kw-title">平安京（へいあんきょう）</span><span class="kw-yomi">📖 読み：へいあんきょう</span><span class="kw-body">794年に桓武天皇が遷都した都。現在の京都市にあたる。唐の長安を模した都城で，南北約5.3km・東西約4.5kmの規模。平城京と大きく異なる点は，奈良の仏教寺院を移転させなかったこと——仏教政治からの決別を意味する。平安京は1869年に明治天皇が東京に移るまで，約1075年間にわたって都であり続けた。</span></span></span>（現・京都）に遷都しました。これが<strong>平安時代（794〜1185年）</strong>の始まりです。<br><br>
+    桓武天皇は平安京に奈良の寺院を一切移転させませんでした。「仏教勢力を都から遠ざける」という強い意志の表れです。
+  </div>
+
+  <div class="cause-box">
+    <span class="label">⚔️ 桓武天皇のもう一つの大仕事——蝦夷討伐</span>
+    東北地方には<span class="kw">蝦夷（えみし）<span class="kw-pop"><span class="kw-title">蝦夷（えみし）</span><span class="kw-yomi">📖 読み：えみし</span><span class="kw-body">東北地方・北海道に住む，朝廷の支配に従わない人々の総称。農業生産力が高まるにつれて強大化し，朝廷の同化政策に反抗して大規模な反乱を繰り返した。「蝦夷」という言葉には差別的なニュアンスがあり，現代では東北の地域の先住的な人々として理解されている。</span></span></span>と呼ばれる人々が住んでおり，朝廷の支配に抵抗していました。桓武天皇は蝦夷を討伐するため，武勇で知られる<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">坂上田村麻呂</span><span class="kw-pop"><span class="kw-title">坂上田村麻呂（さかのうえのたむらまろ）</span><span class="kw-yomi">📖 読み：さかのうえのたむらまろ</span><span class="kw-body">平安時代初期の武将（758〜811年）。797年に征夷大将軍に任命され，東北の蝦夷を討伐した。現在の岩手県に胆沢城（いさわじょう）を築いて東北支配の拠点とした。蝦夷の族長・阿弖流為（アテルイ）を降伏させたことで有名。坂上田村麻呂は武将として尊敬を集め，後世の武士の理想像ともなった。</span></span></span>を<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">征夷大将軍</span><span class="kw-pop"><span class="kw-title">征夷大将軍（せいいたいしょうぐん）</span><span class="kw-yomi">📖 読み：せいいたいしょうぐん</span><span class="kw-body">「蝦夷（えみし）を征伐する大将軍」という意味の臨時の役職。坂上田村麻呂が797年に初めて任命された。本来は蝦夷征伐のための軍事的な役職だったが，後に源頼朝（みなもとのよりとも）が1192年に征夷大将軍となって鎌倉幕府を開くと，武家の最高権力者の称号となった。江戸時代まで使われ続けた。</span></span></span>（せいいたいしょうぐん）に任命しました。<br><br>
+    また桓武天皇は，地方に派遣される役人（<span class="kw">国司（こくし）<span class="kw-pop"><span class="kw-title">国司（こくし）</span><span class="kw-yomi">📖 読み：こくし</span><span class="kw-body">律令制において，中央から各地方（令制国）に派遣された行政官。租税の徴収・治安維持・訴訟の処理などを行った。任期は通常4〜6年。中央を離れた地方では不正を行いやすく，私腹を肥やす国司が多かった。桓武天皇は国司の不正を監視するため「勘解由使（かげゆし）」という役職を新設した。</span></span></span>）の不正を監視するため，<span class="kw">勘解由使（かげゆし）<span class="kw-pop"><span class="kw-title">勘解由使（かげゆし）</span><span class="kw-body">桓武天皇が設置した，国司の交代時に不正がないか監察する役職。「由」とは引き継ぎ書類のことで，この書類を「勘（かん）じる（審査する）」役人という意味。国司の横暴を防ぎ，農民を保護するための措置。</span></span></span>という新しい役職を設けました。
+  </div>
+
+  <div class="result-box">
+    <span class="label">🚢 遣唐使の廃止（894年）——唐との交流をやめた理由</span>
+    630年から続いてきた<span class="kw">遣唐使（けんとうし）<span class="kw-pop"><span class="kw-title">遣唐使（けんとうし）</span><span class="kw-yomi">📖 読み：けんとうし</span><span class="kw-body">630年〜894年の間に日本から唐（中国）に派遣された外交使節団。約260年間に19回派遣された。目的は唐の進んだ政治制度・文化・技術を学ぶこと。遣唐使船は危険な東シナ海を渡るため，難船・死亡者が多く出た。帰国した留学生・留学僧が唐の文化を日本に伝え，奈良時代・平安時代の文化の基礎となった。</span></span></span>ですが，894年についに廃止されました。なぜでしょうか？<br><br>
+    ① <strong>唐の衰退</strong>：唐は9世紀から衰退期に入り，国内が乱れていました。危険を冒して派遣する価値が薄れました。<br>
+    ② <strong>日本の自立</strong>：律令制度も定着し，貿易船が大陸・朝鮮半島から来るようになったため，わざわざ使節を送る必要がなくなりました。<br><br>
+    <span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">菅原道真</span><span class="kw-pop"><span class="kw-title">菅原道真（すがわらのみちざね）</span><span class="kw-yomi">📖 読み：すがわらのみちざね</span><span class="kw-body">平安時代の学者・政治家（845〜903年）。天皇に仕えて右大臣（うだいじん）にまで昇りつめた秀才。894年，宇多天皇に遣唐使廃止を進言し，認められた。しかし，左大臣・藤原時平（ふじわらのときひら）の讒言（ざんげん）によって太宰府（現・福岡県）に左遷され，2年後に憤死した。その後，京都で天変地異・疫病が続いたため，道真の怨霊の仕業とされた。怨霊を鎮めるため，現・京都の北野天満宮（きたのてんまんぐう）に祀られ，現在は「学問の神様」として信仰されている。</span></span></span>（すがわらのみちざね）の進言を受けた宇多天皇は，894年に遣唐使を廃止しました。この決断が，後の日本独自文化「国風文化」の誕生につながります。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('michizane')" style="background:linear-gradient(135deg,#1a4f7a,#3d2b7a)">
+    📜 菅原道真とは何者か——遣唐使を廃止した天才と大宰府左遷の真相
+    <span class="btn-arrow">▶ 深く知ろう</span>
+  </button>
+
+  <!-- 流れまとめ① -->
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第１節の時代の流れ——平安京遷都と遣唐使廃止</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-year brown">奈良末期</span>
+        <div class="flow-content">道鏡ら仏教勢力が政治に介入。疫病・災害も相次ぐ。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">794年</span>
+        <div class="flow-content"><strong>桓武天皇</strong>，<strong>平安京</strong>（現・京都）へ遷都。奈良の寺院は移転させず，仏教政治と決別。⭐ <strong>平安時代の始まり</strong>。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">797年</span>
+        <div class="flow-content"><strong>坂上田村麻呂</strong>を<strong>征夷大将軍</strong>に任命。東北の蝦夷を討伐。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year green">894年</span>
+        <div class="flow-content"><strong>菅原道真</strong>の進言で<strong>遣唐使廃止</strong>。唐文化の直接輸入が終わり，日本独自文化が育ち始める。</div>
+      </div>
+    </div>
+    <div class="flow-note">💡 ポイント：遣唐使廃止は単なる外交の変化ではなく，「日本が中国文化の模倣をやめ，独自の文化を生み出す転換点」として日本文化史上の大きな節目となった。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge(1)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 ミニテスト①（平安京遷都・遣唐使廃止）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh10.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label label-sec2">第２節</span>
+  <h2>摂関政治と院政——藤原氏の全盛と武士の台頭（935〜1086年）</h2>
+
+  <div class="demo-banner" id="demo-banner-2" onclick="exitDemo()">
+    📖 手本です — タップしてチャレンジに戻る ▶
+  </div>
+
+  <div class="cause-box">
+    <span class="label">⚔️ 武士の登場——貴族では守れない社会</span>
+    平安時代中期，地方では<span class="kw">武士<span class="kw-pop"><span class="kw-title">武士・侍（さむらい）</span><span class="kw-yomi">📖 読み：ぶし・さむらい</span><span class="kw-body">武芸（弓・馬・刀）を職業とする者。もとは有力農民や地方豪族が自分の土地を守るために武装したのが起源。貴族が都で優雅な生活を送る一方，地方では武力が必要とされた。やがて武士の棟梁（とうりょう）として源氏（みなもとし）や平氏（たいらし）が台頭し，朝廷も武士の力を借りるようになった。</span></span></span>が台頭してきました。<br><br>
+    ▶ 935年，栃木県を拠点にしていた武士<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">平将門</span><span class="kw-pop"><span class="kw-title">平将門（たいらのまさかど）</span><span class="kw-yomi">📖 読み：たいらのまさかど</span><span class="kw-body">平安時代中期の武将（？〜940年）。桓武天皇の子孫で，関東地方（下総国・猿島を拠点）を支配した。土地をめぐる一族の争いから，叔父・国香（くにか）を殺害し，関東に独立国を作ろうとした。自らを「新皇（しんのう）」と名乗り，天皇に反抗したが，藤原秀郷（ふじわらのひでさと）や平貞盛（たいらのさだもり）ら地方武士によって鎮圧・討ち取られた。</span></span></span>が一族の争いから反乱を起こし，自らを「新皇（しんのう）」と名乗りました（<strong>平将門の乱</strong>）。<br>
+    ▶ 939年，瀬戸内海では元国司の<span class="kw">藤原純友（ふじわらのすみとも）<span class="kw-pop"><span class="kw-title">藤原純友の乱（ふじわらのすみとものらん）939年</span><span class="kw-body">瀬戸内海を拠点にしていた前伊予国司・藤原純友が海賊をまとめて反乱を起こし，大宰府（だざいふ）を焼き払った事件。平将門の乱と同時期に起きたため，「承平・天慶の乱（じょうへいてんぎょうのらん）」とまとめて呼ばれる。朝廷は武士の力を借りてこれらの反乱を鎮圧したことで，武士の重要性が一層高まった。</span></span></span>が反乱を起こしました（<strong>藤原純友の乱</strong>）。<br><br>
+    これら2つの反乱は，朝廷が武士の力を借りて鎮圧しました。これにより，<strong>武士の力が政治的に重要視されるようになっていきます。</strong>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('masakado')" style="background:linear-gradient(135deg,#8b3322,#c00)">
+    ⚔️ 平将門の乱・藤原純友の乱——原因・経過・結果を深く知ろう
+    <span class="btn-arrow">▶ 深く知ろう</span>
+  </button>
+
+  <div class="why-box">
+    <span class="label">👑 摂関政治とは何か——藤原氏の巧みな権力の握り方</span>
+    武士が台頭する一方，都では<span class="kw">藤原氏<span class="kw-pop"><span class="kw-title">藤原氏</span><span class="kw-yomi">📖 読み：ふじわらし</span><span class="kw-body">中臣鎌足（なかとみのかまたり）の子・藤原不比等（ふじわらのふひと）を祖とする貴族の家系。奈良時代から律令政治の中枢を担い，平安時代には摂政・関白として天皇に代わって政治を行った。その方法が独特で，「娘を天皇の后（きさき）にし，生まれた皇子を天皇にして，自分が外祖父（がいそふ）＝天皇の母方の祖父として権力を握る」というものだった。</span></span></span>が「天皇の外戚（がいせき＝母方の親族）」として権力を握っていきました。<br><br>
+    藤原氏は娘を天皇の<span class="kw">后（きさき）<span class="kw-pop"><span class="kw-title">后（きさき）とは</span><span class="kw-body">天皇の正式な妻のこと。后が男の子（皇子）を産むと，その皇子が次の天皇になる可能性が高かった。藤原氏は娘を積極的に天皇に嫁がせ，生まれた息子を次の天皇にすることで「天皇の外戚（母方の親族）」という立場を確保した。</span></span></span>にし，生まれた皇子を天皇にしました。そして自分は<span class="kw">摂政<span class="kw-pop"><span class="kw-title">摂政・関白</span><span class="kw-yomi">📖 読み：せっしょう・かんぱく</span><span class="kw-body">摂政：天皇が幼いとき（または女性天皇のとき）に代わって政治を行う役職。関白：天皇が成人した後も，天皇を補佐して政治を行う役職（復職）。これらは本来あらゆる氏族がなれる役職だったが，藤原氏がほぼ独占するようになった。</span></span></span>・<span class="kw">関白<span class="kw-pop"><span class="kw-title">関白</span><span class="kw-yomi">📖 読み：かんぱく</span><span class="kw-body">成人した天皇を補佐し，すべての政務を取り仕切る役職。藤原氏が代々独占した。摂政が「幼い天皇の代わりに政治を行う」のに対し，関白は「成人天皇のもとで政治を仕切る」点が異なる。どちらも実質的な政治の最高権力者だった。</span></span></span>という役職について政治を仕切りました。これを<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">摂関政治</span><span class="kw-pop"><span class="kw-title">摂関政治（せっかんせいじ）</span><span class="kw-yomi">📖 読み：せっかんせいじ</span><span class="kw-body">藤原氏が摂政・関白として天皇に代わって（または補佐して）政治を行った政治形態。10〜11世紀に全盛期を迎えた。天皇を中心とした律令国家の建前は維持しながら，実際の権力は藤原氏が握るという仕組み。後三条天皇（1069年）による荘園整理令をきっかけに衰退し始め，院政に取って代わられた。</span></span></span>（せっかんせいじ）といいます。<br><br>
+    摂関政治の全盛期を築いたのが<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">藤原道長</span><span class="kw-pop"><span class="kw-title">藤原道長（ふじわらのみちなが）</span><span class="kw-yomi">📖 読み：ふじわらのみちなが</span><span class="kw-body">966〜1027年。藤原北家の長者で，4人の娘すべてを天皇に嫁がせて最高の権力を握った。1016年，摂政に就任。「この世をば わが世とぞ思ふ 望月の 欠けたることも なしと思へば」と詠み，満月のように欠けるところのない権力を誇った。この歌は摂関政治の絶頂を象徴している。</span></span></span>（みちなが）です。1016年に摂政となり，4人の娘すべてを天皇の后にして権力の頂点に立ちました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('michinaga')" style="background:linear-gradient(135deg,#7a4f00,#c87000)">
+    👑 藤原道長——権力の頂点への道と摂関政治の崩壊
+    <span class="btn-arrow">▶ 深く知ろう</span>
+  </button>
+
+  <button class="modal-btn" onclick="openModal('sekkan')" style="background:linear-gradient(135deg,#1a4f7a,#7a4f00)">
+    🏛️ 摂関政治を深く知る——道長・頼通はどのように権力を行使し，何をしたのか
+    <span class="btn-arrow">▶ 深く知ろう</span>
+  </button>
+
+  <div class="result-box">
+    <span class="label">🏯 藤原頼通と平等院鳳凰堂（1020年）</span>
+    道長の息子<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">藤原頼通</span><span class="kw-pop"><span class="kw-title">藤原頼通（ふじわらのよりみち）</span><span class="kw-yomi">📖 読み：ふじわらのよりみち</span><span class="kw-body">藤原道長の息子（992〜1074年）。摂政・関白を約50年間務め，摂関政治の全盛期を支えた。しかし，娘を天皇に嫁がせても皇子が生まれなかったため，藤原氏を外戚にもたない後三条天皇が即位してしまい，摂関政治が衰退するきっかけを作った。1052年に宇治の別荘を寝殿造の寺院「平等院（びょうどういん）」に改め，翌1053年に鳳凰堂（ほうおうどう）を建立した。</span></span></span>は約50年間，摂関政治を継続しました。しかし，娘が天皇の子を産めなかったため，藤原氏を外戚にもたない<span class="kw">後三条天皇（ごさんじょうてんのう）<span class="kw-pop"><span class="kw-title">後三条天皇（ごさんじょうてんのう）</span><span class="kw-body">1068年に即位した第71代天皇。藤原氏を母方に持たない初の天皇で，藤原氏の支配から自立していた。1069年に延久の荘園整理令を出し，「正式な書類のない荘園はすべて廃止」と命じた。この命令は藤原氏の荘園にも適用され，摂関政治の基盤を揺るがした。</span></span></span>が即位し，摂関政治は衰退し始めました。<br><br>
+    後三条天皇は即位翌年の1069年，<strong>延久の荘園整理令</strong>を発令し，書類のそろっていない荘園をすべて没収すると宣言しました。これは藤原氏の荘園にも例外なく適用され，摂関政治の財政基盤を直撃しました。「外戚でもなく，荘園も取られた」藤原氏の権力はここで事実上終わりを告げます。<br><br>
+    頼通は京都の宇治に<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">平等院鳳凰堂</span><span class="kw-pop"><span class="kw-title">平等院鳳凰堂（びょうどういんほうおうどう）</span><span class="kw-yomi">📖 読み：びょうどういんほうおうどう</span><span class="kw-body">1053年，藤原頼通が宇治（現・京都府宇治市）に建てた阿弥陀堂（あみだどう）。「鳳凰（ほうおう）が羽を広げたような形」から鳳凰堂と呼ばれる。当時流行していた末法思想（「仏の教えが滅びる時代が来る」という考え方）に対し，「少なくとも死後は極楽浄土（ごくらくじょうど）に行きたい」という祈りを込めて建てられた寝殿造（しんでんづくり）の建築物。現在の10円硬貨のデザインにもなっている。1994年，世界遺産に登録。</span></span></span>を建てました。これは末法思想（まっぽうしそう：仏の教えが滅びる時代が来るという考え方）が広まる中，「死後に極楽浄土へ行きたい」という祈りを込めた<span class="kw">寝殿造（しんでんづくり）<span class="kw-pop"><span class="kw-title">寝殿造（しんでんづくり）</span><span class="kw-yomi">📖 読み：しんでんづくり</span><span class="kw-body">平安時代の貴族の邸宅（住宅）様式。中央に「寝殿（しんでん）」という主要な建物を置き，その左右に「対の屋（たいのや）」を渡り廊下でつなぐ形式。庭には池や橋がある優雅な造り。平等院鳳凰堂はこの寝殿造を仏教建築に応用したもの。</span></span></span>の建築物です。現在も10円硬貨のデザインになっています。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('yorimichi')" style="background:linear-gradient(135deg,#8b3322,#3d2b7a)">
+    ❓ なぜ頼通の代で摂関政治は終わったのか——崩壊の本当の理由を深く知ろう
+    <span class="btn-arrow">▶ 深く知ろう</span>
+  </button>
+
+  <div class="why-box">
+    <span class="label">🏛️ 院政の始まり（1086年）——上皇が院で政治を行う</span>
+    後三条天皇の子・<span class="kw">白河天皇（しらかわてんのう）<span class="kw-pop"><span class="kw-title">白河天皇・白河上皇（しらかわてんのう・じょうこう）</span><span class="kw-yomi">📖 読み：しらかわじょうこう</span><span class="kw-body">第72代天皇（在位1072〜1086年）。1086年，8歳の息子（堀河天皇）に位を譲って上皇となり，その後も「院（いん）」と呼ばれる御所で政治の実権を握り続けた。「院政（いんせい）」の創始者。「賀茂川の水・双六の賽（さいころ）・山法師（延暦寺の僧兵）だけは思い通りにならない」と嘆いたという逸話が有名。</span></span></span>は1086年，8歳の息子に位を譲って<span class="kw">上皇<span class="kw-pop"><span class="kw-title">上皇とは</span><span class="kw-body">位を譲った元の天皇のこと。「上（かみ）の皇（みかど）」の意味。上皇が出家（仏門に入ること）した場合は「法皇（ほうおう）」と呼ばれる。白河天皇が上皇となって始めた「院政」では，上皇が出す命令（「院宣（いんぜん）」「院庁下文（いんのちょうくだしぶみ）」）が天皇の命令（勅書）よりも強い効力を持った。</span></span></span>となり，自分の御所（院＝いん）で政治を行い続けました。これを<span class="kw">院政（いんせい）<span class="kw-pop"><span class="kw-title">院政（いんせい）</span><span class="kw-yomi">📖 読み：いんせい</span><span class="kw-body">上皇（または法皇）が，現職の天皇を差し置いて政治の実権を握る政治形態。白河上皇が1086年に始めた。「院」とは上皇の御所（居所）のこと，「政」は政治の意味。院政のもと，院に多くの荘園が集まり財政基盤となった。また院は武士を身辺警護（北面の武士＝ほくめんのぶし）に取り立て，武力も確保した。これにより，武士が中央政治に関わる機会が増えた。</span></span></span>といいます。<br><br>
+    院政が始まると，院（上皇の御所）に全国の荘園が集まり，強力な財政基盤になりました。また，上皇は<span class="kw">北面の武士（ほくめんのぶし）<span class="kw-pop"><span class="kw-title">北面の武士（ほくめんのぶし）</span><span class="kw-body">白河上皇が設置した，院（上皇の御所）の北側を守る武士の親衛隊。有力な武士が取り立てられ，院の身辺警護・軍事力の基盤となった。武士が中央政治に深く関わるきっかけとなり，後に保元の乱・平治の乱で武士が貴族の争いに利用されることにつながった。</span></span></span>と呼ばれる武士の親衛隊を置き，武力も確保しました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('hogen')" style="background:linear-gradient(135deg,#3d2b7a,#8b3322)">
+    ⚔️ 保元の乱・平治の乱——武士が歴史の表舞台へ出る転換点
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <!-- 流れまとめ② -->
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第２節の時代の流れ——摂関政治から院政へ</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-year" style="background:#c00">935年</span>
+        <div class="flow-content"><strong>平将門の乱</strong>（関東）・<strong>藤原純友の乱</strong>（939年，瀬戸内海）→ 朝廷が武士の力で鎮圧。武士の重要性が増す。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">1016年</span>
+        <div class="flow-content"><strong>藤原道長</strong>が摂政に就任。4人の娘を全員后にして権力を独占。「この世をば…」の歌を詠む。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">1020年頃</span>
+        <div class="flow-content">息子<strong>藤原頼通</strong>が関白に。約50年間，<strong>摂関政治</strong>の全盛期。宇治に<strong>平等院鳳凰堂</strong>を建立（1053年）。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">1069年</span>
+        <div class="flow-content"><strong>後三条天皇</strong>，荘園整理令を出す → 藤原氏の荘園も没収対象。<strong>摂関政治の衰退</strong>が始まる。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year blue">1086年</span>
+        <div class="flow-content"><strong>白河天皇</strong>が上皇となり<strong>院政</strong>を開始。荘園・武士（北面の武士）を背景に権力を握る。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year purple">1156年〜</span>
+        <div class="flow-content"><strong>保元の乱・平治の乱</strong>。武士（平氏・源氏）が貴族の権力争いに動員され，台頭が加速。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year" style="background:#c00">結果</span>
+        <div class="flow-content"><strong>平清盛</strong>が1167年に武家初の太政大臣に。武士が政権の中枢へ。→ 鎌倉時代への入口。</div>
+      </div>
+    </div>
+    <div class="flow-note">💡 ポイント：平安時代中期〜後期は「天皇→摂関政治（藤原氏）→院政（上皇）→平氏政権」と権力の中心が次々と移り変わった時代。院政が武士を利用したことで，武士が政治の表舞台に出るきっかけを作ってしまった。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge(2)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 ミニテスト②（摂関政治・院政）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh11.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label label-sec3">第３節</span>
+  <h2>国風文化——日本独自の美と文学（894〜11世紀）</h2>
+
+  <div class="demo-banner" id="demo-banner-3" onclick="exitDemo()">
+    📖 手本です — タップしてチャレンジに戻る ▶
+  </div>
+
+  <div class="cause-box">
+    <span class="label">🌸 国風文化とは何か——日本独自の感性が花開いた</span>
+    894年に遣唐使が廃止されると，それまで積極的に取り入れてきた唐（中国）文化の直接輸入が止まりました。これをきっかけに，日本人が唐文化を自分たちの感性で消化・変容させ，独自の文化を生み出していきました。これを<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">国風文化</span><span class="kw-pop"><span class="kw-title">国風文化（こくふうぶんか）</span><span class="kw-yomi">📖 読み：こくふうぶんか</span><span class="kw-body">平安時代中期（10〜11世紀）に貴族を中心に発展した，日本独自の文化。「国風（こくふう）」とは「日本の風土・感性に合った」という意味。唐文化の模倣から脱し，日本人の繊細な感性・四季の美しさ・人の心の機微を表現した。具体的な成果として，仮名（かな）文字の発明・女流文学の発展・やまと絵（日本的な題材を描く絵画）の誕生などがある。</span></span></span>（こくふうぶんか）といいます。<br><br>
+    国風文化の最大の特徴は<strong>女性の活躍</strong>です。男性は漢字・漢文を使うことが高貴とされていましたが，女性は日本語の発音に合わせた<span class="kw">仮名文字（かなもじ）<span class="kw-pop"><span class="kw-title">仮名文字（かなもじ）</span><span class="kw-yomi">📖 読み：かなもじ</span><span class="kw-body">漢字を崩したり一部を取り出したりして作られた，日本語表記のための文字。「平仮名（ひらがな）」は漢字の草書体（くずし字）から，「片仮名（かたかな）」は漢字の一部から作られた。仮名文字の発明によって，日本語の音韻をそのまま文章に書けるようになり，女性を中心に文学が爆発的に発展した。現代の「ひらがな・カタカナ」の直接の祖先。</span></span></span>（ひらがな・カタカナ）を使って，豊かな感情表現の文学を生み出しました。
+  </div>
+
+  <div class="why-box">
+    <span class="label">📖 平安時代の仏教——密教と浄土教</span>
+    桓武天皇は平安京への遷都の際，奈良の仏教寺院を移転させませんでした。代わりに，遣唐使として唐に渡った2人の僧侶が新しい仏教を伝えました。<br><br>
+    ▶ <span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">最澄</span><span class="kw-pop"><span class="kw-title">最澄（さいちょう）</span><span class="kw-yomi">📖 読み：さいちょう</span><span class="kw-body">平安時代初期の僧侶（767〜822年）。桓武天皇の遣唐使として唐に渡り，天台山（てんだいさん）で天台宗（てんだいしゅう）を学んだ。帰国後，滋賀県と京都の境にある比叡山（ひえいざん）に延暦寺（えんりゃくじ）を建てた。天台宗は「法華経（ほけきょう）」を中心とし，「すべての人が仏になれる」という考え方を説いた。暗記法：「天叡（てんえい）」→天台宗・延暦寺！</span></span></span>（さいちょう）は比叡山（ひえいざん）に<span class="kw">延暦寺（えんりゃくじ）<span class="kw-pop"><span class="kw-title">延暦寺（えんりゃくじ）</span><span class="kw-yomi">📖 読み：えんりゃくじ</span><span class="kw-body">比叡山（滋賀県と京都の境）にある天台宗の総本山。最澄が建立。「天台宗・延暦寺」はセットで覚える。後に延暦寺の僧侶が武装した「僧兵（そうへい）」を持ち，朝廷に圧力をかけるようになった。1994年，世界遺産「古都京都の文化財」として登録。</span></span></span>を建て，<span class="kw">天台宗（てんだいしゅう）<span class="kw-pop"><span class="kw-title">天台宗（てんだいしゅう）</span><span class="kw-body">最澄が日本に伝えた仏教の宗派。「法華経（ほけきょう）」を根本経典とし，「すべての人が仏になれる」という教えを説く。密教的な要素も取り入れた。後に天台宗から，法然（浄土宗）・親鸞（浄土真宗）・日蓮（日蓮宗）・道元（曹洞宗）・栄西（臨済宗）など，鎌倉仏教の多くの宗派が生まれた。</span></span></span>を開きました。<br>
+    ▶ <span class="blank kw" data-id="M" onclick="blankClicked(event,'M')"><span class="blank-display">空海</span><span class="kw-pop"><span class="kw-title">空海（くうかい）</span><span class="kw-yomi">📖 読み：くうかい</span><span class="kw-body">平安時代初期の僧侶（774〜835年）。最澄と同じく遣唐使として唐に渡り，長安で密教（みっきょう）を学んだ。帰国後，和歌山県の高野山（こうやさん）に金剛峯寺（こんごうぶじ）を建てた。「弘法大師（こうぼうだいし）」の諡号（しごう）でも知られる。密教とは，秘密の呪法（真言＝しんごん）で悟りを開く仏教。空海は書道・土木・医薬にも優れ，民間でも人気を集めた。暗記法：「真金（しんごん）」→真言宗・金剛峯寺！</span></span></span>（くうかい）は和歌山県の高野山（こうやさん）に<span class="kw">金剛峯寺（こんごうぶじ）<span class="kw-pop"><span class="kw-title">金剛峯寺（こんごうぶじ）</span><span class="kw-yomi">📖 読み：こんごうぶじ</span><span class="kw-body">和歌山県高野山にある真言宗の総本山。空海が816年に創建した。「真言宗・金剛峯寺」はセットで覚える。高野山は現在も多くの参拝者・外国人観光客が訪れる霊場で，2004年に世界遺産に登録されている。</span></span></span>を建て，<span class="kw">真言宗（しんごんしゅう）<span class="kw-pop"><span class="kw-title">真言宗（しんごんしゅう）</span><span class="kw-body">空海が日本に伝えた仏教の宗派。「大日経（だいにちきょう）」「金剛頂経（こんごうちょうきょう）」を根本経典とする密教。「真言（しんごん）」とは秘密の言葉・呪文のこと，これを唱えることで成仏できると説く。貴族はこの密教にご利益（ごりやく）を求めて帰依（きえ）したが，呪法に頼るばかりになったと批判されることもある。</span></span></span>を開きました。<br><br>
+    <div class="cause-box" style="margin:8px 0;font-size:14px">
+      <span class="label">💡 暗記法</span>
+      <strong>「天叡」（てんえい）</strong> → 天台宗・延暦寺（最澄）<br>
+      <strong>「真金」（しんごん）</strong> → 真言宗・金剛峯寺（空海）
+    </div>
+    また，平安時代末期には<span class="kw">末法思想（まっぽうしそう）<span class="kw-pop"><span class="kw-title">末法思想（まっぽうしそう）</span><span class="kw-body">釈迦の死後，正しい仏の教えが次第に衰え，最終的に仏法が「滅びる時代（末法の世）」が来るという考え方。平安時代末期に広まり，「この世は末法の乱世だ」という危機感が社会に充満した。この不安が，「念仏を唱えれば死後に極楽浄土（阿弥陀仏の国）に生まれ変わる」という浄土教（じょうどきょう）への信仰を爆発的に広めた。平等院鳳凰堂も末法思想への対応として建てられた。</span></span></span>が広まり，「南無阿弥陀仏（なむあみだぶつ）」と唱えることで極楽浄土に行けると説く<span class="kw">浄土教（じょうどきょう）<span class="kw-pop"><span class="kw-title">浄土教（じょうどきょう）</span><span class="kw-body">阿弥陀仏（あみだぶつ）の極楽浄土（ごくらくじょうど）への往生（おうじょう）を願う仏教の教え。「念仏（ねんぶつ）＝南無阿弥陀仏を唱えること」によって救われると説く。平安時代，空也（くうや）が京都の市中で「南無阿弥陀仏」を唱えることを広め，後に源信（げんしん）が「往生要集（おうじょうようしゅう）」を著して理論化した。浄土教は後の鎌倉時代に法然・親鸞らによってさらに発展した。</span></span></span>が都の市民にまで広まりました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('mappo')" style="background:linear-gradient(135deg,#3d2b7a,#1a4f7a)">
+    🪷 末法思想・浄土教とは何か——なぜ人々は「念仏」にすがったのか
+    <span class="btn-arrow">▶ 深く知ろう</span>
+  </button>
+
+  <div class="result-box">
+    <span class="label">📚 国風文化の文学作品——女流文学の黄金時代</span>
+    仮名文字の発明により，平安時代の宮廷女性たちが次々と傑作を生み出しました。<br><br>
+    ▶ <span class="blank kw" data-id="N" onclick="blankClicked(event,'N')"><span class="blank-display">紫式部</span><span class="kw-pop"><span class="kw-title">紫式部（むらさきしきぶ）</span><span class="kw-yomi">📖 読み：むらさきしきぶ</span><span class="kw-body">平安時代中期の女流作家（970年頃〜1019年頃）。藤原氏に仕えた宮廷女官（きゅうていにょかん）。世界最古の長編小説ともいわれる「源氏物語（げんじものがたり）」を著した。源氏物語は，光源氏（ひかるげんじ）という貴族の恋愛と人生を描いた約54帖（じょう）の大長編で，「もののあわれ（物の哀れ）」を基調とした深い人間洞察が特徴。現代語訳も多く，海外でも翻訳されている。</span></span></span>——「源氏物語（げんじものがたり）」の作者。光源氏の恋愛と人生を描いた世界最古の長編小説ともいわれます。<br>
+    ▶ <span class="blank kw" data-id="O" onclick="blankClicked(event,'O')"><span class="blank-display">清少納言</span><span class="kw-pop"><span class="kw-title">清少納言（せいしょうなごん）</span><span class="kw-yomi">📖 読み：せいしょうなごん</span><span class="kw-body">平安時代中期の女流作家（966年頃〜1025年頃）。中宮定子（ちゅうぐうていし）に仕えた宮廷女官。日本最初の随筆（ずいひつ）集「枕草子（まくらのそうし）」を著した。「春はあけぼの」で始まる独特の感性と鋭い観察眼で，宮廷生活・自然・人間関係を活写した。「をかし」（趣がある・面白い）という感性が基調で，紫式部の「もののあわれ」と対比される。</span></span></span>——「枕草子（まくらのそうし）」の作者。「春はあけぼの…」で始まる日本最初の随筆集です。<br>
+    ▶ <span class="kw">紀貫之（きのつらゆき）<span class="kw-pop"><span class="kw-title">紀貫之（きのつらゆき）</span><span class="kw-yomi">📖 読み：きのつらゆき</span><span class="kw-body">平安時代の歌人・官人（872年頃〜945年頃）。勅撰和歌集（天皇の命令で編纂した和歌集）「古今和歌集（こきんわかしゅう）」の主要撰者（編集者）。高知から京都へ帰る船旅を女性に仮託（かたくして）して書いた「土佐日記（とさにっき）」は，日本初の仮名文字による日記文学。男性が仮名を使って書いたことは画期的だった。</span></span></span>——「古今和歌集（こきんわかしゅう）」の主要撰者。「土佐日記（とさにっき）」も著した。<br><br>
+    <div class="cause-box" style="margin:8px 0;font-size:14px">
+      <span class="label">💡 まとめて覚えよう</span>
+      <strong>源氏物語</strong>→ 紫式部（むらさきしきぶ）<br>
+      <strong>枕草子</strong>→ 清少納言（せいしょうなごん）<br>
+      <strong>土佐日記・古今和歌集</strong>→ 紀貫之（きのつらゆき）
+    </div>
+  </div>
+
+  <!-- 流れまとめ③ -->
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第３節の時代の流れ——国風文化の形成</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-year blue">794年頃</span>
+        <div class="flow-content"><strong>最澄</strong>→天台宗・延暦寺，<strong>空海</strong>→真言宗・金剛峯寺。密教が貴族の信仰を集める。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">894年</span>
+        <div class="flow-content">遣唐使廃止 → 唐文化の直接輸入が終わる。<strong>国風文化</strong>の幕開け。<strong>仮名文字</strong>が普及し始める。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year brown">10世紀</span>
+        <div class="flow-content"><strong>紀貫之</strong>が「古今和歌集」編纂，「土佐日記」著作。男性が仮名を使って書く画期的な試み。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year purple">11世紀</span>
+        <div class="flow-content"><strong>紫式部</strong>が「源氏物語」，<strong>清少納言</strong>が「枕草子」を執筆。女流文学の黄金時代。</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <span class="flow-year purple">1053年</span>
+        <div class="flow-content">末法思想が広まり，<strong>浄土教</strong>（念仏で極楽浄土へ）が庶民にまで普及。<strong>平等院鳳凰堂</strong>建立。</div>
+      </div>
+    </div>
+    <div class="flow-note">💡 ポイント：国風文化の特徴は「仮名文字の発明」と「女流文学の発展」。唐文化を下地にしながら，日本人の感性（もののあわれ・をかし）を表現した独自文化が生まれた。現代の「ひらがな・カタカナ」の直接の祖先もこの時代に生まれた。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge(3)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 ミニテスト③（国風文化）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh12.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 まとめテスト（10問）——第４章 平安時代</h2>
+  <p style="font-size:14px;color:#555;margin-bottom:14px">8問以上で合格です。</p>
+  <div id="final-quiz-area"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+  <div id="final-result-row"></div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="final-section">
+  <h2>☑️ 理解度チェックリスト</h2>
+  <p style="font-size:14px;color:#555;margin-bottom:10px">自分の言葉で説明できたらチェック！</p>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== 藤原道長モーダル ===== -->
+<div class="modal-overlay" id="modal-michinaga" onclick="if(event.target===this)closeModal('michinaga')">
+  <div class="modal-box" style="max-width:740px">
+    <button class="modal-close" onclick="closeModal('michinaga')">✕</button>
+    <div class="modal-title" style="color:#7a4f00;border-bottom-color:#c87000">👑 藤原道長——権力の頂点への道と摂関政治の崩壊</div>
+    <div class="modal-body">
+
+      <!-- ====== PART 1：権力を得た道 ====== -->
+      <div style="background:#7a4f00;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">
+        ① どうやって権力の頂点へ上り詰めたのか
+      </div>
+
+      <p>藤原道長（966〜1027年）は，もともと藤原氏のトップになれる立場では<strong>ありませんでした</strong>。兄が3人おり，本来なら弟の道長には権力の順番は回ってこないはずでした。それがなぜ頂点に立てたのか——そこには「運と戦略と政敵の失脚」が重なっています。</p>
+
+      <div class="cause-box">
+        <span class="label">🔀 STEP 1：兄たちの早世——道長に回ってきた順番</span>
+        道長の父は藤原兼家（かねいえ）。兄は3人いました。<br><br>
+        ▶ <strong>長兄・道隆（みちたか）</strong>が関白となるが，<strong>995年に病死</strong>。<br>
+        ▶ <strong>次兄・道兼（みちかね）</strong>が関白を継ぐが，就任後わずか<strong>7日で病死</strong>（「七日関白」と呼ばれる）。<br>
+        ▶ 3番目の兄・道綱（みちつな）は政治的に無力。<br><br>
+        → わずか数ヶ月で2人の兄が相次いで死亡。末弟の道長に権力が転がり込んできました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">⚔️ STEP 2：最大の政敵・伊周（これちか）との戦い</span>
+        道隆の息子・<strong>藤原伊周（ふじわらのこれちか，974〜1010年）</strong>は道長の甥にあたり，叔父（道長）と権力を争いました。<br><br>
+        ▶ 伊周は一条天皇に気に入られており，最初は道長より有利な立場にいました。<br>
+        ▶ ところが<strong>996年，伊周はある事件を起こします。</strong>元天皇（花山法皇）が自分の恋敵だと勘違いし，法皇に向けて矢を放つという前代未聞の暴挙に出ました（<strong>長徳の変</strong>）。<br>
+        ▶ これにより伊周は<strong>大宰府（九州）へ流罪</strong>（左遷）となり，政界から追放。<br><br>
+        → 最大のライバルが自滅したことで，道長の権力掌握が確定しました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px;border-left-color:#1a4f7a;background:#f0f7ff">
+        <span class="label" style="color:#1a4f7a">💍 STEP 3：娘婚姻戦略——4人の娘を全員「后」にする</span>
+        道長は娘を次々に天皇へ嫁がせました。<br><br>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:6px">
+            <tr style="background:#1a4f7a;color:#fff">
+              <th style="padding:7px 10px;text-align:left">娘の名前</th>
+              <th style="padding:7px 10px;text-align:left">嫁いだ天皇</th>
+              <th style="padding:7px 10px;text-align:left">道長の立場</th>
+            </tr>
+            <tr style="background:#f0f7ff">
+              <td style="padding:7px 10px;border:1px solid #c0d8f0"><strong>彰子（しょうし）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">一条天皇</td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">外祖父 → 摂政</td>
+            </tr>
+            <tr>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0"><strong>妍子（けんし）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">三条天皇</td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">外戚として影響力維持</td>
+            </tr>
+            <tr style="background:#f0f7ff">
+              <td style="padding:7px 10px;border:1px solid #c0d8f0"><strong>威子（いし）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">後一条天皇</td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">外祖父 → 権力の頂点</td>
+            </tr>
+            <tr>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0"><strong>嬉子（きし）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">敦良親王（後の後朱雀天皇）</td>
+              <td style="padding:7px 10px;border:1px solid #c0d8f0">次世代にも外戚関係を継続</td>
+            </tr>
+          </table>
+        </div>
+        <br>→ <strong>3人の后を同時に持つ</strong>という前代未聞の状況が生まれ，道長は「3后の父」として絶大な権力を手にしました。
+      </div>
+
+      <div style="background:#f0f7ff;border-radius:10px;padding:18px;margin:18px 0;text-align:center;font-size:16px;line-height:2.4;border:2px solid #1a4f7a">
+        「<strong>この世をば　我が世とぞ思ふ　望月の　かけたることも　なしと思へば</strong>」<br>
+        <span style="font-size:13px;color:#555">（この世はすべて自分のものだ。満月のように，何一つ欠けることがないように思えるから）</span><br>
+        <span style="font-size:12px;color:#888">— 1018年，威子を后に入れた宴席にて詠む。まさに権力の絶頂を表す歌。</span>
+      </div>
+
+      <!-- ====== PART 2：摂関政治の崩壊 ====== -->
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ② どうして摂関政治は崩壊したのか
+      </div>
+
+      <p>道長自身は1027年に病死しましたが，その時点ではまだ摂関政治は健在でした。崩壊の引き金を引いたのは，道長の息子・<strong>藤原頼通（よりみち）の失敗</strong>です。</p>
+
+      <div class="result-box">
+        <span class="label">❌ 失敗の核心——頼通の娘が皇子を産めなかった</span>
+        道長のシステムは「娘 → 后 → 皇子誕生 → 外祖父になる」という連鎖で成り立っていました。<br><br>
+        ▶ 頼通は約50年間も摂政・関白を務めましたが，<strong>娘が天皇の皇子を産めず</strong>，外祖父になれませんでした。<br>
+        ▶ その結果，<strong>藤原氏の血を引かない後三条天皇（1068年即位）</strong>が誕生してしまいます。<br>
+        ▶ 後三条天皇は藤原氏の影響を受けないため，<strong>自分の意思で政治を行いました。</strong>
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">📜 後三条天皇の「延久の荘園整理令」（1069年）——経済的打撃</span>
+        後三条天皇は即位翌年，<strong>「書類のそろっていない荘園はすべて没収する」</strong>という命令を出しました。<br><br>
+        ▶ 藤原氏が長年かけて集めてきた荘園の多くが，正式な手続きを経ていませんでした。<br>
+        ▶ → 藤原氏の荘園が次々と没収され，<strong>財政基盤が崩壊。</strong><br>
+        ▶ → 摂関政治の「お金の力」が失われていきました。
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">👑 白河天皇による「院政」の開始（1086年）——権力の移行</span>
+        後三条天皇の子・白河天皇は，<strong>1086年，8歳の息子に位を譲って上皇となり，「院（いん）」と呼ばれる御所で政治を行い続けました。</strong>これが「院政」の始まりです。<br><br>
+        ▶ 院政のもとでは，天皇ではなく上皇が実権を持ちます。<br>
+        ▶ 藤原氏は「摂政・関白」という役職の意味を失い，政治の中心から外れていきました。<br>
+        ▶ → 約100年続いた摂関政治は，ここに終わりを告げます。
+      </div>
+
+      <div style="background:#fdf5ec;border:2px solid #d4956a;border-radius:12px;padding:14px 18px;margin-top:16px;font-size:14px;line-height:2.0">
+        <strong style="color:#8b3322">🔑 まとめ——摂関政治の崩壊の流れ</strong><br>
+        道長（996〜1027年・全盛期）<br>
+        → 頼通（1020〜1068年頃）娘が后になれず外祖父になれない<br>
+        → 後三条天皇即位（1068年）藤原氏の影響から自立した天皇<br>
+        → 荘園整理令（1069年）藤原氏の財政基盤が崩壊<br>
+        → 白河天皇が院政を開始（1086年）摂関政治の終焉・院政へ移行<br>
+        → 保元の乱・平治の乱（1156・1159年）武士が台頭・平氏政権へ
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 摂関政治を深く知るモーダル ===== -->
+<div class="modal-overlay" id="modal-sekkan" onclick="if(event.target===this)closeModal('sekkan')">
+  <div class="modal-box" style="max-width:760px">
+    <button class="modal-close" onclick="closeModal('sekkan')">✕</button>
+    <div class="modal-title" style="color:#1a4f7a;border-bottom-color:#7a4f00">🏛️ 摂関政治を深く知る——道長・頼通の権力行使と功罪</div>
+    <div class="modal-body">
+
+      <p>摂関政治とは「藤原氏が摂政・関白として天皇に代わって政治を行う仕組み」ですが，実際には<strong>どのように権力を行使していたのか</strong>，そして<strong>何をもたらしたのか</strong>を具体的に見ていきましょう。</p>
+
+      <!-- PART 1: 摂関政治の仕組み -->
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">
+        ① 摂関政治の権力構造——なぜこんなに強かったのか
+      </div>
+
+      <div class="cause-box">
+        <span class="label">⚙️ 摂関政治が機能した「3つの柱」</span>
+
+        <strong style="color:#c87000">【柱① 外戚関係——「天皇の母方の祖父」という最強の立場】</strong><br>
+        藤原氏は娘を天皇に嫁がせ，生まれた皇子を次の天皇にします。すると藤原氏は「天皇の外祖父（がいそふ）」になります。幼い天皇を養育・後見する立場として，政治の実権を握ります。これは律令制度に反しないため，形式的には合法でした。<br><br>
+
+        <strong style="color:#c87000">【柱② 摂政・関白という役職——法制度を使った支配】</strong><br>
+        ▶ <strong>摂政</strong>：天皇が幼いとき，すべての政務を「天皇の代わりに」行う役職。天皇の署名も不要。<br>
+        ▶ <strong>関白</strong>：天皇が成人した後も，すべての政務書類が天皇に届く前に関白を経由するという規定を設けた役職。天皇は藤原氏の「許可」なく政治を行えませんでした。<br><br>
+
+        <strong style="color:#c87000">【柱③ 荘園——圧倒的な経済力】</strong><br>
+        藤原氏は全国に大量の<strong>荘園（しょうえん＝私有地）</strong>を持っていました。これが莫大な財政基盤となり，他の貴族や寺社が藤原氏に「荘園を守ってもらうため」に頭を下げる構図が生まれました。経済力が政治力を支えていたのです。
+      </div>
+
+      <!-- PART 2: 道長が実際にしたこと -->
+      <div style="background:#7a4f00;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ② 藤原道長（1016〜1027年）——実際に何をしたのか
+      </div>
+
+      <div class="why-box">
+        <span class="label">👑 道長の権力行使の特徴——「娘を使った完璧な支配」</span>
+
+        <strong>◎ 政策面</strong><br>
+        道長は1016年に摂政に就任しましたが，実は正式な「関白」にはなっていません。関白より上位の「太政大臣」を1年だけ務め，その後は「内覧（ないらん）」という役職で事実上の政治を支配し続けました。<br>
+        ▶ <strong>内覧とは</strong>：関白と同じく，天皇に届く前の書類をすべて先に見られる権限。「関白でないのに関白と同じ権限を持つ」という巧みな立ち位置。<br><br>
+
+        <strong>◎ 人事面</strong><br>
+        道長は朝廷のあらゆる重要ポストを自分の一族で占めました。<br>
+        ▶ 息子・頼通（よりみち）→ 関白<br>
+        ▶ 息子・教通（のりみち）→ 内大臣<br>
+        ▶ 他の公卿（くぎょう，上級貴族）は道長の意向なしに出世できない状況でした。<br><br>
+
+        <strong>◎ 文化面</strong><br>
+        道長の娘・<strong>彰子（しょうし）</strong>の後宮には，当時最高の文化人が集まりました。<br>
+        ▶ <strong>紫式部（むらさきしきぶ）</strong>——「源氏物語」を著した。彰子に仕えた女房（にょうぼう）。<br>
+        ▶ <strong>和泉式部（いずみしきぶ）</strong>——情熱的な恋愛歌で知られる歌人。<br>
+        ▶ 道長の権力の絶頂は，文化の黄金時代（国風文化の全盛期）とも重なっていました。
+      </div>
+
+      <div style="background:#f0f7ff;border-radius:10px;padding:18px;margin:14px 0;text-align:center;font-size:16px;line-height:2.4;border:2px solid #1a4f7a">
+        「<strong>この世をば　我が世とぞ思ふ　望月の　かけたることも　なしと思へば</strong>」<br>
+        <span style="font-size:13px;color:#555">1018年 — 3人目の娘・威子を後一条天皇の后にした宴席で詠んだ歌</span><br>
+        <span style="font-size:13px;color:#888">満月のように欠けるところがない＝自分の権力に翳りはひとつもない，という自信の絶頂を表す</span>
+      </div>
+
+      <!-- PART 3: 頼通が実際にしたこと -->
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ③ 藤原頼通（1020〜1068年頃）——50年間の長期政権とその実態
+      </div>
+
+      <div class="why-box">
+        <span class="label">📋 頼通の政治——「父の遺産を守り続けた50年」</span>
+
+        <strong>◎ 長期政権の記録</strong><br>
+        頼通は1020年頃から約50年間にわたり，摂政・関白の地位を保ち続けました。これは摂関政治の歴史の中でも最長クラスの長期政権です。<br><br>
+
+        <strong>◎ 頼通の政治の特徴</strong><br>
+        ▶ 父・道長が確立した「娘婚姻戦略」を継続しようとしましたが，娘が皇子を産めませんでした。<br>
+        ▶ 全国の荘園支配は継続し，経済力は維持していました。<br>
+        ▶ しかし，外戚という「政治的正当性の根拠」が失われていくことを止められませんでした。<br><br>
+
+        <strong>◎ 文化的な業績——平等院鳳凰堂（1053年）</strong><br>
+        ▶ 1052年（末法元年）の翌年，宇治の別荘を改めて<strong>平等院鳳凰堂</strong>を建立。<br>
+        ▶ これは「末法の世でも，阿弥陀仏によって極楽浄土に生まれ変われる」という信仰の表明でした。<br>
+        ▶ 政治的に不安定になっていく中で，頼通が「来世」に希望を向けていたことを示すともいわれます。<br><br>
+
+        <strong>◎ 頼通の立場の苦しさ</strong><br>
+        頼通は父・道長ほどの政治的才覚があったわけではありませんでした。しかし50年間，誰も頼通を権力の座から引きずり下ろせなかった——それは「藤原氏の構造的な強さ」が続いていたからです。逆に言えば，その構造が崩れた瞬間，頼通個人の能力では補えなかったのです。
+      </div>
+
+      <!-- PART 4: 功罪 -->
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ④ 摂関政治の「功」と「罪」——歴史的評価
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div class="result-box" style="margin:0">
+          <span class="label">✅ 功績——もたらしたもの</span>
+          ▶ <strong>国風文化の開花</strong>：遣唐使廃止後，藤原氏の後宮が文化のサロンとなり，源氏物語・枕草子など日本独自の文学が生まれた。<br>
+          ▶ <strong>約100年の政治的安定</strong>：武力による争いを避け，婚姻と人事で権力を維持する平和的な支配。<br>
+          ▶ <strong>律令制度の維持</strong>：天皇制・律令制の形式を壊さずに運用し，日本の統治の枠組みを保った。
+        </div>
+        <div class="cause-box" style="margin:0">
+          <span class="label">❌ 罪——もたらした問題</span>
+          ▶ <strong>荘園の拡大</strong>：藤原氏の荘園が増えすぎて，国家財政の基盤となるべき「公領（こうりょう）」が縮小した。<br>
+          ▶ <strong>地方政治の乱れ</strong>：都の貴族が地方をかえりみず，地方では武士が台頭した。<br>
+          ▶ <strong>天皇権威の形骸化</strong>：天皇が「飾り」になることで，後に院政・武家政治への移行が加速した。
+        </div>
+      </div>
+
+      <div style="background:#fdf5ec;border:2px solid #d4956a;border-radius:12px;padding:14px 18px;font-size:14px;line-height:2.0">
+        <strong style="color:#8b3322">🔑 まとめ——道長と頼通の比較</strong><br>
+        <div style="overflow-x:auto;margin-top:8px">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <tr style="background:#7a4f00;color:#fff">
+              <th style="padding:6px 10px"></th>
+              <th style="padding:6px 10px;text-align:center">道長（1016〜1027）</th>
+              <th style="padding:6px 10px;text-align:center">頼通（1020〜1068頃）</th>
+            </tr>
+            <tr style="background:#fff8f0">
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">外戚関係</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">完璧（4人全員后）</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">失敗（娘が皇子産めず）</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">政治的正当性</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">盤石</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">徐々に崩壊</td>
+            </tr>
+            <tr style="background:#fff8f0">
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">文化的遺産</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">源氏物語・枕草子</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">平等院鳳凰堂（1053年）</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">政権の終わり</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">栄光の頂点で死去</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a;text-align:center">後三条天皇即位で実権失う</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 頼通・摂関政治崩壊モーダル ===== -->
+<div class="modal-overlay" id="modal-yorimichi" onclick="if(event.target===this)closeModal('yorimichi')">
+  <div class="modal-box" style="max-width:760px">
+    <button class="modal-close" onclick="closeModal('yorimichi')">✕</button>
+    <div class="modal-title" style="color:#8b3322;border-bottom-color:#3d2b7a">❓ なぜ頼通の代で摂関政治は終わったのか——崩壊の構造</div>
+    <div class="modal-body">
+
+      <p>摂関政治は道長の全盛から頼通の時代まで約50〜60年続きました。なぜ頼通の時代に終わったのでしょうか。単に「頼通が無能だったから」ではありません——<strong>摂関政治そのものに内包されていた「構造的な弱点」が，頼通の代に一気に露わになった</strong>のです。</p>
+
+      <!-- PART 1: 構造的弱点 -->
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">
+        ① 摂関政治の「アキレス腱」——娘が后になれなければ終わる
+      </div>
+
+      <div class="cause-box">
+        <span class="label">🧬 システムの根本的な欠陥</span>
+        摂関政治の権力の根拠は<strong>「天皇の外祖父」</strong>という立場でした。これは言い換えると：<br><br>
+        ▶ 娘が天皇に嫁がなければ → 外戚関係が生まれない<br>
+        ▶ 娘が天皇の子（皇子）を産まなければ → 次の天皇の外祖父になれない<br>
+        ▶ 外祖父になれなければ → 摂政・関白という立場の「正当性」が失われる<br><br>
+        → つまり，摂関政治の権力は<strong>「娘が皇子を産む」という生物学的な偶然に依存していました</strong>。これが致命的な欠陥でした。<br><br>
+        道長はこの綱渡りを「4人の娘全員を后にする」という徹底した戦略で乗り越えましたが，頼通はそれができませんでした。
+      </div>
+
+      <!-- PART 2: 頼通が失敗した理由 -->
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ② 頼通はなぜ「娘婚姻戦略」を継続できなかったのか
+      </div>
+
+      <div class="why-box">
+        <span class="label">👧 頼通の娘の問題——皇子が生まれなかった</span>
+        ▶ 頼通の娘・<strong>寛子（かんし）</strong>は後冷泉天皇（ごれいぜいてんのう）の后となりました。<br>
+        ▶ しかし，後冷泉天皇との間に皇子が生まれませんでした。<br>
+        ▶ 後冷泉天皇が1068年に崩御すると，次の天皇は頼通の外孫ではなく，<strong>後三条天皇</strong>が即位しました。<br><br>
+        <strong>なぜ頼通は他の娘を使わなかったのか？</strong><br>
+        → 頼通には他にも娘がいましたが，父・道長ほど娘を次々と天皇に嫁がせる「積極性と戦略眼」がなかったと評価されています。また，当時の天皇の系統の問題（父方の血筋が合わない，皇子がすでにいるなど）もありました。
+      </div>
+
+      <!-- PART 3: 後三条天皇 -->
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ③ 後三条天皇（1068年即位）——「藤原氏の血を引かない天皇」の意味
+      </div>
+
+      <div class="cause-box">
+        <span class="label">👑 後三条天皇とはどういう人物か</span>
+        ▶ <strong>後三条天皇</strong>（ごさんじょうてんのう，1034〜1073年）は第71代天皇です。<br>
+        ▶ 母は<strong>藤原氏の娘ではない</strong>（陽明門院・禎子内親王，後一条天皇の娘）。<br>
+        ▶ つまり，<strong>藤原氏を外戚に持たない天皇</strong>でした。<br><br>
+        これが約170年ぶりの事態でした。藤原氏が外戚でないということは：<br>
+        ▶ 後三条天皇は頼通に気を遣う必要がない<br>
+        ▶ 摂政・関白の「助言」を断ることができる<br>
+        ▶ 自分の意思で政治を行えた<br><br>
+        後三条天皇は当初から藤原氏の支配に批判的で，「天皇が自ら政治を行う」という意思を持っていました。
+      </div>
+
+      <!-- PART 4: 延久の荘園整理令 -->
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ④ 延久の荘園整理令（1069年）——藤原氏への経済的打撃
+      </div>
+
+      <div class="result-box">
+        <span class="label">📜 荘園整理令の内容——何をしたのか</span>
+        後三条天皇は即位の翌年，<strong>「延久の荘園整理令（えんきゅうのしょうえんせいりれい）」</strong>を発令しました。内容は：<br><br>
+        ▶ <strong>「記録荘園券契所（きろくしょうえんけんけいじょ）」</strong>という新しい審査機関を設置。<br>
+        ▶ 「正式な文書・手続きを経ていない荘園はすべて没収する」と宣言。<br>
+        ▶ この審査は<strong>藤原氏の荘園にも例外なく適用</strong>されました。<br><br>
+        これは過去の荘園整理令（朱雀・村上朝のものなど）と何が違うのか？<br>
+        ▶ 過去のものは「藤原氏の荘園はほぼ例外扱い」でした。<br>
+        ▶ 後三条天皇の命令は<strong>「誰でも例外なし」</strong>という点が革命的でした。
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">💥 荘園整理令の影響——藤原氏の財政基盤が崩れた</span>
+        ▶ 藤原氏の多くの荘園は，実は「地方の有力者から名義を借りただけ」「記録書類が不完全」なものでした。<br>
+        ▶ 審査の結果，藤原氏の荘園の相当数が没収対象となりました。<br>
+        ▶ 摂関政治の経済的基盤だった「荘園からの収入」が大きく減少しました。<br><br>
+        → 「お金がなければ人はついてこない」——財政基盤の縮小は，そのまま藤原氏の政治力の低下を意味しました。
+      </div>
+
+      <!-- PART 5: 頼通は何かできたか -->
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ⑤ 頼通は何かできたのか——「個人の失敗」か「構造の必然」か
+      </div>
+
+      <div class="why-box">
+        <span class="label">🤔 頼通への歴史的評価</span>
+        歴史家の間では，頼通の失敗について2つの見方があります：<br><br>
+
+        <strong>【見方A：頼通個人の問題】</strong><br>
+        ▶ 道長のような積極的な婚姻戦略をとらなかった。<br>
+        ▶ 政治的に保守的で，変化に対応できなかった。<br>
+        ▶ 後三条天皇即位を阻止できるだけの根回しをしなかった。<br><br>
+
+        <strong>【見方B：構造的な必然】</strong><br>
+        ▶ 摂関政治は「外戚関係」という偶然に依存した脆弱な仕組みであり，いつかは必ず崩れる運命にあった。<br>
+        ▶ 道長が「奇跡的な条件（4人全員成功）」で成り立てただけで，長続きするシステムではなかった。<br>
+        ▶ 院政（上皇が政治を行う）という新しい形は，天皇家にとってより合理的な権力維持の方法だった。<br><br>
+
+        → 多くの歴史家は<strong>「両方が正しい」</strong>と評価しています。頼通個人の判断力不足もありましたが，根本的には摂関政治という仕組み自体が「持続可能ではなかった」のです。
+      </div>
+
+      <div style="background:#fdf5ec;border:2px solid #d4956a;border-radius:12px;padding:14px 18px;margin-top:16px;font-size:14px;line-height:2.0">
+        <strong style="color:#8b3322">🔑 摂関政治崩壊の流れ——まとめ</strong><br>
+        頼通の娘が皇子を産めなかった（外戚関係の断絶）<br>
+        → 1068年　後三条天皇即位（藤原氏の外戚でない天皇 = 約170年ぶり）<br>
+        → 1069年　延久の荘園整理令（藤原氏の荘園も没収対象 → 財政基盤の崩壊）<br>
+        → 1086年　白河天皇が上皇となり院政を開始（摂関政治の実質的終焉）<br>
+        → 以後，権力の中心は「藤原氏の摂関」から「天皇家の上皇」へと移行<br><br>
+        <strong style="color:#3d2b7a">💡 院政は「天皇家の逆襲」</strong>：藤原氏に権力を奪われた天皇家が，「上皇」という形で外戚に頼らない権力行使の方法を見つけた——それが院政でした。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 平将門・藤原純友モーダル ===== -->
+<div class="modal-overlay" id="modal-masakado" onclick="if(event.target===this)closeModal('masakado')">
+  <div class="modal-box" style="max-width:740px">
+    <button class="modal-close" onclick="closeModal('masakado')">✕</button>
+    <div class="modal-title" style="color:#8b3322;border-bottom-color:#c00">⚔️ 平将門の乱・藤原純友の乱——承平・天慶の乱の全貌</div>
+    <div class="modal-body">
+
+      <p>935〜941年にかけて，東西の日本で2つの大きな反乱がほぼ同時に起きました。まとめて<strong>「承平・天慶の乱（じょうへいてんぎょうのらん）」</strong>と呼ばれます。この2つの乱は，単なる反乱ではなく，<strong>「武士が歴史の表舞台に登場した瞬間」</strong>として日本史上きわめて重要な出来事です。</p>
+
+      <!-- 平将門の乱 -->
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">
+        ① 平将門の乱（935〜940年）——関東独立を宣言した武将
+      </div>
+
+      <div class="cause-box">
+        <span class="label">👤 平将門とは何者か</span>
+        ▶ 平将門（たいらのまさかど，？〜940年）は<strong>桓武天皇の子孫</strong>にあたる武士でした。<br>
+        ▶ 皇族の血を引きながらも地方に下り，武士として関東（下総国・現在の千葉県北部周辺）を根拠地にしていました。<br>
+        ▶ 将門は都の貴族政治から離れ，地方で独自の勢力を築いていた，当時としては異色の存在でした。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">🔥 なぜ反乱を起こしたのか——原因</span>
+        反乱のきっかけは<strong>土地と女性をめぐる一族内の争い</strong>でした。<br><br>
+        ▶ 将門は叔父・<strong>平国香（くにか）</strong>の娘を妻にしていましたが，国香の息子・貞盛（さだもり）と土地の相続をめぐって対立。<br>
+        ▶ さらに，将門の婚約相手を叔父の武蔵武芝（むさしのたけしば）に横取りされたという説もあります。<br>
+        ▶ 935年，土地争いのもつれから将門は叔父・国香を<strong>殺害</strong>してしまいます。<br>
+        ▶ この事件が「謀反」とみなされ，反乱へと発展していきました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">👑 「新皇」宣言——関東に独立国を作ろうとした</span>
+        ▶ 938年頃から，将門は隣国の武士たちと次々に戦い，武蔵・相模・上総など<strong>関東8か国を制圧</strong>しました。<br>
+        ▶ 939年，将門は自らを<strong>「新皇（しんのう）」</strong>と名乗り，京都とは別の独立政権の樹立を宣言。<br>
+        ▶ 「8か国の国司（地方長官）」を自分で任命し，事実上の<strong>東国独立政権</strong>を打ち立てました。<br>
+        ▶ → これは現代でいえば「首都圏の独立宣言」に等しく，朝廷は大きな衝撃を受けました。
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">⚔️ 乱の鎮圧——将門を倒したのは武士</span>
+        ▶ 朝廷は源経基（みなもとのつねもと）・藤原秀郷（ふじわらのひでさと＝俵藤太）・<strong>平貞盛（たいらのさだもり，将門の従兄弟）</strong>らに追討を命じました。<br>
+        ▶ <strong>940年</strong>，将門は現在の茨城県坂東市付近での戦いで討ち取られました。<br>
+        ▶ 反乱の開始から鎮圧まで<strong>わずか5年</strong>という短命な反乱でしたが，その衝撃は計り知れませんでした。
+      </div>
+
+      <div style="background:#fff8f0;border-left:4px solid #8b3322;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:14px">
+        <strong>📌 将門の首塚（くびづか）</strong>：将門の首は京都に送られましたが，伝説では首が東国へ飛んで帰ったとされ，現在の<strong>東京・大手町</strong>に「将門の首塚」が残っています。再開発計画で撤去しようとすると災いが起きると言われ，今も東京のオフィス街の一角に祀られています。
+      </div>
+
+      <!-- 藤原純友の乱 -->
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ② 藤原純友の乱（939〜941年）——海賊の王となった元官僚
+      </div>
+
+      <div class="cause-box">
+        <span class="label">👤 藤原純友とは何者か</span>
+        ▶ 藤原純友（ふじわらのすみとも，？〜941年）は，もともと<strong>伊予国（愛媛県）の国司（地方長官）</strong>だった人物です。<br>
+        ▶ 任期を終えた後も都に帰らず，<strong>瀬戸内海に居座り続けました</strong>。<br>
+        ▶ 当時の瀬戸内海は海賊（海商）が多く，純友は彼らをまとめてリーダー的な立場になっていきました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">🌊 なぜ反乱を起こしたのか——原因</span>
+        ▶ 純友はもともと<strong>海賊の取り締まり役（押領使）</strong>に任じられていましたが，取り締まる側から<strong>海賊を率いる側</strong>に転じたとされます。<br>
+        ▶ 地方国司として赴任した際，都の貴族政治への不満と，瀬戸内の豊かな海上交易への魅力が，純友を都に戻れなくさせたと見られています。<br>
+        ▶ <strong>939年</strong>，将門が東国で「新皇」を名乗った同じ年，純友も西国で本格的な反乱を開始しました。<br>
+        ▶ 純友は配下の<strong>数千隻の船と数万の部下</strong>を率い，瀬戸内海の制海権を握りました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">🔥 反乱の経過——大宰府まで焼き打ち</span>
+        ▶ 純友軍は摂津（大阪）・備前（岡山）・讃岐（香川）などの国府（地方政府）を次々に焼き払いました。<br>
+        ▶ <strong>941年，ついに大宰府（九州・福岡）を焼き打ち</strong>にします。大宰府は西日本の行政・外交の中心地で，朝廷への衝撃は非常に大きなものでした。
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">⚔️ 鎮圧——追い詰められた純友の最期</span>
+        ▶ 朝廷は<strong>小野好古（おののよしふる）</strong>を追討使に任命。<br>
+        ▶ <strong>941年</strong>，伊予（愛媛）の日振島（ひぶりしま）付近での海戦で純友軍は大敗。<br>
+        ▶ 純友は九州へ逃亡しましたが，捕らえられ，<strong>獄中で死亡</strong>しました（一説には斬首）。
+      </div>
+
+      <!-- 2つの乱の歴史的意義 -->
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ③ 2つの乱の歴史的意義——なぜ重要なのか
+      </div>
+
+      <div class="why-box">
+        <span class="label">🏹 武士が「国家の守り手」として認められた</span>
+        ▶ 朝廷（貴族）は自分たちの軍事力を持っていませんでした。<br>
+        ▶ この2つの反乱は，<strong>貴族ではなく武士の力で鎮圧されました</strong>。<br>
+        ▶ → 朝廷は「有事の際は武士に頼るしかない」ということを痛感しました。<br>
+        ▶ → 武士が<strong>「朝廷を守る存在」</strong>として公式に認められた最初の出来事でした。
+      </div>
+
+      <div class="why-box" style="margin-top:12px">
+        <span class="label">⚔️ 源氏・平氏の台頭と「武士の棟梁」の誕生</span>
+        ▶ この2つの乱を鎮圧した武士たちは，その後も朝廷の信頼を得て力を蓄えていきます。<br>
+        ▶ 特に<strong>源氏（みなもとし）</strong>と<strong>平氏（たいらし）</strong>が「武士の棟梁（とうりょう）」として台頭し，後の保元の乱・平治の乱・平氏政権・源氏の鎌倉幕府へとつながっていきます。
+      </div>
+
+      <div style="background:#fdf5ec;border:2px solid #d4956a;border-radius:12px;padding:14px 18px;margin-top:16px;font-size:14px;line-height:2.0">
+        <strong style="color:#8b3322">🔑 2つの乱の比較まとめ</strong><br>
+        <div style="overflow-x:auto;margin-top:8px">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <tr style="background:#8b3322;color:#fff">
+              <th style="padding:6px 10px;text-align:left"></th>
+              <th style="padding:6px 10px;text-align:left">平将門の乱</th>
+              <th style="padding:6px 10px;text-align:left">藤原純友の乱</th>
+            </tr>
+            <tr style="background:#fff8f0">
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">場所</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">関東（東国）</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">瀬戸内・西国</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">時期</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">935〜940年</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">939〜941年</td>
+            </tr>
+            <tr style="background:#fff8f0">
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">人物の出自</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">桓武天皇の子孫（武士）</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">元・伊予国司（藤原氏）</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">反乱の核心</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">「新皇」宣言・東国独立</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">海賊を率いて西国を席巻</td>
+            </tr>
+            <tr style="background:#fff8f0">
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">鎮圧者</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">平貞盛・藤原秀郷ら</td>
+              <td style="padding:6px 10px;border:1px solid #d4956a">小野好古ら</td>
+            </tr>
+            <tr>
+              <td style="padding:6px 10px;border:1px solid #d4956a;font-weight:bold">歴史的意義</td>
+              <td colspan="2" style="padding:6px 10px;border:1px solid #d4956a">朝廷が武士の力に頼らざるを得ないことが明らかになり，武士の政治的地位が高まった</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== 末法思想・浄土教モーダル ===== -->
+<div class="modal-overlay" id="modal-mappo" onclick="if(event.target===this)closeModal('mappo')">
+  <div class="modal-box" style="max-width:740px">
+    <button class="modal-close" onclick="closeModal('mappo')">✕</button>
+    <div class="modal-title" style="color:#3d2b7a;border-bottom-color:#1a4f7a">🪷 末法思想・浄土教——人々はなぜ「念仏」にすがったのか</div>
+    <div class="modal-body">
+
+      <!-- PART 1: 末法思想とは -->
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">
+        ① 末法思想とは何か——「世界が滅びる」という恐怖
+      </div>
+
+      <p>末法思想（まっぽうしそう）を理解するには，まず仏教が時代をどう区切っているかを知る必要があります。</p>
+
+      <div class="cause-box">
+        <span class="label">📅 仏教の「三時説」——正法・像法・末法</span>
+        仏教では，お釈迦様（釈迦）が亡くなった後の時代を3つに分けて考えます：<br><br>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:6px">
+            <tr style="background:#3d2b7a;color:#fff">
+              <th style="padding:7px 10px;text-align:left">時代</th>
+              <th style="padding:7px 10px;text-align:left">期間</th>
+              <th style="padding:7px 10px;text-align:left">特徴</th>
+            </tr>
+            <tr style="background:#f0ebff">
+              <td style="padding:7px 10px;border:1px solid #c0a8f0"><strong>正法（しょうぼう）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0">釈迦滅後500年</td>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0">仏の教えが正しく伝わり，修行すれば悟りを開ける時代</td>
+            </tr>
+            <tr>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0"><strong>像法（ぞうぼう）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0">その後1000年</td>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0">教えの形は残るが，悟りを開ける者が減り始める時代</td>
+            </tr>
+            <tr style="background:#ffe8e8">
+              <td style="padding:7px 10px;border:1px solid #c0a8f0"><strong>末法（まっぽう）</strong></td>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0">その後10000年</td>
+              <td style="padding:7px 10px;border:1px solid #c0a8f0">仏法が完全に衰え，戦乱・天災・道徳の崩壊が続く「暗黒の時代」</td>
+            </tr>
+          </table>
+        </div>
+        <br>当時の計算では，<strong>1052年が末法元年（まっぽうがんねん）</strong>にあたると信じられていました。平安時代末期はまさに「末法の始まり」の時代だったのです。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">😱 「末法」が現実に見えた——重なる天変地異と社会の崩壊</span>
+        末法思想が単なる「古い迷信」ではなく，多くの人に<strong>本当のこと</strong>に思えたのは，実際に社会が激動していたからです：<br><br>
+        ▶ <strong>飢饉（ききん）・疫病（えきびょう）</strong>が繰り返し発生し，多くの庶民が命を落としました。<br>
+        ▶ <strong>地震・洪水・日照り</strong>などの自然災害が相次ぎました。<br>
+        ▶ 貴族の荘園拡大により，農民は重い租税に苦しめられていました。<br>
+        ▶ 都では盗賊が横行し，治安が悪化していました。<br>
+        ▶ 平将門の乱・藤原純友の乱など，武力による抗争が激化していました。<br><br>
+        → 「これはまさに末法の世だ」——この実感が，末法思想を急速に広めていきました。
+      </div>
+
+      <!-- PART 2: 浄土教とは -->
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ② 浄土教とは何か——「念仏さえ唱えれば極楽へ行ける」
+      </div>
+
+      <p>末法思想が広まると，人々は「どうすれば救われるのか」を求めました。そこに登場したのが<strong>浄土教（じょうどきょう）</strong>です。</p>
+
+      <div class="why-box">
+        <span class="label">🌸 浄土教の核心——阿弥陀仏と極楽浄土</span>
+        浄土教の教えはシンプルです：<br><br>
+        ▶ 西の彼方に<strong>阿弥陀仏（あみだぶつ）</strong>という仏様がいる極楽浄土（ごくらくじょうど）がある。<br>
+        ▶ そこは苦しみのない「理想の世界」で，蓮の花が咲き，美しい音楽が流れる。<br>
+        ▶ 「<strong>南無阿弥陀仏（なむあみだぶつ）</strong>」と念仏を唱えれば，死後に極楽浄土に生まれ変わることができる。<br><br>
+        → <strong>厳しい修行は不要</strong>——ただ念仏を唱えるだけでいい。この「やさしさ」が，苦しむ庶民の心をつかみました。
+      </div>
+
+      <div class="why-box" style="margin-top:12px">
+        <span class="label">👤 浄土教を広めた人物たち</span>
+        ▶ <strong>空也（くうや，903〜972年）</strong>：「市聖（いちのひじり）」と呼ばれ，京都の市中を歩き回りながら庶民に念仏を広めた最初の人物。貴族だけでなく一般市民にも仏教を届けた。<br>
+        ▶ <strong>源信（げんしん，942〜1017年）</strong>：「往生要集（おうじょうようしゅう）」を著し，極楽浄土と地獄の様子を詳細に描写して浄土教を理論化。「地獄の恐ろしさ」と「浄土の美しさ」を対比させることで，念仏への動機を強めた。<br>
+        ▶ これらの考え方は後の鎌倉時代に<strong>法然（浄土宗）・親鸞（浄土真宗）</strong>らによってさらに発展します。
+      </div>
+
+      <!-- PART 3: 平等院鳳凰堂との関係 -->
+      <div style="background:#7a4f00;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ③ 平等院鳳凰堂——「浄土をこの世に再現した」建物
+      </div>
+
+      <div class="result-box">
+        <span class="label">🏛️ なぜ藤原頼通は平等院鳳凰堂を建てたのか</span>
+        ▶ 1052年は計算上の「末法元年」でした。<br>
+        ▶ 翌1053年，頼通は宇治に<strong>平等院鳳凰堂</strong>を完成させました。これは偶然ではなく，<strong>「末法の世でも，阿弥陀仏に頼れば救われる」</strong>という信仰を形にしたものです。<br><br>
+        ▶ 鳳凰堂の内部には金色の<strong>阿弥陀如来坐像（あみだにょらいざぞう）</strong>が安置されています。<br>
+        ▶ 建物は池の中央に立ち，水面に映る姿が「極楽浄土」のイメージを視覚的に表現しています。<br>
+        ▶ 「鳳凰（ほうおう）が羽を広げたような形」から鳳凰堂と呼ばれました。<br><br>
+        → 貴族たちは「この建物の美しさが，死後に行ける極楽の姿だ」と信じ，安らぎを得ました。
+      </div>
+
+      <!-- PART 4: まとめ -->
+      <div style="background:#fdf5ec;border:2px solid #d4956a;border-radius:12px;padding:14px 18px;margin-top:16px;font-size:14px;line-height:2.0">
+        <strong style="color:#8b3322">🔑 末法思想・浄土教のまとめ</strong><br>
+        社会の混乱・天災・疫病が続く（現実の苦しみ）<br>
+        → 「1052年が末法元年だ」という信仰と重なる（末法思想の広まり）<br>
+        → 「厳しい修行ではなく，念仏を唱えるだけで救われる」という浄土教への希求<br>
+        → 空也・源信が庶民にまで念仏を広める<br>
+        → 平等院鳳凰堂（1053年）——極楽浄土をこの世に再現した建築物<br>
+        → 後の鎌倉時代に法然（浄土宗）・親鸞（浄土真宗）へと発展<br><br>
+        <strong style="color:#3d2b7a">💡 ポイント</strong>：末法思想・浄土教は単なる「宗教の流行」ではなく，当時の社会の苦しさ・不安を反映した「時代の空気」でした。平等院鳳凰堂はその時代の空気が生み出した文化遺産です。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== 菅原道真モーダル ===== -->
+<div class="modal-overlay" id="modal-michizane" onclick="if(event.target===this)closeModal('michizane')">
+  <div class="modal-box" style="max-width:740px">
+    <button class="modal-close" onclick="closeModal('michizane')">✕</button>
+    <div class="modal-title" style="color:#1a4f7a;border-bottom-color:#3d2b7a">📜 菅原道真——遣唐使廃止の真相と大宰府左遷の経緯</div>
+    <div class="modal-body">
+
+      <!-- PART 1: 菅原道真とはどんな人物か -->
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">
+        ① 菅原道真とはどんな人物だったのか
+      </div>
+
+      <p>菅原道真（845〜903年）は，平安時代の<strong>学者・政治家</strong>です。当時の政界は藤原氏が圧倒的な権力を持っていましたが，道真は<strong>「学問の力」だけで</strong>のし上がった異色の存在でした。</p>
+
+      <div class="cause-box">
+        <span class="label">📖 道真の経歴——学問で成り上がった天才</span>
+        ▶ 菅原家は代々<strong>学者の家系</strong>（「文章（もんじょう）の家」）で，政治家の家系ではありませんでした。<br>
+        ▶ 道真は幼少期から詩文の才能を示し，5歳で和歌，11歳で漢詩を詠んだと伝えられます。<br>
+        ▶ 難関の<strong>文章博士（もんじょうはかせ）</strong>試験に合格し，京都大学の教授のような地位に就きました。<br>
+        ▶ 887年，<strong>宇多天皇（うだてんのう）</strong>に気に入られ，政治的な役職に就くことになります。<br>
+        ▶ 891年，<strong>蔵人頭（くろうどのとう）</strong>に就任——天皇の秘書官の最高位です。<br>
+        ▶ 899年には<strong>右大臣（うだいじん）</strong>にまで昇りつめました。右大臣は太政官の序列で左大臣の次，事実上の政府ナンバー2です。<br><br>
+        → 藤原氏でもなく，武士でもなく，<strong>純粋に学問の能力だけで頂点近くまで上り詰めた人物</strong>として，当時から「天才」と呼ばれていました。
+      </div>
+
+      <!-- PART 2: なぜ遣唐使を廃止したのか -->
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ② なぜ「最後の遣唐使」に選ばれながら廃止を進言したのか
+      </div>
+
+      <p>ここが最も興味深いポイントです。道真は<strong>894年，宇多天皇から遣唐使の大使（団長）に任命されました</strong>。ところが，道真は出発するどころか，「遣唐使を廃止すべきです」と宇多天皇に進言したのです。なぜでしょうか？</p>
+
+      <div class="why-box">
+        <span class="label">🌊 理由① 唐はすでに「崩壊寸前」だった</span>
+        遣唐使の目的は「唐の進んだ文明を学ぶこと」でした。しかし9世紀後半，唐の国内事情は激変していました。<br><br>
+        ▶ <strong>875〜884年：黄巣の乱（こうそうのらん）</strong>——大規模な農民反乱が起き，首都・長安が略奪・破壊されました。<br>
+        ▶ 唐の皇帝は地方に逃げ，中央政府の権威は失墜。<br>
+        ▶ 地方では軍閥（節度使＝せつどし）が割拠し，内戦状態が続いていました。<br>
+        ▶ 道真が任命された894年の時点で，唐は完全な<strong>崩壊前夜</strong>の状態（実際に907年に滅亡）。<br><br>
+        → <strong>「今の唐に学ぶものはない。むしろ船が難破して命を落とすだけだ」</strong>というのが道真の判断でした。
+      </div>
+
+      <div class="why-box" style="margin-top:12px">
+        <span class="label">🇯🇵 理由② 日本はもう「自立できる国」になっていた</span>
+        ▶ 遣唐使が始まった630年当時，日本は唐の制度・文化を必死に輸入している段階でした。<br>
+        ▶ しかし894年の時点では，<strong>律令制度も約200年定着</strong>し，日本独自の仕組みが整っていました。<br>
+        ▶ 貿易も，遣唐使ではなく私貿易（民間の商船）で十分に行えるようになっていました。<br>
+        ▶ → 「国家として使節を送る必要はもうない」という判断です。
+      </div>
+
+      <div class="why-box" style="margin-top:12px">
+        <span class="label">⚠️ 理由③ 遣唐使船の危険性——命がけの航海</span>
+        ▶ 遣唐使船は東シナ海を渡りますが，当時の造船・航海技術では<strong>嵐で難破する危険が非常に高い</strong>航路でした。<br>
+        ▶ 過去にも多くの使節が命を落としています（空海も帰国途中に嵐に遭いました）。<br>
+        ▶ 得られるものが少ないのに，命をかける意味がない——これも廃止を進言した理由の一つです。
+      </div>
+
+      <div style="background:#e8f4fd;border:2px solid #1a4f7a;border-radius:10px;padding:14px 16px;margin:14px 0;font-size:14px">
+        <strong style="color:#1a4f7a">💡 「自分が行くはずだったのに廃止を進言した」の意味</strong><br><br>
+        道真は自分が団長として派遣される立場でありながら，「廃止すべき」と主張しました。これは<strong>個人の利益（遣唐使の大使という名誉ある地位）を捨てて，国家の利益を優先した</strong>判断といえます。道真が単なる出世主義者でなく，真の意味での「国家の学者」であったことを示すエピソードです。
+      </div>
+
+      <!-- PART 3: 大宰府左遷の経緯 -->
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ③ 大宰府左遷——なぜ道真は九州へ追放されたのか
+      </div>
+
+      <p>遣唐使廃止の英断から5年後，道真の運命は一転します。901年，道真は突然<strong>大宰府（だざいふ，現・福岡県）の長官に「左遷」</strong>されました。これは事実上の九州への追放です。</p>
+
+      <div class="cause-box">
+        <span class="label">👤 左遷を仕掛けた人物——左大臣・藤原時平</span>
+        ▶ <strong>藤原時平（ふじわらのときひら，871〜909年）</strong>は当時の左大臣（政府ナンバー1）で，道長の祖先にあたる藤原氏の有力者でした。<br>
+        ▶ 時平は，非藤原氏である道真が急速に出世し，天皇の信頼を独占していることに強い危機感を持っていました。<br>
+        ▶ 特に，宇多天皇が退位した後，新しい<strong>醍醐天皇（だいごてんのう）</strong>にも道真が重用されていたことが，時平の焦りを生みました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">🗣️ 讒言（ざんげん）——でっちあげの罪</span>
+        時平は醍醐天皇に対して，次のような<strong>讒言（ざんげん＝偽りの告発）</strong>を行いました：<br><br>
+        「<strong>菅原道真は，宇多上皇と手を組んで，現在の天皇（醍醐天皇）を廃位し，自分の孫を天皇にしようと謀っています</strong>」<br><br>
+        ▶ これは完全な<strong>でたらめ</strong>でしたが，醍醐天皇はこれを信じてしまいました。<br>
+        ▶ 道真には弁明の機会も与えられず，901年1月，突然「大宰府権帥（だざいふのごんのそち）」に任命されます。<br>
+        ▶ 「権帥」は大宰府の長官代理という肩書きですが，実態は<strong>京都から遠ざけるための流罪同然の処分</strong>でした。
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">😢 大宰府での道真——失意と死</span>
+        ▶ 道真は妻子とも引き離され，ほぼ単身で九州・大宰府へ向かいました。<br>
+        ▶ 京都を去るとき，庭に咲く梅を見て，有名な歌を詠んでいます：<br><br>
+        <div style="background:#fff8f0;border-radius:8px;padding:14px;text-align:center;font-size:15px;line-height:2.2;margin:8px 0">
+          「<strong>東風（こち）吹かば　にほひおこせよ　梅の花　主（あるじ）なしとて　春を忘るな</strong>」<br>
+          <span style="font-size:13px;color:#555">（東から春風が吹いたら，匂いを送っておくれよ，梅の花よ。主人がいなくても，春を忘れるなよ）</span>
+        </div>
+        ▶ 大宰府では，官舎にも入れてもらえず，廃屋（えんかんじ）に住まわせられたと伝えられます。<br>
+        ▶ 失意の中，道真は<strong>903年2月，59歳で死去</strong>しました。<br><br>
+        → 一切の名誉回復が認められないまま，京都に帰れずに九州で生涯を終えたのです。
+      </div>
+
+      <!-- PART 4: 怨霊と神格化 -->
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:20px 0 12px">
+        ④ 道真の怨霊と「学問の神様」への変化
+      </div>
+
+      <div class="why-box">
+        <span class="label">⚡ 怨霊の祟り——道真の死後に起きた異変</span>
+        道真が亡くなった後，京都では次々と不吉な出来事が起きます：<br><br>
+        ▶ <strong>909年</strong>：道真を左遷した張本人・<strong>藤原時平が39歳で急死</strong>（病死，ただし道真の祟りと噂される）。<br>
+        ▶ <strong>923年</strong>：道真が帝位を狙わせようとした醍醐天皇の皇太子が突然死去。<br>
+        ▶ <strong>930年</strong>：清涼殿（せいりょうでん，天皇の居所）に落雷が落ち，<strong>大納言・藤原清貫（きよつら）が即死</strong>。多くの公家が負傷。醍醐天皇はその3ヶ月後に崩御。<br>
+        ▶ 京都では疫病・洪水・干ばつなどの災害が続きました。<br><br>
+        → 人々はこれを「<strong>道真の怨霊（おんりょう）の祟り</strong>」と信じました。政治的に不当な扱いを受けた者の怨霊が災いをもたらすという「御霊信仰（ごりょうしんこう）」が当時は強く信じられていました。
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">⛩️ 北野天満宮の創建——怨霊を神に祀る</span>
+        ▶ 怨霊を鎮めるため，<strong>947年，現在の「北野天満宮（きたのてんまんぐう）」（京都市）</strong>に道真が祀られました。<br>
+        ▶ 大宰府の道真の墓所には<strong>「太宰府天満宮（だざいふてんまんぐう）」</strong>（福岡県）が建てられました。<br>
+        ▶ 道真は生前，中国の詩文に精通した最高の学者でしたが，「学問の神様＝天神様（てんじんさま）」として信仰されるようになりました。<br>
+        ▶ 現在も受験生が合格を祈願する神社として，全国に約12,000社の天満宮・天神社があります。
+      </div>
+
+      <div style="background:#fdf5ec;border:2px solid #d4956a;border-radius:12px;padding:14px 18px;margin-top:16px;font-size:14px;line-height:2.0">
+        <strong style="color:#8b3322">🔑 道真の生涯まとめ</strong><br>
+        845年 誕生（学者の家系）<br>
+        → 文章博士・右大臣にまで出世（学問のみで昇進した異例の人物）<br>
+        → 894年 遣唐使廃止を進言（唐の衰退・日本の自立を理由に）<br>
+        → 901年 藤原時平の讒言により大宰府へ左遷（弁明の機会なし）<br>
+        → 903年 大宰府で失意のまま死去（享年59歳）<br>
+        → 930年 清涼殿落雷事件→怨霊として恐れられる<br>
+        → 947年 北野天満宮に祀られる → 「学問の神様・天神様」として信仰へ
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== 保元・平治の乱モーダル ===== -->
+<div class="modal-overlay" id="modal-hogen" onclick="if(event.target===this)closeModal('hogen')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('hogen')">✕</button>
+    <div class="modal-title" style="color:#3d2b7a;border-bottom-color:#3d2b7a">⚔️ 保元の乱・平治の乱——武士が歴史の表舞台へ</div>
+    <div class="modal-body">
+      <p>院政の時代，「院（上皇）」と「天皇」という二つの権力が存在したため，権力争いが激化しました。そこに武士（平氏・源氏）が介入してきます。</p>
+
+      <div class="cause-box">
+        <span class="label">⚔️ 保元の乱（1156年）</span>
+        兄の<strong>崇徳上皇（すとくじょうこう）</strong>と弟の<strong>後白河天皇（ごしらかわてんのう）</strong>の対立に，摂関家の争い・平氏と源氏内の親族の争いが重なり，1156年に京都で保元の乱がおきました。<br><br>
+        → 後白河天皇側が夜襲をかけ，崇徳上皇は大敗。讃岐（香川県）へ流されました。<br>
+        → <strong>武士が朝廷の権力争いに動員された</strong>初の事例となりました。
+      </div>
+
+      <div class="cause-box" style="margin-top:12px">
+        <span class="label">⚔️ 平治の乱（1159年）</span>
+        保元の乱で活躍した<strong>平清盛（たいらのきよもり）</strong>ばかりが後白河天皇に重用されることに怒った源義朝（みなもとのよしとも）が挙兵した乱。<br><br>
+        → 平清盛が勝利。<strong>1167年，武家として初めて太政大臣</strong>（だじょうだいじん）に就任。<br>
+        → 日本の農地の半分以上を平氏が支配。<strong>日宋貿易（にっそうぼうえき）</strong>で巨富を得た。<br>
+        → しかし平氏が貴族化・増長したため，反感を集め…
+      </div>
+
+      <div class="result-box" style="margin-top:12px">
+        <span class="label">🌊 壇ノ浦の戦い（1185年）——平氏の滅亡</span>
+        各地の源氏勢力が平氏打倒のために旗揚げ。源義経（みなもとのよしつね）らが西国へ進撃し，1185年の<strong>壇ノ浦の戦い</strong>（山口県下関沖）で平氏は滅亡しました。<br><br>
+        → <strong>平安時代の終わり。次は鎌倉時代へ。</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========= チャレンジ用データ ========= */
+const allAnswers = {
+  "A":"桓武天皇", "B":"平安京", "C":"坂上田村麻呂", "D":"征夷大将軍", "E":"菅原道真",
+  "F":"平将門", "G":"藤原道長", "H":"摂関政治", "I":"藤原頼通", "J":"平等院鳳凰堂",
+  "K":"国風文化", "L":"最澄", "M":"空海", "N":"紫式部", "O":"清少納言"
+};
+
+const secAnswers = {
+  1: ["A","B","C","D","E"],
+  2: ["F","G","H","I","J"],
+  3: ["K","L","M","N","O"]
+};
+
+const wordBank = {
+  1: ["桓武天皇","平安京","坂上田村麻呂","征夷大将軍","菅原道真"],
+  2: ["平将門","藤原道長","摂関政治","藤原頼通","平等院鳳凰堂"],
+  3: ["国風文化","最澄","空海","紫式部","清少納言"]
+};
+
+const secNames = {
+  1: "①平安京遷都・遣唐使廃止",
+  2: "②摂関政治・院政",
+  3: "③国風文化"
+};
+
+/* ========= ミニテスト ========= */
+const miniQuizData = {
+  1: [
+    {q:"794年に平安京（現・京都）へ遷都した天皇は誰か。",choices:["聖武天皇","桓武天皇","元明天皇","後三条天皇"],ans:1},
+    {q:"桓武天皇が蝦夷討伐のために任命した武将で，征夷大将軍に就いたのは誰か。",choices:["藤原道長","平将門","坂上田村麻呂","菅原道真"],ans:2},
+    {q:"894年に遣唐使の廃止を宇多天皇に進言した人物は誰か。",choices:["紀貫之","最澄","空海","菅原道真"],ans:3},
+    {q:"桓武天皇が平安京に奈良の仏教寺院を移転させなかった最大の理由はどれか。",choices:["寺院が古くなっていたから","仏教勢力の政治介入を断ち切るため","奈良の土地が必要だったから","天皇が仏教を嫌いだったから"],ans:1}
+  ],
+  2: [
+    {q:"1016年に摂政となり，「この世をば我が世とぞ思ふ…」の歌を詠んだのは誰か。",choices:["藤原頼通","菅原道真","藤原道長","藤原不比等"],ans:2},
+    {q:"藤原氏が摂政・関白として天皇に代わって行った政治を何というか。",choices:["律令政治","院政","摂関政治","幕府政治"],ans:2},
+    {q:"藤原頼通が宇治に建て，現在の10円硬貨のデザインにもなっている建物は何か。",choices:["東大寺","平等院鳳凰堂","唐招提寺","中尊寺金色堂"],ans:1},
+    {q:"1086年，位を息子に譲って上皇となり，院政を始めたのは誰か。",choices:["後三条天皇","白河天皇","後白河天皇","後醍醐天皇"],ans:1}
+  ],
+  3: [
+    {q:"遣唐使廃止後に発展した，日本独自の感性に基づく文化を何というか。",choices:["天平文化","国風文化","北山文化","東山文化"],ans:1},
+    {q:"比叡山に延暦寺を建て，天台宗を開いたのは誰か。",choices:["空海","行基","最澄","鑑真"],ans:2},
+    {q:"世界最古の長編小説ともいわれる「源氏物語」を書いたのは誰か。",choices:["清少納言","紀貫之","紫式部","和泉式部"],ans:2},
+    {q:"「枕草子」の冒頭「春はあけぼの…」で始まる随筆を著した女性作家は誰か。",choices:["紫式部","清少納言","紀貫之","菅原道真"],ans:1}
+  ]
+};
+
+/* ========= まとめテスト ========= */
+const finalQuizData = [
+  {q:"794年に平安京へ遷都した天皇は誰か。",choices:["文武天皇","元明天皇","桓武天皇","聖武天皇"],ans:2},
+  {q:"蝦夷討伐のために征夷大将軍に任命された人物は誰か。",choices:["坂上田村麻呂","平将門","平清盛","源義経"],ans:0},
+  {q:"894年に遣唐使廃止を進言した人物は誰か。",choices:["最澄","空海","菅原道真","藤原道長"],ans:2},
+  {q:"935年，関東で反乱を起こして「新皇」と名乗った武士は誰か。",choices:["平清盛","平将門","源義朝","藤原純友"],ans:1},
+  {q:"藤原氏が摂政・関白として行った政治を何というか。",choices:["律令政治","摂関政治","院政","幕府政治"],ans:1},
+  {q:"「この世をば我が世とぞ思ふ望月のかけたることもなしと思へば」と詠んだ人物は誰か。",choices:["藤原頼通","藤原不比等","藤原道長","菅原道真"],ans:2},
+  {q:"1086年に院政を始めた人物はどれか。",choices:["後三条天皇","白河天皇（上皇）","後白河天皇","後醍醐天皇"],ans:1},
+  {q:"遣唐使廃止後に発展した日本独自の文化を何というか。",choices:["天平文化","国風文化","東山文化","桃山文化"],ans:1},
+  {q:"「源氏物語」の作者は誰か。",choices:["清少納言","紀貫之","紫式部","和泉式部"],ans:2},
+  {q:"比叡山延暦寺を建て，天台宗を開いた僧侶は誰か。",choices:["空海","行基","鑑真","最澄"],ans:3}
+];
+
+/* ========= チェックリスト ========= */
+const checkItems = [
+  "桓武天皇が794年に平安京へ遷都した理由（仏教勢力の政治介入を断ち切るため）を説明できる",
+  "蝦夷とは何か・坂上田村麻呂が征夷大将軍として行ったことを説明できる",
+  "遣唐使が廃止された理由（唐の衰退・日本の自立）を2点説明できる",
+  "摂関政治のしくみ（娘を后にして外祖父となり摂政・関白として政治を行う）を説明できる",
+  "藤原道長の権力の握り方と「この世をば…」の歌の意味を説明できる",
+  "院政のしくみ（上皇が院で政治を行う）と院政が始まった年・人物を説明できる",
+  "国風文化の特徴（仮名文字・女流文学）と代表作品・作者を説明できる",
+  "最澄と空海がそれぞれ開いた宗派と本山（延暦寺・金剛峯寺）を正しく説明できる"
+];
+
+/* ========= 以下，共通JS（ch03と同じ） ========= */
+let checkState = new Array(checkItems.length).fill(false);
+
+let activeChallengeSection = null;
+const challengeStates = {
+  1: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  2: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  3: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null}
+};
+
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function getBlankEl(id){return document.querySelector(`.blank[data-id="${id}"]`);}
+function getDisplayEl(id){const el=getBlankEl(id);return el?el.querySelector('.blank-display'):null;}
+
+function startChallenge(sec){
+  if(activeChallengeSection&&activeChallengeSection!==sec)endChallenge(activeChallengeSection);
+  activeChallengeSection=sec;
+  const st=challengeStates[sec];
+  st.active=true;st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status=document.getElementById(`sec-status-${sec}`);if(status){status.textContent='';status.className='sec-status';}
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='⏹ やめる';btn.style.background='#555';btn.onclick=()=>endChallenge(sec);}
+  showChipBar(sec);
+  document.getElementById('ccb-secname-label').textContent=secNames[sec]||'';
+}
+
+function endChallenge(sec){
+  const st=challengeStates[sec];if(!st)return;
+  st.active=false;st.demoMode=false;st.demoSnapshot=null;
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent=allAnswers[id];
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='🎯 チャレンジ！';btn.style.background='';btn.onclick=()=>startChallenge(sec);}
+  if(activeChallengeSection===sec){activeChallengeSection=null;hideChipBar();}
+}
+
+function showChipBar(sec){
+  const bar=document.getElementById('challenge-chip-bar');bar.classList.add('visible');
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  const st=challengeStates[sec];
+  if(st.demoMode){controls.style.display='none';demoReturn.style.display='block';}
+  else{controls.style.display='flex';demoReturn.style.display='none';}
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function hideChipBar(){document.getElementById('challenge-chip-bar').classList.remove('visible');}
+
+function renderChips(sec){
+  const st=challengeStates[sec];
+  const container=document.getElementById('ccb-chips');container.innerHTML='';
+  st.chipBank.forEach((word,idx)=>{
+    const chip=document.createElement('div');
+    chip.className='challenge-chip'+(idx===st.selectedChipIdx?' selected':'');
+    chip.textContent=word;chip.onclick=()=>tapChip(sec,idx);
+    container.appendChild(chip);
+  });
+  document.getElementById('ccb-count').textContent=`残り ${st.chipBank.length}語`;
+}
+
+function updateCcbHint(sec){
+  const st=challengeStates[sec];const hint=document.getElementById('ccb-hint');
+  if(st.demoMode)hint.textContent='手本表示中';
+  else if(st.selectedChipIdx!==null)hint.textContent=`「${st.chipBank[st.selectedChipIdx]}」を選択中 → 空欄をタップ`;
+  else hint.textContent='語句を選んでください';
+}
+
+function tapChip(sec,idx){
+  const st=challengeStates[sec];if(st.demoMode)return;
+  st.selectedChipIdx=(st.selectedChipIdx===idx)?null:idx;
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function blankClicked(e,id){
+  e.stopPropagation();
+  const sec=getSecForId(id);
+  if(sec&&challengeStates[sec].active&&!challengeStates[sec].demoMode){
+    handleBlankTap(sec,id);
+  }else{
+    const el=getBlankEl(id);if(!el)return;
+    document.querySelectorAll('.kw.active').forEach(k=>{if(k!==el)k.classList.remove('active');});
+    el.classList.toggle('active');
+  }
+}
+
+function handleBlankTap(sec,id){
+  const st=challengeStates[sec];const disp=getDisplayEl(id);const el=getBlankEl(id);
+  if(st.selectedChipIdx!==null){
+    const word=st.chipBank[st.selectedChipIdx];
+    const existing=st.placedWords[id];
+    if(existing!==undefined)st.chipBank.push(existing);
+    st.chipBank.splice(st.selectedChipIdx,1);
+    st.placedWords[id]=word;st.selectedChipIdx=null;
+    if(disp)disp.textContent=word;if(el)el.classList.add('placed');
+  }else{
+    const existing=st.placedWords[id];
+    if(existing!==undefined){
+      st.chipBank.push(existing);delete st.placedWords[id];
+      if(disp)disp.textContent='';if(el)el.classList.remove('placed');
+    }
+  }
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function getSecForId(id){
+  for(const[s,ids]of Object.entries(secAnswers)){if(ids.includes(id))return parseInt(s);}
+  return null;
+}
+
+function judgeChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];const ids=secAnswers[sec];let correct=0;
+  ids.forEach(id=>{
+    const placed=st.placedWords[id];const ans=allAnswers[id];
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(placed===ans){
+      correct++;
+      if(el){el.classList.add('correct');el.classList.remove('wrong','placed');}
+    }else{
+      if(placed!==undefined){
+        st.chipBank.push(placed);delete st.placedWords[id];
+        if(disp)disp.textContent='';
+      }
+      if(el){el.classList.add('wrong');el.classList.remove('placed');}
+      showOshii(id,ans);
+    }
+  });
+  renderChips(sec);updateCcbHint(sec);
+  const status=document.getElementById(`sec-status-${sec}`);
+  if(correct===ids.length){
+    if(status){status.textContent='🎉 全問正解！';status.className='sec-status pass';}
+    endChallenge(sec);launchConfetti();
+  }else{
+    if(status){status.textContent=`${correct}/${ids.length}問 正解`;status.className='sec-status fail';}
+  }
+}
+
+function showOshii(id,ans){
+  const popup=document.getElementById('oshii-popup');
+  document.getElementById('oshii-msg').textContent=`「${id}」の答えは「${ans}」`;
+  popup.style.display='block';
+  setTimeout(()=>{popup.style.display='none';},2500);
+}
+
+function showDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];
+  st.demoSnapshot={chipBank:[...st.chipBank],placedWords:{...st.placedWords},selectedChipIdx:st.selectedChipIdx};
+  st.demoMode=true;st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);const el=getBlankEl(id);
+    if(disp)disp.textContent=allAnswers[id];
+    if(el){el.classList.add('demo-fill');el.classList.remove('placed','correct','wrong');}
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='block';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='none';demoReturn.style.display='block';
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function exitDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];if(!st.demoMode)return;
+  st.demoMode=false;
+  if(st.demoSnapshot){
+    st.chipBank=[...st.demoSnapshot.chipBank];st.placedWords={...st.demoSnapshot.placedWords};
+    st.selectedChipIdx=null;st.demoSnapshot=null;
+  }
+  secAnswers[sec].forEach(id=>{
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(el)el.classList.remove('demo-fill','correct','wrong','placed');
+    const placed=st.placedWords[id];
+    if(disp)disp.textContent=placed!==undefined?placed:'';
+    if(placed!==undefined&&el)el.classList.add('placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='flex';demoReturn.style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function resetChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='flex';demoReturn.style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+
+/* ========= ミニテスト ========= */
+function toggleMQ(id,btn){
+  const body=document.getElementById(id);
+  const isOpen=body.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  if(isOpen&&body.innerHTML.trim()==='')renderMQ(id);
+}
+
+function renderMQ(id){
+  const secNum=parseInt(id.replace('mq',''));
+  const qs=miniQuizData[secNum];
+  let html='';
+  qs.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices">`;
+    q.choices.forEach((c,ci)=>{
+      html+=`<div class="mq-choice" onclick="answerMQ(this,${ci},${q.ans},'${id}-q${i}')">${c}</div>`;
+    });
+    html+='</div></div>';
+  });
+  document.getElementById(id).innerHTML=html;
+}
+
+function answerMQ(el,chosen,correct,key){
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+
+/* ========= まとめテスト ========= */
+function initFinal(){
+  const area=document.getElementById('final-quiz-area');
+  let html='';
+  finalQuizData.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices" id="fq-${i}">`;
+    const shuffled=q.choices.map((c,ci)=>({c,ci}));
+    shuffled.forEach(({c,ci})=>{
+      html+=`<div class="mq-choice" onclick="answerFinal(this,${ci},${q.ans},${i})">${c}</div>`;
+    });
+    html+='</div></div>';
+  });
+  area.innerHTML=html;
+}
+
+let finalAnswered={};
+function answerFinal(el,chosen,correct,qi){
+  if(finalAnswered[qi]!==undefined)return;
+  finalAnswered[qi]=chosen===correct;
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+
+function judgeFinal(){
+  const total=finalQuizData.length;
+  const answered=Object.keys(finalAnswered).length;
+  if(answered<total){
+    document.getElementById('final-result-row').innerHTML=`<p style="color:#c00;font-weight:bold">まだ${total-answered}問残っています。全問回答してから採点してください。</p>`;
+    return;
+  }
+  const correct=Object.values(finalAnswered).filter(Boolean).length;
+  const pass=correct>=8;
+  document.getElementById('final-result-row').innerHTML=
+    `<div style="margin-top:12px;padding:16px;border-radius:10px;background:${pass?'#d0f0d8':'#fdd'};border:2px solid ${pass?'#1a6b22':'#c00'};font-size:16px;font-weight:bold;text-align:center">
+      ${pass?'🎉 合格！':'😅 もう一度挑戦！'} ${correct} / ${total} 問正解 ${pass?'（8問以上で合格）':'（あと'+(8-correct)+'問正解で合格）'}
+    </div>`;
+  if(pass)launchConfetti();
+}
+
+function resetFinal(){
+  finalAnswered={};
+  document.getElementById('final-result-row').innerHTML='';
+  initFinal();
+}
+
+/* ========= チェックリスト ========= */
+function renderChecklist(){
+  const area=document.getElementById('checklist-area');if(!area)return;
+  let html='';
+  checkItems.forEach((item,i)=>{
+    html+=`<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 10px;border-radius:8px;background:${checkState[i]?'#d0f0d8':'#fdf5ec'};border:1.5px solid ${checkState[i]?'#1a6b22':'#d4956a'};transition:all 0.2s">
+      <input type="checkbox" ${checkState[i]?'checked':''} onchange="toggleCheck(${i})" style="margin-top:3px;width:18px;height:18px;accent-color:#1a6b22">
+      <span style="font-size:14px;line-height:1.7">${item}</span>
+    </label>`;
+  });
+  area.innerHTML=html;
+  const done=checkState.filter(Boolean).length;
+  document.getElementById('check-count').textContent=`${done} / ${checkItems.length} チェック済み`;
+  document.getElementById('check-bar').style.width=`${(done/checkItems.length)*100}%`;
+}
+
+function toggleCheck(i){
+  checkState[i]=!checkState[i];renderChecklist();
+  if(checkState.every(Boolean))launchConfetti();
+}
+
+/* ========= モーダル ========= */
+function openModal(name){
+  document.getElementById('modal-'+name).classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(name){
+  document.getElementById('modal-'+name).classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal('michinaga');closeModal('hogen');closeModal('michizane');closeModal('masakado');closeModal('mappo');closeModal('sekkan');closeModal('yorimichi');}});
+
+/* ========= 藤原道長の空欄G補正 ========= */
+// Section 2のG=藤原道長は本文中で参照されていないため，モーダルボタン直前の文に入れる
+// ※ allAnswersに"G":"藤原道長"は定義済みだが，本文中の空欄GはSection2に追加が必要
+
+/* ========= 花吹雪 ========= */
+function launchConfetti(){
+  const colors=['#f4a261','#e76f51','#2a9d8f','#e9c46a','#264653','#a8dadc','#457b9d'];
+  for(let i=0;i<60;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend',()=>el.remove());
+  }
+}
+
+/* ========= 初期化 ========= */
+initFinal();
+renderChecklist();
+</script>
+</body>
+</html>
