@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：第６章 室町時代</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding-bottom:220px;padding:0 14px 220px}
+h1{border-bottom:3px solid #1a4f7a;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #1a4f7a;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#1a4f7a;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:12px;text-decoration:none}
+.back-to-index:hover{background:#133d5e}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px}
+.label-sec1{background:#1a4f7a}.label-sec2{background:#2d6a4f}.label-sec3{background:#3d2b7a}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #1a4f7a;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#1a4f7a;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#dbeafe}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#eff6ff}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #1a4f7a;cursor:help;color:#1a4f7a;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #1a4f7a;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#93c5fd;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#aad4ff;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#eff6ff;border-left:5px solid #1a4f7a;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#1a4f7a;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fdf5ec;border-left:5px solid #1a4f7a;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#1a4f7a}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#eff6ff;border:1.5px solid #93c5fd;border-radius:6px;padding:4px 10px;font-size:13px;color:#1a4f7a;font-weight:bold}
+
+.flow-summary{background:#f0f4ff;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#1a4f7a;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#3d2b7a}.flow-year.brown{background:#7a4f00}.flow-year.red{background:#8b3322}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#eff6ff;border:1.5px solid #94a3b8;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#1a4f7a;color:#fff;box-shadow:0 2px 0 #133d5e;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#0a1628,#1a2d4e);border-top:3px solid #4a8dc4;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#93c5fd}
+#ccb-secname-label{font-size:12px;color:#bfdbfe;margin-left:6px}
+#ccb-hint{font-size:12px;color:#bfdbfe;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#bfdbfe;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #4a8dc4;background:#1a4f7a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#93c5fd;background:#1e5f94}
+.challenge-chip.selected{border-color:#f4d03f;background:#1e5f94;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#1a2d4e);border:3px solid #93c5fd;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#bfdbfe;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#eff6ff;border:1.5px solid #94a3b8;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#1a4f7a;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#1a4f7a;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#eff6ff;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#1a4f7a;background:#dbeafe}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #1a4f7a;margin-bottom:16px}
+.final-section h2{border-left:5px solid #1a4f7a;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#1a4f7a;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#133d5e}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#dbeafe;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#1a4f7a;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #93c5fd;color:#1a4f7a}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:block;width:100%;text-align:left;background:linear-gradient(135deg,#1a4f7a,#2d6a4f);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;display:flex;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#eff6ff;border:1.5px solid #93c5fd;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#133d5e}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-to-index">← 目次へ戻る</a>
+
+<h1>📘 第６章　室町時代——幕府の繁栄から戦国へ（1336〜1573年）</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label label-sec1">第１節　単元⑯</span>
+  <h2>建武の新政・南北朝・室町幕府の成立（1333〜1392年）</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">🏛️ 建武の新政——後醍醐天皇の失敗</span>
+    1333年に鎌倉幕府を滅ぼした<span class="kw">後醍醐天皇（ごだいごてんのう）<span class="kw-pop"><span class="kw-title">後醍醐天皇（ごだいごてんのう）</span><span class="kw-yomi">📖 読み：ごだいごてんのう</span><span class="kw-body">1288〜1339年。96代天皇。「天皇親政の復活」を掲げて鎌倉幕府打倒を主導。1334年から建武の新政を開始したが，武士に恩賞を与えず不満を招いた。足利尊氏に離反されて吉野（奈良県）へ逃れ，南朝を開いた。</span></span></span>は，1334年に「<strong>建武の新政（けんむのしんせい）</strong>」を始めました——天皇が直接すべてを支配する「天皇親政」の復活を目指したのです。<br><br>
+    しかし，武士への土地給与が遅く不公平な恩賞に対し武士たちが不満を持ち，わずか2年余りで政権は崩壊しました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('godaigo')" style="background:linear-gradient(135deg,#8b3322,#c87000)">
+    👑 後醍醐天皇はどういう人物か・何を目指したのか
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('kenmu-end')" style="background:linear-gradient(135deg,#c87000,#8b3322)">
+    💥 建武の新政はなぜ2年で崩壊したのか
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">🗓️ 南北朝時代から室町幕府成立への流れ</div>
+    <div class="flow-steps">
+      <div class="flow-step"><div class="flow-year red">1333年</div><div class="flow-content">鎌倉幕府滅亡（後醍醐天皇・足利尊氏・新田義貞）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><div class="flow-year red">1334年</div><div class="flow-content">建武の新政開始——天皇親政を目指すも武士の不満増大</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><div class="flow-year">1336年</div><div class="flow-content"><strong>足利尊氏</strong>，後醍醐天皇に反旗・京都で幕府開設（北朝を擁立）→ <strong>南北朝時代</strong>（北朝と南朝の争い）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><div class="flow-year">1338年</div><div class="flow-content"><strong>足利尊氏</strong>，征夷大将軍に就任 → 室町幕府の正式成立</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><div class="flow-year green">1392年</div><div class="flow-content"><strong>足利義満</strong>（3代将軍），南北朝を統一 → 南北朝時代の終結</div></div>
+    </div>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('takauji-kamakura')" style="background:linear-gradient(135deg,#1a4f7a,#8b3322)">
+    ⚔️ 足利尊氏はなぜ鎌倉幕府を裏切り六波羅探題を倒したのか
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('nitta-kusunoki')" style="background:linear-gradient(135deg,#2d6a4f,#8b3322)">
+    ⚔️ 新田義貞と楠木正成の活躍
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="cause-box">
+    <span class="label">⚔️ 南北朝の対立</span>
+    建武の新政に不満を持った<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">足利尊氏</span><span class="kw-pop"><span class="kw-title">足利尊氏（あしかがたかうじ）</span><span class="kw-yomi">📖 読み：あしかがたかうじ</span><span class="kw-body">1305〜1358年。後醍醐天皇の命令で鎌倉幕府打倒に貢献したが，建武の新政に武士たちが不満を持つと離反。1336年に京都で光明天皇（北朝）を擁立し，1338年に征夷大将軍となって室町幕府を開いた。室町幕府初代将軍。</span></span></span>は，1336年に後醍醐天皇（南朝）に対抗して別の天皇（北朝）を擁立しました。これにより日本は2人の天皇が並立する<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">南北朝</span><span class="kw-pop"><span class="kw-title">南北朝時代（なんぼくちょうじだい）1336〜1392年</span><span class="kw-yomi">📖 読み：なんぼくちょうじだい</span><span class="kw-body">南朝（後醍醐天皇系・吉野）と北朝（足利氏が擁立・京都）の2つの朝廷が対立した時代（1336〜1392年）。各地の武士が南朝・北朝に分かれて戦い，約60年続いた。1392年，3代将軍・足利義満が南北朝を統一して終結。</span></span></span>時代（1336〜1392年）に突入しました。<br><br>
+    後醍醐天皇は奈良県の吉野（よしの）に逃れて<strong>南朝</strong>を開き，足利氏は京都に<strong>北朝</strong>を擁立して対立が続きました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('takauji-revolt')" style="background:linear-gradient(135deg,#3d2b7a,#8b3322)">
+    🔥 足利尊氏はなぜ後醍醐天皇に反旗を翻したのか
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('kusunoki-defeat')" style="background:linear-gradient(135deg,#8b3322,#3d2b7a)">
+    ⚔️ 楠木正成はなぜ敗れたのか——湊川の戦い
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('tadayoshi')" style="background:linear-gradient(135deg,#1a1a2e,#3d2b7a)">
+    💀 足利尊氏と弟・直義の確執——観応の擾乱と毒殺の謎
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="result-box">
+    <span class="label">🕊️ 室町幕府の成立と南北朝統一</span>
+    1338年，足利尊氏は征夷大将軍に任命されて正式に<strong>室町幕府</strong>を開きました。足利氏が京都の<strong>室町（むろまち）</strong>に幕府を置いたことからこう呼ばれます。<br><br>
+    3代将軍・<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">足利義満</span><span class="kw-pop"><span class="kw-title">足利義満（あしかがよしみつ）</span><span class="kw-yomi">📖 読み：あしかがよしみつ</span><span class="kw-body">1358〜1408年。室町幕府3代将軍。1392年に南北朝を統一。1404年より明（中国）と勘合貿易を開始し莫大な利益を得た。京都の北山に金閣（鹿苑寺金閣）を建立。「北山文化」を花開かせた。「日本国王」を名乗り，武家と公家の両方を支配する頂点に立った。</span></span></span>は1392年に南北朝を統一し，室町幕府の全国支配を確立しました。<br><br>
+    室町幕府のしくみで重要なのが，将軍を補佐する<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">管領</span><span class="kw-pop"><span class="kw-title">管領（かんれい）</span><span class="kw-yomi">📖 読み：かんれい</span><span class="kw-body">室町幕府で将軍を補佐した最高職。細川・斯波・畠山の3氏（三管領）が交代で就任した。鎌倉幕府の「執権」に相当する役職。室町幕府では管領の力が強く，将軍との権力争いが応仁の乱の原因のひとつになった。</span></span></span>（かんれい）という役職です。鎌倉幕府の「執権」にあたり，細川・斯波・畠山の3氏（三管領）が交代で就任しました。
+
+    <div class="key-point">💡 <strong>「室町」の名称の由来</strong><br>
+      足利義満が京都の花の御所（室町第）に幕府を置いたことから「室町幕府」と呼ばれる。鎌倉幕府が鎌倉（神奈川）にあったのとは対照的に，室町幕府は京都に置かれた点が重要。
+    </div>
+
+    <button class="modal-btn" onclick="openModal('nanbokucho-unity')" style="background:linear-gradient(135deg,#1a4f7a,#2d6a4f)">
+      🕊️ 足利義満はどうやって南北朝を統一したのか
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+    <button class="modal-btn" onclick="openModal('emperor-lineage')" style="background:linear-gradient(135deg,#7a4f00,#1a4f7a)">
+      👑 現在の天皇陛下は北朝・南朝どちらの系譜か
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge(1)">🎯 チャレンジ！</button>
+    <span id="sec-status-1" class="sec-status"></span>
+    <a href="nihonshi_drill_nh16.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元⑯ドリル</a>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      ✏️ ミニ確認テスト（第１節）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label label-sec2">第２節　単元⑰</span>
+  <h2>勘合貿易・惣・一揆・戦国時代（1392〜1573年）</h2>
+
+  <div class="demo-banner" id="demo-banner-2" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">🚢 勘合貿易（日明貿易）——義満の経済政策</span>
+    3代将軍・足利義満は，1404年から中国の<span class="kw">明（みん）<span class="kw-pop"><span class="kw-title">明（みん）</span><span class="kw-yomi">📖 読み：みん</span><span class="kw-body">1368〜1644年。中国の王朝。元（モンゴル）を倒した朱元璋（洪武帝）が建国。倭寇（わこう：日本の海賊）への対策として，日本との正式な貿易（朝貢貿易）を求めた。義満はこれに応じて「日本国王」を名乗り勘合貿易を始めた。</span></span></span>と<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">勘合貿易</span><span class="kw-pop"><span class="kw-title">勘合貿易（かんごうぼうえき）＝日明貿易（にちみんぼうえき）</span><span class="kw-yomi">📖 読み：かんごうぼうえき</span><span class="kw-body">1404年〜。足利義満が明（中国）と行った正式な貿易。「勘合（かんごう）」という合い札を使って倭寇と区別した。日本は銅・硫黄・刀剣などを輸出し，明からは銅銭・生糸・陶磁器などを輸入した。幕府にとって莫大な財源となった。日明貿易ともいう。</span></span></span>を始めました。「勘合（かんごう）」と呼ばれる合い札を使って正規の貿易船と倭寇（わこう：海賊）を区別しました。<br><br>
+    日本からは銅・硫黄・刀剣を輸出し，明からは銅銭・生糸・陶磁器などを大量に輸入しました。この貿易は室町幕府に莫大な利益をもたらしました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('muromachi-economy')" style="background:linear-gradient(135deg,#c87000,#1a4f7a)">
+    💰 義満の経済政策と貨幣経済の発展
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="cause-box">
+    <span class="label">🌾 農村の自治——惣（そう）と一揆</span>
+    室町時代，農村では農民たちが<strong>自治組織</strong>を作るようになりました。これを<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">惣（そう）</span><span class="kw-pop"><span class="kw-title">惣（そう）・惣村（そうそん）</span><span class="kw-yomi">📖 読み：そう</span><span class="kw-body">室町時代，農民が自分たちで作った自治組織。寄合（よりあい：村の集会）で村のルールを決め，用水・入会地を共同管理した。惣の指導者は「乙名（おとな）」や「沙汰人（さたにん）」と呼ばれた。惣の発達は農民の政治的自立の始まりとも言える。</span></span></span>（そう）と呼びます。農民たちは<strong>寄合（よりあい）</strong>という村の集会を開き，共同で用水路を管理し，村のルールを自分たちで決めるようになりました。<br><br>
+    また，農民・武士・商人などが集団で権利を主張する<strong>一揆（いっき）</strong>も各地で起きました：<br>
+    ▶ <strong>土一揆（つちいっき）</strong>：農民が徳政（借金の帳消し）を要求して領主・幕府に反抗した一揆<br>
+    ▶ <strong>一向一揆（いっこういっき）</strong>：浄土真宗（一向宗）の信者たちが各地で守護大名に対抗した一揆（加賀の一向一揆が有名）
+
+    <button class="modal-btn" onclick="openModal('ikki')" style="background:linear-gradient(135deg,#2d6a4f,#7a4f00);margin-top:12px">
+      ⚔️ 一揆はなぜ起きたのか——土一揆・一向一揆の違いと意義
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+  </div>
+
+  <div class="result-box">
+    <span class="label">⚡ 応仁の乱——戦国時代の幕開け</span>
+    室町幕府最大の動乱が<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">応仁の乱</span><span class="kw-pop"><span class="kw-title">応仁の乱（おうにんのらん）1467〜1477年</span><span class="kw-yomi">📖 読み：おうにんのらん</span><span class="kw-body">1467〜1477年。8代将軍・足利義政の後継問題（義視vs義尚）と，三管領・細川勝元（東軍）と山名宗全（西軍）の対立が重なって起きた内乱。11年間続き，京都の大半が焼け野原になった。この乱を機に「下剋上（げこくじょう）」の風潮が広まり，室町幕府の権威は急速に失墜。戦国時代が始まった。</span></span></span>（1467〜1477年）です。8代将軍・足利義政の後継問題に，有力守護大名の東西対立が重なり，11年間の大乱が起きました。京都のほぼ全域が焼け野原になり，幕府の権威は地に落ちました。<br><br>
+    応仁の乱後，各地の守護大名や下の武士が上位の者を倒して成り上がる<strong>下剋上（げこくじょう）</strong>が横行しました。こうして約100年続く<strong>戦国時代</strong>が始まります。
+  </div>
+
+  <div class="why-box">
+    <span class="label">⚔️ 戦国時代と室町幕府の滅亡</span>
+    各地の<strong>戦国大名</strong>が自立して覇権を競い合う戦国時代。室町幕府は次第に形骸化しました。<br><br>
+    1573年，織田信長が15代将軍・<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">足利義昭</span><span class="kw-pop"><span class="kw-title">足利義昭（あしかがよしあき）</span><span class="kw-yomi">📖 読み：あしかがよしあき</span><span class="kw-body">1537〜1597年。室町幕府第15代（最後の）将軍。1568年に織田信長の後ろ盾で将軍に就任したが，信長と対立。1573年，信長によって京都を追放され室町幕府は滅亡した。</span></span></span>を京都から追放し，室町幕府は滅亡しました（1573年）。
+
+    <button class="modal-btn" onclick="openModal('sengoku')" style="background:linear-gradient(135deg,#3d2b7a,#8b3322);margin-top:12px">
+      ⚔️ 応仁の乱はなぜ起きたのか——原因・影響・戦国大名とは
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+    <button class="modal-btn" onclick="openModal('shugo-growth')" style="background:linear-gradient(135deg,#2d6a4f,#1a4f7a)">
+      🏯 守護大名はなぜ強くなったのか
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+    <button class="modal-btn" onclick="openModal('onin-result')" style="background:linear-gradient(135deg,#8b3322,#3d2b7a)">
+      🔥 応仁の乱の結果——戦国時代はどう始まったのか
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge(2)">🎯 チャレンジ！</button>
+    <span id="sec-status-2" class="sec-status"></span>
+    <a href="nihonshi_drill_nh17.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元⑰ドリル</a>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      ✏️ ミニ確認テスト（第２節）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label label-sec3">第３節　単元⑱</span>
+  <h2>室町文化——金閣・銀閣・能・水墨画（14〜16世紀）</h2>
+
+  <div class="demo-banner" id="demo-banner-3" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="cause-box">
+    <span class="label">🏯 北山文化（ほくざんぶんか）——義満の時代（14世紀末〜15世紀初）</span>
+    3代将軍・足利義満が京都北山の<strong>北山第（きたやまてい）</strong>に建てた<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">金閣</span><span class="kw-pop"><span class="kw-title">金閣（きんかく）＝鹿苑寺金閣（ろくおんじきんかく）</span><span class="kw-yomi">📖 読み：きんかく</span><span class="kw-body">足利義満が1397年に建てた楼閣。3層構造で外壁に金箔が貼られている。1・2層は貴族文化（公家風）・3層は禅宗様（禅寺風）の構造で，公家と武家の文化が融合した北山文化を象徴する建物。現在は世界文化遺産。1950年に放火で焼失したが復元された（三島由紀夫「金閣寺」のモデル）。</span></span></span>（鹿苑寺金閣）は，公家文化と武家文化・禅宗文化が融合した「北山文化」を象徴します。金箔が貼られた3層の建物で，現在は世界文化遺産です。
+  </div>
+
+  <div class="why-box">
+    <span class="label">🏡 東山文化（ひがしやまぶんか）——義政の時代（15世紀後半）</span>
+    8代将軍・足利義政は京都東山の<strong>東山第（ひがしやまてい）</strong>に銀閣（慈照寺銀閣）を建立しました。「東山文化」は<strong>わび・さびの精神</strong>を基調とする繊細な文化です。<br><br>
+    ▶ <strong>銀閣（ぎんかく）</strong>：2層の楼閣。実際には銀箔は貼られていないが，金閣と対で重要<br>
+    ▶ <span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">書院造</span><span class="kw-pop"><span class="kw-title">書院造（しょいんづくり）</span><span class="kw-yomi">📖 読み：しょいんづくり</span><span class="kw-body">室町時代に発達した武家住宅の建築様式。特徴：①畳を敷き詰める②床の間③押し板（棚）④障子・ふすま⑤武家の格式を示す構造。現代の和室のルーツ。石庭（枯山水）を眺めるための座敷としても機能した。</span></span></span>（しょいんづくり）：畳・床の間・障子・ふすまを備えた武家住宅様式。現代の和室のルーツ<br>
+    ▶ <strong>枯山水（かれさんすい）</strong>：石と砂で水を表現した禅寺の庭園様式（龍安寺の石庭が代表例）
+  </div>
+
+  <div class="result-box">
+    <span class="label">🎭 室町文化の芸能・芸術</span>
+    <div class="key-point" style="margin-top:10px">
+      <strong>【能（のう）】</strong><br>
+      <span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">観阿弥・世阿弥</span><span class="kw-pop"><span class="kw-title">観阿弥（かんあみ）・世阿弥（ぜあみ）</span><span class="kw-yomi">📖 読み：かんあみ・ぜあみ</span><span class="kw-body">観阿弥（1333〜1384）：能の大成者の父。猿楽（さるがく）を洗練させ，足利義満に認められた。世阿弥（1363〜1443）：観阿弥の子。「風姿花伝（ふうしかでん）」を著し，能の理論と美学を確立。「幽玄（ゆうげん）」の美を追求した。2人によって能は武家・公家に愛される芸能として確立された。</span></span></span>（かんあみ・ぜあみ）の父子が，能（猿楽から発展した歌舞劇）を大成。足利義満の後援で発展しました。「幽玄（ゆうげん）の美」を特徴とします。<br><br>
+      <strong>【水墨画（すいぼくが）】</strong><br>
+      <span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">雪舟</span><span class="kw-pop"><span class="kw-title">雪舟（せっしゅう）</span><span class="kw-yomi">📖 読み：せっしゅう</span><span class="kw-body">1420〜1506年。室町時代を代表する水墨画家。明（中国）に渡って水墨画を学び帰国。「秋冬山水図」「天橋立図（あまのはしだてず）」「山水長巻（さんすいちょうかん）」などが代表作。日本の水墨画を独自の境地まで高めた天才画家。</span></span></span>（せっしゅう）：中国（明）で水墨画を学び帰国。「秋冬山水図」などで日本の水墨画を完成させた。<br><br>
+      <strong>【その他の室町文化】</strong><br>
+      ▶ <strong>狂言（きょうげん）</strong>：能の幕間に演じられる喜劇。庶民生活を描く<br>
+      ▶ <strong>茶道・生け花</strong>：書院造の座敷文化から発展<br>
+      ▶ <strong>御伽草子（おとぎぞうし）</strong>：「一寸法師」など，武士・庶民に広まった物語文学
+    </div>
+
+    <button class="modal-btn" onclick="openModal('bunka')" style="background:linear-gradient(135deg,#3d2b7a,#1a4f7a);margin-top:12px">
+      🎭 北山文化と東山文化の違い——金閣・銀閣・書院造・能を深掘り
+      <span class="btn-arrow">▶ 詳しく知ろう</span>
+    </button>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge(3)">🎯 チャレンジ！</button>
+    <span id="sec-status-3" class="sec-status"></span>
+    <a href="nihonshi_drill_nh18.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元⑱ドリル</a>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      ✏️ ミニ確認テスト（第３節）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== まとめテスト・チェックリスト ===== -->
+<div class="final-section">
+  <h2>📋 第６章 まとめテスト</h2>
+  <p style="font-size:14px;color:#555">全10問。8問以上で合格です。</p>
+  <div id="final-quiz-area"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+  <div id="final-result-row"></div>
+</div>
+
+<div class="final-section">
+  <h2>☑️ 到達度チェックリスト</h2>
+  <div id="check-count"></div>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== モーダル：一揆 ===== -->
+<div class="modal-overlay" id="modal-ikki" onclick="if(event.target===this)closeModal('ikki')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('ikki')">✕</button>
+    <div class="modal-title">⚔️ 一揆はなぜ起きたのか——土一揆・一向一揆の違いと意義</div>
+    <div class="modal-body">
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 一揆（いっき）とは何か</div>
+      一揆とは，共通の目的を持った人々が団結して行動することです。室町時代には，農民・武士・商人など様々な人たちが団結して抵抗運動を起こしました。<br><br>
+      重要なのは「一揆＝暴動・反乱」だけではないことです。武士が「一揆衆（いっきしゅう）」として同盟を結んで領土を守るケースもあり，中世社会における「集団的な権利要求・自己防衛の手段」全般を指します。<br><br>
+
+      <div style="background:#7a4f00;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 土一揆（つちいっき）——農民の徳政要求</div>
+      <div class="result-box">
+        <span class="label">📌 背景</span>
+        室町時代，農民は二毛作の普及などで生産力が上がる一方，借金（高利貸し）に苦しむ者が増加しました。鎌倉時代の永仁の徳政令（1297年）の失敗を見ていた農民たちは，それでも「徳政（とくせい）＝借金棒引き」を要求するようになりました。<br><br>
+        <strong>最初の大規模な土一揆</strong>：正長の土一揆（1428年）。畿内（近畿地方）の農民・馬借（ばしゃく：運輸業者）が，酒屋・土倉（どそう：高利貸し）などを打ちこわしました。<br><br>
+        <strong>嘉吉の土一揆（1441年）</strong>：幕府が徳政令を出させることに成功した，農民が「幕府から直接徳政を勝ち取った」最初の例。農民の力が著しく増大した証拠です。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 一向一揆（いっこういっき）——信仰と政治の結合</div>
+      <div class="why-box">
+        <span class="label">🙏 一向一揆の特徴</span>
+        一向一揆は浄土真宗（一向宗）の信者が起こした一揆です。単なる経済的不満ではなく，<strong>「仏の教え（念仏）に従う者は，現世の権力者（守護大名）にも従わなくてよい」</strong>という思想的な根拠を持っていました。<br><br>
+        最大の一揆：<strong>加賀の一向一揆（1488年）</strong>。加賀国（現在の石川県）の守護大名・富樫政親（とがしまさちか）を倒し，なんと<strong>100年近く（1488〜1580年）</strong>一向宗信者が自治的に支配した「百姓の持ちたる国」を実現しました。<br><br>
+        戦国時代，一向一揆は多くの戦国大名が最も手を焼いた勢力で，織田信長も石山本願寺（大坂）と10年以上戦い続けました（石山合戦・1570〜1580年）。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 一揆が中世社会に与えた意義</div>
+      室町時代の一揆は，日本の民主主義の萌芽とも言えます。農民・下層の民が集団的に権利を要求し，時に権力者を打倒した事実は，「上の者に従うだけ」だった古代社会からの大きな変化を示しています。<br>
+      しかし，一揆が成功しすぎると（加賀のように）支配者側は弾圧を強め，最終的に豊臣秀吉の「刀狩（かたながり）」（1588年）で農民の武装は奪われ，一揆の時代は終わりを告げました。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：戦国時代 ===== -->
+<div class="modal-overlay" id="modal-sengoku" onclick="if(event.target===this)closeModal('sengoku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sengoku')">✕</button>
+    <div class="modal-title">⚔️ 応仁の乱はなぜ起きたのか——原因・影響・戦国大名とは</div>
+    <div class="modal-body">
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 応仁の乱の原因</div>
+      応仁の乱は単一の原因ではなく，複数の問題が絡み合って起きました：<br><br>
+
+      <div class="cause-box">
+        <span class="label">原因①：将軍家の後継問題</span>
+        8代将軍・足利義政（よしまさ）に子がなく，弟の<strong>足利義視（よしみ）</strong>を後継者に決めました。ところがその後，義政の妻・日野富子（ひのとみこ）が<strong>足利義尚（よしひさ）</strong>を産んだため，「義視派」と「義尚派」が対立しました。
+      </div>
+      <div class="cause-box">
+        <span class="label">原因②：守護大名の権力争い</span>
+        有力守護大名が2つの陣営に分かれて対立しました：<br>
+        ▶ <strong>東軍（細川勝元）</strong>：足利義視を支持<br>
+        ▶ <strong>西軍（山名宗全）</strong>：足利義尚を支持<br>
+        細川勝元と山名宗全は従来から幕府内で主導権を争っており，将軍家の後継問題がこれに火をつけました。
+      </div>
+      <div class="cause-box">
+        <span class="label">原因③：室町幕府の統制力低下</span>
+        南北朝統一後も，各地の守護大名は実力を蓄えており，幕府の命令が効かなくなっていました。管領を巡る争いも激化し，幕府内部が分裂状態でした。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 応仁の乱の展開</div>
+      1467年，東軍と西軍が京都で激突。11年間（〜1477年）にわたる戦いで，京都の大半が焼け野原になりました。戦場が主に京都に限られていたため，地方では独自に動く戦国大名が台頭しました。<br><br>
+      乱の結末は事実上「引き分け」で，将軍家の後継問題も守護大名の権力関係も何も解決しませんでした。しかしこの11年間で，室町幕府の権威は決定的に失墜しました。
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 戦国大名とは何者か</div>
+      <div class="result-box">
+        <span class="label">⚡ 戦国大名の特徴</span>
+        応仁の乱後，各地に登場した「戦国大名」は，従来の守護とは全く異なる存在です：<br><br>
+        ▶ <strong>「下剋上（げこくじょう）」で台頭</strong>：守護代（しゅごだい）など家臣が主君を倒して大名になる例が続出（例：斎藤道三が美濃守護を倒す）<br>
+        ▶ <strong>「分国法（ぶんこくほう）」で自国を支配</strong>：独自の法律を定めて領国を統治した（例：武田信玄の「甲州法度次第」）<br>
+        ▶ <strong>「城下町（じょうかまち）」の建設</strong>：城を中心に商工業者を集住させ，経済的基盤を作った<br>
+        ▶ <strong>室町幕府からほぼ独立</strong>：幕府の命令より自分の判断で動いた<br><br>
+        代表的な戦国大名：武田信玄（甲斐），上杉謙信（越後），毛利元就（安芸），織田信長（尾張），今川義元（駿河）など
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 室町幕府の滅亡（1573年）</div>
+      戦国時代を制しつつあった<strong>織田信長</strong>は，1568年に足利義昭（よしあき）を将軍に擁立して上洛（京都入り）しましたが，義昭が信長に反抗し続けたため，1573年に義昭を京都から追放しました。これにより室町幕府は滅亡しました（足利将軍家の消滅ではなく，幕府機能の終焉）。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：文化 ===== -->
+<div class="modal-overlay" id="modal-bunka" onclick="if(event.target===this)closeModal('bunka')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('bunka')">✕</button>
+    <div class="modal-title">🎭 北山文化と東山文化の違い——金閣・銀閣・書院造・能を深掘り</div>
+    <div class="modal-body">
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 北山文化（ほくざんぶんか）：14世紀末〜15世紀初</div>
+      <div class="cause-box">
+        <span class="label">特徴：公家文化＋武家文化＋禅宗文化の融合</span>
+        代表人物：<strong>3代将軍・足利義満</strong>（在職1368〜1394年）<br>
+        場所：京都の北山に「北山第（きたやまてい）」建設<br><br>
+        <strong>金閣（鹿苑寺金閣）1397年建立</strong>：<br>
+        ▶ 1層：寝殿造（公家の様式）<br>
+        ▶ 2層：武家造（武士の様式）<br>
+        ▶ 3層：禅宗様（唐様・禅寺の様式）<br>
+        ▶ 外壁全体に金箔——義満の権勢の象徴<br>
+        ▶ 世界文化遺産（現在の金閣は1955年に再建された復元品）<br><br>
+        北山文化のキーワード：華やか・豪華・国際的（明との貿易による中国文化の影響）
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 東山文化（ひがしやまぶんか）：15世紀後半</div>
+      <div class="why-box">
+        <span class="label">特徴：わび・さび・禅の精神</span>
+        代表人物：<strong>8代将軍・足利義政</strong>（在職1449〜1473年）<br>
+        場所：京都の東山に「東山第（ひがしやまてい）」建設<br><br>
+        <strong>銀閣（慈照寺銀閣）1489年建立</strong>：<br>
+        ▶ 2層構造・実際は銀箔なし<br>
+        ▶ 「わびの美」を体現した落ち着いた建物<br>
+        ▶ 庭園に「向月台（こうげつだい）」：砂を積み上げた台<br><br>
+        <strong>書院造（しょいんづくり）</strong>の完成：<br>
+        ▶ 畳を敷き詰めた部屋（現代和室の基本）<br>
+        ▶ 床の間（とこのま）：掛け軸・花を飾る空間<br>
+        ▶ 違い棚（ちがいだな）・付書院（つけしょいん）<br>
+        ▶ 障子（しょうじ）・ふすまによる空間の仕切り<br>
+        ▶ 現代の和室はこの書院造が直接の起源<br><br>
+        <strong>枯山水（かれさんすい）</strong>：水を使わず，石と白砂だけで山水（山と川）を表現する禅寺の庭。龍安寺（りょうあんじ）の石庭が世界的に有名。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 能（のう）の大成——観阿弥・世阿弥</div>
+      <div class="result-box">
+        <span class="label">🎭 能の歴史</span>
+        能の前身は<strong>猿楽（さるがく）</strong>や<strong>田楽（でんがく）</strong>と呼ばれた庶民の芸能でした。<br><br>
+        <strong>観阿弥（かんあみ・1333〜1384）</strong>：大和（奈良）の猿楽師。猿楽に節をつけ，物語性を持たせて芸術的な舞台へ発展させた。足利義満に認められ，幕府の後援を得た。<br><br>
+        <strong>世阿弥（ぜあみ・1363〜1443）</strong>：観阿弥の子。能の完成者。著書「風姿花伝（ふうしかでん）」で能の理論・美学を確立。「秘すれば花」「初心忘るべからず」などの名言でも知られる。「幽玄（ゆうげん）」——奥深い精神性と品格——を能の根本概念として定義した。<br><br>
+        能は現在もユネスコ無形文化遺産として世界に認められています。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 水墨画の雪舟——日本水墨画の完成</div>
+      <strong>雪舟（せっしゅう・1420〜1506）</strong>は，岡山県出身の禅僧画家です。若い頃から水墨画を学び，1468年に明（中国）に渡って本場の水墨画を吸収しました。<br><br>
+      帰国後，雪舟は中国の技法をベースにしながら日本の自然と精神性を表現した独自の画風を確立しました。<br><br>
+      代表作：「秋冬山水図（しゅうとうさんすいず）」「天橋立図（あまのはしだてず）」「山水長巻（さんすいちょうかん）」（すべて国宝）<br><br>
+      室町文化の「水墨画＝雪舟」は高認試験でも頻出なので必ず覚えましょう。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：後醍醐天皇 ===== -->
+<div class="modal-overlay" id="modal-godaigo" onclick="if(event.target===this)closeModal('godaigo')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('godaigo')">✕</button>
+    <div class="modal-title">👑 後醍醐天皇はどういう人物か——何を目指し、なぜ幕府と対立したのか</div>
+    <div class="modal-body">
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 後醍醐天皇の人物像</div>
+      <div class="why-box">
+        <span class="label">📖 人物像</span>
+        1288〜1339年。第96代天皇。非常に博学で意志の強い人物。漢籍（中国の書物）に精通し、宋学（新儒学）の影響を受けた。和歌・能書・学問に秀でており、「現実の政治家」というより「理想主義的な思想家」の気質があった。
+      </div>
+
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 何を目指したのか</div>
+      <div class="cause-box">
+        <span class="label">🎯 最大の目標</span>
+        天皇親政の完全な復活。院政（上皇が政治を行う仕組み）や幕府（武家の支配）を排除し、天皇が直接すべてを支配する国家体制の実現。宋学の影響で「天子（てんし）＝天下の主人は天皇のみ」という強い意識を持っていた。鎌倉幕府を「武家の簒奪政権」とみなし、討伐を正義と確信していた。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 倒幕の試み</div>
+      <div class="result-box">
+        <span class="label">⚔️ 経緯</span>
+        <strong>正中の変（1324年）</strong>：最初の倒幕計画。事前に発覚して失敗したが、後醍醐天皇は「知らなかった」とごまかして咎めを逃れた。<br><br>
+        <strong>元弘の変（1331年）</strong>：2度目の計画。再び幕府に発覚して戦いとなり、敗れて隠岐島（島根県）に流された。<br><br>
+        <strong>隠岐脱出（1333年）</strong>：幕府の力が弱まった隙に隠岐を脱出。足利尊氏・新田義貞らの活躍で鎌倉幕府が滅亡し、倒幕を果たした。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 建武の新政と失敗・南朝の樹立</div>
+      1334年から建武の新政を開始。しかし武士への恩賞が不公平で、わずか2年余りで崩壊。1336年、足利尊氏に敗れて奈良の吉野に逃れ、南朝を開いた。1339年に51歳で病死するまで北朝との戦いを指揮し続けた。死の床でも「玉骨（ぎょっこつ）は縦（たとい）南山の苔に埋もるるとも、魂魄は常に北闕（ほっけつ）の天を望まん」（体は吉野の苔に埋もれても、魂は永遠に京都を望む）と詠んだとされる。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：建武の新政崩壊 ===== -->
+<div class="modal-overlay" id="modal-kenmu-end" onclick="if(event.target===this)closeModal('kenmu-end')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kenmu-end')">✕</button>
+    <div class="modal-title">💥 建武の新政はなぜ2年で崩壊したのか——武士の不満と足利尊氏の離反</div>
+    <div class="modal-body">
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 問題の本質</div>
+      建武の新政（1334〜1336年）は、後醍醐天皇が理想とした「天皇親政」だったが、当時の日本の現実（武家社会）とかけ離れた政策だったため崩壊した。
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">原因① 武士への恩賞が遅く・不公平</div>
+      <div class="why-box">
+        <span class="label">💬 実態</span>
+        幕府打倒に貢献した武士は「自分の働きに見合った土地（恩賞）をもらえる」と期待していた。しかし後醍醐天皇は「天皇の直接支配」にこだわり、土地給与の権限を天皇の手元に集中させた。結果として恩賞の給与が遅く、「貴族・寺社への恩賞は早いが武士は後回し」という状況になった。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">原因② 制度が武士社会と合わない</div>
+      <div class="cause-box">
+        <span class="label">📜 制度の矛盾</span>
+        後醍醐天皇は律令制度（古代の天皇中心体制）への回帰を目指したが、鎌倉時代以来の「武士の慣習・慣行」（先祖伝来の土地の安堵など）を無視した。天皇の「綸旨（りんじ）」という命令書が乱発され、同じ土地に複数の綸旨が出るなど混乱が生じた。「二条河原落書」（建武元年・1334年）という風刺文（「此の頃都にはやる物 夜討・強盗・謀綸旨……」）が流行し、建武政権への不満が広まった。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 直接の崩壊原因：中先代の乱と足利尊氏の離反</div>
+      <div class="result-box">
+        <span class="label">⚡ 決定打</span>
+        1335年、北条氏残党・北条時行（ときゆき）が「中先代の乱（なかせんだいのらん）」を起こし、一時鎌倉を占領した。足利尊氏は後醍醐天皇の許可を得ず独断で鎌倉へ下り、乱を鎮圧。そのまま鎌倉に留まって独自に恩賞を配り始めた。後醍醐天皇が「勝手な行動だ」として新田義貞に尊氏討伐を命じると、尊氏は完全に反旗を翻した。1336年、尊氏が京都を制圧し、建武の新政は崩壊した。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：足利尊氏と六波羅探題 ===== -->
+<div class="modal-overlay" id="modal-takauji-kamakura" onclick="if(event.target===this)closeModal('takauji-kamakura')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('takauji-kamakura')">✕</button>
+    <div class="modal-title">⚔️ 足利尊氏はなぜ鎌倉幕府を裏切り六波羅探題を倒したのか</div>
+    <div class="modal-body">
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 足利氏と鎌倉幕府の関係</div>
+      <div class="why-box">
+        <span class="label">🏛️ 背景</span>
+        足利氏は清和源氏（せいわげんじ）の子孫で、鎌倉幕府内でも有力な御家人だった。しかし、鎌倉幕府を事実上支配していた北条氏は他の有力御家人の力を制限し続けており、足利氏も例外ではなかった。「なぜ北条氏に従い続けなければならないのか」という不満が潜在的にあった。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 離反のきっかけ</div>
+      <div class="cause-box">
+        <span class="label">💡 転換点</span>
+        1333年、後醍醐天皇が隠岐を脱出し「幕府打倒」の号令を発した。幕府は足利尊氏（1305〜1358年）に討伐軍の大将を命じ、京都へ向かわせた。尊氏が途中で倒幕側に寝返った理由：<br>
+        ①北条氏への不満（長年の積み重ね）<br>
+        ②後醍醐天皇の命令という「大義名分（名分）」が得られた<br>
+        ③各地で倒幕派が蜂起し、幕府の敗北が見えてきた<br>
+        ④「この好機に天下の主導権を握れるかもしれない」という計算（弟・直義の進言もあったとされる）
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 六波羅探題攻略</div>
+      <div class="result-box">
+        <span class="label">⚔️ 結果</span>
+        1333年、尊氏は京都に向かう途中で突如倒幕側へ転じ、六波羅探題（ろくはらたんだい：幕府が京都に置いた監視機関）を攻め落とした。同時に、新田義貞（にったよしさだ）が関東・上野（群馬県）で挙兵して鎌倉を攻め、北条高時（ほうじょうたかとき）ら北条一族が東勝寺（とうしょうじ）で自刃して滅亡した。こうして、1185年に実質的に成立した鎌倉幕府は1333年に滅亡した（約150年間）。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：新田義貞と楠木正成 ===== -->
+<div class="modal-overlay" id="modal-nitta-kusunoki" onclick="if(event.target===this)closeModal('nitta-kusunoki')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('nitta-kusunoki')">✕</button>
+    <div class="modal-title">⚔️ 新田義貞と楠木正成の活躍——倒幕に命をかけた武将たち</div>
+    <div class="modal-body">
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 新田義貞（にったよしさだ）の活躍</div>
+      <div class="why-box">
+        <span class="label">⚔️ 活躍</span>
+        上野国（群馬県）の武将・新田義貞（1301〜1338年）は、1333年に後醍醐天皇の令旨（りょうじ）に応じて挙兵。わずか数日で関東の武士を集め、鎌倉へ向かった。<br><br>
+        <strong>「稲村ヶ崎（いなむらがさき）の奇跡」</strong>：鎌倉は三方を山に囲まれ、海側（稲村ヶ崎）のみが弱点だった。義貞が太刀を海に投じて祈ると潮が引いたという伝説のもと、稲村ヶ崎から鎌倉に侵入することに成功した。鎌倉を陥落させ（1333年5月）、北条高時ら北条一族270名以上が自刃した。建武の新政後は南朝の主力武将として戦い続け、1338年に越前（福井県）の藤島城で戦死した。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 楠木正成（くすのきまさしげ）の活躍</div>
+      <div class="cause-box">
+        <span class="label">🏯 ゲリラ戦の天才</span>
+        河内国（大阪府）出身の武将（1294〜1336年）。「悪党（あくとう）」と呼ばれる流通業・金融業に関わる新興勢力の出身とされる。後醍醐天皇の倒幕計画を最初期から支持し、1331年から戦い始めた唯一の中心的武将だった。<br><br>
+        <strong>千早城（ちはやじょう）の戦い（1333年）</strong>：大阪・千早城（金剛山）に立てこもり、楠木軍はわずか数百人で幕府軍数万と戦い、数ヶ月間持ちこたえた。ゲリラ戦・心理戦・地の利を最大限に活用した。この抵抗が幕府軍を大量に引きつけ、各地で倒幕の機運が高まる時間を作った。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 2人の対照的な死</div>
+      <div class="result-box">
+        <span class="label">🕊️ 後世の評価</span>
+        <strong>新田義貞</strong>：1338年、戦場で討ち死に。南朝の最後の武将として戦い続けた。<br>
+        <strong>楠木正成</strong>：1336年、湊川の戦いで足利尊氏に敗れ自刃（後述）。<br><br>
+        2人は後世、「忠義の武将」「南朝のために命を捧げた英雄」として称えられた。特に明治時代、楠木正成は「大楠公（だいなんこう）」として最高の忠臣として顕彰された（神戸市の湊川神社に祀られている）。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：足利尊氏の反旗 ===== -->
+<div class="modal-overlay" id="modal-takauji-revolt" onclick="if(event.target===this)closeModal('takauji-revolt')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('takauji-revolt')">✕</button>
+    <div class="modal-title">🔥 足利尊氏はなぜ後醍醐天皇に反旗を翻したのか——尊氏の決断の真相</div>
+    <div class="modal-body">
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 直接のきっかけ：中先代の乱</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 発端</span>
+        1335年夏、北条氏残党の北条時行（ときゆき：北条高時の子）が「中先代の乱（なかせんだいのらん）」を起こし、鎌倉を一時占領した。足利尊氏は後醍醐天皇に「鎌倉を取り戻す大将にしてほしい」と求めたが、天皇は拒否。尊氏は天皇の許可なく独断で鎌倉へ向かい、乱を鎮圧。そのまま鎌倉に留まって御家人たちに独自に恩賞を与え始めた。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">②「独断の恩賞給与」が決定的な対立を生んだ</div>
+      <div class="why-box">
+        <span class="label">💬 構造的な対立</span>
+        「恩賞を給与する権限は天皇のみにある」というのが建武政権の原則だった。尊氏が独自に恩賞を配ったことは、「武家の棟梁として御家人を掌握しようとしている」＝建武政権からの独立を意味した。後醍醐天皇は激怒し、新田義貞を征討大将軍に任命して「尊氏を討て」と命令した。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 尊氏が離反した根本的な理由</div>
+      <div class="result-box">
+        <span class="label">🔥 本質</span>
+        <strong>建武の新政への失望</strong>：「天皇親政」は武士の権益を守らない制度だと確信した。<br>
+        <strong>「武家政権の復活」への意志</strong>：尊氏は「武士が武士の政権を持つべき」という思想を持っていた。弟・直義が幕府再建構想を具体化した。<br><br>
+        1336年、尊氏は九州で大軍を整え東上。湊川で楠木正成を破り、京都を制圧。後醍醐天皇を吉野（奈良）に追い、北朝（持明院統）の光明天皇を擁立した。1338年、征夷大将軍に就任して室町幕府を正式に開いた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：楠木正成と湊川の戦い ===== -->
+<div class="modal-overlay" id="modal-kusunoki-defeat" onclick="if(event.target===this)closeModal('kusunoki-defeat')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kusunoki-defeat')">✕</button>
+    <div class="modal-title">⚔️ 楠木正成はなぜ敗れたのか——湊川の戦いの真実と「七生報国」</div>
+    <div class="modal-body">
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 湊川の戦い前の状況</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 状況</span>
+        1336年、足利尊氏が九州で大軍を集め（山陽道・海路の両方から）、東上してきた。兵力は足利軍が圧倒的優勢（諸説あるが数万の大軍）。後醍醐天皇は楠木正成・新田義貞に「足利軍を迎え撃て」と命令した。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 楠木正成の事前進言——天皇は聞かなかった</div>
+      <div class="why-box">
+        <span class="label">💬 正成の進言</span>
+        正成は開戦前、後醍醐天皇に直接進言した：「足利軍があまりにも強大です。今は正面から戦うべきではありません。天皇は一時比叡山（ひえいざん）に移り、京都を足利軍に明け渡してください。そして足利軍が京都に入り、兵が緩んだところで、北（比叡山）・南（楠木）・東（新田）から挟撃するゲリラ戦で戦いましょう」<br><br>
+        しかし、後醍醐天皇の側近（公家たち）がこれを拒否。「天皇が都を捨てて逃げるなど言語道断」として正面決戦を命じた。正成は「今回の戦いで自分は必ず死ぬ」と覚悟して出陣したとされる。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 湊川の戦いの経緯</div>
+      <div class="result-box">
+        <span class="label">⚔️ 決戦</span>
+        1336年5月、摂津（兵庫県）の湊川（みなとがわ）で決戦。足利軍は海路・陸路の両方から挟撃し、楠木・新田連合軍を分断した。新田義貞軍は海上から来た足利軍（水軍）に押され退却。楠木正成は少数で孤立した。楠木正成は包囲されながらも善戦したが、多勢に無勢。最後、弟の正季（まさすえ）とともに兵庫の湊川に近い民家に退いた。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④「七生報国（しちしょうほうこく）」の誓い</div>
+      最後の場面、正成と正季は互いに刺し違えて自刃する前に言葉を交わした：<br>
+      正季「願はくは、後の世には武運強い者として生まれたい」<br>
+      正成「七たび生まれ変わって、天皇のために戦いたい（七生報国）」<br><br>
+      2人は刺し違えて共に死んだ（享年43歳）。この「七生報国」の精神は後世に称えられ、楠木正成は日本の忠義の象徴とされた。明治政府は特に正成を顕彰し、東京・皇居前広場の銅像と神戸・湊川神社に祀った。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：観応の擾乱 ===== -->
+<div class="modal-overlay" id="modal-tadayoshi" onclick="if(event.target===this)closeModal('tadayoshi')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('tadayoshi')">✕</button>
+    <div class="modal-title">💀 足利尊氏と弟・直義の確執——観応の擾乱と毒殺の謎</div>
+    <div class="modal-body">
+
+      <div style="background:#1a1a2e;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 足利直義（ただよし）とは</div>
+      <div class="why-box">
+        <span class="label">👤 人物</span>
+        足利直義（ただよし・1306〜1352年）は尊氏の弟。室町幕府の創業期において、「兄・尊氏が武将、弟・直義が政治・行政」という二頭政治で幕府を運営した。直義は法律・行政に優れ、御成敗式目を参考にした武家法「建武式目（けんむしきもく）」の制定にも関わった。一方、尊氏の執事（秘書・実務責任者）だった高師直（こうのもろなお）が実力をつけ、直義と鋭く対立するようになった。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 観応の擾乱（かんのうのじょうらん：1349〜1352年）</div>
+      <div class="cause-box">
+        <span class="label">⚡ 内乱</span>
+        師直（尊氏派）vs直義（弟派）の対立が爆発：1349年、師直が武力で直義を追放しようとし、尊氏は師直側についた（または調停できなかった）。直義は出家させられ、権力から排除された。直義は反撃として、なんと南朝（後醍醐天皇の子孫）に降参・協力を申し出た。北朝の権力争いに南朝が介入するという複雑な事態が生まれた。1351年、尊氏が師直を討った（師直は直義方の武士に殺される）。尊氏と直義は一時和睦。しかし直義はまた南朝と協力して抵抗を続けた。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 直義の最期——毒殺説の根拠</div>
+      <div class="result-box">
+        <span class="label">💀 謎の死</span>
+        1352年、尊氏が軍事的に直義を追い詰め、直義は降伏して鎌倉に幽閉された。1352年2月、直義は突然死去。公式には「病死」とされているが、当時から「尊氏が毒殺した」と噂されていた。<br><br>
+        毒殺説の根拠：①直義は幽閉されてすぐに急死した ②死亡の状況が不自然 ③観応の擾乱の歴史書「太平記（たいへいき）」にも疑念が示唆されている。ただし確証はなく、現代の歴史学でも「毒殺かどうかは不明」とするのが一般的。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 観応の擾乱の意義</div>
+      この内乱で幕府の権威が大きく傷つき、各地の武将が「北朝側」「南朝側」「どちらとも取引できる」と流動的な行動を取るようになった。観応の擾乱は南北朝時代の戦乱をさらに複雑化・長期化させた。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：南北朝統一 ===== -->
+<div class="modal-overlay" id="modal-nanbokucho-unity" onclick="if(event.target===this)closeModal('nanbokucho-unity')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('nanbokucho-unity')">✕</button>
+    <div class="modal-title">🕊️ 足利義満はどうやって南北朝を統一したのか——合一の舞台裏と「裏切られた約束」</div>
+    <div class="modal-body">
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 南北朝対立の経緯</div>
+      <div class="why-box">
+        <span class="label">📖 背景</span>
+        1336年から56年間、日本には南朝（後醍醐天皇系・吉野）と北朝（足利氏が擁立・京都）の2つの朝廷が並立していた。南朝は軍事的に劣勢だったが「正統な天皇の系譜」という名分で戦い続けた。特に楠木一族・新田義貞の子孫らが南朝方として各地で戦い続けた。1370年代以降、南朝の勢力は大きく衰退。義満（3代将軍）が権力を掌握した1380年代には、南朝の軍事力はほぼ壊滅状態だった。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 義満の統一工作</div>
+      <div class="cause-box">
+        <span class="label">🕊️ 統一の条件</span>
+        足利義満（1358〜1408年）は3代将軍として絶大な権力を持ち、幕府・朝廷・宗教のすべてを掌握した。1392年、義満が南朝側の後亀山天皇（ごかめやまてんのう）と交渉し、統一を実現した。義満が南朝に提示した条件：<br>
+        ①「両統迭立（りょうとうてつりつ）」——南朝系と北朝系の天皇が交互に即位する。<br>
+        ②南朝側の武将・貴族の地位を保証する。<br>
+        ③南朝の後亀山天皇が北朝の後小松天皇（ごこまつてんのう）に「三種の神器」を渡して合一する。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 約束は守られなかった</div>
+      <div class="result-box">
+        <span class="label">💬 裏切られた約束</span>
+        1392年10月、南朝の後亀山天皇が三種の神器を北朝の後小松天皇に渡し、南北朝が統一された。しかし「交互に即位する」という約束は一度も守られなかった。義満は北朝系の天皇を一方的に続け、南朝系の皇位継承の道を事実上断絶させた。これは義満が南朝を「騙した」形であり、南朝残党は長く不満を持ち続けた。南北朝合一後も、各地に南朝の後継者と称する人物（後南朝）が現れ、15世紀まで断続的な抵抗を続けた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：天皇の系譜 ===== -->
+<div class="modal-overlay" id="modal-emperor-lineage" onclick="if(event.target===this)closeModal('emperor-lineage')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('emperor-lineage')">✕</button>
+    <div class="modal-title">👑 現在の天皇陛下は北朝・南朝どちらの系譜か</div>
+    <div class="modal-body">
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 結論</div>
+      <div class="why-box">
+        <span class="label">👑 答え</span>
+        現在の天皇陛下は「北朝系」の系譜です。南北朝合一（1392年）以降、日本の天皇はすべて北朝（足利氏が擁立した系統）の系譜で続いています。明治天皇・大正天皇・昭和天皇・今上天皇（現在の天皇陛下）も、すべて北朝系の子孫です。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 南北朝正閏論（なんぼくちょうせいじゅんろん）</div>
+      <div class="cause-box">
+        <span class="label">📜 論争</span>
+        「正統な天皇はどちらか」という論争が長く続いた。<br>
+        <strong>南朝正統論</strong>：「後醍醐天皇こそ正統な天皇。足利氏が擁立した北朝は偽りの朝廷。」<br>
+        <strong>北朝正統論</strong>：「実際に政治・支配を行っていた北朝こそが正統。」<br><br>
+        江戸時代の水戸学（みとがく）は南朝正統論を唱え、「天皇への忠義」を強調した。これが明治維新の精神的基盤の一つになった。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 1911年の大問題——国会での南北朝正閏論争</div>
+      <div class="result-box">
+        <span class="label">📣 歴史的な論争</span>
+        1911年（明治44年）、国会で大問題が起きた。文部省が発行した歴史教科書が北朝を正統として記述していたため、「天皇の祖先を侮辱している」として国会で激しく批判された（南北朝正閏問題）。桂太郎内閣は「南朝こそ正統」という立場に公式に切り替え、教科書を改訂した。しかし現実の天皇家の血統は北朝系であり、「正統は南朝だが、実際の天皇は北朝系の子孫」というねじれた状況になっている。現代では「どちらが正統か」という議論より、「南北朝は歴史的に並立した事実」として学ぶのが一般的。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：室町の経済 ===== -->
+<div class="modal-overlay" id="modal-muromachi-economy" onclick="if(event.target===this)closeModal('muromachi-economy')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('muromachi-economy')">✕</button>
+    <div class="modal-title">💰 義満の経済政策と貨幣経済の発展——なぜ室町時代に経済が成長したのか</div>
+    <div class="modal-body">
+
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 勘合貿易（日明貿易）による収益</div>
+      <div class="cause-box">
+        <span class="label">💰 貿易の収益</span>
+        足利義満は1404年から明（中国）と公式貿易（勘合貿易）を開始。<br>
+        <strong>日本からの輸出</strong>：銅・硫黄・刀剣・扇・屛風などの工芸品。<br>
+        <strong>明からの輸入</strong>：銅銭（えいらくつうほう：永楽通宝など）・生糸・陶磁器・書物・絵画。<br>
+        輸入した銅銭（明銭）が国内に大量に流通し、日本の貨幣経済を大きく拡大した。室町幕府にとって最大の財源の一つとなった。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 土倉役・酒屋役——金融業者への課税</div>
+      <div class="why-box">
+        <span class="label">💴 税収</span>
+        室町時代、高利貸し業（土倉：どそう）と酒造業（酒屋）が最も重要な金融業者だった。幕府はこれらの業者に「土倉役（どそうやく）」「酒屋役（さかやや）」という営業税を課した。これが幕府の安定した財源（勘合貿易に次ぐ重要な収入源）になった。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 貨幣経済の発展——なぜ「お金の社会」になったのか</div>
+      <div class="result-box">
+        <span class="label">📈 経済発展</span>
+        鎌倉時代に始まった宋銭の流通が、室町時代にはさらに拡大した。農民も年貢を米・物品ではなく「銭（お金）」で納めるケースが増えた（「代銭納：だいせんのう」）。定期市（六斎市：月6回開催）が各地に広まり、商品の流通が活発化。問丸（といまる）・馬借（ばしゃく）・車借（しゃしゃく）という運輸業者が発達し、物流ネットワークが拡大した。質屋・高利貸し（土倉）が発達し、資本の貸し借りが経済の潤滑油になった。一方で、貨幣経済の発展は農民の「借金苦」も生み出し、土一揆（徳政を要求する一揆）の原因にもなった。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：守護大名の成長 ===== -->
+<div class="modal-overlay" id="modal-shugo-growth" onclick="if(event.target===this)closeModal('shugo-growth')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('shugo-growth')">✕</button>
+    <div class="modal-title">🏯 守護大名はなぜ強くなったのか——南北朝時代からの権力拡大の過程</div>
+    <div class="modal-body">
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 鎌倉時代の守護——もともとは制限された権限</div>
+      <div class="why-box">
+        <span class="label">📜 当初の権限</span>
+        鎌倉幕府時代の守護の権限は「大犯三ヶ条」のみ：①謀反人の逮捕、②殺害人の逮捕、③使節遵行（荘園内の問題への幕府命令執行）。荘園内の年貢徴収・農民支配などには原則として介入できなかった。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 南北朝時代の権限拡大</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 権限拡大の経緯</span>
+        南北朝の内乱（1336〜1392年）で、室町幕府は守護に「国内の武士をまとめて軍事行動を取れ」と命じた。これにより守護は国内の武士を「家臣（かしん）」として組織化する権限を得た→軍事力の大幅拡大。<br><br>
+        <strong>半済令（はんぜいれい・1352年〜）</strong>：南北朝の戦費調達のため、幕府は守護に「荘園・公領の年貢の半分を軍費として取っていい」と認めた。守護が荘園収入の半分を合法的に得られるようになった。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 守護請（しゅごうけ）と使節遵行</div>
+      <div class="result-box">
+        <span class="label">🏯 支配の確立</span>
+        <strong>守護請（しゅごうけ）</strong>：荘園領主（京都の貴族・寺社）が「守護に年貢徴収を一括委託」する制度。守護は荘園から一定額を集め、そこから荘園領主への年貢を差し引いた残りを自分のものにした。→守護が荘園の実質的な支配者になった。<br><br>
+        刈田狼藉（かったろうぜき）取り締まり権・使節遵行権の拡大：守護が荘園内部に直接介入できる権限が広まった。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 守護大名の誕生</div>
+      これらの権限拡大により、守護は：①軍事力（国内の武士を家臣化）②経済力（半済・守護請で収入確保）③法的権力（使節遵行）を兼ね備えた「守護大名」に成長した。鎌倉時代の「幕府の出先機関（守護）」から、室町時代の「国を丸ごと支配する守護大名」へ変化。これが後の応仁の乱・戦国時代の基盤となった。
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：応仁の乱の結果 ===== -->
+<div class="modal-overlay" id="modal-onin-result" onclick="if(event.target===this)closeModal('onin-result')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('onin-result')">✕</button>
+    <div class="modal-title">🔥 応仁の乱の原因と結果——なぜ11年間続き、何を変えたのか</div>
+    <div class="modal-body">
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 応仁の乱の原因（複数の問題の絡み合い）</div>
+      <div class="cause-box">
+        <span class="label">⚡ 原因</span>
+        <strong>将軍後継問題</strong>：8代将軍・足利義政に子がなく弟・義視（よしみ）を後継に決めたが、のち義政の妻・日野富子が義尚（よしひさ）を産んだ。「義視派」と「義尚派」が対立。<br><br>
+        <strong>守護大名の権力争い</strong>：東軍（細川勝元）vs西軍（山名宗全）の対立。細川氏と山名氏は幕府内で長年主導権を争っており、後継問題がこれに火をつけた。<br><br>
+        <strong>管領家・畠山氏と斯波氏の内紛</strong>：守護大名の家督問題が複数重なって全面戦争に発展した。<br><br>
+        <strong>義政の無責任</strong>：足利義政は「政治より文化」を好み、決定的な仲裁をせず、問題を放置したことで乱を招いた。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 応仁の乱の展開</div>
+      <div class="why-box">
+        <span class="label">⚔️ 戦乱の経緯</span>
+        1467年1月、全国の武士が東軍・西軍に分かれて京都で激突。最盛期は東軍16万vs西軍11万ともいわれる大軍が京都に集結。10年以上続く消耗戦となり、京都の大半が焼け野原になった（「応仁・文明の乱」）。寺院・公家の邸宅・市場がことごとく焼失。1477年、西軍（山名方）の総大将・山名政豊が撤退を決め、事実上の引き分けで終了。将軍後継問題も守護大名の権力問題も何も解決しなかった。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 応仁の乱の結果——何が変わったのか</div>
+      <div class="result-box">
+        <span class="label">🔥 歴史的転換</span>
+        <strong>①室町幕府の権威の崩壊</strong>：将軍は守護大名に操られる存在になり、全国に命令が届かなくなった。「幕府の時代」の実質的な終わり。<br><br>
+        <strong>②下剋上（げこくじょう）の横行</strong>：守護大名の家臣（守護代・国人）が主君を倒して台頭する「下剋上」が全国に広まった。代表例：斎藤道三（美濃）・北条早雲（伊豆・相模）など。<br><br>
+        <strong>③文化の地方普及</strong>：戦火を逃れて京都の文化人・職人・商人が地方へ移住。地方都市に京都文化が広まった。これを「京都文化の地方普及」という。<br><br>
+        <strong>④戦国大名の誕生と戦国時代の開始</strong>：各地で「分国法（ぶんこくほう）」（独自の法律）・「城下町」・強力な軍隊を持つ戦国大名が台頭。1573年に室町幕府が滅亡するまで、約100年間の戦国時代が続いた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジ用チップバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 チャレンジ<span id="ccb-secname-label"></span></span>
+    <span id="ccb-hint">語句を選んでください</span>
+    <span id="ccb-count">残り 4語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 採点</button>
+    <button id="ccb-btn-demo"  onclick="showDemo()">📖 手本</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- おしい！ポップアップ -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度考えてみよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+const allAnswers = {
+  "A":"足利尊氏", "B":"南北朝", "C":"足利義満", "D":"管領",
+  "E":"勘合貿易", "F":"惣（そう）", "G":"応仁の乱", "H":"足利義昭",
+  "I":"金閣", "J":"書院造", "K":"観阿弥・世阿弥", "L":"雪舟"
+};
+
+const secAnswers = {
+  1: ["A","B","C","D"],
+  2: ["E","F","G","H"],
+  3: ["I","J","K","L"]
+};
+
+const wordBank = {
+  1: ["足利尊氏","南北朝","足利義満","管領"],
+  2: ["勘合貿易","惣（そう）","応仁の乱","足利義昭"],
+  3: ["金閣","書院造","観阿弥・世阿弥","雪舟"]
+};
+
+const secNames = {
+  1: "①建武の新政・南北朝",
+  2: "②勘合貿易・一揆・戦国時代",
+  3: "③室町文化"
+};
+
+const miniQuizData = {
+  1: [
+    {q:"1334年，後醍醐天皇が鎌倉幕府滅亡後に始めた天皇親政の政治を何というか。",choices:["建武の新政","院政","摂関政治","南北朝統一"],ans:0},
+    {q:"1336年，後醍醐天皇に反旗を翻して室町幕府を開いた人物は誰か。",choices:["新田義貞","足利義満","足利尊氏","北条高時"],ans:2},
+    {q:"室町幕府において，将軍を補佐した最高職の名称は何か。",choices:["執権","管領","侍所","太政大臣"],ans:1},
+    {q:"1392年，南北朝を統一した室町幕府3代将軍は誰か。",choices:["足利尊氏","足利義満","足利義政","足利義昭"],ans:1}
+  ],
+  2: [
+    {q:"足利義満が1404年から明（中国）と行った貿易を何というか。",choices:["朱印船貿易","日宋貿易","勘合貿易","倭寇"],ans:2},
+    {q:"室町時代に農民が作った自治組織を何というか。",choices:["惣（そう）","座（ざ）","問丸","馬借"],ans:0},
+    {q:"1467年に始まり，戦国時代のきっかけとなった室町幕府最大の動乱を何というか。",choices:["壬申の乱","承久の乱","応仁の乱","保元の乱"],ans:2},
+    {q:"1573年，室町幕府最後の将軍・足利義昭を京都から追放した戦国大名は誰か。",choices:["武田信玄","今川義元","上杉謙信","織田信長"],ans:3}
+  ],
+  3: [
+    {q:"足利義満が北山に建てた，金箔で覆われた3層の楼閣は何か。",choices:["銀閣","金閣","東大寺","天守閣"],ans:1},
+    {q:"室町時代に発達した，畳・床の間・障子を備えた武家住宅の建築様式を何というか。",choices:["寝殿造","校倉造","書院造","数寄屋造"],ans:2},
+    {q:"能（のう）を大成した，室町時代の父子の芸能者は誰か。",choices:["世阿弥・道元","観阿弥・世阿弥","雪舟・宗祇","法然・親鸞"],ans:1},
+    {q:"室町時代，日本の水墨画を完成させた画家は誰か。",choices:["運慶","雪舟","玉澗","法然"],ans:1}
+  ]
+};
+
+const finalQuizData = [
+  {q:"1334年，後醍醐天皇が始めた天皇親政の政治を何というか。",choices:["建武の新政","南北朝統一","院政","摂関政治"],ans:0},
+  {q:"南北朝時代（1336〜1392年）の「南朝」の所在地はどこか。",choices:["京都","奈良県吉野","鎌倉","大坂"],ans:1},
+  {q:"室町幕府を開いた将軍は誰か。",choices:["足利義満","足利義政","足利尊氏","足利義昭"],ans:2},
+  {q:"室町幕府で将軍を補佐した最高職を何というか。",choices:["執権","管領","侍所","太政大臣"],ans:1},
+  {q:"3代将軍・足利義満が1404年から始めた，明（中国）との貿易を何というか。",choices:["日宋貿易","朱印船貿易","勘合貿易","南蛮貿易"],ans:2},
+  {q:"室町時代の農民自治組織「惣（そう）」が開いた村の集会を何というか。",choices:["問注所","侍所","寄合","惣道"],ans:2},
+  {q:"農民が守護大名に対して徳政（借金棒引き）を要求した一揆を何というか。",choices:["一向一揆","土一揆","国一揆","荘園一揆"],ans:1},
+  {q:"1467年に始まった，戦国時代の幕開けとなった内乱を何というか。",choices:["承久の乱","壬申の乱","応仁の乱","保元の乱"],ans:2},
+  {q:"北山文化を代表する建物で，足利義満が建てたものは何か。",choices:["銀閣","金閣","書院造","枯山水"],ans:1},
+  {q:"能を大成し，「風姿花伝」で能の美学を確立したのは誰か。",choices:["観阿弥","日蓮","雪舟","世阿弥"],ans:3}
+];
+
+const checkItems = [
+  "建武の新政（1334年）が失敗した理由（武士への恩賞が不満）を説明できる",
+  "南北朝時代（1336〜1392年）の「南朝」と「北朝」の違いを説明できる",
+  "室町幕府（足利尊氏1338年〜）の管領と鎌倉幕府の執権の違いを説明できる",
+  "勘合貿易（日明貿易・1404年〜）で日本が輸出・輸入したものを言える",
+  "惣（そう）と寄合がどういうものか説明できる",
+  "応仁の乱（1467年）の原因と，戦国時代への影響を説明できる",
+  "北山文化（金閣・義満）と東山文化（銀閣・義政・書院造）の違いを説明できる",
+  "観阿弥・世阿弥（能）と雪舟（水墨画）を室町文化の代表として挙げられる"
+];
+
+/* ========= 共通JS ========= */
+let checkState = new Array(checkItems.length).fill(false);
+let activeChallengeSection = null;
+const challengeStates = {
+  1: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  2: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  3: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null}
+};
+
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function getBlankEl(id){return document.querySelector(`.blank[data-id="${id}"]`);}
+function getDisplayEl(id){const el=getBlankEl(id);return el?el.querySelector('.blank-display'):null;}
+
+function startChallenge(sec){
+  if(activeChallengeSection&&activeChallengeSection!==sec)endChallenge(activeChallengeSection);
+  activeChallengeSection=sec;
+  const st=challengeStates[sec];
+  st.active=true;st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status=document.getElementById(`sec-status-${sec}`);if(status){status.textContent='';status.className='sec-status';}
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='⏹ やめる';btn.style.background='#555';btn.onclick=()=>endChallenge(sec);}
+  showChipBar(sec);
+  document.getElementById('ccb-secname-label').textContent=secNames[sec]||'';
+}
+
+function endChallenge(sec){
+  const st=challengeStates[sec];if(!st)return;
+  st.active=false;st.demoMode=false;st.demoSnapshot=null;
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent=allAnswers[id];
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='🎯 チャレンジ！';btn.style.background='';btn.onclick=()=>startChallenge(sec);}
+  if(activeChallengeSection===sec){activeChallengeSection=null;hideChipBar();}
+}
+
+function showChipBar(sec){
+  const bar=document.getElementById('challenge-chip-bar');bar.classList.add('visible');
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  const st=challengeStates[sec];
+  if(st.demoMode){controls.style.display='none';demoReturn.style.display='block';}
+  else{controls.style.display='flex';demoReturn.style.display='none';}
+  renderChips(sec);updateCcbHint(sec);
+}
+function hideChipBar(){document.getElementById('challenge-chip-bar').classList.remove('visible');}
+function renderChips(sec){
+  const st=challengeStates[sec];
+  const container=document.getElementById('ccb-chips');container.innerHTML='';
+  st.chipBank.forEach((word,idx)=>{
+    const chip=document.createElement('div');
+    chip.className='challenge-chip'+(idx===st.selectedChipIdx?' selected':'');
+    chip.textContent=word;chip.onclick=()=>tapChip(sec,idx);
+    container.appendChild(chip);
+  });
+  document.getElementById('ccb-count').textContent=`残り ${st.chipBank.length}語`;
+}
+function updateCcbHint(sec){
+  const st=challengeStates[sec];const hint=document.getElementById('ccb-hint');
+  if(st.demoMode)hint.textContent='手本表示中';
+  else if(st.selectedChipIdx!==null)hint.textContent=`「${st.chipBank[st.selectedChipIdx]}」を選択中 → 空欄をタップ`;
+  else hint.textContent='語句を選んでください';
+}
+function tapChip(sec,idx){
+  const st=challengeStates[sec];if(st.demoMode)return;
+  st.selectedChipIdx=(st.selectedChipIdx===idx)?null:idx;
+  renderChips(sec);updateCcbHint(sec);
+}
+function blankClicked(e,id){
+  e.stopPropagation();
+  const sec=getSecForId(id);
+  if(sec&&challengeStates[sec].active&&!challengeStates[sec].demoMode){handleBlankTap(sec,id);}
+  else{
+    const el=getBlankEl(id);if(!el)return;
+    document.querySelectorAll('.kw.active').forEach(k=>{if(k!==el)k.classList.remove('active');});
+    el.classList.toggle('active');
+  }
+}
+function handleBlankTap(sec,id){
+  const st=challengeStates[sec];const disp=getDisplayEl(id);const el=getBlankEl(id);
+  if(st.selectedChipIdx!==null){
+    const word=st.chipBank[st.selectedChipIdx];
+    const existing=st.placedWords[id];
+    if(existing!==undefined)st.chipBank.push(existing);
+    st.chipBank.splice(st.selectedChipIdx,1);
+    st.placedWords[id]=word;st.selectedChipIdx=null;
+    if(disp)disp.textContent=word;if(el)el.classList.add('placed');
+  }else{
+    const existing=st.placedWords[id];
+    if(existing!==undefined){
+      st.chipBank.push(existing);delete st.placedWords[id];
+      if(disp)disp.textContent='';if(el)el.classList.remove('placed');
+    }
+  }
+  renderChips(sec);updateCcbHint(sec);
+}
+function getSecForId(id){
+  for(const[s,ids]of Object.entries(secAnswers)){if(ids.includes(id))return parseInt(s);}
+  return null;
+}
+function judgeChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];const ids=secAnswers[sec];let correct=0;
+  ids.forEach(id=>{
+    const placed=st.placedWords[id];const ans=allAnswers[id];
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(placed===ans){correct++;if(el){el.classList.add('correct');el.classList.remove('wrong','placed');}}
+    else{
+      if(placed!==undefined){st.chipBank.push(placed);delete st.placedWords[id];if(disp)disp.textContent='';}
+      if(el){el.classList.add('wrong');el.classList.remove('placed');}
+      showOshii(id,ans);
+    }
+  });
+  renderChips(sec);updateCcbHint(sec);
+  const status=document.getElementById(`sec-status-${sec}`);
+  if(correct===ids.length){if(status){status.textContent='🎉 全問正解！';status.className='sec-status pass';}endChallenge(sec);launchConfetti();}
+  else{if(status){status.textContent=`${correct}/${ids.length}問 正解`;status.className='sec-status fail';}}
+}
+function showOshii(id,ans){
+  const popup=document.getElementById('oshii-popup');
+  document.getElementById('oshii-msg').textContent=`「${id}」の答えは「${ans}」`;
+  popup.style.display='block';
+  setTimeout(()=>{popup.style.display='none';},2500);
+}
+function showDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];
+  st.demoSnapshot={chipBank:[...st.chipBank],placedWords:{...st.placedWords},selectedChipIdx:st.selectedChipIdx};
+  st.demoMode=true;st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);const el=getBlankEl(id);
+    if(disp)disp.textContent=allAnswers[id];
+    if(el){el.classList.add('demo-fill');el.classList.remove('placed','correct','wrong');}
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='block';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='none';demoReturn.style.display='block';
+  renderChips(sec);updateCcbHint(sec);
+}
+function exitDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];if(!st.demoMode)return;
+  st.demoMode=false;
+  if(st.demoSnapshot){st.chipBank=[...st.demoSnapshot.chipBank];st.placedWords={...st.demoSnapshot.placedWords};st.selectedChipIdx=null;st.demoSnapshot=null;}
+  secAnswers[sec].forEach(id=>{
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(el)el.classList.remove('demo-fill','correct','wrong','placed');
+    const placed=st.placedWords[id];
+    if(disp)disp.textContent=placed!==undefined?placed:'';
+    if(placed!==undefined&&el)el.classList.add('placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='flex';demoReturn.style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+function resetChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  document.getElementById('ccb-controls').style.display='flex';
+  document.getElementById('ccb-demo-return').style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function toggleMQ(id,btn){
+  const body=document.getElementById(id);
+  const isOpen=body.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  if(isOpen&&body.innerHTML.trim()==='')renderMQ(id);
+}
+function renderMQ(id){
+  const secNum=parseInt(id.replace('mq',''));
+  const qs=miniQuizData[secNum];
+  let html='';
+  qs.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerMQ(this,${ci},${q.ans},'${id}-q${i}')">${c}</div>`;});
+    html+='</div></div>';
+  });
+  document.getElementById(id).innerHTML=html;
+}
+function answerMQ(el,chosen,correct,key){
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+
+let finalAnswered={};
+function initFinal(){
+  const area=document.getElementById('final-quiz-area');
+  let html='';
+  finalQuizData.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices" id="fq-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerFinal(this,${ci},${q.ans},${i})">${c}</div>`;});
+    html+='</div></div>';
+  });
+  area.innerHTML=html;
+}
+function answerFinal(el,chosen,correct,qi){
+  if(finalAnswered[qi]!==undefined)return;
+  finalAnswered[qi]=chosen===correct;
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+function judgeFinal(){
+  const total=finalQuizData.length;
+  const answered=Object.keys(finalAnswered).length;
+  if(answered<total){document.getElementById('final-result-row').innerHTML=`<p style="color:#c00;font-weight:bold">まだ${total-answered}問残っています。</p>`;return;}
+  const correct=Object.values(finalAnswered).filter(Boolean).length;
+  const pass=correct>=8;
+  document.getElementById('final-result-row').innerHTML=`<div style="margin-top:12px;padding:16px;border-radius:10px;background:${pass?'#d0f0d8':'#fdd'};border:2px solid ${pass?'#1a6b22':'#c00'};font-size:16px;font-weight:bold;text-align:center">${pass?'🎉 合格！':'😅 もう一度挑戦！'} ${correct} / ${total} 問正解${pass?' （合格）':' （あと'+(8-correct)+'問で合格）'}</div>`;
+  if(pass)launchConfetti();
+}
+function resetFinal(){finalAnswered={};document.getElementById('final-result-row').innerHTML='';initFinal();}
+
+function renderChecklist(){
+  const area=document.getElementById('checklist-area');if(!area)return;
+  let html='';
+  checkItems.forEach((item,i)=>{
+    html+=`<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 10px;border-radius:8px;background:${checkState[i]?'#d0f0d8':'#eff6ff'};border:1.5px solid ${checkState[i]?'#1a6b22':'#94a3b8'};transition:all 0.2s;margin-bottom:6px">
+      <input type="checkbox" ${checkState[i]?'checked':''} onchange="toggleCheck(${i})" style="margin-top:3px;width:18px;height:18px;accent-color:#1a6b22">
+      <span style="font-size:14px;line-height:1.7">${item}</span>
+    </label>`;
+  });
+  area.innerHTML=html;
+  const done=checkState.filter(Boolean).length;
+  document.getElementById('check-count').textContent=`${done} / ${checkItems.length} チェック済み`;
+  document.getElementById('check-bar').style.width=`${(done/checkItems.length)*100}%`;
+}
+function toggleCheck(i){checkState[i]=!checkState[i];renderChecklist();if(checkState.every(Boolean))launchConfetti();}
+
+function launchConfetti(){
+  const colors=['#f4a261','#e76f51','#2a9d8f','#e9c46a','#264653','#a8dadc','#457b9d'];
+  for(let i=0;i<60;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${8+Math.random()*8}px;height:${8+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend',()=>el.remove());
+  }
+}
+const style=document.createElement('style');
+style.textContent='.confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(style);
+
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.kw'))document.querySelectorAll('.kw.active').forEach(k=>k.classList.remove('active'));
+});
+
+function openModal(name){
+  const el=document.getElementById('modal-'+name);
+  if(el)el.classList.add('open');
+}
+function closeModal(name){
+  const el=document.getElementById('modal-'+name);
+  if(el)el.classList.remove('open');
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    ['ikki','sengoku','bunka','godaigo','kenmu-end','takauji-kamakura','nitta-kusunoki','takauji-revolt','kusunoki-defeat','tadayoshi','nanbokucho-unity','emperor-lineage','muromachi-economy','shugo-growth','onin-result'].forEach(n=>closeModal(n));
+  }
+});
+
+initFinal();
+renderChecklist();
+</script>
+</body>
+</html>

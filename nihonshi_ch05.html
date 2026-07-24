@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：第５章 鎌倉時代</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding-bottom:220px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b3322;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b3322;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:12px;text-decoration:none}
+.back-to-index:hover{background:#6a2318}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #d4956a;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px}
+.label-sec1{background:#2d6a4f}.label-sec2{background:#7a4f00}.label-sec3{background:#3d2b7a}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b3322;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b3322;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fdebd0}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff3e0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b3322;cursor:help;color:#8b3322;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b3322;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#f4a261;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#aad4ff;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff8f0;border-left:5px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b3322;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fdf5ec;border-left:5px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b3322}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fdf5ec;border:1.5px solid #d4956a;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b3322;font-weight:bold}
+
+.flow-summary{background:#f0f4ff;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b3322;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.blue{background:#1a4f7a}.flow-year.green{background:#1a6b22}.flow-year.purple{background:#3d2b7a}.flow-year.brown{background:#7a4f00}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fdf5ec;border:1.5px solid #d4956a;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b3322;color:#fff;box-shadow:0 2px 0 #6a2318;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#2a0e06,#4a1a0a);border-top:3px solid #c4572a;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#f4a261}
+#ccb-secname-label{font-size:12px;color:#ffccaa;margin-left:6px}
+#ccb-hint{font-size:12px;color:#ffccaa;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#ffccaa;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #c4572a;background:#8b3322;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#f4a261;background:#a84030}
+.challenge-chip.selected{border-color:#f4d03f;background:#a84030;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a4e);border:3px solid #f4a261;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#ffccaa;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fdf5ec;border:1.5px solid #d4956a;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b3322;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #d4956a;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b3322;background:#fdebd0}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b3322;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b3322;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b3322;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a2318}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fde8c0;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b3322;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4956a;color:#8b3322}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:block;width:100%;text-align:left;background:linear-gradient(135deg,#8b3322,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;display:flex;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-to-index">← 目次へ戻る</a>
+
+<h1>📗 第５章　鎌倉時代——武家政権の誕生と展開（1185〜1333年）</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label label-sec1">第１節　単元⑬</span>
+  <h2>鎌倉幕府の成立——源頼朝と守護・地頭（1180〜1221年）</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">⚔️ 平氏打倒——源頼朝の挙兵</span>
+    平安時代末，平治の乱（1159年）で源氏の嫡流・源義朝が敗れ，その子<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">源頼朝</span><span class="kw-pop"><span class="kw-title">源頼朝（みなもとのよりとも）</span><span class="kw-yomi">📖 読み：みなもとのよりとも</span><span class="kw-body">1147〜1199年。源義朝の3男。平治の乱後，伊豆（静岡県）へ流された。後白河法皇の院宣を得て1180年に北条時政らと挙兵。1185年の壇ノ浦の戦いで平氏を滅ぼし，鎌倉（神奈川県）を本拠地に武家政権を樹立した。「東国（関東）の武士をまとめる棟梁」として，全国の武士から支持された。1192年，征夷大将軍に任命された。</span></span></span>は伊豆（静岡県）へ流されました。<br><br>
+    1180年，後白河法皇の院宣（命令）を受けた頼朝は，北条時政（ほうじょうときまさ）とともに伊豆で<strong>挙兵</strong>しました。関東の武士たちを次々と味方につけながら，各地の源氏も平氏打倒に立ち上がりました。<br><br>
+    1185年，弟・<span class="kw">源義経（みなもとのよしつね）<span class="kw-pop"><span class="kw-title">源義経（みなもとのよしつね）</span><span class="kw-yomi">📖 読み：みなもとのよしつね</span><span class="kw-body">1159〜1189年。源頼朝の弟。平氏との戦いで活躍した天才武将。一ノ谷の戦い・屋島の戦い・壇ノ浦の戦いで平氏を連破した。しかし戦後，頼朝の許可なく朝廷から官職を受けたことで兄・頼朝と対立。奥州藤原氏のもとへ逃げたが，1189年に頼朝の圧力で藤原泰衡に討たれて死去した。</span></span></span>が率いる源氏軍は，山口県の<strong>壇ノ浦の戦い</strong>で平氏を滅亡させました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('yoshitsune')" style="background:linear-gradient(135deg,#1a4f7a,#3d2b7a)">
+    ⚔️ 義経と頼朝の仲たがい——後白河法皇の思惑と守護・地頭設置の真の理由
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="cause-box">
+    <span class="label">🏛️ 守護・地頭の設置——「1185年」が鎌倉幕府の実質的な始まり</span>
+    平氏滅亡後，頼朝は朝廷に圧力をかけ，<strong>1185年</strong>に全国の国ごとに<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">守護</span><span class="kw-pop"><span class="kw-title">守護（しゅご）</span><span class="kw-yomi">📖 読み：しゅご</span><span class="kw-body">1185年，源頼朝が全国の国（くに）ごとに設置した役職。主な役割：①大犯三箇条（謀反・殺害・使節遵行の警察・裁判）②国内の武士を統率する。現代の都道府県知事に近い役割。後の戦国時代の「守護大名」はこの守護が大名化したもの。</span></span></span>を，荘園・公領ごとに<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">地頭</span><span class="kw-pop"><span class="kw-title">地頭（じとう）</span><span class="kw-yomi">📖 読み：じとう</span><span class="kw-body">1185年，源頼朝が荘園・公領（くりょう）ごとに設置した役職。主な役割：①土地の管理・年貢の徴収②警察・裁判。現代の市町村長的な役割。地頭は次第に荘園領主（貴族・寺社）と土地支配をめぐって争うようになり，中世の荘園制度の崩壊を招いた。</span></span></span>を設置する権限を得ました。<br><br>
+    <div class="key-point">💡 <strong>「1185年説」と「1192年説」</strong><br>
+      教科書によっては「1192年，頼朝が征夷大将軍になった年を幕府成立とする」場合もある。しかし現在の主流は<strong>「1185年，守護・地頭設置で全国支配の実権を握った年」</strong>を鎌倉幕府の実質的始まりとする見方。どちらの年号も重要！
+    </div>
+  </div>
+
+  <div class="why-box">
+    <span class="label">🏛️ 鎌倉幕府のしくみ——3つの機関</span>
+    頼朝は鎌倉（神奈川県）を本拠地に，以下の機関を整備しました：<br><br>
+    ▶ <strong>侍所（さむらいどころ）</strong>：武士（御家人）の統率・軍事・警察。長官は「別当（べっとう）」（初代：和田義盛）<br>
+    ▶ <strong>公文所（くもんじょ）→政所（まんどころ）</strong>：政務・財政。長官は「別当」（初代：大江広元）<br>
+    ▶ <strong>問注所（もんちゅうじょ）</strong>：裁判・記録。長官は「執事（しつじ）」（初代：三善康信）<br><br>
+    頼朝と御家人の関係は<strong>「御恩と奉公（ごおんとほうこう）」</strong>：頼朝が御家人に土地を与え（御恩），御家人は戦いで頼朝に仕える（奉公）という主従関係でした。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('jito')" style="background:linear-gradient(135deg,#2d6a4f,#1a4f7a)">
+    🏡 地頭の役割——租税は誰に渡るのか・地頭のメリット
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="result-box">
+    <span class="label">⚔️ 執権政治——北条氏の台頭</span>
+    1199年に頼朝が急死すると，頼朝の妻・<span class="kw">北条政子（ほうじょうまさこ）<span class="kw-pop"><span class="kw-title">北条政子（ほうじょうまさこ）</span><span class="kw-yomi">📖 読み：ほうじょうまさこ</span><span class="kw-body">1157〜1225年。源頼朝の妻。頼朝の死後，「尼将軍（あましょうぐん）」と呼ばれ実質的な権力を握った。父・北条時政，弟・北条義時とともに北条氏の支配を確立。1221年の承久の乱では御家人に「亡き頼朝の御恩を忘れるな」と呼びかけ，幕府の結束を固めた。</span></span></span>の父・北条時政（ほうじょうときまさ）が<strong>初代執権</strong>となり実権を握りました。<br><br>
+    <span class="kw">執権（しっけん）<span class="kw-pop"><span class="kw-title">執権（しっけん）</span><span class="kw-yomi">📖 読み：しっけん</span><span class="kw-body">将軍を補佐して幕府の政務を仕切る最高の役職。北条氏が世襲した。「執権政治」は将軍が名目的な存在となり，北条氏が実権を握る政治形態。</span></span></span>は将軍を補佐する役職ですが，北条氏は実質的な権力者として幕府を支配しました。<br><br>
+    1221年，後鳥羽上皇（ごとばじょうこう）が北条義時（よしとき）追討の院宣を発し，倒幕を企てました——<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">承久の乱</span><span class="kw-pop"><span class="kw-title">承久の乱（じょうきゅうのらん）1221年</span><span class="kw-yomi">📖 読み：じょうきゅうのらん</span><span class="kw-body">1221年，後鳥羽上皇が北条義時追討を命じた兵を挙げた。しかし北条政子が御家人に「頼朝の御恩を忘れるな」と訴え，大軍が集まった。幕府軍は約19日で京都を制圧，後鳥羽上皇は隠岐（島根県）へ流罪となった。朝廷と幕府の関係が逆転し，幕府が朝廷を監視する時代に入った。</span></span></span>です。<br><br>
+    <strong>結果</strong>：北条政子の呼びかけで御家人が結集した幕府軍が勝利。後鳥羽上皇は島根県の隠岐へ流されました。乱後，幕府は京都に<strong>六波羅探題（ろくはらたんだい）</strong>を設置して朝廷を監視し，幕府の全国支配が確立しました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('shogun23')" style="background:linear-gradient(135deg,#3d2b7a,#8b3322)">
+    👑 源氏2・3代将軍の暗殺——北条氏はどのように権力を奪ったのか
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <button class="modal-btn" onclick="openModal('gotoba')" style="background:linear-gradient(135deg,#7a4f00,#8b3322)">
+    🏯 後鳥羽上皇とはどんな人物か——承久の乱のきっかけと北条政子の演説
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第１節の流れ——鎌倉幕府の成立</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1180年</span><div class="flow-content"><strong>源頼朝</strong>が伊豆で挙兵。関東の武士を集める。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1185年</span><div class="flow-content">壇ノ浦の戦いで<strong>平氏滅亡</strong>。頼朝が<strong>守護・地頭</strong>の設置権を獲得 → 鎌倉幕府の実質的な始まり。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1192年</span><div class="flow-content">頼朝が<strong>征夷大将軍</strong>に。鎌倉を拠点に武家政権を確立。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1199年〜</span><div class="flow-content">頼朝死後，<strong>北条氏</strong>が執権として実権を掌握（執権政治）。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1221年</span><div class="flow-content"><strong>承久の乱</strong>：後鳥羽上皇が倒幕を試みたが失敗。<strong>六波羅探題</strong>設置。幕府が朝廷を支配する体制確立。</div></div>
+    </div>
+    <div class="flow-note">💡 ポイント：「1185年 守護・地頭」「1192年 征夷大将軍」「1221年 承久の乱・六波羅探題」の3つは必須。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge(1)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">📝 ミニテスト①（鎌倉幕府の成立）<span class="arrow">▶</span></button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh13.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label label-sec2">第２節　単元⑭</span>
+  <h2>元寇と鎌倉幕府の衰退——モンゴル帝国の来襲と幕府の終焉（1221〜1333年）</h2>
+
+  <div class="demo-banner" id="demo-banner-2" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">📜 御成敗式目（貞永式目）——武士のための法律</span>
+    1232年，3代執権の<span class="kw">北条泰時（ほうじょうやすとき）<span class="kw-pop"><span class="kw-title">北条泰時（ほうじょうやすとき）</span><span class="kw-yomi">📖 読み：ほうじょうやすとき</span><span class="kw-body">1183〜1242年。鎌倉幕府3代執権。公平な裁判を実現するため，1232年に御成敗式目（貞永式目）を制定した。また，合議制の機関「評定衆（ひょうじょうしゅう）」を設置して執権独裁を抑えた。「泰時（やすとき）→三代執権→御成敗式目」とセットで覚える。</span></span></span>が<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">御成敗式目</span><span class="kw-pop"><span class="kw-title">御成敗式目＝貞永式目（ごせいばいしきもく＝じょうえいしきもく）1232年</span><span class="kw-yomi">📖 読み：ごせいばいしきもく</span><span class="kw-body">1232年，北条泰時が制定した51か条の法律（武家法）。「貞永式目（じょうえいしきもく）」とも呼ばれる（制定された年号「貞永（じょうえい）」から）。目的：武士社会の慣習・道理（どうり）を明文化し，裁判の基準を統一すること。内容：守護・地頭の職務，武士の土地相続，女性の地位など。特徴：公家の法律（律令）とは別の「武家独自の法律」として制定された。</span></span></span>（貞永式目＝じょうえいしきもく）を制定しました。これは武士社会の慣習・道理を成文化した51か条の法律で，<strong>日本初の武家法</strong>です。<br><br>
+    御成敗式目は武士のための法律であり，貴族・寺社には適用されませんでした。「御家人の土地相続は男女を問わない」など，女性の権利も認めていた点も重要です。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('goseibai')" style="background:linear-gradient(135deg,#1a4f7a,#2d6a4f)">
+    📜 御成敗式目を作った本当の目的——泰時が解決しようとした問題とは
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="cause-box">
+    <span class="label">⚓ 元寇（げんこう）——モンゴル帝国の2度の来襲</span>
+    13世紀，モンゴル帝国（フビライ＝ハン）が日本に服属を要求してきました。8代執権の<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">北条時宗</span><span class="kw-pop"><span class="kw-title">北条時宗（ほうじょうときむね）</span><span class="kw-yomi">📖 読み：ほうじょうときむね</span><span class="kw-body">1251〜1284年。鎌倉幕府8代執権。元（モンゴル帝国）の使者を斬り捨てて服属要求を拒否。元寇（文永の役・弘安の役）を撃退した。「時宗（ときむね）→8代執権→元寇撃退」とセットで覚える。元寇を撃退した功績は大きいが，御家人への十分な恩賞が与えられなかったため，幕府の支配が揺らぐきっかけとなった。</span></span></span>がこれを拒否すると，元・高麗の連合軍が来襲しました：<br><br>
+    ▶ <strong>文永の役（ぶんえいのえき）1274年</strong>：元軍が九州北部に上陸。集団戦法・てつはう（爆発する武器）で日本軍を圧倒したが，暴風雨で撤退。<br>
+    ▶ <strong>弘安の役（こうあんのえき）1281年</strong>：元軍14万が再来襲。幕府は事前に<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">防塁</span><span class="kw-pop"><span class="kw-title">防塁（ぼうるい）</span><span class="kw-yomi">📖 読み：ぼうるい</span><span class="kw-body">元寇に備えて1276年頃から博多湾沿岸（現・福岡県）に築かれた石造りの防壁。幕府が御家人に命じて建設させた。元軍の上陸を阻み，長期の海上待機中に台風（暴風雨）が来て元軍は壊滅。「防塁」と「異国警固番役（いこくけいごばんやく）＝九州の御家人に異国船の監視を命じた役」はセットで覚える。</span></span></span>（石造りの防壁）を博多湾沿岸に築いた。元軍は上陸できず，台風（「神風」と呼ばれた）によって壊滅。<br><br>
+    元寇は撃退しましたが，<strong>御家人への恩賞（土地）がほとんどなかった</strong>ため，御家人の幕府への不満が高まりました。
+  </div>
+
+  <button class="modal-btn" onclick="openModal('genko')" style="background:linear-gradient(135deg,#2d6a4f,#1a1a2e)">
+    ⚓ 元寇を深く知る——フビライの思惑・2度の敗因・蒙古襲来絵詞
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+  <div class="result-box">
+    <span class="label">💸 永仁の徳政令——御家人救済策が逆効果に</span>
+    元寇後，御家人は借金で土地を失うケースが続出しました。幕府は1297年，<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">永仁の徳政令</span><span class="kw-pop"><span class="kw-title">永仁の徳政令（えいにんのとくせいれい）1297年</span><span class="kw-yomi">📖 読み：えいにんのとくせいれい</span><span class="kw-body">1297年，鎌倉幕府が御家人の救済を目的として出した法令。内容：①御家人が売った土地を無償で取り戻せる ②御家人の借金を棒引きにする。しかし結果は逆効果：「御家人には金を貸しても返ってこない」と金融業者が判断し，御家人への融資が止まった。かえって御家人の経済が悪化。翌年には撤回された。幕府の権威・財力の限界を示す出来事として重要。</span></span></span>を発して御家人の借金を帳消しにしようとしました。しかしこれは逆効果となり，御家人への融資が止まって経済はさらに悪化しました。<br><br>
+  <button class="modal-btn" onclick="openModal('tokusei')" style="background:linear-gradient(135deg,#8b3322,#c87000)">
+    💸 永仁の徳政令が御家人の不満をさらに大きくした理由——なぜ逆効果になったのか
+    <span class="btn-arrow">▶ 詳しく知ろう</span>
+  </button>
+
+    <strong>鎌倉幕府の滅亡（1333年）</strong>：後醍醐天皇（ごだいごてんのう）が倒幕を計画し，<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">足利尊氏</span><span class="kw-pop"><span class="kw-title">足利尊氏（あしかがたかうじ）</span><span class="kw-yomi">📖 読み：あしかがたかうじ</span><span class="kw-body">1305〜1358年。鎌倉幕府の御家人だったが，後醍醐天皇の呼びかけに応じて幕府討伐に転じ，六波羅探題を攻め落とした。1336年，後醍醐天皇と決裂して南朝を追い，室町幕府を開いた（1338年，征夷大将軍就任）。</span></span></span>・新田義貞（にったよしさだ）らが呼応して幕府を攻め滅ぼしました。
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第２節の流れ——元寇から幕府滅亡まで</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1232年</span><div class="flow-content">北条泰時が<strong>御成敗式目（貞永式目）</strong>を制定。日本初の武家法。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1274年</span><div class="flow-content"><strong>文永の役</strong>：元・高麗軍が来襲，暴風雨で撤退。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1281年</span><div class="flow-content"><strong>弘安の役</strong>：再来襲。<strong>防塁</strong>で上陸阻止・台風で元軍壊滅。恩賞不足で御家人の不満増大。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1297年</span><div class="flow-content"><strong>永仁の徳政令</strong>：御家人救済を試みたが逆効果。幕府の権威低下。</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1333年</span><div class="flow-content">後醍醐天皇・足利尊氏・新田義貞が攻撃し<strong>鎌倉幕府滅亡</strong>。</div></div>
+    </div>
+    <div class="flow-note">💡 ポイント：「1232年 御成敗式目」「1274/1281年 文永・弘安の役」「1297年 永仁の徳政令」「1333年 幕府滅亡」。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge(2)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">📝 ミニテスト②（元寇・幕府衰退）<span class="arrow">▶</span></button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh14.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label label-sec3">第３節　単元⑮</span>
+  <h2>鎌倉文化——武家文化と新仏教の誕生（12〜14世紀）</h2>
+
+  <div class="demo-banner" id="demo-banner-3" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">🪷 鎌倉新仏教——6つの宗派の誕生</span>
+    鎌倉時代，末法思想（まっぽうしそう）が広まる中，庶民・武士にも分かりやすい新しい仏教が次々と誕生しました：<br><br>
+    ▶ <span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">法然</span><span class="kw-pop"><span class="kw-title">法然（ほうねん）</span><span class="kw-yomi">📖 読み：ほうねん</span><span class="kw-body">1133〜1212年。浄土宗（じょうどしゅう）の開祖。「選択本願念仏集（せんちゃくほんがんねんぶつしゅう）」を著した。「ただひたすら念仏（南無阿弥陀仏）を唱えれば，誰でも極楽浄土に生まれ変われる（往生できる）」と説いた。「念仏一行」の簡単さが武士・庶民に広まった。</span></span></span>（<strong>浄土宗</strong>・ねんぶつ）：「南無阿弥陀仏を唱えれば誰でも救われる」<br>
+    ▶ <span class="kw">親鸞（しんらん）<span class="kw-pop"><span class="kw-title">親鸞（しんらん）</span><span class="kw-yomi">📖 読み：しんらん</span><span class="kw-body">1173〜1262年。浄土真宗（じょうどしんしゅう）の開祖。法然の弟子。「悪人正機（あくにんしょうき）」を説いた——「善人でも往生できるなら，悪人はなおさら往生できる（本来，阿弥陀仏が救おうとしたのは悪人だから）」という逆説的な教え。「歎異抄（たんにしょう）」に親鸞の言葉が記録されている。妻帯（妻を持つこと）を認め，肉食も可とした（それまでの仏教のタブーを破った）。</span></span></span>（<strong>浄土真宗</strong>・悪人正機）：「煩悩の深い悪人こそ救われる」<br>
+    ▶ <span class="kw">一遍（いっぺん）<span class="kw-pop"><span class="kw-title">一遍（いっぺん）</span><span class="kw-yomi">📖 読み：いっぺん</span><span class="kw-body">1239〜1289年。時宗（じしゅう）の開祖。全国を遊行（ゆぎょう）しながら「南無阿弥陀仏」と書いた札を配り，念仏を広めた。踊りながら念仏を唱える「踊り念仏（おどりねんぶつ）」を行い，庶民に人気があった。</span></span></span>（<strong>時宗</strong>・踊り念仏）：各地を回って念仏札を配った<br>
+    ▶ <span class="kw">栄西（えいさい）<span class="kw-pop"><span class="kw-title">栄西（えいさい）</span><span class="kw-yomi">📖 読み：えいさい</span><span class="kw-body">1141〜1215年。臨済宗（りんざいしゅう）の開祖。宋（中国）に2度渡り，禅宗を学んで帰国。座禅を組み，師から「公案（こうあん）」という問いを与えられ，答えを見つけることで悟りを開く「公案禅（こうあんぜん）」が特徴。「喫茶養生記（きっさようじょうき）」を著して日本にお茶を広めた人物としても知られる。北条氏の保護を受け，武士に支持された。</span></span></span>（<strong>臨済宗</strong>・座禅・公案）：宋から禅を持ち帰る，武士に支持される<br>
+    ▶ <span class="kw">道元（どうげん）<span class="kw-pop"><span class="kw-title">道元（どうげん）</span><span class="kw-yomi">📖 読み：どうげん</span><span class="kw-body">1200〜1253年。曹洞宗（そうとうしゅう）の開祖。宋で禅を学び帰国後，越前（現・福井県）の永平寺（えいへいじ）を開いた。「ただひたすら座禅を組む（只管打坐＝しかんたざ）」ことで悟りが開けると説いた。「正法眼蔵（しょうぼうげんぞう）」を著した。</span></span></span>（<strong>曹洞宗</strong>・只管打坐）：「ただ座禅をするだけで悟りに至る」<br>
+    ▶ <span class="kw">日蓮（にちれん）<span class="kw-pop"><span class="kw-title">日蓮（にちれん）</span><span class="kw-yomi">📖 読み：にちれん</span><span class="kw-body">1222〜1282年。日蓮宗（法華宗）の開祖。「南無妙法蓮華経（なむみょうほうれんげきょう）」を唱えることで救われると説いた。他宗派を激しく批判（念仏宗は地獄へ落ちる，禅宗は亡国，真言宗は亡国，律宗は国賊）し，幕府にも社会批判を含む「立正安国論（りっしょうあんこくろん）」を提出した。流罪2回，切られそうになるなど迫害を受けたが説き続けた。</span></span></span>（<strong>日蓮宗</strong>・南無妙法蓮華経）：他宗派を激しく批判し，「立正安国論」を提出<br><br>
+    <div class="cause-box" style="margin:8px 0;font-size:14px">
+      <span class="label">💡 6宗派まとめ</span>
+      <strong>念仏系</strong>：法然（浄土宗）・親鸞（浄土真宗）・一遍（時宗）<br>
+      <strong>禅宗系</strong>：栄西（臨済宗）・道元（曹洞宗）<br>
+      <strong>法華系</strong>：日蓮（日蓮宗）
+    </div>
+  </div>
+
+  <div class="result-box">
+    <span class="label">📚 鎌倉文化の文学・彫刻</span>
+    ▶ <strong>軍記物語</strong>：「<span class="kw">平家物語（へいけものがたり）<span class="kw-pop"><span class="kw-title">平家物語（へいけものがたり）</span><span class="kw-body">鎌倉時代に成立した軍記物語。平氏の栄光と滅亡を描く。作者不明だが，琵琶法師（びわほうし）が琵琶を弾きながら語り聞かせた（平曲＝へいきょく）。「祇園精舎の鐘の声，諸行無常の響きあり」の書き出しが有名。「諸行無常（しょぎょうむじょう）」「盛者必衰（じょうしゃひっすい）」のテーマを持つ。</span></span></span>」——琵琶法師が語る，平氏の栄光と滅亡の物語<br>
+    ▶ 随筆：「<span class="kw">方丈記（ほうじょうき）<span class="kw-pop"><span class="kw-title">方丈記（ほうじょうき）</span><span class="kw-body">鴨長明（かものちょうめい）著（1212年）。「ゆく河の流れは絶えずして，しかも元の水にあらず」という書き出しで有名な随筆。大火・地震・飢饉（ひとけい）・竜巻・福原遷都など，相次ぐ災害と社会不安を記録しながら，無常観（この世は儚い）を説く。「方丈（一辺3m四方の小屋）」という小さな庵に移り住んだ作者の境地を書いた。</span></span></span>」鴨長明（かものちょうめい）・「<span class="kw">徒然草（つれづれぐさ）<span class="kw-pop"><span class="kw-title">徒然草（つれづれぐさ）</span><span class="kw-body">吉田兼好（よしだけんこう，別名：兼好法師）著（14世紀初め）。「つれづれなるままに，日暮らし…」という書き出しで有名。人生・自然・人間の習俗などを鋭く観察した随筆。「第1段：いでや，この世に生まれては，願はしかるべき事こそ多かめれ」のような，物事の無常と美を見つめる視点が特徴。</span></span></span>」吉田兼好（よしだけんこう）<br>
+    ▶ 彫刻：<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">運慶・快慶</span><span class="kw-pop"><span class="kw-title">運慶・快慶（うんけい・かいけい）</span><span class="kw-yomi">📖 読み：うんけい・かいけい</span><span class="kw-body">鎌倉時代の代表的な仏師（彫刻家）。東大寺南大門（とうだいじなんだいもん）の金剛力士像（こんごうりきしぞう）を制作（1203年）。写実的で力強い武士の気概を感じさせる力強い表現が特徴。「うん（運慶）・かい（快慶）→東大寺南大門」とセットで覚える。</span></span></span>——東大寺南大門の<strong>金剛力士像</strong>を制作。写実的で力強い表現。
+  </div>
+
+  <div class="cause-box">
+    <span class="label">🌾 鎌倉時代の農業・経済の発達</span>
+    ▶ <span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">二毛作</span><span class="kw-pop"><span class="kw-title">二毛作（にもうさく）</span><span class="kw-yomi">📖 読み：にもうさく</span><span class="kw-body">同じ土地で1年に2種類の作物を作ること。鎌倉時代，西日本から広まった。例：夏に稲，冬に麦を作る。生産力が向上し，農民の生活が豊かになった。牛馬耕（ぎゅうばこう）＝牛や馬を使った農耕，草木灰（そうもくはい）など肥料の使用もこの時代から。</span></span></span>（同じ土地で年2回作物を栽培）・牛馬耕（牛馬を使った農耕）が広まる<br>
+    ▶ <strong>定期市（ていきいち）</strong>：月に3回開かれる三斎市（さんさいいち）が普及<br>
+    ▶ <strong>座（ざ）</strong>：同業者組合（商工業者のギルド）<br>
+    ▶ <strong>問丸（といまる）</strong>：物資の輸送・保管業者<br>
+    ▶ <strong>為替（かわせ）</strong>：遠距離取引のための金融手段（現金輸送を省く）
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">📋 第３節のまとめ——鎌倉文化の特徴</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year purple">新仏教</span><div class="flow-content">6宗派：法然（浄土宗）・親鸞（浄土真宗）・一遍（時宗）・栄西（臨済宗）・道元（曹洞宗）・日蓮（日蓮宗）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">文学</span><div class="flow-content">平家物語（琵琶法師）・方丈記（鴨長明）・徒然草（吉田兼好）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">彫刻</span><div class="flow-content">東大寺南大門 金剛力士像（運慶・快慶）→ 写実的・力強い武家文化</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">農業</span><div class="flow-content">二毛作・牛馬耕・定期市・座・問丸・為替の発達 → 経済の活性化</div></div>
+    </div>
+    <div class="flow-note">💡 ポイント：鎌倉文化は「武家の気風（力強さ・写実性）」と「庶民への仏教普及」が特徴。平安貴族文化（優雅）との対比で覚える。</div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge(3)">🎯 チャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">📝 ミニテスト③（鎌倉文化）<span class="arrow">▶</span></button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+  <div style="text-align:right;margin-top:12px">
+    <a href="nihonshi_drill_nh15.html" style="display:inline-flex;align-items:center;gap:6px;background:#c87000;color:#fff;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:bold;text-decoration:none">✏️ この単元のドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 まとめテスト（10問）——第５章 鎌倉時代</h2>
+  <p style="font-size:14px;color:#555;margin-bottom:14px">8問以上で合格です。</p>
+  <div id="final-quiz-area"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+  <div id="final-result-row"></div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="final-section">
+  <h2>☑️ 理解度チェックリスト</h2>
+  <p style="font-size:14px;color:#555;margin-bottom:10px">自分の言葉で説明できたらチェック！</p>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== モーダル：義経と頼朝の仲たがい ===== -->
+<div class="modal-overlay" id="modal-yoshitsune" onclick="if(event.target===this)closeModal('yoshitsune')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('yoshitsune')">✕</button>
+    <div class="modal-title" style="color:#1a4f7a;border-bottom-color:#3d2b7a">⚔️ 義経と頼朝の仲たがい——後白河法皇の思惑と守護・地頭設置の真の理由</div>
+    <div class="modal-body">
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① なぜ義経と頼朝は対立したのか</div>
+      <div class="why-box">
+        <span class="label">⚔️ きっかけ——後白河法皇が義経に官職を与えた</span>
+        平氏を滅ぼした後，後白河法皇（ごしらかわほうおう）は義経に「<strong>検非違使（けびいし）</strong>」「<strong>伊予守（いよのかみ）</strong>」などの官職を与えました。<br><br>
+        これが問題の核心です。当時のルールでは，<strong>源頼朝の許可なく朝廷から官職を受けることは，鎌倉幕府（頼朝）への反逆に等しい</strong>行為でした。頼朝は「源氏・武士の人事権は自分にある」という原則を確立しようとしていたからです。<br><br>
+        義経が頼朝の許可なく官職を受け入れたことは，「自分（頼朝）の権威を無視した」と受け取られました。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 後白河法皇の思惑——なぜ義経に官職を与えたのか</div>
+      <div class="cause-box">
+        <span class="label">🎭 後白河法皇の戦略——頼朝の力を削ぐ</span>
+        後白河法皇は，<strong>源頼朝が強くなりすぎることを警戒</strong>していました。頼朝が関東に武家政権を打ち立て，朝廷（貴族）の支配から自立していくことは，法皇にとって脅威でした。<br><br>
+        そこで法皇は「<strong>義経を使って頼朝を牽制する</strong>」という策を取りました。<br>
+        ▶ 義経に高い官職を与えて直接の家来にしようとした<br>
+        ▶ 頼朝と義経を対立させ，源氏の力を内部分裂させようとした<br>
+        ▶ 「義経は朝廷の家来，頼朝は関係ない」という構図を作ろうとした<br><br>
+        法皇の計算どおり，頼朝と義経は対立しました。義経は京都から逃げ，最終的に奥州（岩手県）の<strong>藤原秀衡（ふじわらのひでひら）</strong>のもとへ逃れました。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 守護・地頭設置の真の目的——義経の遺骸問題との関係</div>
+      <div class="result-box">
+        <span class="label">🔍 「義経操作説」は本当か</span>
+        「守護・地頭設置は，義経の遺骸が見つからなかったため，頼朝が義経捜索を口実にして朝廷から設置権を奪った」という説があります。<br><br>
+        これは<strong>半分正しく，半分は後付けの理由</strong>といえます：<br><br>
+        ▶ <strong>史実として正しい部分</strong>：1185年10月，頼朝は後白河法皇に圧力をかけ，「義経追討」を名目の一つとして守護・地頭設置の許可を求めました。義経が逃げ回っていた時期と重なります。<br>
+        ▶ <strong>ただし本当の目的はもっと大きかった</strong>：頼朝の真の目的は「<strong>全国の武士の人事権・土地支配権を朝廷から奪取する</strong>」ことでした。義経問題はその口実として都合がよかった，というのが実情に近いです。<br>
+        ▶ 義経が1189年に滅亡した後も，守護・地頭制度は廃止されませんでした。これが「義経問題は口実」だったことを示しています。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：地頭の役割 ===== -->
+<div class="modal-overlay" id="modal-jito" onclick="if(event.target===this)closeModal('jito')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('jito')">✕</button>
+    <div class="modal-title" style="color:#2d6a4f;border-bottom-color:#2d6a4f">🏡 地頭の仕事——租税は誰に渡るか・地頭のメリット</div>
+    <div class="modal-body">
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① 地頭が徴収した租税はどこへ行くのか</div>
+      <div class="why-box">
+        <span class="label">💰 租税の流れ（3者に分配）</span>
+        地頭が荘園から徴収した年貢（租税）は，<strong>3者に分配</strong>されました：<br><br>
+        ① <strong>荘園領主（貴族・寺社）への年貢</strong>：本来の荘園の持ち主（京都の貴族や大きな寺院）への年貢。これが「荘園制度」の中心。<br>
+        ② <strong>国（朝廷）への公租</strong>：公領（くりょう）の場合は朝廷・国司への税。<br>
+        ③ <strong>地頭自身の取り分（地頭給＝じとうきゅう）</strong>：地頭は徴収した年貢のうち，一定割合（「加徴米＝かちょうまい」など）を自分の取り分として受け取れる権利があった。<br><br>
+        <strong>重要なポイント</strong>：地頭は単なる「使者」ではなく，自分の取り分を持つ<strong>利権者</strong>でした。だから御家人にとって地頭職は魅力的でした。
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 地頭のメリット——なぜ御家人は地頭になりたかったのか</div>
+      <div class="cause-box">
+        <span class="label">🏆 地頭職の3つのメリット</span>
+        ▶ <strong>メリット①：安定した収入（地頭給）</strong><br>
+        　地頭は年貢の一部（加徴米・地頭給）を合法的に自分のものにできました。土地を持たなくても，地頭職を持つだけで収入が得られます。<br><br>
+        ▶ <strong>メリット②：土地の実質的な支配権</strong><br>
+        　地頭は荘園・公領の現地管理者として，「どこを耕すか・誰を使うか」を実質的に決める権限を持ちました。時間が経つにつれ，地頭は「荘園の主人」のような立場になっていきました。<br><br>
+        ▶ <strong>メリット③：地位・名誉・幕府との繋がり</strong><br>
+        　地頭職は「頼朝から任命された役職」であり，御家人としての地位の証明でもありました。地頭であることで，幕府（頼朝→将軍）との主従関係が確認され，保護を受けられました。<br><br>
+        <strong>しかし問題も生まれた</strong>：地頭が権限を強めるにつれ，荘園領主（貴族・寺社）への年貢が減少し，両者の対立が生まれました。これが中世荘園制度を崩壊させる遠因になりました。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：源氏2・3代将軍暗殺 ===== -->
+<div class="modal-overlay" id="modal-shogun23" onclick="if(event.target===this)closeModal('shogun23')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('shogun23')">✕</button>
+    <div class="modal-title" style="color:#8b3322;border-bottom-color:#8b3322">👑 源氏2・3代将軍の謎の死——北条氏はいかに実権を奪ったのか</div>
+    <div class="modal-body">
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① 2代将軍・源頼家の死（1204年）</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 頼家の排除——北条氏の策略</span>
+        源頼家（よりいえ，1182〜1204年）は頼朝の長男で2代将軍。1199年に父が急死すると将軍職を継ぎましたが，当時わずか18歳でした。<br><br>
+        ▶ 頼家は若く，頼朝のような統率力がありませんでした。<br>
+        ▶ 北条時政（母・政子の父）は，頼家を補佐する名目で「<strong>13人合議制</strong>」を設置し，将軍権力を骨抜きにしました。<br>
+        ▶ 1203年，頼家が病気で倒れると，北条時政は急いで頼家の弟・実朝を3代将軍に据え，頼家を伊豆（静岡県）の修善寺に幽閉。<br>
+        ▶ 1204年，頼家は修善寺で<strong>暗殺</strong>されました。刺客が送られたとされますが，「北条時政の命令」であったと考えられています。<br><br>
+        <strong>北条政子はどうだったか</strong>：政子は母として頼家への愛情があったと考えられますが，父・時政の決断に逆らえなかったか，あるいは幕府の安定のために犠牲として認めたか——確証はありません。歴史書は政子が頼家の死に直接関わったとは記していませんが，知らなかったとは考えにくいです。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 3代将軍・源実朝の暗殺（1219年）</div>
+      <div class="result-box">
+        <span class="label">⚔️ 実朝の暗殺——甥による鶴岡八幡宮の悲劇</span>
+        源実朝（さねとも，1192〜1219年）は3代将軍。和歌を愛する文化人でしたが，1219年1月，<strong>鶴岡八幡宮（つるがおかはちまんぐう）で甥・公暁（くぎょう）に斬り殺されました</strong>。<br><br>
+        ▶ 公暁は2代将軍・頼家の子で，「父（頼家）の仇を討つ」として実朝を暗殺。<br>
+        ▶ しかし公暁はその後すぐに北条義時の家臣に討ち取られました。<br>
+        ▶ <strong>北条氏の関与が疑われている</strong>：公暁が実朝を殺した後，「次の将軍は自分だ」と叫んだと伝わります。この点から，北条義時が公暁を利用して実朝を暗殺させた可能性が指摘されています（義時が実朝の暗殺後，公暁をすぐに消したのも怪しいとされる）。<br><br>
+        <strong>源氏将軍の血統断絶</strong>：実朝の死で源氏の直系男性が途絶えました。以後，将軍は京都の皇族・貴族から「飾り」として迎えることになり，北条氏が実権を完全に握りました。
+      </div>
+
+      <div style="background:#555;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 北条政子は知っていたのか</div>
+      <div class="why-box">
+        <span class="label">🤔 歴史の謎——政子の立場</span>
+        北条政子（1157〜1225年）は，源頼朝の妻として「尼将軍」と呼ばれた歴史上の重要人物です。<br><br>
+        ▶ 2代将軍・頼家の暗殺：政子は頼家の<strong>母</strong>でした。父・時政の行動を止めなかった（止められなかった）という意味で，少なくとも黙認したと考えられます。<br>
+        ▶ 3代将軍・実朝の暗殺：政子は実朝の<strong>母</strong>でもありました。直接の関与はなかったとされますが，政子が実朝の死後も権力を維持し続けたことから，「実朝の死が政治的に利用された」という見方もあります。<br><br>
+        <strong>歴史的評価</strong>：政子は「母として息子たちを失った悲劇の女性」という面と，「幕府の安定のために非情な政治的判断ができた権力者」という面を持つ複雑な人物です。承久の乱での「頼朝の御恩」の演説は，政子が母としての悲しみを乗り越え，政治家として幕府の存続を選んだ瞬間を象徴しています。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：後鳥羽上皇と政子の演説 ===== -->
+<div class="modal-overlay" id="modal-gotoba" onclick="if(event.target===this)closeModal('gotoba')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('gotoba')">✕</button>
+    <div class="modal-title" style="color:#7a4f00;border-bottom-color:#7a4f00">🏯 後鳥羽上皇と承久の乱——政子の名演説の全貌</div>
+    <div class="modal-body">
+
+      <div style="background:#7a4f00;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① 後鳥羽上皇はどんな人物だったのか</div>
+      <div class="why-box">
+        <span class="label">👑 後鳥羽上皇（1180〜1239年）——多才で自信満々な上皇</span>
+        後鳥羽上皇（ごとばじょうこう）は，<strong>非常に優秀で多才な人物</strong>でした：<br><br>
+        ▶ <strong>和歌の天才</strong>：「新古今和歌集（しんこきんわかしゅう）」の編纂を命じ，自らも多くの優れた和歌を詠んだ。<br>
+        ▶ <strong>武芸にも優れた</strong>：院政期の上皇の中でも特に武芸を好み，自ら剣術・弓矢の稽古をした。<br>
+        ▶ <strong>強烈な自尊心</strong>：「天皇家こそ日本の頂点」という意識が強く，武士（北条氏）が朝廷を牛耳ることへの強い反発を持っていた。<br><br>
+        後鳥羽上皇が倒幕を決意したきっかけは，北条義時が上皇の意向を無視して政治を動かし，上皇の寵愛する女性の荘園を没収したことなども一因とされます。「<strong>北条義時追討</strong>」の院宣を出したのは，個人的な怨みと政治的野望の両方があったと考えられます。<br><br>
+        <strong>失敗の原因</strong>：上皇は「院宣（朝廷の命令）が出れば武士も従うはず」と過信していました。しかし頼朝以来の「御恩と奉公」関係を結んだ御家人たちは，30年以上幕府に忠誠を尽くしてきた。上皇は武士の心理を読み誤りました。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 北条政子の演説——「頼朝の御恩」を訴えた歴史的名演説</div>
+      <div class="result-box">
+        <span class="label">📢 政子の演説（1221年）——原文と意味</span>
+        後鳥羽上皇が北条義時追討の院宣を出し，幕府の危機が訪れたとき，北条政子は鎌倉の御家人たちを集めて演説しました。<br><br>
+        <div style="background:#fff8f0;border:2px solid #d4956a;border-radius:10px;padding:16px;margin:10px 0;font-size:14px;line-height:2.2">
+          <strong>「みなよく聞け。これが最後の言葉だ。</strong><br>
+          故・右大将（頼朝）が朝廷の敵を平らげ，鎌倉幕府を開いて以来，みなの官職・俸禄はすべて頼朝殿の御恩ではないか。<br>
+          その恩は山よりも高く，海よりも深い。<br>
+          それを忘れて今，上皇の院宣に応じて幕府を倒そうとするものがいるか。<br>
+          <strong>もし上皇方に味方したい者は今すぐ名乗り出よ。</strong><br>
+          しかし頼朝殿の御恩に報いたいと思う者は，ともに戦って謀反人（北条義時とは朝廷が言うが，それは偽りだ）を討て！」
+        </div>
+        <em>（吾妻鏡・承久記などをもとにした要約）</em><br><br>
+        <strong>この演説の効果</strong>：御家人たちは政子の言葉に感動し，一人も上皇方へ離反しませんでした。幕府軍は19万の大軍を組織し，わずか約19日で京都を制圧しました。<br><br>
+        <strong>歴史的意義</strong>：この演説は「御恩と奉公」という武士の道義を利用した傑作です。政子は「上皇の命令（院宣）」対「頼朝からの恩義」という対立軸を提示し，御家人の選択を迫りました。武士にとって主君への忠義は命より重いものでした。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：御成敗式目の目的 ===== -->
+<div class="modal-overlay" id="modal-goseibai" onclick="if(event.target===this)closeModal('goseibai')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('goseibai')">✕</button>
+    <div class="modal-title" style="color:#1a4f7a;border-bottom-color:#1a4f7a">📜 御成敗式目を作った本当の目的</div>
+    <div class="modal-body">
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① どんな問題があったのか——制定前の混乱</div>
+      <div class="cause-box">
+        <span class="label">⚖️ 裁判の基準がバラバラだった</span>
+        御成敗式目（1232年）が作られる前，幕府の裁判には大きな問題がありました：<br><br>
+        ▶ <strong>問題①：成文法（書かれた法律）がなかった</strong><br>
+        武士社会の法律は「慣習（しきたり）」「道理（どうり）」という曖昧なものしかなく，裁判官（奉行）によって判断がバラバラでした。<br><br>
+        ▶ <strong>問題②：律令（貴族の法律）は武士に適さなかった</strong><br>
+        唐の制度を模した律令は，農地・荘園・相続などについて武士社会の現実と合わなかった。特に土地争いの裁判で困りました。<br><br>
+        ▶ <strong>問題③：地頭と荘園領主の争いが多発</strong><br>
+        地頭が荘園領主の年貢を横取りしたり，逆に荘園領主が地頭の権利を侵害したりする争いが全国で頻発。公正な解決の基準がなかった。
+      </div>
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 御成敗式目の51か条——何が書かれていたのか</div>
+      <div class="result-box">
+        <span class="label">📋 主な内容</span>
+        ▶ <strong>守護の職務（大犯三箇条）</strong>：謀反・殺人・使節遵行（年貢横取りへの対応）の3つだけが守護の権限。それ以外の権限の拡大を禁じた。<br>
+        ▶ <strong>地頭の職務</strong>：年貢の一部（加徴米）を受け取る権利，農民を指揮する権利，荘園の管理権限を明文化。ただし「年貢を横取りしてはいけない」という規制も明確化。<br>
+        ▶ <strong>女性の地位</strong>：女性も土地を相続できる（夫が死んだ場合，妻が土地を引き継げる）。<br>
+        ▶ <strong>土地の所有権（20年占有の原則）</strong>：20年以上継続して土地を支配していれば，その土地の所有権が認められる。<br>
+        ▶ <strong>御家人の裁判の公正化</strong>：証拠に基づく裁判手続きを定め，「有力者が勝つ」ではなく「証拠がある方が勝つ」という原則を確立しようとした。<br><br>
+        <strong>泰時の手紙</strong>：泰時は御成敗式目制定後，弟の北条重時（しげとき）に手紙を送り，「これは位の高い人に有利なものではなく，『道理（どうり，正しい理屈）』に基づいて裁判を行うためのものだ」と書いています。「道理」という言葉が鎌倉時代のキーワードです。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：元寇詳細 ===== -->
+<div class="modal-overlay" id="modal-genko" onclick="if(event.target===this)closeModal('genko')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('genko')">✕</button>
+    <div class="modal-title" style="color:#2d6a4f;border-bottom-color:#2d6a4f">⚓ 元寇を深く知る——フビライの思惑・2度の敗因・蒙古襲来絵詞</div>
+    <div class="modal-body">
+
+      <div style="background:#2d6a4f;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① フビライの思惑——なぜ日本を狙ったのか</div>
+      <div class="why-box">
+        <span class="label">🌏 モンゴル帝国の世界戦略</span>
+        フビライ＝ハン（1215〜1294年）はモンゴル帝国の5代皇帝で，中国に元を建国（1271年）した人物です。<br><br>
+        ▶ <strong>日本に求めたもの①：服属（しもべになること）</strong><br>
+        　フビライは日本に「元の皇帝に従え（朝貢せよ）」という国書を何度も送りました。目的は軍事的征服より，まず<strong>日本を「元の体制に組み込む」</strong>ことでした。<br><br>
+        ▶ <strong>日本に求めたもの②：通商（貿易）</strong><br>
+        　当時の日本と中国・朝鮮は密接な貿易関係にありました。元はこのルートをコントロールしたかった。<br><br>
+        ▶ <strong>日本に求めたもの③：南宋攻略の後背地排除</strong><br>
+        　フビライが最優先したのは中国・南宋の征服でした。日本が南宋を援助することを防ぐため，日本を味方に引き込みたかった（または中立にしたかった）側面もあります。<br><br>
+        ▶ <strong>なぜ軍事力で来たのか</strong><br>
+        　北条時宗が使者を斬り捨てて拒否し続けたため，フビライは「力で屈服させるしかない」と判断しました。元としては「まず来させて威圧すれば従うだろう」という考えだったかもしれません。
+      </div>
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 2度の元寇で元が敗れた本当の理由</div>
+      <div class="cause-box">
+        <span class="label">⚡ 「神風」だけではなかった——複数の敗因</span>
+        教科書には「台風（神風）で撤退した」と書かれますが，それだけが原因ではありません：<br><br>
+        ▶ <strong>敗因①：防塁の効果（弘安の役）</strong><br>
+        　1276年から博多湾沿岸に築いた石造りの防塁（高さ約2m，全長20km超）は，元軍が上陸するのを2ヶ月以上阻止し続けました。台風が来る前から，元軍は海上で足止めを食っていた。<br><br>
+        ▶ <strong>敗因②：日本軍の激しい抵抗</strong><br>
+        　元軍の集団戦法・てつはう（爆弾）は確かに最初は衝撃を与えましたが，日本の武士は個人戦闘の実力が高く，上陸を許さなかった。特に竹崎季長（たけさきすえなが）らが夜間の小舟奇襲攻撃を行い，元の船団を混乱させました。<br><br>
+        ▶ <strong>敗因③：台風（暴風雨）</strong><br>
+        　弘安の役では7月末〜8月初めに暴風雨が来て元の大船団が壊滅。しかし既に元軍は2ヶ月近く上陸できずにいた。台風は「とどめ」ではあっても，唯一の原因ではない。<br><br>
+        ▶ <strong>敗因④：元・高麗軍の士気と状況</strong><br>
+        　元の軍の中心は征服されたばかりの高麗・旧南宋の兵士が多く，「モンゴルのために命をかける」動機が弱かった。
+      </div>
+
+      <div style="background:#3d2b7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 蒙古襲来絵詞——誰が・何の目的で描かせたのか</div>
+      <div class="result-box">
+        <span class="label">🖼️ 竹崎季長が「自分の手柄を証明するため」に作らせた</span>
+        蒙古襲来絵詞（もうこしゅうらいえことば）は，<strong>肥後国（熊本県）の御家人・竹崎季長（1246〜？）が，自分の戦功を記録・証明するために製作させた絵巻物</strong>です（1293年頃）。<br><br>
+        ▶ <strong>目的：恩賞を得るため</strong><br>
+        　竹崎季長は元寇で活躍したにもかかわらず，当初恩賞が得られませんでした。そこで自ら鎌倉へ行き，安達泰盛（あだちやすもり）という有力御家人に直接訴え，ようやく恩賞を得ました。絵巻はその後，「自分がどれほど活躍したか」を後世に伝えるために作らせました。<br><br>
+        ▶ <strong>歴史資料としての価値</strong><br>
+        　絵詞には元軍のてつはう（爆弾）の炸裂・元の船・日本騎兵の様子などが描かれており，元寇の実態を伝える最重要の一次資料となっています。<br><br>
+        ▶ <strong>逆に映し出す「恩賞問題」</strong><br>
+        　竹崎季長が必死に恩賞を求めた記録は，元寇後の「御家人への恩賞が不足していた」という幕府の問題を如実に示しています。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル：永仁の徳政令 ===== -->
+<div class="modal-overlay" id="modal-tokusei" onclick="if(event.target===this)closeModal('tokusei')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('tokusei')">✕</button>
+    <div class="modal-title" style="color:#8b3322;border-bottom-color:#c87000">💸 永仁の徳政令が御家人の不満をさらに大きくした理由</div>
+    <div class="modal-body">
+
+      <div style="background:#8b3322;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin-bottom:12px">① 御家人が困窮した根本的な理由</div>
+      <div class="cause-box">
+        <span class="label">💰 なぜ御家人は貧しくなったのか</span>
+        ▶ <strong>理由①：分割相続の繰り返し</strong><br>
+        　鎌倉時代，土地（所領）は息子・娘・親族など<strong>複数の相続人</strong>に分割して受け継がれました（分割相続）。1代で5人に分ければ，1人あたりの土地は5分の1になります。世代が進むにつれ，土地はどんどん小さく・収入が少なくなりました。<br><br>
+        ▶ <strong>理由②：元寇の出費と恩賞なし</strong><br>
+        　2度の元寇では九州への長距離出兵・防塁の建設費用を自腹で出しましたが，「異国からの土地を奪った」わけではないので恩賞（土地）がほとんど出ませんでした。大きな出費だけが残りました。<br><br>
+        ▶ <strong>理由③：貨幣経済の発展</strong><br>
+        　鎌倉時代，宋銭（そうせん）が流通して貨幣経済が発展し，御家人も現金が必要になりました。土地の年貢だけでは生活できず，高利貸し（借金）に頼る御家人が増えました。
+      </div>
+
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 永仁の徳政令の内容とその「逆効果」</div>
+      <div class="result-box">
+        <span class="label">⚡ なぜ善意の法律が裏目に出たのか</span>
+        永仁の徳政令（1297年）の内容：<br>
+        ▶ ①御家人が売ってしまった土地を<strong>無償で取り戻せる</strong><br>
+        ▶ ②御家人の借金を<strong>棒引き（帳消し）にする</strong><br><br>
+        <strong>逆効果になった理由：</strong><br><br>
+        ▶ <strong>金融業者（土倉・借上）の反応</strong>：「御家人に金を貸しても，徳政令が出れば返済されない。なら御家人には一切貸さない」→ 御家人はお金が借りられなくなった。<br><br>
+        ▶ <strong>土地取引の停止</strong>：「御家人から土地を買っても，後から『徳政令で取り戻す』と言われる可能性がある。なら御家人の土地は買わない」→ 御家人は土地を現金化できなくなった。<br><br>
+        ▶ <strong>翌年に撤回</strong>：逆効果があまりにも明らかだったため，幕府は翌1298年には徳政令の一部を撤回せざるをえませんでした。これは法律を出したこと自体が失敗だったと幕府が認めたに等しく，<strong>幕府の権威はさらに低下</strong>しました。<br><br>
+        <strong>結論</strong>：永仁の徳政令は「御家人を助けようとして，かえって御家人の状況を悪化させた」典型例です。さらに「失敗した法律をすぐ撤回する幕府」への信頼も失墜させました。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジ用チップバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 チャレンジ<span id="ccb-secname-label"></span></span>
+    <span id="ccb-hint">語句を選んでください</span>
+    <span id="ccb-count">残り 5語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 採点</button>
+    <button id="ccb-btn-demo"  onclick="showDemo()">📖 手本</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- おしい！ポップアップ -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度考えてみよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+const allAnswers = {
+  "A":"源頼朝", "B":"守護", "C":"地頭", "D":"承久の乱",
+  "E":"御成敗式目", "F":"北条時宗", "G":"防塁", "H":"永仁の徳政令", "I":"足利尊氏",
+  "J":"法然", "K":"運慶・快慶", "L":"二毛作"
+};
+
+const secAnswers = {
+  1: ["A","B","C","D"],
+  2: ["E","F","G","H","I"],
+  3: ["J","K","L"]
+};
+
+const wordBank = {
+  1: ["源頼朝","守護","地頭","承久の乱"],
+  2: ["御成敗式目","北条時宗","防塁","永仁の徳政令","足利尊氏"],
+  3: ["法然","運慶・快慶","二毛作"]
+};
+
+const secNames = {
+  1: "①鎌倉幕府の成立",
+  2: "②元寇・幕府衰退",
+  3: "③鎌倉文化"
+};
+
+const miniQuizData = {
+  1: [
+    {q:"1185年，源頼朝が全国の国ごとに設置した，国内の武士を統率する役職は何か。",choices:["地頭","守護","国司","執権"],ans:1},
+    {q:"源頼朝と御家人の関係「御恩と奉公」のうち，頼朝が御家人に与えた「御恩」とは何か。",choices:["農地の二毛作","土地の保証・給与","元寇での指揮権","守護の任命"],ans:1},
+    {q:"1221年，後鳥羽上皇が幕府打倒を試みた戦乱を何というか。",choices:["壇ノ浦の戦い","応仁の乱","承久の乱","保元の乱"],ans:2},
+    {q:"承久の乱後，幕府が京都に設置して朝廷を監視した機関を何というか。",choices:["六波羅探題","問注所","侍所","守護所"],ans:0}
+  ],
+  2: [
+    {q:"1232年，3代執権・北条泰時が制定した，日本初の武家法を何というか。",choices:["大宝律令","武家諸法度","御成敗式目（貞永式目）","分国法"],ans:2},
+    {q:"1281年の弘安の役で，幕府が元軍の上陸を阻むために博多湾沿岸に築いたものは何か。",choices:["長城","防塁","水城","大野城"],ans:1},
+    {q:"1297年，鎌倉幕府が御家人の借金を帳消しにしようとして出した法令は何か。",choices:["武家諸法度","永仁の徳政令","惣無事令","禁中並公家諸法度"],ans:1},
+    {q:"1333年，鎌倉幕府滅亡を主導した天皇は誰か。",choices:["後白河天皇","後鳥羽上皇","後醍醐天皇","後三条天皇"],ans:2}
+  ],
+  3: [
+    {q:"「南無阿弥陀仏と唱えれば誰でも救われる」と説いて浄土宗を開いたのは誰か。",choices:["親鸞","栄西","法然","道元"],ans:2},
+    {q:"東大寺南大門の金剛力士像を制作した鎌倉時代の仏師はだれか。",choices:["運慶・快慶","定朝","仏師快慶のみ","行基"],ans:0},
+    {q:"鎌倉時代に広まった農業技術で，同じ土地で年に2種類の作物を栽培することを何というか。",choices:["三毛作","二毛作","牛馬耕","新田開発"],ans:1},
+    {q:"「方丈記」を著した鎌倉時代の随筆作家は誰か。",choices:["吉田兼好","紫式部","鴨長明","清少納言"],ans:2}
+  ]
+};
+
+const finalQuizData = [
+  {q:"1185年，源頼朝が全国の荘園・公領ごとに設置した，土地の管理と年貢徴収を行う役職は何か。",choices:["守護","地頭","国司","六波羅探題"],ans:1},
+  {q:"鎌倉幕府で将軍を補佐し，北条氏が世襲した最高職を何というか。",choices:["管領","摂政","執権","太政大臣"],ans:2},
+  {q:"1221年の承久の乱で倒幕を試みた人物は誰か。",choices:["後三条天皇","後白河上皇","後鳥羽上皇","後醍醐天皇"],ans:2},
+  {q:"1232年に制定された，日本初の武家法を何というか。",choices:["大宝律令","貞永式目（御成敗式目）","武家諸法度","分国法"],ans:1},
+  {q:"元寇（1274年・1281年）を撃退した8代執権は誰か。",choices:["北条泰時","北条時政","北条義時","北条時宗"],ans:3},
+  {q:"1281年の弘安の役で元軍の上陸を防ぐために築かれたものは何か。",choices:["長城","防塁","関所","水城"],ans:1},
+  {q:"浄土真宗を開き，「悪人正機」を説いたのは誰か。",choices:["法然","一遍","日蓮","親鸞"],ans:3},
+  {q:"東大寺南大門の金剛力士像を制作した鎌倉時代の仏師はだれか。",choices:["運慶・快慶","定朝","行基","空海"],ans:0},
+  {q:"鎌倉時代に西日本から普及した，同じ土地で年2回作物を育てる農業技術は何か。",choices:["三毛作","牛馬耕","二毛作","灌漑農法"],ans:2},
+  {q:"鎌倉幕府を滅亡させ，建武の新政を行った天皇は誰か。",choices:["後白河天皇","後三条天皇","後鳥羽上皇","後醍醐天皇"],ans:3}
+];
+
+const checkItems = [
+  "1185年に源頼朝が守護・地頭を設置した意味（全国の武士を統率する仕組みを作った）を説明できる",
+  "御恩と奉公のしくみ（頼朝が土地を与え，御家人が奉仕する主従関係）を説明できる",
+  "承久の乱（1221年）の原因・結果・六波羅探題の役割を説明できる",
+  "御成敗式目（貞永式目・1232年）の意義（日本初の武家法）を説明できる",
+  "元寇（文永の役1274年・弘安の役1281年）の経緯と防塁・神風の役割を説明できる",
+  "永仁の徳政令（1297年）が逆効果になった理由を説明できる",
+  "鎌倉新仏教6宗派（法然・親鸞・一遍・栄西・道元・日蓮）の宗派名と特徴を言える",
+  "鎌倉文化の文学（平家物語・方丈記・徒然草）と彫刻（運慶・快慶）を説明できる"
+];
+
+/* ========= 共通JS ========= */
+let checkState = new Array(checkItems.length).fill(false);
+let activeChallengeSection = null;
+const challengeStates = {
+  1: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  2: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  3: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null}
+};
+
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function getBlankEl(id){return document.querySelector(`.blank[data-id="${id}"]`);}
+function getDisplayEl(id){const el=getBlankEl(id);return el?el.querySelector('.blank-display'):null;}
+
+function startChallenge(sec){
+  if(activeChallengeSection&&activeChallengeSection!==sec)endChallenge(activeChallengeSection);
+  activeChallengeSection=sec;
+  const st=challengeStates[sec];
+  st.active=true;st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status=document.getElementById(`sec-status-${sec}`);if(status){status.textContent='';status.className='sec-status';}
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='⏹ やめる';btn.style.background='#555';btn.onclick=()=>endChallenge(sec);}
+  showChipBar(sec);
+  document.getElementById('ccb-secname-label').textContent=secNames[sec]||'';
+}
+
+function endChallenge(sec){
+  const st=challengeStates[sec];if(!st)return;
+  st.active=false;st.demoMode=false;st.demoSnapshot=null;
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent=allAnswers[id];
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='🎯 チャレンジ！';btn.style.background='';btn.onclick=()=>startChallenge(sec);}
+  if(activeChallengeSection===sec){activeChallengeSection=null;hideChipBar();}
+}
+
+function showChipBar(sec){
+  const bar=document.getElementById('challenge-chip-bar');bar.classList.add('visible');
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  const st=challengeStates[sec];
+  if(st.demoMode){controls.style.display='none';demoReturn.style.display='block';}
+  else{controls.style.display='flex';demoReturn.style.display='none';}
+  renderChips(sec);updateCcbHint(sec);
+}
+function hideChipBar(){document.getElementById('challenge-chip-bar').classList.remove('visible');}
+function renderChips(sec){
+  const st=challengeStates[sec];
+  const container=document.getElementById('ccb-chips');container.innerHTML='';
+  st.chipBank.forEach((word,idx)=>{
+    const chip=document.createElement('div');
+    chip.className='challenge-chip'+(idx===st.selectedChipIdx?' selected':'');
+    chip.textContent=word;chip.onclick=()=>tapChip(sec,idx);
+    container.appendChild(chip);
+  });
+  document.getElementById('ccb-count').textContent=`残り ${st.chipBank.length}語`;
+}
+function updateCcbHint(sec){
+  const st=challengeStates[sec];const hint=document.getElementById('ccb-hint');
+  if(st.demoMode)hint.textContent='手本表示中';
+  else if(st.selectedChipIdx!==null)hint.textContent=`「${st.chipBank[st.selectedChipIdx]}」を選択中 → 空欄をタップ`;
+  else hint.textContent='語句を選んでください';
+}
+function tapChip(sec,idx){
+  const st=challengeStates[sec];if(st.demoMode)return;
+  st.selectedChipIdx=(st.selectedChipIdx===idx)?null:idx;
+  renderChips(sec);updateCcbHint(sec);
+}
+function blankClicked(e,id){
+  e.stopPropagation();
+  const sec=getSecForId(id);
+  if(sec&&challengeStates[sec].active&&!challengeStates[sec].demoMode){handleBlankTap(sec,id);}
+  else{
+    const el=getBlankEl(id);if(!el)return;
+    document.querySelectorAll('.kw.active').forEach(k=>{if(k!==el)k.classList.remove('active');});
+    el.classList.toggle('active');
+  }
+}
+function handleBlankTap(sec,id){
+  const st=challengeStates[sec];const disp=getDisplayEl(id);const el=getBlankEl(id);
+  if(st.selectedChipIdx!==null){
+    const word=st.chipBank[st.selectedChipIdx];
+    const existing=st.placedWords[id];
+    if(existing!==undefined)st.chipBank.push(existing);
+    st.chipBank.splice(st.selectedChipIdx,1);
+    st.placedWords[id]=word;st.selectedChipIdx=null;
+    if(disp)disp.textContent=word;if(el)el.classList.add('placed');
+  }else{
+    const existing=st.placedWords[id];
+    if(existing!==undefined){
+      st.chipBank.push(existing);delete st.placedWords[id];
+      if(disp)disp.textContent='';if(el)el.classList.remove('placed');
+    }
+  }
+  renderChips(sec);updateCcbHint(sec);
+}
+function getSecForId(id){
+  for(const[s,ids]of Object.entries(secAnswers)){if(ids.includes(id))return parseInt(s);}
+  return null;
+}
+function judgeChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];const ids=secAnswers[sec];let correct=0;
+  ids.forEach(id=>{
+    const placed=st.placedWords[id];const ans=allAnswers[id];
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(placed===ans){correct++;if(el){el.classList.add('correct');el.classList.remove('wrong','placed');}}
+    else{
+      if(placed!==undefined){st.chipBank.push(placed);delete st.placedWords[id];if(disp)disp.textContent='';}
+      if(el){el.classList.add('wrong');el.classList.remove('placed');}
+      showOshii(id,ans);
+    }
+  });
+  renderChips(sec);updateCcbHint(sec);
+  const status=document.getElementById(`sec-status-${sec}`);
+  if(correct===ids.length){if(status){status.textContent='🎉 全問正解！';status.className='sec-status pass';}endChallenge(sec);launchConfetti();}
+  else{if(status){status.textContent=`${correct}/${ids.length}問 正解`;status.className='sec-status fail';}}
+}
+function showOshii(id,ans){
+  const popup=document.getElementById('oshii-popup');
+  document.getElementById('oshii-msg').textContent=`「${id}」の答えは「${ans}」`;
+  popup.style.display='block';
+  setTimeout(()=>{popup.style.display='none';},2500);
+}
+function showDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];
+  st.demoSnapshot={chipBank:[...st.chipBank],placedWords:{...st.placedWords},selectedChipIdx:st.selectedChipIdx};
+  st.demoMode=true;st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);const el=getBlankEl(id);
+    if(disp)disp.textContent=allAnswers[id];
+    if(el){el.classList.add('demo-fill');el.classList.remove('placed','correct','wrong');}
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='block';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='none';demoReturn.style.display='block';
+  renderChips(sec);updateCcbHint(sec);
+}
+function exitDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];if(!st.demoMode)return;
+  st.demoMode=false;
+  if(st.demoSnapshot){st.chipBank=[...st.demoSnapshot.chipBank];st.placedWords={...st.demoSnapshot.placedWords};st.selectedChipIdx=null;st.demoSnapshot=null;}
+  secAnswers[sec].forEach(id=>{
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(el)el.classList.remove('demo-fill','correct','wrong','placed');
+    const placed=st.placedWords[id];
+    if(disp)disp.textContent=placed!==undefined?placed:'';
+    if(placed!==undefined&&el)el.classList.add('placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='flex';demoReturn.style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+function resetChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  document.getElementById('ccb-controls').style.display='flex';
+  document.getElementById('ccb-demo-return').style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function toggleMQ(id,btn){
+  const body=document.getElementById(id);
+  const isOpen=body.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  if(isOpen&&body.innerHTML.trim()==='')renderMQ(id);
+}
+function renderMQ(id){
+  const secNum=parseInt(id.replace('mq',''));
+  const qs=miniQuizData[secNum];
+  let html='';
+  qs.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerMQ(this,${ci},${q.ans},'${id}-q${i}')">${c}</div>`;});
+    html+='</div></div>';
+  });
+  document.getElementById(id).innerHTML=html;
+}
+function answerMQ(el,chosen,correct,key){
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+
+let finalAnswered={};
+function initFinal(){
+  const area=document.getElementById('final-quiz-area');
+  let html='';
+  finalQuizData.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices" id="fq-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerFinal(this,${ci},${q.ans},${i})">${c}</div>`;});
+    html+='</div></div>';
+  });
+  area.innerHTML=html;
+}
+function answerFinal(el,chosen,correct,qi){
+  if(finalAnswered[qi]!==undefined)return;
+  finalAnswered[qi]=chosen===correct;
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+function judgeFinal(){
+  const total=finalQuizData.length;
+  const answered=Object.keys(finalAnswered).length;
+  if(answered<total){document.getElementById('final-result-row').innerHTML=`<p style="color:#c00;font-weight:bold">まだ${total-answered}問残っています。</p>`;return;}
+  const correct=Object.values(finalAnswered).filter(Boolean).length;
+  const pass=correct>=8;
+  document.getElementById('final-result-row').innerHTML=`<div style="margin-top:12px;padding:16px;border-radius:10px;background:${pass?'#d0f0d8':'#fdd'};border:2px solid ${pass?'#1a6b22':'#c00'};font-size:16px;font-weight:bold;text-align:center">${pass?'🎉 合格！':'😅 もう一度挑戦！'} ${correct} / ${total} 問正解${pass?' （合格）':' （あと'+(8-correct)+'問で合格）'}</div>`;
+  if(pass)launchConfetti();
+}
+function resetFinal(){finalAnswered={};document.getElementById('final-result-row').innerHTML='';initFinal();}
+
+function renderChecklist(){
+  const area=document.getElementById('checklist-area');if(!area)return;
+  let html='';
+  checkItems.forEach((item,i)=>{
+    html+=`<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 10px;border-radius:8px;background:${checkState[i]?'#d0f0d8':'#fdf5ec'};border:1.5px solid ${checkState[i]?'#1a6b22':'#d4956a'};transition:all 0.2s;margin-bottom:6px">
+      <input type="checkbox" ${checkState[i]?'checked':''} onchange="toggleCheck(${i})" style="margin-top:3px;width:18px;height:18px;accent-color:#1a6b22">
+      <span style="font-size:14px;line-height:1.7">${item}</span>
+    </label>`;
+  });
+  area.innerHTML=html;
+  const done=checkState.filter(Boolean).length;
+  document.getElementById('check-count').textContent=`${done} / ${checkItems.length} チェック済み`;
+  document.getElementById('check-bar').style.width=`${(done/checkItems.length)*100}%`;
+}
+function toggleCheck(i){checkState[i]=!checkState[i];renderChecklist();if(checkState.every(Boolean))launchConfetti();}
+
+function launchConfetti(){
+  const colors=['#f4a261','#e76f51','#2a9d8f','#e9c46a','#264653','#a8dadc','#457b9d'];
+  for(let i=0;i<60;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${8+Math.random()*8}px;height:${8+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend',()=>el.remove());
+  }
+}
+const style=document.createElement('style');
+style.textContent='.confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(style);
+
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.kw'))document.querySelectorAll('.kw.active').forEach(k=>k.classList.remove('active'));
+});
+
+function openModal(name){
+  const el=document.getElementById('modal-'+name);
+  if(el)el.classList.add('open');
+}
+function closeModal(name){
+  const el=document.getElementById('modal-'+name);
+  if(el)el.classList.remove('open');
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    ['yoshitsune','jito','shogun23','gotoba','goseibai','genko','tokusei'].forEach(n=>closeModal(n));
+  }
+});
+
+initFinal();
+renderChecklist();
+</script>
+</body>
+</html>
