@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元⑲ 戦国時代と織田信長 ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a1c00}
+  .back-link.gray{background:#555}.back-link.gray:hover{background:#333}
+  .back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .unit-header{background:linear-gradient(135deg,#5a1a00,#8b2500);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #d4956a;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#8b2500;transition:all 0.2s;flex:1;min-width:130px;text-align:center;font-family:inherit}
+  .mode-tab.active{background:#8b2500;color:#fff;border-color:#8b2500;box-shadow:0 3px 0 #6a1c00}
+  .mode-tab:hover:not(.active){background:#fdebd0}
+  .panel{background:#fff;border-radius:12px;border:1px solid #d4956a;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #d4956a;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b2500;transition:all 0.15s;font-family:inherit}
+  .fc-timer-btn.active{background:#8b2500;color:#fff;border-color:#8b2500}
+  .fc-timer-btn:hover:not(.active){background:#fdebd0}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(139,37,0,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#8b2500}
+  .fc-card .fc-hint{font-size:13px;color:#7a4000;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15;font-family:inherit}
+  .fc-btn-ng{padding:11px 32px;background:#8b2500;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #d4956a;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px;font-family:inherit}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s;font-family:inherit;text-align:left}
+  .drill-choice:hover{border-color:#8b2500;background:#fdebd0}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a1c00;display:none;font-family:inherit}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#8b2500;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s;font-family:inherit;text-align:left}
+  .test-choice:hover{border-color:#8b2500;background:#fdebd0}
+  .test-choice.selected{border-color:#8b2500;background:#fdd9c4;color:#5a1500;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .test-submit{background:#8b2500;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #6a1c00;margin-top:18px;width:100%;font-family:inherit}
+  .test-submit:hover{background:#6a1c00}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#8b2500;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #d4956a;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#5a1a00,#8b2500);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#fff5ec;border-left:5px solid #8b2500;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#8b2500}
+  .setsu-h3{font-size:14px;font-weight:800;color:#8b2500;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #f4c8a0}
+  .setsu-box{background:#fffaf5;border-radius:8px;border:1px solid #e8c8a0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#8b2500}
+  .setsu-box .lbl{display:inline-block;background:#8b2500;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_nh19.html" class="back-link">← 単元⑲ テキストへ</a>
+  <a href="nihonshi_drill_ch07.html" class="back-link" style="background:#c87000">← 第7章ドリルへ</a>
+  <a href="nihonshi_index.html" class="back-link gray">← 目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第７章　単元⑲ ドリル</div>
+  <h1>⚔️ 戦国時代と織田信長</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 8枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 10問</span>
+    <span class="stat-chip">📋 確認テスト 10問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元⑲ のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body" id="setsu-body">
+    <div class="setsu-intro">
+      応仁の乱（1467年）以降，実力で領国を支配する「<strong>戦国大名</strong>」が台頭した。<strong>織田信長</strong>は革新的な戦術と経済政策で頭角を現し，天下統一を目前にしたが1582年に本能寺の変で倒れた。
+    </div>
+    <div class="setsu-h3">戦国大名の特徴</div>
+    <div class="setsu-box">
+      守護大名と異なり，「<strong>下剋上</strong>」で実力によって台頭した戦国大名は，自ら法律・軍隊・経済を整備して領国を支配した。<br>
+      <span class="lbl">分国法</span> 独自の法律（今川仮名目録・甲州法度など）<br>
+      <span class="lbl orange">城下町</span> 家臣や商工業者を城の周囲に集めた町<br>
+      <span class="lbl">検地</span> 独自に土地を測量し，年貢の基準を定めた
+    </div>
+    <div class="setsu-h3">織田信長の主な業績</div>
+    <div class="setsu-box">
+      <span class="lbl">桶狭間の戦い（1560年）</span> 今川義元の大軍を少数で奇襲して撃破。天下へ名乗りを上げた。<br>
+      <span class="lbl orange">足利義昭を擁立</span> 室町幕府最後の将軍として上洛。のちに追放し幕府は事実上滅亡。<br>
+      <span class="lbl">長篠の戦い（1575年）</span> 鉄砲を組織的に活用し，武田の精鋭騎馬隊を壊滅させた。<br>
+      <span class="lbl orange">楽市・楽座</span> 同業者組合（座）の独占権を廃止し，自由な商売を認めた。<br>
+      <span class="lbl">安土城</span> 琵琶湖畔に築いた日本初の本格的な天守を持つ城。権威の象徴。<br>
+      <span class="lbl orange">本能寺の変（1582年）</span> 家臣・明智光秀の謀反で自害。天下統一の夢は未完に終わった。
+    </div>
+    <div class="setsu-note">💡 <strong>ポイント</strong>：鉄砲は1543年に<strong>種子島</strong>に伝来したポルトガル人による。信長の3つの戦い（桶狭間・長篠・本能寺の変）と，楽市・楽座の内容をセットで覚えよう。</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title:"単元⑲ 戦国時代と織田信長",
+  flashCards:[
+    {q:"応仁の乱後，実力（下剋上）で台頭し，分国法・城下町を持った大名を何というか。",a:"戦国大名（せんごくだいみょう）",hint:"守護大名とは異なり自力で領国を支配"},
+    {q:"戦国大名が領国支配のために独自に定めた法律を何というか。",a:"分国法（ぶんこくほう）",hint:"今川仮名目録・甲州法度など大名ごとに異なる"},
+    {q:"1543年，ポルトガル人によって鉄砲が日本に初めて伝来した島はどこか。",a:"種子島（たねがしま）",hint:"鹿児島県南部の島"},
+    {q:"1560年，信長が今川義元の大軍を少数の兵で奇襲して破った戦いは何か。",a:"桶狭間の戦い（おけはざまのたたかい）",hint:"約2万の大軍に対し約2千で勝利"},
+    {q:"1575年，信長が鉄砲を組織的に活用して武田の騎馬隊を大破した戦いは何か。",a:"長篠の戦い（ながしののたたかい）",hint:"武田信玄の子・勝頼の精鋭が壊滅"},
+    {q:"信長が行った，座（同業者組合）の独占権を廃止し自由な商売を認めた政策は何か。",a:"楽市・楽座（らくいち・らくざ）",hint:"城下町の経済を活性化させた"},
+    {q:"信長が琵琶湖畔に築いた，日本初の本格的な天守を持つ城はどれか。",a:"安土城（あづちじょう）",hint:"権威の象徴。のちに焼失した"},
+    {q:"1582年，家臣の明智光秀が織田信長を討った事件を何というか。",a:"本能寺の変（ほんのうじのへん）",hint:"信長が京都・本能寺で自害。天下統一目前に"},
+  ],
+  drillQuiz:[
+    {q:"応仁の乱後，下剋上で台頭し，独自の分国法・城下町を持った大名を何というか。",
+     choices:["守護大名","戦国大名","管領","守護代"],ans:1,
+     exp:"戦国大名（せんごくだいみょう）。応仁の乱（1467年〜）以降，実力で領国を支配した大名。守護大名とは異なり，自ら法律・軍隊・経済を整備した。"},
+    {q:"戦国大名が領国支配のために独自に制定した法律を何というか。",
+     choices:["武家諸法度","分国法","御成敗式目","大宝律令"],ans:1,
+     exp:"分国法（ぶんこくほう）。今川仮名目録・甲州法度など，各大名がそれぞれ制定した領国の法律。"},
+    {q:"織田信長が1560年，今川義元の大軍をわずかな兵で奇襲して破った戦いは何か。",
+     choices:["長篠の戦い","川中島の戦い","桶狭間の戦い","姉川の戦い"],ans:2,
+     exp:"桶狭間の戦い（おけはざまのたたかい）。今川義元の約2万の軍を，信長がおよそ2千の兵で奇襲し勝利。信長が天下へ名乗りを上げたきっかけとなった戦い。"},
+    {q:"織田信長が擁立して上洛した，室町幕府最後の将軍は誰か。",
+     choices:["足利義満","足利義昭","足利義輝","足利義尚"],ans:1,
+     exp:"足利義昭（あしかがよしあき）。信長は義昭を将軍に立てて上洛したが，のちに対立して追放。これにより室町幕府は事実上滅亡した。"},
+    {q:"信長が1575年，武田の騎馬隊を鉄砲の組織的活用で壊滅させた戦いは何か。",
+     choices:["桶狭間の戦い","長篠の戦い","賤ヶ岳の戦い","関ヶ原の戦い"],ans:1,
+     exp:"長篠の戦い（ながしののたたかい）。鉄砲を組織的に活用して武田の精鋭騎馬隊を大破。戦国時代の戦い方を大きく変えた。"},
+    {q:"織田信長が行った，同業者組合（座）の独占権を廃止して自由な商売を認めた政策を何というか。",
+     choices:["参勤交代","石高制","楽市・楽座","太閤検地"],ans:2,
+     exp:"楽市・楽座（らくいち・らくざ）。同業者組合（座）の独占権を廃止し，誰でも自由に商売できるようにした経済政策。城下町の経済発展を促した。"},
+    {q:"信長が琵琶湖畔に築いた，日本初の本格的な天守を持つ城はどれか。",
+     choices:["大坂城","安土城","姫路城","伏見城"],ans:1,
+     exp:"安土城（あづちじょう）。琵琶湖東岸に築かれた城。信長の権威と新しい時代を象徴した。"},
+    {q:"1582年，家臣の明智光秀が織田信長を討った事件を何というか。",
+     choices:["関ヶ原の戦い","本能寺の変","山崎の戦い","賤ヶ岳の戦い"],ans:1,
+     exp:"本能寺の変（ほんのうじのへん）。明智光秀が信長を京都・本能寺で急襲した。天下統一を目前にした信長が自害した歴史的事件。"},
+    {q:"鉄砲が日本に初めて伝来した島はどこか。",
+     choices:["対馬","佐渡島","種子島","屋久島"],ans:2,
+     exp:"種子島（たねがしま）。1543年，ポルトガル人を乗せた船が種子島に漂着し，鉄砲が伝来した。"},
+    {q:"本能寺の変の後，山崎の戦いで明智光秀を破り，天下統一の主導権を握ったのは誰か。",
+     choices:["柴田勝家","豊臣秀吉","徳川家康","前田利家"],ans:1,
+     exp:"豊臣秀吉（とよとみひでよし）。山崎の戦い（1582年）で明智光秀を素早く破り，「信長の後継者」として台頭した。"},
+  ],
+  testQuiz:[
+    {q:"戦国大名が独自の領国支配のために定めた法律を何というか。",choices:["武家諸法度","分国法","御成敗式目","大宝律令"],ans:1},
+    {q:"応仁の乱が起きたのは何世紀か。",choices:["14世紀","15世紀","16世紀","17世紀"],ans:1},
+    {q:"1560年，信長が奇襲して破った今川氏の当主は誰か。",choices:["今川氏親","今川義元","今川氏真","今川範氏"],ans:1},
+    {q:"桶狭間の戦いで織田信長が用いた主な戦術はどれか。",choices:["籠城","火攻め","奇襲","水攻め"],ans:2},
+    {q:"信長が1575年，武田軍に対して組織的に活用した武器は何か。",choices:["大砲","鉄砲","弓矢","火薬"],ans:1},
+    {q:"楽市・楽座とはどのような政策か。",choices:["農民から武器を没収する","土地の生産力を石高で測る","座（同業者組合）の独占を廃止して自由な商売を認める","大名の居城を幕府の許可制にする"],ans:2},
+    {q:"信長が琵琶湖畔に築いた城はどれか。",choices:["大坂城","伏見城","安土城","姫路城"],ans:2},
+    {q:"室町幕府最後の将軍として，信長が擁立した人物は誰か。",choices:["足利義輝","足利義昭","足利義満","足利尊氏"],ans:1},
+    {q:"本能寺の変を起こした人物は誰か。",choices:["豊臣秀吉","徳川家康","柴田勝家","明智光秀"],ans:3},
+    {q:"本能寺の変の後，山崎の戦いで明智光秀を破ったのは誰か。",choices:["柴田勝家","前田利家","豊臣秀吉","徳川家康"],ans:2},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});renderContent();}
+function renderContent(){const area=document.getElementById('content-area');if(currentMode==='flash')renderFlash(area);else if(currentMode==='drill')renderDrill(area);else renderTest(area);}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){const colors=['#8b2500','#c87000','#f4d03f','#2d8a30','#e8d5c8','#fff'];for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){initFlash();area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;startCardTimer();}
+function buildFlashCard(){if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#8b2500;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+const card=fcCards[fcIndex];return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+const q=drillQs[drillIndex];const choices=q.choices.map((c,i)=>`<button class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</button>`).join('');return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;}
+function drillAnswer(idx){if(drillAnswered)return;drillAnswered=true;const q=drillQs[drillIndex];document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});if(idx===q.ans)drillScore++;const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){testSelections={};testSubmitted=false;let html='<div class="panel">';UNIT.testQuiz.forEach((q,i)=>{html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;q.choices.forEach((c,ci)=>{html+=`<button class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</button>`;});html+='</div></div>';});html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;area.innerHTML=html;}
+function testSelect(qi,ci){if(testSubmitted)return;testSelections[qi]=ci;document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});}
+function submitTest(){if(testSubmitted)return;const total=UNIT.testQuiz.length;const answered=Object.keys(testSelections).length;if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}testSubmitted=true;let correct=0;let reviewHTML='<div class="test-review">';UNIT.testQuiz.forEach((q,i)=>{const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;});reviewHTML+='</div>';const pct=Math.round(correct/total*100);const pass=correct>=8;document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元⑲ クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;document.getElementById('test-result').style.display='block';if(pass)fireConfetti();}
+
+function toggleSetsu(){const hd=document.getElementById('setsu-hd');const body=document.getElementById('setsu-body');const arrow=hd.querySelector('.sarrow');hd.classList.toggle('open');body.classList.toggle('open');arrow.textContent=body.classList.contains('open')?'▲':'▼';}
+
+selectMode('flash');
+</script>
+</body>
+</html>

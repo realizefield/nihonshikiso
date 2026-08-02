@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑬鎌倉幕府の成立 ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a2318}
+  .unit-header{background:linear-gradient(135deg,#2d6a4f,#1a4f7a);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #d4956a;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.2s;flex:1;min-width:130px;text-align:center}
+  .mode-tab.active{background:#8b3322;color:#fff;border-color:#8b3322;box-shadow:0 3px 0 #6a2318}
+  .mode-tab:hover:not(.active){background:#fdebd0}
+  .panel{background:#fff;border-radius:12px;border:1px solid #d4956a;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #d4956a;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.15s}
+  .fc-timer-btn.active{background:#8b3322;color:#fff;border-color:#8b3322}
+  .fc-timer-btn:hover:not(.active){background:#fdebd0}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(200,112,0,0.15);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#8b3322}
+  .fc-card .fc-hint{font-size:13px;color:#6a4f00;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:11px 32px;background:#8b3322;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #d4956a;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318;display:none}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#8b3322;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .test-choice.selected{border-color:#1a4f7a;background:#e0f0ff;color:#1a4f7a;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .test-submit{background:#8b3322;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #6a2318;margin-top:18px;width:100%}
+  .test-submit:hover{background:#6a2318}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#8b3322;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#c87000,#f4a261);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+  /* 説明文スタイル */
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #6aad8f;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#2d6a4f,#1a4f7a);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-hd.open .sarrow{transform:rotate(90deg)}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#efffef;border-left:5px solid #2d6a4f;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#2d6a4f}
+  .setsu-h3{font-size:14px;font-weight:800;color:#2d6a4f;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #c0e8d0}
+  .setsu-box{background:#f4fff8;border-radius:8px;border:1px solid #b0d8c0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#2d6a4f}
+  .setsu-box .lbl{display:inline-block;background:#2d6a4f;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.blue{background:#1a4f7a}
+  .setsu-box .lbl.red{background:#8b3322}
+  .setsu-cmp{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+  .setsu-cmp th{background:#2d6a4f;color:#fff;padding:7px 12px;text-align:left;font-size:13px}
+  .setsu-cmp td{padding:8px 12px;border:1px solid #b0d8c0;line-height:1.8;vertical-align:top}
+  .setsu-cmp tr:nth-child(even) td{background:#efffef}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+  /* 詳しく知るボタン */
+  .shiru-btn{display:inline-flex;align-items:center;gap:4px;background:#efffef;border:1.5px solid #2d6a4f;color:#2d6a4f;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold;cursor:pointer;margin:4px 0 2px 2px;transition:all .15s;vertical-align:middle;line-height:1.6}
+  .shiru-btn:hover{background:#2d6a4f;color:#fff}
+  /* モーダル */
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.65);z-index:20000;justify-content:center;align-items:flex-start;padding:20px;overflow-y:auto}
+  .modal-overlay.open{display:flex}
+  .modal-box{background:#fff;border-radius:16px;max-width:640px;width:100%;margin:auto;padding:26px 24px 22px;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.35);border-top:5px solid #2d6a4f}
+  .modal-close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer;color:#888;background:none;border:none;line-height:1;padding:2px 6px;border-radius:6px}
+  .modal-close:hover{background:#eee;color:#333}
+  .modal-title{font-size:16px;font-weight:800;color:#2d6a4f;margin-bottom:14px;padding-right:32px;line-height:1.6;border-bottom:2px solid #c0e8d0;padding-bottom:10px}
+  .modal-body{font-size:14px;line-height:2.0;color:#1a1a2e}
+  .modal-body p{margin-bottom:10px}
+  .modal-body .m-lbl{display:inline-block;background:#2d6a4f;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:5px;vertical-align:middle}
+  .modal-body .m-lbl.red{background:#8b3322}
+  .modal-body .m-lbl.blue{background:#1a4f7a}
+  .modal-body .m-note{background:#fff8e8;border-left:4px solid #c87000;padding:9px 13px;border-radius:0 6px 6px 0;margin:10px 0;font-size:13px;color:#4a3000;line-height:1.9}
+  .modal-body .m-important{background:#efffef;border:1.5px solid #2d6a4f;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:13px;line-height:1.9}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-link">← 目次へ戻る</a>
+
+<div class="unit-header">
+  <div class="unit-num">第５章 鎌倉時代｜単元⑬</div>
+  <h1>鎌倉幕府の成立——御恩と奉公・承久の乱</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 10枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 5問</span>
+    <span class="stat-chip">📋 確認テスト 8問</span>
+  </div>
+</div>
+
+<!-- ★ 説明文 ★ -->
+<div class="setsu-section">
+  <div class="setsu-hd open" id="setsu-hd" onclick="toggleSetsu()">
+    📚 この単元の説明文（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body open" id="setsu-body">
+
+    <div class="setsu-intro">
+      平安時代末に起こった内乱（源平の争い）をへて，<strong>武士の世の中</strong>が始まりました。<br>
+      源頼朝が東国の武士をまとめ，日本初の武家政権「<strong>鎌倉幕府</strong>」を開きます。<br>
+      将軍と御家人の間の「<strong>御恩と奉公</strong>」という主従関係，そして朝廷との対立（<strong>承久の乱</strong>）をしっかり理解しましょう。
+    </div>
+
+    <div class="setsu-h3">⚔️ 鎌倉幕府の成立——頼朝はどのようにして政権をつかんだか</div>
+    <div class="setsu-box">
+      1180年，<strong>後白河法皇</strong>の息子・以仁王が平氏打倒の令旨（命令書）を出すと，<span class="lbl">源頼朝</span>が伊豆（静岡）で兵を挙げました。
+      <button class="shiru-btn" onclick="openModal('goshira')">🔍 後白河法皇の思惑は？</button><br><br>
+      頼朝は東国の武士を次々と従え，1185年に<strong>壇ノ浦の戦い</strong>で平氏を滅ぼしました。同年，頼朝は全国に<strong>守護・地頭</strong>を設置する権限を朝廷から認めさせます。
+      <button class="shiru-btn" onclick="openModal('jito-why')">🔍 設置の本当の理由は？</button><br><br>
+      義経が平氏討伐で活躍しましたが，やがて兄・頼朝と激しく対立することになります。
+      <button class="shiru-btn" onclick="openModal('yoshi')">🔍 なぜ義経と仲たがいしたのか</button><br><br>
+      1192年，頼朝は朝廷から「<strong>征夷大将軍</strong>」に任命され，<strong>鎌倉幕府</strong>（本拠地：神奈川県鎌倉市）が名実ともに成立しました。
+    </div>
+
+    <div class="setsu-h3">🏛️ 守護と地頭——幕府が全国を支配するしくみ</div>
+    <table class="setsu-cmp">
+      <tr><th>　</th><th>守護（しゅご）</th><th>地頭（じとう）</th></tr>
+      <tr><td><strong>単位</strong></td><td>国（くに）ごと1人</td><td>荘園・公領ごと</td></tr>
+      <tr><td><strong>役割</strong></td><td>軍事・警察（大犯三ヶ条）</td><td>土地管理・年貢の徴収 <button class="shiru-btn" onclick="openModal('jito-tax')">🔍 年貢は誰に渡る？</button></td></tr>
+      <tr><td><strong>担当者</strong></td><td>有力な御家人</td><td>御家人（武士）<button class="shiru-btn" onclick="openModal('jito-merit')">🔍 地頭のメリットは？</button></td></tr>
+      <tr><td><strong>特徴</strong></td><td>武士を統率する</td><td>幕府の財政を支える</td></tr>
+    </table>
+    <div class="setsu-note">💡 <strong>大犯三ヶ条（たいぼんさんかじょう）</strong>：守護の仕事の内容。①京都大番役（天皇の御所を警護）②謀反人の逮捕　③殺害人の逮捕　この3つだけが守護の職権でした。</div>
+
+    <div class="setsu-h3">🤝 御恩と奉公——将軍と御家人の主従関係</div>
+    <div class="setsu-box">
+      鎌倉幕府の根幹は将軍（頼朝）と<strong>御家人（ごけにん）</strong>の主従関係です。<br><br>
+      <span class="lbl">御恩（ごおん）</span> 将軍が御家人に対して行うこと→ 先祖から受け継いだ土地を保証する・手柄に応じて新しい土地を与える<br><br>
+      <span class="lbl blue">奉公（ほうこう）</span> 御家人が将軍のために行うこと→ 戦の時は命をかけて戦う・平時は鎌倉や京都の警護にあたる<br><br>
+      この「土地を仲立ちにした主従関係」が鎌倉時代の封建制度の基本です。
+    </div>
+
+    <div class="setsu-h3">🏢 鎌倉幕府のしくみ</div>
+    <div class="setsu-box">
+      <span class="lbl">侍所（さむらいどころ）</span> 1180年設置。御家人の統率・軍事警察を担当。<br>
+      <span class="lbl">公文所→政所（まんどころ）</span> 1184年設置。一般政務・財政を担当。<br>
+      <span class="lbl">問注所（もんちゅうじょ）</span> 1184年設置。裁判・訴訟を担当。<br><br>
+      やがて頼朝の死後，妻・北条政子の一族（<strong>北条氏</strong>）が「<strong>執権（しっけん）</strong>」という地位を独占して実権をにぎりました。これを「<strong>執権政治</strong>」といいます。
+      <button class="shiru-btn" onclick="openModal('genji23')">🔍 2代・3代将軍はどう暗殺されたのか</button>
+      <button class="shiru-btn" onclick="openModal('masako-know')">🔍 北条政子は知っていたのか</button>
+    </div>
+
+    <div class="setsu-h3">⚡ 承久の乱（1221年）——朝廷 vs 幕府の天下分け目の戦い</div>
+    <div class="setsu-box">
+      鎌倉幕府の力が強まるにつれて，朝廷側は幕府への不満を強めました。1221年，<span class="lbl red">後鳥羽上皇</span>が2代執権・北条義時の追討を命じる「院宣」を出しました（<strong>承久の乱</strong>）。
+      <button class="shiru-btn" onclick="openModal('gotoba')">🔍 後鳥羽上皇とはどんな人物か</button><br><br>
+      この時，頼朝の妻・<strong>北条政子</strong>が御家人たちの前で演説し，「頼朝様のご恩を忘れるな！今こそ幕府のために戦え！」と訴えました。
+      <button class="shiru-btn" onclick="openModal('masako-speech')">🔍 演説の全文を読む</button>
+      御家人たちは奮起し，幕府軍はわずか1か月で朝廷軍を破りました。<br><br>
+      敗れた後鳥羽上皇は<strong>隠岐（島根県）へ流罪</strong>。幕府は京都に<strong>六波羅探題（ろくはらたんだい）</strong>を設置し，朝廷を監視しました。これ以後，幕府の全国支配が確立します。
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== モーダル群 ===== -->
+
+<div class="modal-overlay" id="modal-yoshi" onclick="bgClose(event,'yoshi')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('yoshi')">✕</button>
+    <div class="modal-title">⚔️ 義経と頼朝はなぜ仲たがいしたのか</div>
+    <div class="modal-body">
+      <p>源義経は壇ノ浦の戦い（1185年）で平氏を滅ぼした英雄でしたが，兄・頼朝との関係は急速に悪化しました。</p>
+      <p><span class="m-lbl">原因①</span> 義経は頼朝の許可なく，後白河法皇から「検非違使（けびいし）」「左衛門少尉（さえもんのしょうじょう）」などの朝廷の官職を受け取りました。頼朝は「武士が将軍の許可なく朝廷から官職をもらうことは絶対禁止」というルールを定めており，これが頼朝の怒りを買いました。</p>
+      <p><span class="m-lbl">原因②</span> 義経は頼朝の命令に背いて，独断で九州攻めを計画し失敗しました。</p>
+      <p><span class="m-lbl">原因③</span> 後白河法皇が意図的に義経を頼朝の対抗馬として利用しようとしました。法皇は義経に高い官職を与えて頼朝をけん制しようとしたのです。</p>
+      <p>頼朝は義経追討の命令を出し，義経は奥州（東北）の藤原秀衡（ふじわらのひでひら）のもとに逃れました。秀衡の死後，その子・泰衡（やすひら）が頼朝の圧力に負けて義経を攻撃。義経は1189年，衣川（ころもがわ）で自害しました。</p>
+      <div class="m-note">📌 義経は「判官びいき」という言葉の語源。悲劇の英雄として庶民に愛され，「生きていて北海道やモンゴルに渡った」という伝説も生まれました。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-goshira" onclick="bgClose(event,'goshira')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('goshira')">✕</button>
+    <div class="modal-title">🎭 後白河法皇はどのようにしたかったのか</div>
+    <div class="modal-body">
+      <p>後白河法皇（1127〜1192年）は平安末から鎌倉初期にかけて院政を行った人物で，源頼朝から「日本一の大天狗（たいてんぐ）」と評されるほど政治的に老獪でした。</p>
+      <p><span class="m-lbl">基本的な思惑</span> 武士の力を利用しながら，最終的に天皇・上皇が日本を支配する体制を維持したかった。</p>
+      <p><span class="m-lbl">源平合戦での策略</span> 法皇は平氏と源氏を巧みに操り，両者を戦わせました。どちらが勝っても，朝廷に有利な状況をつくろうとしていました。</p>
+      <p><span class="m-lbl">義経利用の思惑</span> 頼朝が東国に強大な武力を持つようになると，法皇は義経に高い官職を与えて頼朝をけん制しようとしました。義経と頼朝を対立させて，互いに弱め合わせれば朝廷が漁夫の利を得られると考えたのです。</p>
+      <div class="m-note">📌 この策略は失敗しました。頼朝は義経を追い詰めながら，「義経を捜索するために全国に守護・地頭を置く必要がある」と法皇に迫り，全国支配のしくみを作り上げてしまいました。法皇は最終的に頼朝に屈服せざるをえませんでした。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-jito-why" onclick="bgClose(event,'jito-why')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('jito-why')">✕</button>
+    <div class="modal-title">🔍 守護・地頭設置の本当の理由は何だったのか</div>
+    <div class="modal-body">
+      <p>教科書では「1185年に頼朝が守護・地頭の設置を朝廷に認めさせた」と書かれています。公式の理由は<strong>「源義経と行家（頼朝の叔父）の追討のため」</strong>でした。</p>
+      <p><span class="m-lbl">名目上の理由</span> 義経の遺体が確認されていなかったため「まだ生きているかもしれない」→「全国で義経を捜索する役人が必要だ」というロジックを使いました。</p>
+      <p><span class="m-lbl">本当の目的</span> 全国に幕府の支配の網を張ること。守護・地頭を設置すれば，西日本も含めた全国の武士を幕府の支配下に置けます。</p>
+      <div class="m-important">⚠️ <strong>これは本当か？</strong><br>歴史家の間でも議論があります。「義経追討名目説」は確かに一面の真実です。しかし頼朝が1185年以前から東国に守護的な機能を持つ役職を設けていた事実もあり，<strong>義経問題は「好都合な口実」であり，全国制覇という本来の目的があった</strong>と考える歴史家が多いです。義経は1189年に死亡しましたが，守護・地頭はその後も廃止されませんでした。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-jito-tax" onclick="bgClose(event,'jito-tax')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('jito-tax')">✕</button>
+    <div class="modal-title">💰 地頭が徴収した租税は誰に渡るのか</div>
+    <div class="modal-body">
+      <p>地頭が徴収した年貢（租税）の行き先は，その土地が誰のものかによって決まります。</p>
+      <p><span class="m-lbl">荘園の場合</span> 荘園の領主（公家・寺社）に年貢の大部分が送られます。地頭は「代わりに徴収してあげる管理人」という立場です。</p>
+      <p><span class="m-lbl">国衙領（公領）の場合</span> 国（朝廷・国司）に送られます。</p>
+      <p><span class="m-lbl">地頭の取り分</span> 地頭は徴収した年貢の一部を自分のものにする権利を持っていました（これが地頭のメリット）。</p>
+      <div class="m-note">📌 後に地頭が「年貢を送らない」「横領する」などの問題が各地で起きます（「地頭の横暴」）。荘園領主が幕府に訴えるケースが増え，やがて地頭が荘園を丸ごと管理する「地頭請（じとううけ）」や，荘園を半分に分ける「下地中分（したじちゅうぶん）」という解決方法も生まれました。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-jito-merit" onclick="bgClose(event,'jito-merit')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('jito-merit')">✕</button>
+    <div class="modal-title">✅ 地頭には何のメリットがあったのか</div>
+    <div class="modal-body">
+      <p>御家人が地頭に任命されることを望んだのには，いくつかの明確なメリットがありました。</p>
+      <p><span class="m-lbl">メリット①</span> <strong>年貢の一部を自分の収入にできる</strong>。徴収した年貢のうち決められた割合を取得する権利がありました。</p>
+      <p><span class="m-lbl">メリット②</span> <strong>土地の管理権と住民への指揮権</strong>を持てる。その荘園・公領の住民を指揮・支配できました。</p>
+      <p><span class="m-lbl">メリット③</span> <strong>安定した地位と権威</strong>。幕府から公式に認められた地位であり，社会的な威信を得られました。</p>
+      <p><span class="m-lbl">メリット④</span> <strong>土地との結びつきが強まる</strong>。代々その土地の地頭を務めることで，実質的な土地支配者（領主）へと成長できました。</p>
+      <div class="m-important">💡 これが「御恩と奉公」の核心です。将軍が地頭に任命する（御恩）ことと引き換えに，御家人は命をかけて幕府のために戦う（奉公）関係が成立していました。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-genji23" onclick="bgClose(event,'genji23')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('genji23')">✕</button>
+    <div class="modal-title">🗡️ 源氏の2代・3代将軍はどのように暗殺されたのか</div>
+    <div class="modal-body">
+      <p>源頼朝の死後，源氏将軍は2代・3代と続きましたが，いずれも非業の死を遂げます。その背後には北条氏の影がありました。</p>
+      <p><span class="m-lbl">2代将軍 源頼家（よりいえ）</span><br>
+      頼朝の長男。1202年に2代将軍となりましたが，外戚（母方の親族）の比企能員（ひきよしかず）と北条時政が対立。1203年，北条時政が比企氏を滅ぼし，頼家を将軍から廃位しました。頼家は伊豆修善寺（しゅぜんじ）に幽閉され，翌1204年に暗殺されました（入浴中に刺客に殺されたとも伝わります）。</p>
+      <p><span class="m-lbl">3代将軍 源実朝（さねとも）</span><br>
+      頼朝の次男。1203年に3代将軍となりましたが，実権は北条氏が握っていました。1219年，鶴岡八幡宮（つるがおかはちまんぐう）で右大臣拝賀の儀式を終えた直後，頼家の息子・公暁（くぎょう）に暗殺されました。実朝に子はなく，ここで源氏将軍は断絶しました。</p>
+      <div class="m-note">📌 公暁が「親の仇（かたき）」として暗殺したというのが表向きの理由ですが，公暁の背後に北条義時がいたとする説もあり，真相は今も謎です。源氏将軍断絶後，北条氏は摂家（藤原氏）や皇族を将軍に迎えながら，自ら執権として政治を動かし続けました。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-masako-know" onclick="bgClose(event,'masako-know')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('masako-know')">✕</button>
+    <div class="modal-title">🤔 北条政子は息子たちの暗殺を知っていたのか</div>
+    <div class="modal-body">
+      <p>「尼将軍」と呼ばれ幕府を支えた北条政子ですが，彼女の立場は非常に複雑でした。</p>
+      <p><span class="m-lbl">頼家暗殺について</span> 主導したのは政子の実父・北条時政です。政子が事前に知っていたかどうかは史料からは明確にわかりませんが，少なくとも止めることはしませんでした。頼家廃位の決定には政子も関わったとされます。</p>
+      <p><span class="m-lbl">実朝暗殺について</span> 政子は当日の儀式に参加しており，暗殺の現場（鶴岡八幡宮）の近くにいたとされます。突然の出来事だったとする記録が多く，政子も衝撃を受けたと伝わります。</p>
+      <div class="m-important">💭 <strong>歴史家の見方</strong><br>政子は実の息子2人を失いながら，幕府の安定のために北条氏の行動を黙認した，あるいは協力したとみる説が有力です。個人としての「母」よりも，「幕府を守る政治家」としての役割を優先せざるをえなかったと考えられています。ただし真相は今も議論中で，完全に解明されてはいません。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-gotoba" onclick="bgClose(event,'gotoba')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('gotoba')">✕</button>
+    <div class="modal-title">👑 後鳥羽上皇とはどのような人物だったのか</div>
+    <div class="modal-body">
+      <p>後鳥羽上皇（1180〜1239年）は，鎌倉幕府に真っ向から挑んだ，波乱万丈の生涯を送った人物です。</p>
+      <p><span class="m-lbl">才能豊かな文化人</span> 和歌・蹴鞠・水泳・鍛冶（刀づくり）・琵琶など多才多芸で，日本最高の歌集とされる「<strong>新古今和歌集</strong>」の編纂を命じました。自ら作歌した和歌も数多く残っています。</p>
+      <p><span class="m-lbl">軍事力への関心</span> 上皇は「<strong>西面の武士（にしめのぶし）</strong>」という院（上皇）直属の武装集団を新設し，自ら軍事力を持とうとしました。幕府に対抗するためです。</p>
+      <p><span class="m-lbl">幕府への怒り</span> 幕府が朝廷の荘園にまで地頭を置いて年貢を横取りすることへの強い不満を持っていました。「朝廷の権威が地に落ちた」という危機感から，承久の乱を起こします。</p>
+      <p><span class="m-lbl">敗北と流罪</span> 承久の乱で幕府軍に敗れ，隠岐（島根県）へ流罪となりました。二度と京都に戻ることなく，1239年に隠岐で60歳の生涯を終えました。</p>
+      <div class="m-note">📌 後鳥羽上皇は死後，「水無瀬神宮（みなせじんぐう）」に祀られています。「もの思へば沢の蛍もわが身よりあくがれ出づる魂かとぞ見る」など，流罪後の孤独な心情を詠んだ和歌が多く残されています。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-masako-speech" onclick="bgClose(event,'masako-speech')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('masako-speech')">✕</button>
+    <div class="modal-title">📢 北条政子の演説——その全文と意味</div>
+    <div class="modal-body">
+      <p>承久の乱（1221年）が起こった時，多くの御家人が「上皇に逆らっていいのか」と動揺していました。そこで北条政子が御家人たちを前に演説したとされます。</p>
+      <div class="m-important">📜 <strong>「吾妻鏡」に記された演説（意訳）</strong><br><br>
+      「みなさん，心を一つにして聞いてください。これが私の最後の言葉です。<br><br>
+      故・頼朝様が朝敵（平氏）を討ち滅ぼして，関東に幕府を開いてから，その御恩は山よりも高く，海よりも深いものです。<br><br>
+      その恩に報いたいと思う者は，今すぐ幕府のために戦い，賊軍（後鳥羽上皇側）を倒しなさい。<br><br>
+      もし上皇方につきたいという者があれば，今すぐそう申し出なさい。」</div>
+      <p>この演説を聞いた御家人たちは涙を流しながら奮い立ち，幕府軍は一致団結して京都に攻め上りました。</p>
+      <div class="m-note">⚠️ <strong>史料批判</strong>：「吾妻鏡」は幕府が編纂した歴史書です。北条氏に有利な内容に書き換えられている可能性があり，この演説の言葉がそのまま事実かどうかは証明できません。しかし御家人たちが幕府への忠誠を確認して戦った事実は本物です。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル群 終わり ===== -->
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title: "鎌倉幕府の成立——御恩と奉公・承久の乱",
+  flashCards: [
+    {q:"1185年，源頼朝が国ごとに設置した，軍事・警察を担う役職は？", a:"守護", hint:"国単位。在地武士を統率"},
+    {q:"1185年，源頼朝が荘園・公領ごとに設置した，土地管理・年貢徴収の役職は？", a:"地頭", hint:"荘園単位。幕府の財政基盤"},
+    {q:"頼朝が御家人に土地を保証・給与することを何というか？", a:"御恩", hint:"「ご褒美」のこと"},
+    {q:"御家人が頼朝のために戦う・警護することを何というか？", a:"奉公", hint:"「奉仕」のこと"},
+    {q:"源頼朝を補佐し，北条氏が独占した鎌倉幕府最高職は？", a:"執権", hint:"初代は北条時政"},
+    {q:"1221年，後鳥羽上皇が幕府打倒を試みた戦乱は？", a:"承久の乱", hint:"わずか1か月で幕府が勝利"},
+    {q:"承久の乱後，幕府が京都に設けて朝廷を監視した機関は？", a:"六波羅探題", hint:"「六波羅」は京都の地名"},
+    {q:"承久の乱の際，御家人を鼓舞した頼朝の妻は誰か？", a:"北条政子", hint:"「尼将軍」と呼ばれた"},
+    {q:"御家人と将軍の土地を介した主従関係を何というか？", a:"御恩と奉公", hint:"封建制度の基本"},
+    {q:"1185年，壇ノ浦の戦いで平氏を滅ぼした後，頼朝が朝廷から任命された官職は？", a:"征夷大将軍", hint:"1192年に任命。幕府の正式な始まりとされる"},
+  ],
+  drillQuiz: [
+    {q:"1185年，源頼朝が国ごとに設置した軍事・警察担当の役職はどれですか？",
+     choices:["地頭","守護","国司","執権"],ans:1,
+     exp:"守護は国単位で在地武士を統率する役職。地頭は荘園・公領ごとの土地管理・年貢徴収担当です。この2つはよく混同されるので注意しましょう。"},
+    {q:"頼朝と御家人の関係「御恩と奉公」のうち，御家人が頼朝のために行ったことは何ですか？",
+     choices:["土地の保証","軍役・鎌倉番役などの奉仕","御恩の返済","荘園の管理"],ans:1,
+     exp:"奉公とは御家人が将軍のために戦争・鎌倉の警護・京都大番役などの奉仕を行うこと。その見返りとして御恩（土地の保証・給与）を受けました。"},
+    {q:"1221年，後鳥羽上皇が鎌倉幕府打倒を試みた乱を何といいますか？",
+     choices:["保元の乱","平治の乱","承久の乱","応仁の乱"],ans:2,
+     exp:"承久の乱（1221年）。後鳥羽上皇が院宣で武士を集め幕府打倒を試みましたが，北条政子の演説で結束した御家人軍に約1か月で鎮圧されました。"},
+    {q:"承久の乱後，幕府が京都に設置して朝廷を監視した機関は何ですか？",
+     choices:["問注所","六波羅探題","侍所","守護所"],ans:1,
+     exp:"六波羅探題（ろくはらたんだい）。朝廷の監視・西国御家人の統率・京都の治安維持を担いました。承久の乱で幕府の権力が朝廷を上回ったことを示します。"},
+    {q:"鎌倉幕府で将軍を補佐し，北条氏が世襲した最高職を何といいますか？",
+     choices:["管領","摂政","執権","太政大臣"],ans:2,
+     exp:"執権（しっけん）。初代は北条時政（頼朝の岳父）。源氏の将軍が3代で途絶えた後，北条氏が執権として実権を握る「執権政治」が続きました。"},
+  ],
+  testQuiz: [
+    {q:"守護が設置された単位はどれか？",choices:["荘園・公領ごと","国ごと","郡ごと","都市ごと"],ans:1},
+    {q:"地頭の主な仕事はどれか？",choices:["軍事・警察","土地管理・年貢徴収","朝廷の監視","税の免除"],ans:1},
+    {q:"御家人が将軍に提供した「奉公」の内容として正しいのはどれか？",choices:["年貢の納入","土地の譲渡","軍役・番役などの奉仕","荘園の管理"],ans:2},
+    {q:"承久の乱（1221年）を起こした人物は誰か？",choices:["後白河上皇","後鳥羽上皇","後醍醐天皇","後三条天皇"],ans:1},
+    {q:"承久の乱で御家人を鼓舞した演説をした人物は誰か？",choices:["源頼朝","北条泰時","北条政子","源義経"],ans:2},
+    {q:"六波羅探題の役割として正しいのはどれか？",choices:["東国武士の統率","朝廷の監視・京都の治安","年貢の管理","御家人への土地給与"],ans:1},
+    {q:"鎌倉幕府の最高職で北条氏が世襲したのは何か？",choices:["管領","執権","征夷大将軍","太政大臣"],ans:1},
+    {q:"源頼朝が1192年に就任した，幕府の正式開設を示す官職は何か？",choices:["関白","太政大臣","征夷大将軍","執権"],ans:2},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){
+  currentMode=mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});
+  renderContent();
+}
+function renderContent(){
+  const area=document.getElementById('content-area');
+  if(currentMode==='flash')renderFlash(area);
+  else if(currentMode==='drill')renderDrill(area);
+  else renderTest(area);
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){
+  const colors=['#8b3322','#c87000','#f4d03f','#2d8a30','#e8d5c8','#fff'];
+  for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}
+}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){
+  initFlash();
+  area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;
+  startCardTimer();
+}
+function buildFlashCard(){
+  if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#8b3322;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const card=fcCards[fcIndex];
+  return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;
+}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){
+  if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const q=drillQs[drillIndex];
+  const choices=q.choices.map((c,i)=>`<div class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</div>`).join('');
+  return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+function drillAnswer(idx){
+  if(drillAnswered)return;drillAnswered=true;
+  const q=drillQs[drillIndex];
+  document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});
+  if(idx===q.ans)drillScore++;
+  const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');
+  const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';
+}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){
+  testSelections={};testSubmitted=false;
+  let html='<div class="panel">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</div>`;});
+    html+='</div></div>';
+  });
+  html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;
+  area.innerHTML=html;
+}
+function testSelect(qi,ci){
+  if(testSubmitted)return;
+  testSelections[qi]=ci;
+  document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});
+}
+function submitTest(){
+  if(testSubmitted)return;
+  const total=UNIT.testQuiz.length;
+  const answered=Object.keys(testSelections).length;
+  if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}
+  testSubmitted=true;
+  let correct=0;
+  let reviewHTML='<div class="test-review">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;
+    document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});
+    reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`：''}</div>`;
+  });
+  reviewHTML+='</div>';
+  const pct=Math.round(correct/total*100);
+  const pass=correct>=6;
+  if(pass)fireConfetti();
+  document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元⑬ クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;
+  document.getElementById('test-result').style.display='block';
+  if(pass)fireConfetti();
+}
+
+selectMode('flash');
+
+function toggleSetsu(){
+  const hd=document.getElementById('setsu-hd');
+  const body=document.getElementById('setsu-body');
+  if(hd)hd.classList.toggle('open');
+  if(body)body.classList.toggle('open');
+}
+function openModal(id){
+  const el=document.getElementById('modal-'+id);
+  if(el){el.classList.add('open');document.body.style.overflow='hidden';}
+}
+function closeModal(id){
+  const el=document.getElementById('modal-'+id);
+  if(el){el.classList.remove('open');document.body.style.overflow='';}
+}
+function bgClose(e,id){if(e.target===e.currentTarget)closeModal(id);}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(el=>{el.classList.remove('open');});document.body.style.overflow='';}});
+</script>
+</body>
+</html>

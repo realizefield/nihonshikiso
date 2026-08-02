@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉕ 開国と江戸幕府の滅亡｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch09.html" class="back-to-index">← 第９章テキストへ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>⚓ 単元㉕　開国と江戸幕府の滅亡</h1>
+
+<!-- ===== Section ===== -->
+<div class="section">
+  <span class="section-label">第9章 第１節　単元㉕</span>
+  <h2>開国前夜——強まる外国船への警戒</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>19世紀に入ると，ヨーロッパやアメリカの船が日本近海にたびたび現れるようになりました。幕府は外国船の接近を強く警戒し，1825年には<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">異国船打払令</span><span class="kw-pop"><span class="kw-title">異国船打払令（いこくせんうちはらいれい）</span><span class="kw-yomi">📖 読み：いこくせんうちはらいれい</span><span class="kw-body">1825年，江戸幕府が出した法令。日本近海に接近する外国船を，理由を問わず武力で撃退することを命じた。異国船が増える中で対外的な緊張が強まったことを示す。のちのアヘン戦争の情報を受けて1842年に薪水給与令へと方針転換された。</span></span></span>（A）を出し，日本に近づく外国船を武力で追い払うことを命じました。</p>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">⏱ この単元の流れ</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1825年</span><div class="flow-content"><strong>異国船打払令</strong>——日本近海の外国船を武力で撃退することを命令</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year blue">1842年</span><div class="flow-content">アヘン戦争で清が敗れたことを受け，<strong>薪水給与令</strong>へ方針転換。外国船に燃料・水を与えて穏便に退去させる方針へ</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1853年</span><div class="flow-content">アメリカの<strong>ペリー</strong>が軍艦4隻を率いて浦賀に来航。開国を要求</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">1854年</span><div class="flow-content"><strong>日米和親条約</strong>を締結。下田・箱館の2港を開港し，200年以上続いた鎖国が終わる</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year purple">1858年</span><div class="flow-content">大老・井伊直弼が天皇の許可を得ないまま<strong>日米修好通商条約</strong>を締結。不平等な内容だった</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year navy">1859〜1860年</span><div class="flow-content"><strong>安政の大獄</strong>で反対派を弾圧した井伊直弼が，<strong>桜田門外の変</strong>で暗殺される</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1863〜1866年</span><div class="flow-content">尊王攘夷運動が高まり，<strong>薩英戦争</strong>・<strong>蛤御門の変</strong>などを経て，<strong>薩長同盟</strong>が結ばれ倒幕へ</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1867〜1868年</span><div class="flow-content">徳川慶喜が<strong>大政奉還</strong>を行い，<strong>王政復古の大号令</strong>で新政府樹立。<strong>戊辰戦争</strong>を経て江戸幕府は滅亡する</div></div>
+    </div>
+    <div class="flow-note">
+      💡 「開国のきっかけ→不平等条約への反発→尊王攘夷運動→倒幕」という流れをつかむことが，この単元のポイントです。
+    </div>
+  </div>
+
+  <div class="cause-box">
+    <span class="label">📉 なぜ方針を転換したのか</span>
+    ▶ 1840〜42年の<span class="kw">アヘン戦争（あへんせんそう）<span class="kw-pop"><span class="kw-title">アヘン戦争（あへんせんそう）</span><span class="kw-yomi">📖 読み：あへんせんそう</span><span class="kw-body">1840〜1842年，イギリスと清（中国）の間で起きた戦争。イギリスの勝利に終わり，清はイギリスに香港を割譲するなど不利な条約を結ばされた。この情報は日本にも伝わり，幕府に大きな衝撃を与えた。</span></span></span>で，大国である清がイギリスに敗れたという情報が日本にも伝わった<br>
+    ▶ 「異国船を武力で追い払えば，同じように攻撃を受けるかもしれない」という危機感が幕府内に広がった<br>
+    ▶ 1842年，老中・水野忠邦は異国船打払令を改め，<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">薪水給与令</span><span class="kw-pop"><span class="kw-title">薪水給与令（しんすいきゅうよれい）</span><span class="kw-yomi">📖 読み：しんすいきゅうよれい</span><span class="kw-body">1842年，老中・水野忠邦が出した法令。アヘン戦争で清がイギリスに敗れたことを受け，異国船打払令を改め，日本に接近した外国船に燃料の薪や水を与えて穏便に退去させる方針に転換した。</span></span></span>（B）を出した——外国船に薪や水を与えて穏便に退去させる方針へ
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 開国前夜 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第１節　単元㉕</span>
+  <h2><span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">ペリー</span><span class="kw-pop"><span class="kw-title">ペリー</span><span class="kw-yomi">📖 読み：ぺりー</span><span class="kw-body">アメリカ海軍の軍人。1853年，軍艦4隻（黒船）を率いて浦賀に来航し，開国を要求する大統領の国書を提出した。翌1854年に再来航し，日米和親条約を締結させた。</span></span></span>（C）来航と<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">日米和親条約</span><span class="kw-pop"><span class="kw-title">日米和親条約（にちべいわしんじょうやく）</span><span class="kw-yomi">📖 読み：にちべいわしんじょうやく</span><span class="kw-body">1854年，ペリーとの間で結ばれた条約。下田・箱館の2港を開港し，アメリカ船に燃料・食料・水を供給することなどを定めた。200年以上続いた鎖国政策が終わるきっかけとなった。</span></span></span>（D）——鎖国の終わり</h2>
+
+  <p>1853年，アメリカの東インド艦隊司令長官<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">ペリー</span><span class="kw-pop"><span class="kw-title">ペリー</span><span class="kw-yomi">📖 読み：ぺりー</span><span class="kw-body">アメリカ海軍の軍人。1853年，軍艦4隻（黒船）を率いて浦賀に来航し，開国を要求する大統領の国書を提出した。翌1854年に再来航し，日米和親条約を締結させた。</span></span></span>が軍艦4隻（「黒船」）を率いて浦賀（現在の神奈川県）に来航し，アメリカ大統領の国書を幕府に提出して開国を強く求めました。翌1854年，ペリーは再び来航し，幕府は<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">日米和親条約</span><span class="kw-pop"><span class="kw-title">日米和親条約（にちべいわしんじょうやく）</span><span class="kw-yomi">📖 読み：にちべいわしんじょうやく</span><span class="kw-body">1854年，ペリーとの間で結ばれた条約。下田・箱館の2港を開港し，アメリカ船に燃料・食料・水を供給することなどを定めた。200年以上続いた鎖国政策が終わるきっかけとなった。</span></span></span>を締結しました。</p>
+
+  <div class="why-box">
+    <span class="label">⚓ 日米和親条約の内容</span>
+    ▶ <span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">下田</span><span class="kw-pop"><span class="kw-title">下田（しもだ）</span><span class="kw-yomi">📖 読み：しもだ</span><span class="kw-body">現在の静岡県にある港町。日米和親条約（1854年）で開港された2港の一つ。のちにアメリカ総領事ハリスが着任した。</span></span></span>（E）・<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">箱館</span><span class="kw-pop"><span class="kw-title">箱館（はこだて）</span><span class="kw-yomi">📖 読み：はこだて</span><span class="kw-body">現在の北海道函館市。日米和親条約（1854年）で開港された2港の一つ。</span></span></span>（F）の2港を開港——アメリカ船への燃料・食料・水の供給を認めた<br>
+    ▶ 難破した船員の救助や保護も定められた<br>
+    ▶ これにより，200年以上続いた<strong>鎖国政策は事実上終わり</strong>，日本は開国することになった<br>
+    ▶ 同様の条約はイギリス・ロシア・オランダとも結ばれた
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 ペリー来航 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第１節　単元㉕</span>
+  <h2><span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">日米修好通商条約</span><span class="kw-pop"><span class="kw-title">日米修好通商条約（にちべいしゅうこうつうしょうじょうやく）</span><span class="kw-yomi">📖 読み：にちべいしゅうこうつうしょうじょうやく</span><span class="kw-body">1858年，大老・井伊直弼がアメリカ総領事ハリスとの間で，天皇の許可（勅許）を得ないまま締結した条約。神奈川・新潟・兵庫・箱館・長崎の5港を開港。日本に関税自主権がなく，外国人には治外法権（領事裁判権）を認める不平等条約だった。</span></span></span>（G）——不平等条約の締結</h2>
+
+  <p>1856年，アメリカ総領事<span class="kw">ハリス<span class="kw-pop"><span class="kw-title">ハリス</span><span class="kw-yomi">📖 読み：はりす</span><span class="kw-body">アメリカ初代駐日総領事。1856年に下田に着任し，幕府に通商条約の締結を強く求めた。1858年，大老・井伊直弼との間で日米修好通商条約を締結させた。</span></span></span>が下田に着任し，幕府に通商条約の締結を強く迫りました。1858年，大老・<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">井伊直弼</span><span class="kw-pop"><span class="kw-title">井伊直弼（いいなおすけ）</span><span class="kw-yomi">📖 読み：いいなおすけ</span><span class="kw-body">江戸幕府の大老（1858〜1860年）。天皇の許可を得ないまま日米修好通商条約を締結し，反対派を安政の大獄で弾圧した。1860年，桜田門外の変で水戸藩浪士らに暗殺された。</span></span></span>（H）は，<span class="kw">孝明天皇（こうめいてんのう）<span class="kw-pop"><span class="kw-title">孝明天皇（こうめいてんのう）</span><span class="kw-yomi">📖 読み：こうめいてんのう</span><span class="kw-body">江戸時代末期の天皇（在位1846〜1867年）。外国との通商に強く反対し，日米修好通商条約の締結を認めなかった（勅許を与えなかった）。攘夷を支持する立場だった。</span></span></span>の許可を得ないまま，<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">日米修好通商条約</span><span class="kw-pop"><span class="kw-title">日米修好通商条約（にちべいしゅうこうつうしょうじょうやく）</span><span class="kw-yomi">📖 読み：にちべいしゅうこうつうしょうじょうやく</span><span class="kw-body">1858年，大老・井伊直弼がアメリカ総領事ハリスとの間で，天皇の許可（勅許）を得ないまま締結した条約。神奈川・新潟・兵庫・箱館・長崎の5港を開港。日本に関税自主権がなく，外国人には治外法権（領事裁判権）を認める不平等条約だった。</span></span></span>を結びました。</p>
+
+  <div class="cause-box">
+    <span class="label">📜 日米修好通商条約の内容</span>
+    ▶ 神奈川・新潟・兵庫・箱館・長崎の<strong>5港を開港</strong><br>
+    ▶ 日本に<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">関税自主権</span><span class="kw-pop"><span class="kw-title">関税自主権（かんぜいじしゅけん）</span><span class="kw-yomi">📖 読み：かんぜいじしゅけん</span><span class="kw-body">輸出入品にかける関税の税率を自国で自由に決められる権利。日米修好通商条約では日本にこの権利が認められず，外国と協議して税率を決めなければならなかった。不平等条約の代表的な内容の一つ。</span></span></span>（I）がない——輸入品の関税率を日本が自由に決められない<br>
+    ▶ 外国人に<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">治外法権</span><span class="kw-pop"><span class="kw-title">治外法権（ちがいほうけん）</span><span class="kw-yomi">📖 読み：ちがいほうけん</span><span class="kw-body">外国人が滞在国の法律ではなく，自国の法律・裁判で裁かれる権利（領事裁判権）。日米修好通商条約で認められ，日本国内で外国人が犯罪を犯しても日本の法律で裁けなかった。不平等条約の代表的な内容の一つ。</span></span></span>（J）（領事裁判権）を認めた——日本国内で外国人が罪を犯しても日本の法律で裁けない<br>
+    ▶ 孝明天皇の許可（勅許）を得ないまま結ばれたため，朝廷や攘夷派の激しい反発を招いた<br>
+    ▶ 同様の不平等条約はオランダ・ロシア・イギリス・フランスとも結ばれた（安政の五カ国条約）
+  </div>
+
+  <div class="why-box">
+    <span class="label">📉 開国の影響</span>
+    ▶ 貿易が始まると，輸出品の約80％を<strong>生糸</strong>が占め，国内で品不足・物価上昇が起きた<br>
+    ▶ 最大の貿易港は<strong>横浜</strong>で，貿易額の大半を占めた<br>
+    ▶ 物価の高騰は庶民の生活を圧迫し，幕府や外国人への不満が高まる一因となった
+  </div>
+
+  <div class="result-box">
+    <span class="label">⚔ 安政の大獄と桜田門外の変</span>
+    無許可での条約締結に反対した大名や公家・志士を，井伊直弼は<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">安政の大獄</span><span class="kw-pop"><span class="kw-title">安政の大獄（あんせいのたいごく）</span><span class="kw-yomi">📖 読み：あんせいのたいごく</span><span class="kw-body">1858〜1859年，大老・井伊直弼が，日米修好通商条約の無断締結に反対した大名・公家・志士を厳しく弾圧した事件。吉田松陰らが処刑された。井伊直弼はこの弾圧への反発から，1860年に桜田門外の変で暗殺された。</span></span></span>（K）で厳しく弾圧しました。<br><br>
+    ▶ 長州藩の思想家<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">吉田松陰</span><span class="kw-pop"><span class="kw-title">吉田松陰（よしだしょういん）</span><span class="kw-yomi">📖 読み：よしだしょういん</span><span class="kw-body">長州藩（現在の山口県）の思想家・教育者。私塾「松下村塾」で多くの倒幕の志士を育てた。安政の大獄で処刑された。門下から高杉晋作・伊藤博文らが出た。</span></span></span>（L）ら多くの志士が処刑・処罰された<br>
+    ▶ この強引な弾圧への反発から，1860年，井伊直弼は江戸城桜田門外で水戸藩浪士らに暗殺された（<span class="blank kw" data-id="M" onclick="blankClicked(event,'M')"><span class="blank-display">桜田門外の変</span><span class="kw-pop"><span class="kw-title">桜田門外の変（さくらだもんがいのへん）</span><span class="kw-yomi">📖 読み：さくらだもんがいのへん</span><span class="kw-body">1860年，江戸城桜田門外で，大老・井伊直弼が水戸藩の浪士らに暗殺された事件。安政の大獄への反発が背景にあった。幕府の権威失墜を象徴する事件となった。</span></span></span>（M））<br>
+    ▶ 幕府の最高責任者が暗殺されたことは，幕府の権威が大きく揺らいだことを示す事件となった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 不平等条約と安政の大獄 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第１節　単元㉕</span>
+  <h2>尊王攘夷運動の高まり——外国人排斥から倒幕へ</h2>
+
+  <p>桜田門外の変ののち，幕府の権威は大きく低下しました。朝廷（天皇）を尊び，外国勢力を排除しようとする<span class="kw">尊王攘夷運動（そんのうじょういうんどう）<span class="kw-pop"><span class="kw-title">尊王攘夷運動（そんのうじょういうんどう）</span><span class="kw-yomi">📖 読み：そんのうじょういうんどう</span><span class="kw-body">江戸時代末期，天皇を尊び（尊王），外国勢力を排除しよう（攘夷）とする思想・運動。開国後の不平等条約や物価高騰への不満を背景に，下級武士や志士の間で広まった。のちに倒幕運動へとつながっていく。</span></span></span>が全国で高まっていきます。幕府は朝廷と協力する<span class="blank kw" data-id="N" onclick="blankClicked(event,'N')"><span class="blank-display">公武合体</span><span class="kw-pop"><span class="kw-title">公武合体（こうぶがったい）</span><span class="kw-yomi">📖 読み：こうぶがったい</span><span class="kw-body">江戸時代末期，朝廷（公）と幕府（武）が協力して政治を安定させようとする政策。孝明天皇の妹・和宮を14代将軍・徳川家茂の妻に迎えたことが代表例。しかし尊王攘夷派の反発を招いた。</span></span></span>（N）政策を進め，孝明天皇の妹・和宮（かずのみや）を14代将軍・徳川家茂（いえもち）の妻に迎えましたが，攘夷派の反発は収まりませんでした。</p>
+
+  <div class="cause-box">
+    <span class="label">⚔ 攘夷運動の激化</span>
+    ▶ 1862年，<span class="kw">生麦事件（なまむぎじけん）<span class="kw-pop"><span class="kw-title">生麦事件（なまむぎじけん）</span><span class="kw-yomi">📖 読み：なまむぎじけん</span><span class="kw-body">1862年，薩摩藩主の父・島津久光の行列を横切ったイギリス人を，薩摩藩士が殺傷した事件。翌1863年，イギリスが報復として薩摩藩を攻撃し，薩英戦争が起きた。</span></span></span>——薩摩藩主の父・島津久光の行列を横切ったイギリス人を薩摩藩士が殺傷<br>
+    ▶ 1863年，イギリスは報復として薩摩藩を攻撃（<span class="blank kw" data-id="O" onclick="blankClicked(event,'O')"><span class="blank-display">薩英戦争</span><span class="kw-pop"><span class="kw-title">薩英戦争（さつえいせんそう）</span><span class="kw-yomi">📖 読み：さつえいせんそう</span><span class="kw-body">1863年，生麦事件の報復としてイギリスが薩摩藩を攻撃した戦争。薩摩藩は大きな被害を受けたが，これをきっかけに攘夷が困難であることを痛感し，のちに倒幕・開国路線へ転換していく。</span></span></span>（O））——薩摩藩は攘夷が困難であることを痛感する<br>
+    ▶ 1863年，長州藩は下関で外国船を砲撃したが，翌1864年に四国（英・米・仏・蘭）艦隊の報復攻撃を受け大敗した<br>
+    ▶ 長州藩も攘夷が現実的でないことを思い知らされることになった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🗡 池田屋事件と蛤御門の変（禁門の変）</span>
+    ▶ 1864年，京都で新撰組が尊王攘夷派の志士を襲撃（池田屋事件）<br>
+    ▶ これに反発した長州藩は京都に軍勢を送るが，幕府側に敗れる（<span class="blank kw" data-id="P" onclick="blankClicked(event,'P')"><span class="blank-display">蛤御門の変</span><span class="kw-pop"><span class="kw-title">蛤御門の変（はまぐりごもんのへん）</span><span class="kw-yomi">📖 読み：はまぐりごもんのへん</span><span class="kw-body">禁門の変（きんもんのへん）ともいう。1864年，京都御所付近で長州藩と幕府側（会津藩・薩摩藩など）が衝突した事件。長州藩は敗北し，朝敵とされた。幕府は長州征伐（第一次）に踏み切った。</span></span></span>（P），禁門の変）——長州藩は「朝敵」とされてしまう<br>
+    ▶ 幕府は長州藩を討つため，2度にわたり長州征伐（第一次1864年・第二次1865年）を行った<br>
+    ▶ しかし第二次長州征伐は失敗し，幕府の軍事力の弱さが明らかになった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 尊王攘夷運動 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第１節　単元㉕</span>
+  <h2><span class="blank kw" data-id="Q" onclick="blankClicked(event,'Q')"><span class="blank-display">薩長同盟</span><span class="kw-pop"><span class="kw-title">薩長同盟（さっちょうどうめい）</span><span class="kw-yomi">📖 読み：さっちょうどうめい</span><span class="kw-body">1866年，対立していた薩摩藩と長州藩が，坂本龍馬らの仲介で結んだ軍事同盟。薩摩藩の西郷隆盛・長州藩の木戸孝允が中心となって成立させた。倒幕運動の大きな転機となった。</span></span></span>（Q）と倒幕への道</h2>
+
+  <p>攘夷が現実的でないと悟った薩摩藩と，幕府から敵視される長州藩は，本来対立関係にありましたが，土佐藩出身の<span class="blank kw" data-id="R" onclick="blankClicked(event,'R')"><span class="blank-display">坂本龍馬</span><span class="kw-pop"><span class="kw-title">坂本龍馬（さかもとりょうま）</span><span class="kw-yomi">📖 読み：さかもとりょうま</span><span class="kw-body">土佐藩出身の志士。対立していた薩摩藩と長州藩の間を仲介し，1866年の薩長同盟の成立に貢献した。倒幕運動を陰で支えた人物として知られる。</span></span></span>（R）らの仲介によって，1866年に<span class="blank kw" data-id="Q" onclick="blankClicked(event,'Q')"><span class="blank-display">薩長同盟</span><span class="kw-pop"><span class="kw-title">薩長同盟（さっちょうどうめい）</span><span class="kw-yomi">📖 読み：さっちょうどうめい</span><span class="kw-body">1866年，対立していた薩摩藩と長州藩が，坂本龍馬らの仲介で結んだ軍事同盟。薩摩藩の西郷隆盛・長州藩の木戸孝允が中心となって成立させた。倒幕運動の大きな転機となった。</span></span></span>を結びました。薩摩藩の西郷隆盛，長州藩の木戸孝允が中心となり，倒幕へ向けて大きく動き出します。</p>
+
+  <div class="result-box">
+    <span class="label">🤝 薩長同盟成立の意味</span>
+    ▶ 西日本の有力な2藩が手を結んだことで，倒幕勢力は大きな軍事力を持つことになった<br>
+    ▶ 幕府による第二次長州征伐は失敗し，幕府の権威はさらに低下した<br>
+    ▶ 1867年には「ええじゃないか」と呼ばれる民衆の熱狂的な騒動も各地で起こり，社会不安が広がった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 薩長同盟 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+</div>
+
+<!-- ===== Section 6 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第１節　単元㉕</span>
+  <h2><span class="blank kw" data-id="S" onclick="blankClicked(event,'S')"><span class="blank-display">大政奉還</span><span class="kw-pop"><span class="kw-title">大政奉還（たいせいほうかん）</span><span class="kw-yomi">📖 読み：たいせいほうかん</span><span class="kw-body">1867年10月14日，15代将軍・徳川慶喜が政権を朝廷に返上したこと。倒幕の動きを見た慶喜が，武力衝突を避けつつ徳川家の影響力を残そうとした政治的決断だった。これにより約260年続いた江戸幕府は終わりを迎えた。</span></span></span>（S）から戊辰戦争へ——江戸幕府の滅亡</h2>
+
+  <p>倒幕の動きが強まる中，15代将軍・<span class="blank kw" data-id="T" onclick="blankClicked(event,'T')"><span class="blank-display">徳川慶喜</span><span class="kw-pop"><span class="kw-title">徳川慶喜（とくがわよしのぶ）</span><span class="kw-yomi">📖 読み：とくがわよしのぶ</span><span class="kw-body">江戸幕府15代将軍（最後の将軍）。1867年，倒幕の動きを見て大政奉還を行い政権を朝廷に返上した。王政復古の大号令で新政府から排除され，鳥羽・伏見の戦いに敗れた後は謹慎し，江戸城は無血開城された。</span></span></span>（T）は，1867年10月14日，政権を朝廷に返上する<span class="blank kw" data-id="S" onclick="blankClicked(event,'S')"><span class="blank-display">大政奉還</span><span class="kw-pop"><span class="kw-title">大政奉還（たいせいほうかん）</span><span class="kw-yomi">📖 読み：たいせいほうかん</span><span class="kw-body">1867年10月14日，15代将軍・徳川慶喜が政権を朝廷に返上したこと。倒幕の動きを見た慶喜が，武力衝突を避けつつ徳川家の影響力を残そうとした政治的決断だった。これにより約260年続いた江戸幕府は終わりを迎えた。</span></span></span>を行いました。これにより，約260年続いた江戸幕府は終わりを迎えます。</p>
+
+  <div class="why-box">
+    <span class="label">👑 王政復古の大号令</span>
+    大政奉還ののち，1867年12月9日，倒幕派の公家・<span class="kw">岩倉具視（いわくらともみ）<span class="kw-pop"><span class="kw-title">岩倉具視（いわくらともみ）</span><span class="kw-yomi">📖 読み：いわくらともみ</span><span class="kw-body">江戸時代末期〜明治時代の公家・政治家。倒幕派として活動し，1867年の王政復古の大号令を主導した。明治新政府でも中心的な役割を果たした。</span></span></span>らが中心となり，<span class="blank kw" data-id="U" onclick="blankClicked(event,'U')"><span class="blank-display">王政復古の大号令</span><span class="kw-pop"><span class="kw-title">王政復古の大号令（おうせいふっこのだいごうれい）</span><span class="kw-yomi">📖 読み：おうせいふっこのだいごうれい</span><span class="kw-body">1867年12月9日，岩倉具視ら倒幕派が中心となって発した宣言。将軍・摂政・関白などを廃止し，天皇中心の新政府樹立を宣言した。徳川慶喜は新政府から排除され，翌1868年に鳥羽・伏見の戦いが起こった。</span></span></span>（U）を発しました。<br><br>
+    ▶ 将軍・摂政・関白などの職を廃止し，<strong>天皇中心の新政府</strong>の樹立を宣言<br>
+    ▶ 徳川慶喜は新政府から排除され，官位や領地の返上を求められた<br>
+    ▶ これに不満を持つ旧幕府側と新政府側の対立が決定的となった
+  </div>
+
+  <div class="cause-box">
+    <span class="label">⚔ 戊辰戦争——旧幕府と新政府の内戦</span>
+    ▶ 1868年，京都近郊で<strong>鳥羽・伏見の戦い</strong>が起こり，旧幕府軍が敗北<br>
+    ▶ 新政府軍が江戸に迫る中，<span class="kw">西郷隆盛（さいごうたかもり）<span class="kw-pop"><span class="kw-title">西郷隆盛（さいごうたかもり）</span><span class="kw-yomi">📖 読み：さいごうたかもり</span><span class="kw-body">薩摩藩出身の武士・政治家。薩長同盟の成立に尽力し，戊辰戦争では新政府軍を指導。旧幕臣・勝海舟との会談で江戸城の無血開城を実現させた。明治新政府でも中心人物として活躍した。</span></span></span>と旧幕臣・<span class="kw">勝海舟（かつかいしゅう）<span class="kw-pop"><span class="kw-title">勝海舟（かつかいしゅう）</span><span class="kw-yomi">📖 読み：かつかいしゅう</span><span class="kw-body">江戸幕府の幕臣。西郷隆盛との会談によって，江戸城の無血開城（1868年）を実現させ，江戸の町を戦火から救った人物として知られる。</span></span></span>の会談により，1868年4月，<span class="blank kw" data-id="V" onclick="blankClicked(event,'V')"><span class="blank-display">江戸城</span><span class="kw-pop"><span class="kw-title">江戸城の無血開城（えどじょうのむけつかいじょう）</span><span class="kw-yomi">📖 読み：えどじょうのむけつかいじょう</span><span class="kw-body">1868年4月11日，西郷隆盛と勝海舟の会談により，戦闘を行わずに江戸城が新政府軍に明け渡されたこと。江戸の町が戦火に見舞われることを防いだ。</span></span></span>（V）の無血開城が実現した<br>
+    ▶ その後も上野戦争（彰義隊の抵抗）など各地で戦闘が続いたが，新政府軍が次第に優勢に<br>
+    ▶ 旧幕臣・榎本武揚（えのもとたけあき）は蝦夷地（北海道）に逃れて抵抗を続けたが，1869年に降伏<br>
+    ▶ 一連の内戦を<span class="blank kw" data-id="W" onclick="blankClicked(event,'W')"><span class="blank-display">戊辰戦争</span><span class="kw-pop"><span class="kw-title">戊辰戦争（ぼしんせんそう）</span><span class="kw-yomi">📖 読み：ぼしんせんそう</span><span class="kw-body">1868〜1869年，鳥羽・伏見の戦いから始まった，旧幕府軍と新政府軍の一連の内戦。江戸城の無血開城，上野戦争，榎本武揚の抵抗などを経て，新政府軍の勝利で終結した。江戸幕府滅亡から明治新政府成立への転換点となった。</span></span></span>（W）と呼ぶ
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：開国から江戸幕府滅亡までの流れ</strong><br>
+    幕末の歴史は，「外国からの圧力（開国）→ 不平等条約への反発 → 尊王攘夷運動 → 倒幕運動 → 幕府滅亡」という一連の流れとして理解しましょう。<br><br>
+    ▶ <strong>1853年 ペリー来航 → 1854年 日米和親条約</strong>——鎖国の終わり<br>
+    ▶ <strong>1858年 日米修好通商条約</strong>——不平等条約，安政の大獄と桜田門外の変<br>
+    ▶ <strong>1863〜1864年</strong>——薩英戦争・下関砲撃事件で攘夷の限界が明らかに<br>
+    ▶ <strong>1866年 薩長同盟</strong>——倒幕勢力が結集<br>
+    ▶ <strong>1867年 大政奉還・王政復古の大号令 → 1868年 戊辰戦争</strong>——江戸幕府滅亡，明治新政府へ
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">異国船打払令</span>
+    <span class="tl-item">薪水給与令</span>
+    <span class="tl-item">ペリー</span>
+    <span class="tl-item">日米和親条約</span>
+    <span class="tl-item">下田・箱館</span>
+    <span class="tl-item">ハリス</span>
+    <span class="tl-item">日米修好通商条約</span>
+    <span class="tl-item">井伊直弼</span>
+    <span class="tl-item">安政の大獄</span>
+    <span class="tl-item">吉田松陰</span>
+    <span class="tl-item">桜田門外の変</span>
+    <span class="tl-item">生麦事件</span>
+    <span class="tl-item">薩英戦争</span>
+    <span class="tl-item">蛤御門の変</span>
+    <span class="tl-item">薩長同盟</span>
+    <span class="tl-item">坂本龍馬</span>
+    <span class="tl-item">大政奉還</span>
+    <span class="tl-item">徳川慶喜</span>
+    <span class="tl-item">王政復古の大号令</span>
+    <span class="tl-item">江戸城無血開城</span>
+    <span class="tl-item">戊辰戦争</span>
+  </div>
+
+  <p style="margin:10px 0">
+    <button onclick="openModal('bakumatsu')" style="background:#1a4f7a;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:bold;cursor:pointer;font-family:inherit;box-shadow:0 2px 0 #0d2f4a">👤 幕末の主な人物——立場と役割を整理する</button>
+  </p>
+  <button class="modal-btn" onclick="openModal('bakumatsu')">👤 幕末の主な人物まとめ——立場と役割 <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('joyaku')" style="background:linear-gradient(135deg,#c87000,#8b2500)">📜 不平等条約の中身——治外法権と関税自主権 <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('perryharris')" style="background:linear-gradient(135deg,#1a6b22,#1a4f7a)">⚓ ペリーはなぜ来たのか——開国交渉の裏側をくわしく <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('taiseikogosho')" style="background:linear-gradient(135deg,#4a1a7a,#8b2500)">📜 大政奉還のアイデアは誰のもの？——小御所会議までの道のり <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq6',this)">
+      📝 大政奉還と戊辰戦争 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq6"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉕ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch25.html">単元㉕ドリルへ →</a>
+  </div>
+  <div class="drill-link-box" style="margin-top:8px">
+    <span style="font-size:14px;font-weight:bold">📝 第９章 総合ドリルで全単元を復習！</span>
+    <a href="nihonshi_drill_ch09.html" style="background:#888">総合ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉕ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+
+<!-- 幕末の主な人物 -->
+<div class="modal-overlay" id="modal-bakumatsu" onclick="if(event.target===this)closeModal('bakumatsu')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('bakumatsu')">✕</button>
+    <div class="modal-title">👤 幕末の主な人物——立場と役割</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 幕府側の人物</div>
+      <div class="cause-box">
+        <span class="label">🏯 井伊直弼・徳川慶喜</span>
+        ▶ <strong>井伊直弼</strong>——大老として日米修好通商条約を無許可で締結，安政の大獄で反対派を弾圧，桜田門外の変で暗殺された<br>
+        ▶ <strong>徳川慶喜</strong>——15代将軍（最後の将軍）。1867年に大政奉還を行い，政権を朝廷に返上。江戸幕府を終わらせた人物<br>
+        ▶ <strong>勝海舟</strong>——旧幕臣。西郷隆盛との会談で江戸城の無血開城を実現し，江戸の町を戦火から救った
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 倒幕派の人物</div>
+      <div class="why-box">
+        <span class="label">⚔ 西郷隆盛・木戸孝允・坂本龍馬・岩倉具視</span>
+        ▶ <strong>西郷隆盛</strong>（薩摩藩）——薩長同盟の成立に尽力，戊辰戦争で新政府軍を指導，勝海舟との会談で無血開城を実現<br>
+        ▶ <strong>木戸孝允</strong>（長州藩）——薩長同盟の中心人物の一人<br>
+        ▶ <strong>坂本龍馬</strong>（土佐藩）——対立する薩摩・長州の仲介役として薩長同盟成立に貢献<br>
+        ▶ <strong>岩倉具視</strong>（公家）——王政復古の大号令を主導し，天皇中心の新政府樹立を実現
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 犠牲になった志士</div>
+      <div class="result-box">
+        <span class="label">📚 吉田松陰</span>
+        長州藩の思想家・教育者。私塾「松下村塾（しょうかそんじゅく）」で高杉晋作・伊藤博文など，のちの明治新政府を支える多くの人材を育てました。安政の大獄で処刑されましたが，その教えは弟子たちに受け継がれ，倒幕運動の思想的な原動力の一つとなりました。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 不平等条約 -->
+<div class="modal-overlay" id="modal-joyaku" onclick="if(event.target===this)closeModal('joyaku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('joyaku')">✕</button>
+    <div class="modal-title">📜 不平等条約の中身——治外法権と関税自主権</div>
+    <div class="modal-body">
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 治外法権（領事裁判権）とは</div>
+      <div class="cause-box">
+        <span class="label">⚖ 日本の法律で外国人を裁けない</span>
+        日本国内で外国人が罪を犯しても，日本の裁判所ではなく，その国の領事が自国の法律で裁くという取り決めです。<br><br>
+        ▶ たとえ外国人が日本人に危害を加えても，日本の法律で処罰できなかった<br>
+        ▶ 「自分の国のルールは自分の国の人にしか適用されない」という，主権国家としては不利な内容<br>
+        ▶ この不平等の解消（条約改正）は，明治政府の大きな外交課題となった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 関税自主権がないとは</div>
+      <div class="why-box">
+        <span class="label">💴 輸入品の税率を自国で決められない</span>
+        本来，国は輸入品にかける関税の税率を自由に決められますが，日米修好通商条約では，日本はこの権利を持てませんでした。<br><br>
+        ▶ 相手国と協議しなければ税率を変更できなかった（協定関税制）<br>
+        ▶ 安い外国製品が大量に流入し，国内の産業が打撃を受けた<br>
+        ▶ 関税自主権の回復は，条約改正とともに明治時代を通じた重要な外交目標となった
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ペリー来航〜日米修好通商条約の裏側 -->
+<div class="modal-overlay" id="modal-perryharris" onclick="if(event.target===this)closeModal('perryharris')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('perryharris')">✕</button>
+    <div class="modal-title">⚓ ペリーはなぜ来たのか——開国交渉の裏側</div>
+    <div class="modal-body">
+
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① なぜペリーは日本にやってきたのか</div>
+      <div class="cause-box">
+        <span class="label">🐋 アメリカが日本に求めていたもの</span>
+        ペリーの来航は，単なる「開国してほしい」という気まぐれな要求ではなく，19世紀半ばのアメリカにとって現実的な必要から生まれたものでした。<br><br>
+        ▶ 当時のアメリカは，太平洋で<strong>捕鯨業</strong>が盛んで，多くの捕鯨船が日本近海で操業していた。遭難した際に日本沿岸で燃料・食料・水の補給ができる港が必要だった<br>
+        ▶ アメリカと清（中国）を結ぶ貿易船にとっても，日本は太平洋を横断する航路の中継地点として重要な位置にあった<br>
+        ▶ 日本近海で難破したアメリカ人船員が，鎖国下の日本で厳しく扱われることがあり，その保護も求められていた<br>
+        ▶ こうした実利的な理由から，アメリカ政府はペリーに開国交渉の使命を与え，軍艦を率いて日本に向かわせた
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② ハリスの説得術——アロー戦争を利用する</div>
+      <div class="why-box">
+        <span class="label">🗣 「アメリカと結んでおいた方が安全だ」という論法</span>
+        1856年に下田総領事として着任したハリスは，通商条約の締結を幕府に強く迫りました。その際に持ち出したのが，当時清（中国）で起きていた<strong>アロー戦争</strong>（1856〜1860年，イギリス・フランスによる清への軍事行動）でした。<br><br>
+        ▶ 「清と戦争中のイギリス・フランスは，いずれ日本にも矛先を向けてくるかもしれない。それを防ぐ一番の方法は，領土的な野心を持たないアメリカと先に友好的な条約を結んでおくことだ」と説いた<br>
+        ▶ 条約調印が近づいた段階では，「天津条約の調印のため清国にいる英仏の艦隊が，まもなく日本に向けて出航する。今すぐアメリカと条約を結ばなければ，日本は英仏に占領されてしまうだろう」と，かなり切迫した言い方で幕府を追い込んだ<br>
+        ▶ 実際には英仏艦隊が清国を離れるのはその約1か月後の予定であり，ハリスのこの発言はかなり誇張を含んだ交渉術（いわゆるブラフ）だったと考えられている<br>
+        ▶ この強い圧力によって，幕府は条約締結を急がざるを得ない状況に追い込まれていった
+      </div>
+
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 孝明天皇の拒否と，誰が印を押したのか</div>
+      <div class="result-box">
+        <span class="label">📜 勅許を得ようとした理由と，それが実現しなかった経緯</span>
+        本来，外交（対外政策）は幕府だけの判断で決められることで，天皇の許可（勅許）を必要としませんでした。しかし当時，国内では外国人を排除しようとする攘夷の考え方が非常に強く，通商条約への反発が予想されたため，幕府は「開国は天皇のご意思でもある」という形にして，国内の批判をかわそうとしました。<br><br>
+        ▶ 老中・堀田正睦（ほったまさよし）がわざわざ京都に上り，孝明天皇に条約締結の許可を求めた<br>
+        ▶ しかし孝明天皇は攘夷を支持する立場から，<strong>勅許を与えなかった</strong><br>
+        ▶ 大老・井伊直弼の本音は「できる限り勅許が下りるまで調印を延期せよ」というもので，交渉担当の井上清直・岩瀬忠震にもそう指示していた<br>
+        ▶ ところがハリスの強い圧力を受けた井上・岩瀬の二人が，井伊の「やむを得ざれば致し方なし」という含みのある言葉を調印容認と解釈し，1858年7月29日（安政5年6月19日），神奈川沖のアメリカ軍艦ポーハタン号上で，独断で条約に花押（印）を記してしまった<br>
+        ▶ つまり，勅許を得ないまま実際に印を押したのは井伊直弼本人ではなく，現場の交渉担当者だった<strong>井上清直・岩瀬忠震</strong>の二人だった
+      </div>
+
+      <div class="key-point">
+        <strong>💭 井伊直弼の無念</strong><br>
+        調印の知らせを受けた井伊直弼は，側近から「帝のご意向に沿って，諸大名を招集し，考えを聞いた上で決定すべきだった」と諫言され，「無念の極み」と応じ，大老の辞任まで口にしたと伝えられています。天皇の許可を得ないまま結ばれたこの条約は，のちに尊王攘夷派の激しい反発を招き，井伊直弼自身は安政の大獄による強い弾圧の末，1860年の桜田門外の変で暗殺されることになります。「無許可の調印」は，一人の独断ではなく，追い詰められた交渉の現場と，幕府の権威が揺らいでいく過程が重なって生まれた出来事だったといえるでしょう。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 大政奉還〜小御所会議 -->
+<div class="modal-overlay" id="modal-taiseikogosho" onclick="if(event.target===this)closeModal('taiseikogosho')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('taiseikogosho')">✕</button>
+    <div class="modal-title">📜 大政奉還のアイデアは誰のもの？——小御所会議までの道のり</div>
+    <div class="modal-body">
+
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 大政奉還の発案——一人のアイデアではない</div>
+      <div class="cause-box">
+        <span class="label">💡 思想の芽から実現まで，いくつもの段階があった</span>
+        大政奉還は，教科書的には「坂本龍馬の発案」として語られることが多いのですが，実際にはもっと早い段階から幕臣の間で議論されており，複数の人物・段階を経て実現したものです。<br><br>
+        ▶ 幕末のかなり早い時期から，開明的な幕臣だった<strong>横井小楠（よこいしょうなん）・大久保一翁（おおくぼいちおう）・勝海舟</strong>らが「政権を朝廷に返すべきだ」という大政奉還論を提唱していた（ただし当時の幕府は公武合体路線をとっており，すぐには実現しなかった）<br>
+        ▶ 1867年6月，坂本龍馬が船の中で土佐藩参政の<strong>後藤象二郎</strong>に「船中八策」という政治構想を示し，その一つが大政奉還だったと伝えられる（ただしこの逸話自体，後世の創作という説もあり，史料的な裏付けは慎重に扱う必要がある）<br>
+        ▶ 後藤象二郎はこれを妙案と受け止め，龍馬の発案であることは伏せたまま，自らの考えとして前藩主・<strong>山内容堂</strong>に提言した<br>
+        ▶ 1867年10月3日，山内容堂が大政奉還を求める建白書を将軍・徳川慶喜に提出し，慶喜がこれを受け入れて10月14日に実行に移した
+      </div>
+
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 小御所会議——慶喜は会議にいなかった</div>
+      <div class="why-box">
+        <span class="label">🏯 慶喜不在のまま進んだ会議</span>
+        王政復古の大号令が出された1867年12月9日の夜，新政府樹立後の具体的な人事や，旧将軍・徳川慶喜の扱いを話し合う<strong>小御所会議</strong>が京都御所で開かれました。ここで重要なのは，<strong>慶喜本人はこの会議に出席していなかった</strong>という点です。当時，慶喜は大坂城に滞在していました。<br><br>
+        ▶ 慶喜を弁護する立場をとったのが，土佐藩の前藩主・<strong>山内容堂</strong>だった。容堂は「徳川家は200年余りにわたり国を安定して治めてきた。大政奉還は忠誠の表れであり，その慶喜に発言の機会も与えないのは不当だ」と主張した<br>
+        ▶ これに対し岩倉具視は「すべては天皇ご自身のご決断である」と反論した（このやり取り自体，同時代の史料には見えず，後世の脚色という説もある）<br>
+        ▶ 会議の休憩中，御所の警護にあたっていた西郷隆盛が，相談に来た岩下方平（いわしたかたひら）に対して「短刀一本あれば用は足りもうす」（実力行使も辞さない）と述べたと伝えられ，この言葉が岩倉→浅野→後藤象二郎→山内容堂へと伝わり，容堂の態度を軟化させたとされる<br>
+        ▶ ただしこの逸話は，出来事から半世紀近く後になって語られた回顧談が唯一の出典であり，他の主要な史料には記載がないため，史実として確定しているわけではない
+      </div>
+
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 辞官納地——慶喜の官位と領地</div>
+      <div class="result-box">
+        <span class="label">📜 「みずから申し出た」という形がとられた</span>
+        会議の休憇中，後藤象二郎が山内容堂を説得したことで流れが変わり，最終的に慶喜へ<strong>辞官納地（じかんのうち）</strong>——内大臣の官職を辞退し，徳川宗家の領地の一部を朝廷に返上すること——を求めることが決定しました。<br><br>
+        ▶ この決定は，翌日，<strong>松平春嶽（まつだいらしゅんがく）・徳川慶勝（とくがわよしかつ）</strong>が大坂の慶喜のもとへ赴いて伝えた<br>
+        ▶ 伝え方には政治的な配慮があり，「新政府が一方的に処罰する」という形ではなく，<strong>「慶喜がみずから申し出る」という体裁</strong>がとられた<br>
+        ▶ 慶喜はこれを受け入れたが，のちに新政府側との対立が深まり，1868年1月，鳥羽・伏見の戦いへとつながっていく<br>
+        ▶ このように，大政奉還から辞官納地に至る過程は，複数の人物の思惑と交渉が積み重なって進んだものであり，一人の英断や決定だけで説明できるものではない
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 23語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"異国船打払令", "B":"薪水給与令", "C":"ペリー", "D":"日米和親条約",
+  "E":"下田", "F":"箱館", "G":"日米修好通商条約", "H":"井伊直弼",
+  "I":"関税自主権", "J":"治外法権", "K":"安政の大獄", "L":"吉田松陰",
+  "M":"桜田門外の変", "N":"公武合体", "O":"薩英戦争", "P":"蛤御門の変",
+  "Q":"薩長同盟", "R":"坂本龍馬", "S":"大政奉還", "T":"徳川慶喜",
+  "U":"王政復古の大号令", "V":"江戸城", "W":"戊辰戦争"
+};
+const wordBank = ["異国船打払令","薪水給与令","ペリー","日米和親条約","下田","箱館",
+  "日米修好通商条約","井伊直弼","関税自主権","治外法権","安政の大獄","吉田松陰",
+  "桜田門外の変","公武合体","薩英戦争","蛤御門の変","薩長同盟","坂本龍馬",
+  "大政奉還","徳川慶喜","王政復古の大号令","江戸城","戊辰戦争"];
+
+const miniQuizData1 = [
+  {q:"①　1825年，日本近海に接近する外国船を武力で撃退することを命じた法令は何か？",
+   choices:["薪水給与令","異国船打払令","異国船打拂令","鎖国令"], ans:1,
+   exp:"異国船打払令（いこくせんうちはらいれい）。1825年に発令され，外国船を理由を問わず武力で撃退することを命じました。"},
+  {q:"②　1842年，異国船打払令を改め，外国船に燃料・水を与えて穏便に退去させる方針とした法令は何か？",
+   choices:["薪水給与令","異国船打払令","異学の禁","上知令"], ans:0,
+   exp:"薪水給与令（しんすいきゅうよれい）。アヘン戦争で清がイギリスに敗れたことを受け，老中・水野忠邦が方針を転換しました。"},
+  {q:"③　1840〜42年，イギリスと清（中国）の間で起き，清が敗れた戦争は何か？",
+   choices:["日清戦争","アヘン戦争","日露戦争","ボーア戦争"], ans:1,
+   exp:"アヘン戦争。イギリスの勝利に終わり，清はイギリスに香港を割譲するなど不利な条約を結ばされました。この情報は日本にも衝撃を与えました。"},
+  {q:"④　異国船打払令から薪水給与令へ方針を転換した，当時の老中は誰か？",
+   choices:["水野忠邦","松平定信","井伊直弼","徳川吉宗"], ans:0,
+   exp:"水野忠邦（みずのただくに）。天保の改革を行った老中としても知られ，1842年に方針転換を行いました。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1853年，軍艦4隻を率いて浦賀に来航し，開国を要求したアメリカの人物は誰か？",
+   choices:["ハリス","ペリー","ビッドル","タウンゼント・ハリス"], ans:1,
+   exp:"ペリー。東インド艦隊司令長官として1853年に来航し，翌1854年に日米和親条約を締結させました。"},
+  {q:"②　1854年に締結され，下田・箱館の2港を開港した条約は何か？",
+   choices:["日米和親条約","日米修好通商条約","下関条約","樺太千島交換条約"], ans:0,
+   exp:"日米和親条約。ペリーとの間で結ばれ，200年以上続いた鎖国が事実上終わるきっかけとなりました。"},
+  {q:"③　日米和親条約で開港された2港はどこか？",
+   choices:["横浜・神戸","下田・箱館","長崎・新潟","兵庫・箱館"], ans:1,
+   exp:"下田（静岡県）と箱館（北海道函館市）の2港が開港されました。"},
+  {q:"④　日米和親条約の締結によって，日本のそれまでの対外政策はどうなったか？",
+   choices:["鎖国が強化された","鎖国が事実上終わった","攘夷が強化された","貿易が禁止された"], ans:1,
+   exp:"200年以上続いた鎖国政策が事実上終わり，日本は開国することになりました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1858年，天皇の許可を得ないまま日米修好通商条約を締結した大老は誰か？",
+   choices:["水野忠邦","井伊直弼","徳川慶喜","松平定信"], ans:1,
+   exp:"井伊直弼（いいなおすけ）。反対派を安政の大獄で弾圧しましたが，1860年に桜田門外の変で暗殺されました。"},
+  {q:"②　日米修好通商条約で，日本に認められなかった権利は何か？",
+   choices:["治外法権","関税自主権","裁判権","貿易権"], ans:1,
+   exp:"関税自主権。輸入品の関税率を日本が自由に決められない不平等な内容でした。"},
+  {q:"③　安政の大獄で処刑された，長州藩・松下村塾の思想家は誰か？",
+   choices:["坂本龍馬","吉田松陰","西郷隆盛","木戸孝允"], ans:1,
+   exp:"吉田松陰（よしだしょういん）。私塾「松下村塾」で高杉晋作・伊藤博文らを育てましたが，安政の大獄で処刑されました。"},
+  {q:"④　1860年，井伊直弼が水戸藩浪士らに暗殺された事件を何というか？",
+   choices:["生麦事件","桜田門外の変","蛤御門の変","池田屋事件"], ans:1,
+   exp:"桜田門外の変。江戸城桜田門外で起こり，幕府の権威失墜を象徴する事件となりました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1862年，薩摩藩主の父・島津久光の行列を横切ったイギリス人が殺傷された事件は何か？",
+   choices:["生麦事件","池田屋事件","蛤御門の変","禁門の変"], ans:0,
+   exp:"生麦事件（なまむぎじけん）。翌1863年，イギリスが報復として薩摩藩を攻撃し，薩英戦争が起こりました。"},
+  {q:"②　生麦事件の報復として1863年に起きた，イギリスと薩摩藩の戦争は何か？",
+   choices:["薩英戦争","日英戦争","下関戦争","日清戦争"], ans:0,
+   exp:"薩英戦争。薩摩藩は大きな被害を受け，攘夷が困難であることを痛感するきっかけとなりました。"},
+  {q:"③　1864年，京都で長州藩と幕府側が衝突し，長州藩が敗れて「朝敵」とされた事件は何か？",
+   choices:["生麦事件","桜田門外の変","蛤御門の変（禁門の変）","池田屋事件"], ans:2,
+   exp:"蛤御門の変（禁門の変）。長州藩は敗北して朝敵とされ，幕府による長州征伐へとつながりました。"},
+  {q:"④　1864年，京都で新撰組が尊王攘夷派の志士を襲撃した事件は何か？",
+   choices:["池田屋事件","生麦事件","桜田門外の変","蛤御門の変"], ans:0,
+   exp:"池田屋事件。新撰組が尊王攘夷派の志士を襲撃し，これに反発した長州藩が蛤御門の変を起こすきっかけとなりました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1866年，対立していた薩摩藩と長州藩の間で結ばれた同盟を何というか？",
+   choices:["薩長同盟","日英同盟","会薩同盟","公武合体"], ans:0,
+   exp:"薩長同盟（さっちょうどうめい）。倒幕運動の大きな転機となりました。"},
+  {q:"②　薩長同盟の仲介役を務めた，土佐藩出身の志士は誰か？",
+   choices:["坂本龍馬","西郷隆盛","木戸孝允","岩倉具視"], ans:0,
+   exp:"坂本龍馬（さかもとりょうま）。対立していた薩摩・長州の間を仲介し，1866年の同盟成立に貢献しました。"},
+  {q:"③　薩長同盟の成立に関わった，薩摩藩・長州藩の中心人物の組み合わせとして正しいものはどれか？",
+   choices:["西郷隆盛（薩摩）・木戸孝允（長州）","勝海舟（薩摩）・岩倉具視（長州）","井伊直弼（薩摩）・徳川慶喜（長州）","吉田松陰（薩摩）・坂本龍馬（長州）"], ans:0,
+   exp:"薩摩藩の西郷隆盛，長州藩の木戸孝允が中心となって同盟を成立させました。"},
+  {q:"④　薩長同盟の成立は，その後の政治にどのような影響を与えたか？",
+   choices:["幕府の権威がさらに高まった","倒幕勢力が結集し，倒幕運動が加速した","攘夷運動が完全に収束した","朝廷と幕府の対立がなくなった"], ans:1,
+   exp:"西日本の有力な2藩が手を結んだことで倒幕勢力の軍事力が強まり，倒幕運動が大きく加速しました。"}
+];
+
+const miniQuizData6 = [
+  {q:"①　1867年10月14日，15代将軍・徳川慶喜が政権を朝廷に返上したことを何というか？",
+   choices:["大政奉還","王政復古の大号令","版籍奉還","廃藩置県"], ans:0,
+   exp:"大政奉還（たいせいほうかん）。これにより約260年続いた江戸幕府は終わりを迎えました。"},
+  {q:"②　1867年12月9日，天皇中心の新政府樹立を宣言したものは何か？",
+   choices:["大政奉還","王政復古の大号令","五箇条の御誓文","廃藩置県"], ans:1,
+   exp:"王政復古の大号令。岩倉具視ら倒幕派が中心となって発し，将軍・摂政・関白などを廃止しました。"},
+  {q:"③　1868年，西郷隆盛と勝海舟の会談によって実現した出来事は何か？",
+   choices:["薩長同盟の成立","江戸城の無血開城","日米修好通商条約の締結","大政奉還"], ans:1,
+   exp:"江戸城の無血開城。戦闘を行わずに江戸城が新政府軍に明け渡され，江戸の町が戦火から救われました。"},
+  {q:"④　1868〜1869年に起きた，旧幕府軍と新政府軍の一連の内戦を何というか？",
+   choices:["戊辰戦争","西南戦争","日清戦争","日露戦争"], ans:0,
+   exp:"戊辰戦争（ぼしんせんそう）。鳥羽・伏見の戦いに始まり，新政府軍の勝利で終結しました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1825年，日本近海の外国船を武力で撃退することを命じた法令は何か？",
+   choices:["薪水給与令","異国船打払令","五榜の掲示","異学の禁"], ans:1,
+   exp:"異国船打払令（1825年）。1842年，アヘン戦争の情報を受けて薪水給与令に方針転換されました。"},
+  {q:"② 1853年，軍艦4隻を率いて浦賀に来航し，開国を要求したアメリカの人物は誰か？",
+   choices:["ハリス","ペリー","ビッドル","グラント"], ans:1,
+   exp:"ペリー。1854年に再来航し，日米和親条約を締結させました。"},
+  {q:"③ 日米和親条約（1854年）で開港された2港はどこか？",
+   choices:["神奈川・長崎","下田・箱館","横浜・神戸","新潟・兵庫"], ans:1,
+   exp:"下田・箱館の2港が開港されました。これにより鎖国政策は事実上終わりました。"},
+  {q:"④ 1858年，天皇の許可を得ないまま日米修好通商条約を締結した大老は誰か？",
+   choices:["徳川慶喜","井伊直弼","水野忠邦","徳川吉宗"], ans:1,
+   exp:"井伊直弼。安政の大獄で反対派を弾圧しましたが，1860年の桜田門外の変で暗殺されました。"},
+  {q:"⑤ 日米修好通商条約が「不平等条約」と呼ばれる理由として正しい組み合わせはどれか？",
+   choices:["治外法権を認め，関税自主権がなかった","鎖国を継続し，貿易を禁止した","天皇の許可を得て締結した公正な条約だった","日本に有利な税率が設定された"], ans:0,
+   exp:"外国人に治外法権（領事裁判権）を認め，日本に関税自主権がないという不平等な内容でした。"},
+  {q:"⑥ 安政の大獄で処刑された，長州藩・松下村塾の思想家は誰か？",
+   choices:["坂本龍馬","吉田松陰","西郷隆盛","勝海舟"], ans:1,
+   exp:"吉田松陰。松下村塾で高杉晋作・伊藤博文らを育てましたが，安政の大獄で処刑されました。"},
+  {q:"⑦ 1860年，井伊直弼が水戸藩浪士らに暗殺された事件を何というか？",
+   choices:["生麦事件","桜田門外の変","蛤御門の変","池田屋事件"], ans:1,
+   exp:"桜田門外の変。幕府の最高責任者の暗殺は，幕府の権威失墜を象徴する事件となりました。"},
+  {q:"⑧ 1866年，坂本龍馬らの仲介で薩摩藩と長州藩が結んだ同盟を何というか？",
+   choices:["日英同盟","薩長同盟","公武合体","会津同盟"], ans:1,
+   exp:"薩長同盟。薩摩藩の西郷隆盛・長州藩の木戸孝允が中心となり，倒幕運動の大きな転機となりました。"},
+  {q:"⑨ 1867年10月14日，15代将軍・徳川慶喜が政権を朝廷に返上したことを何というか？",
+   choices:["王政復古の大号令","大政奉還","版籍奉還","廃藩置県"], ans:1,
+   exp:"大政奉還。これにより約260年続いた江戸幕府は終わりを迎えました。"},
+  {q:"⑩ 1868〜1869年，鳥羽・伏見の戦いに始まる旧幕府軍と新政府軍の一連の内戦を何というか？",
+   choices:["西南戦争","戊辰戦争","日清戦争","日露戦争"], ans:1,
+   exp:"戊辰戦争。江戸城の無血開城，上野戦争，榎本武揚の抵抗などを経て，新政府軍の勝利で終結しました。"}
+];
+
+const checkItems = [
+  "1825年の異国船打払令と，1842年の薪水給与令への方針転換の理由を説明できる",
+  "1853年のペリー来航と，1854年の日米和親条約の内容（下田・箱館の開港）を説明できる",
+  "1858年の日米修好通商条約を，大老・井伊直弼が天皇の許可なく締結したことを説明できる",
+  "日米修好通商条約が不平等条約である理由（治外法権・関税自主権の欠如）を説明できる",
+  "安政の大獄と桜田門外の変の関係（弾圧と，その反発による暗殺）を説明できる",
+  "生麦事件・薩英戦争・蛤御門の変など，尊王攘夷運動の高まりと挫折を説明できる",
+  "1866年，坂本龍馬の仲介で薩長同盟が成立した経緯を説明できる",
+  "1867年の大政奉還により，徳川慶喜が政権を朝廷に返上したことを説明できる",
+  "王政復古の大号令が天皇中心の新政府樹立を宣言したものであることを説明できる",
+  "戊辰戦争（鳥羽・伏見の戦い〜江戸城無血開城〜榎本武揚の抵抗）の流れを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('sec-status-1').className = 'sec-status';
+  const s2 = document.getElementById('sec-status-2');
+  if (s2) { s2.textContent = ''; s2.className = 'sec-status'; }
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5, mq6: miniQuizData6 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

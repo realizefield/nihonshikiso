@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑭元寇と幕府衰退 ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a2318}
+  .unit-header{background:linear-gradient(135deg,#7a4f00,#3d2b7a);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #d4956a;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.2s;flex:1;min-width:130px;text-align:center}
+  .mode-tab.active{background:#8b3322;color:#fff;border-color:#8b3322;box-shadow:0 3px 0 #6a2318}
+  .mode-tab:hover:not(.active){background:#fdebd0}
+  .panel{background:#fff;border-radius:12px;border:1px solid #d4956a;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #d4956a;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.15s}
+  .fc-timer-btn.active{background:#8b3322;color:#fff;border-color:#8b3322}
+  .fc-timer-btn:hover:not(.active){background:#fdebd0}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(200,112,0,0.15);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#8b3322}
+  .fc-card .fc-hint{font-size:13px;color:#6a4f00;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:11px 32px;background:#8b3322;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #d4956a;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318;display:none}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#8b3322;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .test-choice.selected{border-color:#1a4f7a;background:#e0f0ff;color:#1a4f7a;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .test-submit{background:#8b3322;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #6a2318;margin-top:18px;width:100%}
+  .test-submit:hover{background:#6a2318}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#8b3322;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#c87000,#f4a261);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+  /* 説明文スタイル */
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #c8a060;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#7a4f00,#3d2b7a);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-hd.open .sarrow{transform:rotate(90deg)}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#fff8ee;border-left:5px solid #7a4f00;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#7a4f00}
+  .setsu-h3{font-size:14px;font-weight:800;color:#7a4f00;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #e8d0a0}
+  .setsu-box{background:#fff9f0;border-radius:8px;border:1px solid #e0c090;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#7a4f00}
+  .setsu-box .lbl{display:inline-block;background:#7a4f00;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.purple{background:#3d2b7a}
+  .setsu-box .lbl.red{background:#8b3322}
+  .setsu-cmp{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+  .setsu-cmp th{background:#7a4f00;color:#fff;padding:7px 12px;text-align:left;font-size:13px}
+  .setsu-cmp td{padding:8px 12px;border:1px solid #e0c090;line-height:1.8;vertical-align:top}
+  .setsu-cmp tr:nth-child(even) td{background:#fff9f0}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+  /* 詳しく知るボタン */
+  .shiru-btn{display:inline-flex;align-items:center;gap:4px;background:#fff9f0;border:1.5px solid #7a4f00;color:#7a4f00;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold;cursor:pointer;margin:4px 0 2px 2px;transition:all .15s;vertical-align:middle;line-height:1.6}
+  .shiru-btn:hover{background:#7a4f00;color:#fff}
+  /* モーダル */
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.65);z-index:20000;justify-content:center;align-items:flex-start;padding:20px;overflow-y:auto}
+  .modal-overlay.open{display:flex}
+  .modal-box{background:#fff;border-radius:16px;max-width:640px;width:100%;margin:auto;padding:26px 24px 22px;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.35);border-top:5px solid #7a4f00}
+  .modal-close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer;color:#888;background:none;border:none;line-height:1;padding:2px 6px;border-radius:6px}
+  .modal-close:hover{background:#eee;color:#333}
+  .modal-title{font-size:16px;font-weight:800;color:#7a4f00;margin-bottom:14px;padding-right:32px;line-height:1.6;border-bottom:2px solid #e8d0a0;padding-bottom:10px}
+  .modal-body{font-size:14px;line-height:2.0;color:#1a1a2e}
+  .modal-body p{margin-bottom:10px}
+  .modal-body .m-lbl{display:inline-block;background:#7a4f00;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:5px;vertical-align:middle}
+  .modal-body .m-lbl.purple{background:#3d2b7a}
+  .modal-body .m-lbl.green{background:#1a6b22}
+  .modal-body .m-note{background:#fff8e8;border-left:4px solid #c87000;padding:9px 13px;border-radius:0 6px 6px 0;margin:10px 0;font-size:13px;color:#4a3000;line-height:1.9}
+  .modal-body .m-important{background:#fff9f0;border:1.5px solid #7a4f00;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:13px;line-height:1.9}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-link">← 目次へ戻る</a>
+
+<div class="unit-header">
+  <div class="unit-num">第５章 鎌倉時代｜単元⑭</div>
+  <h1>元寇と幕府衰退——御成敗式目・永仁の徳政令・後醍醐天皇</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 10枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 5問</span>
+    <span class="stat-chip">📋 確認テスト 8問</span>
+  </div>
+</div>
+
+<!-- ★ 説明文 ★ -->
+<div class="setsu-section">
+  <div class="setsu-hd open" id="setsu-hd" onclick="toggleSetsu()">
+    📚 この単元の説明文（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body open" id="setsu-body">
+
+    <div class="setsu-intro">
+      鎌倉幕府は承久の乱（1221年）で力を強めましたが，やがて<strong>元（モンゴル帝国）の2度の侵攻</strong>と，それに続く<strong>御家人の貧困</strong>によって力を失っていきます。<br>
+      この単元では，武士の法律「<strong>御成敗式目</strong>」と「<strong>元寇（蒙古襲来）</strong>」，そして幕府滅亡への流れを学びます。
+    </div>
+
+    <div class="setsu-h3">📜 御成敗式目（1232年）——日本初の武家法</div>
+    <div class="setsu-box">
+      1232年，3代執権・<strong>北条泰時（ほうじょうやすとき）</strong>が「<span class="lbl">御成敗式目（貞永式目）</span>」を制定しました。全51ヵ条からなる日本初の武家向け法律です。
+      <button class="shiru-btn" onclick="openModal('shikimoku-why')">🔍 制定の目的は何か</button><br><br>
+      特徴：①法律の知識がない武士にも読めるよう<strong>ひらがなを多用</strong>　②武士の世界での慣習や「道理」を文書化　③西日本・東日本の武士に統一的なルールを示した<br><br>
+      朝廷の公家法（律令）とは別に，武士だけに適用される法律を初めてつくったことに意義があります。
+    </div>
+
+    <div class="setsu-h3">⚔️ 元寇（蒙古襲来）——モンゴル帝国の2度の侵攻</div>
+    <div class="setsu-box">
+      中国を支配した<strong>フビライ＝ハン</strong>（元の皇帝）は日本にも服従を求めましたが，8代執権・<strong>北条時宗（ほうじょうときむね）</strong>はこれを拒否しました。
+      <button class="shiru-btn" onclick="openModal('kubilai-why')">🔍 元寇の原因とフビライの思惑</button><br><br>
+      <span class="lbl">文永の役（1274年）</span> 元・高麗連合軍約2万人が博多湾に上陸。「<strong>てつはう</strong>（爆発する火薬武器）」や集団戦法に日本軍は苦戦。暴風雨が来て元軍は撤退。<br><br>
+      <span class="lbl purple">弘安の役（1281年）</span> 東路軍4万人＋江南軍10万人，計14万人が来襲。日本軍は防塁（石の壁）で上陸を阻止，再び暴風雨（神風）で元軍は壊滅。
+      <button class="shiru-btn" onclick="openModal('genko-defeat')">🔍 元が敗れた本当の要因</button>
+      <button class="shiru-btn" onclick="openModal('emaki')">🔍 蒙古襲来絵詞とは</button><br><br>
+      この2度の侵攻を合わせて「<strong>元寇（蒙古襲来）</strong>」といいます。
+    </div>
+    <div class="setsu-note">💡 元寇後の問題点：幕府は御家人に十分な恩賞（土地）を与えられませんでした。「戦って命がけで戦ったのに土地ゼロ？」という御家人の不満が積もり，幕府への信頼が崩れていきます。</div>
+
+    <div class="setsu-h3">📉 永仁の徳政令（1297年）——御家人救済が裏目に</div>
+    <div class="setsu-box">
+      元寇後，多くの御家人が戦費や生活のために借金を重ね，土地を手放すようになりました。9代執権・<strong>北条貞時</strong>は御家人を救おうと「<span class="lbl red">永仁の徳政令</span>（1297年）」を出しました。<br><br>
+      内容：御家人が売ったり質に入れたりした土地を<strong>無償で取り戻せる</strong>よう命じた。<br><br>
+      しかし，「お金を貸しても返ってこない」とわかった商人・金融業者が御家人への融資をやめてしまい，かえって経済が混乱。御家人の生活はさらに苦しくなりました。
+      <button class="shiru-btn" onclick="openModal('tokusei-why')">🔍 なぜ逆効果になったのか</button>
+    </div>
+
+    <div class="setsu-h3">🏯 鎌倉幕府の滅亡（1333年）</div>
+    <div class="setsu-box">
+      幕府への不満が高まる中，<strong>後醍醐天皇</strong>が幕府打倒の運動を起こしました。足利尊氏・新田義貞らが後醍醐天皇に呼応し，幕府側についていた足利尊氏が六波羅探題を攻撃，新田義貞が鎌倉に攻め込みます。<br><br>
+      14代執権・北条高時以下の北条氏一族は自害し，1333年に鎌倉幕府は滅亡しました。（承久の乱1221年から112年後）
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== モーダル群 ===== -->
+
+<div class="modal-overlay" id="modal-shikimoku-why" onclick="bgClose(event,'shikimoku-why')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('shikimoku-why')">✕</button>
+    <div class="modal-title">📜 御成敗式目を制定した目的は何か</div>
+    <div class="modal-body">
+      <p>鎌倉時代，武士の世界には独自のルール・慣習がありましたが，文書化されておらず，解釈が人によってバラバラでした。これが大きな問題を引き起こしていました。</p>
+      <p><span class="m-lbl">問題①</span> 武士同士の土地をめぐる争いが頻発。「俺の先祖の土地だ」「いや俺が譲り受けた」と主張がぶつかっても，明確な法律がなければ公正な裁判ができない。</p>
+      <p><span class="m-lbl">問題②</span> 朝廷の律令（法律）は武士の生活・慣習に合わなかった。たとえば律令では女性の土地相続を厳しく制限していましたが，武士の間では娘にも土地を譲る慣習がありました。</p>
+      <p><span class="m-lbl">問題③</span> 御家人が裁判を起こす際の基準が不明確で，幕府の判断がブレていた。</p>
+      <p><span class="m-lbl">御成敗式目の目的</span> 武士社会の「道理（もっともな理屈）」と「先例（これまでのルール）」を文書化し，<strong>全国の武士・御家人に統一した基準を示す</strong>こと。</p>
+      <div class="m-note">📌 北条泰時は御成敗式目を「法律の知識がない武士でも読めるように」と，わかりやすいひらがな多用の文章で書きました。51ヵ条の中には女性の土地相続権を認める条文も含まれており，武士社会の実情を反映した画期的な法律でした。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-kubilai-why" onclick="bgClose(event,'kubilai-why')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('kubilai-why')">✕</button>
+    <div class="modal-title">🌏 元寇の原因とフビライの思惑</div>
+    <div class="modal-body">
+      <p>なぜフビライ＝ハンは日本を攻撃したのでしょうか。その背景には複数の思惑がありました。</p>
+      <p><span class="m-lbl">思惑①　領土拡大</span> フビライはモンゴル帝国の皇帝として中国（元）を支配し，さらにアジア全体を支配下に置こうとしていました。日本は当時，アジアで数少ない「モンゴルに服従していない国」の一つでした。</p>
+      <p><span class="m-lbl">思惑②　経済的利益</span> 日本は金の産出国として知られており（「黄金の国ジパング」の伝説）財富への関心がありました。また，日本を支配すれば東アジアの交易路を完全に掌握できます。</p>
+      <p><span class="m-lbl">思惑③　デモンストレーション</span> 周辺諸国に「元に逆らえばどうなるか」を見せつける効果を狙っていました。</p>
+      <p><span class="m-lbl">交渉の経緯</span> フビライは1268年から複数回，日本に使者を送って服従を求めました。8代執権・北条時宗はすべて拒絶。使者を処刑したこともあり，フビライは怒って軍事侵攻を決定しました。</p>
+      <div class="m-note">📌 当時20代前半の若き執権・北条時宗が「世界最強の軍事大国」に立ち向かった決断は，御家人たちの士気を高めました。ただ，外交交渉の余地はあったとも言われており，現代の歴史家の間では評価が分かれています。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-genko-defeat" onclick="bgClose(event,'genko-defeat')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('genko-defeat')">✕</button>
+    <div class="modal-title">⛵ 元が2度とも敗れた本当の要因</div>
+    <div class="modal-body">
+      <p>「神風（台風）のおかげで勝てた」とよく言われますが，それだけではありません。複数の要因が重なって元軍は敗退しました。</p>
+      <p><span class="m-lbl">要因①　防塁</span> 文永の役の後，幕府は博多湾沿岸20kmにわたって石の防壁（防塁・石塁）を築きました。弘安の役では元軍は上陸できず，船の上に閉じ込められたまま暴風雨に遭いました。</p>
+      <p><span class="m-lbl">要因②　日本武士の奮戦</span> 文永の役では元軍の集団戦法・てつはうに苦しみましたが，幕府軍は夜襲などで反撃。弘安の役では防塁を守りながら効果的に戦いました。</p>
+      <p><span class="m-lbl">要因③　補給の問題</span> 遠征軍に十分な食料・補給を届けることは当時の技術では極めて困難でした。</p>
+      <p><span class="m-lbl">要因④　船の問題</span> 弘安の役の江南軍（旧南宋の将兵）が乗った船の多くは，外海での使用を想定していない川船でした。嵐に弱く，台風が来た際に多数が沈没しました。</p>
+      <p><span class="m-lbl">要因⑤　暴風雨</span> 特に弘安の役では，上陸できないまま2か月近く船上で待機していた元軍を台風が直撃しました。船団の大半が壊滅し，10万人以上が死亡したとされます。</p>
+      <div class="m-important">🔍 <strong>現代の海底調査の成果</strong><br>21世紀に入り，博多湾の海底から元の船の残骸が多数発見されています。調査の結果，急造された粗末な船が多く，もともと嵐に弱い構造だったことが判明しています。「神風」の前から元軍の態勢は限界に達していたとも言えます。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-emaki" onclick="bgClose(event,'emaki')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('emaki')">✕</button>
+    <div class="modal-title">🖼️ 蒙古襲来絵詞——誰が何の目的で描いたのか</div>
+    <div class="modal-body">
+      <p>「蒙古襲来絵詞（もうこしゅうらいえことば）」は，元寇の様子を描いた絵巻物で，日本史で最も有名な絵巻物の一つです。</p>
+      <p><span class="m-lbl">制作者</span> 肥後国（熊本県）の御家人，<strong>竹崎季長（たけざきすえなが）</strong>が絵師に依頼して描かせました。</p>
+      <p><span class="m-lbl">目的</span> <strong>自分の活躍を記録し，幕府に恩賞を要求するための証拠資料として</strong>制作しました。</p>
+      <p><span class="m-lbl">背景にある事情</span> 元寇は「外国との戦い」でした。通常の戦では「敵の土地を奪って御家人に与える」ことで恩賞を与えられましたが，元との戦いでは奪った土地がありません。そのため幕府は御家人に十分な恩賞を与えられませんでした。</p>
+      <p>怒った竹崎季長は，自ら鎌倉まで出向いて幕府の重臣・安達泰盛（あだちやすもり）に直訴。絵巻物という「証拠」を持参して自分の奮戦ぶりを訴え，わずかながら恩賞を勝ち取りました。</p>
+      <div class="m-note">📌 竹崎季長の「自分の活躍を絵に残して恩賞を要求する」という行動は，当時の武士が「御恩と奉公」の関係をいかに真剣に考えていたかを示しています。同時に，元寇後の御家人の不満がいかに大きかったかも伝えています。この絵巻物は現在，宮内庁に所蔵されています。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-tokusei-why" onclick="bgClose(event,'tokusei-why')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('tokusei-why')">✕</button>
+    <div class="modal-title">📉 永仁の徳政令がなぜ逆効果になったのか</div>
+    <div class="modal-body">
+      <p>「御家人の土地を無償で返せ」という法律を出したのに，なぜ御家人の生活はさらに苦しくなったのでしょうか。</p>
+      <p><span class="m-lbl">法令の内容</span> 御家人が売ったり質に入れたりした土地を，代金を返さなくても無償で取り戻せるよう命じた。</p>
+      <p><span class="m-lbl">なぜ逆効果になったか①</span> 土倉（どそう）・酒屋などの金融業者は「御家人に貸したお金は返ってこない」「担保の土地も返せと言われる」とわかりました。その結果，<strong>御家人への融資を一斉に断る</strong>ようになりました。</p>
+      <p><span class="m-lbl">なぜ逆効果になったか②</span> お金が借りられなくなった御家人は，生活費・戦費を工面できなくなり，かえって困窮が深刻化しました。</p>
+      <p><span class="m-lbl">なぜ逆効果になったか③</span> 法令はすぐに混乱が生じたため一部が撤回されました。「待っていたのに！」という怒りが広まりました。</p>
+      <div class="m-important">💡 <strong>経済の教訓</strong><br>「価格（利子・返済）を法律で強制的に変えると，市場が混乱する」という現象は，歴史上くり返し起きています。永仁の徳政令はその典型例です。善意の政策が逆効果になることがあることを，この事件は教えてくれます。<br><br>この失敗から，後に「土倉役（どそうやく）」という税を土倉・酒屋に課す代わりに営業を認める方式に切り替えられていきます。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== モーダル群 終わり ===== -->
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title: "元寇と幕府衰退——御成敗式目・永仁の徳政令・後醍醐天皇",
+  flashCards: [
+    {q:"1232年，3代執権・北条泰時が制定した日本初の武家法を何というか？", a:"御成敗式目（貞永式目）", hint:"武士の慣習を文書化した51カ条"},
+    {q:"1274年に起きた第1回の元の日本侵攻を何というか？", a:"文永の役", hint:"フビライ=ハンが送った2万人の軍"},
+    {q:"1281年に起きた第2回の元の日本侵攻を何というか？", a:"弘安の役", hint:"14万人の大軍・台風（神風）で撃退"},
+    {q:"元寇の際の鎌倉幕府8代執権は誰か？", a:"北条時宗", hint:"20代で就任。元に降伏を拒否"},
+    {q:"元軍の上陸を防ぐため博多湾沿岸に幕府が築いたものは？", a:"防塁（石塁）", hint:"弘安の役直前に完成"},
+    {q:"1297年，御家人の借金帳消しを狙って幕府が出した法令は？", a:"永仁の徳政令", hint:"逆効果で翌年に一部撤回"},
+    {q:"永仁の徳政令が逆効果になった理由は？", a:"金融業者が御家人への貸付を拒否したため", hint:"「返してもらえないなら貸さない」"},
+    {q:"1333年，鎌倉幕府打倒を主導した天皇は誰か？", a:"後醍醐天皇", hint:"建武の新政を行った"},
+    {q:"幕府軍から倒幕側に転じ，鎌倉を攻め落とした武将は誰か？", a:"足利尊氏", hint:"後に室町幕府を開く"},
+    {q:"元寇で元軍が苦戦した要因のひとつとして記録された自然現象は？", a:"台風（神風）", hint:"暴風雨が元の艦隊を壊滅させた"},
+  ],
+  drillQuiz: [
+    {q:"1232年に制定された，日本で最初の武家法を何といいますか？",
+     choices:["大宝律令","武家諸法度","御成敗式目（貞永式目）","分国法"],ans:2,
+     exp:"御成敗式目（貞永式目）は3代執権・北条泰時が制定した51カ条の武家法。武士の慣習を文書化し，武家社会のルールを明確にしました。御家人の土地相続・訴訟の解決基準を定めました。"},
+    {q:"元寇で，元軍の上陸を防ぐため博多湾沿岸に築かれたものは何ですか？",
+     choices:["長城","防塁（石塁）","関所","水城"],ans:1,
+     exp:"防塁（石塁）は弘安の役（1281年）の前に完成した石造りの防壁。元軍は防塁に阻まれて上陸を果たせず，そこに台風（神風）が直撃して艦隊が壊滅しました。"},
+    {q:"1297年，御家人の借金を帳消しにしようとして鎌倉幕府が出した法令は何ですか？",
+     choices:["武家諸法度","大宝律令","永仁の徳政令","惣無事令"],ans:2,
+     exp:"永仁の徳政令（1297年）。御家人が手放した土地を無償で取り戻せ，借金も帳消しにするというものでしたが，金融業者が御家人への貸付を拒否するようになり逆効果に。翌年一部撤回されました。"},
+    {q:"元寇（1274・1281年）を主導した元の皇帝は誰ですか？",
+     choices:["チンギス＝ハン","フビライ＝ハン","オゴタイ＝ハン","モンケ＝ハン"],ans:1,
+     exp:"フビライ＝ハン（忽必烈）。モンゴル帝国5代皇帝で中国に元を建国。日本に服属を要求したが鎌倉幕府（北条時宗）が拒否したため，2度にわたり日本に侵攻しました。"},
+    {q:"1333年，鎌倉幕府を滅亡させた天皇は誰ですか？",
+     choices:["後白河天皇","後三条天皇","後鳥羽上皇","後醍醐天皇"],ans:3,
+     exp:"後醍醐天皇。幕府に不満を持つ武士（新田義貞・足利尊氏など）を糾合し，1333年に鎌倉幕府を滅亡させました。その後「建武の新政」を行いましたが，武士の不満を招いて崩壊します。"},
+  ],
+  testQuiz: [
+    {q:"御成敗式目（1232年）を制定した執権は誰か？",choices:["北条時政","北条義時","北条泰時","北条時宗"],ans:2},
+    {q:"文永の役が起きた年はいつか？",choices:["1232年","1274年","1281年","1297年"],ans:1},
+    {q:"弘安の役が起きた年はいつか？",choices:["1232年","1274年","1281年","1333年"],ans:2},
+    {q:"元寇の際，防塁を築いて戦った鎌倉幕府の執権は誰か？",choices:["北条泰時","北条政子","北条時頼","北条時宗"],ans:3},
+    {q:"永仁の徳政令（1297年）が逆効果になった主な理由はどれか？",choices:["元軍が再来襲した","金融業者が御家人への貸付を拒否した","御家人が反乱を起こした","後醍醐天皇が介入した"],ans:1},
+    {q:"鎌倉幕府を滅亡させた天皇は誰か？",choices:["後鳥羽上皇","後白河天皇","後醍醐天皇","後三条天皇"],ans:2},
+    {q:"鎌倉幕府が滅亡した年はいつか？",choices:["1297年","1318年","1333年","1336年"],ans:2},
+    {q:"鎌倉幕府滅亡後，後醍醐天皇が行った政治を何というか？",choices:["院政","摂関政治","建武の新政","承久の乱"],ans:2},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});renderContent();}
+function renderContent(){const area=document.getElementById('content-area');if(currentMode==='flash')renderFlash(area);else if(currentMode==='drill')renderDrill(area);else renderTest(area);}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){const colors=['#8b3322','#c87000','#f4d03f','#2d8a30','#e8d5c8','#fff'];for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){initFlash();area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;startCardTimer();}
+function buildFlashCard(){if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#8b3322;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}const card=fcCards[fcIndex];return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}const q=drillQs[drillIndex];const choices=q.choices.map((c,i)=>`<div class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</div>`).join('');return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;}
+function drillAnswer(idx){if(drillAnswered)return;drillAnswered=true;const q=drillQs[drillIndex];document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});if(idx===q.ans)drillScore++;const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){
+  testSelections={};testSubmitted=false;
+  let html='<div class="panel">';
+  UNIT.testQuiz.forEach((q,i)=>{html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;q.choices.forEach((c,ci)=>{html+=`<div class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</div>`;});html+='</div></div>';});
+  html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;
+  area.innerHTML=html;
+}
+function testSelect(qi,ci){if(testSubmitted)return;testSelections[qi]=ci;document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});}
+function submitTest(){
+  if(testSubmitted)return;
+  const total=UNIT.testQuiz.length;const answered=Object.keys(testSelections).length;
+  if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}
+  testSubmitted=true;let correct=0;let reviewHTML='<div class="test-review">';
+  UNIT.testQuiz.forEach((q,i)=>{const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`：''}</div>`;});
+  reviewHTML+='</div>';const pct=Math.round(correct/total*100);const pass=correct>=6;
+  document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元⑭ クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;
+  document.getElementById('test-result').style.display='block';
+  if(pass)fireConfetti();
+}
+
+selectMode('flash');
+
+function toggleSetsu(){
+  const hd=document.getElementById('setsu-hd');
+  const body=document.getElementById('setsu-body');
+  if(hd)hd.classList.toggle('open');
+  if(body)body.classList.toggle('open');
+}
+function openModal(id){
+  const el=document.getElementById('modal-'+id);
+  if(el){el.classList.add('open');document.body.style.overflow='hidden';}
+}
+function closeModal(id){
+  const el=document.getElementById('modal-'+id);
+  if(el){el.classList.remove('open');document.body.style.overflow='';}
+}
+function bgClose(e,id){if(e.target===e.currentTarget)closeModal(id);}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(el=>{el.classList.remove('open');});document.body.style.overflow='';}});
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第３章 奈良時代 総合ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#5a2a9a;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:6px;margin-right:8px}
+  .back-link:hover{background:#3d1a7a}
+  .back-link.gray{background:#888}
+  .back-link.gray:hover{background:#666}
+  .back-links-row{margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .unit-header{background:linear-gradient(135deg,#3d1a7a,#5a2a9a);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #a070cc;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#5a2a9a;transition:all 0.2s;flex:1;min-width:130px;text-align:center}
+  .mode-tab.active{background:#5a2a9a;color:#fff;border-color:#5a2a9a;box-shadow:0 3px 0 #3d1a7a}
+  .mode-tab:hover:not(.active){background:#f0e8ff}
+  .panel{background:#fff;border-radius:12px;border:1px solid #a070cc;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #a070cc;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#5a2a9a;transition:all 0.15s}
+  .fc-timer-btn.active{background:#5a2a9a;color:#fff;border-color:#5a2a9a}
+  .fc-timer-btn:hover:not(.active){background:#f0e8ff}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(200,112,0,0.15);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#5a2a9a}
+  .fc-card .fc-hint{font-size:13px;color:#6a4f00;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:11px 32px;background:#5a2a9a;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #3d1a7a}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #a070cc;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#5a2a9a;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #a070cc;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#5a2a9a;background:#f0e8ff}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#f0e8ff;border-color:#9060b0;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#5a2a9a;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #3d1a7a;display:none}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#5a2a9a;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#5a2a9a;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#5a2a9a;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #a070cc;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#5a2a9a;background:#f0e8ff}
+  .test-choice.selected{border-color:#3d1a7a;background:#e8e0ff;color:#3d1a7a;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#f0e8ff;border-color:#9060b0;pointer-events:none}
+  .test-submit{background:#5a2a9a;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #3d1a7a;margin-top:18px;width:100%}
+  .test-submit:hover{background:#3d1a7a}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#5a2a9a;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#5a2a9a,#8a50cc);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#5a2a9a;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #3d1a7a}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+  /* 説明文スタイル */
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #9060c0;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#3d1a7a,#5a2a9a);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-hd.open .sarrow{transform:rotate(90deg)}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#f4f0ff;border-left:5px solid #5a2a9a;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#5a2a9a}
+  .setsu-h3{font-size:14px;font-weight:800;color:#5a2a9a;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #c8b0e8}
+  .setsu-box{background:#f8f4ff;border-radius:8px;border:1px solid #c0a0e0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#5a2a9a}
+  .setsu-box .lbl{display:inline-block;background:#5a2a9a;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.blue{background:#1a4f7a}
+  .setsu-box .lbl.red{background:#8b3322}
+  .setsu-cmp{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+  .setsu-cmp th{background:#5a2a9a;color:#fff;padding:7px 12px;text-align:left;font-size:13px}
+  .setsu-cmp td{padding:8px 12px;border:1px solid #c0a0e0;line-height:1.8;vertical-align:top}
+  .setsu-cmp tr:nth-child(even) td{background:#f8f4ff}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+  .unit-tag{display:inline-block;background:#5a2a9a;color:#fff;border-radius:4px;padding:1px 8px;font-size:11px;font-weight:bold;margin-right:4px;vertical-align:middle}
+  .unit-tag.green{background:#2d6a4f}
+  .unit-tag.blue{background:#1a4f7a}
+</style>
+</head>
+<body>
+
+<div class="back-links-row">
+  <a href="nihonshi_ch03.html" class="back-link">← 第３章テキスト</a>
+  <a href="nihonshi_index.html" class="back-link gray">目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第３章 奈良時代｜平城京〜聖武天皇・東大寺・大仏〜天平文化</div>
+  <h1>第３章 奈良時代 総合ドリル</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 10枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 10問</span>
+    <span class="stat-chip">📋 確認テスト 10問</span>
+  </div>
+</div>
+
+<!-- ★ 説明文 ★ -->
+<div class="setsu-section">
+  <div class="setsu-hd open" id="setsu-hd" onclick="toggleSetsu()">
+    📖 第３章のポイントまとめ<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body open" id="setsu-body">
+
+    <div class="setsu-intro">
+      第３章では「<strong>奈良時代</strong>」を学びました。平城京遷都から天平文化まで，重要ポイントを整理しましょう。
+    </div>
+
+    <div class="setsu-h3">重要な流れ</div>
+    <div class="setsu-box">
+      710年 平城京遷都（元明天皇）→ 723年 三世一身法 → 741年 国分寺・国分尼寺建立（聖武天皇）→ 743年 東大寺・大仏建立命令 → 743年 墾田永年私財法（荘園の始まり）→ 752年 大仏開眼供養 → 753年 鑑真来日 → 万葉集（約4500首）
+    </div>
+
+    <div class="setsu-h3">聖武天皇の仏教政策（なぜ大仏を作ったか）</div>
+    <div class="setsu-box">
+      社会不安（疫病・反乱・飢饉）が続く → 仏教の力で国家を守ろうとした → 国分寺（全国）・東大寺（総本山）・大仏（盧舎那仏）を建立
+    </div>
+    <div class="setsu-note">💡 <strong>荘園の誕生</strong>：墾田永年私財法（743年）→ 力ある貴族・寺社が大規模開墾 → 荘園の拡大 → 公地公民制の崩壊へ</div>
+
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title: "第３章 奈良時代 総合ドリル",
+  flashCards: [
+    {q:"710年，元明天皇が遷都した，唐の長安を模した奈良の都は？", a:"平城京（へいじょうきょう）", hint:"南北に朱雀大路（幅70m）が貫く"},
+    {q:"708年に鋳造された，日本最初の流通貨幣（銅銭）は？", a:"和同開珎（わどうかいちん）", hint:"唐の開元通宝がお手本"},
+    {q:"743年に出された，開墾した土地を永久に私有できるとした法令は？", a:"墾田永年私財法（こんでんえいねんしざいほう）", hint:"荘園の始まり"},
+    {q:"724年に即位し，東大寺・国分寺を建てた天皇は？", a:"聖武天皇（しょうむてんのう）", hint:"仏の力で国家を守ろうとした"},
+    {q:"741年に聖武天皇が全国の各国に建立を命じた，男性僧の寺は？", a:"国分寺（こくぶんじ）", hint:"女性僧の「国分尼寺」とセット"},
+    {q:"743年，聖武天皇が奈良（平城京）に建立を命じた，国分寺の総本山は？", a:"東大寺（とうだいじ）", hint:"高さ約15mの盧舎那仏（大仏）を安置"},
+    {q:"奈良時代に貴族・寺社が開墾で得た私有地のことを何という？", a:"荘園（しょうえん）", hint:"墾田永年私財法（743年）により誕生"},
+    {q:"聖武天皇の時代（天平年間）に栄えた，国際色豊かな文化は？", a:"天平文化（てんぴょうぶんか）", hint:"正倉院にはシルクロードの宝物が"},
+    {q:"唐から来日し，正式な仏教戒律を伝えた僧侶は？ 失明しながらも753年に来日成功。", a:"鑑真（がんじん）", hint:"759年に唐招提寺を建立"},
+    {q:"聖武天皇の遺品約9000点が収められた，奈良の東大寺内の宝物庫は？", a:"正倉院（しょうそういん）", hint:"「シルクロードの終着駅」とも呼ばれる"},
+  ],
+  drillQuiz: [
+    {q:"710年に元明天皇が遷都した，奈良の都の名前はどれですか？",
+     choices:["藤原京","平城京","平安京","難波京"],ans:1,
+     exp:"平城京（710年）は現在の奈良市に位置し，唐の長安を模して建設されました。南北に幅70mの朱雀大路（すざくおおじ）が貫き，朱雀大路の北端には天皇の宮殿（平城宮）がありました。奈良時代（710〜784年）の都として機能しました。"},
+    {q:"708年に鋳造された，日本最初の流通貨幣（銅銭）はどれですか？",
+     choices:["永楽通宝","寛永通宝","和同開珎","富本銭"],ans:2,
+     exp:"和同開珎（わどうかいちん，708年）は，唐の開元通宝をモデルにした銅銭です。「和銅（年号）」と「開珎（通宝の意）」を合わせた名称です。当初は民間にあまり普及しませんでしたが，商業活動の発展に貢献しました。"},
+    {q:"743年に出された，開墾した土地を永久に私有できるとした法令はどれですか？",
+     choices:["三世一身法","班田収授法","墾田永年私財法","大宝律令"],ans:2,
+     exp:"墾田永年私財法（743年）は，新たに開墾した土地（墾田）を永久に私有できると定めた法令です。開墾が促進された一方，力のある貴族・寺社が大規模な開墾を進めて広大な土地（荘園）を手に入れました。これが律令国家の財政基盤を揺るがす原因になりました。"},
+    {q:"聖武天皇が741年に全国の各国に建立を命じた寺の名称はどれですか？",
+     choices:["東大寺","薬師寺","国分寺","唐招提寺"],ans:2,
+     exp:"国分寺（こくぶんじ）は，仏教の力で国家を守るため，聖武天皇が全国60か所以上に建立を命じた寺院です。男性僧の国分寺と，女性僧の国分尼寺がセットで設けられました。奈良の東大寺はその総本山（総国分寺）にあたります。"},
+    {q:"聖武天皇が743年に建立を命じ，高さ約15mの盧舎那仏（大仏）を安置した寺はどれですか？",
+     choices:["法隆寺","東大寺","興福寺","薬師寺"],ans:1,
+     exp:"東大寺は奈良の平城京に建立された国分寺の総本山です。盧舎那仏（奈良の大仏）は高さ約15m・重量約380トンで，延べ260万人以上が制作に関わりました。752年の開眼供養（かいげんくよう）にはインド・唐からも僧侶が招かれた国際的な式典でした。"},
+    {q:"奈良時代に貴族・寺社が墾田永年私財法を利用して手に入れた，税が免除される私有地を何といいますか？",
+     choices:["口分田","荘園","新田","墾田"],ans:1,
+     exp:"荘園（しょうえん）は墾田永年私財法（743年）によって誕生した私有地です。律令制の「公地公民制」に反して，貴族・寺社が大規模な土地を私有するようになりました。国家に税（租）を納めない荘園の拡大は，律令国家の財政基盤を根底から揺るがしました。"},
+    {q:"聖武天皇の時代（天平年間）に栄えた，国際色豊かな文化はどれですか？",
+     choices:["飛鳥文化","天平文化","白鳳文化","国風文化"],ans:1,
+     exp:"天平文化（てんぴょうぶんか）は聖武天皇の時代（729〜749年）に栄えました。遣唐使が持ち帰った唐の文化だけでなく，シルクロードを通じてインド・ペルシャ・ギリシャの影響も受けた国際色豊かな文化です。正倉院の宝物にはその証拠が残っています。"},
+    {q:"唐から来日し，日本仏教に正式な戒律を伝えた僧侶はだれですか？",
+     choices:["空海","最澄","鑑真","行基"],ans:2,
+     exp:"鑑真（がんじん，688〜763年）は唐の高僧で，嵐・難破・失明という苦難を経て753年（6度目の試みで）日本への渡航に成功しました。東大寺に戒壇を設け，759年に奈良に唐招提寺を建立しました。"},
+    {q:"正倉院が「シルクロードの終着駅」と呼ばれる理由として正しいものはどれですか？",
+     choices:["シルクロードの出発点が奈良だったから","宝物にペルシャ・インドなどの国際色豊かな品々が含まれるから","唐の皇帝から直接贈られた宝物だけを保管しているから","奈良時代の遣唐使が旅した道がシルクロードだったから"],ans:1,
+     exp:"正倉院には聖武天皇の遺品約9000点が保管されており，その中にはペルシャ・ギリシャ・インドの影響を受けた楽器・ガラス器・絨毯などが含まれます。シルクロードを通じた交易品が奈良まで運ばれてきたことを示しており，奈良が「シルクロードの東の終着点」であったことがわかります。"},
+    {q:"日本最古の歌集で，天皇から農民・防人まで幅広い階層の約4500首を収録したものはどれですか？",
+     choices:["源氏物語","枕草子","万葉集","古今和歌集"],ans:2,
+     exp:"万葉集（8世紀後半成立）は日本最古の歌集で，約4500首の和歌を収録しています。天皇・貴族から農民・防人（さきもり）まで幅広い身分の人々の歌が含まれ，漢字の音・訓を借りた「万葉仮名」で書かれています。2019年の令和という元号もこの万葉集から採られました。"},
+  ],
+  testQuiz: [
+    {q:"710年，元明天皇が遷都した奈良の都はどれか？",choices:["藤原京","平安京","平城京","難波京"],ans:2},
+    {q:"708年に鋳造された日本最初の流通貨幣はどれか？",choices:["永楽通宝","和同開珎","寛永通宝","富本銭"],ans:1},
+    {q:"743年に出された，開墾した土地の永久私有を認めた法令はどれか？",choices:["班田収授法","大宝律令","三世一身法","墾田永年私財法"],ans:3},
+    {q:"聖武天皇が741年，全国に建立を命じた寺の名称はどれか？",choices:["東大寺","薬師寺","唐招提寺","国分寺"],ans:3},
+    {q:"東大寺の大仏（盧舎那仏）の高さはおよそどのくらいか？",choices:["約5m","約10m","約15m","約20m"],ans:2},
+    {q:"貴族・寺社が墾田永年私財法を利用して手に入れた私有地を何というか？",choices:["口分田","荘園","新田","班田"],ans:1},
+    {q:"聖武天皇の時代に栄えた，国際色豊かな文化はどれか？",choices:["飛鳥文化","国風文化","天平文化","元禄文化"],ans:2},
+    {q:"嵐・難破・失明の苦難を経て753年に来日し，唐招提寺を建てた唐の僧侶はだれか？",choices:["最澄","行基","空海","鑑真"],ans:3},
+    {q:"東大寺境内にある，聖武天皇の遺品などシルクロードの宝物を保管する宝物庫はどれか？",choices:["法隆寺金堂","正倉院","大仏殿","薬師寺東塔"],ans:1},
+    {q:"日本最古の歌集で，「令和」の元号の典拠にもなった作品はどれか？",choices:["古今和歌集","源氏物語","枕草子","万葉集"],ans:3},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){
+  currentMode=mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});
+  renderContent();
+}
+function renderContent(){
+  const area=document.getElementById('content-area');
+  if(currentMode==='flash')renderFlash(area);
+  else if(currentMode==='drill')renderDrill(area);
+  else renderTest(area);
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){
+  const colors=['#5a2a9a','#8a50cc','#f4d03f','#2d8a30','#c8b0e8','#fff'];
+  for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}
+}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){
+  initFlash();
+  area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;
+  startCardTimer();
+}
+function buildFlashCard(){
+  if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#5a2a9a;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const card=fcCards[fcIndex];
+  return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;
+}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){
+  if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const q=drillQs[drillIndex];
+  const choices=q.choices.map((c,i)=>`<div class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</div>`).join('');
+  return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+function drillAnswer(idx){
+  if(drillAnswered)return;drillAnswered=true;
+  const q=drillQs[drillIndex];
+  document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});
+  if(idx===q.ans)drillScore++;
+  const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');
+  const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';
+}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){
+  testSelections={};testSubmitted=false;
+  let html='<div class="panel">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</div>`;});
+    html+='</div></div>';
+  });
+  html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;
+  area.innerHTML=html;
+}
+function testSelect(qi,ci){
+  if(testSubmitted)return;
+  testSelections[qi]=ci;
+  document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});
+}
+function submitTest(){
+  if(testSubmitted)return;
+  const total=UNIT.testQuiz.length;
+  const answered=Object.keys(testSelections).length;
+  if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}
+  testSubmitted=true;
+  let correct=0;
+  let reviewHTML='<div class="test-review">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;
+    document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});
+    reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;
+  });
+  reviewHTML+='</div>';
+  const pct=Math.round(correct/total*100);
+  const pass=correct>=8;
+  document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 第３章 クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;
+  document.getElementById('test-result').style.display='block';
+  if(pass)fireConfetti();
+}
+
+selectMode('flash');
+
+function toggleSetsu(){
+  const hd=document.getElementById('setsu-hd');
+  const body=document.getElementById('setsu-body');
+  if(hd)hd.classList.toggle('open');
+  if(body)body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

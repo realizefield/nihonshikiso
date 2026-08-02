@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>㉑安土桃山文化 ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#4a1a7a;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#320f55}
+  .unit-header{background:linear-gradient(135deg,#4a1a7a,#8b2500);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #9060c0;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#4a1a7a;transition:all 0.2s;flex:1;min-width:130px;text-align:center}
+  .mode-tab.active{background:#4a1a7a;color:#fff;border-color:#4a1a7a;box-shadow:0 3px 0 #320f55}
+  .mode-tab:hover:not(.active){background:#f0e8ff}
+  .panel{background:#fff;border-radius:12px;border:1px solid #9060c0;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #9060c0;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#4a1a7a;transition:all 0.15s}
+  .fc-timer-btn.active{background:#4a1a7a;color:#fff;border-color:#4a1a7a}
+  .fc-timer-btn:hover:not(.active){background:#f0e8ff}
+  .fc-card{background:linear-gradient(135deg,#faf0ff,#e8d0ff);color:#1a1a2e;border:2px solid #9060c0;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(74,26,122,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#4a1a7a}
+  .fc-card .fc-hint{font-size:13px;color:#2d0f4a;margin-top:10px;display:none;background:rgba(255,255,255,0.7);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#2d6a4f}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#4a1a7a;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#4a1a7a;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:11px 32px;background:#4a1a7a;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #320f55}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#4a1a7a,#9060c0);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#e8d0ff;border:2px solid #9060c0;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#4a1a7a;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #9060c0;background:#faf0ff;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#4a1a7a;background:#f0e8ff}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#f0e8ff;border-color:#9060c0;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#4a1a7a;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #320f55;display:none}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#4a1a7a;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#4a1a7a;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#4a1a7a;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #9060c0;background:#faf0ff;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#4a1a7a;background:#f0e8ff}
+  .test-choice.selected{border-color:#4a1a7a;background:#e8d0ff;color:#4a1a7a;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#f0e8ff;border-color:#9060c0;pointer-events:none}
+  .test-submit{background:#4a1a7a;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #320f55;margin-top:18px;width:100%}
+  .test-submit:hover{background:#320f55}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#4a1a7a;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#4a1a7a,#9060c0);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#4a1a7a;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #320f55}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #9060c0;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#4a1a7a,#8b2500);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-hd.open .sarrow{transform:rotate(90deg)}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#faf0ff;border-left:5px solid #4a1a7a;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#4a1a7a}
+  .setsu-h3{font-size:14px;font-weight:800;color:#4a1a7a;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #c8a0f0}
+  .setsu-box{background:#faf4ff;border-radius:8px;border:1px solid #c8a0f0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#4a1a7a}
+  .setsu-box .lbl{display:inline-block;background:#4a1a7a;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.red{background:#8b2500}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_ch07.html" class="back-link">← 第７章へ戻る</a>
+
+<div class="unit-header">
+  <div class="unit-num">第７章 戦国・安土桃山時代｜単元㉑</div>
+  <h1>🎨 安土桃山文化</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 10枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 8問</span>
+    <span class="stat-chip">📋 確認テスト 8問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd open" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元㉑のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body open" id="setsu-body">
+    <div class="setsu-intro">
+      信長・秀吉の時代の文化を<strong>安土桃山文化</strong>といいます。<br>
+      <strong>豪壮・華麗</strong>で，武将の力強さを表した巨大建築・絵画が特徴です。<br>
+      また，ポルトガル・スペインとの貿易（南蛮貿易）でヨーロッパの文化が入り，<strong>南蛮文化</strong>も発展しました。
+    </div>
+    <div class="setsu-h3">茶の湯と千利休</div>
+    <div class="setsu-box">
+      武将や大名の間で流行した「<span class="lbl">茶の湯</span>」の文化。<strong>千利休（せんのりきゅう）</strong>が「わび茶」を完成させました。<br>
+      「わび」とは，質素で落ち着いた美しさ（侘び寂び）のことです。<br>
+      千利休は秀吉の文化的顧問でしたが，のちに秀吉の怒りを買い，切腹を命じられました。
+    </div>
+    <div class="setsu-h3">狩野永徳と障壁画</div>
+    <div class="setsu-box">
+      <strong>狩野永徳（かのうえいとく）</strong>は信長・秀吉に仕えた代表的な絵師です。<br>
+      <span class="lbl orange">唐獅子図屏風</span>（からじしずびょうぶ）や安土城・大阪城などの壁画（障壁画）を制作。<br>
+      金箔を多用した<strong>金碧障壁画</strong>（きんぺきしょうへきが）と呼ばれる，豪壮華麗な大型絵画が特徴です。
+    </div>
+    <div class="setsu-h3">南蛮文化と出雲の阿国</div>
+    <div class="setsu-box">
+      <span class="lbl red">南蛮文化</span>：ポルトガル・スペインなどから伝わったヨーロッパ文化。<br>
+      キリスト教・鉄砲・天文学・活版印刷・カステラ・カルタなどが日本に伝わりました。<br>
+      西洋風の衣服（南蛮服）や地球儀・時計なども珍重されました。<br><br>
+      <span class="lbl">出雲の阿国（いずものおくに）</span>：出雲大社の巫女とされる女性で，京都でかぶき踊りを始めました。<br>
+      奇抜な衣装で踊るこのかぶき踊りが，のちに<strong>歌舞伎</strong>（かぶき）へと発展しました。
+    </div>
+    <div class="setsu-note">💡 <strong>ポイント</strong>：千利休＝わび茶。狩野永徳＝金碧障壁画（唐獅子図屏風）。南蛮文化＝ポルトガル・スペインからの西洋文化。出雲の阿国＝かぶき踊り（歌舞伎の祖）。</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title: "単元㉑ 安土桃山文化",
+  flashCards: [
+    {q:"信長・秀吉の時代に栄えた，豪壮華麗な文化を何というか？", a:"安土桃山文化（あづちももやまぶんか）", hint:"城名に由来する"},
+    {q:"武将の間で流行した「わび茶」を完成させた茶人はだれか？", a:"千利休（せんのりきゅう）", hint:"秀吉の文化的顧問。のちに切腹"},
+    {q:"わび茶の「わび」が表す美の概念はどんなものか？", a:"質素で落ち着いた美しさ（侘び寂び）", hint:"派手さとは対照的な精神的な美"},
+    {q:"信長・秀吉に仕え，唐獅子図屏風などの金碧障壁画を描いた絵師はだれか？", a:"狩野永徳（かのうえいとく）", hint:"金箔を多用した豪華絢爛な絵"},
+    {q:"狩野永徳が描いた，二頭の唐獅子を描いた代表作は何か？", a:"唐獅子図屏風（からじしずびょうぶ）", hint:"金地に力強い獅子が描かれた"},
+    {q:"ポルトガル・スペインなどのヨーロッパから伝わった文化を何というか？", a:"南蛮文化（なんばんぶんか）", hint:"南蛮＝ポルトガル・スペイン人のこと"},
+    {q:"南蛮貿易でキリスト教とともに日本に伝わった，戦いを変えた武器は？", a:"鉄砲（てっぽう）", hint:"1543年，種子島に伝来"},
+    {q:"京都で奇抜な衣装で踊り，歌舞伎の祖とされる人物はだれか？", a:"出雲の阿国（いずものおくに）", hint:"出雲大社の巫女とされる"},
+    {q:"出雲の阿国が始めた踊りを何というか？", a:"かぶき踊り（歌舞伎の源流）", hint:"「かぶき」＝派手・奇抜という意味"},
+    {q:"安土桃山文化における絵画で，金箔を多用した大型の障壁画を何というか？", a:"金碧障壁画（きんぺきしょうへきが）", hint:"城の部屋を飾る豪華な壁画・屏風"},
+  ],
+  drillQuiz: [
+    {q:"信長・秀吉の時代に栄えた，豪壮華麗な文化を何というか？",
+     choices:["天平文化","元禄文化","安土桃山文化","化政文化"],ans:2,
+     exp:"安土桃山文化は，織田信長が拠点とした安土城（安土）と豊臣秀吉が拠点とした伏見城（桃山）の名にちなんだ文化です。金箔を多用した絢爛豪華な障壁画や，巨大な天守閣を持つ城郭建築が特徴で，武将たちの権威・財力を示しました。"},
+    {q:"「わび茶」を完成させ，秀吉の文化的顧問として活躍した茶人はだれか？",
+     choices:["千利休","村田珠光","武野紹鴎","今井宗久"],ans:0,
+     exp:"千利休（1522〜1591年）は，茶道の「わび茶」を完成させた茶人です。質素で精神的な美しさを重んじる「わびさび」の精神を茶の湯に取り入れました。秀吉の側近として活躍しましたが，のちに秀吉の怒りを買い，1591年に切腹を命じられました。"},
+    {q:"信長・秀吉に仕え，金箔を多用した豪壮な障壁画「唐獅子図屏風」を描いた絵師はだれか？",
+     choices:["雪舟","狩野永徳","本阿弥光悦","尾形光琳"],ans:1,
+     exp:"狩野永徳（1543〜1590年）は安土桃山時代を代表する絵師で，織田信長・豊臣秀吉に仕えました。唐獅子図屏風のほか，安土城・聚楽第などの障壁画を制作。金箔を背景に力強い動物や花木を描く金碧障壁画で，時代の豪壮な精神を表現しました。"},
+    {q:"ポルトガル・スペインなど南欧からの貿易で日本に伝わった文化を何というか？",
+     choices:["蘭学","唐物","南蛮文化","洋学"],ans:2,
+     exp:"南蛮文化とは，16世紀にポルトガル・スペイン人（南蛮人と呼ばれた）がもたらしたヨーロッパの文化です。キリスト教・鉄砲・活版印刷技術のほか，天文学・医学，カステラ・カルタ・タバコなどの食品・娯楽も伝わり，日本社会に大きな影響を与えました。"},
+    {q:"南蛮貿易で1543年に種子島に伝わり，戦国時代の戦い方を変えた武器はどれか？",
+     choices:["大砲","鉄砲","弓矢","投石機"],ans:1,
+     exp:"鉄砲は1543年，ポルトガル人を乗せた中国船が種子島（鹿児島県）に漂着したことで日本に伝わりました。当初は珍しい武器でしたが，急速に国内生産が増え，長篠の戦い（1575年）では織田信長が大量の鉄砲を組織的に使用して武田軍を破り，戦国時代の戦い方を根本から変えました。"},
+    {q:"京都で「かぶき踊り」を始め，のちの歌舞伎の源流とされる人物はだれか？",
+     choices:["観阿弥","出雲の阿国","世阿弥","玉三郎"],ans:1,
+     exp:"出雲の阿国（いずものおくに）は出雲大社の巫女とされる女性で，16世紀末〜17世紀初めに京都で奇抜な衣装で踊る「かぶき踊り」を始めました。「かぶき」とは「傾く（かぶく）」が語源で，常識外れ・奇抜という意味です。このかぶき踊りが江戸時代に歌舞伎へと発展しました。"},
+    {q:"千利休が完成させた，質素で精神的な美しさを重んじる茶の湯の様式を何というか？",
+     choices:["書院茶","名物茶","わび茶","立礼茶"],ans:2,
+     exp:"わび茶（侘び茶）は，派手さや豪華さを排除し，「わびさび」（質素・枯淡・静けさ）の精神を重んじた茶の湯の様式です。千利休は村田珠光・武野紹鴎の茶の湯を受け継ぎ，草庵（草ぶきの小屋）での茶を完成させました。権力者たちも茶の湯を愛好し，政治的な交渉の場としても使われました。"},
+    {q:"安土桃山文化の絵画の特徴として最も正しいのはどれか？",
+     choices:["水墨画で枯淡な美を表現","金箔を多用した豪壮華麗な障壁画","日常生活の庶民を描いた浮世絵","細密な仏教絵画"],ans:1,
+     exp:"安土桃山文化の絵画の最大の特徴は，金箔・金泥を多用した「金碧障壁画（きんぺきしょうへきが）」です。狩野永徳をはじめとする絵師たちが，城の広大な部屋を飾る大型の屏風・ふすま絵を制作しました。力強い動物（唐獅子・虎・鷹）や壮大な風景が描かれ，権力者の威信を示しました。"},
+  ],
+  testQuiz: [
+    {q:"信長・秀吉の時代の豪壮華麗な文化を何というか？",choices:["元禄文化","天平文化","化政文化","安土桃山文化"],ans:3},
+    {q:"「わび茶」を完成させた茶人はだれか？",choices:["千利休","村田珠光","武野紹鴎","今井宗久"],ans:0},
+    {q:"唐獅子図屏風を描いた安土桃山時代の絵師はだれか？",choices:["雪舟","尾形光琳","狩野永徳","葛飾北斎"],ans:2},
+    {q:"ポルトガル・スペインから伝わった西洋文化を何というか？",choices:["蘭学","南蛮文化","洋学","唐物"],ans:1},
+    {q:"1543年に種子島に伝わった武器はどれか？",choices:["大砲","弓矢","鉄砲","手裏剣"],ans:2},
+    {q:"京都でかぶき踊りを始めた人物はだれか？",choices:["観阿弥","世阿弥","出雲の阿国","玉三郎"],ans:2},
+    {q:"かぶき踊りはのちに何へと発展したか？",choices:["能楽","歌舞伎","狂言","文楽"],ans:1},
+    {q:"安土桃山文化の障壁画の最大の特徴はどれか？",choices:["水墨で枯淡な美を表現","金箔を多用した豪壮な表現","庶民の日常を描く","仏教の教えを絵で示す"],ans:1},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){
+  currentMode=mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});
+  renderContent();
+}
+function renderContent(){
+  const area=document.getElementById('content-area');
+  if(currentMode==='flash')renderFlash(area);
+  else if(currentMode==='drill')renderDrill(area);
+  else renderTest(area);
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){
+  const colors=['#4a1a7a','#9060c0','#f4d03f','#2d8a30','#e8d5c8','#fff'];
+  for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}
+}
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){
+  initFlash();
+  area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;
+  startCardTimer();
+}
+function buildFlashCard(){
+  if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#4a1a7a;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const card=fcCards[fcIndex];
+  return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;
+}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){
+  if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const q=drillQs[drillIndex];
+  const choices=q.choices.map((c,i)=>`<div class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</div>`).join('');
+  return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+function drillAnswer(idx){
+  if(drillAnswered)return;drillAnswered=true;
+  const q=drillQs[drillIndex];
+  document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});
+  if(idx===q.ans)drillScore++;
+  const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');
+  const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';
+}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+function renderTest(area){
+  testSelections={};testSubmitted=false;
+  let html='<div class="panel">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</div>`;});
+    html+='</div></div>';
+  });
+  html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;
+  area.innerHTML=html;
+}
+function testSelect(qi,ci){
+  if(testSubmitted)return;
+  testSelections[qi]=ci;
+  document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});
+}
+function submitTest(){
+  if(testSubmitted)return;
+  const total=UNIT.testQuiz.length;
+  const answered=Object.keys(testSelections).length;
+  if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}
+  testSubmitted=true;
+  let correct=0;
+  let reviewHTML='<div class="test-review">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;
+    document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});
+    reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;
+  });
+  reviewHTML+='</div>';
+  const pct=Math.round(correct/total*100);
+  const pass=correct>=6;
+  document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元㉑ クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;
+  document.getElementById('test-result').style.display='block';
+  if(pass)fireConfetti();
+}
+selectMode('flash');
+function toggleSetsu(){
+  const hd=document.getElementById('setsu-hd');const body=document.getElementById('setsu-body');
+  if(hd)hd.classList.toggle('open');if(body)body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

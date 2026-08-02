@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：第７章 戦国・安土桃山時代</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:12px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px}
+.label-sec1{background:#8b2500}.label-sec2{background:#c87000}.label-sec3{background:#4a1a7a}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-secname-label{font-size:12px;color:#fcd4d4;margin-left:6px}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-to-index">← 目次へ戻る</a>
+
+<h1>🔥 第７章　戦国・安土桃山時代——天下統一への道（1467〜1603年）</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label label-sec1">第１節　単元⑲</span>
+  <h2>戦国時代と織田信長（1467〜1582年）</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">⚔️ 戦国時代の幕開け</span>
+    応仁の乱（1467〜1477年）で室町幕府の権威が崩壊すると，全国で<span class="kw">下剋上（げこくじょう）<span class="kw-pop"><span class="kw-title">下剋上（げこくじょう）</span><span class="kw-yomi">📖 読み：げこくじょう</span><span class="kw-body">下の者が上の者を実力で倒して台頭すること。戦国時代の基本原理で，守護代・国人などが主君を倒して戦国大名になる例が続出した。北条早雲・斎藤道三などが代表例。</span></span></span>が横行し，<span class="kw">戦国大名（せんごくだいみょう）<span class="kw-pop"><span class="kw-title">戦国大名（せんごくだいみょう）</span><span class="kw-yomi">📖 読み：せんごくだいみょう</span><span class="kw-body">戦国時代に各地で台頭した大名。独自の法律（分国法）・城下町・軍隊を持ち，室町幕府からほぼ独立して領国を支配した。武田信玄（甲斐），上杉謙信（越後），毛利元就（安芸）などが代表的。</span></span></span>が各地に現れました。
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">🔥 織田信長の歩み——年表で整理</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1534年</span><div class="flow-content">尾張（愛知県）に生まれる。「うつけ者（バカ殿）」と呼ばれた型破りな若者</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1560年</span><div class="flow-content"><strong>桶狭間の戦い</strong>——今川義元（駿河の大大名）の大軍2万を，わずか2千の兵で奇襲して破る</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1568年</span><div class="flow-content">足利義昭を将軍に擁立して上洛（京都入り）。「天下布武」を掲げる</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1573年</span><div class="flow-content">足利義昭を追放→室町幕府滅亡</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year red">1575年</span><div class="flow-content"><strong>長篠の戦い</strong>——鉄砲の集中砲火で武田騎馬隊を壊滅。戦術革命</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1576年</span><div class="flow-content">安土城（滋賀県）を築城——天守閣を持つ巨大な城。権力の象徴</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year red">1582年</span><div class="flow-content"><strong>本能寺の変</strong>——京都・本能寺で家臣・明智光秀に討たれ死去（49歳）</div></div>
+    </div>
+  </div>
+
+  <p>尾張（愛知県）の戦国大名・<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">織田信長</span><span class="kw-pop"><span class="kw-title">織田信長（おだのぶなが）</span><span class="kw-yomi">📖 読み：おだのぶなが</span><span class="kw-body">1534〜1582年。尾張の戦国大名。1560年桶狭間で今川義元を撃破。1573年室町幕府を滅亡させる。1575年長篠の戦いで鉄砲を活用し武田軍を破る。楽市・楽座など革新的な政策を行ったが，1582年本能寺の変で家臣・明智光秀に討たれた。</span></span></span>は，1575年の<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">長篠の戦い</span><span class="kw-pop"><span class="kw-title">長篠の戦い（ながしののたたかい）</span><span class="kw-yomi">📖 読み：ながしののたたかい</span><span class="kw-body">1575年，三河国（愛知県）長篠で起きた合戦。織田・徳川連合軍が鉄砲隊を組織的に運用し，武田勝頼の精鋭騎馬隊を壊滅させた。鉄砲が戦国時代の戦術を根本から変えた画期的な戦い。</span></span></span>で鉄砲を効果的に活用し，武田氏の騎馬隊を撃破しました。<br><br>
+  また，信長は城下町の商業を活性化するため<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">楽市・楽座</span><span class="kw-pop"><span class="kw-title">楽市・楽座（らくいち・らくざ）</span><span class="kw-yomi">📖 読み：らくいち・らくざ</span><span class="kw-body">織田信長が行った経済政策。「楽市」＝市場の税を免除し誰でも自由に売買できる場所。「楽座」＝商工業者の同業組合（座）の独占権を廃止。自由競争を促し，城下町の経済を活性化した。</span></span></span>を実施し，商業を発展させました。しかし1582年，家臣の明智光秀が謀反を起こした<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">本能寺の変</span><span class="kw-pop"><span class="kw-title">本能寺の変（ほんのうじのへん）</span><span class="kw-yomi">📖 読み：ほんのうじのへん</span><span class="kw-body">1582年6月，京都の本能寺に宿泊中の織田信長を，家臣・明智光秀が突然兵を率いて攻撃した事件。信長は自刃（じじん）して死亡（49歳）。天下統一直前の急死となった。「三日天下」の後，豊臣秀吉が光秀を討った。</span></span></span>により，天下統一を目前にして倒れました。</p>
+
+  <button class="modal-btn" onclick="openModal('nagashino')" style="background:linear-gradient(135deg,#8b2500,#c87000)">
+    🔫 長篠の戦いと鉄砲——なぜ騎馬隊が負けたのか、戦術革命の全貌 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('rakuichi')" style="background:linear-gradient(135deg,#c87000,#e59400)">
+    🏪 楽市・楽座とは何か——信長の経済改革と「座」の廃止の意味 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('honnou')" style="background:linear-gradient(135deg,#4a1a7a,#8b2500)">
+    🔥 本能寺の変——明智光秀はなぜ信長を裏切ったのか <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge(1)">🎯 チャレンジ！</button>
+    <a href="nihonshi_drill_nh19.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元⑲ドリル</a>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 単元⑲ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label label-sec2">第２節　単元⑳</span>
+  <h2>豊臣秀吉の天下統一（1582〜1598年）</h2>
+
+  <div class="demo-banner" id="demo-banner-2" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="cause-box">
+    <span class="label">👦 秀吉の出自——農民から天下人へ</span>
+    <span class="kw">豊臣秀吉（とよとみひでよし）<span class="kw-pop"><span class="kw-title">豊臣秀吉（とよとみひでよし）</span><span class="kw-yomi">📖 読み：とよとみひでよし</span><span class="kw-body">1537〜1598年。尾張の農民出身。身分が低いにもかかわらず織田信長に仕えて出世し「天下人」となった。全国統一を果たしたが，晩年の朝鮮出兵（文禄・慶長の役）は失敗に終わった。1598年死去，天下は徳川家康へ。</span></span></span>は，農民の子として生まれながら，非凡な才知と交渉力で織田信長に仕えて出世しました。本能寺の変の直後，山崎の戦い（1582年）で明智光秀を討って信長の後継者となりました。
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">🌟 豊臣秀吉の天下統一——年表</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1582年</span><div class="flow-content">山崎の戦いで明智光秀を破り，信長の後継者となる</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1583年</span><div class="flow-content">賤ヶ岳の戦いで柴田勝家を破る。大阪城を築城開始</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1585年</span><div class="flow-content">関白就任（公家の最高職）。翌年太政大臣となり「豊臣」の姓を賜る</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1590年</span><div class="flow-content">小田原征伐（北条氏滅亡）→<strong>全国統一完成</strong></div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year red">1592年</span><div class="flow-content">文禄の役（朝鮮出兵①）→翌年休戦</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year red">1597年</span><div class="flow-content">慶長の役（朝鮮出兵②）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">1598年</span><div class="flow-content">秀吉死去（62歳）→朝鮮から撤兵。徳川家康が実権を握る</div></div>
+    </div>
+  </div>
+
+  <p><span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">豊臣秀吉</span><span class="kw-pop"><span class="kw-title">豊臣秀吉（とよとみひでよし）</span><span class="kw-yomi">📖 読み：とよとみひでよし</span><span class="kw-body">1537〜1598年。農民出身で信長に仕えて出世。本能寺の変後に天下人となり，1590年に全国統一を達成。太閤検地・刀狩令・朝鮮出兵など多くの政策を実施した。</span></span></span>は全国統一後，<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">太閤検地</span><span class="kw-pop"><span class="kw-title">太閤検地（たいこうけんち）</span><span class="kw-yomi">📖 読み：たいこうけんち</span><span class="kw-body">豊臣秀吉が1582年頃から行った全国的な土地調査。「太閤（たいこう）」とは関白を辞した秀吉の尊称。田畑の広さ・土地の良し悪しを統一基準で測量し，米の生産量（石高・こくだか）を決定した。これにより土地の二重支配が解消され，近世の支配体制の基礎が築かれた。</span></span></span>（全国的な土地調査）を実施し，土地の生産力を統一的に把握しました。また1588年には<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">刀狩令</span><span class="kw-pop"><span class="kw-title">刀狩令（かたながりれい）</span><span class="kw-yomi">📖 読み：かたながりれい</span><span class="kw-body">1588年，豊臣秀吉が農民から刀・槍・弓などの武器を没収した命令。「農民は農業だけに専念せよ」という名目で実施。これにより武士と農民の身分が明確に分離された（兵農分離）。没収した武器は京都の大仏建立に使うとされた。</span></span></span>を出して農民から武器を没収し，武士と農民の身分を明確に分離（兵農分離）しました。<br><br>
+  さらに秀吉は大陸進出を夢見て，1592年・1597年の二度にわたり<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">朝鮮出兵</span><span class="kw-pop"><span class="kw-title">朝鮮出兵（ちょうせんしゅっぺい）</span><span class="kw-yomi">📖 読み：ちょうせんしゅっぺい</span><span class="kw-body">豊臣秀吉が明（中国）征服を目指して朝鮮半島に出兵した戦い。1592年の文禄の役（ぶんろくのえき）と1597年の慶長の役（けいちょうのえき）の2回行われた。朝鮮・明の連合軍と李舜臣（りしゅんしん）の水軍に苦戦し，1598年の秀吉死去後に撤兵。多大な犠牲のみで失敗に終わった。</span></span></span>（文禄の役・慶長の役）を行いましたが，朝鮮・明の抵抗に遭って失敗に終わりました。</p>
+
+  <button class="modal-btn" onclick="openModal('taikokenchi')" style="background:linear-gradient(135deg,#c87000,#8b2500)">
+    📏 太閤検地とは何か——石高制の仕組みと土地支配の革命 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('katanagari')" style="background:linear-gradient(135deg,#8b2500,#4a1a7a)">
+    ⚔️ 刀狩令——なぜ農民の武器を取り上げたのか、兵農分離の意義 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('chousen')" style="background:linear-gradient(135deg,#4a1a7a,#c87000)">
+    🚢 朝鮮出兵——文禄の役・慶長の役の経緯と失敗の理由 <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge(2)">🎯 チャレンジ！</button>
+    <a href="nihonshi_drill_nh20.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元⑳ドリル</a>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 単元⑳ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label label-sec3">第３節　単元㉑</span>
+  <h2>安土桃山文化（16世紀後半〜17世紀初頭）</h2>
+
+  <div class="demo-banner" id="demo-banner-3" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="result-box">
+    <span class="label">🎨 安土桃山文化の特徴</span>
+    安土桃山時代の文化は，①<strong>豪華壮大（ごうかそうだい）</strong>——金箔・極彩色の障壁画，巨大な城郭，②<strong>庶民性</strong>——能に代わる歌舞伎・三味線など庶民的な芸能，③<strong>国際性</strong>——南蛮貿易によるヨーロッパ文化の流入，という3つの特徴があります。
+  </div>
+
+  <p>安土桃山文化を代表する茶人・<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">千利休</span><span class="kw-pop"><span class="kw-title">千利休（せんのりきゅう）</span><span class="kw-yomi">📖 読み：せんのりきゅう</span><span class="kw-body">1522〜1591年。安土桃山時代の茶人。信長・秀吉に仕えた。「わびの茶」を大成し，茶の湯を芸術・精神文化の域に高めた。質素・閑静な草庵（そうあん）の中でもてなしを行うスタイルは，豪華さとは対極の「わびさび」の美学。1591年，秀吉の命令で切腹させられた（理由は諸説あり）。</span></span></span>は「わびの茶」を大成し，茶道を精神的な文化芸術の域に高めました。一方，絵画では<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">狩野永徳</span><span class="kw-pop"><span class="kw-title">狩野永徳（かのうえいとく）</span><span class="kw-yomi">📖 読み：かのうえいとく</span><span class="kw-body">1543〜1590年。安土桃山時代を代表する絵師。金地に極彩色の大画面障壁画（しょうへきが）を描いた。代表作は「唐獅子図屛風（からじしずびょうぶ）」「洛中洛外図（らくちゅうらくがいず）」。信長の安土城，秀吉の大阪城・聚楽第の障壁画を多数制作した。</span></span></span>が金地に極彩色の豪壮な障壁画（城の内部の大型絵画）を描き，権力者の威光を表現しました。</p>
+
+  <div class="timeline-bar">
+    <div class="tl-item">🏯 城郭建築</div>
+    <div class="tl-item">🎨 障壁画（狩野永徳）</div>
+    <div class="tl-item">🍵 茶の湯（千利休）</div>
+    <div class="tl-item">🌍 南蛮文化</div>
+    <div class="tl-item">💃 出雲の阿国</div>
+  </div>
+
+  <p>またヨーロッパとの交流から生まれた<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">南蛮文化</span><span class="kw-pop"><span class="kw-title">南蛮文化（なんばんぶんか）</span><span class="kw-yomi">📖 読み：なんばんぶんか</span><span class="kw-body">16世紀，ポルトガル・スペインとの貿易（南蛮貿易）を通じて伝わったヨーロッパ文化。鉄砲・キリスト教に加えて，パン・天ぷら（てんぷら）・カルタ・煙草（たばこ）・南蛮絵画なども日本に伝わった。「南蛮」は当時の日本がポルトガル・スペイン人を指した言葉。</span></span></span>が広まり，キリスト教・鉄砲・新しい食文化などが日本に伝わりました。芸能では，<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">出雲の阿国</span><span class="kw-pop"><span class="kw-title">出雲の阿国（いずものおくに）</span><span class="kw-yomi">📖 読み：いずものおくに</span><span class="kw-body">安土桃山時代の女性芸能者。出雲大社（島根県）の巫女（みこ）とされる。京都で「かぶき踊り」を始めた（1603年頃）。男装して刀を差した奇抜な踊りは大評判となり，後の歌舞伎（かぶき）の起源となった。</span></span></span>が「かぶき踊り」を始め，後の歌舞伎のもとになりました。</p>
+
+  <button class="modal-btn" onclick="openModal('ririkyu')" style="background:linear-gradient(135deg,#4a1a7a,#8b2500)">
+    🍵 千利休と茶の湯——「わびの茶」とは何か，なぜ切腹させられたのか <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('kano')" style="background:linear-gradient(135deg,#c87000,#4a1a7a)">
+    🎨 狩野永徳と障壁画——安土桃山絵画の特徴と代表作 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('namban')" style="background:linear-gradient(135deg,#1a4f7a,#4a1a7a)">
+    🌍 南蛮文化とキリスト教——ザビエルの来日から秀吉の禁教令まで <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge(3)">🎯 チャレンジ！</button>
+    <a href="nihonshi_drill_nh21.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元㉑ドリル</a>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 単元㉑ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+
+  <div class="drill-link-box">
+    <span style="font-size:14px;font-weight:bold">📝 第７章 総合ドリルで全単元を復習！</span>
+    <a href="nihonshi_drill_ch07.html">総合ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Final Quiz ===== -->
+<div class="final-section">
+  <h2>🏆 第７章 確認テスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== Checklist ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-nagashino" onclick="if(event.target===this)closeModal('nagashino')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('nagashino')">✕</button>
+    <div class="modal-title">🔫 長篠の戦いと鉄砲——なぜ騎馬隊が負けたのか，戦術革命の全貌</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 鉄砲の伝来（1543年）</div>
+      <div class="why-box">
+        <span class="label">🔫 鉄砲の伝来</span>
+        1543年，種子島（たねがしま・鹿児島県）にポルトガル人が漂着し，鉄砲を伝えた。日本の刀鍛冶がすぐに模倣品の製造に成功し，堺（大阪）・国友（滋賀県）などが鉄砲の産地となった。普及は速く，伝来から数十年で戦国大名の間に広まった。
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 長篠の戦い（1575年）の経緯</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 戦いの構図</span>
+        武田勝頼（信玄の子）は最強と言われた「武田の騎馬隊」を率いて三河国（愛知県）に侵攻。長篠城を包囲した。<br><br>
+        信長は「三段撃ち（さんだんうち）」の鉄砲戦術を採用：①3列の鉄砲隊を並べ，②1列が撃ったら後列と交代し，③連続して射撃できる体制を作った。馬防柵（うまふせさく）も設置し，突撃してくる騎馬隊を食い止めた。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 戦術革命の意義</div>
+      <div class="result-box">
+        <span class="label">⚡ 歴史的意義</span>
+        長篠の戦いで「騎馬隊 vs 鉄砲隊」の結果が明確になり，戦国時代の戦術が根本から変わった。<br><br>
+        ▶ 個人の騎馬武者が中心の戦いから，足軽（一般兵）集団と鉄砲・弓の組織的運用が主流に<br>
+        ▶ 城の設計も変化：鉄砲に対応した石垣・高い天守閣の城郭建築（安土城など）が生まれた<br>
+        ▶ 鉄砲の生産・調達が戦国大名の実力に直結するようになった<br><br>
+        ※「三段撃ち」の実在については史料上の議論もあるが，鉄砲を組織的に活用したことは確か。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-rakuichi" onclick="if(event.target===this)closeModal('rakuichi')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('rakuichi')">✕</button>
+    <div class="modal-title">🏪 楽市・楽座とは何か——信長の経済改革と「座」廃止の意味</div>
+    <div class="modal-body">
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 「座（ざ）」とは何か——改革前の状況</div>
+      <div class="cause-box">
+        <span class="label">📜 座の仕組み</span>
+        中世（室町時代まで）の市場は「座（ざ）」と呼ばれる同業組合が支配していた。例えば魚屋の座に入っていないと魚を売ることができない。<br><br>
+        座は寺社や公家に「保護料（上納金）」を払う代わりに，商売の独占権を持っていた。その結果：①新規参入ができない，②価格が高止まりする，③城下町の経済が活性化しない，という問題があった。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 楽市・楽座の内容</div>
+      <div class="why-box">
+        <span class="label">💡 政策の内容</span>
+        <strong>楽市（らくいち）</strong>：市場での商売を「誰でも自由」にした。税（市税・関所の通行料）を免除し，特定の商人だけでなく誰でも出店できるように。<br><br>
+        <strong>楽座（らくざ）</strong>：同業組合（座）の独占権を廃止した。「座に属さなくても商売できる」自由競争の原理を導入。<br><br>
+        信長は1577年に安土城下に「楽市令（らくいちれい）」を出したのが有名だが，それ以前の加納（岐阜）などでも実施していた。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 楽市・楽座の目的と効果</div>
+      <div class="result-box">
+        <span class="label">📈 目的と効果</span>
+        目的：城下町に商人・職人を呼び込み，経済的基盤（税収・物資の集積）を強化すること。<br><br>
+        効果：①自由競争→価格低下→消費者に利益，②多くの商人が城下町に集まり経済が活性化，③信長の城下町（安土）が「豊かで安全な市場」として有名になった。<br><br>
+        近代的な「自由市場経済」の考え方に通じる革新的な政策として評価されている。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-honnou" onclick="if(event.target===this)closeModal('honnou')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('honnou')">✕</button>
+    <div class="modal-title">🔥 本能寺の変——明智光秀はなぜ信長を裏切ったのか</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 事件の経緯（1582年6月2日）</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 経緯</span>
+        1582年，信長は豊臣秀吉の中国征伐（毛利攻め）の応援のため，わずかな供回りで京都・本能寺に宿泊していた。<br><br>
+        明智光秀（あけちみつひで）は信長から「出陣せよ」と命を受けたが，途中で軍を本能寺に向け，未明に急襲。信長は抵抗したが多勢に無勢で，本能寺に火を放って自刃した。享年49歳。信長の嫡男・信忠も二条城で討死。
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② なぜ光秀は謀反を起こしたのか——諸説あり</div>
+      <div class="why-box">
+        <span class="label">🤔 謀反の動機（諸説）</span>
+        動機は現代も謎のまま。主な説：<br><br>
+        ▶ <strong>怨恨説（えんこんせつ）</strong>：信長に何度も公衆の面前で叱られ（或いは蹴られたとも），積年の恨みが爆発した<br>
+        ▶ <strong>野望説</strong>：天下を自ら取ることを計画した<br>
+        ▶ <strong>四国問題説</strong>：信長が四国の長宗我部（ちょうそかべ）攻撃を命じたが，光秀は長宗我部と縁戚関係にあり，これを阻止するため<br>
+        ▶ <strong>朝廷・将軍との関係説</strong>：朝廷・旧勢力と結んで信長の専制政治を倒そうとした<br><br>
+        史料が少なく，現在も確定的な答えはない。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③「三日天下」——光秀の敗北</div>
+      <div class="result-box">
+        <span class="label">⚡ 結末</span>
+        光秀は「天下人」になると思ったが，信長の家臣たちは光秀を認めなかった。特に豊臣秀吉は，中国（毛利攻め）から超スピードで軍を返し（中国大返し），本能寺の変の13日後に山崎の戦い（1582年6月13日）で光秀を破った。光秀は落ち延びる途中に農民に殺されたとされる。<br><br>
+        「三日天下」——光秀が実質的に「天下人」だったのは，本能寺の変から山崎の戦い敗北までのわずか11〜13日間。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-taikokenchi" onclick="if(event.target===this)closeModal('taikokenchi')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('taikokenchi')">✕</button>
+    <div class="modal-title">📏 太閤検地とは何か——石高制の仕組みと土地支配の革命</div>
+    <div class="modal-body">
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 検地以前の問題——「二重支配」</div>
+      <div class="cause-box">
+        <span class="label">📜 問題の背景</span>
+        中世（鎌倉〜室町時代）の土地は，1つの農地に対して荘園領主（公家・寺社）・地頭・農民などが複数の権利を持つ「二重支配」「三重支配」の状態だった。誰が土地の主人なのか，誰がいくら税を払うべきかが不明確で，常に紛争が起きていた。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 太閤検地の内容</div>
+      <div class="why-box">
+        <span class="label">📏 検地の方法</span>
+        豊臣秀吉は奉行を全国に派遣し，以下を統一的に調査：<br><br>
+        ①<strong>田畑の面積</strong>：京枡（きょうます）という統一された計量器で測量<br>
+        ②<strong>土地の等級</strong>：上・中・下・下々（げのげ）に区分<br>
+        ③<strong>石高（こくだか）の決定</strong>：その土地で何石（こく）の米が取れるかを決定<br>
+        ④<strong>耕作者の確定</strong>：実際に耕す農民を「一地一作人（いっちいっさくにん）」として検地帳に登録
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 石高制と兵農分離</div>
+      <div class="result-box">
+        <span class="label">⚡ 革命的な意義</span>
+        <strong>石高制（こくだかせい）</strong>：すべての土地・人物の価値を「石高（米の生産量）」で表す制度。武将の大きさも「百万石の大名」などと石高で表現されるようになった。<br><br>
+        太閤検地により：①土地の二重支配が解消→誰がどの土地を持つかが明確に，②農民は土地に縛られ農業専念（刀狩令と合わせて兵農分離が進む），③江戸時代の支配体制の基礎が確立された。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-katanagari" onclick="if(event.target===this)closeModal('katanagari')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('katanagari')">✕</button>
+    <div class="modal-title">⚔️ 刀狩令——なぜ農民の武器を取り上げたのか，兵農分離の意義</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 刀狩令（1588年）の内容</div>
+      <div class="cause-box">
+        <span class="label">📜 命令の内容</span>
+        豊臣秀吉が1588年に出した命令。農民・寺社から刀・槍・弓・鉄砲などの武器をすべて没収した。<br><br>
+        名目上の理由：「没収した武器を溶かして，京都に大仏を建立するための釘・かすがいにする。農民が農業に専念すれば，この世でも来世でも幸せになれる」という触れを出した。実際には農民の反乱を防ぐための政治的意図があった。
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 兵農分離（へいのうぶんり）の確立</div>
+      <div class="why-box">
+        <span class="label">💡 兵農分離とは</span>
+        中世では，農民が有事の際に武器を持って戦うことは普通だった。刀狩令によって：<br><br>
+        ▶ <strong>武士</strong>：武器を持って戦うことが仕事の身分<br>
+        ▶ <strong>農民</strong>：武器を持たず農業に専念する身分<br><br>
+        という明確な身分区分（兵農分離）が完成した。これにより江戸時代の「士農工商（しのうこうしょう）」という身分制度の基礎が作られた。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 刀狩令と太閤検地のセット</div>
+      <div class="result-box">
+        <span class="label">⚡ 2つの政策の意義</span>
+        太閤検地（農民を土地に縛る）＋刀狩令（農民の武器を取り上げる）のセットにより：<br><br>
+        ①農民は「逃げられない」＋「戦えない」状態になり，反乱が格段に起きにくくなった<br>
+        ②農民は年貢を確実に納める「生産者」として固定された<br>
+        ③武士だけが武器を持つ社会が完成→江戸260年の安定した社会体制の基盤となった
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-chousen" onclick="if(event.target===this)closeModal('chousen')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('chousen')">✕</button>
+    <div class="modal-title">🚢 朝鮮出兵——文禄の役・慶長の役の経緯と失敗の理由</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 秀吉の野望——「唐入り（からいり）」</div>
+      <div class="cause-box">
+        <span class="label">🎯 目的</span>
+        豊臣秀吉は「明（中国）を征服する」という壮大な計画を持っていた。日本・朝鮮・明を合わせた大帝国を作り，明の皇帝になるとさえ語った。まず朝鮮に「明征服の先導役（道案内）」を求めたが，朝鮮が拒否したため，1592年に朝鮮に出兵した。
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 文禄の役（1592〜1593年）</div>
+      <div class="why-box">
+        <span class="label">⚔️ 文禄の役</span>
+        1592年，約15万の日本軍が朝鮮に上陸。当初は快進撃で首都・漢城（ソウル）・平壌まで占領した。<br><br>
+        しかし：①<strong>李舜臣（りしゅんしん）</strong>率いる朝鮮水軍が日本の補給路を断った（亀甲船：かめのこぶね）②明が援軍を送り，日本軍は苦戦③日本軍は朝鮮全土を制圧できず，講和交渉に入った。1593年，休戦。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 慶長の役（1597〜1598年）と失敗の意義</div>
+      <div class="result-box">
+        <span class="label">⚡ 結末と影響</span>
+        講和交渉が決裂し，1597年に再出兵（慶長の役）。再び苦戦が続いていた1598年8月，秀吉が死去。諸将は遺言に従い朝鮮から撤退した。<br><br>
+        <strong>結果と影響</strong>：①戦国武将の多大な犠牲と消耗，②日本・朝鮮・明 三国ともに疲弊，③秀吉に不満を持った武将たちが徳川家康に接近→1600年関ヶ原の戦いへ，④朝鮮・明から伝わった技術（陶磁器・活版印刷など）が副産物として日本に持ち込まれた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-ririkyu" onclick="if(event.target===this)closeModal('ririkyu')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('ririkyu')">✕</button>
+    <div class="modal-title">🍵 千利休と茶の湯——「わびの茶」とは何か，なぜ切腹させられたのか</div>
+    <div class="modal-body">
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 茶の湯の歴史的背景</div>
+      <div class="cause-box">
+        <span class="label">☕ 茶の歴史</span>
+        茶は鎌倉時代に禅僧・栄西（えいさい）が中国から伝えた。室町時代には書院で豪華な道具を鑑賞しながら行う「書院茶（しょいんちゃ）」が流行。その後，村田珠光（むらたじゅこう）・武野紹鴎（たけのじょうおう）が「わびの茶」の先駆けを作り，千利休がこれを完成させた。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 千利休の「わびの茶」</div>
+      <div class="why-box">
+        <span class="label">🍵 わびの茶</span>
+        千利休（1522〜1591年）は堺（大阪府）の商人の子として生まれた。「わびの茶」の核心：<br><br>
+        ▶ <strong>わびさび</strong>：豪華さや派手さを否定し，質素・閑静・不完全の中に美を見出す<br>
+        ▶ <strong>草庵（そうあん）の茶室</strong>：二畳や四畳半の小さな茶室（にじりぐち：客が頭を下げてかがまないと入れない小さな入口）<br>
+        ▶ <strong>一期一会（いちごいちえ）</strong>：この出会いは一生に一度と心して，誠実にもてなす精神<br>
+        ▶ <strong>道具のわびさび</strong>：金や豪華な道具より，素朴で味わいのある道具を好んだ
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 利休切腹の謎</div>
+      <div class="result-box">
+        <span class="label">💀 謎の切腹</span>
+        1591年，豊臣秀吉から切腹を命じられた。享年70歳。<br><br>
+        理由は諸説あり：①利休の茶の湯が秀吉の権威と対立した（「わびの茶」は豪華を否定する→秀吉の黄金の茶室と正反対），②弟子を多数持ち，利休の影響力が秀吉を脅かした，③利休が仲介していた商取引で秀吉の利益を損ねた。<br><br>
+        確実な理由は不明のまま。切腹前日，利休は美しい茶会を催したとされる。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-kano" onclick="if(event.target===this)closeModal('kano')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kano')">✕</button>
+    <div class="modal-title">🎨 狩野永徳と障壁画——安土桃山絵画の特徴と代表作</div>
+    <div class="modal-body">
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 安土桃山時代の絵画の特徴</div>
+      <div class="cause-box">
+        <span class="label">🎨 特徴</span>
+        安土桃山時代の絵画は室町時代の「水墨画（すみのみ）の世界」から一変した。特徴：<br><br>
+        ▶ <strong>金地（きんじ）</strong>：背景に金箔（きんぱく）を敷いた豪華な画面<br>
+        ▶ <strong>極彩色（ごくさいしき）</strong>：鮮やかな色使い<br>
+        ▶ <strong>大画面</strong>：城の部屋（障子・ふすま）を覆う巨大な障壁画（しょうへきが）<br>
+        ▶ <strong>力強い筆致</strong>：ダイナミックな構図
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 狩野永徳の代表作</div>
+      <div class="why-box">
+        <span class="label">🖼️ 代表作</span>
+        狩野永徳（かのうえいとく・1543〜1590年）：<br><br>
+        ▶ <strong>唐獅子図屛風（からじしずびょうぶ）</strong>：金地に力強いライオン（唐獅子）を描いた豪壮な屛風。現在宮内庁所蔵。<br><br>
+        ▶ <strong>洛中洛外図（らくちゅうらくがいず）屛風</strong>：京都の町の様子を克明に描いた風俗画。当時の京都の町並み・人々の生活がわかる貴重な史料でもある（上杉本が国宝）。<br><br>
+        永徳は信長の安土城，秀吉の聚楽第（じゅらくだい）・大坂城の障壁画を制作した「御用絵師（ごようえし）」として活躍した。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 狩野派（かのうは）の隆盛</div>
+      <div class="result-box">
+        <span class="label">🏛️ 狩野派の役割</span>
+        狩野派は室町時代中期から続く絵師の流派。永徳は狩野派を代表するだけでなく，弟子たちを多数育てた。狩野派は江戸時代も幕府の御用絵師として続き，日本絵画史の主流派として300年以上君臨した。代表的な後継者に狩野探幽（たんゆう・江戸初期）がいる。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-namban" onclick="if(event.target===this)closeModal('namban')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('namban')">✕</button>
+    <div class="modal-title">🌍 南蛮文化とキリスト教——ザビエルの来日から秀吉の禁教令まで</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① フランシスコ・ザビエルとキリスト教の伝来（1549年）</div>
+      <div class="cause-box">
+        <span class="label">✝️ キリスト教の伝来</span>
+        1549年，スペイン人宣教師フランシスコ・ザビエル（Francisco de Xavier）が鹿児島に上陸し，日本で最初のキリスト教布教を行った。ポルトガル・スペインはカトリックの宣教師を世界各地に派遣し，貿易と布教をセットで展開していた。<br><br>
+        キリスト教は織田信長に歓迎された（仏教勢力に対抗するため）。最盛期には信者（キリシタン）が全国で数十万人いたとされる。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 南蛮貿易でもたらされたもの</div>
+      <div class="why-box">
+        <span class="label">🌍 南蛮文化</span>
+        「南蛮（なんばん）」は当時の日本がポルトガル・スペインを指した言葉。南蛮貿易・南蛮文化として日本に伝わったもの：<br><br>
+        ▶ <strong>鉄砲（1543年）</strong>——種子島に伝わった火縄銃（ひなわじゅう）<br>
+        ▶ <strong>キリスト教（1549年）</strong><br>
+        ▶ <strong>食文化</strong>：パン・天ぷら（ポルトガル語テンポラが語源）・金平糖（こんぺいとう）・カステラ<br>
+        ▶ <strong>娯楽</strong>：カルタ（トランプの原形）・煙草（たばこ）<br>
+        ▶ <strong>絵画</strong>：南蛮屛風（外国人の姿を描いた屛風絵）<br>
+        ▶ <strong>医学・天文学</strong>：西洋の医学・地球球体説など
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 秀吉のバテレン追放令（1587年）</div>
+      <div class="result-box">
+        <span class="label">⚠️ 禁教の始まり</span>
+        1587年，豊臣秀吉は「バテレン追放令（ばてれんついほうれい）」を出し，宣教師の国外追放を命じた。理由：①キリシタン大名（九州）が教会に土地を寄進し，ポルトガルが日本人を奴隷として売買していると知った，②キリスト教の布教が政治に影響する可能性を恐れた。<br><br>
+        ただし貿易は継続したため徹底した弾圧ではなかった。本格的なキリシタン弾圧は江戸幕府（徳川家康以降）が強化した（→鎖国の原因の一つ）。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジ用チップバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 チャレンジ<span id="ccb-secname-label"></span></span>
+    <span id="ccb-hint">語句を選んでください</span>
+    <span id="ccb-count">残り 4語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 採点</button>
+    <button id="ccb-btn-demo"  onclick="showDemo()">📖 手本</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度考えてみよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+const allAnswers = {
+  "A":"織田信長", "B":"長篠の戦い", "C":"楽市・楽座", "D":"本能寺の変",
+  "E":"豊臣秀吉", "F":"太閤検地", "G":"刀狩令", "H":"朝鮮出兵",
+  "I":"千利休", "J":"狩野永徳", "K":"南蛮文化", "L":"出雲の阿国"
+};
+const secAnswers = {
+  1: ["A","B","C","D"],
+  2: ["E","F","G","H"],
+  3: ["I","J","K","L"]
+};
+const wordBank = {
+  1: ["織田信長","長篠の戦い","楽市・楽座","本能寺の変"],
+  2: ["豊臣秀吉","太閤検地","刀狩令","朝鮮出兵"],
+  3: ["千利休","狩野永徳","南蛮文化","出雲の阿国"]
+};
+const secNames = {
+  1: "①戦国時代・織田信長",
+  2: "②豊臣秀吉の天下統一",
+  3: "③安土桃山文化"
+};
+const miniQuizData = {
+  1: [
+    {q:"1560年，桶狭間で今川義元の大軍を撃破した戦国大名は誰か。",choices:["豊臣秀吉","徳川家康","織田信長","武田信玄"],ans:2},
+    {q:"1575年，鉄砲を組織的に活用して武田の騎馬隊を壊滅させた戦いを何というか。",choices:["関ヶ原の戦い","長篠の戦い","桶狭間の戦い","姉川の戦い"],ans:1},
+    {q:"織田信長が行った，市場の税を免除し同業組合の独占権を廃止した経済政策を何というか。",choices:["太閤検地","刀狩令","楽市・楽座","参勤交代"],ans:2},
+    {q:"1582年，明智光秀が織田信長を襲撃して死に至らしめた事件を何というか。",choices:["本能寺の変","山崎の戦い","賤ヶ岳の戦い","桶狭間の戦い"],ans:0}
+  ],
+  2: [
+    {q:"本能寺の変後，明智光秀を破って天下人となり全国統一を果たした人物は誰か。",choices:["徳川家康","織田信長","豊臣秀吉","足利義昭"],ans:2},
+    {q:"豊臣秀吉が行った，全国の田畑を統一基準で測量し石高を決定した事業を何というか。",choices:["刀狩令","太閤検地","楽市・楽座","分国法"],ans:1},
+    {q:"1588年，豊臣秀吉が農民から刀・槍などの武器を没収した命令を何というか。",choices:["武家諸法度","刀狩令","禁中並公家諸法度","バテレン追放令"],ans:1},
+    {q:"豊臣秀吉が1592年（文禄の役）と1597年（慶長の役）に行った出兵を何というか。",choices:["南蛮貿易","朝鮮出兵","蒙古襲来","勘合貿易"],ans:0}
+  ],
+  3: [
+    {q:"安土桃山時代に「わびの茶」を大成し，豊臣秀吉に仕えた茶人は誰か。",choices:["村田珠光","武野紹鴎","千利休","栄西"],ans:2},
+    {q:"金地に極彩色の豪壮な障壁画を描き，安土城・聚楽第などの絵を手がけた絵師は誰か。",choices:["雪舟","運慶","狩野永徳","俵屋宗達"],ans:2},
+    {q:"ポルトガル・スペインとの貿易を通じて伝わった，ヨーロッパ文化の影響を受けた文化を何というか。",choices:["元禄文化","化政文化","南蛮文化","北山文化"],ans:2},
+    {q:"安土桃山時代，「かぶき踊り」を始めて歌舞伎のもとを作った人物は誰か。",choices:["出雲の阿国","淀君","北政所","ガラシャ"],ans:0}
+  ]
+};
+const finalQuizData = [
+  {q:"1560年，今川義元を少数の兵で撃破した戦いを何というか。",choices:["長篠の戦い","桶狭間の戦い","関ヶ原の戦い","姉川の戦い"],ans:1},
+  {q:"織田信長が同業組合の独占を廃止して市場を自由化した政策を何というか。",choices:["太閤検地","楽市・楽座","刀狩令","分国法"],ans:1},
+  {q:"1575年，鉄砲を組織的に活用して武田軍を破った戦いを何というか。",choices:["姉川の戦い","桶狭間の戦い","長篠の戦い","賤ヶ岳の戦い"],ans:2},
+  {q:"1582年，明智光秀が信長を討った事件を何というか。",choices:["壬申の乱","本能寺の変","山崎の戦い","賤ヶ岳の戦い"],ans:1},
+  {q:"全国統一を達成し「天下人」となったのは誰か。",choices:["織田信長","徳川家康","豊臣秀吉","足利義昭"],ans:2},
+  {q:"豊臣秀吉が全国の土地を統一的に測量して石高を定めた政策を何というか。",choices:["刀狩令","楽市・楽座","太閤検地","武家諸法度"],ans:2},
+  {q:"1588年，農民の武器を没収して兵農分離を進めた命令を何というか。",choices:["刀狩令","参勤交代","太閤検地","禁中並公家諸法度"],ans:0},
+  {q:"豊臣秀吉が1592年（文禄の役）・1597年（慶長の役）に行った出兵先はどこか。",choices:["明（中国）","朝鮮","琉球","台湾"],ans:1},
+  {q:"安土桃山時代に「わびの茶」を大成した茶人は誰か。",choices:["村田珠光","武野紹鴎","栄西","千利休"],ans:3},
+  {q:"「かぶき踊り」を始め，後の歌舞伎の起源となった人物は誰か。",choices:["淀君","出雲の阿国","北政所","細川ガラシャ"],ans:1}
+];
+const checkItems = [
+  "長篠の戦い（1575年）で鉄砲が戦術を変えた仕組みを説明できる",
+  "楽市・楽座の意味と，信長の経済政策としての目的を説明できる",
+  "本能寺の変（1582年）の経緯と「三日天下」を説明できる",
+  "太閤検地の内容と石高制の意義を説明できる",
+  "刀狩令が「兵農分離」につながった仕組みを説明できる",
+  "朝鮮出兵（文禄の役・慶長の役）の目的と失敗の理由を説明できる",
+  "千利休の「わびの茶」と安土桃山文化の豪壮さの違いを説明できる",
+  "南蛮文化とは何か，日本にどんな影響を与えたか説明できる"
+];
+
+let checkState = new Array(checkItems.length).fill(false);
+let activeChallengeSection = null;
+const challengeStates = {
+  1: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  2: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  3: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null}
+};
+
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function getBlankEl(id){return document.querySelector(`.blank[data-id="${id}"]`);}
+function getDisplayEl(id){const el=getBlankEl(id);return el?el.querySelector('.blank-display'):null;}
+
+function startChallenge(sec){
+  if(activeChallengeSection&&activeChallengeSection!==sec)endChallenge(activeChallengeSection);
+  activeChallengeSection=sec;
+  const st=challengeStates[sec];
+  st.active=true;st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status=document.getElementById(`sec-status-${sec}`);if(status){status.textContent='';status.className='sec-status';}
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='⏹ やめる';btn.style.background='#555';btn.onclick=()=>endChallenge(sec);}
+  showChipBar(sec);
+  document.getElementById('ccb-secname-label').textContent=secNames[sec]||'';
+}
+function endChallenge(sec){
+  const st=challengeStates[sec];if(!st)return;
+  st.active=false;st.demoMode=false;st.demoSnapshot=null;
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent=allAnswers[id];
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='🎯 チャレンジ！';btn.style.background='';btn.onclick=()=>startChallenge(sec);}
+  if(activeChallengeSection===sec){activeChallengeSection=null;hideChipBar();}
+}
+function showChipBar(sec){
+  const bar=document.getElementById('challenge-chip-bar');bar.classList.add('visible');
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  const st=challengeStates[sec];
+  if(st.demoMode){controls.style.display='none';demoReturn.style.display='block';}
+  else{controls.style.display='flex';demoReturn.style.display='none';}
+  renderChips(sec);updateCcbHint(sec);
+}
+function hideChipBar(){document.getElementById('challenge-chip-bar').classList.remove('visible');}
+function renderChips(sec){
+  const st=challengeStates[sec];
+  const container=document.getElementById('ccb-chips');container.innerHTML='';
+  st.chipBank.forEach((word,idx)=>{
+    const chip=document.createElement('div');
+    chip.className='challenge-chip'+(idx===st.selectedChipIdx?' selected':'');
+    chip.textContent=word;chip.onclick=()=>tapChip(sec,idx);
+    container.appendChild(chip);
+  });
+  document.getElementById('ccb-count').textContent=`残り ${st.chipBank.length}語`;
+}
+function updateCcbHint(sec){
+  const st=challengeStates[sec];const hint=document.getElementById('ccb-hint');
+  if(st.demoMode)hint.textContent='手本表示中';
+  else if(st.selectedChipIdx!==null)hint.textContent=`「${st.chipBank[st.selectedChipIdx]}」を選択中 → 空欄をタップ`;
+  else hint.textContent='語句を選んでください';
+}
+function tapChip(sec,idx){
+  const st=challengeStates[sec];if(st.demoMode)return;
+  st.selectedChipIdx=(st.selectedChipIdx===idx)?null:idx;
+  renderChips(sec);updateCcbHint(sec);
+}
+function blankClicked(e,id){
+  e.stopPropagation();
+  const sec=getSecForId(id);
+  if(sec&&challengeStates[sec].active&&!challengeStates[sec].demoMode){handleBlankTap(sec,id);}
+  else{
+    const el=getBlankEl(id);if(!el)return;
+    document.querySelectorAll('.kw.active').forEach(k=>{if(k!==el)k.classList.remove('active');});
+    el.classList.toggle('active');
+  }
+}
+function handleBlankTap(sec,id){
+  const st=challengeStates[sec];const disp=getDisplayEl(id);const el=getBlankEl(id);
+  if(st.selectedChipIdx!==null){
+    const word=st.chipBank[st.selectedChipIdx];
+    const existing=st.placedWords[id];
+    if(existing!==undefined)st.chipBank.push(existing);
+    st.chipBank.splice(st.selectedChipIdx,1);
+    st.placedWords[id]=word;st.selectedChipIdx=null;
+    if(disp)disp.textContent=word;if(el)el.classList.add('placed');
+  }else{
+    const existing=st.placedWords[id];
+    if(existing!==undefined){
+      st.chipBank.push(existing);delete st.placedWords[id];
+      if(disp)disp.textContent='';if(el)el.classList.remove('placed');
+    }
+  }
+  renderChips(sec);updateCcbHint(sec);
+}
+function getSecForId(id){
+  for(const[s,ids]of Object.entries(secAnswers)){if(ids.includes(id))return parseInt(s);}
+  return null;
+}
+function judgeChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];const ids=secAnswers[sec];let correct=0;
+  ids.forEach(id=>{
+    const placed=st.placedWords[id];const ans=allAnswers[id];
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(placed===ans){correct++;if(el){el.classList.add('correct');el.classList.remove('wrong','placed');}}
+    else{
+      if(placed!==undefined){st.chipBank.push(placed);delete st.placedWords[id];if(disp)disp.textContent='';}
+      if(el){el.classList.add('wrong');el.classList.remove('placed');}
+      showOshii(id,ans);
+    }
+  });
+  renderChips(sec);updateCcbHint(sec);
+  const status=document.getElementById(`sec-status-${sec}`);
+  if(correct===ids.length){if(status){status.textContent='🎉 全問正解！';status.className='sec-status pass';}endChallenge(sec);launchConfetti();}
+  else{if(status){status.textContent=`${correct}/${ids.length}問 正解`;status.className='sec-status fail';}}
+}
+function showOshii(id,ans){
+  const popup=document.getElementById('oshii-popup');
+  document.getElementById('oshii-msg').textContent=`「${id}」の答えは「${ans}」`;
+  popup.style.display='block';
+  setTimeout(()=>{popup.style.display='none';},2500);
+}
+function showDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];
+  st.demoSnapshot={chipBank:[...st.chipBank],placedWords:{...st.placedWords},selectedChipIdx:st.selectedChipIdx};
+  st.demoMode=true;st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);const el=getBlankEl(id);
+    if(disp)disp.textContent=allAnswers[id];
+    if(el){el.classList.add('demo-fill');el.classList.remove('placed','correct','wrong');}
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='block';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='none';demoReturn.style.display='block';
+  renderChips(sec);updateCcbHint(sec);
+}
+function exitDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];if(!st.demoMode)return;
+  st.demoMode=false;
+  if(st.demoSnapshot){st.chipBank=[...st.demoSnapshot.chipBank];st.placedWords={...st.demoSnapshot.placedWords};st.selectedChipIdx=null;st.demoSnapshot=null;}
+  secAnswers[sec].forEach(id=>{
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(el)el.classList.remove('demo-fill','correct','wrong','placed');
+    const placed=st.placedWords[id];
+    if(disp)disp.textContent=placed!==undefined?placed:'';
+    if(placed!==undefined&&el)el.classList.add('placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='flex';demoReturn.style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+function resetChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  document.getElementById('ccb-controls').style.display='flex';
+  document.getElementById('ccb-demo-return').style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+
+function toggleMQ(id,btn){
+  const body=document.getElementById(id);
+  const isOpen=body.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  if(isOpen&&body.innerHTML.trim()==='')renderMQ(id);
+}
+function renderMQ(id){
+  const secNum=parseInt(id.replace('mq',''));
+  const qs=miniQuizData[secNum];
+  let html='';
+  qs.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerMQ(this,${ci},${q.ans},'${id}-q${i}')">${c}</div>`;});
+    html+='</div></div>';
+  });
+  document.getElementById(id).innerHTML=html;
+}
+function answerMQ(el,chosen,correct,key){
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+
+let finalAnswered={};
+function initFinal(){
+  const area=document.getElementById('final-quiz-area');
+  let html='';
+  finalQuizData.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices" id="fq-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerFinal(this,${ci},${q.ans},${i})">${c}</div>`;});
+    html+='</div></div>';
+  });
+  area.innerHTML=html;
+}
+function answerFinal(el,chosen,correct,qi){
+  if(finalAnswered[qi]!==undefined)return;
+  finalAnswered[qi]=chosen===correct;
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+function judgeFinal(){
+  const total=finalQuizData.length;
+  const answered=Object.keys(finalAnswered).length;
+  if(answered<total){document.getElementById('final-result-row').innerHTML=`<p style="color:#c00;font-weight:bold">まだ${total-answered}問残っています。</p>`;return;}
+  const correct=Object.values(finalAnswered).filter(Boolean).length;
+  const pass=correct>=8;
+  document.getElementById('final-result-row').innerHTML=`<div style="margin-top:12px;padding:16px;border-radius:10px;background:${pass?'#d0f0d8':'#fdd'};border:2px solid ${pass?'#1a6b22':'#c00'};font-size:16px;font-weight:bold;text-align:center">${pass?'🎉 合格！':'😅 もう一度挑戦！'} ${correct} / ${total} 問正解${pass?' （合格）':' （あと'+(8-correct)+'問で合格）'}</div>`;
+  if(pass)launchConfetti();
+}
+function resetFinal(){finalAnswered={};document.getElementById('final-result-row').innerHTML='';initFinal();}
+
+function renderChecklist(){
+  const area=document.getElementById('checklist-area');if(!area)return;
+  let html='';
+  checkItems.forEach((item,i)=>{
+    html+=`<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 10px;border-radius:8px;background:${checkState[i]?'#d0f0d8':'#fff5f0'};border:1.5px solid ${checkState[i]?'#1a6b22':'#f4a261'};transition:all 0.2s;margin-bottom:6px">
+      <input type="checkbox" ${checkState[i]?'checked':''} onchange="toggleCheck(${i})" style="margin-top:3px;width:18px;height:18px;accent-color:#8b2500">
+      <span style="font-size:14px;line-height:1.7">${item}</span>
+    </label>`;
+  });
+  area.innerHTML=html;
+  const done=checkState.filter(Boolean).length;
+  document.getElementById('check-count').textContent=`${done} / ${checkItems.length} チェック済み`;
+  document.getElementById('check-bar').style.width=`${(done/checkItems.length)*100}%`;
+}
+function toggleCheck(i){checkState[i]=!checkState[i];renderChecklist();if(checkState.every(Boolean))launchConfetti();}
+
+function launchConfetti(){
+  const colors=['#f4a261','#e76f51','#2a9d8f','#e9c46a','#264653','#fca5a5','#8b2500'];
+  for(let i=0;i<60;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${8+Math.random()*8}px;height:${8+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend',()=>el.remove());
+  }
+}
+const style=document.createElement('style');
+style.textContent='.confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(style);
+
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.kw'))document.querySelectorAll('.kw.active').forEach(k=>k.classList.remove('active'));
+});
+function openModal(name){
+  const el=document.getElementById('modal-'+name);
+  if(el)el.classList.add('open');
+}
+function closeModal(name){
+  const el=document.getElementById('modal-'+name);
+  if(el)el.classList.remove('open');
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    ['nagashino','rakuichi','honnou','taikokenchi','katanagari','chousen','ririkyu','kano','namban'].forEach(n=>closeModal(n));
+  }
+});
+
+initFinal();
+renderChecklist();
+</script>
+</body>
+</html>

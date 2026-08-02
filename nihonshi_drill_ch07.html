@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第７章 戦国〜元禄 総合ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a1c00}
+  .back-link.gray{background:#555}
+  .back-link.gray:hover{background:#333}
+  .back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .unit-header{background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #d4956a;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#8b2500;transition:all 0.2s;flex:1;min-width:130px;text-align:center;font-family:inherit}
+  .mode-tab.active{background:#8b2500;color:#fff;border-color:#8b2500;box-shadow:0 3px 0 #6a1c00}
+  .mode-tab:hover:not(.active){background:#fdebd0}
+  .panel{background:#fff;border-radius:12px;border:1px solid #d4956a;padding:22px;margin-bottom:14px}
+  /* フラッシュカード */
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #d4956a;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b2500;transition:all 0.15s;font-family:inherit}
+  .fc-timer-btn.active{background:#8b2500;color:#fff;border-color:#8b2500}
+  .fc-timer-btn:hover:not(.active){background:#fdebd0}
+  .fc-unit-badge{display:inline-block;background:#8b2500;color:#fff;border-radius:12px;padding:2px 12px;font-size:12px;font-weight:bold;margin-bottom:6px}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(139,37,0,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#8b2500}
+  .fc-card .fc-hint{font-size:13px;color:#7a4000;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15;font-family:inherit}
+  .fc-btn-ng{padding:11px 32px;background:#8b2500;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #d4956a;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px;font-family:inherit}
+  /* ドリル */
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s;font-family:inherit;text-align:left}
+  .drill-choice:hover{border-color:#8b2500;background:#fdebd0}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a1c00;display:none;font-family:inherit}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#8b2500;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  /* 確認テスト */
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s;font-family:inherit;text-align:left}
+  .test-choice:hover{border-color:#8b2500;background:#fdebd0}
+  .test-choice.selected{border-color:#8b2500;background:#fdd9c4;color:#5a1500;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .test-submit{background:#8b2500;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #6a1c00;margin-top:18px;width:100%;font-family:inherit}
+  .test-submit:hover{background:#6a1c00}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#8b2500;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#8b2500;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  /* 説明文 */
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #d4956a;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-hd.open .sarrow{transform:rotate(180deg)}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#fff5ec;border-left:5px solid #8b2500;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#8b2500}
+  .setsu-h3{font-size:14px;font-weight:800;color:#8b2500;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #f4c8a0}
+  .setsu-box{background:#fffaf5;border-radius:8px;border:1px solid #e8c8a0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#8b2500}
+  .setsu-box .lbl{display:inline-block;background:#8b2500;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-box .lbl.green{background:#1a6b22}
+  .setsu-box .lbl.blue{background:#1a4f7a}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+  /* コンフェッティ */
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch07.html" class="back-link">← 第７章テキストへ</a>
+  <a href="nihonshi_index.html" class="back-link gray">← 目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第７章 戦国〜元禄時代｜単元⑲〜㉒ 総合ドリル</div>
+  <h1>⚔️ 戦国・信長から元禄文化まで</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 16枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 10問</span>
+    <span class="stat-chip">📋 確認テスト 12問</span>
+  </div>
+</div>
+
+<!-- 説明文 -->
+<div class="setsu-section">
+  <div class="setsu-hd open" id="setsu-hd" onclick="toggleSetsu()">
+    📚 第７章のまとめ（まず読もう）<span class="sarrow">▲</span>
+  </div>
+  <div class="setsu-body open" id="setsu-body">
+
+    <div class="setsu-intro">
+      戦国時代に台頭した<strong>織田信長</strong>，天下統一を成し遂げた<strong>豊臣秀吉</strong>，そして江戸幕府を開いた<strong>徳川家康</strong>。3人の武将が日本を統一するまでの流れと，江戸時代の安定した社会の中で花開いた<strong>元禄文化</strong>を整理しましょう。
+    </div>
+
+    <div class="setsu-h3">⑲ 戦国時代と織田信長——下剋上・楽市楽座・本能寺の変</div>
+    <div class="setsu-box">
+      応仁の乱（1467年）以降，各地の武将が実力で領国を支配する「<strong>戦国大名</strong>」が台頭。独自の法律「<span class="lbl">分国法</span>」を定め，城下町を整備した。<br><br>
+      <strong>織田信長</strong>は1560年の<span class="lbl orange">桶狭間の戦い</span>で今川義元を奇襲して破り，天下へ名乗りを上げた。1575年の<span class="lbl orange">長篠の戦い</span>では鉄砲を組織的に活用して武田の騎馬隊を壊滅させた。<br>
+      経済政策として<span class="lbl">楽市・楽座</span>を実施し，同業者組合（座）の独占を廃止して自由な商売を推進した。<br>
+      安土城を築いて天下統一を目前にしたが，1582年，家臣の明智光秀による<span class="lbl orange">本能寺の変</span>で自害した。
+    </div>
+
+    <div class="setsu-h3">⑳ 豊臣秀吉の天下統一——太閤検地・刀狩・朝鮮出兵</div>
+    <div class="setsu-box">
+      山崎の戦いで明智光秀を破った<strong>豊臣秀吉</strong>が信長の後継者として台頭し，1590年の<span class="lbl orange">小田原攻め</span>で北条氏を滅ぼして天下統一を完成させた。<br><br>
+      <span class="lbl">太閤検地</span>：全国の土地を「<strong>石高</strong>（こくだか）」で統一し，年貢の基準を整備した。<br>
+      <span class="lbl">刀狩令</span>：農民から武器を没収し，武士と農民の身分を区別する「<strong>兵農分離</strong>」を進めた。<br>
+      1587年には宣教師を国外追放しようとする<span class="lbl orange">バテレン追放令</span>を出した（貿易は継続）。<br>
+      晩年には朝鮮へ2度出兵（<span class="lbl green">文禄の役</span>1592年・<span class="lbl green">慶長の役</span>1597年）したが失敗に終わった。
+    </div>
+
+    <div class="setsu-h3">㉑ 江戸幕府の成立と鎖国——参勤交代・武家諸法度・隠れキリシタン</div>
+    <div class="setsu-box">
+      関ヶ原の戦い（1600年）で勝利した<strong>徳川家康</strong>が1603年に江戸幕府を開いた。3代将軍・<strong>家光</strong>のもとで幕藩体制が確立された。<br><br>
+      <span class="lbl">参勤交代</span>：大名が江戸と国元を1年交互に往来する義務。大名の財力を消耗させ，反乱を防いだ。<br>
+      <span class="lbl">武家諸法度</span>：大名の行動を制限する法律。参勤交代もここに規定された。<br>
+      <span class="lbl orange">島原天草一揆</span>（1637年）を機にキリスト教禁止が強化され，「<strong>踏み絵</strong>」「<strong>宗門改め</strong>」が実施された。<br>
+      外交は4つの窓口（長崎・対馬・薩摩・松前）のみに限定する「<strong>鎖国</strong>」体制が整い，ヨーロッパではオランダのみ長崎・出島で貿易を続けた。
+    </div>
+
+    <div class="setsu-h3">㉒ 元禄文化と産業の発展——上方文化・俳諧・浮世絵</div>
+    <div class="setsu-box">
+      5代将軍・徳川綱吉の元禄年間（1688〜1704年）を中心に，<strong>上方（大坂・京都）の富裕な町人</strong>を担い手とした「<strong>元禄文化</strong>」が栄えた。<br><br>
+      <span class="lbl">松尾芭蕉</span>——俳諧を芸術の域に高めた。紀行文「奥の細道」の著者。<br>
+      <span class="lbl">井原西鶴</span>——浮世草子（「好色一代男」「日本永代蔵」）。町人の現実を描いた。<br>
+      <span class="lbl">近松門左衛門</span>——浄瑠璃・歌舞伎の脚本家。「曽根崎心中」が代表作。<br>
+      <span class="lbl">菱川師宣</span>——浮世絵の祖。木版画で庶民に普及させた。「見返り美人図」。<br>
+      <span class="lbl orange">尾形光琳</span>——琳派を大成。「燕子花図屏風」「紅白梅図屏風」。<br><br>
+      大坂は全国の物資が集まる「<strong>天下の台所</strong>」として栄え，農業では<span class="lbl green">備中鍬</span>・<span class="lbl green">千歯扱き</span>が普及して生産力が向上した。
+    </div>
+    <div class="setsu-note">💡 <strong>まとめのポイント</strong>：信長＝楽市楽座・鉄砲，秀吉＝太閤検地・刀狩，家康＝参勤交代・鎖国という3人の政策をセットで覚えよう。元禄文化は「江戸でなく上方（大坂・京都）」が中心という点を特に注意。</div>
+
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title: "第７章 戦国〜元禄 総合ドリル",
+  flashCards: [
+    /* ⑲ 戦国・信長 */
+    {unit:"⑲ 戦国・信長",q:"戦国大名が領国支配のために制定した，独自の法律を何というか。", a:"分国法（ぶんこくほう）", hint:"今川仮名目録・甲州法度など，大名ごとに異なる"},
+    {unit:"⑲ 戦国・信長",q:"1560年，今川義元の大軍を少数の兵で奇襲して破った織田信長の戦いは何か。", a:"桶狭間の戦い", hint:"約2万の大軍に対し約2千の兵で勝利"},
+    {unit:"⑲ 戦国・信長",q:"同業者組合（座）の独占権を廃止し，自由な商売を認めた信長の経済政策は何か。", a:"楽市・楽座（らくいち・らくざ）", hint:"城下町の商業を活性化させた"},
+    {unit:"⑲ 戦国・信長",q:"1582年，家臣の明智光秀が織田信長を討った事件を何というか。", a:"本能寺の変（ほんのうじのへん）", hint:"信長が京都・本能寺で自害した"},
+    /* ⑳ 豊臣秀吉 */
+    {unit:"⑳ 豊臣秀吉",q:"豊臣秀吉が全国で実施した，土地の生産力を「石高」で表した大規模な土地調査を何というか。", a:"太閤検地（たいこうけんち）", hint:"石高で年貢の基準を統一した"},
+    {unit:"⑳ 豊臣秀吉",q:"農民から武器を没収し，兵農分離を進めた秀吉の法令を何というか。", a:"刀狩令（かたながりれい）", hint:"農民の一揆を防ぐ目的でもあった"},
+    {unit:"⑳ 豊臣秀吉",q:"秀吉が1592年に始めた，朝鮮への第1回出兵を何というか。", a:"文禄の役（ぶんろくのえき）", hint:"明（中国）征服を最終目標とした"},
+    {unit:"⑳ 豊臣秀吉",q:"1590年，秀吉が北条氏を滅ぼして天下統一を完成させた戦いは何か。", a:"小田原攻め（おだわらぜめ）", hint:"小田原城を包囲して北条氏を降伏させた"},
+    /* ㉑ 江戸幕府 */
+    {unit:"㉑ 江戸幕府",q:"大名が江戸と国元を1年交互に往来することを義務づけた制度を何というか。", a:"参勤交代（さんきんこうたい）", hint:"3代将軍・家光が1635年に制度化"},
+    {unit:"㉑ 江戸幕府",q:"幕府が外国との交流を4つの窓口のみに限定した体制を何というか。", a:"鎖国（さこく）", hint:"長崎・対馬・薩摩・松前の4窓口"},
+    {unit:"㉑ 江戸幕府",q:"鎖国下でヨーロッパの国として唯一貿易を許可されていたのはどこか。", a:"オランダ（ネーデルランド）", hint:"長崎・出島で貿易。キリスト教布教をしなかったため"},
+    {unit:"㉑ 江戸幕府",q:"大名を統制するために幕府が定めた法令を何というか。", a:"武家諸法度（ぶけしょはっと）", hint:"参勤交代もここに規定されている"},
+    /* ㉒ 元禄文化 */
+    {unit:"㉒ 元禄文化",q:"元禄文化（5代将軍・綱吉の時代）の中心地はどこか。", a:"上方（かみがた）——大坂・京都", hint:"江戸でなく上方が中心。ここが重要！"},
+    {unit:"㉒ 元禄文化",q:"俳諧を芸術の域に高め，紀行文「奥の細道」を著した人物は誰か。", a:"松尾芭蕉（まつおばしょう）", hint:"「古池や蛙飛び込む水の音」"},
+    {unit:"㉒ 元禄文化",q:"「浮世絵の祖」と呼ばれ，「見返り美人図」を描いた画家は誰か。", a:"菱川師宣（ひしかわもろのぶ）", hint:"木版画で庶民に浮世絵を普及させた"},
+    {unit:"㉒ 元禄文化",q:"全国の物資が集まり「天下の台所」と呼ばれた都市はどこか。", a:"大坂（おおさか）", hint:"堂島米市場が有名。各藩が蔵屋敷を置いた"},
+  ],
+  drillQuiz: [
+    {q:"戦国大名が独自の領国支配のために制定した法律を何というか。",
+     choices:["武家諸法度","分国法","御成敗式目","大宝律令"],ans:1,
+     exp:"分国法（ぶんこくほう）。今川仮名目録・甲州法度など，各戦国大名が独自に定めた領国の法律。守護大名とは異なり，実力で領国を支配した戦国大名の特徴の一つ。"},
+    {q:"1575年，織田信長が武田の精鋭騎馬隊を鉄砲の組織的活用で壊滅させた戦いはどれか。",
+     choices:["桶狭間の戦い","姉川の戦い","長篠の戦い","関ヶ原の戦い"],ans:2,
+     exp:"長篠の戦い（ながしののたたかい）。鉄砲を組み合わせた三段撃ちで武田の騎馬隊を大破した。信長が鉄砲という新しい技術を軍事に活用した象徴的な戦い。"},
+    {q:"豊臣秀吉が全国の土地を調査し，収穫量を「石高」で統一した政策を何というか。",
+     choices:["刀狩令","楽市・楽座","参勤交代","太閤検地"],ans:3,
+     exp:"太閤検地（たいこうけんち）。1石＝約150kgの米を単位として全国の土地生産力を統一。年貢の基準が整い，大名の格付けも石高で行われるようになった。"},
+    {q:"農民から武器を取り上げ，武士と農民の身分を区別する「兵農分離」を進めた秀吉の法令は何か。",
+     choices:["バテレン追放令","太閤検地","分国法","刀狩令"],ans:3,
+     exp:"刀狩令（かたながりれい）。農民が武器を持つことを禁じ，一揆を防いだ。農民は農業だけ，武士は戦いだけという身分の分離が進み，江戸時代の身分制度の基礎となった。"},
+    {q:"参勤交代を制度として義務づけた江戸幕府の将軍は誰か。",
+     choices:["徳川家康","徳川秀忠","徳川家光","徳川吉宗"],ans:2,
+     exp:"3代将軍・徳川家光（いえみつ）が1635年に参勤交代を制度化した。大名が1年おきに江戸と領地を往来することを義務づけ，経費をかけることで大名の財力を抑え，反乱を防いだ。"},
+    {q:"1637年，キリシタン弾圧と圧政に対して九州で起きた大規模な一揆の名前は何か。",
+     choices:["加賀一揆","山城国一揆","土一揆","島原天草一揆"],ans:3,
+     exp:"島原天草一揆（しまばらあまくさいっき）。天草四郎を総大将に約3万7千人が蜂起した。幕府軍に鎮圧された後，幕府はキリスト教の取り締まりをさらに強化した。"},
+    {q:"5代将軍・徳川綱吉の時代を中心に，大坂・京都の富裕な町人を担い手として栄えた文化を何というか。",
+     choices:["化政文化","国風文化","天平文化","元禄文化"],ans:3,
+     exp:"元禄文化（げんろくぶんか）。元禄年間（1688〜1704年）を中心に上方（大坂・京都）の町人が担い手となって栄えた。後の化政文化（江戸中心）と区別して覚えよう。"},
+    {q:"俳諧を芸術の域に高め，東北・北陸を旅した紀行文「奥の細道」を著した人物は誰か。",
+     choices:["与謝蕪村","小林一茶","近松門左衛門","松尾芭蕉"],ans:3,
+     exp:"松尾芭蕉（まつおばしょう）。「古池や蛙飛び込む水の音」の作者。俳諧（俳句）を芸術として確立し，「奥の細道」は江戸時代を代表する紀行文として知られる。"},
+    {q:"浄瑠璃・歌舞伎の脚本家で，「曽根崎心中」が代表作の人物は誰か。",
+     choices:["松尾芭蕉","菱川師宣","井原西鶴","近松門左衛門"],ans:3,
+     exp:"近松門左衛門（ちかまつもんざえもん）。実際の心中事件をもとにした「曽根崎心中」は初演から大ヒット。義理と人情の板挟みを描いた作品で，浄瑠璃・歌舞伎の人気を高めた。"},
+    {q:"5代将軍・徳川綱吉が動物の殺傷を禁じた法令を何というか。",
+     choices:["刀狩令","踏み絵","生類憐みの令","棄捐令"],ans:2,
+     exp:"生類憐みの令（しょうるいあわれみのれい）。特に犬の保護が徹底され，「犬公方（いぬくぼう）」と皮肉られた。動物愛護の先駆けとも言えるが，当時の人々には重い負担となった。"},
+  ],
+  testQuiz: [
+    {q:"1560年，織田信長が今川義元を奇襲して破った戦いはどれか。",choices:["長篠の戦い","川中島の戦い","桶狭間の戦い","関ヶ原の戦い"],ans:2},
+    {q:"1582年，本能寺の変を起こして織田信長を討った武将は誰か。",choices:["豊臣秀吉","柴田勝家","徳川家康","明智光秀"],ans:3},
+    {q:"信長が行った，同業者組合の独占権を廃止した経済政策はどれか。",choices:["太閤検地","楽市・楽座","参勤交代","刀狩令"],ans:1},
+    {q:"太閤検地で土地の生産力を表すために使われた単位は何か。",choices:["貫高（かんだか）","石高（こくだか）","反別（たんべつ）","俵（たわら）"],ans:1},
+    {q:"秀吉が宣教師を国外追放しようとした法令を何というか。",choices:["禁教令","鎖国令","バテレン追放令","踏み絵"],ans:2},
+    {q:"キリシタン弾圧と圧政への不満から1637年に起きた大規模な一揆を何というか。",choices:["加賀一揆","土一揆","山城国一揆","島原天草一揆"],ans:3},
+    {q:"キリスト教を信仰していないことを確認するために人々に踏ませた絵を何というか。",choices:["絵馬","踏み絵","御朱印","絵図"],ans:1},
+    {q:"鎖国下で幕府が対朝鮮外交・貿易の窓口とした藩はどこか。",choices:["薩摩藩","松前藩","長州藩","対馬藩"],ans:3},
+    {q:"元禄文化の担い手として正しいのはどれか。",choices:["江戸の武士","上方の富裕な町人","農村の名主","朝廷の公家"],ans:1},
+    {q:"「好色一代男」「日本永代蔵」などで町人の現実を描いた浮世草子の作家は誰か。",choices:["松尾芭蕉","近松門左衛門","尾形光琳","井原西鶴"],ans:3},
+    {q:"江戸時代，複数の歯で深く耕すことができる農具として普及したのはどれか。",choices:["唐箕","千歯扱き","備中鍬","踏み鋤"],ans:2},
+    {q:"「燕子花図屏風」「紅白梅図屏風」で知られ，琳派を大成した画家は誰か。",choices:["葛飾北斎","菱川師宣","尾形光琳","俵屋宗達"],ans:2},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){
+  currentMode=mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});
+  renderContent();
+}
+function renderContent(){
+  const area=document.getElementById('content-area');
+  if(currentMode==='flash')renderFlash(area);
+  else if(currentMode==='drill')renderDrill(area);
+  else renderTest(area);
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){
+  const colors=['#8b2500','#c87000','#f4d03f','#2d8a30','#e8d5c8','#fff'];
+  for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}
+}
+
+/* ===== フラッシュカード ===== */
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){
+  initFlash();
+  area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;
+  startCardTimer();
+}
+function buildFlashCard(){
+  if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#8b2500;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const card=fcCards[fcIndex];
+  return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div style="margin-bottom:8px"><span class="fc-unit-badge">${card.unit}</span></div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;
+}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+/* ===== 4択ドリル ===== */
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){
+  if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const q=drillQs[drillIndex];
+  const choices=q.choices.map((c,i)=>`<button class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</button>`).join('');
+  return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+function drillAnswer(idx){
+  if(drillAnswered)return;drillAnswered=true;
+  const q=drillQs[drillIndex];
+  document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});
+  if(idx===q.ans)drillScore++;
+  const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');
+  const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';
+}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+/* ===== 確認テスト ===== */
+function renderTest(area){
+  testSelections={};testSubmitted=false;
+  let html='<div class="panel">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<button class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</button>`;});
+    html+='</div></div>';
+  });
+  html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;
+  area.innerHTML=html;
+}
+function testSelect(qi,ci){
+  if(testSubmitted)return;
+  testSelections[qi]=ci;
+  document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});
+}
+function submitTest(){
+  if(testSubmitted)return;
+  const total=UNIT.testQuiz.length;
+  const answered=Object.keys(testSelections).length;
+  if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}
+  testSubmitted=true;
+  let correct=0;
+  let reviewHTML='<div class="test-review">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;
+    document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});
+    reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;
+  });
+  reviewHTML+='</div>';
+  const pct=Math.round(correct/total*100);
+  const pass=correct>=9;
+  document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 第７章 クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;
+  document.getElementById('test-result').style.display='block';
+  if(pass)fireConfetti();
+}
+
+/* ===== 説明文トグル ===== */
+function toggleSetsu(){
+  const hd=document.getElementById('setsu-hd');
+  const body=document.getElementById('setsu-body');
+  const arrow=hd.querySelector('.sarrow');
+  if(hd)hd.classList.toggle('open');
+  if(body)body.classList.toggle('open');
+  if(arrow)arrow.textContent=body.classList.contains('open')?'▲':'▼';
+}
+
+selectMode('flash');
+</script>
+</body>
+</html>

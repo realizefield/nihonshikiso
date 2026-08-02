@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：ドリル＆確認テスト（第１〜４章）</title>
+<style>
+  body{font-family:"Meiryo",sans-serif;max-width:900px;margin:20px auto;background:#fdf5ec;font-size:16px;padding-bottom:80px;line-height:1.8}
+  h1{border-bottom:3px solid #8b3322;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin-bottom:6px}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b3322;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a2318}
+
+  /* ===== 章タブ ===== */
+  .ch-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .ch-tab{flex:1;min-width:110px;padding:10px 6px;border:none;border-radius:10px;font-size:13px;font-weight:bold;cursor:pointer;background:#e8d5c8;color:#6a2318;transition:all 0.2s;line-height:1.4}
+  .ch-tab.active{background:#8b3322;color:#fff;box-shadow:0 3px 0 #6a2318}
+  .ch-tab:hover:not(.active){background:#d4956a;color:#fff}
+
+  /* ===== 単元サブタブ ===== */
+  .sec-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .sec-tab{flex:1;min-width:120px;padding:8px 8px;border:2px solid #d4956a;border-radius:8px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.2s;line-height:1.4;text-align:center}
+  .sec-tab.active{background:#c87000;color:#fff;border-color:#c87000;box-shadow:0 2px 0 #9a5800}
+  .sec-tab:hover:not(.active){background:#fdebd0}
+
+  /* ===== モードタブ ===== */
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;padding-top:10px;border-top:1px solid #e0c8a0}
+  .mode-tab{padding:9px 18px;border:2px solid #d4956a;border-radius:20px;font-size:14px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.2s}
+  .mode-tab.active{background:#8b3322;color:#fff;border-color:#8b3322}
+  .mode-tab:hover:not(.active){background:#fdebd0}
+
+  /* ===== セクション枠 ===== */
+  .panel{background:#fff;border-radius:10px;border:1px solid #d4956a;padding:20px;margin-bottom:14px}
+  .ch-desc{background:#fff8f0;border-left:4px solid #8b3322;padding:10px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:14px;color:#555;line-height:1.8}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .stat-chip{background:#8b3322;color:#fff;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:bold}
+  .stat-chip.green{background:#1a6b22}
+  .stat-chip.blue{background:#1a4f7a}
+  .stat-chip.orange{background:#c87000}
+
+  /* ===== フラッシュカード ===== */
+  .fc-progress{font-size:13px;color:#888;margin-bottom:10px}
+  .fc-card{background:linear-gradient(135deg,#fffbf0,#fde8c0);color:#1a1a2e;border:2px solid #f0c880;border-radius:16px;padding:32px 28px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 16px rgba(200,112,0,0.15)}
+  .fc-card .fc-front{font-size:18px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:24px;font-weight:bold;color:#8b3322}
+  .fc-card .fc-hint{font-size:13px;color:#6a4f00;margin-top:8px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:4px 10px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#b08040;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:26px;font-weight:bold;color:#c87000;opacity:0.7;line-height:1;min-width:28px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #d4956a;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#8b3322;transition:all 0.15s}
+  .fc-timer-btn.active{background:#8b3322;color:#fff;border-color:#8b3322}
+  .fc-timer-btn:hover:not(.active){background:#fdebd0}
+  .fc-btns{display:flex;gap:10px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:10px 28px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:10px 28px;background:#8b3322;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#fff3e0;border:2px solid #d4956a;border-radius:10px;padding:16px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:9px 22px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px}
+
+  /* ===== 4択ドリル ===== */
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:11px 16px;border-radius:9px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318;display:none}
+  .drill-result{text-align:center;padding:24px;display:none}
+  .drill-result-score{font-size:40px;font-weight:bold;color:#8b3322;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:16px}
+  .drill-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+
+  /* ===== 確認テスト ===== */
+  .test-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+  .test-title{font-size:17px;font-weight:bold;color:#8b3322}
+  .test-timer{font-size:14px;color:#555;font-weight:bold}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#8b3322;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #d4956a;background:#fdf5ec;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#8b3322;background:#fdebd0}
+  .test-choice.selected{border-color:#1a4f7a;background:#e0f0ff;color:#1a4f7a;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+  .test-submit{background:#8b3322;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #6a2318;margin-top:18px;width:100%}
+  .test-submit:hover{background:#6a2318}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#8b3322;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#c87000,#f4a261);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#8b3322;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #6a2318}
+  .test-review{margin-top:20px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .test-review-label{font-weight:bold;margin-right:6px}
+
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-link">← 目次へ戻る</a>
+<h1>📝 ドリル＆確認テスト — 第１〜４章</h1>
+
+<div class="ch-tabs">
+  <button class="ch-tab active" onclick="selectChapter(1)">🏯 第１章<br><span style="font-size:11px;font-weight:normal">原始・古代</span></button>
+  <button class="ch-tab" onclick="selectChapter(2)">⚔️ 第２章<br><span style="font-size:11px;font-weight:normal">律令国家</span></button>
+  <button class="ch-tab" onclick="selectChapter(3)">🏛️ 第３章<br><span style="font-size:11px;font-weight:normal">奈良時代</span></button>
+  <button class="ch-tab" onclick="selectChapter(4)">📜 第４章<br><span style="font-size:11px;font-weight:normal">平安時代</span></button>
+</div>
+
+<div class="sec-tabs" id="sec-tabs"></div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+// =========================================================
+//  全章データ（章→単元→フラッシュ/ドリル/テスト）
+// =========================================================
+const allData = {
+
+// ─────────────────────────────────────────────────────────
+1: {
+  title: "第１章　原始・古代",
+  sections: [
+    {
+      shortTitle: "① 石器〜稲作",
+      title: "日本列島のはじまり——石器から稲作へ",
+      flashCards: [
+        {q:"1949年，群馬県で打製石器を発見し，日本に旧石器時代があることを証明した遺跡は？", a:"岩宿遺跡", hint:"相沢忠洋が関東ローム層で発見"},
+        {q:"旧石器時代の別名は？（土器を持たない時代）", a:"先土器時代", hint:"「土器が先にない時代」"},
+        {q:"縄文時代から使われた，表面を磨いた石器は？", a:"磨製石器", hint:"弥生時代でも引き続き使用"},
+        {q:"縄目模様の黒褐色でもろい，縄文時代の土器は？", a:"縄文土器", hint:"600〜700℃の低温焼成"},
+        {q:"縄文人が住んだ，地面を掘り下げた住居は？", a:"竪穴式住居", hint:"寒さをしのぎやすい構造"},
+        {q:"縄文人の定住・栽培・大型建築を示す青森県の遺跡は？", a:"三内丸山遺跡", hint:"1992年から本格発掘"},
+        {q:"弥生時代に大陸から伝わった農業は？", a:"稲作", hint:"水田で米を作る"},
+        {q:"弥生時代の薄くて丈夫な土器は？", a:"弥生土器", hint:"高温焼成・赤褐色"},
+        {q:"弥生時代の集落の様子を伝える佐賀県の遺跡は？", a:"吉野ヶ里遺跡", hint:"柵と濠で囲まれた防衛型集落"},
+      ],
+      drillQuiz: [
+        {q:"1949年，日本に旧石器時代があったことを証明した群馬県の遺跡はどれですか？",choices:["吉野ヶ里遺跡","三内丸山遺跡","岩宿遺跡","大森貝塚"],ans:2,exp:"岩宿遺跡で相沢忠洋が関東ローム層から打製石器を発見。日本にも旧石器時代（先土器時代）があることが証明されました。"},
+        {q:"縄文土器の特徴として正しいのはどれですか？",choices:["薄くて丈夫・高温・赤褐色","縄目模様・低温・黒褐色・もろい","ろくろで成形・左右対称","白くて硬い"],ans:1,exp:"縄文土器は縄目模様が特徴。低温（600〜700℃）で焼くため黒褐色でもろいです。高温・丈夫なのは弥生土器です。"},
+        {q:"縄文人の定住・栽培・大型建築を示した青森県の遺跡はどれですか？",choices:["岩宿遺跡","吉野ヶ里遺跡","大森貝塚","三内丸山遺跡"],ans:3,exp:"三内丸山遺跡では，縄文人が定住し，栗を栽培し，高さ10mの六本柱の大型建物を建てていたことが分かりました。"},
+        {q:"弥生時代の集落の様子を示す佐賀県の遺跡はどれですか？",choices:["岩宿遺跡","三内丸山遺跡","吉野ヶ里遺跡","大森貝塚"],ans:2,exp:"吉野ヶ里遺跡は環濠集落（柵と濠で囲まれた集落）。弥生時代に土地・食料をめぐる争いがあったことを示します。"},
+        {q:"大陸から稲作が伝わったのはいつの時代ですか？",choices:["旧石器時代","縄文時代","弥生時代","古墳時代"],ans:2,exp:"稲作は紀元前4〜3世紀ごろ，大陸から北九州に伝わりました。稲作の伝来が弥生時代の始まりとされます。"},
+      ],
+      testQuiz: [
+        {q:"旧石器時代の別名は何か？",choices:["縄文時代","先土器時代","打製石器時代","古墳時代"],ans:1},
+        {q:"岩宿遺跡で打製石器を発見した人物は誰か？",choices:["梅原末治","相沢忠洋","浜田耕作","坪井正五郎"],ans:1},
+        {q:"縄文土器の焼成温度として正しいのはどれか？",choices:["1200℃以上","1000〜1100℃","600〜700℃","400℃以下"],ans:2},
+        {q:"弥生土器の特徴はどれか？",choices:["縄目模様・黒褐色・もろい","薄くて丈夫・赤褐色・高温焼成","厚くて丈夫・白色","細くて透明"],ans:1},
+        {q:"三内丸山遺跡が示す縄文人の特徴はどれか？",choices:["移動生活をしていた","定住して栽培・大型建物を作っていた","稲作を始めていた","金属器を使っていた"],ans:1},
+        {q:"吉野ヶ里遺跡はどこにあるか？",choices:["青森県","群馬県","佐賀県","大阪府"],ans:2},
+        {q:"弥生時代に稲作とともに伝わったものはどれか？",choices:["縄文土器","磨製石器のみ","金属器（青銅器・鉄器）","火起こし"],ans:2},
+        {q:"竪穴式住居はどの時代から使われたか？",choices:["弥生時代のみ","旧石器時代のみ","縄文時代から（弥生時代にも続く）","古墳時代のみ"],ans:2},
+      ],
+    },
+    {
+      shortTitle: "② 倭国・邪馬台国",
+      title: "中国の歴史書が伝える「倭国」の姿",
+      flashCards: [
+        {q:"中国の歴史書が日本を指した名前は？", a:"倭", hint:"「漢委奴国王」の金印にも"},
+        {q:"2世紀後半，日本各地で起きた争乱を何という？", a:"倭国大乱", hint:"卑弥呼擁立のきっかけ"},
+        {q:"57年に奴国の王に金印を与えた後漢の皇帝は？", a:"光武帝", hint:"「漢委奴国王」と刻まれた"},
+        {q:"奴国の王が57年に授かった印章は？", a:"金印", hint:"1784年に志賀島で発見"},
+        {q:"呪術（鬼道）で邪馬台国を統治した女王は？", a:"卑弥呼", hint:"239年に魏に使者を送った"},
+        {q:"卑弥呼が治めた国は？", a:"邪馬台国", hint:"大和説・九州説が対立"},
+        {q:"239年に魏が卑弥呼に与えた称号は？", a:"親魏倭王", hint:"銅鏡100枚も下賜された"},
+        {q:"大和政権の大王が作った，鍵穴形の古墳は？", a:"前方後円墳", hint:"後円部が墓，前方部が祭礼"},
+        {q:"4〜5世紀，近畿地方を中心に成立した豪族の政治連合は？", a:"大和政権", hint:"大王を中心に全国を支配"},
+      ],
+      drillQuiz: [
+        {q:"紀元57年，後漢の光武帝から金印を授かったのはどの国の王ですか？",choices:["邪馬台国の卑弥呼","大和政権の大王","奴国の王","倭の五王"],ans:2,exp:"九州北部の奴国の王が金印「漢委奴国王」を授かりました。この金印は1784年に福岡県志賀島で発見されています。"},
+        {q:"2世紀後半，日本各地で起きた争乱を何といいますか？",choices:["大化の改新","壬申の乱","倭国大乱","承平の乱"],ans:2,exp:"倭国大乱は稲作の普及にともなう土地・食料争いが激化した内乱。その後，呪術的権威を持つ卑弥呼が女王として擁立されました。"},
+        {q:"239年，魏に使者を送り「親魏倭王」の称号を得た女王は誰ですか？",choices:["推古天皇","持統天皇","卑弥呼","神功皇后"],ans:2,exp:"卑弥呼は239年に魏へ使者を送り，「親魏倭王」の称号と銅鏡100枚などを授かりました。"},
+        {q:"大和政権が各地の支配を広げたことを示す，鍵穴形の古墳は何ですか？",choices:["円墳","方墳","前方後円墳","横穴式石室墳"],ans:2,exp:"前方後円墳は後円部が墓室，前方部が祭礼の場。この形の古墳が各地に広まったことが大和政権の支配の拡大を示します。"},
+        {q:"邪馬台国の所在をめぐる二大学説はどれですか？",choices:["関東説と九州説","北海道説と沖縄説","大和（近畿）説と九州説","東北説と四国説"],ans:2,exp:"邪馬台国の所在地については，奈良（大和）とする大和説と，北九州とする九州説が今も対立しています。"},
+      ],
+      testQuiz: [
+        {q:"「漢委奴国王」と刻まれた金印を授かったのはどこの王か？",choices:["邪馬台国","奴国","大和政権","倭の五王"],ans:1},
+        {q:"金印が発見されたのはどこか？",choices:["奈良県","佐賀県","福岡県志賀島","大阪府"],ans:2},
+        {q:"倭国大乱の後，女王として擁立されたのは誰か？",choices:["推古天皇","持統天皇","卑弥呼","神功皇后"],ans:2},
+        {q:"卑弥呼が使用した呪術的支配の方法を何というか？",choices:["神道","仏道","鬼道","儒道"],ans:2},
+        {q:"239年，魏が卑弥呼に与えた称号はどれか？",choices:["倭王","大和王","親魏倭王","漢委倭王"],ans:2},
+        {q:"大和政権の「大王」とは何か？",choices:["最大の豪族連合の首長","天皇の別名","中国から来た王","仏教の指導者"],ans:0},
+        {q:"前方後円墳の「後円部」は何のために使われたか？",choices:["祭礼の場","墓室","住居","会議の場"],ans:1},
+        {q:"邪馬台国の所在地として対立する二説はどれか？",choices:["東北説と九州説","大和（近畿）説と九州説","四国説と関東説","北海道説と沖縄説"],ans:1},
+      ],
+    },
+    {
+      shortTitle: "③ 聖徳太子〜改新",
+      title: "天皇中心の国家をめざして——聖徳太子と大化の改新",
+      flashCards: [
+        {q:"日本最初の女性天皇で，聖徳太子を摂政にした天皇は？", a:"推古天皇", hint:"33代天皇（593年即位）"},
+        {q:"天皇が未成年・病弱なとき代わりに政治を行う役職は？", a:"摂政", hint:"聖徳太子が推古天皇のもとで就いた"},
+        {q:"冠位十二階・憲法十七条・遣隋使を推進した人物は？", a:"聖徳太子", hint:"用明天皇の第二皇子"},
+        {q:"603年，冠の色で役人の位を12段階に分けた制度は？", a:"冠位十二階", hint:"家柄でなく能力で昇進"},
+        {q:"604年，「和を以て貴しとなす」から始まる17か条の政治方針は？", a:"憲法十七条", hint:"第一条が有名"},
+        {q:"607年，小野妹子を派遣した中国（隋）への使節は？", a:"遣隋使", hint:"「日出ずる処の天子…」"},
+        {q:"聖徳太子が建立した，日本最古の木造建築物がある寺は？", a:"法隆寺", hint:"奈良県斑鳩町・世界遺産"},
+        {q:"645年，中大兄皇子・中臣鎌足が蘇我氏を倒して行った政治改革は？", a:"大化の改新", hint:"日本初の元号「大化」"},
+        {q:"公地公民制のもと，6歳以上の男女に口分田を貸し与えた制度は？", a:"班田収授法", hint:"死んだら国に返す"},
+        {q:"飛鳥大仏を作った，飛鳥文化を代表する仏師は？", a:"鞍作鳥", hint:"「止利仏師」とも呼ばれる"},
+      ],
+      drillQuiz: [
+        {q:"603年，聖徳太子が家柄でなく能力で役人の位を決めた制度は？",choices:["班田収授法","律令制度","冠位十二階","公地公民制"],ans:2,exp:"冠位十二階は，冠の色（徳・仁・礼・信・義・智の6色×濃淡2段階）で位を表し，家柄に関係なく能力で昇進できる制度です。"},
+        {q:"604年，「和を以て貴しとなす」から始まる聖徳太子の政治方針は？",choices:["大宝律令","冠位十二階","憲法十七条","班田収授法"],ans:2,exp:"憲法十七条は，官僚の心構えを定めた17条の方針。仏教・儒教の思想が反映されています。"},
+        {q:"607年，聖徳太子が遣隋使として隋に派遣した人物は誰ですか？",choices:["中臣鎌足","小野妹子","阿倍仲麻呂","吉備真備"],ans:1,exp:"小野妹子は607年に遣隋使として隋に派遣。「日出ずる処の天子，書を日没する処の天子に致す」という対等な文書を送りました。"},
+        {q:"645年，蘇我入鹿を倒して大化の改新を始めた人物たちはどれですか？",choices:["聖徳太子と推古天皇","中大兄皇子と中臣鎌足","天武天皇と持統天皇","藤原不比等と元明天皇"],ans:1,exp:"中大兄皇子（後の天智天皇）と中臣鎌足（後の藤原鎌足）が蘇我入鹿を宮中で暗殺し，大化の改新を断行しました。"},
+        {q:"大化の改新で定められた，農民に口分田を貸し与える制度は？",choices:["荘園制度","班田収授法","地頭制度","太閤検地"],ans:1,exp:"班田収授法は，6歳以上の男女に口分田を支給し，死後は国に返す制度。「公地公民制」の根幹です。"},
+      ],
+      testQuiz: [
+        {q:"推古天皇のもとで摂政を務めた人物は誰か？",choices:["中大兄皇子","中臣鎌足","聖徳太子","蘇我馬子"],ans:2},
+        {q:"冠位十二階が制定された年はいつか？",choices:["593年","603年","604年","607年"],ans:1},
+        {q:"冠位十二階の目的として正しいのはどれか？",choices:["家柄で役人の位を決める","能力で役人の位を決める","武力で役人を選ぶ","僧侶を役人に登用する"],ans:1},
+        {q:"憲法十七条の第一条の内容はどれか？",choices:["天皇に従え","和を大切にせよ","仏教を信仰せよ","法律を守れ"],ans:1},
+        {q:"大化の改新が起きた年はいつか？",choices:["593年","630年","645年","701年"],ans:2},
+        {q:"大化の改新で蘇我入鹿を倒した人物の組み合わせはどれか？",choices:["聖徳太子と推古天皇","中大兄皇子と中臣鎌足","天武天皇と持統天皇","藤原不比等と元明天皇"],ans:1},
+        {q:"大化の改新で定められた日本初の元号は何か？",choices:["白雉","朱鳥","大化","和銅"],ans:2},
+        {q:"飛鳥文化を代表する仏師で，飛鳥大仏を作った人物は誰か？",choices:["行基","鑑真","鞍作鳥","空海"],ans:2},
+        {q:"聖徳太子が建立した，日本最古の木造建築物が残る寺はどれか？",choices:["東大寺","唐招提寺","法隆寺","薬師寺"],ans:2},
+        {q:"班田収授法で口分田を貸し与えられた対象はどれか？",choices:["成人男性のみ","貴族のみ","6歳以上の男女","武士のみ"],ans:2},
+      ],
+    },
+  ]
+},
+
+// ─────────────────────────────────────────────────────────
+2: {
+  title: "第２章　律令国家の成立",
+  sections: [
+    {
+      shortTitle: "① 白村江〜天智",
+      title: "白村江の戦いと天智天皇の防衛政策（660〜671年）",
+      flashCards: [
+        {q:"663年，日本・百済連合軍が唐・新羅連合軍に大敗した戦いは？", a:"白村江の戦い", hint:"朝鮮半島の白村江（はくすきのえ）で"},
+        {q:"白村江の戦い後，博多湾沿岸に築かれた土塁の防衛施設は？", a:"水城", hint:"長さ約1.2km，高さ約9m"},
+        {q:"白村江の戦い後，九州北部の山に作られた朝鮮式の山城は？", a:"大野城", hint:"福岡県"},
+        {q:"天智天皇が667年に都を移した近江（滋賀県）の宮は？", a:"近江大津宮", hint:"琵琶湖のほとり"},
+        {q:"670年，天智天皇が作った日本初の全国的な戸籍は？", a:"庚午年籍", hint:"干支の年「庚午」から"},
+        {q:"庚午年籍を作り，近江令を制定した天皇は？", a:"天智天皇", hint:"中大兄皇子が即位した"},
+        {q:"天智天皇が制定した最初期の法典は？", a:"近江令", hint:"大宝律令の前身"},
+      ],
+      drillQuiz: [
+        {q:"663年，日本・百済連合軍が唐・新羅連合軍に大敗した戦いはどれですか？",choices:["壬申の乱","白村江の戦い","関ヶ原の戦い","天王山の戦い"],ans:1,exp:"白村江の戦い（663年）は朝鮮半島・白村江での海戦。日本は水軍を送ったが大敗し，朝鮮半島への影響力を失いました。"},
+        {q:"白村江の戦い後，博多湾沿岸に作られた防衛用の土塁は？",choices:["大野城","水城","太宰府","山城"],ans:1,exp:"水城は博多湾沿いに築かれた長さ約1.2kmの土塁。唐・新羅の侵攻に備え，後方には山城（大野城など）も整備されました。"},
+        {q:"天智天皇が667年に遷都した場所はどこですか？",choices:["難波宮","藤原京","飛鳥京","近江大津宮"],ans:3,exp:"天智天皇は667年，防衛上の理由から飛鳥を離れ，近江（滋賀県）の大津宮に遷都しました。"},
+        {q:"670年，天智天皇が作った日本初の全国的な戸籍を何というか？",choices:["庚午年籍","班田収授","国勢調査","大宝令"],ans:0,exp:"庚午年籍（こうごねんじゃく）は670年に作られた日本初の本格的な戸籍。干支の「庚午」の年に作られたため，この名があります。"},
+        {q:"天智天皇が制定した最初期の成文法典は何ですか？",choices:["養老律令","大宝律令","近江令","飛鳥浄御原令"],ans:2,exp:"近江令（おうみりょう）は天智天皇が制定した最初期の法典。大宝律令の前身にあたります。"},
+      ],
+      testQuiz: [
+        {q:"白村江の戦いはいつ起きたか？",choices:["645年","663年","672年","701年"],ans:1},
+        {q:"白村江の戦いで日本が援軍を送った国はどれか？",choices:["新羅","唐","百済","高句麗"],ans:2},
+        {q:"白村江の戦いの敗北後，博多湾沿岸に作られた防衛施設はどれか？",choices:["大野城","水城","太宰府","難波宮"],ans:1},
+        {q:"白村江の戦いの後に整備された山城はどれか？",choices:["水城","難波宮","大野城","近江大津宮"],ans:2},
+        {q:"天智天皇が667年に遷都した先はどこか？",choices:["難波宮","藤原京","近江大津宮","平城京"],ans:2},
+        {q:"670年，天智天皇が作った戸籍は何というか？",choices:["大宝令","庚午年籍","班田収授法","戸令"],ans:1},
+        {q:"中大兄皇子が即位した後の天皇号は何か？",choices:["天武天皇","持統天皇","天智天皇","元明天皇"],ans:2},
+        {q:"天智天皇が制定した最初期の法典は何か？",choices:["大宝律令","養老律令","飛鳥浄御原令","近江令"],ans:3},
+      ],
+    },
+    {
+      shortTitle: "② 壬申の乱〜持統",
+      title: "壬申の乱と天武・持統天皇（672〜689年）",
+      flashCards: [
+        {q:"672年，大海人皇子と大友皇子が皇位をめぐって争った内乱は？", a:"壬申の乱", hint:"干支の年「壬申」から"},
+        {q:"壬申の乱で勝利して即位した，天智天皇の弟は？", a:"天武天皇", hint:"即位前は「大海人皇子」"},
+        {q:"「天皇」号と「日本」国号を定め，律令国家の基礎を固めた天皇は？", a:"天武天皇", hint:"壬申の乱の勝者"},
+        {q:"天武・持統天皇が本格整備した，三重県にある皇室の聖地は？", a:"伊勢神宮", hint:"20年ごとに式年遷宮が行われる"},
+        {q:"694年，日本初の本格的な条坊制の都城を完成させた女性天皇は？", a:"持統天皇", hint:"天武天皇の皇后"},
+        {q:"持統天皇が694年に完成させた，条坊制を採用した最初の都は？", a:"藤原京", hint:"現・奈良県橿原市付近"},
+        {q:"天武天皇が命じ，持統天皇のとき完成した最初の成文法典は？", a:"飛鳥浄御原令", hint:"689年，大宝律令の前身"},
+      ],
+      drillQuiz: [
+        {q:"672年の壬申の乱で争った二人はどれですか？",choices:["聖徳太子と蘇我入鹿","大海人皇子と大友皇子","藤原不比等と元明天皇","天智天皇と天武天皇"],ans:1,exp:"壬申の乱は天智天皇の死後，天智の弟・大海人皇子（天武）と天智の息子・大友皇子が皇位をめぐって戦いました。"},
+        {q:"壬申の乱で勝利した大海人皇子が即位したときの天皇号は？",choices:["天智天皇","持統天皇","天武天皇","元明天皇"],ans:2,exp:"大海人皇子は673年に即位して天武天皇となりました。「天皇」号と「日本」国号を定めた天皇でもあります。"},
+        {q:"天武・持統天皇が本格整備した，三重県にある皇室の聖地は？",choices:["春日大社","伊勢神宮","出雲大社","住吉大社"],ans:1,exp:"伊勢神宮は天照大神を祀る皇室の聖地。天武・持統天皇の時代に本格整備され，20年ごとの「式年遷宮」が定められました。"},
+        {q:"694年，持統天皇が完成させた日本初の本格的な条坊制都城は？",choices:["平城京","平安京","難波宮","藤原京"],ans:3,exp:"藤原京は現在の奈良県橿原市付近に作られた最初の本格都城。碁盤の目状の条坊制を採用しました。"},
+        {q:"689年，天武天皇が命じ持統天皇のとき完成した法典は？",choices:["大宝律令","養老律令","近江令","飛鳥浄御原令"],ans:3,exp:"飛鳥浄御原令（689年完成）は律令の前身。大宝律令（701年）はこれを発展させた日本最初の本格的律令です。"},
+      ],
+      testQuiz: [
+        {q:"壬申の乱はいつ起きたか？",choices:["663年","670年","672年","689年"],ans:2},
+        {q:"壬申の乱で勝利した人物は誰か？",choices:["大友皇子","天智天皇","大海人皇子","中臣鎌足"],ans:2},
+        {q:"天武天皇が「日本」国号を定める以前，大王はどう呼ばれていたか？",choices:["王","帝","大王","君主"],ans:2},
+        {q:"伊勢神宮を本格整備した天皇はどれか？",choices:["天智天皇と聖武天皇","天武天皇と持統天皇","元明天皇と元正天皇","桓武天皇と嵯峨天皇"],ans:1},
+        {q:"藤原京が置かれた場所はどこか？",choices:["現・京都市","現・奈良市","現・奈良県橿原市付近","現・滋賀県大津市"],ans:2},
+        {q:"飛鳥浄御原令が完成したのはいつか？",choices:["672年","689年","694年","701年"],ans:1},
+        {q:"持統天皇は天武天皇とどのような関係か？",choices:["娘","姉","皇后","妹"],ans:2},
+        {q:"「壬申」とはどういう意味か？",choices:["場所の名前","戦い方の名前","干支の年","人物の名前"],ans:2},
+      ],
+    },
+    {
+      shortTitle: "③ 大宝律令・税制",
+      title: "律令国家の完成——大宝律令と税制（690〜701年）",
+      flashCards: [
+        {q:"701年に大宝律令の編纂を主導した藤原氏の祖は？", a:"藤原不比等", hint:"中臣鎌足の息子"},
+        {q:"701年に完成した，日本初の本格的な成文律令は？", a:"大宝律令", hint:"「律」は刑法，「令」は行政法"},
+        {q:"大宝律令で定められた，6歳以上の男女に口分田を貸し与える制度は？", a:"班田収授法", hint:"死後は国に返還する"},
+        {q:"律令の税制で，稲を地方の倉（国衙）に納める税は？", a:"租", hint:"収穫の約3%"},
+        {q:"律令の税制で，絹・布・地方の特産品を都に納める税は？", a:"調", hint:"成人男性が都まで運ぶ"},
+        {q:"律令の税制で，布または労役10日分を都に納める税は？", a:"庸", hint:"都での労役の代わりに布を納める"},
+        {q:"律令の税制で，国司の命令で年間60日以内の労役に従事する義務は？", a:"雑徭", hint:"道路修理・土木工事など"},
+      ],
+      drillQuiz: [
+        {q:"701年に完成した，日本初の本格的な成文律令は何ですか？",choices:["養老律令","大宝律令","近江令","飛鳥浄御原令"],ans:1,exp:"大宝律令（701年）は藤原不比等らが編纂した日本最初の本格的律令。「律」（刑法）と「令」（行政法）から構成されます。"},
+        {q:"班田収授法によって農民に支給された田地を何という？",choices:["荘園","墾田","口分田","名田"],ans:2,exp:"口分田は6歳以上の男女に貸し与えられた農地。死亡後は国に返す仕組みで，「公地公民制」の根幹です。"},
+        {q:"律令の税制で，稲を地方政府（国衙）に納める税はどれですか？",choices:["租","調","庸","雑徭"],ans:0,exp:"租（そ）は稲を地方の倉（国衙）に納める税。収穫の約3%でした。調・庸は都に納める税，雑徭は地方での労役です。"},
+        {q:"律令の税制で，絹・布・地方の特産品を都に納める税はどれですか？",choices:["租","調","庸","雑徭"],ans:1,exp:"調（ちょう）は絹・布・地方特産品を都に納める税。成人男性が自ら都まで運ぶ「運脚（うんきゃく）」の義務もありました。"},
+        {q:"律令の税制で，国司の命令で年間60日以内の地方での労役義務は？",choices:["租","調","庸","雑徭"],ans:3,exp:"雑徭（ぞうよう）は，国司の命令で道路修理・土木工事などの地方労役に従事する義務。年間60日以内とされました。"},
+      ],
+      testQuiz: [
+        {q:"大宝律令の編纂を主導した人物は誰か？",choices:["聖徳太子","天武天皇","藤原不比等","中臣鎌足"],ans:2},
+        {q:"大宝律令が完成した年はいつか？",choices:["689年","694年","701年","710年"],ans:2},
+        {q:"大宝律令の「律」とは何を指すか？",choices:["行政法","刑法","民法","商法"],ans:1},
+        {q:"大宝律令の「令」とは何を指すか？",choices:["刑法","行政法","民法","農業法"],ans:1},
+        {q:"班田収授法で口分田が支給される年齢はいつからか？",choices:["生まれたとき","3歳から","6歳から","成人から"],ans:2},
+        {q:"口分田は死後どうなるか？",choices:["子どもに相続される","国に返す","売却できる","永久に私有できる"],ans:1},
+        {q:"租（そ）はどこに納めるか？",choices:["都","地方の倉（国衙）","寺院","豪族"],ans:1},
+        {q:"調（ちょう）はどのようなものを納めるか？",choices:["稲","絹・布・特産品","労役","米"],ans:1},
+        {q:"庸（よう）は何に代わるものか？",choices:["都での労役","地方での労役","稲","特産品"],ans:0},
+        {q:"雑徭（ぞうよう）の最大日数はいくらか？",choices:["10日","30日","60日","90日"],ans:2},
+      ],
+    },
+  ]
+},
+
+// ─────────────────────────────────────────────────────────
+3: {
+  title: "第３章　奈良時代",
+  sections: [
+    {
+      shortTitle: "① 平城京・土地制度",
+      title: "平城京への遷都と土地制度の変化（710〜743年）",
+      flashCards: [
+        {q:"710年，元明天皇が奈良に作った，唐の長安を模した都は？", a:"平城京", hint:"「奈良の都」，人口約10万人"},
+        {q:"平城京へ遷都した女性天皇は誰？", a:"元明天皇", hint:"43代天皇（708〜715年）"},
+        {q:"708年に鋳造された，日本最初の本格的な流通貨幣は？", a:"和同開珎", hint:"銅と銀で作られた"},
+        {q:"723年，新たに開墾した土地を3代まで私有できるとした法令は？", a:"三世一身法", hint:"「三世（3代）」まで認める"},
+        {q:"743年，開墾した土地を永久に私有できると定めた法令は？", a:"墾田永年私財法", hint:"「永年（永遠）」私財とする"},
+        {q:"墾田永年私財法で拡大した，有力者の私有地を何という？", a:"荘園", hint:"律令制（公地公民）の崩壊につながる"},
+        {q:"724年に即位し，仏教で国を守る政策を推進した天皇は？", a:"聖武天皇", hint:"天平文化の中心人物"},
+      ],
+      drillQuiz: [
+        {q:"710年，元明天皇が唐の長安を模して作った都はどれですか？",choices:["平安京","難波宮","藤原京","平城京"],ans:3,exp:"平城京（現・奈良市）は710年に造営。唐の長安を模した碁盤の目状の都で，人口は約10万人といわれます。"},
+        {q:"708年に鋳造された，日本最初の本格的な流通貨幣はどれですか？",choices:["富本銭","和同開珎","皇朝十二銭","寛永通宝"],ans:1,exp:"和同開珎（わどうかいちん）は708年に鋳造。銅と銀で作られ，蓄銭叙位令で普及が図られました。"},
+        {q:"723年，新たに開墾した土地を3代まで私有できるとした法令はどれですか？",choices:["班田収授法","三世一身法","墾田永年私財法","大宝律令"],ans:1,exp:"三世一身法（723年）は，用水路を掘って開墾した土地を3代まで私有できると定めました。"},
+        {q:"743年，開墾した土地を永久に私有できると定めた法令はどれですか？",choices:["三世一身法","班田収授法","墾田永年私財法","大宝律令"],ans:2,exp:"墾田永年私財法（743年）は，開墾した土地の永久私有を認めました。貴族・寺社の荘園が急増し，公地公民制が崩れ始めました。"},
+        {q:"墾田永年私財法の結果，拡大した有力者の私有地を何という？",choices:["口分田","班田","荘園","墾田"],ans:2,exp:"荘園（しょうえん）は貴族・大寺院が所有した私有地。律令制の根幹「公地公民制」の崩壊につながりました。"},
+      ],
+      testQuiz: [
+        {q:"平城京はいつ造営されたか？",choices:["694年","701年","710年","724年"],ans:2},
+        {q:"平城京へ遷都した天皇は誰か？",choices:["持統天皇","元明天皇","聖武天皇","元正天皇"],ans:1},
+        {q:"平城京はどの都を模して作られたか？",choices:["唐の長安","隋の洛陽","新羅の慶州","百済の熊津"],ans:0},
+        {q:"708年に鋳造された日本最初の流通貨幣は何か？",choices:["富本銭","和同開珎","寛永通宝","慶長小判"],ans:1},
+        {q:"三世一身法が定められた年はいつか？",choices:["710年","723年","743年","752年"],ans:1},
+        {q:"三世一身法で，用水路を新設した場合，私有が認められる期間はいつまでか？",choices:["1代","3代","永久","50年"],ans:1},
+        {q:"墾田永年私財法が定められた年はいつか？",choices:["723年","741年","743年","752年"],ans:2},
+        {q:"墾田永年私財法が律令制に与えた影響はどれか？",choices:["口分田が増えた","荘園が拡大し公地公民制が崩れた","班田収授法が強化された","税収が増えた"],ans:1},
+      ],
+    },
+    {
+      shortTitle: "② 聖武天皇・仏教",
+      title: "聖武天皇と仏教による国家鎮護（724〜756年）",
+      flashCards: [
+        {q:"聖武天皇が741年，各国に建立を命じた寺は？", a:"国分寺", hint:"各国に「国分寺・国分尼寺」を1か所ずつ"},
+        {q:"聖武天皇が国の守護として奈良に建立した，大仏を持つ寺は？", a:"東大寺", hint:"大仏殿を持つ奈良の大寺"},
+        {q:"743年の「大仏の詔」で造立が始まり，752年に開眼供養された大仏の正式名は？", a:"盧舎那仏", hint:"高さ約15m"},
+        {q:"聖武天皇が仏教で国を守ろうとした政策を何という？", a:"鎮護国家", hint:"「鎮める」「護る」国家"},
+        {q:"5度の失敗と失明を乗り越えて753年に来日した唐の高僧は？", a:"鑑真", hint:"正式な戒律を日本に伝えた"},
+        {q:"鑑真が759年に奈良に建立した寺は？", a:"唐招提寺", hint:"鑑真の墓もある"},
+      ],
+      drillQuiz: [
+        {q:"聖武天皇が741年，国ごとに建立を命じた寺はどれですか？",choices:["法隆寺","東大寺","国分寺","唐招提寺"],ans:2,exp:"国分寺（こくぶんじ）は国ごとに置かれた寺。男僧用の「国分寺」と尼僧用の「国分尼寺」が各国に1か所ずつ設けられました。"},
+        {q:"752年に開眼供養が行われた，東大寺の大仏の正式名称はどれですか？",choices:["釈迦如来","阿弥陀如来","盧舎那仏","薬師如来"],ans:2,exp:"東大寺の大仏の正式名は「盧舎那仏（るしゃなぶつ）」。高さ約15m，743年の大仏の詔で造立が始まりました。"},
+        {q:"聖武天皇が仏教で国を守ろうとした政策を何といいますか？",choices:["仏教統制","鎮護国家","廃仏毀釈","仏国土建設"],ans:1,exp:"鎮護国家（ちんごこっか）は，仏教の力で国家の安寧を守ろうとする政策。天然痘の流行や政変が相次いだ社会不安を背景としていました。"},
+        {q:"5度の渡航失敗と失明を乗り越えて来日した唐の高僧はだれですか？",choices:["空海","最澄","鑑真","行基"],ans:2,exp:"鑑真（688〜763年）は10年の歳月をかけて753年に来日。正式な戒律を日本に伝え，759年に唐招提寺を建立しました。"},
+        {q:"鑑真が759年に奈良に建立した寺はどれですか？",choices:["東大寺","法隆寺","唐招提寺","薬師寺"],ans:2,exp:"唐招提寺（とうしょうだいじ）は鑑真が759年に奈良に建立した寺。律宗の総本山で，鑑真の像や墓所もあります。"},
+      ],
+      testQuiz: [
+        {q:"聖武天皇が即位した年はいつか？",choices:["710年","724年","741年","752年"],ans:1},
+        {q:"聖武天皇が国分寺建立を命じたのはいつか？",choices:["724年","741年","743年","752年"],ans:1},
+        {q:"東大寺大仏の造立を命じた「大仏の詔」が出された年は？",choices:["724年","741年","743年","752年"],ans:2},
+        {q:"大仏の開眼供養が行われた年はいつか？",choices:["741年","743年","752年","759年"],ans:2},
+        {q:"盧舎那仏の高さはおよそどのくらいか？",choices:["5m","10m","15m","20m"],ans:2},
+        {q:"鑑真が753年に来日するまでに何度失敗したか？",choices:["1度","3度","5度","7度"],ans:2},
+        {q:"鑑真が日本に伝えたものはどれか？",choices:["茶道","正式な戒律","禅宗","印刷技術"],ans:1},
+        {q:"鑑真が奈良に建立した寺はどれか？",choices:["東大寺","唐招提寺","法隆寺","薬師寺"],ans:1},
+      ],
+    },
+    {
+      shortTitle: "③ 天平文化",
+      title: "天平文化——国際色豊かな仏教文化（8世紀）",
+      flashCards: [
+        {q:"8世紀，奈良時代に栄えた国際色豊かな仏教文化は？", a:"天平文化", hint:"シルクロードを経由した文化も入った"},
+        {q:"光明皇后が756年に聖武天皇の遺品を献納した，東大寺の宝物庫は？", a:"正倉院", hint:"「シルクロードの終着駅」と呼ばれる"},
+        {q:"正倉院が「シルクロードの終着駅」と呼ばれる理由は？", a:"ペルシャ・インド・中国の工芸品が収蔵されているから", hint:"シルクロード経由の品々"},
+        {q:"奈良時代に成立した，天皇から農民まで約4500首を収めた日本最古の歌集は？", a:"万葉集", hint:"大伴家持が最後の編者"},
+        {q:"万葉集で使われた，漢字の音を借りた表記法は？", a:"万葉仮名", hint:"後の平仮名・片仮名の原型"},
+        {q:"遣唐使が持ち帰った文物を収蔵した東大寺の宝物庫は？", a:"正倉院", hint:"756年に光明皇后が献納"},
+      ],
+      drillQuiz: [
+        {q:"奈良時代の国際色豊かな仏教文化を何というか？",choices:["飛鳥文化","天平文化","国風文化","桃山文化"],ans:1,exp:"天平文化（てんぴょうぶんか）は奈良時代，唐・シルクロードを経由した国際色豊かな仏教文化。正倉院の宝物がその象徴です。"},
+        {q:"正倉院がシルクロードの終着駅と呼ばれる理由はどれですか？",choices:["中国からの使節が最後に泊まった場所","遣唐使船が最後に寄港した港","ペルシャ・インド・中国の工芸品が収蔵されているから","鑑真が最後に建てた建物"],ans:2,exp:"正倉院にはシルクロード経由でもたらされたペルシャやインドの染織品・ガラス器・楽器なども収蔵されています。"},
+        {q:"聖武天皇の遺品を756年に正倉院に献納した人物は誰ですか？",choices:["元明天皇","光明皇后","持統天皇","元正天皇"],ans:1,exp:"光明皇后（聖武天皇の皇后）が756年，聖武天皇崩御後に遺品を東大寺に献納。この宝物が今日の正倉院宝物の中心です。"},
+        {q:"奈良時代に成立した，日本最古の和歌集はどれですか？",choices:["古今和歌集","新古今和歌集","万葉集","土佐日記"],ans:2,exp:"万葉集は天皇から農民まで幅広い階層の歌約4500首を収めた日本最古の歌集。大伴家持が最後の編者とされます。"},
+        {q:"万葉集で使われた，漢字の音・訓を借りた表記法は何ですか？",choices:["平仮名","片仮名","万葉仮名","草書"],ans:2,exp:"万葉仮名（まんようがな）は漢字の音・訓を借りて日本語を表す表記法。後の平仮名・片仮名の原型です。"},
+      ],
+      testQuiz: [
+        {q:"天平文化が栄えたのはどの時代か？",choices:["飛鳥時代","奈良時代","平安時代","鎌倉時代"],ans:1},
+        {q:"正倉院はどこにあるか？",choices:["法隆寺","東大寺","唐招提寺","薬師寺"],ans:1},
+        {q:"正倉院の宝物を献納したのは誰か？",choices:["聖武天皇","元明天皇","光明皇后","持統天皇"],ans:2},
+        {q:"正倉院が「シルクロードの終着駅」と呼ばれるのはなぜか？",choices:["遣唐使が最後に立ち寄った場所","西アジア・インドの文物が収蔵されているから","奈良から西への道が始まる場所","大仏が東を向いているから"],ans:1},
+        {q:"万葉集に収録された歌の数はおよそいくらか？",choices:["500首","1000首","4500首","10000首"],ans:2},
+        {q:"万葉集の最後の編者とされる人物は誰か？",choices:["柿本人麻呂","山上憶良","大伴家持","紀貫之"],ans:2},
+        {q:"万葉仮名とはどのようなものか？",choices:["平仮名の別名","漢字の音・訓を借りて日本語を表す表記法","片仮名の別名","草書体"],ans:1},
+        {q:"天平文化の「天平」とは何か？",choices:["聖武天皇の元号","平城京の別名","正倉院の呼び方","光明皇后の名前"],ans:0},
+      ],
+    },
+  ]
+},
+
+// ─────────────────────────────────────────────────────────
+4: {
+  title: "第４章　平安時代",
+  sections: [
+    {
+      shortTitle: "① 平安遷都・初期",
+      title: "平安京遷都と桓武天皇の政治（794〜894年）",
+      flashCards: [
+        {q:"794年，現在の京都に平安京を作り，遷都した天皇は？", a:"桓武天皇", hint:"奈良の仏教勢力から距離を置くために"},
+        {q:"794年に桓武天皇が遷都した都の名前は？", a:"平安京", hint:"現在の京都市にあたる"},
+        {q:"797年，桓武天皇が蝦夷討伐のために征夷大将軍に任命した武将は？", a:"坂上田村麻呂", hint:"東北地方の蝦夷を平定した"},
+        {q:"蝦夷討伐のために任命された，軍の最高司令官の役職は？", a:"征夷大将軍", hint:"後に鎌倉・江戸幕府の長の称号に"},
+        {q:"比叡山に延暦寺を建て，天台宗を開いた僧侶は？", a:"最澄", hint:"「天叡」→天台宗・延暦寺で覚える"},
+        {q:"高野山に金剛峯寺を建て，真言宗を開いた僧侶は？", a:"空海", hint:"「真金」→真言宗・金剛峯寺で覚える"},
+        {q:"894年，遣唐使廃止を宇多天皇に進言した学者・政治家は？", a:"菅原道真", hint:"後に大宰府に左遷，学問の神様に"},
+      ],
+      drillQuiz: [
+        {q:"794年に平安京（現・京都）へ遷都した天皇は誰ですか？",choices:["聖武天皇","元明天皇","桓武天皇","後三条天皇"],ans:2,exp:"桓武天皇は奈良の仏教勢力による政治介入を断ち切るため，794年に現在の京都に平安京を建設し遷都しました。"},
+        {q:"桓武天皇が797年，蝦夷討伐のために征夷大将軍に任じた武将は？",choices:["平将門","藤原純友","坂上田村麻呂","源義家"],ans:2,exp:"坂上田村麻呂は征夷大将軍として東北の蝦夷を征服。胆沢城・志波城を築いて支配を確立しました。"},
+        {q:"比叡山に延暦寺を建て，天台宗を開いた僧侶は誰ですか？",choices:["空海","行基","鑑真","最澄"],ans:3,exp:"最澄（767〜822年）は比叡山（滋賀・京都の境）に延暦寺を建て天台宗を開きました。「天叡」→天台宗・延暦寺と覚えましょう。"},
+        {q:"高野山に金剛峯寺を建て，真言宗を開いた僧侶は誰ですか？",choices:["最澄","行基","鑑真","空海"],ans:3,exp:"空海（774〜835年）は高野山に金剛峯寺を建て真言宗を開きました。「真金」→真言宗・金剛峯寺と覚えましょう。"},
+        {q:"894年，遣唐使廃止を宇多天皇に進言した人物は誰ですか？",choices:["最澄","空海","菅原道真","藤原道長"],ans:2,exp:"菅原道真は唐の衰退・危険な航海・日本の文化的自立を理由に遣唐使廃止を進言。認められましたが，後に大宰府に左遷されました。"},
+      ],
+      testQuiz: [
+        {q:"桓武天皇が平安京に遷都した年はいつか？",choices:["710年","784年","794年","894年"],ans:2},
+        {q:"桓武天皇が平安京に遷都した主な理由はどれか？",choices:["農地を増やすため","仏教勢力の政治介入を断ち切るため","唐の都に倣うため","地震を避けるため"],ans:1},
+        {q:"征夷大将軍・坂上田村麻呂が征服した東北地方の人々を何というか？",choices:["渡来人","蝦夷","隼人","熊襲"],ans:1},
+        {q:"天台宗を開いた人物は誰か？",choices:["空海","最澄","行基","鑑真"],ans:1},
+        {q:"真言宗を開いた人物は誰か？",choices:["最澄","鑑真","行基","空海"],ans:3},
+        {q:"延暦寺があるのはどこか？",choices:["高野山","比叡山","金剛山","吉野山"],ans:1},
+        {q:"金剛峯寺があるのはどこか？",choices:["比叡山","高野山","吉野山","金剛山"],ans:1},
+        {q:"菅原道真が遣唐使廃止を進言した年はいつか？",choices:["794年","874年","894年","935年"],ans:2},
+        {q:"菅原道真は遣唐使廃止の進言が認められた後にどうなったか？",choices:["摂政となった","大宰府に左遷された","征夷大将軍になった","出家した"],ans:1},
+        {q:"菅原道真は後に何の神として祀られたか？",choices:["農業の神","学問の神","武芸の神","商売の神"],ans:1},
+      ],
+    },
+    {
+      shortTitle: "② 摂関政治・院政",
+      title: "摂関政治と院政——藤原氏の全盛と武士の台頭（935〜1086年）",
+      flashCards: [
+        {q:"935年，関東で「新皇」を名乗り反乱を起こした武士は？", a:"平将門", hint:"桓武天皇の子孫，平安最初の大反乱"},
+        {q:"平将門と同時期に，瀬戸内海で反乱を起こした元国司は？", a:"藤原純友", hint:"海賊を率いて反乱"},
+        {q:"藤原氏が摂政・関白として天皇に代わって政治を行った政治形態は？", a:"摂関政治", hint:"10〜11世紀が全盛期"},
+        {q:"1016年に摂政となり，4人の娘全員を天皇の后にした人物は？", a:"藤原道長", hint:"「この世をば…」の歌で有名"},
+        {q:"道長の息子で，約50年間関白を務め，宇治に平等院鳳凰堂を建立したのは？", a:"藤原頼通", hint:"1053年，平等院鳳凰堂を建立"},
+        {q:"1053年に藤原頼通が宇治に建立した，10円硬貨のデザインになっている建物は？", a:"平等院鳳凰堂", hint:"末法思想への信仰を込めた建築"},
+        {q:"1086年，上皇として院で政治を行い始めた人物は？", a:"白河上皇", hint:"院政の始まり"},
+        {q:"後三条天皇が1069年に発令し，藤原氏の荘園を直撃した法令は？", a:"延久の荘園整理令", hint:"書類のない荘園を没収"},
+      ],
+      drillQuiz: [
+        {q:"935年，関東で「新皇」を名乗り反乱を起こした武士は誰ですか？",choices:["平清盛","平将門","源義朝","藤原純友"],ans:1,exp:"平将門は土地争いから始まった反乱で，関東8か国を支配し「新皇」を名乗りました。940年に藤原秀郷・平貞盛に討ち取られました。"},
+        {q:"藤原氏が摂政・関白として行った政治を何というか？",choices:["律令政治","院政","摂関政治","幕府政治"],ans:2,exp:"摂関政治は，藤原氏が娘を天皇に嫁がせて外戚となり，摂政（幼帝の代理）・関白（成人天皇の補佐）として行う政治形態。"},
+        {q:"「この世をば我が世とぞ思ふ望月の…」と詠んだ人物は誰ですか？",choices:["藤原頼通","藤原不比等","藤原道長","菅原道真"],ans:2,exp:"1018年，藤原道長が3人目の娘を天皇の后にした宴席で詠んだ歌。満月のように欠けることのない権力を誇示しました。"},
+        {q:"1053年に藤原頼通が宇治に建立した寺院はどれですか？",choices:["東大寺","延暦寺","平等院鳳凰堂","唐招提寺"],ans:2,exp:"平等院鳳凰堂は末法思想を背景に建立されました。10円硬貨のデザインにもなっています。"},
+        {q:"1086年，院政を始めたのは誰ですか？",choices:["後三条天皇","後白河上皇","白河上皇","後醍醐天皇"],ans:2,exp:"白河天皇は1086年，8歳の息子に譲位して上皇となり，「院」と呼ばれる御所で政治を行い続けました（院政の開始）。"},
+      ],
+      testQuiz: [
+        {q:"摂関政治が最盛期を迎えたのはいつ頃か？",choices:["8世紀","9世紀","10〜11世紀","12世紀"],ans:2},
+        {q:"藤原道長が摂政になった年はいつか？",choices:["1016年","1018年","1053年","1069年"],ans:0},
+        {q:"道長の「望月の歌」が詠まれた年はいつか？",choices:["1016年","1018年","1053年","1086年"],ans:1},
+        {q:"摂政と関白の違いとして正しいのはどれか？",choices:["摂政は幼帝の代理，関白は成人天皇の補佐","摂政は成人天皇の補佐，関白は幼帝の代理","どちらも同じ役職","関白は女性専用の役職"],ans:0},
+        {q:"平将門の乱が起きたのはいつ頃か？",choices:["794年頃","894年頃","935年頃","1016年頃"],ans:2},
+        {q:"藤原純友が拠点とした反乱の舞台はどこか？",choices:["関東地方","東北地方","瀬戸内海","北陸地方"],ans:2},
+        {q:"後三条天皇が1069年に発令した荘園整理令を何というか？",choices:["墾田永年私財法","三世一身法","延久の荘園整理令","記録荘園券契所"],ans:2},
+        {q:"院政を始めた上皇は誰か？",choices:["後三条天皇","後白河上皇","白河上皇","後醍醐天皇"],ans:2},
+        {q:"平等院鳳凰堂が建立された年はいつか？",choices:["1016年","1053年","1069年","1086年"],ans:1},
+        {q:"平等院鳳凰堂は何円硬貨のデザインに使われているか？",choices:["1円","5円","10円","50円"],ans:2},
+      ],
+    },
+    {
+      shortTitle: "③ 国風文化",
+      title: "国風文化——日本独自の美と文学（894〜11世紀）",
+      flashCards: [
+        {q:"遣唐使廃止後に発達した，日本独自の文化は？", a:"国風文化", hint:"仮名文字・女流文学が発達"},
+        {q:"漢字をくずして作られた，日本独自のやわらかい文字は？", a:"平仮名", hint:"国風文化の象徴"},
+        {q:"「源氏物語」を著した，藤原道長の娘・彰子に仕えた女性作家は？", a:"紫式部", hint:"世界最古の長編小説ともいわれる"},
+        {q:"「枕草子」を著した，「春はあけぼの…」で始まる随筆の女性作家は？", a:"清少納言", hint:"中宮定子に仕えた"},
+        {q:"末法の世を恐れ，念仏で極楽往生を願う信仰は？", a:"浄土教", hint:"空也・源信が広めた"},
+        {q:"「往生要集」を著し，浄土教を広めた平安時代の僧は？", a:"源信", hint:"「恵心僧都」とも呼ばれる"},
+        {q:"1052年以降，仏の教えが廃れるという思想は？", a:"末法思想", hint:"平等院鳳凰堂建立の背景"},
+      ],
+      drillQuiz: [
+        {q:"遣唐使廃止後，仮名文字や女流文学が発達した日本独自の文化を何というか？",choices:["天平文化","国風文化","東山文化","桃山文化"],ans:1,exp:"国風文化（こくふうぶんか）は，唐文化の直接輸入が終わり，日本独自の感性で発展した文化。仮名文字（平仮名・片仮名）と女流文学が特徴。"},
+        {q:"「源氏物語」を著した女性作家は誰ですか？",choices:["清少納言","紀貫之","紫式部","和泉式部"],ans:2,exp:"紫式部は藤原道長の娘・彰子に仕えた女房。「源氏物語」は光源氏の恋愛と人生を描いた，世界最古の長編小説ともいわれます。"},
+        {q:"「枕草子」を著した，「春はあけぼの…」で始まる随筆の作者は誰ですか？",choices:["紫式部","和泉式部","清少納言","紀貫之"],ans:2,exp:"清少納言は中宮定子に仕えた女房。「枕草子」は日本最初の随筆文学とされます。"},
+        {q:"末法の世を恐れ，念仏で極楽往生を願う信仰を何というか？",choices:["天台宗","真言宗","浄土教","禅宗"],ans:2,exp:"浄土教は「南無阿弥陀仏」と唱えることで極楽浄土への往生を願う信仰。末法思想（1052年以降は仏の教えが廃れるとする思想）と結びついて広まりました。"},
+        {q:"「往生要集」を著し，浄土教を広めた平安時代の僧は誰ですか？",choices:["空也","最澄","空海","源信"],ans:3,exp:"源信（942〜1017年）は「往生要集」で地獄・極楽の様子を詳述し，浄土教を広めました。「恵心僧都（えしんそうず）」とも呼ばれます。"},
+      ],
+      testQuiz: [
+        {q:"国風文化が発達したきっかけはどれか？",choices:["遣唐使の廃止","仏教の伝来","大化の改新","班田収授法"],ans:0},
+        {q:"国風文化の特徴として正しいのはどれか？",choices:["中国文化の直接輸入","漢字のみを使った文化","仮名文字と女流文学の発展","仏教建築が中心"],ans:2},
+        {q:"紫式部が仕えた人物は誰か？",choices:["中宮定子","中宮彰子","藤原道長","藤原頼通"],ans:1},
+        {q:"清少納言が仕えた人物は誰か？",choices:["中宮定子","中宮彰子","藤原道長","藤原頼通"],ans:0},
+        {q:"「源氏物語」の作者は誰か？",choices:["清少納言","紫式部","紀貫之","和泉式部"],ans:1},
+        {q:"「枕草子」はどのような種類の文学か？",choices:["和歌集","物語","随筆","日記"],ans:2},
+        {q:"末法思想で「末法」が始まるとされた年はいつか？",choices:["894年","1016年","1052年","1086年"],ans:2},
+        {q:"浄土教で唱える念仏はどれか？",choices:["南無妙法蓮華経","南無阿弥陀仏","南無釈迦牟尼仏","南無大師遍照金剛"],ans:1},
+      ],
+    },
+  ]
+}
+
+}; // end allData
+
+// =========================================================
+//  状態変数
+// =========================================================
+let currentChapter = 1;
+let currentSec = 0;
+let currentMode = 'flash';
+
+// フラッシュカード状態
+let fcCards = [];
+let fcIndex = 0;
+let fcOk = 0;
+let fcNg = 0;
+let fcFlipped = false;
+let fcTimerSec = 0;
+let fcTimerCount = 0;
+let fcTimerInterval = null;
+
+// 4択ドリル状態
+let drillQs = [];
+let drillIndex = 0;
+let drillScore = 0;
+let drillAnswered = false;
+
+// 確認テスト状態
+let testSelections = {};
+let testSubmitted = false;
+
+// =========================================================
+//  章・単元・モード切り替え
+// =========================================================
+function selectChapter(ch) {
+  currentChapter = ch;
+  currentSec = 0;
+  document.querySelectorAll('.ch-tab').forEach((t,i) => t.classList.toggle('active', i === ch-1));
+  renderSecTabs();
+  renderContent();
+}
+
+function selectSec(i) {
+  currentSec = i;
+  document.querySelectorAll('.sec-tab').forEach((t,j) => t.classList.toggle('active', j === i));
+  renderContent();
+}
+
+function selectMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i) => {
+    t.classList.toggle('active', ['flash','drill','test'][i] === mode);
+  });
+  renderContent();
+}
+
+function renderSecTabs() {
+  const secs = allData[currentChapter].sections;
+  const html = secs.map((s,i) =>
+    `<button class="sec-tab${i===currentSec?' active':''}" onclick="selectSec(${i})">${s.shortTitle}</button>`
+  ).join('');
+  document.getElementById('sec-tabs').innerHTML = html;
+}
+
+// =========================================================
+//  メインレンダラー
+// =========================================================
+function renderContent() {
+  const sec = allData[currentChapter].sections[currentSec];
+  const area = document.getElementById('content-area');
+  const descHtml = `
+    <div class="ch-desc">
+      <strong>${sec.title}</strong>
+      <div class="stat-bar">
+        <span class="stat-chip blue">カード ${sec.flashCards.length}枚</span>
+        <span class="stat-chip orange">ドリル ${sec.drillQuiz.length}問</span>
+        <span class="stat-chip green">テスト ${sec.testQuiz.length}問</span>
+      </div>
+    </div>`;
+  if (currentMode === 'flash') renderFlash(sec, area, descHtml);
+  else if (currentMode === 'drill') renderDrill(sec, area, descHtml);
+  else renderTest(sec, area, descHtml);
+}
+
+// =========================================================
+//  フラッシュカード
+// =========================================================
+function initFlash(sec) {
+  fcCards = shuffle([...sec.flashCards]);
+  fcIndex = 0; fcOk = 0; fcNg = 0; fcFlipped = false;
+}
+
+function renderFlash(sec, area, descHtml) {
+  initFlash(sec);
+  area.innerHTML = descHtml + `
+  <div class="fc-timer-row">
+    <span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span>
+    <button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button>
+    <button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button>
+    <button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button>
+    <button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button>
+  </div>
+  <div class="panel">
+    <div id="fc-wrap">${buildFlashCard()}</div>
+  </div>`;
+  startCardTimer();
+}
+
+function buildFlashCard() {
+  if (fcIndex >= fcCards.length) {
+    const total = fcCards.length;
+    const pct = Math.round(fcOk / total * 100);
+    return `
+      <div class="fc-result" style="display:block">
+        <div style="font-size:36px;font-weight:bold;color:#8b3322;margin-bottom:8px">${pct}%</div>
+        <div style="font-size:15px;color:#555;margin-bottom:4px">${total}枚中 ○${fcOk}枚 / △${fcNg}枚</div>
+        <div style="font-size:14px;color:#888;margin-bottom:14px">
+          ${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう一度チャレンジしてみましょう！':'📖 教材を見直してから再挑戦してみましょう！'}
+        </div>
+        <button class="fc-restart" onclick="restartFlash()">🔄 もう一度</button>
+      </div>`;
+  }
+  const card = fcCards[fcIndex];
+  return `
+    <div class="fc-progress">${fcIndex+1} / ${fcCards.length} &nbsp; ○ ${fcOk} &nbsp; △ ${fcNg}</div>
+    <div class="fc-score-bar"><div class="fc-score-fill" style="width:${fcOk/fcCards.length*100}%"></div></div>
+    <div class="fc-card" id="fc-card" onclick="flipCard()">
+      <span class="fc-countdown" id="fc-countdown" style="display:${fcTimerSec>0?'block':'none'}">${fcTimerSec>0?fcTimerSec:''}</span>
+      <div class="fc-front">${card.q}</div>
+      <div class="fc-back">${card.a}</div>
+      <div class="fc-hint">${card.hint||''}</div>
+      <span class="tap-hint">${fcTimerSec>0?'':'タップして答えを見る'}</span>
+    </div>
+    <div class="fc-btns" id="fc-btns" style="display:none">
+      <button class="fc-btn-ok" onclick="fcAnswer(true)">○ わかった</button>
+      <button class="fc-btn-ng" onclick="fcAnswer(false)">△ もう一度</button>
+    </div>`;
+}
+
+function flipCard() {
+  if (fcFlipped) return;
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  fcFlipped = true;
+  document.getElementById('fc-card').classList.add('flipped');
+  const cd = document.getElementById('fc-countdown');
+  if (cd) cd.style.display = 'none';
+  document.getElementById('fc-btns').style.display = 'flex';
+}
+
+function fcAnswer(ok) {
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  if (ok) fcOk++; else fcNg++;
+  fcIndex++;
+  fcFlipped = false;
+  document.getElementById('fc-wrap').innerHTML = buildFlashCard();
+  if (fcIndex >= fcCards.length && fcOk === fcCards.length) launchConfetti();
+  else startCardTimer();
+}
+
+function restartFlash() {
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  const sec = allData[currentChapter].sections[currentSec];
+  initFlash(sec);
+  document.getElementById('fc-wrap').innerHTML = buildFlashCard();
+  startCardTimer();
+}
+
+function setFcTimer(sec) {
+  fcTimerSec = sec;
+  document.querySelectorAll('.fc-timer-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.sec) === sec);
+  });
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  if (!fcFlipped) startCardTimer();
+}
+
+function startCardTimer() {
+  clearInterval(fcTimerInterval); fcTimerInterval = null;
+  if (fcTimerSec === 0 || fcFlipped) return;
+  fcTimerCount = fcTimerSec;
+  const cd = document.getElementById('fc-countdown');
+  if (cd) { cd.style.display = 'block'; cd.textContent = fcTimerCount; }
+  fcTimerInterval = setInterval(() => {
+    fcTimerCount--;
+    const el = document.getElementById('fc-countdown');
+    if (el) el.textContent = fcTimerCount > 0 ? fcTimerCount : '';
+    if (fcTimerCount <= 0) {
+      clearInterval(fcTimerInterval); fcTimerInterval = null;
+      flipCard();
+    }
+  }, 1000);
+}
+
+// =========================================================
+//  4択ドリル
+// =========================================================
+function renderDrill(sec, area, descHtml) {
+  drillQs = shuffle([...sec.drillQuiz]);
+  drillIndex = 0; drillScore = 0; drillAnswered = false;
+  area.innerHTML = descHtml + `<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;
+}
+
+function buildDrillQ() {
+  if (drillIndex >= drillQs.length) {
+    return `<div class="drill-result" style="display:block">
+      <div class="drill-result-score">${drillScore} / ${drillQs.length}</div>
+      <div class="drill-result-msg">${drillScore===drillQs.length?'🎉 全問正解！':'👍 お疲れさまでした！もう一度挑戦してみましょう。'}</div>
+      <button class="drill-restart-btn" onclick="renderDrill(allData[currentChapter].sections[currentSec],document.getElementById('content-area'),'')">🔄 もう一度</button>
+    </div>`;
+  }
+  const q = drillQs[drillIndex];
+  const choicesHtml = q.choices.map((c,i) =>
+    `<div class="drill-choice" onclick="drillSelect(this,${i},${q.ans})">${i+1}．${c}</div>`
+  ).join('');
+  return `
+    <div class="drill-prog">第 ${drillIndex+1} 問 / 全 ${drillQs.length} 問</div>
+    <div class="drill-q">${q.q}</div>
+    <div class="drill-choices">${choicesHtml}</div>
+    <div class="drill-exp" id="drill-exp"></div>
+    <button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+
+function drillSelect(el, ci, ans) {
+  if (drillAnswered) return;
+  drillAnswered = true;
+  const q = drillQs[drillIndex];
+  document.querySelectorAll('.drill-choice').forEach((c,i) => {
+    if (i === ans) c.classList.add('correct');
+    else if (i === ci && ci !== ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (ci === ans) drillScore++;
+  const exp = document.getElementById('drill-exp');
+  exp.innerHTML = `<span class="exp-ans">答え：${q.choices[ans]}</span>${q.exp}`;
+  exp.classList.add('show');
+  document.getElementById('drill-next').style.display = 'inline-block';
+}
+
+function drillNext() {
+  drillIndex++;
+  drillAnswered = false;
+  document.getElementById('drill-panel').innerHTML = buildDrillQ();
+  if (drillIndex >= drillQs.length && drillScore === drillQs.length) launchConfetti();
+}
+
+// =========================================================
+//  確認テスト
+// =========================================================
+let testTimer = null;
+let testTimerLeft = 0;
+
+function renderTest(sec, area, descHtml) {
+  testSelections = {};
+  testSubmitted = false;
+  clearInterval(testTimer);
+  testTimerLeft = sec.testQuiz.length * 40;
+  const qs = sec.testQuiz;
+  const qsHtml = qs.map((q,qi) => `
+    <div class="test-q-block">
+      <div class="test-q"><span class="test-q-num">${qi+1}</span>${q.q}</div>
+      <div class="test-choices">
+        ${q.choices.map((c,ci)=>`<div class="test-choice" id="tc-${qi}-${ci}" onclick="testSelect(${qi},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</div>`).join('')}
+      </div>
+    </div>`).join('');
+  area.innerHTML = descHtml + `
+    <div class="panel">
+      <div class="test-header">
+        <div class="test-title">📋 確認テスト（${qs.length}問）</div>
+        <div class="test-timer" id="test-timer">残り <span id="timer-val">${fmtTime(testTimerLeft)}</span></div>
+      </div>
+      <div id="test-questions">${qsHtml}</div>
+      <button class="test-submit" onclick="testSubmit()">採点する</button>
+    </div>
+    <div class="test-result-wrap" id="test-result"></div>`;
+  testTimer = setInterval(() => {
+    testTimerLeft--;
+    const el = document.getElementById('timer-val');
+    if (el) el.textContent = fmtTime(testTimerLeft);
+    if (testTimerLeft <= 0) { clearInterval(testTimer); testSubmit(); }
+  }, 1000);
+}
+
+function fmtTime(s) {
+  return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+}
+
+function testSelect(qi, ci) {
+  if (testSubmitted) return;
+  const sec = allData[currentChapter].sections[currentSec];
+  const total = sec.testQuiz.length;
+  for (let k=0; k<4; k++) {
+    const el = document.getElementById(`tc-${qi}-${k}`);
+    if (el) el.classList.remove('selected');
+  }
+  const el = document.getElementById(`tc-${qi}-${ci}`);
+  if (el) el.classList.add('selected');
+  testSelections[qi] = ci;
+}
+
+function testSubmit() {
+  if (testSubmitted) return;
+  testSubmitted = true;
+  clearInterval(testTimer);
+  const sec = allData[currentChapter].sections[currentSec];
+  const qs = sec.testQuiz;
+  let score = 0;
+  qs.forEach((q,qi) => {
+    const sel = testSelections[qi];
+    for (let k=0; k<q.choices.length; k++) {
+      const el = document.getElementById(`tc-${qi}-${k}`);
+      if (!el) return;
+      el.classList.remove('selected');
+      if (k === q.ans) el.classList.add('correct');
+      else if (k === sel && sel !== q.ans) el.classList.add('wrong');
+      else el.classList.add('reveal');
+    }
+    if (sel === q.ans) score++;
+  });
+  const pct = Math.round(score/qs.length*100);
+  const pass = pct >= 70;
+  const reviewHtml = qs.map((q,qi) => {
+    const ok = testSelections[qi] === q.ans;
+    return `<div class="test-review-item ${ok?'ok':'ng'}">
+      <span class="test-review-label">${ok?'✅':'❌'} 第${qi+1}問</span>${q.q}<br>
+      <span style="font-size:13px">正解：${q.choices[q.ans]}${!ok&&testSelections[qi]!==undefined?' ／ あなたの答え：'+q.choices[testSelections[qi]]:!ok?' ／ 未解答':''}</span>
+    </div>`;
+  }).join('');
+  const resultEl = document.getElementById('test-result');
+  resultEl.style.display = 'block';
+  resultEl.innerHTML = `
+    <div class="test-result-score">${score}<span style="font-size:24px"> / ${qs.length}</span></div>
+    <div class="test-result-sub">${pct}点 — ${pass?'合格🎉':'もう一度頑張ろう！'}</div>
+    <div class="test-badge">${pass?'✨ 合格（70点以上）':'📖 不合格（70点未満）'}</div><br>
+    <button class="test-restart-btn" onclick="renderTest(allData[currentChapter].sections[currentSec],document.getElementById('content-area'),'')">🔄 もう一度挑戦</button>
+    <div class="test-review" style="margin-top:20px">${reviewHtml}</div>`;
+  resultEl.scrollIntoView({behavior:'smooth'});
+  if (score === qs.length) launchConfetti();
+}
+
+// =========================================================
+//  ユーティリティ
+// =========================================================
+function shuffle(arr) {
+  for (let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}
+  return arr;
+}
+
+function launchConfetti() {
+  const colors=['#f4d03f','#e74c3c','#3498db','#2ecc71','#9b59b6','#f39c12'];
+  for(let i=0;i<80;i++){
+    const el=document.createElement('div');
+    el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${2+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),4000);
+  }
+}
+
+// =========================================================
+//  初期化
+// =========================================================
+renderSecTabs();
+renderContent();
+</script>
+</body>
+</html>

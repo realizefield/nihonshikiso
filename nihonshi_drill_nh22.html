@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>㉒江戸幕府の成立と支配体制 ドリル｜日本史基礎GAMBA</title>
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#f0f4fa;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#2d1b69;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#1c1148}
+  .unit-header{background:linear-gradient(135deg,#2d1b69,#1a6b3b);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #6050b0;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#2d1b69;transition:all 0.2s;flex:1;min-width:130px;text-align:center}
+  .mode-tab.active{background:#2d1b69;color:#fff;border-color:#2d1b69;box-shadow:0 3px 0 #1c1148}
+  .mode-tab:hover:not(.active){background:#e8e4f8}
+  .panel{background:#fff;border-radius:12px;border:1px solid #6050b0;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #6050b0;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#2d1b69;transition:all 0.15s}
+  .fc-timer-btn.active{background:#2d1b69;color:#fff;border-color:#2d1b69}
+  .fc-timer-btn:hover:not(.active){background:#e8e4f8}
+  .fc-card{background:linear-gradient(135deg,#f0ecff,#d8d0f8);color:#1a1a2e;border:2px solid #6050b0;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(45,27,105,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#2d1b69}
+  .fc-card .fc-hint{font-size:13px;color:#1a1040;margin-top:10px;display:none;background:rgba(255,255,255,0.7);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#1a6b3b}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#2d1b69;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#2d1b69;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15}
+  .fc-btn-ng{padding:11px 32px;background:#2d1b69;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #1c1148}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#2d1b69,#7c3aed);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#d8d0f8;border:2px solid #6050b0;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#2d1b69;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #6050b0;background:#f0ecff;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s}
+  .drill-choice:hover{border-color:#2d1b69;background:#e8e4f8}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#e8e4f8;border-color:#6050b0;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#f4d03f;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#2d1b69;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #1c1148;display:none}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#2d1b69;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#2d1b69;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#2d1b69;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #6050b0;background:#f0ecff;cursor:pointer;font-size:14px;transition:all 0.15s}
+  .test-choice:hover{border-color:#2d1b69;background:#e8e4f8}
+  .test-choice.selected{border-color:#2d1b69;background:#d8d0f8;color:#2d1b69;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#e8e4f8;border-color:#6050b0;pointer-events:none}
+  .test-submit{background:#2d1b69;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #1c1148;margin-top:18px;width:100%}
+  .test-submit:hover{background:#1c1148}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#2d1b69;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#2d1b69,#7c3aed);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#2d1b69;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #1c1148}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #6050b0;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#2d1b69,#1a6b3b);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-hd.open .sarrow{transform:rotate(90deg)}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#f0ecff;border-left:5px solid #2d1b69;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#2d1b69}
+  .setsu-h3{font-size:14px;font-weight:800;color:#2d1b69;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #b0a0e0}
+  .setsu-box{background:#f4f0ff;border-radius:8px;border:1px solid #b0a0e0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#2d1b69}
+  .setsu-box .lbl{display:inline-block;background:#2d1b69;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.green{background:#1a6b3b}
+  .setsu-box .lbl.brown{background:#6b3a1a}
+  .setsu-note{background:#fff8e8;border-left:4px solid #c87000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3000}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_ch08.html" class="back-link">← 第８章へ戻る</a>
+
+<div class="unit-header">
+  <div class="unit-num">第８章 江戸時代｜単元㉒</div>
+  <h1>🏛 江戸幕府の成立と支配体制</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 10枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 8問</span>
+    <span class="stat-chip">📋 確認テスト 8問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd open" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元㉒のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body open" id="setsu-body">
+    <div class="setsu-intro">
+      1603年，<strong>徳川家康</strong>が征夷大将軍となり，江戸（現在の東京）に幕府を開きました。<br>
+      幕府は<strong>武家諸法度・参勤交代</strong>で大名を統制し，<strong>朱子学</strong>を官学として身分秩序を維持しました。<br>
+      約260年続く安定した政権の仕組みを整理しましょう。
+    </div>
+    <div class="setsu-h3">関ヶ原の戦いと江戸幕府の成立</div>
+    <div class="setsu-box">
+      1600年，<span class="lbl">関ヶ原の戦い</span>で徳川家康が石田三成ら豊臣方（西軍）を破り（東軍の勝利），全国支配の実権を握りました。<br>
+      1603年，家康は<strong>征夷大将軍</strong>に任命され，<strong>江戸幕府</strong>を開きました。<br>
+      1615年，<strong>大坂の陣</strong>で豊臣氏を滅ぼし，徳川の天下が確立しました。
+    </div>
+    <div class="setsu-h3">武家諸法度と参勤交代</div>
+    <div class="setsu-box">
+      <span class="lbl green">武家諸法度（1615年）</span>：3代将軍・徳川家光が整備した，大名を統制するための法律。城の修築・婚姻には幕府の許可が必要で，違反した大名は改易（領地没収）・減封などの処分を受けました。<br><br>
+      <span class="lbl">参勤交代（1635年制定）</span>：大名が1年おきに江戸と領国を往復する制度。江戸滞在中は妻子が人質として置かれました。大名家の財政を消耗させ，反乱を防ぐ効果がありました。
+    </div>
+    <div class="setsu-h3">幕府の身分支配と朱子学</div>
+    <div class="setsu-box">
+      江戸時代の身分制度：<span class="lbl brown">士農工商</span>（武士・農民・職人・商人）の身分秩序。武士が最上位に位置しました。<br>
+      <strong>朱子学（儒学）</strong>を官学として奨励。上下関係・忠義・礼節を重んじる朱子学は，武士の道徳・幕府統治の思想的基盤となりました。<br>
+      大名は<strong>親藩・譜代・外様</strong>の3種類に分類され，外様大名は江戸から遠い場所に配置されました。
+    </div>
+    <div class="setsu-note">💡 <strong>ポイント</strong>：武家諸法度＝大名統制の法律。参勤交代＝大名の財政を消耗させ反乱防止。朱子学＝幕府の官学（身分秩序を守る思想）。</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title: "単元㉒ 江戸幕府の成立と支配体制",
+  flashCards: [
+    {q:"1600年，徳川家康が石田三成ら西軍を破った戦いは？", a:"関ヶ原の戦い（せきがはらのたたかい）", hint:"天下分け目の戦い"},
+    {q:"1603年，徳川家康が開いた幕府はどこにあるか？", a:"江戸幕府（えどばくふ）", hint:"江戸＝現在の東京"},
+    {q:"1615年，幕府が大名を統制するために定めた法律は？", a:"武家諸法度（ぶけしょはっと）", hint:"3代・家光が整備。違反は改易"},
+    {q:"大名が1年おきに江戸と領国を往復することを義務付けた制度は？", a:"参勤交代（さんきんこうたい）", hint:"大名の財政を消耗させる狙いも"},
+    {q:"参勤交代を制度として整備した，3代将軍はだれか？", a:"徳川家光（とくがわいえみつ）", hint:"2代家忠の子。武家諸法度も整備"},
+    {q:"江戸幕府が官学として奨励した，上下関係・忠義・礼節を重んじる学問は？", a:"朱子学（しゅしがく）・儒学", hint:"林羅山が幕府に仕えた"},
+    {q:"江戸時代の身分制度「士農工商」の最上位はどれか？", a:"武士（士）", hint:"武士が法・軍事の支配者"},
+    {q:"大名が江戸に滞在している間，領国に置かれた妻子の役割は？", a:"人質（ひとじち）", hint:"参勤交代の制度で義務付け"},
+    {q:"1615年，幕府が豊臣氏を滅ぼした戦いを何というか？", a:"大坂の陣（おおさかのじん）", hint:"冬の陣・夏の陣の2回"},
+    {q:"外様大名はなぜ江戸から遠い場所に配置されたか？", a:"反乱を起こしにくくするため", hint:"関ヶ原で西軍についた大名が多い"},
+  ],
+  drillQuiz: [
+    {q:"1600年，徳川家康が豊臣方（西軍）を破った天下分け目の戦いはどれか？",
+     choices:["大坂の陣","長篠の戦い","関ヶ原の戦い","桶狭間の戦い"],ans:2,
+     exp:"関ヶ原の戦い（1600年）は，徳川家康率いる東軍と石田三成率いる西軍（豊臣方）が美濃国関ヶ原（岐阜県）で戦った合戦です。わずか1日で東軍が圧勝し，家康が全国支配の実権を握りました。1603年の江戸幕府開府につながります。"},
+    {q:"1615年，幕府が大名を統制するために定めた法律はどれか？",
+     choices:["御成敗式目","武家諸法度","大宝律令","参勤交代"],ans:1,
+     exp:"武家諸法度（1615年）は，幕府が大名を統制するための法律です。城の修築・大名家同士の縁組みには幕府の許可が必要とされ，違反した大名は改易（領地没収）・減封などの処分を受けました。3代将軍・家光がさらに整備し，参勤交代も武家諸法度に明記されました。"},
+    {q:"大名が1年おきに江戸と領国を往復する制度を何というか？",
+     choices:["参勤交代","武家諸法度","朝鮮通信使","国替え"],ans:0,
+     exp:"参勤交代（1635年制定）は，大名が1年おきに江戸と自国を往復し，江戸では妻子を人質として置く制度です。大名は往復の行列や江戸での生活に多大な費用がかかり，経済力を消耗することで反乱が難しくなりました。幕府の大名統制の中心的な仕組みです。"},
+    {q:"江戸幕府が官学として奨励した学問はどれか？",
+     choices:["国学","蘭学","朱子学（儒学）","仏学"],ans:2,
+     exp:"朱子学（儒学の一派）は，君臣・親子・夫婦などの上下関係・忠義・礼節を重んじる学問です。幕府はこれを官学として奨励しました。林羅山が家康に仕えて以来，江戸幕府の思想的基盤となり，武士道徳・身分秩序の維持に活用されました。"},
+    {q:"江戸時代の身分制度「士農工商」で，最上位に位置したのはどれか？",
+     choices:["農民（農）","商人（商）","武士（士）","職人（工）"],ans:2,
+     exp:"江戸時代の身分制度では，武士（士）が最上位に位置しました。「士農工商」の順序は農民を社会的に重視する考え方を反映していましたが，実際の支配権は武士が握っていました。また，士農工商の枠外に，えた・非人と呼ばれる被差別身分も存在しました。"},
+    {q:"3代将軍・徳川家光が武家諸法度を整備し，制度として明記した大名統制策はどれか？",
+     choices:["楽市・楽座","刀狩令","参勤交代","太閤検地"],ans:2,
+     exp:"3代将軍・徳川家光（1604〜1651年）は1635年に武家諸法度を改正し，参勤交代を明文化しました。また1639年にはポルトガル船の来航を禁止して鎖国体制を完成させました。家光の時代に，江戸幕府の支配体制が確固たるものになりました。"},
+    {q:"1615年，幕府が豊臣氏を滅ぼした戦いを何というか？",
+     choices:["関ヶ原の戦い","長篠の戦い","大坂の陣","島原・天草一揆"],ans:2,
+     exp:"大坂の陣（1614〜1615年）は，徳川幕府が豊臣氏を滅ぼした戦いです。冬の陣（1614年）と夏の陣（1615年）の2回に分けて行われ，夏の陣で大坂城が落城し，豊臣秀頼・淀殿が自害。豊臣氏は滅亡し，徳川の天下が盤石となりました。"},
+    {q:"外様大名が江戸から遠い場所に配置された主な理由はどれか？",
+     choices:["農業が盛んな地域を与えるため","反乱を起こしにくくするため","交通の要所を守らせるため","貿易を担当させるため"],ans:1,
+     exp:"外様大名とは，関ヶ原の戦い以後に徳川に従った大名です。幕府への信頼度が低いため，江戸から遠い九州・東北・四国などに配置されました。これにより江戸に攻め込むのが難しくなり，反乱を防ぐ効果がありました。一方，親藩（徳川一門）・譜代は江戸周辺や重要な要所に配置されました。"},
+  ],
+  testQuiz: [
+    {q:"1600年，家康が石田三成を破った戦いはどれか？",choices:["大坂の陣","長篠の戦い","関ヶ原の戦い","桶狭間の戦い"],ans:2},
+    {q:"徳川家康が征夷大将軍になった年はいつか？",choices:["1600年","1603年","1615年","1635年"],ans:1},
+    {q:"大名統制のための法律「武家諸法度」が制定された年はいつか？",choices:["1603年","1615年","1635年","1639年"],ans:1},
+    {q:"大名が1年おきに江戸と領国を往復する制度はどれか？",choices:["武家諸法度","参勤交代","刀狩令","楽市・楽座"],ans:1},
+    {q:"参勤交代を制度として整備した3代将軍はだれか？",choices:["徳川家康","徳川秀忠","徳川家光","徳川吉宗"],ans:2},
+    {q:"江戸幕府が官学として奨励した学問はどれか？",choices:["国学","蘭学","朱子学","仏学"],ans:2},
+    {q:"1615年に豊臣氏を滅ぼした戦いはどれか？",choices:["関ヶ原の戦い","大坂の陣","長篠の戦い","桶狭間の戦い"],ans:1},
+    {q:"士農工商で，外様大名が警戒されて遠い場所に配置された理由はどれか？",choices:["農業振興のため","交通の要所を守るため","反乱防止のため","貿易担当のため"],ans:2},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){
+  currentMode=mode;
+  document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});
+  renderContent();
+}
+function renderContent(){
+  const area=document.getElementById('content-area');
+  if(currentMode==='flash')renderFlash(area);
+  else if(currentMode==='drill')renderDrill(area);
+  else renderTest(area);
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){
+  const colors=['#2d1b69','#7c3aed','#f4d03f','#2d8a30','#e8d5c8','#fff'];
+  for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}
+}
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){
+  initFlash();
+  area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;
+  startCardTimer();
+}
+function buildFlashCard(){
+  if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#2d1b69;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const card=fcCards[fcIndex];
+  return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;
+}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){
+  if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+  const q=drillQs[drillIndex];
+  const choices=q.choices.map((c,i)=>`<div class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</div>`).join('');
+  return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;
+}
+function drillAnswer(idx){
+  if(drillAnswered)return;drillAnswered=true;
+  const q=drillQs[drillIndex];
+  document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});
+  if(idx===q.ans)drillScore++;
+  const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');
+  const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';
+}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+function renderTest(area){
+  testSelections={};testSubmitted=false;
+  let html='<div class="panel">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</div>`;});
+    html+='</div></div>';
+  });
+  html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;
+  area.innerHTML=html;
+}
+function testSelect(qi,ci){
+  if(testSubmitted)return;
+  testSelections[qi]=ci;
+  document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});
+}
+function submitTest(){
+  if(testSubmitted)return;
+  const total=UNIT.testQuiz.length;
+  const answered=Object.keys(testSelections).length;
+  if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}
+  testSubmitted=true;
+  let correct=0;
+  let reviewHTML='<div class="test-review">';
+  UNIT.testQuiz.forEach((q,i)=>{
+    const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;
+    document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});
+    reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;
+  });
+  reviewHTML+='</div>';
+  const pct=Math.round(correct/total*100);
+  const pass=correct>=6;
+  document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元㉒ クリア！</div>`:''}${reviewHTML}<button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;
+  document.getElementById('test-result').style.display='block';
+  if(pass)fireConfetti();
+}
+selectMode('flash');
+function toggleSetsu(){
+  const hd=document.getElementById('setsu-hd');const body=document.getElementById('setsu-body');
+  if(hd)hd.classList.toggle('open');if(body)body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本史基礎GAMBA：第８章 江戸時代</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#f0f4fa;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #2d1b69;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #2d1b69;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#2d1b69;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:12px;text-decoration:none}
+.back-to-index:hover{background:#1e0f4e}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px}
+.label-sec1{background:#2d1b69}.label-sec2{background:#1a6b3b}.label-sec3{background:#6b3a1a}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #2d1b69;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#2d1b69;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#e8e0ff}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#f0ecff}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #2d1b69;cursor:help;color:#2d1b69;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #2d1b69;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#c4b5fd;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#ddd6fe;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#f0ecff;border-left:5px solid #2d1b69;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#2d1b69;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#f0ecff;border-left:5px solid #2d1b69;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#2d1b69}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#f0ecff;border:1.5px solid #c4b5fd;border-radius:6px;padding:4px 10px;font-size:13px;color:#2d1b69;font-weight:bold}
+
+.flow-summary{background:#f0ecff;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#2d1b69;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.brown{background:#6b3a1a}.flow-year.red{background:#8b2500}.flow-year.teal{background:#1a6b5a}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#f0ecff;border:1.5px solid #c4b5fd;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#2d1b69;color:#fff;box-shadow:0 2px 0 #1e0f4e;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#0a0818,#1a1040);border-top:3px solid #7c3aed;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#c4b5fd}
+#ccb-secname-label{font-size:12px;color:#ddd6fe;margin-left:6px}
+#ccb-hint{font-size:12px;color:#ddd6fe;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#ddd6fe;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #7c3aed;background:#2d1b69;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#c4b5fd;background:#3d2b89}
+.challenge-chip.selected{border-color:#f4d03f;background:#3d2b89;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#1a1040);border:3px solid #c4b5fd;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#c4b5fd;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#f0ecff;border:1.5px solid #c4b5fd;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#2d1b69;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#2d1b69;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#f0ecff;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#2d1b69;background:#e8e0ff}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #2d1b69;margin-bottom:16px}
+.final-section h2{border-left:5px solid #2d1b69;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#2d1b69;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#1e0f4e}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#ddd6fe;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#2d1b69,#1a6b3b);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#2d1b69;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #c4b5fd;color:#2d1b69}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#2d1b69,#1a4f7a);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#f0ecff;border:1.5px solid #c4b5fd;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#2d1b69;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#1e0f4e}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}}
+</style>
+</head>
+<body>
+
+<a href="nihonshi_index.html" class="back-to-index">← 目次へ戻る</a>
+
+<h1>🏯 第８章　江戸時代——泰平の世と文化の花開き（1603〜1868年）</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label label-sec1">第１節　単元㉒</span>
+  <h2>江戸幕府の成立と支配体制（1600〜1651年）</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="why-box">
+    <span class="label">🏯 関ヶ原から江戸幕府へ</span>
+    1600年，<span class="kw">関ヶ原の戦い（せきがはらのたたかい）<span class="kw-pop"><span class="kw-title">関ヶ原の戦い（せきがはらのたたかい）</span><span class="kw-yomi">📖 読み：せきがはらのたたかい</span><span class="kw-body">1600年9月，美濃国（岐阜県）関ヶ原で起きた合戦。徳川家康率いる東軍と，石田三成率いる西軍（豊臣方）が激突。わずか1日で東軍が勝利し，家康が天下の実権を握った。この勝利が江戸幕府開設につながった。</span></span></span>で石田三成（いしだみつなり）率いる西軍を破り，天下の実権を掌握した<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">徳川家康</span><span class="kw-pop"><span class="kw-title">徳川家康（とくがわいえやす）</span><span class="kw-yomi">📖 読み：とくがわいえやす</span><span class="kw-body">1543〜1616年。三河（愛知県）の戦国大名。関ヶ原の戦い（1600年）に勝利し，1603年征夷大将軍となって江戸幕府を開いた。1615年に豊臣氏を大坂の陣で滅ぼし，徳川政権の基礎を確立した。</span></span></span>は，1603年に征夷大将軍となって江戸（東京）に幕府を開きました。
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">🏯 江戸幕府の成立と確立——年表</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1600年</span><div class="flow-content">関ヶ原の戦い——徳川家康（東軍）vs 石田三成（西軍）→東軍の圧勝</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1603年</span><div class="flow-content">家康が<strong>征夷大将軍</strong>に就任→江戸幕府を開く</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1605年</span><div class="flow-content">家康の子・秀忠（ひでただ）に将軍職を譲り，「将軍職は徳川の世襲」を示す</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year red">1615年</span><div class="flow-content">大坂夏の陣——豊臣秀頼（ひでより）を滅ぼし，豊臣氏が消滅。同年<strong>武家諸法度</strong>発布</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1635年</span><div class="flow-content">3代将軍・家光（いえみつ）が<strong>参勤交代</strong>を制度化→大名統制の完成</div></div>
+    </div>
+  </div>
+
+  <p>江戸幕府は大名を統制するため1615年に<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">武家諸法度</span><span class="kw-pop"><span class="kw-title">武家諸法度（ぶけしょはっと）</span><span class="kw-yomi">📖 読み：ぶけしょはっと</span><span class="kw-body">1615年，江戸幕府が大名を統制するために定めた法令。城の修築・勝手な婚姻・大名間の党派（無断の縁組み）などを禁止した。違反した大名は「改易（かいえき）」（大名の地位剥奪）などの処罰を受けた。3代家光の代（1635年）に参勤交代が正式に加えられた。</span></span></span>を発布し，大名の城修築・婚姻を制限しました。また3代将軍・家光は1635年に<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">参勤交代</span><span class="kw-pop"><span class="kw-title">参勤交代（さんきんこうたい）</span><span class="kw-yomi">📖 読み：さんきんこうたい</span><span class="kw-body">江戸幕府が大名に義務付けた制度。大名は1年おきに江戸（幕府所在地）と自分の領国を行き来しなければならなかった。江戸にいるときは妻子も江戸に住まわせることで人質となった。行列の費用・江戸屋敷の維持費で大名財政を消耗させる効果もあった。</span></span></span>を制度化し，大名に1年おきに江戸と領国を往復させました。さらに幕府の学問・思想的基盤として，上下関係の秩序を重んじる<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">朱子学</span><span class="kw-pop"><span class="kw-title">朱子学（しゅしがく）</span><span class="kw-yomi">📖 読み：しゅしがく</span><span class="kw-body">中国の儒学の一派（宋代の朱熹が大成）。「上下の秩序（君臣・親子の上下関係）」を重視する学問。幕府は儒学者・林羅山（はやしらざん）を登用し，朱子学を官学（公式の学問）とした。幕府支配の正当性・秩序維持の思想的根拠となった。</span></span></span>が官学として採用されました。</p>
+
+  <button class="modal-btn" onclick="openModal('sekigahara')" style="background:linear-gradient(135deg,#2d1b69,#1a4f7a)">
+    ⚔️ 関ヶ原の戦い——家康はなぜ勝てたのか，天下取りの舞台裏 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('buke')" style="background:linear-gradient(135deg,#1a6b3b,#2d1b69)">
+    📜 武家諸法度と参勤交代——大名統制の仕組みを徹底解説 <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge(1)">🎯 チャレンジ！</button>
+    <a href="nihonshi_drill_nh22.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元㉒ドリル</a>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 単元㉒ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label label-sec2">第２節　単元㉓</span>
+  <h2>鎖国・三大改革（1637〜1841年）</h2>
+
+  <div class="demo-banner" id="demo-banner-2" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="cause-box">
+    <span class="label">✝️ キリシタン禁止と鎖国へ</span>
+    江戸幕府はキリスト教を禁止しました（幕府の権威を脅かすため）。しかし1637年，九州の<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">島原・天草一揆</span><span class="kw-pop"><span class="kw-title">島原・天草一揆（しまばら・あまくさいっき）</span><span class="kw-yomi">📖 読み：しまばら・あまくさいっき</span><span class="kw-body">1637〜38年，肥前島原（長崎県）・肥後天草（熊本県）で起きた大一揆。天草四郎（益田時貞・16歳）を大将に，キリシタン農民約3万7千人が原城に立てこもった。幕府軍12万が鎮圧（翌1638年）。これ以降，幕府のキリスト教禁止・外国との交流制限が強化された。</span></span></span>が起きました。これを契機に幕府はキリスト教・外国との交流を厳しく制限し，<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">鎖国</span><span class="kw-pop"><span class="kw-title">鎖国（さこく）</span><span class="kw-yomi">📖 読み：さこく</span><span class="kw-body">江戸幕府が17世紀に確立した対外政策。外国との貿易・交流を厳しく制限し，窓口を4つ（長崎（オランダ・清），対馬（朝鮮），薩摩（琉球），松前（アイヌ・蝦夷地））に限定した。1639年のポルトガル船来航禁止により完成。約200年間続いた。</span></span></span>体制が完成しました（1639年）。</div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">📜 江戸時代の三大改革——比較で覚える</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1716年〜</span><div class="flow-content"><strong>享保の改革（きょうほうのかいかく）</strong>：8代将軍<strong>徳川吉宗</strong>。倹約令・上米の制・公事方御定書（くじかたおさだめがき）・目安箱（めやすばこ）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year teal">1787年〜</span><div class="flow-content"><strong>寛政の改革（かんせいのかいかく）</strong>：老中<strong>松平定信</strong>。棄捐令（きえんれい）・異学の禁・倹約・農村復興</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">1841年〜</span><div class="flow-content"><strong>天保の改革（てんぽうのかいかく）</strong>：老中<strong>水野忠邦</strong>。株仲間の解散・倹約・上知令（失敗）</div></div>
+    </div>
+  </div>
+
+  <p>財政難・社会不安に対して幕府は改革を行いました。8代将軍・徳川吉宗（よしむね）が行った<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">享保の改革</span><span class="kw-pop"><span class="kw-title">享保の改革（きょうほうのかいかく）</span><span class="kw-yomi">📖 読み：きょうほうのかいかく</span><span class="kw-body">1716〜1745年，8代将軍・徳川吉宗が行った改革。主な内容：①上米の制（参勤交代を半年に短縮する代わりに米を納めさせる），②公事方御定書（裁判の基準となる法令集），③目安箱（庶民の意見を将軍が直接受け付ける箱），④倹約令（ぜいたくを禁止）。「享保の米将軍」と呼ばれた。</span></span></span>では，倹約や裁判制度の整備が行われました。続いて老中・松平定信（まつだいらさだのぶ）が行った<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">寛政の改革</span><span class="kw-pop"><span class="kw-title">寛政の改革（かんせいのかいかく）</span><span class="kw-yomi">📖 読み：かんせいのかいかく</span><span class="kw-body">1787〜1793年，老中・松平定信が行った改革。主な内容：①棄捐令（旗本・御家人の借金を帳消しにする），②異学の禁（朱子学以外の学問を幕府の学校で禁止），③農村への帰農策（都市に流入した農民を農村に返す），④倹約の徹底。「白河（はくがわ）の清きに魚も住みかねて もとの濁りの田沼恋しき」という狂歌で批判された。</span></span></span>では，旗本・御家人（ごけにん）の借金を棒引きにする棄捐令（きえんれい）などが出されました。</p>
+
+  <button class="modal-btn" onclick="openModal('shimabara')" style="background:linear-gradient(135deg,#6b3a1a,#8b2500)">
+    ✝️ 島原・天草一揆——なぜ起きたのか，鎖国完成への影響 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('sakoku')" style="background:linear-gradient(135deg,#1a6b3b,#1a4f7a)">
+    🌍 鎖国の仕組み——4つの窓口と200年の孤立は本当か <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('kaikaku')" style="background:linear-gradient(135deg,#2d1b69,#1a6b3b)">
+    📋 三大改革を比較する——享保・寛政・天保，何が違うのか <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge(2)">🎯 チャレンジ！</button>
+    <a href="nihonshi_drill_nh23.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元㉓ドリル</a>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 単元㉓ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label label-sec3">第３節　単元㉔</span>
+  <h2>江戸時代の文化——元禄文化と化政文化</h2>
+
+  <div class="demo-banner" id="demo-banner-3" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="result-box">
+    <span class="label">🎨 2つの江戸文化</span>
+    江戸時代の文化は大きく2つに分かれます。17世紀末〜18世紀初頭の<strong>元禄文化（げんろくぶんか）</strong>は上方（京都・大坂）中心の華やかな町人文化。18世紀末〜19世紀初頭の<strong>化政文化（かせいぶんか）</strong>は江戸中心の庶民文化です。
+  </div>
+
+  <p>17世紀末，上方（京都・大坂）中心に栄えた<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">元禄文化</span><span class="kw-pop"><span class="kw-title">元禄文化（げんろくぶんか）</span><span class="kw-yomi">📖 読み：げんろくぶんか</span><span class="kw-body">5代将軍・綱吉の時代（17世紀末〜18世紀初頭，元禄年間）に上方（京都・大坂）中心に栄えた文化。町人（商人・職人）が担い手となった活気ある文化。代表人物：松尾芭蕉（俳句），近松門左衛門（人形浄瑠璃），井原西鶴（浮世草子），菱川師宣（浮世絵）。</span></span></span>の代表的な文人として，<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">松尾芭蕉</span><span class="kw-pop"><span class="kw-title">松尾芭蕉（まつおばしょう）</span><span class="kw-yomi">📖 読み：まつおばしょう</span><span class="kw-body">1644〜1694年。江戸前期の俳人。俳句（俳諧）を芸術の域に高めた「俳聖（はいせい）」。代表作「奥の細道（おくのほそみち）」は東北・北陸を旅した紀行文で，名句「古池や 蛙飛びこむ 水の音」「夏草や 兵どもが 夢の跡」が収録されている。</span></span></span>が「古池や 蛙飛びこむ 水の音」など自然の情景を詠んだ俳句で知られています。また，<span class="kw">近松門左衛門（ちかまつもんざえもん）<span class="kw-pop"><span class="kw-title">近松門左衛門（ちかまつもんざえもん）</span><span class="kw-yomi">📖 読み：ちかまつもんざえもん</span><span class="kw-body">1653〜1725年。元禄時代の劇作家。人形浄瑠璃（にんぎょうじょうるり）・歌舞伎の台本を多数作った。代表作「曽根崎心中（そねざきしんじゅう）」（実際の心中事件を脚本化）。「日本のシェイクスピア」とも呼ばれる。</span></span></span>が人形浄瑠璃の脚本を，<span class="kw">井原西鶴（いはらさいかく）<span class="kw-pop"><span class="kw-title">井原西鶴（いはらさいかく）</span><span class="kw-yomi">📖 読み：いはらさいかく</span><span class="kw-body">1642〜1693年。元禄時代の作家。町人の生活・恋愛・商売を描いた「浮世草子（うきよぞうし）」と呼ばれる小説を多数書いた。代表作「日本永代蔵（にほんえいたいぐら）」（商人の生き方を描く）「好色一代男（こうしょくいちだいおとこ）」。</span></span></span>が浮世草子（小説）を書きました。</p>
+
+  <p>18世紀末〜19世紀初頭，江戸中心に発達した<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">化政文化</span><span class="kw-pop"><span class="kw-title">化政文化（かせいぶんか）</span><span class="kw-yomi">📖 読み：かせいぶんか</span><span class="kw-body">文化・文政年間（19世紀初頭）に江戸を中心に栄えた庶民文化。代表人物：葛飾北斎（浮世絵「富嶽三十六景」），歌川広重（浮世絵「東海道五十三次」），十返舎一九（滑稽本「東海道中膝栗毛」），式亭三馬（滑稽本）。皮肉・ユーモアを交えた庶民的な文化が特徴。</span></span></span>では，庶民的で多様な文化が花開きました。浮世絵では<span class="kw">葛飾北斎（かつしかほくさい）<span class="kw-pop"><span class="kw-title">葛飾北斎（かつしかほくさい）</span><span class="kw-yomi">📖 読み：かつしかほくさい</span><span class="kw-body">1760〜1849年。化政時代の浮世絵師。代表作「富嶽三十六景（ふがくさんじゅうろっけい）」——富士山をさまざまな角度から描いた46枚の連作。「神奈川沖浪裏（かながわおきなみうら）」は世界的に有名。その表現技法はモネ・ゴッホなどにも影響を与えた。</span></span></span>が「富嶽三十六景」を，<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">歌川広重</span><span class="kw-pop"><span class="kw-title">歌川広重（うたがわひろしげ）</span><span class="kw-yomi">📖 読み：うたがわひろしげ</span><span class="kw-body">1797〜1858年。化政時代の浮世絵師。代表作「東海道五十三次（とうかいどうごじゅうさんつぎ）」——江戸〜京都の東海道の53の宿場を描いた連作。叙情的（じょじょうてき）な風景画が特徴で，ヨーロッパのジャポニズム（日本趣味）に大きな影響を与えた。</span></span></span>が「東海道五十三次」を描き，世界にも影響を与えました。</p>
+
+  <div class="timeline-bar">
+    <div class="tl-item">🌸 元禄文化（上方中心）</div>
+    <div class="tl-item">🖋 松尾芭蕉（俳句）</div>
+    <div class="tl-item">🎭 近松門左衛門（浄瑠璃）</div>
+    <div class="tl-item">🖼 化政文化（江戸中心）</div>
+    <div class="tl-item">🗻 葛飾北斎・歌川広重（浮世絵）</div>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('genroku')" style="background:linear-gradient(135deg,#6b3a1a,#2d1b69)">
+    📖 元禄文化の主要人物——芭蕉・近松・西鶴・菱川師宣を深く知る <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('kasei')" style="background:linear-gradient(135deg,#2d1b69,#1a6b3b)">
+    🖼 化政文化と浮世絵——北斎・広重が世界に与えた衝撃「ジャポニズム」 <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge(3)">🎯 チャレンジ！</button>
+    <a href="nihonshi_drill_nh24.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元㉔ドリル</a>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 単元㉔ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+
+  <div class="drill-link-box">
+    <span style="font-size:14px;font-weight:bold">📝 第８章 総合ドリルで全単元を復習！</span>
+    <a href="nihonshi_drill_ch08.html">総合ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== Final Quiz ===== -->
+<div class="final-section">
+  <h2>🏆 第８章 確認テスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== Checklist ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-sekigahara" onclick="if(event.target===this)closeModal('sekigahara')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sekigahara')">✕</button>
+    <div class="modal-title">⚔️ 関ヶ原の戦い——家康はなぜ勝てたのか，天下取りの舞台裏</div>
+    <div class="modal-body">
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 豊臣政権内の対立——五大老と五奉行</div>
+      <div class="why-box">
+        <span class="label">📜 背景</span>
+        豊臣秀吉は1598年死去の際，5歳の息子・秀頼（ひでより）を守るよう，有力大名5人（五大老：徳川家康・前田利家・毛利輝元・上杉景勝・宇喜多秀家）と行政担当者5人（五奉行：石田三成・浅野長政・増田長盛・前田玄以・長束正家）に遺言した。しかし秀吉死後，徳川家康が五大老の筆頭として実権を握り，「秀吉の遺命違反」（無断で大名同士の婚姻を進めるなど）を行い，石田三成ら五奉行派と対立した。
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 関ヶ原の戦い（1600年9月15日）</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 戦いの構図</span>
+        <strong>東軍（家康派）</strong>：徳川家康・黒田長政・福島正則・加藤清正など<br>
+        <strong>西軍（三成派）</strong>：石田三成・毛利輝元・島津義弘・宇喜多秀家など<br><br>
+        東軍約9万 vs 西軍約8万（諸説あり）が美濃国関ヶ原（岐阜県）で激突。わずか約6時間（半日）で東軍が圧勝。勝因：小早川秀秋（こばやかわひであき）ら西軍有力武将の裏切りによる離反が決定打となった。
+      </div>
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 家康の天下確立</div>
+      <div class="result-box">
+        <span class="label">⚡ 天下取りの完成</span>
+        勝利後，家康は西軍の大名（87家）を改易・減封し，東軍の大名に領地を与えた。1603年，征夷大将軍に就任して江戸幕府を開いた。<br><br>
+        しかし豊臣秀頼はまだ健在で，大坂城を拠点に存在していた。1615年，「大坂夏の陣」で豊臣秀頼・淀殿（ひでよりの母）が自刃して豊臣氏が滅亡し，徳川の天下が完全に確定した。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-buke" onclick="if(event.target===this)closeModal('buke')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('buke')">✕</button>
+    <div class="modal-title">📜 武家諸法度と参勤交代——大名統制の仕組みを徹底解説</div>
+    <div class="modal-body">
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 武家諸法度（1615年）の内容</div>
+      <div class="why-box">
+        <span class="label">📜 13か条の主な内容</span>
+        2代将軍・秀忠の代（1615年）に発布。主な禁止事項：<br><br>
+        ▶ 大名が幕府の許可なく城を修築することを禁止<br>
+        ▶ 大名同士が幕府の許可なく縁組（婚姻）を結ぶことを禁止<br>
+        ▶ 幕府に反抗する徒党（グループ）を結ぶことを禁止<br>
+        ▶ 私的な戦争・戦いを禁止<br><br>
+        違反した大名は「改易（かいえき）」（大名の取り潰し）・「転封（てんぽう）」（国替え）・「減封（げんぽう）」（領地削減）などの処罰を受けた。
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 参勤交代（1635年制度化）</div>
+      <div class="cause-box">
+        <span class="label">🏯 参勤交代の仕組み</span>
+        3代将軍・家光（いえみつ）が武家諸法度に参勤交代を加えて制度化（1635年）。<br><br>
+        <strong>内容</strong>：大名は原則として1年おきに江戸（将軍のいる都市）と自分の領国を行き来する義務がある。<br><br>
+        <strong>人質的効果</strong>：大名の妻子は江戸の藩邸（はんてい）に常住させられた（実質的な人質）。<br><br>
+        <strong>財政的効果</strong>：大行列を組んでの江戸〜領国往復の費用・江戸藩邸の維持費が大名財政を大きく消耗させた→大名が幕府に反乱を起こす経済力を持てなくなる。
+      </div>
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 大名の分類——親藩・譜代・外様</div>
+      <div class="result-box">
+        <span class="label">🏯 大名の種類</span>
+        <strong>親藩（しんぱん）</strong>：徳川家の一族（尾張・紀伊・水戸の御三家など）<br>
+        <strong>譜代（ふだい）</strong>：関ヶ原以前から家康に仕えた大名（幕府の要職に就く）<br>
+        <strong>外様（とざま）</strong>：関ヶ原後に従った大名（監視が厳しく，江戸から遠い地に配置）<br><br>
+        外様大名（島津・伊達・前田など）は江戸から遠い九州・東北・北陸に配置され，幕府の中枢に入れなかった。この外様への差別・不満が後に倒幕運動（明治維新）のエネルギーとなった。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-shimabara" onclick="if(event.target===this)closeModal('shimabara')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('shimabara')">✕</button>
+    <div class="modal-title">✝️ 島原・天草一揆——なぜ起きたのか，鎖国完成への影響</div>
+    <div class="modal-body">
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 一揆の背景——2つの原因</div>
+      <div class="cause-box">
+        <span class="label">⚡ 2つの原因</span>
+        <strong>原因①：苛酷な年貢・弾圧</strong><br>
+        島原（肥前・長崎県）・天草（肥後・熊本県）は元々キリシタン大名の領地だったが，関ヶ原後に改易され，新しい藩主が過酷な年貢を課し，農民を追い詰めた。<br><br>
+        <strong>原因②：キリシタンへの弾圧</strong><br>
+        幕府はキリスト教を禁止し，転び（棄教させること）を強制，絵踏み（キリストの像を踏ませる）を行った。信仰を守ろうとするキリシタン農民の怒りが爆発した。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 一揆の経緯</div>
+      <div class="why-box">
+        <span class="label">⚔️ 天草四郎と原城</span>
+        1637年10月，天草四郎（益田時貞・16〜17歳）を大将として，キリシタン農民約3万7千人が<strong>原城（はらじょう）</strong>（長崎県南島原市）に立てこもった。幕府軍12万が包囲して攻め続けたが，4ヶ月にわたって抵抗した。1638年2月，食料尽きた城内に幕府軍が突入し，籠城者のほぼ全員が死亡した（指導者・天草四郎も戦死）。
+      </div>
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 鎖国完成への影響</div>
+      <div class="result-box">
+        <span class="label">🌍 鎖国との関係</span>
+        幕府は一揆鎮圧にポルトガル船の援助を疑い（実際には援助はなかったが），1639年にポルトガル船の来航を禁止した。これにより鎖国体制が完成した。<br><br>
+        その後：①絵踏みの強化，②宗門改め帳（しゅうもんあらためちょう）：全住民を仏教寺院に登録（キリシタン摘発のため），③「禁教令」が徹底された。鎖国はキリスト教対策が最大の理由の一つだった。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-sakoku" onclick="if(event.target===this)closeModal('sakoku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sakoku')">✕</button>
+    <div class="modal-title">🌍 鎖国の仕組み——4つの窓口と200年の孤立は本当か</div>
+    <div class="modal-body">
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 鎖国の4つの窓口</div>
+      <div class="why-box">
+        <span class="label">🌍 4つの窓口</span>
+        江戸幕府は完全に外国との交流を断ったわけではなく，4つの「窓口」を設けていた：<br><br>
+        ① <strong>長崎（ながさき）</strong>：オランダ（出島・でじま）・清（中国）との貿易<br>
+        ② <strong>対馬（つしま）</strong>：朝鮮との交流（宗氏が管理）<br>
+        ③ <strong>薩摩（さつま）</strong>：琉球王国（りゅうきゅうおうこく・現沖縄）との交流<br>
+        ④ <strong>松前（まつまえ）</strong>：アイヌ民族・蝦夷地（えぞち・現北海道）との交流
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 長崎の出島（でじま）</div>
+      <div class="cause-box">
+        <span class="label">🏝️ 出島</span>
+        長崎湾内に人工的に作った扇形の小島。オランダ商館が置かれ，オランダ人はここだけに居住が許された。<br><br>
+        オランダは新教国（プロテスタント）で布教活動を行わなかったため，貿易相手として許可された。オランダ商館長が毎年「オランダ風説書（ふうせつしょ）」を幕府に提出し，世界の情勢を知らせた。これが日本がヨーロッパの知識を得る唯一の窓口（「蘭学：らんがく」の発達につながった）。
+      </div>
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③「鎖国」は本当に孤立だったのか</div>
+      <div class="result-box">
+        <span class="label">🔍 近年の歴史学の見直し</span>
+        「鎖国」という言葉は後世（江戸後期）に作られた概念で，当時の日本人は自分たちを「孤立している」とは思っていなかった。実際には4つの窓口を通じて：①貿易が続いていた，②海外の情報が入ってきていた，③文化交流があった。<br><br>
+        近年の歴史学では「鎖国」という概念を見直し，「海禁政策（かいきんせいさく）」（貿易を国家管理下に置いた政策）と表現する研究者も増えている。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-kaikaku" onclick="if(event.target===this)closeModal('kaikaku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kaikaku')">✕</button>
+    <div class="modal-title">📋 三大改革を比較する——享保・寛政・天保，何が違うのか</div>
+    <div class="modal-body">
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 享保の改革（1716〜）——徳川吉宗</div>
+      <div class="why-box">
+        <span class="label">🌾 享保の改革</span>
+        実施者：8代将軍・<strong>徳川吉宗（よしむね）</strong>。「享保の米将軍」と呼ばれた。<br><br>
+        主な政策：<br>
+        ▶ <strong>上米の制（あげまいのせい）</strong>：参勤交代を半年に短縮する代わりに，大名から1万石につき100石の米を幕府に納めさせる<br>
+        ▶ <strong>公事方御定書（くじかたおさだめがき）</strong>：裁判の基準・量刑を定めた法令集<br>
+        ▶ <strong>目安箱（めやすばこ）</strong>：庶民が意見書を直接将軍に届けられる箱（江戸の評判を直接知る）<br>
+        ▶ <strong>新田開発・倹約令</strong>：農業生産拡大・支出削減<br><br>
+        効果：一定の財政改善に成功。「江戸幕府中興の祖」と評される。
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 寛政の改革（1787〜）——松平定信</div>
+      <div class="cause-box">
+        <span class="label">📜 寛政の改革</span>
+        実施者：老中・<strong>松平定信（まつだいらさだのぶ）</strong>。吉宗の孫にあたる。<br><br>
+        背景：田沼意次（たぬまおきつぐ）の政治（商業重視・賄賂政治）への反動。<br><br>
+        主な政策：<br>
+        ▶ <strong>棄捐令（きえんれい）</strong>：旗本・御家人の6年以上前の借金を帳消しにする<br>
+        ▶ <strong>異学の禁（いがくのきん）</strong>：幕府の学校（昌平坂学問所）での朱子学以外の学問を禁止<br>
+        ▶ <strong>旧里帰農令（きゅうりきのうれい）</strong>：都市に流入した農民を農村に返す<br>
+        ▶ 厳しい倹約・風俗取り締まり<br><br>
+        批判：厳しすぎて庶民に不評。「白河の清きに魚も住みかねて もとの濁りの田沼恋しき」という狂歌で揶揄された。
+      </div>
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 天保の改革（1841〜）——水野忠邦</div>
+      <div class="result-box">
+        <span class="label">💥 天保の改革と失敗</span>
+        実施者：老中・<strong>水野忠邦（みずのただくに）</strong>。<br><br>
+        背景：天保の飢饉（1833〜39年）・大塩平八郎の乱（1837年）など社会不安。<br><br>
+        主な政策：<br>
+        ▶ <strong>株仲間の解散</strong>：商人の独占組合を解散させ自由競争を促す（→逆に流通が混乱）<br>
+        ▶ <strong>人返し令</strong>：都市に流入した農民を農村へ返す<br>
+        ▶ <strong>上知令（あげちれい）</strong>：江戸・大坂周辺の大名・旗本の土地を幕府の直轄地にしようとしたが，大名・旗本の猛反発で失敗<br><br>
+        結果：上知令の失敗で失脚（1843年，わずか2年で崩壊）。3つの改革の中で最も短命で最も失敗に終わった。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-genroku" onclick="if(event.target===this)closeModal('genroku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('genroku')">✕</button>
+    <div class="modal-title">📖 元禄文化の主要人物——芭蕉・近松・西鶴・菱川師宣を深く知る</div>
+    <div class="modal-body">
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 松尾芭蕉（1644〜1694）——俳句の神様</div>
+      <div class="why-box">
+        <span class="label">🌸 芭蕉の世界</span>
+        伊賀（三重県）出身。35歳頃から俳諧（連句・俳句）に専念し，「蕉風（しょうふう）」と呼ばれる独自のスタイルを確立。自然・孤独・旅を題材に「わびさび」の世界を表現した。<br><br>
+        代表作：<br>
+        ▶ 「奥の細道」（おくのほそみち）：1689年，江戸から東北・北陸を約5ヶ月かけて旅した紀行文。「夏草や 兵どもが 夢の跡」（平泉・中尊寺），「閑かさや 岩にしみ入る 蝉の声」（山形・立石寺）<br>
+        ▶ 「古池や 蛙飛びこむ 水の音」——静寂の中に音が響く瞬間を詠んだ傑作
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 近松門左衛門（1653〜1725）——人形浄瑠璃の父</div>
+      <div class="cause-box">
+        <span class="label">🎭 近松の世界</span>
+        人形浄瑠璃（人形を使った歌舞伎のような舞台）と歌舞伎の脚本家。義理と人情の葛藤をドラマティックに描いた。<br><br>
+        代表作：<br>
+        ▶ 「曽根崎心中（そねざきしんじゅう）」（1703年）：大坂の実際の心中事件を5日で脚本化。初演が大評判となり，心中ブームを巻き起こした<br>
+        ▶ 「国性爺合戦（こくせんやかっせん）」：中国（明）の復興を目指す英雄・鄭成功（てい せいこう）を描いた歴史劇
+      </div>
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 井原西鶴・菱川師宣</div>
+      <div class="result-box">
+        <span class="label">📚 元禄文化のその他の担い手</span>
+        <strong>井原西鶴（1642〜1693）</strong>：「浮世草子（うきよぞうし）」と呼ばれる小説の大家。「日本永代蔵」（商人の成功と失敗を描く）「好色一代男」（遊び人の一生）。町人の生々しい喜怒哀楽を写実的に描いた。<br><br>
+        <strong>菱川師宣（ひしかわもろのぶ・1618〜1694）</strong>：浮世絵の祖（そ）。木版画を使った多色刷りの浮世絵を確立。「見返り美人図（みかえりびじんず）」が有名。庶民でも購入できる「版画」という形で絵を大量に流通させた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-kasei" onclick="if(event.target===this)closeModal('kasei')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kasei')">✕</button>
+    <div class="modal-title">🖼 化政文化と浮世絵——北斎・広重が世界に与えた衝撃「ジャポニズム」</div>
+    <div class="modal-body">
+      <div style="background:#2d1b69;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 化政文化の特徴</div>
+      <div class="why-box">
+        <span class="label">🎨 化政文化</span>
+        文化（ぶんか）・文政（ぶんせい）年間（1804〜1830年代）に江戸を中心に栄えた庶民文化。特徴：<br><br>
+        ▶ <strong>江戸の庶民（町人）が担い手</strong>：元禄文化の上方（大坂・京都）中心から，江戸中心へ<br>
+        ▶ <strong>娯楽性・皮肉・ユーモア</strong>：滑稽本（こっけいぼん）・黄表紙（きびょうし）など笑いを重視<br>
+        ▶ <strong>浮世絵の大発展</strong>：葛飾北斎・歌川広重が世界的な名作を生んだ<br>
+        ▶ <strong>国学（こくがく）の発展</strong>：本居宣長（もとおりのりなが）「古事記伝（こじきでん）」——日本古来の文化・精神の研究
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 葛飾北斎「富嶽三十六景」</div>
+      <div class="cause-box">
+        <span class="label">🗻 北斎の代表作</span>
+        葛飾北斎（1760〜1849年）は90歳まで生きた長命の絵師。生涯3万点以上の作品を残した。<br><br>
+        <strong>「富嶽三十六景（ふがくさんじゅうろっけい）」</strong>（1831〜1833年）：富士山をさまざまな場所・季節・天候から描いた46枚の連作。<br><br>
+        代表作中の代表作：<br>
+        ▶ <strong>「神奈川沖浪裏（かながわおきなみうら）」</strong>：大波の向こうに富士山が見える構図。世界で最も有名な日本画の一つ<br>
+        ▶ <strong>「凱風快晴（がいふうかいせい）」</strong>：赤富士とも呼ばれる朝日に照らされた富士山
+      </div>
+      <div style="background:#6b3a1a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 歌川広重とジャポニズム</div>
+      <div class="result-box">
+        <span class="label">🌸 世界への影響</span>
+        <strong>歌川広重（1797〜1858年）</strong>の「東海道五十三次（とうかいどうごじゅうさんつぎ）」（1833〜34年）：江戸〜京都の東海道の53宿場（しゅくば）を描いた55枚の連作。雨・雪・霧など天候や季節の移ろいを叙情的に表現した。<br><br>
+        <strong>ジャポニズム（Japonisme）</strong>：19世紀後半，日本の浮世絵がヨーロッパに渡り，印象派の画家（モネ・ゴッホ・マネなど）に大きな影響を与えた。<br><br>
+        ▶ ゴッホ：広重の浮世絵をそのまま模写した作品「梅の木（広重摸写）」がある<br>
+        ▶ モネ：日本式の庭・橋を描いた「睡蓮（すいれん）」シリーズに浮世絵の影響が見られる<br><br>
+        江戸時代の庶民文化が現代の世界絵画史に直接影響を与えていた。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジ用チップバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 チャレンジ<span id="ccb-secname-label"></span></span>
+    <span id="ccb-hint">語句を選んでください</span>
+    <span id="ccb-count">残り 4語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 採点</button>
+    <button id="ccb-btn-demo"  onclick="showDemo()">📖 手本</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度考えてみよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+const allAnswers = {
+  "A":"徳川家康", "B":"武家諸法度", "C":"参勤交代", "D":"朱子学",
+  "E":"島原・天草一揆", "F":"鎖国", "G":"享保の改革", "H":"寛政の改革",
+  "I":"元禄文化", "J":"松尾芭蕉", "K":"化政文化", "L":"歌川広重"
+};
+const secAnswers = {
+  1: ["A","B","C","D"],
+  2: ["E","F","G","H"],
+  3: ["I","J","K","L"]
+};
+const wordBank = {
+  1: ["徳川家康","武家諸法度","参勤交代","朱子学"],
+  2: ["島原・天草一揆","鎖国","享保の改革","寛政の改革"],
+  3: ["元禄文化","松尾芭蕉","化政文化","歌川広重"]
+};
+const secNames = {
+  1: "①江戸幕府の成立と支配体制",
+  2: "②鎖国・三大改革",
+  3: "③江戸時代の文化"
+};
+const miniQuizData = {
+  1: [
+    {q:"1600年，徳川家康が石田三成率いる西軍を破った戦いを何というか。",choices:["大坂の陣","桶狭間の戦い","関ヶ原の戦い","長篠の戦い"],ans:2},
+    {q:"1615年，幕府が大名を統制するために定めた法令を何というか。",choices:["武家諸法度","御成敗式目","禁中並公家諸法度","大宝律令"],ans:0},
+    {q:"大名が1年おきに江戸と領国を往復することを義務付けた制度を何というか。",choices:["上米の制","参勤交代","棄捐令","株仲間"],ans:1},
+    {q:"江戸幕府が官学として採用した，上下の秩序を重んじる儒学の一派を何というか。",choices:["国学","神道","朱子学","蘭学"],ans:2}
+  ],
+  2: [
+    {q:"1637年，肥前島原・肥後天草のキリシタン農民が起こした一揆を何というか。",choices:["島原・天草一揆","加茂一揆","山城国一揆","正長の土一揆"],ans:0},
+    {q:"江戸幕府が17世紀に確立した，外国との交流を制限した対外政策を何というか。",choices:["鎖国","勘合貿易","南蛮貿易","朱印船貿易"],ans:0},
+    {q:"8代将軍・徳川吉宗が行った改革を何というか。",choices:["寛政の改革","天保の改革","享保の改革","文政の改革"],ans:2},
+    {q:"老中・松平定信が1787年から行った改革を何というか。",choices:["享保の改革","天保の改革","寛政の改革","安永の改革"],ans:2}
+  ],
+  3: [
+    {q:"17世紀末，上方（京都・大坂）中心に栄えた町人文化を何というか。",choices:["化政文化","元禄文化","北山文化","東山文化"],ans:1},
+    {q:"「古池や 蛙飛びこむ 水の音」「奥の細道」で知られる，元禄時代の俳人は誰か。",choices:["与謝蕪村","小林一茶","松尾芭蕉","西山宗因"],ans:2},
+    {q:"18世紀末〜19世紀初頭，江戸中心に栄えた庶民文化を何というか。",choices:["元禄文化","化政文化","北山文化","安土桃山文化"],ans:1},
+    {q:"「東海道五十三次」を描いた，化政時代の浮世絵師は誰か。",choices:["葛飾北斎","菱川師宣","東洲斎写楽","歌川広重"],ans:3}
+  ]
+};
+const finalQuizData = [
+  {q:"1603年，江戸幕府を開いた初代将軍は誰か。",choices:["豊臣秀吉","徳川秀忠","徳川家康","徳川家光"],ans:2},
+  {q:"江戸幕府が1615年に大名統制のために発した法令を何というか。",choices:["御成敗式目","武家諸法度","禁中並公家諸法度","刀狩令"],ans:1},
+  {q:"3代将軍・家光が制度化した，大名が1年おきに江戸と領国を往復する制度を何というか。",choices:["参勤交代","上米の制","棄捐令","天保の改革"],ans:0},
+  {q:"1637年，キリシタン農民が九州で起こした大一揆を何というか。",choices:["山城国一揆","島原・天草一揆","加茂一揆","正長の土一揆"],ans:1},
+  {q:"江戸幕府が1639年に完成させた，外国との交流を制限した政策を何というか。",choices:["海禁令","南蛮禁止","鎖国","勘合貿易"],ans:2},
+  {q:"8代将軍・徳川吉宗が1716年から行った改革を何というか。",choices:["天保の改革","寛政の改革","享保の改革","文政の改革"],ans:2},
+  {q:"老中・松平定信が行った，旗本・御家人の借金を帳消しにする棄捐令を含む改革を何というか。",choices:["享保の改革","天保の改革","寛政の改革","安政の改革"],ans:2},
+  {q:"元禄文化を代表する俳人で，「奥の細道」を著したのは誰か。",choices:["与謝蕪村","小林一茶","松尾芭蕉","宝井其角"],ans:2},
+  {q:"化政文化を代表する浮世絵師で，「富嶽三十六景」を描いたのは誰か。",choices:["歌川広重","菱川師宣","東洲斎写楽","葛飾北斎"],ans:3},
+  {q:"「東海道五十三次」を描き，ヨーロッパの印象派にも影響を与えた浮世絵師は誰か。",choices:["葛飾北斎","歌川広重","喜多川歌麿","鈴木春信"],ans:1}
+];
+const checkItems = [
+  "関ヶ原の戦い（1600年）で徳川家康が勝利した理由を説明できる",
+  "武家諸法度の主な内容と，違反した大名への処罰を説明できる",
+  "参勤交代の仕組みと，大名財政を消耗させる効果を説明できる",
+  "島原・天草一揆の原因と，鎖国完成への影響を説明できる",
+  "鎖国の4つの窓口（長崎・対馬・薩摩・松前）を挙げられる",
+  "三大改革（享保・寛政・天保）の実施者と主な内容を比較できる",
+  "元禄文化（上方中心，芭蕉・近松・西鶴）と化政文化（江戸中心，北斎・広重）の違いを説明できる",
+  "浮世絵がヨーロッパの「ジャポニズム」に与えた影響を説明できる"
+];
+
+let checkState = new Array(checkItems.length).fill(false);
+let activeChallengeSection = null;
+const challengeStates = {
+  1: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  2: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null},
+  3: {active:false,demoMode:false,chipBank:[],placedWords:{},selectedChipIdx:null,demoSnapshot:null}
+};
+
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function getBlankEl(id){return document.querySelector(`.blank[data-id="${id}"]`);}
+function getDisplayEl(id){const el=getBlankEl(id);return el?el.querySelector('.blank-display'):null;}
+
+function startChallenge(sec){
+  if(activeChallengeSection&&activeChallengeSection!==sec)endChallenge(activeChallengeSection);
+  activeChallengeSection=sec;
+  const st=challengeStates[sec];
+  st.active=true;st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const status=document.getElementById(`sec-status-${sec}`);if(status){status.textContent='';status.className='sec-status';}
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='⏹ やめる';btn.style.background='#555';btn.onclick=()=>endChallenge(sec);}
+  showChipBar(sec);
+  document.getElementById('ccb-secname-label').textContent=secNames[sec]||'';
+}
+function endChallenge(sec){
+  const st=challengeStates[sec];if(!st)return;
+  st.active=false;st.demoMode=false;st.demoSnapshot=null;
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent=allAnswers[id];
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const btn=document.getElementById(`chal-btn-${sec}`);
+  if(btn){btn.textContent='🎯 チャレンジ！';btn.style.background='';btn.onclick=()=>startChallenge(sec);}
+  if(activeChallengeSection===sec){activeChallengeSection=null;hideChipBar();}
+}
+function showChipBar(sec){
+  const bar=document.getElementById('challenge-chip-bar');bar.classList.add('visible');
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  const st=challengeStates[sec];
+  if(st.demoMode){controls.style.display='none';demoReturn.style.display='block';}
+  else{controls.style.display='flex';demoReturn.style.display='none';}
+  renderChips(sec);updateCcbHint(sec);
+}
+function hideChipBar(){document.getElementById('challenge-chip-bar').classList.remove('visible');}
+function renderChips(sec){
+  const st=challengeStates[sec];
+  const container=document.getElementById('ccb-chips');container.innerHTML='';
+  st.chipBank.forEach((word,idx)=>{
+    const chip=document.createElement('div');
+    chip.className='challenge-chip'+(idx===st.selectedChipIdx?' selected':'');
+    chip.textContent=word;chip.onclick=()=>tapChip(sec,idx);
+    container.appendChild(chip);
+  });
+  document.getElementById('ccb-count').textContent=`残り ${st.chipBank.length}語`;
+}
+function updateCcbHint(sec){
+  const st=challengeStates[sec];const hint=document.getElementById('ccb-hint');
+  if(st.demoMode)hint.textContent='手本表示中';
+  else if(st.selectedChipIdx!==null)hint.textContent=`「${st.chipBank[st.selectedChipIdx]}」を選択中 → 空欄をタップ`;
+  else hint.textContent='語句を選んでください';
+}
+function tapChip(sec,idx){
+  const st=challengeStates[sec];if(st.demoMode)return;
+  st.selectedChipIdx=(st.selectedChipIdx===idx)?null:idx;
+  renderChips(sec);updateCcbHint(sec);
+}
+function blankClicked(e,id){
+  e.stopPropagation();
+  const sec=getSecForId(id);
+  if(sec&&challengeStates[sec].active&&!challengeStates[sec].demoMode){handleBlankTap(sec,id);}
+  else{
+    const el=getBlankEl(id);if(!el)return;
+    document.querySelectorAll('.kw.active').forEach(k=>{if(k!==el)k.classList.remove('active');});
+    el.classList.toggle('active');
+  }
+}
+function handleBlankTap(sec,id){
+  const st=challengeStates[sec];const disp=getDisplayEl(id);const el=getBlankEl(id);
+  if(st.selectedChipIdx!==null){
+    const word=st.chipBank[st.selectedChipIdx];
+    const existing=st.placedWords[id];
+    if(existing!==undefined)st.chipBank.push(existing);
+    st.chipBank.splice(st.selectedChipIdx,1);
+    st.placedWords[id]=word;st.selectedChipIdx=null;
+    if(disp)disp.textContent=word;if(el)el.classList.add('placed');
+  }else{
+    const existing=st.placedWords[id];
+    if(existing!==undefined){
+      st.chipBank.push(existing);delete st.placedWords[id];
+      if(disp)disp.textContent='';if(el)el.classList.remove('placed');
+    }
+  }
+  renderChips(sec);updateCcbHint(sec);
+}
+function getSecForId(id){
+  for(const[s,ids]of Object.entries(secAnswers)){if(ids.includes(id))return parseInt(s);}
+  return null;
+}
+function judgeChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];const ids=secAnswers[sec];let correct=0;
+  ids.forEach(id=>{
+    const placed=st.placedWords[id];const ans=allAnswers[id];
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(placed===ans){correct++;if(el){el.classList.add('correct');el.classList.remove('wrong','placed');}}
+    else{
+      if(placed!==undefined){st.chipBank.push(placed);delete st.placedWords[id];if(disp)disp.textContent='';}
+      if(el){el.classList.add('wrong');el.classList.remove('placed');}
+      showOshii(id,ans);
+    }
+  });
+  renderChips(sec);updateCcbHint(sec);
+  const status=document.getElementById(`sec-status-${sec}`);
+  if(correct===ids.length){if(status){status.textContent='🎉 全問正解！';status.className='sec-status pass';}endChallenge(sec);launchConfetti();}
+  else{if(status){status.textContent=`${correct}/${ids.length}問 正解`;status.className='sec-status fail';}}
+}
+function showOshii(id,ans){
+  const popup=document.getElementById('oshii-popup');
+  document.getElementById('oshii-msg').textContent=`「${id}」の答えは「${ans}」`;
+  popup.style.display='block';
+  setTimeout(()=>{popup.style.display='none';},2500);
+}
+function showDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];
+  st.demoSnapshot={chipBank:[...st.chipBank],placedWords:{...st.placedWords},selectedChipIdx:st.selectedChipIdx};
+  st.demoMode=true;st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);const el=getBlankEl(id);
+    if(disp)disp.textContent=allAnswers[id];
+    if(el){el.classList.add('demo-fill');el.classList.remove('placed','correct','wrong');}
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='block';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='none';demoReturn.style.display='block';
+  renderChips(sec);updateCcbHint(sec);
+}
+function exitDemo(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];if(!st.demoMode)return;
+  st.demoMode=false;
+  if(st.demoSnapshot){st.chipBank=[...st.demoSnapshot.chipBank];st.placedWords={...st.demoSnapshot.placedWords};st.selectedChipIdx=null;st.demoSnapshot=null;}
+  secAnswers[sec].forEach(id=>{
+    const el=getBlankEl(id);const disp=getDisplayEl(id);
+    if(el)el.classList.remove('demo-fill','correct','wrong','placed');
+    const placed=st.placedWords[id];
+    if(disp)disp.textContent=placed!==undefined?placed:'';
+    if(placed!==undefined&&el)el.classList.add('placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  const controls=document.getElementById('ccb-controls');const demoReturn=document.getElementById('ccb-demo-return');
+  controls.style.display='flex';demoReturn.style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+function resetChallenge(){
+  const sec=activeChallengeSection;if(!sec)return;
+  const st=challengeStates[sec];st.demoMode=false;st.demoSnapshot=null;
+  st.chipBank=shuffle(wordBank[sec]);st.placedWords={};st.selectedChipIdx=null;
+  secAnswers[sec].forEach(id=>{
+    const disp=getDisplayEl(id);if(disp)disp.textContent='';
+    const el=getBlankEl(id);if(el)el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  const banner=document.getElementById(`demo-banner-${sec}`);if(banner)banner.style.display='none';
+  document.getElementById('ccb-controls').style.display='flex';
+  document.getElementById('ccb-demo-return').style.display='none';
+  renderChips(sec);updateCcbHint(sec);
+}
+function toggleMQ(id,btn){
+  const body=document.getElementById(id);
+  const isOpen=body.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  if(isOpen&&body.innerHTML.trim()==='')renderMQ(id);
+}
+function renderMQ(id){
+  const secNum=parseInt(id.replace('mq',''));
+  const qs=miniQuizData[secNum];
+  let html='';
+  qs.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerMQ(this,${ci},${q.ans},'${id}-q${i}')">${c}</div>`;});
+    html+='</div></div>';
+  });
+  document.getElementById(id).innerHTML=html;
+}
+function answerMQ(el,chosen,correct,key){
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+let finalAnswered={};
+function initFinal(){
+  const area=document.getElementById('final-quiz-area');
+  let html='';
+  finalQuizData.forEach((q,i)=>{
+    html+=`<div class="mq-block"><div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div><div class="mq-choices" id="fq-${i}">`;
+    q.choices.forEach((c,ci)=>{html+=`<div class="mq-choice" onclick="answerFinal(this,${ci},${q.ans},${i})">${c}</div>`;});
+    html+='</div></div>';
+  });
+  area.innerHTML=html;
+}
+function answerFinal(el,chosen,correct,qi){
+  if(finalAnswered[qi]!==undefined)return;
+  finalAnswered[qi]=chosen===correct;
+  const parent=el.parentElement;
+  parent.querySelectorAll('.mq-choice').forEach((c,i)=>{
+    if(i===correct)c.classList.add('correct');
+    else if(i===chosen)c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+}
+function judgeFinal(){
+  const total=finalQuizData.length;
+  const answered=Object.keys(finalAnswered).length;
+  if(answered<total){document.getElementById('final-result-row').innerHTML=`<p style="color:#c00;font-weight:bold">まだ${total-answered}問残っています。</p>`;return;}
+  const correct=Object.values(finalAnswered).filter(Boolean).length;
+  const pass=correct>=8;
+  document.getElementById('final-result-row').innerHTML=`<div style="margin-top:12px;padding:16px;border-radius:10px;background:${pass?'#d0f0d8':'#fdd'};border:2px solid ${pass?'#1a6b22':'#c00'};font-size:16px;font-weight:bold;text-align:center">${pass?'🎉 合格！':'😅 もう一度挑戦！'} ${correct} / ${total} 問正解${pass?' （合格）':' （あと'+(8-correct)+'問で合格）'}</div>`;
+  if(pass)launchConfetti();
+}
+function resetFinal(){finalAnswered={};document.getElementById('final-result-row').innerHTML='';initFinal();}
+
+function renderChecklist(){
+  const area=document.getElementById('checklist-area');if(!area)return;
+  let html='';
+  checkItems.forEach((item,i)=>{
+    html+=`<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 10px;border-radius:8px;background:${checkState[i]?'#d0f0d8':'#f0ecff'};border:1.5px solid ${checkState[i]?'#1a6b22':'#c4b5fd'};transition:all 0.2s;margin-bottom:6px">
+      <input type="checkbox" ${checkState[i]?'checked':''} onchange="toggleCheck(${i})" style="margin-top:3px;width:18px;height:18px;accent-color:#2d1b69">
+      <span style="font-size:14px;line-height:1.7">${item}</span>
+    </label>`;
+  });
+  area.innerHTML=html;
+  const done=checkState.filter(Boolean).length;
+  document.getElementById('check-count').textContent=`${done} / ${checkItems.length} チェック済み`;
+  document.getElementById('check-bar').style.width=`${(done/checkItems.length)*100}%`;
+}
+function toggleCheck(i){checkState[i]=!checkState[i];renderChecklist();if(checkState.every(Boolean))launchConfetti();}
+
+function launchConfetti(){
+  const colors=['#c4b5fd','#7c3aed','#2d1b69','#1a6b3b','#e9c46a','#f4d03f','#a8dadc'];
+  for(let i=0;i<60;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;width:${8+Math.random()*8}px;height:${8+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.5}s`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend',()=>el.remove());
+  }
+}
+const style=document.createElement('style');
+style.textContent='.confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(style);
+
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.kw'))document.querySelectorAll('.kw.active').forEach(k=>k.classList.remove('active'));
+});
+function openModal(name){const el=document.getElementById('modal-'+name);if(el)el.classList.add('open');}
+function closeModal(name){const el=document.getElementById('modal-'+name);if(el)el.classList.remove('open');}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    ['sekigahara','buke','shimabara','sakoku','kaikaku','genroku','kasei'].forEach(n=>closeModal(n));
+  }
+});
+
+initFinal();
+renderChecklist();
+</script>
+</body>
+</html>

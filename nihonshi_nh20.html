@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元⑳ 豊臣秀吉の天下統一｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch07.html" class="back-to-index">← 第７章テキストへ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🏯 単元⑳　豊臣秀吉の天下統一——百姓から天下人へ（1582〜1598年）</h1>
+
+<!-- ===== Section ===== -->
+<div class="section">
+  <span class="section-label">第7章 第２節　単元⑳</span>
+  <h2>秀吉の台頭——本能寺の変から天下統一へ</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="cause-box">
+    <span class="label">⚡ 秀吉の出発点</span>
+    豊臣秀吉（とよとみひでよし）は，現在の愛知県中村（なかむら）で農民の子として生まれました。足軽（あしがる）として織田信長に仕え，その才能と行動力で異例のスピードで出世した人物です。「百姓から天下人へ」という，前代未聞の立身出世の物語です。
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">🏯 豊臣秀吉の歩み——年表で整理</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1537年</span><div class="flow-content">農民の子として尾張国（愛知県）中村に生まれる。幼名・日吉丸（ひよしまる）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1582年</span><div class="flow-content"><strong>本能寺の変</strong>（信長横死）→「中国大返し」で急いで引き返し，<strong>山崎の戦い</strong>で明智光秀を倒す。太閤検地を開始</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1583年</span><div class="flow-content">賤ヶ岳の戦い（しずがたけのたたかい）で柴田勝家を破る。<strong>大坂城</strong>（おおさかじょう）の築城を開始</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1585年</span><div class="flow-content">関白（かんぱく）に就任。翌1586年には太政大臣（だいじょうだいじん）に就き「豊臣」の姓を賜る</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1587年</span><div class="flow-content">九州平定（島津氏を服属）。<strong>バテレン追放令</strong>を発布——キリスト教宣教師の国外退去を命じる</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1588年</span><div class="flow-content"><strong>刀狩令（かたながりれい）</strong>——農民から武器を取り上げる。兵農分離を進める</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">1590年</span><div class="flow-content">小田原攻め（北条氏を降伏）→<strong>全国統一完成</strong>。奥州仕置きで東北も掌握</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year purple">1592年</span><div class="flow-content"><strong>文禄の役（ぶんろくのえき）</strong>——朝鮮出兵（第1回）。李舜臣（イ・スンシン）の水軍に苦戦</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year purple">1597年</span><div class="flow-content"><strong>慶長の役（けいちょうのえき）</strong>——朝鮮出兵（第2回）。秀吉の死去により撤退</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year navy">1598年</span><div class="flow-content">豊臣秀吉，伏見城（ふしみじょう）にて死去（享年61歳）。天下は五大老・五奉行体制へ</div></div>
+    </div>
+    <div class="flow-note">
+      💡 秀吉は信長と異なり，武力だけでなく<strong>経済・制度改革（検地・刀狩）</strong>で社会の仕組みを根本から変えた政治家でした。
+    </div>
+  </div>
+
+  <h2>太閤検地と石高制——土地支配の革命</h2>
+
+  <p>秀吉が実施した最も重要な政策の一つが，全国的な土地調査である<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">太閤検地</span><span class="kw-pop"><span class="kw-title">太閤検地（たいこうけんち）</span><span class="kw-yomi">📖 読み：たいこうけんち</span><span class="kw-body">豊臣秀吉が1582年から行った全国的な土地調査。田畑の広さと収穫量を統一した基準で測り直し，「石高（こくだか）」という単位で記録した。これにより，全国の土地を秀吉が直接把握できるようになった。</span></span></span>です。秀吉は全国の田畑を統一した基準（竿・升）で測り直し，収穫量を<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">石高</span><span class="kw-pop"><span class="kw-title">石高（こくだか）</span><span class="kw-yomi">📖 読み：こくだか</span><span class="kw-body">田畑の生産力をお米の量（石・こく）で表したもの。1石＝約180リットル（大人1人が1年間に食べる量）。石高に応じて税（年貢）を徴収し，大名の格付けもこれで決まった。「100万石の大名」などの表現はここから来ている。</span></span></span>という単位（お米の量）で記録しました。</p>
+
+  <div class="why-box">
+    <span class="label">📏 太閤検地の3つの意義</span>
+    ①<strong>税の統一</strong>：石高に基づいて年貢（ねんぐ・税）を徴収する制度を確立した。<br>
+    ②<strong>大名の格付け</strong>：「○○万石の大名」という形で全国の大名を格付けし，管理した。<br>
+    ③<strong>農民の固定</strong>：土地台帳（検地帳）に農民の名前と耕作地が記録され，農民は土地に縛り付けられた（逃げることが難しくなった）。
+  </div>
+
+  <h2>刀狩令と兵農分離——身分制度の確立</h2>
+
+  <p>1588年，秀吉は<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">刀狩令</span><span class="kw-pop"><span class="kw-title">刀狩令（かたながりれい）</span><span class="kw-yomi">📖 読み：かたながりれい</span><span class="kw-body">1588年，豊臣秀吉が農民から刀・やり・弓・鉄砲などの武器を没収した法令。「一揆（いっき・農民の反乱）を防ぐため」「取り上げた武器を仏像の材料にして農民の救済になる」という理由で出された。実際には，農民の武装解除と兵農分離の推進が目的だった。</span></span></span>を発布し，農民が所持していた武器をすべて没収しました。この太閤検地と刀狩令によって，<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">兵農分離</span><span class="kw-pop"><span class="kw-title">兵農分離（へいのうぶんり）</span><span class="kw-yomi">📖 読み：へいのうぶんり</span><span class="kw-body">武士（兵）と農民（農）の身分・居住地を明確に分けること。武士は城下町に住み，農民は農村で農業に専念する体制。太閤検地と刀狩令によって実現した。これにより，戦国時代のように農民が武装して戦う（半農半士）時代が終わった。</span></span></span>が完成しました——武士は城下町に住んで戦闘に専念し，農民は農村で農業に専念するという社会の仕組みです。</p>
+
+  <div class="result-box">
+    <span class="label">⚡ 兵農分離の社会的意味</span>
+    戦国時代には「農民が武器を持って戦う」半農半士の姿が一般的でした。秀吉の刀狩により，農民は武器を持てなくなり，武士との身分差が法制度として固定されました。これが後の<span class="kw">江戸時代<span class="kw-pop"><span class="kw-title">江戸時代の身分制度</span><span class="kw-yomi">参考</span><span class="kw-body">江戸時代には「士（武士）・農（農民）・工（職人）・商（商人）」という身分制度が確立した。これは秀吉の兵農分離政策が礎となっている。</span></span></span>の身分制度（士農工商）の基礎となりました。
+  </div>
+
+  <h2>バテレン追放令・大坂城——権力の集中</h2>
+
+  <p>1587年，秀吉は<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">バテレン追放令</span><span class="kw-pop"><span class="kw-title">バテレン追放令（ばてれんついほうれい）</span><span class="kw-yomi">📖 読み：ばてれんついほうれい</span><span class="kw-body">1587年，豊臣秀吉が出したキリスト教宣教師（バテレン）の国外退去命令。「バテレン」はポルトガル語で神父・宣教師の意。信長時代にはキリスト教は黙認されていたが，秀吉はキリスト教の広まりが領主の権力を脅かすと判断して禁止に転じた。ただし南蛮貿易は継続したため，徹底されなかった面もある。</span></span></span>を出し，キリスト教の宣教師（バテレン）を国外に追放する命令を発しました。また，天下の本拠として1583年から<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">大坂城</span><span class="kw-pop"><span class="kw-title">大坂城（おおさかじょう）</span><span class="kw-yomi">📖 読み：おおさかじょう</span><span class="kw-body">豊臣秀吉が1583年から大阪に築いた巨大な城。天守閣は5重7階建ての壮大なもので，権力の象徴となった。大坂（現在の大阪）は水運の要衝であり，商業の中心地でもあった。1615年の大坂夏の陣で豊臣氏が滅亡するまで，豊臣家の本拠地だった。</span></span></span>の築城を始め，権力の象徴として全国に君臨しました。</p>
+
+  <h2>朝鮮出兵——秀吉の野望と失敗</h2>
+
+  <p>全国統一を成し遂げた秀吉は，さらに明（中国）の征服を目指し，その足がかりとして朝鮮に大軍を送りました。1592年の第1回出兵を<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">文禄の役</span><span class="kw-pop"><span class="kw-title">文禄の役（ぶんろくのえき）</span><span class="kw-yomi">📖 読み：ぶんろくのえき</span><span class="kw-body">1592年，豊臣秀吉が朝鮮に出兵した戦争（第1回）。当初は朝鮮軍を圧倒して平壌（ピョンヤン）まで北上したが，李舜臣（イ・スンシン）率いる朝鮮水軍に補給路を絶たれ，明の援軍もあって苦戦。1593年に講和交渉に入った。</span></span></span>，1597年の第2回出兵を<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">慶長の役</span><span class="kw-pop"><span class="kw-title">慶長の役（けいちょうのえき）</span><span class="kw-yomi">📖 読み：けいちょうのえき</span><span class="kw-body">1597年，豊臣秀吉が再び朝鮮に出兵した戦争（第2回）。こちらも苦戦が続き，1598年に秀吉が死去したことで日本軍は撤退した。朝鮮の人々に多大な被害を与え，また日本の武将も多くが疲弊した。この失敗が豊臣政権弱体化の一因となった。</span></span></span>といいます。どちらも李舜臣の水軍・明の援軍に苦しめられ，1598年に秀吉が死去したことで日本軍は撤退しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚠️ 朝鮮出兵の失敗の原因</span>
+    ①<strong>補給路の遮断</strong>：李舜臣率いる朝鮮水軍（亀甲船・きっこうせん）が活躍し，海上の補給路を断たれた。<br>
+    ②<strong>明の援軍</strong>：朝鮮と明の連合軍に反撃された。<br>
+    ③<strong>武将の疲弊</strong>：長期の戦争で日本の武将・兵士が消耗した。<br>
+    ④<strong>秀吉の死</strong>：1598年に秀吉が死去し，撤退の大義名分が生まれた。
+  </div>
+
+  <div class="timeline-bar">
+    <div class="tl-item">📏 太閤検地 1582〜</div>
+    <div class="tl-item">🏯 大坂城 1583</div>
+    <div class="tl-item">⚔️ 刀狩令 1588</div>
+    <div class="tl-item">🌏 全国統一 1590</div>
+    <div class="tl-item">🚢 文禄の役 1592</div>
+    <div class="tl-item">🚢 慶長の役 1597</div>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('taikokendi')" style="background:linear-gradient(135deg,#1a4f7a,#2d7a3a)">
+    📏 太閤検地の詳細——石高制・検地帳・農民支配の仕組みをすべて解説 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('katanagari')" style="background:linear-gradient(135deg,#8b2500,#c87000)">
+    ⚔️ 刀狩令と兵農分離——なぜ農民から武器を取り上げたか，その歴史的意味 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('bateren')" style="background:linear-gradient(135deg,#4a1a7a,#1a4f7a)">
+    ✝️ バテレン追放令——信長は許可，秀吉はなぜ禁止に転じたのか <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('chosenhei')" style="background:linear-gradient(135deg,#1a6b3b,#1a4f7a)">
+    🚢 朝鮮出兵（文禄・慶長の役）——秀吉の野望・李舜臣・失敗の全貌 <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <a href="nihonshi_drill_nh20.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元⑳ドリルへ</a>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 単元⑳ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 第７章 総合ドリルで全単元を復習！</span>
+    <a href="nihonshi_drill_ch07.html">総合ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元⑳ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+
+<!-- 太閤検地 -->
+<div class="modal-overlay" id="modal-taikokendi" onclick="if(event.target===this)closeModal('taikokendi')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('taikokendi')">✕</button>
+    <div class="modal-title">📏 太閤検地の詳細——石高制・検地帳・農民支配の仕組み</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 太閤検地以前——バラバラだった土地制度</div>
+      <div class="cause-box">
+        <span class="label">📜 検地前の問題</span>
+        戦国時代まで，土地の測り方は地域によってバラバラでした。「貫高制（かんだかせい）」と呼ばれるお金（銅銭）換算の制度や，地域ごとに異なる「升（ます）」の大きさ，不正確な面積の申告など，支配者が全国の生産力を正確に把握することが困難でした。<br><br>
+        また，荘園制度の名残で，一つの土地に「耕作権（農民）」「領有権（武士）」「本所の権利（寺社・公家）」が複雑に重なり合う状態でした。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 太閤検地の内容</div>
+      <div class="why-box">
+        <span class="label">📏 検地の手順</span>
+        秀吉は<strong>奉行（ぶぎょう）</strong>を現地に派遣し，以下の統一基準で全国の田畑を調査させました：<br><br>
+        ▶ <strong>面積の単位を統一</strong>：1反（たん）＝約10アール（現在も使われる単位）<br>
+        ▶ <strong>升を統一</strong>：「京升（きょうます）」に統一し，全国どこでも同じ量を測れるようにした<br>
+        ▶ <strong>竿入れ（さおいれ）</strong>：測量の棒（検地竿・けんちざお）で田畑を実際に測定<br>
+        ▶ <strong>等級付け</strong>：土地の良し悪しを上・中・下・下々（げげ）の4等級に分類<br>
+        ▶ <strong>石高を算出</strong>：面積 × 等級 = 収穫量（石高・こくだか）を算出
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 検地帳（けんちちょう）——農民の固定</div>
+      <div class="why-box">
+        <span class="label">📋 検地帳の意味</span>
+        調査の結果は「検地帳」に記録されました。この帳簿には，土地の場所・広さ・石高・<strong>その土地を耕す農民の名前</strong>が書き込まれました。<br><br>
+        重要なポイント：農民の名前が土地に紐付けられたことで，<br>
+        ①農民は勝手に土地を離れることが難しくなった（逃散の防止）<br>
+        ②農民は「耕す権利（=土地への権利）」を法的に認められた<br>
+        ③上位の権利者（二重支配）は排除された——「一地一作人（いちちいちさくにん）」の原則
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 石高制（こくだかせい）の意義</div>
+      <div class="result-box">
+        <span class="label">⚡ 歴史的意義</span>
+        石高制は江戸時代まで続く日本の土地・税・身分制度の基礎となりました：<br><br>
+        ▶ <strong>大名の格付け</strong>：「加賀百万石の前田氏」「薩摩77万石の島津氏」のように，石高が大名の格・動員できる兵数・納める参勤交代の費用すべてを決めた<br>
+        ▶ <strong>年貢の徴収</strong>：石高の約40〜50%を年貢として徴収（四公六民・五公五民など）<br>
+        ▶ <strong>全国の生産力把握</strong>：秀吉は全国の石高を合計することで，日本全体の生産力を数字で把握した最初の支配者となった
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 刀狩令・兵農分離 -->
+<div class="modal-overlay" id="modal-katanagari" onclick="if(event.target===this)closeModal('katanagari')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('katanagari')">✕</button>
+    <div class="modal-title">⚔️ 刀狩令と兵農分離——なぜ農民から武器を取り上げたか</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 刀狩令（1588年）の内容</div>
+      <div class="cause-box">
+        <span class="label">📜 条文の主な内容</span>
+        刀狩令には次のような内容が書かれていました：<br><br>
+        「諸国の百姓が刀・わき差・弓・やり・鉄砲・その他の武具類を持つことを固く禁じる」<br><br>
+        秀吉が提示した表向きの理由：「農民が武器を持つと一揆（いっき・反乱）を起こして年貢を払わなくなる」「取り上げた武器を溶かして仏像を作り，農民の冥福を祈るために使う」<br><br>
+        実際の目的：<strong>農民の武装解除</strong>と<strong>兵農分離の完成</strong>
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 戦国時代の「半農半士」——刀狩前の社会</div>
+      <div class="why-box">
+        <span class="label">⚔️ 戦国時代の実態</span>
+        戦国時代，農民と武士の身分は曖昧でした。農民が農業をしながら武装して戦う「半農半士（はんのうはんし）」の状態が一般的でした。<br><br>
+        ▶ 信長・秀吉・家康などの戦国大名も，元は農民・中小武士の出身<br>
+        ▶ 農民が一揆を起こして武将を倒すことも珍しくなかった（山城国一揆など）<br>
+        ▶ 足軽（あしがる）は農閑期に徴兵される農民兵だった<br><br>
+        つまり，刀狩は「武士だけが武器を持てる社会」を法律で強制した歴史上の転換点でした。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 兵農分離の完成——太閤検地との相乗効果</div>
+      <div class="result-box">
+        <span class="label">⚡ 兵農分離の意味</span>
+        太閤検地（農民を土地に固定）＋刀狩令（農民の武装解除）の組み合わせによって，兵農分離が制度として完成しました：<br><br>
+        ▶ <strong>武士</strong>：城下町（じょうかまち）に住み，戦闘・行政に専念<br>
+        ▶ <strong>農民</strong>：農村に住み，農業に専念し年貢を納める<br>
+        ▶ <strong>効果①</strong>：農民の一揆が起きにくくなった（武器がないため）<br>
+        ▶ <strong>効果②</strong>：武士・農民・職人・商人の身分が固定化された（江戸時代の士農工商へ）<br>
+        ▶ <strong>効果③</strong>：城下町への人口集中が進み，商業・流通が発展した<br><br>
+        ※ 1591年には「身分統制令（しんぶんとうせいれい）」も出され，武士・農民・町人の身分の移動が法律で禁止された。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- バテレン追放令 -->
+<div class="modal-overlay" id="modal-bateren" onclick="if(event.target===this)closeModal('bateren')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('bateren')">✕</button>
+    <div class="modal-title">✝️ バテレン追放令——信長は許可，秀吉はなぜ禁止に転じたのか</div>
+    <div class="modal-body">
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① キリスト教の伝来と信長の対応</div>
+      <div class="cause-box">
+        <span class="label">✝️ キリスト教の日本伝来</span>
+        1549年，スペイン人宣教師<span style="font-weight:bold">フランシスコ・ザビエル</span>が鹿児島に上陸し，日本に初めてキリスト教（カトリック）を伝えました。ポルトガル・スペインの宣教師（バテレン）が各地で布教し，1580年代には日本全国で30〜40万人の信者（キリシタン）がいたとされます。<br><br>
+        <strong>織田信長の対応</strong>：信長は仏教（特に一向一揆などの勢力）を弱体化させる目的もあり，キリスト教の布教を黙認・保護しました。南蛮貿易（なんばんぼうえき）で鉄砲・火薬を輸入するためでもありました。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 秀吉がキリスト教を禁止した理由</div>
+      <div class="why-box">
+        <span class="label">⚠️ 禁止の3つの理由</span>
+        <strong>理由①：キリスト教大名の存在</strong><br>
+        キリスト教に改宗した大名（キリシタン大名）が，教会の権威を領主の権力より上に置く危険があった。領民も教会への忠誠を優先することが懸念された。<br><br>
+        <strong>理由②：九州の大名による土地寄進</strong><br>
+        1587年，秀吉の九州征伐中に，九州のキリシタン大名（大村純忠・有馬晴信など）が長崎の土地を教会（イエズス会）に寄進していることが判明。領土を外国の宗教組織に渡すことは，天下統一の邪魔になると判断した。<br><br>
+        <strong>理由③：人身売買の問題</strong><br>
+        ポルトガル人が日本人を奴隷として海外に売っていることを知り，秀吉は怒りを持って禁止を命じたとも伝わる。
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ バテレン追放令の限界と南蛮貿易の継続</div>
+      <div class="result-box">
+        <span class="label">💡 追放令の「ゆるさ」</span>
+        バテレン追放令（1587年）はキリスト教の宣教師を20日以内に国外退去させるよう命じましたが，<strong>南蛮貿易は継続</strong>しました。これは矛盾に見えますが，秀吉には：<br><br>
+        ①鉄砲・硝石（火薬の原料）などの輸入を続けたい<br>
+        ②ポルトガル・スペインとの貿易による富が必要<br><br>
+        という本音があったためです。結果として追放令は徹底されず，宣教師が潜伏しながら布教を続ける状況が生まれました。<br><br>
+        本格的なキリスト教禁止・弾圧は，江戸時代（1613年・島原の乱後）まで続きます。なお，1597年には<strong>二十六聖人の殉教（にじゅうろくせいじんのじゅんきょう）</strong>として26名のキリスト教徒が長崎で処刑される事件も起きています。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 朝鮮出兵 -->
+<div class="modal-overlay" id="modal-chosenhei" onclick="if(event.target===this)closeModal('chosenhei')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('chosenhei')">✕</button>
+    <div class="modal-title">🚢 朝鮮出兵（文禄・慶長の役）——秀吉の野望・李舜臣・失敗の全貌</div>
+    <div class="modal-body">
+      <div style="background:#1a2a6b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 秀吉はなぜ朝鮮に出兵したのか</div>
+      <div class="cause-box">
+        <span class="label">⚠️ 出兵の背景</span>
+        豊臣秀吉は1590年に全国統一を達成した後，さらに<strong>明（中国）の征服</strong>という野望を抱いていました。そのために朝鮮に「明への道を貸せ（明への先導をせよ）」と要求しましたが，朝鮮はこれを拒否しました。<br><br>
+        出兵の背景には，①統一後に仕事のなくなった武将・兵士の不満の解消，②秀吉自身の征服欲と老年の焦り，③明との貿易支配権の獲得という経済的目的，もあったと考えられています。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 文禄の役（1592年）——快進撃から苦戦へ</div>
+      <div class="why-box">
+        <span class="label">⚔️ 戦争の経緯</span>
+        1592年4月，加藤清正・小西行長ら約16万の大軍が朝鮮に上陸。当初は朝鮮軍を圧倒し，わずか20日足らずで首都・漢城（ハンソン・現ソウル）を占領，さらに北上して平壌（ピョンヤン）まで進撃しました。<br><br>
+        しかし状況は急転：<br>
+        ▶ <strong>李舜臣（イ・スンシン）</strong>率いる朝鮮水軍が亀甲船（きっこうせん・屋根付きの軍船）を活用し，日本の補給船団を次々と撃破<br>
+        ▶ 各地で朝鮮の義兵（ぎへい・民間の抵抗組織）が日本軍を游撃（ゲリラ戦）<br>
+        ▶ 明の援軍が平壌に到着し，日本軍は後退<br><br>
+        1593年，講和交渉が始まり，いったん戦闘は休止しました。
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 慶長の役（1597年）——再出兵と秀吉の死</div>
+      <div class="why-box">
+        <span class="label">🚢 第2回出兵</span>
+        講和交渉が決裂すると，秀吉は1597年に再び出兵を命じました（慶長の役）。しかし文禄の役の教訓から朝鮮・明は準備を固めており，日本軍は苦戦が続きました。<br><br>
+        1598年8月，秀吉が伏見城で死去（享年61歳）。遺言で「朝鮮から撤退せよ」と命じ，日本軍は撤退しました。撤退の際にも李舜臣の水軍に追撃され，多大な損害を受けました（露梁海戦・ろりょうかいせん）。なお，李舜臣自身もこの戦いで戦死しています。
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 朝鮮出兵の歴史的影響</div>
+      <div class="result-box">
+        <span class="label">⚡ 出兵の結果と影響</span>
+        <strong>日本への影響</strong>：<br>
+        ▶ 豊臣家の財力・兵力が消耗し，政権が弱体化した<br>
+        ▶ 武将間の対立が深まった（東軍・西軍の分裂→関ヶ原の戦いへ）<br>
+        ▶ 朝鮮から陶工（とうこう・陶芸職人）が連れてこられ，日本の陶磁器文化が発展（薩摩焼・有田焼など）<br><br>
+        <strong>朝鮮・中国への影響</strong>：<br>
+        ▶ 朝鮮の人口・農村・文化財が壊滅的な被害を受けた<br>
+        ▶ 明も莫大な戦費を消耗し，その後の国力衰退につながった（後金（ホンタイジ）の台頭を許す）<br><br>
+        ※ 朝鮮では現在でも，文禄・慶長の役は「壬辰倭乱（イムジンウェラン）」と呼ばれ，日本軍による侵略として記憶されています。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 穴埋めチャレンジ バー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">語句を選んでタップして当てはめてください</span>
+    <span id="ccb-count">残り 8語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"太閤検地", "B":"石高", "C":"刀狩令", "D":"兵農分離",
+  "E":"バテレン追放令", "F":"大坂城", "G":"文禄の役", "H":"慶長の役"
+};
+const wordBank = ["太閤検地","石高","刀狩令","兵農分離","バテレン追放令","大坂城","文禄の役","慶長の役"];
+
+const miniQuizData = [
+  {q:"①　豊臣秀吉が実施した全国的な土地調査を何というか？",
+   choices:["楽市・楽座","太閤検地","刀狩令","参勤交代"], ans:1,
+   exp:"太閤検地（たいこうけんち）。秀吉が全国の田畑の広さと収穫量を統一した基準で調査した制度です。"},
+  {q:"②　農民から武器を取り上げた法令を何というか？",
+   choices:["武家諸法度","分国法","刀狩令","禁中並公家諸法度"], ans:2,
+   exp:"刀狩令（かたながりれい・1588年）。農民の武装解除と一揆の防止が目的でした。"},
+  {q:"③　武士と農民の身分を明確に区別することを何というか？",
+   choices:["廃藩置県","版籍奉還","士農工商","兵農分離"], ans:3,
+   exp:"兵農分離（へいのうぶんり）。太閤検地と刀狩令によって，武士は城下町，農民は農村に固定されました。"},
+  {q:"④　秀吉が1592年に始めた朝鮮への出兵を何というか？",
+   choices:["慶長の役","元寇","応仁の乱","文禄の役"], ans:3,
+   exp:"文禄の役（ぶんろくのえき・1592年）。1597年の2度目の出兵を慶長の役といいます。"}
+];
+
+const finalQuizData = [
+  {q:"豊臣秀吉の出身はどれか？",
+   choices:["武士の家（小大名の子）","農民の家（百姓出身）","公家の家（京都の貴族）","商人の家（堺の豪商）"], ans:1,
+   exp:"秀吉は農民（百姓）出身で，足軽として信長に仕え，天下人にまで上り詰めました。"},
+  {q:"本能寺の変（1582年）の直後，秀吉が明智光秀を倒した戦いはどれか？",
+   choices:["関ヶ原の戦い","賤ヶ岳の戦い","山崎の戦い","長篠の戦い"], ans:2,
+   exp:"山崎の戦い（1582年）。秀吉は「中国大返し」で急いで戻り，山崎（京都府）で明智光秀を倒しました。"},
+  {q:"太閤検地で収穫量を表す単位として使われたのはどれか？",
+   choices:["貫（かん）","反（たん）","両（りょう）","石（こく）"], ans:3,
+   exp:"石高（こくだか）。田畑の生産力をお米の量（石）で表しました。大名の格付けにも使われました。"},
+  {q:"刀狩令の主な目的として最も正しいものはどれか？",
+   choices:["農民に兵役を課すため","農民から武器を取り上げ一揆を防止するため","武士に農業をさせるため","外国との戦争に備えるため"], ans:1,
+   exp:"刀狩令（1588年）。農民から刀・やり・弓・鉄砲などの武器を取り上げることで，農民一揆を防ぐとともに兵農分離を進める目的がありました。"},
+  {q:"兵農分離とはどういうことか？（最も適切なものを選べ）",
+   choices:["兵士を農村で訓練すること","農民に兵役を課すこと","武士と農民の身分を明確に分けること","武士を農業に従事させること"], ans:2,
+   exp:"兵農分離。武士は城下町，農民は農村という形で身分と居住地を固定し，社会の安定を図りました。"},
+  {q:"バテレン追放令（1587年）の「バテレン」とは何を指すか？",
+   choices:["中国の商人","オランダの貿易商","朝鮮の外交官","キリスト教の宣教師"], ans:3,
+   exp:"バテレンはポルトガル語でキリスト教の神父・宣教師のこと。秀吉はキリスト教の広まりを警戒して追放令を出しました。"},
+  {q:"秀吉が1583年から築き，豊臣政権の本拠とした城はどれか？",
+   choices:["安土城","姫路城","江戸城","大坂城"], ans:3,
+   exp:"大坂城（おおさかじょう）。豊臣家の本拠地として大坂（現在の大阪）に築かれた巨大な城です。"},
+  {q:"1592年に始まった朝鮮出兵（第1回）を何というか？",
+   choices:["慶長の役","応仁の乱","元寇","文禄の役"], ans:3,
+   exp:"文禄の役（ぶんろくのえき・1592年）。秀吉の明（中国）征服の野望から朝鮮に出兵しました。"},
+  {q:"1597年に始まった朝鮮出兵（第2回）を何というか？",
+   choices:["文禄の役","天正の役","元寇","慶長の役"], ans:3,
+   exp:"慶長の役（けいちょうのえき・1597年）。1598年に秀吉が死去したため，日本軍は撤退しました。"},
+  {q:"豊臣秀吉が死去した後，豊臣政権の実権を握り始めたのは誰か？",
+   choices:["石田三成","前田利家","上杉景勝","徳川家康"], ans:3,
+   exp:"徳川家康（とくがわいえやす）。秀吉の死後，家康は五大老の筆頭として実権を握り始め，関ヶ原の戦い（1600年）で天下を掌握しました。"}
+];
+
+const checkItems = [
+  "豊臣秀吉が農民（百姓）出身の「天下人」であることを説明できる",
+  "山崎の戦い（1582年）で明智光秀を倒し，信長の後継者となった流れを説明できる",
+  "太閤検地の目的・内容・意義を説明できる",
+  "「石高（こくだか）」制度の仕組みと江戸時代への影響を説明できる",
+  "刀狩令（1588年）の目的と内容を説明できる",
+  "「兵農分離」とは何か，どんな社会変化をもたらしたかを説明できる",
+  "バテレン追放令が出された理由と，南蛮貿易が継続された事実を説明できる",
+  "文禄の役（1592年）と慶長の役（1597年）を区別し，李舜臣の役割を説明できる",
+  "朝鮮出兵が失敗した理由を3つ以上説明できる",
+  "秀吉の死後，徳川家康が実権を握り関ヶ原の戦い（1600年）へとつながる流れを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let currentBlank = null;
+let isDemo = false;
+let selectedChip = null;
+let placedAnswers = {};
+
+function startChallenge() {
+  isDemo = false;
+  placedAnswers = {};
+  selectedChip = null;
+  document.querySelectorAll('.blank').forEach(el => {
+    el.classList.remove('placed','correct','wrong','demo-fill');
+    el.querySelector('.blank-display').textContent = '　　　　';
+  });
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('chal-btn-1').textContent = '🎯 チャレンジ中…';
+  document.getElementById('chal-btn-1').disabled = true;
+  rebuildChips();
+  updateCount();
+}
+
+function rebuildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const remaining = wordBank.filter(w => !Object.values(placedAnswers).includes(w));
+  remaining.forEach(w => {
+    const chip = document.createElement('span');
+    chip.className = 'challenge-chip';
+    chip.textContent = w;
+    chip.onclick = () => selectChip(chip, w);
+    bar.appendChild(chip);
+  });
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  if(selectedChip === word) { selectedChip = null; return; }
+  selectedChip = word;
+  el.classList.add('selected');
+  document.getElementById('ccb-hint').textContent = '「' + word + '」を選択中 — 空欄をタップして当てはめてください';
+}
+
+function blankClicked(event, id) {
+  event.stopPropagation();
+  if(isDemo) return;
+  if(!document.getElementById('challenge-chip-bar').classList.contains('visible')) return;
+  if(!selectedChip) {
+    document.getElementById('ccb-hint').textContent = '先に下の語句を選んでください';
+    return;
+  }
+  delete placedAnswers[id];
+  placedAnswers[id] = selectedChip;
+  const el = document.querySelector('[data-id="'+id+'"] .blank-display');
+  if(el) el.textContent = selectedChip;
+  document.querySelector('[data-id="'+id+'"]').classList.add('placed');
+  selectedChip = null;
+  rebuildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = Object.keys(placedAnswers).length;
+  const total = wordBank.length;
+  document.getElementById('ccb-count').textContent = '残り ' + (total - placed) + '語';
+}
+
+function judgeChallenge() {
+  let correct = 0;
+  let wrong = [];
+  Object.keys(allAnswers).forEach(id => {
+    const el = document.querySelector('[data-id="'+id+'"]');
+    if(!el) return;
+    const placed = placedAnswers[id];
+    if(placed === allAnswers[id]) {
+      el.classList.add('correct');
+      el.classList.remove('placed','wrong');
+      correct++;
+    } else {
+      el.classList.add('wrong');
+      el.classList.remove('placed','correct');
+      wrong.push(allAnswers[id]);
+    }
+  });
+  const total = Object.keys(allAnswers).length;
+  const secSt = document.getElementById('sec-status-1');
+  if(correct === total) {
+    secSt.textContent = '✅ 全問正解！';
+    secSt.className = 'sec-status pass';
+    fireOshii(false);
+    fireConfetti();
+  } else {
+    secSt.textContent = correct + ' / ' + total + ' 正解';
+    secSt.className = 'sec-status fail';
+    document.getElementById('oshii-msg').textContent = '間違い：' + wrong.join('、');
+    document.getElementById('oshii-popup').style.display = 'block';
+  }
+}
+
+function fireOshii(show) {
+  if(!show) return;
+}
+
+function showDemo() {
+  isDemo = true;
+  Object.keys(allAnswers).forEach(id => {
+    const el = document.querySelector('[data-id="'+id+'"]');
+    if(el) {
+      el.querySelector('.blank-display').textContent = allAnswers[id];
+      el.classList.add('demo-fill');
+      el.classList.remove('placed','correct','wrong');
+    }
+  });
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-chips').innerHTML = '';
+  document.getElementById('ccb-hint').textContent = '手本表示中';
+}
+
+function exitDemo() {
+  isDemo = false;
+  placedAnswers = {};
+  selectedChip = null;
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.classList.remove('placed','correct','wrong','demo-fill');
+    el.querySelector('.blank-display').textContent = '　　　　';
+  });
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-hint').textContent = '語句を選んでタップして当てはめてください';
+  rebuildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  isDemo = false;
+  placedAnswers = {};
+  selectedChip = null;
+  document.querySelectorAll('.blank').forEach(el => {
+    el.classList.remove('placed','correct','wrong','demo-fill');
+    el.querySelector('.blank-display').textContent = allAnswers[el.dataset.id];
+  });
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('chal-btn-1').textContent = '🎯 穴埋めチャレンジ！';
+  document.getElementById('chal-btn-1').disabled = false;
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('challenge-chip-bar').classList.remove('visible');
+  rebuildChips();
+  updateCount();
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  body.classList.toggle('open');
+  btn.classList.toggle('open');
+  if(body.classList.contains('open') && !body.innerHTML.trim()) {
+    renderMQ(id);
+  }
+}
+
+function renderMQ(id) {
+  const area = document.getElementById(id);
+  area.innerHTML = miniQuizData.map((q, i) => {
+    const choices = q.choices.map((c, ci) =>
+      `<div class="mq-choice" onclick="mqAnswer(this,${ci},${q.ans},'mq-q${i}')">${ci+1}. ${c}</div>`
+    ).join('');
+    return `<div class="mq-block" id="mq-q${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div>
+      <div class="mq-choices">${choices}</div>
+    </div>`;
+  }).join('');
+}
+
+function mqAnswer(el, ci, ans, blockId) {
+  const block = document.getElementById(blockId);
+  block.querySelectorAll('.mq-choice').forEach(c => c.classList.remove('correct','wrong','reveal'));
+  if(ci === ans) {
+    el.classList.add('correct');
+  } else {
+    el.classList.add('wrong');
+    block.querySelectorAll('.mq-choice')[ans].classList.add('reveal');
+  }
+  block.querySelectorAll('.mq-choice').forEach(c => { c.onclick = null; c.style.cursor='default'; });
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = new Array(finalQuizData.length).fill(-1);
+let finalDone = false;
+
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((q, qi) => {
+    const choices = q.choices.map((c, ci) =>
+      `<div class="mq-choice" id="fq${qi}_${ci}" onclick="finalSelect(${qi},${ci})">${ci+1}. ${c}</div>`
+    ).join('');
+    return `<div class="mq-block" style="margin-bottom:20px">
+      <div class="mq-q"><span class="mq-qnum">${qi+1}</span>${q.q}</div>
+      <div class="mq-choices">${choices}</div>
+    </div>`;
+  }).join('');
+}
+
+function finalSelect(qi, ci) {
+  if(finalDone) return;
+  const q = finalQuizData[qi];
+  for(let i = 0; i < q.choices.length; i++) {
+    const el = document.getElementById('fq'+qi+'_'+i);
+    if(el) el.classList.remove('correct','wrong','reveal','selected');
+  }
+  const el = document.getElementById('fq'+qi+'_'+ci);
+  if(el) { el.classList.add('selected'); el.style.background='#fdd9c4'; el.style.borderColor='#8b2500'; }
+  finalAnswers[qi] = ci;
+}
+
+function judgeFinal() {
+  if(finalDone) return;
+  finalDone = true;
+  let score = 0;
+  finalQuizData.forEach((q, qi) => {
+    const ua = finalAnswers[qi];
+    for(let ci = 0; ci < q.choices.length; ci++) {
+      const el = document.getElementById('fq'+qi+'_'+ci);
+      if(!el) continue;
+      el.onclick = null; el.style.cursor = 'default';
+      if(ci === q.ans) {
+        if(ua === ci) { el.classList.add('correct'); el.style.background=''; el.style.borderColor=''; score++; }
+        else { el.classList.add('reveal'); el.style.background=''; el.style.borderColor=''; }
+      } else if(ua === ci) {
+        el.classList.add('wrong'); el.style.background=''; el.style.borderColor='';
+      } else {
+        el.style.background=''; el.style.borderColor='';
+      }
+    }
+  });
+  const pass = score >= 8;
+  const pct = Math.round(score / finalQuizData.length * 100);
+  document.getElementById('final-result-row').innerHTML =
+    `<div style="margin-top:14px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+      <div style="font-size:1.4em;font-weight:bold;color:${pass ? '#1a4015' : '#800'}">
+        ${score} / ${finalQuizData.length} 問正解（${pct}%）${pass ? '　🎉 合格！' : '　📖 もう一度'}
+      </div>
+      <div style="font-size:13px;color:#555;margin-top:4px">合格ライン：8問以上</div>
+    </div>`;
+  if(pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalDone = false;
+  finalAnswers = new Array(finalQuizData.length).fill(-1);
+  document.getElementById('final-result-row').innerHTML = '';
+  buildFinal();
+}
+
+/* ===== チェックリスト ===== */
+let checkStates = new Array(checkItems.length).fill(false);
+
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div onclick="toggleCheck(${i})" id="chk${i}" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;border:1.5px solid #f0c880;margin-bottom:6px;cursor:pointer;background:#fff;transition:all 0.15s">
+      <span id="chk-icon${i}" style="font-size:1.3em">⬜</span>
+      <span style="font-size:14px;line-height:1.6">${item}</span>
+    </div>`
+  ).join('');
+}
+
+function toggleCheck(i) {
+  checkStates[i] = !checkStates[i];
+  const row = document.getElementById('chk'+i);
+  const icon = document.getElementById('chk-icon'+i);
+  if(checkStates[i]) {
+    icon.textContent = '✅';
+    row.style.background = '#d0f0d8';
+    row.style.borderColor = '#1a6b22';
+  } else {
+    icon.textContent = '⬜';
+    row.style.background = '#fff';
+    row.style.borderColor = '#f0c880';
+  }
+  const done = checkStates.filter(Boolean).length;
+  const total = checkItems.length;
+  document.getElementById('check-bar').style.width = (done/total*100) + '%';
+  document.getElementById('check-count').textContent = done + ' / ' + total + ' チェック済み';
+  if(done === total) fireConfetti();
+}
+
+/* ===== Confetti ===== */
+function fireConfetti() {
+  const cols = ['#8b2500','#c87000','#f4a261','#fbbf24','#f87171','#34d399'];
+  for(let i = 0; i < 80; i++) {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      const size = 8 + Math.random() * 10;
+      Object.assign(el.style, {
+        position:'fixed',top:'-10px',left:Math.random()*100+'vw',
+        width:size+'px',height:size+'px',background:cols[Math.floor(Math.random()*cols.length)],
+        borderRadius:'2px',animation:'fall linear forwards',
+        animationDuration:(1.5+Math.random()*1.5)+'s',pointerEvents:'none',zIndex:'9999'
+      });
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 3500);
+    }, i * 20);
+  }
+}
+
+const styleEl = document.createElement('style');
+styleEl.textContent = '@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(styleEl);
+
+/* ===== Modal ===== */
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ===== kw popup (mobile tap) ===== */
+document.addEventListener('click', e => {
+  const kw = e.target.closest('.kw:not(.blank)');
+  document.querySelectorAll('.kw.active').forEach(el => { if(el !== kw) el.classList.remove('active'); });
+  if(kw) kw.classList.toggle('active');
+});
+
+/* ===== Init ===== */
+buildFinal();
+buildChecklist();
+</script>
+</body>
+</html>

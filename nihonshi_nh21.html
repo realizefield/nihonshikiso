@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉑ 江戸幕府の成立｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch07.html" class="back-to-index">← 第７章テキストへ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🏯 単元㉑　江戸幕府の成立——天下分け目から265年の安定へ（1600〜1635年）</h1>
+
+<!-- ===== Section ===== -->
+<div class="section">
+  <span class="section-label">第7章 第３節　単元㉑</span>
+  <h2>秀吉の死後——権力の空白と関ヶ原へ</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <div class="cause-box">
+    <span class="label">⚠️ 豊臣政権の危機</span>
+    豊臣秀吉が1598年に死去したとき，跡継ぎの<span class="kw">秀頼（ひでより）<span class="kw-pop"><span class="kw-title">豊臣秀頼（とよとみひでより）</span><span class="kw-yomi">📖 読み：とよとみひでより</span><span class="kw-body">豊臣秀吉の息子。秀吉が死去したとき6歳。大坂城に母・淀君（よどぎみ）とともに住んでいた。関ヶ原の戦いでは動かず，1615年の大坂夏の陣で徳川方に敗れ，自刃して滅亡した。</span></span></span>はまだ6歳でした。秀吉は五大老（ごたいろう）・五奉行（ごぶぎょう）という合議制で政権を守るよう遺言しましたが，筆頭の五大老・<span class="kw">徳川家康（とくがわいえやす）<span class="kw-pop"><span class="kw-title">徳川家康（とくがわいえやす）</span><span class="kw-yomi">📖 読み：とくがわいえやす</span><span class="kw-body">1542年，三河国（愛知県東部）に生まれた戦国大名。今川・織田・豊臣と仕え，五大老の筆頭として秀吉に次ぐ実力者だった。関ヶ原の戦い後，征夷大将軍となって江戸幕府を開き，以後265年間続く徳川政権の礎を築いた。享年75歳。</span></span></span>が独自に大名との婚姻関係を結ぶなど，権力拡大を進めました。これに対し，<span class="kw">石田三成（いしだみつなり）<span class="kw-pop"><span class="kw-title">石田三成（いしだみつなり）</span><span class="kw-yomi">📖 読み：いしだみつなり</span><span class="kw-body">豊臣秀吉の重臣（五奉行の一人）。官僚として有能だったが，武将たちに嫌われていた。秀吉の死後，豊臣家を守ろうと毛利輝元・上杉景勝らとともに「西軍」を結成し，関ヶ原で家康の東軍と戦ったが敗れ，処刑された。</span></span></span>ら豊臣方の家臣が反発し，ついに天下分け目の決戦へと向かいます。
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">🏯 江戸幕府成立の流れ——年表で整理</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1598年</span><div class="flow-content">豊臣秀吉，死去（享年61歳）。6歳の秀頼が後継。五大老・五奉行の合議制へ</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1600年</span><div class="flow-content"><strong>関ヶ原の戦い</strong>——徳川家康（東軍）vs 石田三成・毛利輝元（西軍）。東軍が一日で勝利</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1603年</span><div class="flow-content">家康が<strong>征夷大将軍</strong>に就任 → 江戸（現・東京）に幕府を開く（<strong>江戸幕府</strong>の始まり）</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year">1605年</span><div class="flow-content">家康が将軍職を息子・<strong>秀忠（ひでただ）</strong>に譲る——徳川家の世襲（将軍職は徳川家のもの）を天下に示す</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1614-15年</span><div class="flow-content"><strong>大坂の陣</strong>（冬・夏）——豊臣秀頼を大坂城に攻める。夏の陣で豊臣氏が滅亡</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1615年</span><div class="flow-content"><strong>武家諸法度（ぶけしょはっと）</strong>の発布——大名の行動を法律で縛る。<strong>禁中並公家諸法度</strong>で朝廷も統制</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year blue">1635年</span><div class="flow-content">3代将軍<strong>徳川家光</strong>が武家諸法度（寛永令）を改定し<strong>参勤交代</strong>を義務化——大名の財力を消耗させ，反乱を防ぐ</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">1637-38年</span><div class="flow-content"><strong>島原の乱（しまばらのらん）</strong>——九州でキリシタン・農民が大規模一揆。鎮圧後，キリスト教禁制が強化される</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year navy">1639年</span><div class="flow-content"><strong>鎖国（さこく）</strong>——ポルトガル船の来航禁止。長崎・出島（でじま）のオランダ・中国のみと貿易。幕府が貿易を独占</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year navy">以降</span><div class="flow-content"><strong>幕藩体制</strong>が完全確立——将軍が全国を統治し，大名（藩）が地方を支配する二重構造の安定政権</div></div>
+    </div>
+    <div class="flow-note">
+      💡 秀吉の死から約37年で，徳川家康は「豊臣家の家臣」から「日本の支配者」へと完全に転換しました。この体制は<strong>明治維新（1868年）まで265年間</strong>続きます。
+    </div>
+  </div>
+
+  <h2>３代将軍・徳川家光——幕府体制の完成者</h2>
+
+  <p>祖父・家康，父・秀忠に続く3代将軍の<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">徳川家光</span><span class="kw-pop"><span class="kw-title">徳川家光（とくがわいえみつ）</span><span class="kw-yomi">📖 読み：とくがわいえみつ</span><span class="kw-body">江戸幕府3代将軍。「余は生まれながらの将軍である」と宣言し，将軍の権威を確立した。参勤交代の義務化・島原天草一揆の鎮圧・鎖国の完成という三大業績で，幕府体制を盤石にした。</span></span></span>は，「余は生まれながらの将軍である」と宣言しました。家康が天下を勝ち取り，秀忠が引き継いだのに対し，家光は生まれたときから将軍であることが決まっていた——徳川家による支配が，誰もが当然と思う形で完全に定着したことを示す言葉です。</p>
+
+  <div class="cause-box">
+    <span class="label">💡 初代・２代・３代の将軍の違い</span>
+    <strong>家康（初代）</strong>：関ヶ原・大坂の陣で天下を「勝ち取った」将軍。<br>
+    <strong>秀忠（2代）</strong>：父・家康から将軍職を「引き継いだ」将軍。<br>
+    <strong>家光（3代）</strong>：生まれたときから将軍になることが決まっていた「生まれながらの将軍」。この代で徳川家の世襲支配が完全に定着した。
+  </div>
+
+  <h2>参勤交代——大名を財政で縛る制度</h2>
+
+  <p>家光は1635年，武家諸法度（寛永令）を改定して，<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">参勤交代</span><span class="kw-pop"><span class="kw-title">参勤交代（さんきんこうたい）</span><span class="kw-yomi">📖 読み：さんきんこうたい</span><span class="kw-body">大名が1年おきに江戸と領国を往復する制度。1635年の武家諸法度（寛永令）で義務化。旅費・江戸屋敷の維持費が膨大で大名の財力を消耗させた。妻子を江戸に常住させる，事実上の人質制度でもあった。</span></span></span>をすべての大名に義務づけました。大名は1年おきに江戸と自分の領国を往復し，妻子は江戸に常に住まわせなければなりませんでした。</p>
+
+  <p style="margin:10px 0">
+    <button onclick="openModal('sankin-keizai')" style="background:#1a4f7a;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:bold;cursor:pointer;font-family:inherit;box-shadow:0 2px 0 #0d2f4a">📊 参勤交代の経済——規模・費用・経済効果を見る</button>
+  </p>
+
+  <h2>島原天草一揆——最後の大規模反乱</h2>
+
+  <p>1637年，九州の島原（長崎県）・天草（熊本県）で，<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">島原天草一揆</span><span class="kw-pop"><span class="kw-title">島原天草一揆（しまばらあまくさいっき）</span><span class="kw-yomi">📖 読み：しまばらあまくさいっき</span><span class="kw-body">1637〜38年，九州の島原・天草地方でキリシタン農民約3万7千人が起こした大規模一揆。天草四郎（益田時貞・当時16歳）を総大将に，廃城の原城に籠城して抵抗した。幕府は12万超の大軍で鎮圧。この後，踏み絵・宗門改めによるキリシタン取り締まりが強化された。</span></span></span>が起きました。キリシタン農民約3万7千人が，重税とキリスト教の弾圧に抵抗して蜂起したこの一揆を，幕府は12万を超える大軍で鎮圧しました。これを機に，キリスト教の取り締まりはさらに厳しくなりました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚠️ 一揆の二つの原因と経緯</span>
+    <strong>原因①　過酷な重税</strong>：島原・天草の領主が農民に苛烈な年貢を課し，払えない者を拷問・処刑した。<br>
+    <strong>原因②　キリスト教の弾圧</strong>：幕府による禁制が激化し，信者が信仰を守るため追い詰められた。<br><br>
+    天草四郎（益田時貞・当時16歳）を総大将に，廃城の原城に籠城して約4か月抵抗したが，最終的に鎮圧され，一揆勢はほぼ全滅した。
+  </div>
+
+  <h2>踏み絵と宗門改め——キリシタン摘発の仕組み</h2>
+
+  <p>島原天草一揆の後，幕府はキリスト教の取り締まりをさらに強化しました。その主な方法が，キリストや聖母マリアの像が彫られた板を足で踏ませる<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">踏み絵</span><span class="kw-pop"><span class="kw-title">踏み絵（ふみえ）／絵踏み（えふみ）</span><span class="kw-yomi">📖 読み：ふみえ・えふみ</span><span class="kw-body">キリストや聖母マリアの像を彫った板（踏み板）を踏ませ，キリシタンを見つけ出す方法。信仰上，聖像を踏めないキリシタンが摘発された。毎年正月，各地で行われた。</span></span></span>です。信仰上，聖像を踏むことができないキリシタンを見つけ出すために用いられました。</p>
+
+  <p>また，すべての住民を仏教の寺院に登録させ，キリシタンでないことを証明させる<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">宗門改め</span><span class="kw-pop"><span class="kw-title">宗門改め（しゅうもんあらため）</span><span class="kw-yomi">📖 読み：しゅうもんあらため</span><span class="kw-body">全住民を仏教寺院の檀家として登録させ，キリシタンでないことを証明させた制度（寺請制度ともいう）。寺が住民の戸籍的管理を担い，江戸時代の社会制度の基盤となった。</span></span></span>も制度化されました。人々は必ずどこかの仏教寺院の<strong>檀家（だんか）</strong>になることが義務づけられ，寺が住民の管理——現代でいう戸籍に近い役割——を担いました。</p>
+
+  <div class="result-box">
+    <span class="label">⚡ 踏み絵・宗門改めの歴史的意味</span>
+    もともとキリシタン摘発のための制度でしたが，同時に<strong>すべての日本人を仏教寺院と結びつける社会制度</strong>として定着しました。<br><br>
+    ▶ 各村で作成された「宗門人別改帳」には氏名・年齢・所属寺院が記載され，江戸時代の「戸籍」の役割を果たした。<br>
+    ▶ この制度は明治時代（1868年）の神仏分離令まで続き，日本人が特定の寺の檀家に帰属する文化の基礎となった。
+  </div>
+
+  <div class="timeline-bar">
+    <div class="tl-item">⚔️ 関ヶ原 1600</div>
+    <div class="tl-item">🏯 江戸幕府 1603</div>
+    <div class="tl-item">🔥 大坂の陣 1614-15</div>
+    <div class="tl-item">📜 武家諸法度 1615</div>
+    <div class="tl-item">🚶 参勤交代 1635（家光）</div>
+    <div class="tl-item">⛩️ 島原の乱 1637-38</div>
+    <div class="tl-item">🚢 鎖国完成 1639</div>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('sekigahara')" style="background:linear-gradient(135deg,#8b2500,#c87000)">
+    ⚔️ 関ヶ原の戦いの詳細——東軍vs西軍，勝敗を決めた小早川の裏切り <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('osaka')" style="background:linear-gradient(135deg,#1a2a6b,#4a1a7a)">
+    🔥 大坂の陣——方広寺の鐘銘問題から豊臣氏滅亡まで <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('buke')" style="background:linear-gradient(135deg,#1a4f7a,#1a6b3b)">
+    📜 武家諸法度・参勤交代——大名統制の仕組みをすべて解説 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('bakuhan')" style="background:linear-gradient(135deg,#4a1a7a,#8b2500)">
+    🏛️ 幕藩体制——江戸幕府の統治の仕組みと身分制度 <span class="btn-arrow">▶</span>
+  </button>
+  <button class="modal-btn" onclick="openModal('iemitsu')" style="background:linear-gradient(135deg,#1a6b3b,#1a4f7a)">
+    🏯 徳川家光——参勤交代の義務化・島原の乱・鎖国の完成 <span class="btn-arrow">▶</span>
+  </button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <a href="nihonshi_drill_nh21.html" class="sec-btn" style="text-decoration:none;font-size:13px">📝 単元㉑ドリルへ</a>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 単元㉑ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 第７章 総合ドリルで全単元を復習！</span>
+    <a href="nihonshi_drill_ch07.html">総合ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉑ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+
+<!-- 関ヶ原の戦い -->
+<div class="modal-overlay" id="modal-sekigahara" onclick="if(event.target===this)closeModal('sekigahara')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sekigahara')">✕</button>
+    <div class="modal-title">⚔️ 関ヶ原の戦い——天下分け目の一日</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 東軍 vs 西軍——対立の構図</div>
+      <div class="cause-box">
+        <span class="label">⚔️ 二つの陣営</span>
+        <strong>東軍（家康方）</strong>：徳川家康を盟主とし，福島正則・黒田長政・加藤清正など，朝鮮出兵で三成と対立した武将が多く参加した。総勢約7万5千。<br><br>
+        <strong>西軍（三成方）</strong>：石田三成を中心に，毛利輝元（総大将）・宇喜多秀家・小西行長らが参加。豊臣家の存続を守ろうとした。総勢約8万5千。<br><br>
+        兵力では西軍が上回っていたにもかかわらず，東軍が勝利した理由は何だったのでしょうか。
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 小早川秀秋の裏切り——勝敗を決めた「寝返り」</div>
+      <div class="why-box">
+        <span class="label">🔄 裏切りの瞬間</span>
+        戦いの最中，西軍の松尾山（まつおやま）に陣を張っていた<strong>小早川秀秋（こばやかわひであき）</strong>は，どちらの軍に味方するか日和見（ひよりみ）していました。業を煮やした家康が鉄砲を撃ちかけると，秀秋は東軍に寝返り，西軍の大谷吉継の部隊を背後から奇襲しました。<br><br>
+        この裏切りがきっかけとなり，西軍はわずか半日で崩壊。石田三成・小西行長ら西軍首脳は捕らえられ，京都・六条河原で処刑されました。
+      </div>
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 関ヶ原後の処分——大名の大移動</div>
+      <div class="result-box">
+        <span class="label">⚡ 戦後の大名再編</span>
+        勝利した家康は，大名の領地を大幅に組み替えました：<br><br>
+        ▶ <strong>外様大名（とざまだいみょう）</strong>：西軍に属した，または関ヶ原以前から敵対していた大名。九州・四国・東北の遠隔地に配置された（薩摩・島津氏，長州・毛利氏など）<br>
+        ▶ <strong>譜代大名（ふだいだいみょう）</strong>：関ヶ原以前から家康に仕えた家臣の大名。江戸の周辺・主要街道に配置され，幕府の要職についた<br>
+        ▶ <strong>親藩（しんぱん）</strong>：徳川家の一族（尾張・紀伊・水戸の御三家など）。外様大名を監視する位置に置かれた<br><br>
+        この大名配置の戦略が，200年以上にわたる徳川支配の安定を支えました。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 大坂の陣 -->
+<div class="modal-overlay" id="modal-osaka" onclick="if(event.target===this)closeModal('osaka')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('osaka')">✕</button>
+    <div class="modal-title">🔥 大坂の陣——豊臣氏の滅亡</div>
+    <div class="modal-body">
+      <div style="background:#1a2a6b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 方広寺の鐘銘問題——口実を作った家康</div>
+      <div class="cause-box">
+        <span class="label">🔔 鐘の文字が問題に？</span>
+        1614年，豊臣秀頼が京都の方広寺（ほうこうじ）の大鐘を再建したとき，鐘に刻まれた「国家安康（こっかあんこう）・君臣豊楽（くんしんほうらく）」という文字が問題になりました。<br><br>
+        幕府は「『国家安康』は家康の名を分断して呪いをかけている」「『君臣豊楽』は豊臣家を君主とする意味だ」と因縁をつけ，これを開戦の口実にしました。<br><br>
+        ほとんど言いがかりに近い主張でしたが，家康はこれを使って豊臣氏を追い詰めました。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 冬の陣（1614年）——講和と堀の埋め立て</div>
+      <div class="why-box">
+        <span class="label">❄️ 冬の陣の経緯</span>
+        1614年11月，家康は大坂城を包囲しました（大坂冬の陣）。大坂城は難攻不落の要塞で，浪人衆（真田幸村ら）が籠城して幕府軍を苦しめました。<br><br>
+        講和条件として家康は「堀を埋めること」を要求しました。豊臣方は外堀だけを埋めるつもりでしたが，幕府軍は約束を破って内堀まで埋めてしまいました。これにより大坂城の防御力は激減しました。
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 夏の陣（1615年）——豊臣氏の滅亡</div>
+      <div class="result-box">
+        <span class="label">🔥 最後の戦い</span>
+        1615年5月，幕府軍は再び大坂城を攻めました（大坂夏の陣）。堀を失った大坂城はもはや要塞ではなく，豊臣軍は野戦に打って出ましたが敗れ，大坂城は落城しました。<br><br>
+        豊臣秀頼（23歳）と母・淀君（よどぎみ）は城内で自刃し，豊臣氏は滅亡しました。真田幸村（さなだゆきむら）も夏の陣で討ち死にしています。<br><br>
+        これにより，徳川家に対抗できる勢力はなくなり，江戸幕府の支配が確立しました。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 武家諸法度・参勤交代 -->
+<div class="modal-overlay" id="modal-buke" onclick="if(event.target===this)closeModal('buke')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('buke')">✕</button>
+    <div class="modal-title">📜 武家諸法度・参勤交代——大名統制の仕組み</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 武家諸法度——大名を縛る法律</div>
+      <div class="cause-box">
+        <span class="label">📜 武家諸法度の主な内容</span>
+        1615年，幕府は「武家諸法度（元和令）」を発布しました。主な禁止事項：<br><br>
+        ▶ <strong>大城の修築・新築の禁止</strong>：幕府の許可なく城を修理・建設することを禁じた<br>
+        ▶ <strong>他国の大名との無断婚姻の禁止</strong>：大名同士が幕府の許可なく婚姻関係を結ぶことを禁じた<br>
+        ▶ <strong>一国一城令</strong>：1615年，大名は一つの城しか持てないとした（他の城は取り壊し）<br>
+        ▶ <strong>学問・武芸への精進</strong>：武士は学問と武芸を怠ってはならないとされた<br><br>
+        違反した大名は「改易（かいえき・領地没収）」「転封（てんぽう・領地替え）」「減封（げんぽう・領地削減）」などの処分を受けました。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 参勤交代——大名を江戸に縛りつける制度</div>
+      <div class="why-box">
+        <span class="label">🚶 参勤交代の仕組み</span>
+        1635年，3代将軍・徳川家光が武家諸法度（寛永令）を改定して義務化した制度。大名は：<br><br>
+        ▶ <strong>1年おきに江戸と領国（自分の藩）を往復する</strong>（「参勤」が江戸詰め，「交代」が領国帰還）<br>
+        ▶ <strong>妻子は江戸に常時住まわせる</strong>——事実上の人質。大名は家族のいる江戸に逆らえない<br>
+        ▶ <strong>往来には数百人〜数千人の大行列が必要</strong>——大名の格式を示すため，行列の規模が決まっていた<br>
+        ▶ <strong>江戸に藩邸（上屋敷・中屋敷・下屋敷）を維持する義務</strong>——常時多くの家臣を江戸に置く費用も必要
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 行列の規模と費用——具体的な数字で見る</div>
+      <div class="why-box">
+        <span class="label">📊 大名行列の実態</span>
+        参勤交代の行列規模は石高（格式）によって決まっていました。主な例：<br><br>
+        <strong>【加賀藩（前田家・102万石）の場合】</strong><br>
+        ▶ 行列の人数：約2,000〜4,000人（最大時は1万人超ともいわれる）<br>
+        ▶ 江戸〜金沢間の距離：約500km（東海道・北陸経由）<br>
+        ▶ 所要日数：約15〜20日<br>
+        ▶ 年間費用（参勤交代全体）：藩の総収入の約60〜70%を消費したと記録される<br><br>
+        <strong>【中規模藩（5〜10万石）の場合】</strong><br>
+        ▶ 行列の人数：約200〜500人<br>
+        ▶ 往復旅費・江戸屋敷維持費：年間で藩の収入の約30〜50%<br><br>
+        <strong>【具体的な費用例（仙台藩・伊達家・62万石）】</strong><br>
+        ▶ 江戸滞在の費用：1日あたり現代価値で約100〜200万円相当<br>
+        ▶ 参勤交代1回の旅費：現代価値で約1億〜数億円相当<br>
+        ▶ 江戸の藩邸：上・中・下の3つの屋敷を維持（上屋敷は現代の皇居周辺に相当する一等地）
+      </div>
+      <div style="background:#1a2a6b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 参勤交代の「本当の目的」と「想定外の効果」</div>
+      <div class="result-box">
+        <span class="label">💡 二重の効果</span>
+        <strong>【幕府の意図（大名統制）】</strong><br>
+        ▶ 膨大な旅費・藩邸維持費で大名の財力を継続的に消耗させ，反乱資金を持たせない<br>
+        ▶ 妻子を江戸に置くことで「人質」とし，謀反への心理的ブレーキをかける<br>
+        ▶ 大名が1年おきに領国を離れることで，領国経営に集中できなくさせる<br><br>
+        <strong>【想定外の経済効果】</strong><br>
+        ▶ 東海道・中山道・奥州街道などの<strong>五街道が整備</strong>され，宿場町が繁栄した<br>
+        ▶ 大名行列が物資・人・お金を全国に運び，<strong>流通経済が発展</strong>した<br>
+        ▶ 江戸に集まる大名・武士・商人により，江戸の人口は18世紀初頭に<strong>100万人を超える世界最大級の都市</strong>に成長した<br>
+        ▶ 各地の特産品が江戸に持ち込まれ，<strong>全国的な市場経済</strong>の基盤が形成された
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 幕藩体制 -->
+<div class="modal-overlay" id="modal-bakuhan" onclick="if(event.target===this)closeModal('bakuhan')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('bakuhan')">✕</button>
+    <div class="modal-title">🏛️ 幕藩体制——江戸幕府の統治の仕組み</div>
+    <div class="modal-body">
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 幕府の組織——将軍を支える役職</div>
+      <div class="cause-box">
+        <span class="label">🏛️ 幕府の主な役職</span>
+        江戸幕府では，将軍を頂点に以下の役職が政務を担いました：<br><br>
+        ▶ <strong>老中（ろうじゅう）</strong>：幕府政治の最高責任者（複数人で月交代）。外交・大名統制を担当<br>
+        ▶ <strong>若年寄（わかどしより）</strong>：老中を補佐し，旗本・御家人の管理を担当<br>
+        ▶ <strong>大目付（おおめつけ）</strong>：大名を監視・取り締まる役職<br>
+        ▶ <strong>町奉行（まちぶぎょう）</strong>：江戸などの都市の行政・警察・裁判を担当<br>
+        ▶ <strong>勘定奉行（かんじょうぶぎょう）</strong>：幕府の財政・税収を管理
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 大名の種類——外様・譜代・親藩</div>
+      <div class="why-box">
+        <span class="label">📍 大名の3分類</span>
+        江戸幕府の大名は，徳川家との関係によって3種類に分けられていました：<br><br>
+        ▶ <strong>親藩（しんぱん）</strong>：徳川家一族。尾張・紀伊・水戸の「御三家」が代表。将軍家に継嗣がない場合の候補<br>
+        ▶ <strong>譜代大名（ふだいだいみょう）</strong>：関ヶ原以前から家康に仕えた家臣の子孫。江戸周辺・要所に配置。老中など幕府の要職に就ける<br>
+        ▶ <strong>外様大名（とざまだいみょう）</strong>：関ヶ原以降に従った大名。九州・四国・東北の遠隔地に配置。幕府の要職には就けない<br><br>
+        この配置は徳川家に対する忠誠度に基づいたもので，反乱のリスクが高い外様大名を意図的に遠ざけました。
+      </div>
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 江戸時代の身分制度</div>
+      <div class="result-box">
+        <span class="label">⚡ 士農工商と身分の固定</span>
+        豊臣秀吉が始めた兵農分離を受け継ぎ，江戸幕府は身分制度を固定しました：<br><br>
+        ▶ <strong>武士（士）</strong>：苗字・帯刀が許された支配身分。将軍・大名・旗本・御家人などの階層があった<br>
+        ▶ <strong>農民（農）</strong>：人口の約80%を占める。年貢（米の約40〜50%）を幕府・藩に納める義務があった<br>
+        ▶ <strong>職人（工）・商人（商）</strong>：都市に住む町人。職人は物を作り，商人は売買を行った<br><br>
+        身分は原則として世襲（親の身分を子が引き継ぐ）。武士から農民になったり，商人が武士になったりすることは原則禁止でした。この安定した身分制度が，江戸時代265年間の社会秩序を支えました。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 徳川家光 -->
+<div class="modal-overlay" id="modal-iemitsu" onclick="if(event.target===this)closeModal('iemitsu')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('iemitsu')">✕</button>
+    <div class="modal-title">🏯 徳川家光——参勤交代の義務化・島原の乱・鎖国の完成</div>
+    <div class="modal-body">
+      <div style="background:#1a6b3b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 「生まれながらの将軍」——家光とはどんな人物か</div>
+      <div class="cause-box">
+        <span class="label">👑 家光のプロフィール</span>
+        徳川家光（1604〜1651年）は，2代将軍・秀忠の次男として生まれ，3代将軍（在職1623〜1651年）に就きました。幼少期は跡継ぎとして認められず苦労しましたが，乳母・春日局（かすがのつぼね）の尽力で将軍の座に就いたとされます。<br><br>
+        家光は諸大名を前に「余は生まれながらの将軍である。皆は当然の家臣として仕えよ」と宣言したといわれます。これは，「家康は天下を取った初代，秀忠は父から譲られた2代目，家光は生まれたときから将軍だ」という意識を示したもので，徳川将軍家の権威が完全に確立したことを象徴する言葉です。
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 島原の乱（1637〜1638年）——最後の大規模反乱</div>
+      <div class="why-box">
+        <span class="label">⛩️ 島原の乱の経緯</span>
+        1637年，九州の島原（長崎県）と天草（熊本県）で，農民・キリシタン（キリスト教徒）約3万7千人が一揆を起こしました（島原の乱）。<br><br>
+        <strong>原因は2つ</strong>：<br>
+        ①<strong>過酷な重税</strong>：天草・島原の領主が農民に苛烈な年貢を課し，払えない農民を拷問・処刑した<br>
+        ②<strong>キリスト教の弾圧</strong>：幕府によるキリシタン迫害が激化し，信者が追い詰められた<br><br>
+        一揆勢は天草四郎（益田時貞・当時16歳）を総大将に，廃城・原城（はらじょう）に籠城して抵抗しました。幕府は12万を超える大軍を投入し，約4か月の攻城戦の末に鎮圧しました。一揆勢はほぼ全滅しました。<br><br>
+        この乱の後，キリスト教弾圧はさらに厳しくなり，<strong>踏み絵（絵踏み・えふみ）</strong>が各地で行われました。
+      </div>
+      <div style="background:#1a2a6b;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 鎖国の完成（1639年）——日本を「閉じた国」に</div>
+      <div class="result-box">
+        <span class="label">🚢 鎖国令の経緯</span>
+        幕府は1633年から段階的に外国との交流を制限する「鎖国令」を出し続け，1639年のポルトガル船来航禁止で鎖国体制が完成しました。<br><br>
+        <strong>鎖国後の外交の窓口（4つの口）</strong>：<br>
+        ▶ <strong>長崎・出島（でじま）</strong>：オランダ（西洋で唯一貿易を認められた）・中国との貿易<br>
+        ▶ <strong>対馬（つしま）</strong>：朝鮮との外交・貿易（宗氏が管理）<br>
+        ▶ <strong>薩摩（さつま）</strong>：琉球王国を通じた交流<br>
+        ▶ <strong>松前（まつまえ）</strong>：アイヌとの交易<br><br>
+        「鎖国」という言葉は江戸時代後期に使われ始めたもので，当時は「海禁（かいきん）」などと呼ばれていました。完全に閉じていたわけではなく，4つの窓口を通じて外部の情報・技術・物資は入り続けました。<br><br>
+        鎖国体制は1854年の<strong>日米和親条約</strong>（ペリー来航）によって終わりを迎えます。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 参勤交代の経済 -->
+<div class="modal-overlay" id="modal-sankin-keizai" onclick="if(event.target===this)closeModal('sankin-keizai')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sankin-keizai')">✕</button>
+    <div class="modal-title">📊 参勤交代の経済——規模・費用・経済効果</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 行列の規模と費用——大名の財政を圧迫した実態</div>
+      <div class="why-box">
+        <span class="label">🚶 具体的な数字で見る</span>
+        行列の規模は大名の格式（石高）によって決まっていました：<br><br>
+        <strong>【加賀藩・前田家（102万石）の場合】</strong><br>
+        ▶ 行列の人数：2,000〜4,000人（最大1万人超ともいわれる）<br>
+        ▶ 江戸〜金沢間：約500km，所要15〜20日<br>
+        ▶ 年間費用：藩の総収入の約60〜70%を消費<br><br>
+        <strong>【仙台藩・伊達家（62万石）の場合】</strong><br>
+        ▶ 参勤1回の旅費：現代価値で約1億〜数億円相当<br>
+        ▶ 江戸滞在の1日費用：現代価値で100〜200万円相当<br><br>
+        <strong>なぜこれが大名統制になるのか</strong><br>
+        ①旅費・江戸屋敷の維持費が膨大で，大名の財力を継続的に消耗させ，反乱資金が残らない。<br>
+        ②家族が江戸にいるため，大名は謀反を起こせない（人質）。<br>
+        ③領国を1年おきに離れるため，地元での力を蓄えにくい。
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 参勤交代が生んだ経済効果</div>
+      <div class="result-box">
+        <span class="label">💡 大名を苦しめた制度が経済を動かした</span>
+        大名を苦しめた参勤交代は，同時に日本経済を活性化させました：<br><br>
+        ▶ 東海道・中山道など<strong>五街道が整備</strong>され，宿場町が発展した<br>
+        ▶ 大名行列が物資・人・お金を全国に運び，流通経済が発達した<br>
+        ▶ 江戸に集まる大名・武士・商人により，江戸の人口は18世紀初頭に<strong>100万人を超える世界最大級の都市</strong>に成長した<br><br>
+        大名を財政的に縛るための制度が，皮肉にも全国規模の経済ネットワークを生み出したのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 穴埋めチャレンジ バー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">語句を選んでタップして当てはめてください</span>
+    <span id="ccb-count">残り 5語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"徳川家光", "B":"参勤交代", "C":"島原天草一揆",
+  "D":"踏み絵", "E":"宗門改め"
+};
+const wordBank = ["徳川家光","参勤交代","島原天草一揆","踏み絵","宗門改め"];
+
+const miniQuizData = [
+  {q:"①　江戸幕府3代将軍で，参勤交代を義務化し幕府体制を固めた人物は誰か？",
+   choices:["徳川家康","徳川秀忠","徳川家光","徳川吉宗"], ans:2,
+   exp:"徳川家光（とくがわいえみつ）。「生まれながらの将軍」と称され，参勤交代の義務化・島原の乱の鎮圧・鎖国の完成など，幕府体制を盤石にしました。"},
+  {q:"②　大名が1年おきに江戸と領国を往復することを義務づけた制度を何というか？",
+   choices:["一国一城令","参勤交代","太閤検地","刀狩令"], ans:1,
+   exp:"参勤交代（さんきんこうたい）。大行列の費用が藩の財政を圧迫し，反乱を起こす余力を奪いました。妻子を江戸に住まわせることで，事実上の人質にもなりました。"},
+  {q:"③　1637年，キリシタン弾圧と重税に苦しんだ農民が九州で起こした大一揆を何というか？",
+   choices:["加賀一向一揆","天文法華の乱","島原天草一揆","享保の打ちこわし"], ans:2,
+   exp:"島原天草一揆（しまばらあまくさいっき）。天草四郎を総大将に約3万7千人が籠城。幕府は12万の大軍を送って鎮圧しました。これが鎖国政策を強化するきっかけにもなりました。"},
+  {q:"④　キリシタンを見つけ出すために，踏ませて信仰を確認した道具を何というか？",
+   choices:["御朱印状","踏み絵","宗門改め","人別帳"], ans:1,
+   exp:"踏み絵（ふみえ）。キリストや聖母マリアを刻んだ板や金属板を踏ませ，踏めない人をキリシタンとして摘発しました。"}
+];
+
+const finalQuizData = [
+  {q:"江戸幕府3代将軍で，幕府体制の完成者といわれる人物は誰か？",
+   choices:["徳川家康","徳川秀忠","徳川家光","徳川綱吉"], ans:2,
+   exp:"徳川家光（とくがわいえみつ）。「生まれながらの将軍」と称し，参勤交代の義務化・鎖国の完成など，幕府の支配体制を盤石にしました。"},
+  {q:"家光が「生まれながらの将軍」と述べた発言が示すことは何か？",
+   choices:["征夷大将軍は世襲の地位であることを内外に示した","実力で将軍位を得たことを誇った","農民出身でも将軍になれると示した","天皇の命令で就任したと宣言した"], ans:0,
+   exp:"徳川将軍家が武士の頂点に立つ世襲の支配者であることを示しました。家康・秀忠と違い，家光は最初から徳川の世として生まれた将軍であることを強調しました。"},
+  {q:"参勤交代の制度が大名の財力を弱める理由として最も正しいのはどれか？",
+   choices:["田畑が没収されるから","大行列の費用や江戸での生活費が藩の財政を圧迫するから","参勤中は商売ができないから","幕府に税として納めるから"], ans:1,
+   exp:"参勤交代の往復費用・江戸滞在費は莫大で，藩収入の60〜70%を消費した藩もありました。財政的に消耗させることで，大名が幕府に反抗する力を奪いました。"},
+  {q:"参勤交代において，大名の妻子はどこに住まわされたか？",
+   choices:["領国の城","京都の屋敷","江戸の屋敷","大坂の屋敷"], ans:2,
+   exp:"江戸（えど）。大名の妻子は江戸に常住させられ，事実上の人質となりました。家族が将軍のお膝元にいることで，大名は反乱を起こしにくくなりました。"},
+  {q:"1637年に九州で起きた，キリシタン弾圧と重税への抵抗が原因の大一揆を何というか？",
+   choices:["加賀一向一揆","山城国一揆","島原天草一揆","百姓一揆"], ans:2,
+   exp:"島原天草一揆（しまばらあまくさいっき）。天草四郎を総大将に約3万7千人が籠城。幕府は12万の大軍を送って鎮圧しました。"},
+  {q:"島原天草一揆を率いた若い総大将の名前は何か？",
+   choices:["加藤清正","天草四郎","有馬晴信","小西行長"], ans:1,
+   exp:"天草四郎（あまくさしろう）。本名は益田時貞。16歳前後の若さで総大将となり，キリシタン信仰のもとに農民たちをまとめました。"},
+  {q:"キリシタンを摘発するために，キリストや聖母マリアを刻んだものを踏ませた道具を何というか？",
+   choices:["御朱印状","人別帳","踏み絵","宗門改め帳"], ans:2,
+   exp:"踏み絵（ふみえ）。キリスト教の聖像を刻んだ板や金属板で，踏めない人をキリシタンとして取り締まりました。"},
+  {q:"すべての人を仏教寺院に登録させ，キリシタンでないことを確認する制度を何というか？",
+   choices:["踏み絵","宗門改め","御成敗式目","武家諸法度"], ans:1,
+   exp:"宗門改め（しゅうもんあらため）。人々はいずれかの寺院の檀家として登録され，寺院がキリシタンでないことを証明しました。寺院は戸籍管理機能も担うようになりました。"},
+  {q:"幕府が貿易を許可した「鎖国の4つの口」のうち，中国・オランダとの貿易窓口となった場所はどこか？",
+   choices:["対馬","長崎","薩摩","松前"], ans:1,
+   exp:"長崎（ながさき）。出島にオランダ商館，唐人屋敷に中国人を隔離して貿易を行いました。4つの口のうち唯一，幕府が直接管理した窓口です。"},
+  {q:"参勤交代で加賀藩（102万石）が動員した行列の規模として，正しいものに近いのはどれか？",
+   choices:["約100〜200人","約500〜800人","約2,000〜4,000人","約1万人以上"], ans:2,
+   exp:"加賀藩の行列は2,000〜4,000人規模に達しました。この費用は藩収入の60〜70%を消費したともいわれます。大名の財力を消耗させる参勤交代の効果がよくわかります。"}
+];
+
+const checkItems = [
+  "徳川家光が3代将軍として幕府体制を完成させた人物であることを説明できる",
+  "「生まれながらの将軍」という言葉の意味と，それが示す幕府の正統性を説明できる",
+  "参勤交代の仕組み（1年おき江戸と領国を往復，妻子は江戸に常住）を説明できる",
+  "参勤交代が大名の財力を消耗させ反乱を防ぐ効果があったことを，具体的な費用例を挙げて説明できる",
+  "島原天草一揆の原因（キリシタン弾圧と重税），規模（天草四郎・約3万7千人），結果を説明できる",
+  "島原天草一揆が幕府の鎖国・キリシタン弾圧政策を強化させたことを説明できる",
+  "踏み絵がキリシタン摘発のために使われた道具であることを説明できる",
+  "宗門改めの仕組み（寺院への登録・寺請制度）と，キリシタン摘発への効果を説明できる",
+  "鎖国の4つの口（長崎・対馬・薩摩・松前）とそれぞれの貿易相手を説明できる",
+  "江戸幕府の支配が「幕藩体制」と呼ばれる二重構造（幕府と藩）であることを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let currentBlank = null;
+let isDemo = false;
+let selectedChip = null;
+let placedAnswers = {};
+
+function startChallenge() {
+  isDemo = false;
+  placedAnswers = {};
+  selectedChip = null;
+  document.querySelectorAll('.blank').forEach(el => {
+    el.classList.remove('placed','correct','wrong','demo-fill');
+    el.querySelector('.blank-display').textContent = '　　　　';
+  });
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('chal-btn-1').textContent = '🎯 チャレンジ中…';
+  document.getElementById('chal-btn-1').disabled = true;
+  rebuildChips();
+  updateCount();
+}
+
+function rebuildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const remaining = wordBank.filter(w => !Object.values(placedAnswers).includes(w));
+  remaining.forEach(w => {
+    const chip = document.createElement('span');
+    chip.className = 'challenge-chip';
+    chip.textContent = w;
+    chip.onclick = () => selectChip(chip, w);
+    bar.appendChild(chip);
+  });
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  if(selectedChip === word) { selectedChip = null; return; }
+  selectedChip = word;
+  el.classList.add('selected');
+  document.getElementById('ccb-hint').textContent = '「' + word + '」を選択中 — 空欄をタップして当てはめてください';
+}
+
+function blankClicked(event, id) {
+  event.stopPropagation();
+  if(isDemo) return;
+  if(!document.getElementById('challenge-chip-bar').classList.contains('visible')) return;
+  if(!selectedChip) {
+    document.getElementById('ccb-hint').textContent = '先に下の語句を選んでください';
+    return;
+  }
+  delete placedAnswers[id];
+  placedAnswers[id] = selectedChip;
+  const el = document.querySelector('[data-id="'+id+'"] .blank-display');
+  if(el) el.textContent = selectedChip;
+  document.querySelector('[data-id="'+id+'"]').classList.add('placed');
+  selectedChip = null;
+  rebuildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = Object.keys(placedAnswers).length;
+  const total = wordBank.length;
+  document.getElementById('ccb-count').textContent = '残り ' + (total - placed) + '語';
+}
+
+function judgeChallenge() {
+  let correct = 0;
+  let wrong = [];
+  Object.keys(allAnswers).forEach(id => {
+    const el = document.querySelector('[data-id="'+id+'"]');
+    if(!el) return;
+    const placed = placedAnswers[id];
+    if(placed === allAnswers[id]) {
+      el.classList.add('correct');
+      el.classList.remove('placed','wrong');
+      correct++;
+    } else {
+      el.classList.add('wrong');
+      el.classList.remove('placed','correct');
+      wrong.push(allAnswers[id]);
+    }
+  });
+  const total = Object.keys(allAnswers).length;
+  const secSt = document.getElementById('sec-status-1');
+  if(correct === total) {
+    secSt.textContent = '✅ 全問正解！';
+    secSt.className = 'sec-status pass';
+    fireConfetti();
+  } else {
+    secSt.textContent = correct + ' / ' + total + ' 正解';
+    secSt.className = 'sec-status fail';
+    document.getElementById('oshii-msg').textContent = '間違い：' + wrong.join('、');
+    document.getElementById('oshii-popup').style.display = 'block';
+  }
+}
+
+function fireOshii(show) {
+  if(!show) return;
+}
+
+function showDemo() {
+  isDemo = true;
+  Object.keys(allAnswers).forEach(id => {
+    const el = document.querySelector('[data-id="'+id+'"]');
+    if(el) {
+      el.querySelector('.blank-display').textContent = allAnswers[id];
+      el.classList.add('demo-fill');
+      el.classList.remove('placed','correct','wrong');
+    }
+  });
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-chips').innerHTML = '';
+  document.getElementById('ccb-hint').textContent = '手本表示中';
+}
+
+function exitDemo() {
+  isDemo = false;
+  placedAnswers = {};
+  selectedChip = null;
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.classList.remove('placed','correct','wrong','demo-fill');
+    el.querySelector('.blank-display').textContent = '　　　　';
+  });
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-hint').textContent = '語句を選んでタップして当てはめてください';
+  rebuildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  isDemo = false;
+  placedAnswers = {};
+  selectedChip = null;
+  document.querySelectorAll('.blank').forEach(el => {
+    el.classList.remove('placed','correct','wrong','demo-fill');
+    el.querySelector('.blank-display').textContent = allAnswers[el.dataset.id];
+  });
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('chal-btn-1').textContent = '🎯 穴埋めチャレンジ！';
+  document.getElementById('chal-btn-1').disabled = false;
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('challenge-chip-bar').classList.remove('visible');
+  rebuildChips();
+  updateCount();
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  body.classList.toggle('open');
+  btn.classList.toggle('open');
+  if(body.classList.contains('open') && !body.innerHTML.trim()) {
+    renderMQ(id);
+  }
+}
+
+function renderMQ(id) {
+  const area = document.getElementById(id);
+  area.innerHTML = miniQuizData.map((q, i) => {
+    const choices = q.choices.map((c, ci) =>
+      `<div class="mq-choice" onclick="mqAnswer(this,${ci},${q.ans},'mq-q${i}')">${ci+1}. ${c}</div>`
+    ).join('');
+    return `<div class="mq-block" id="mq-q${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${q.q}</div>
+      <div class="mq-choices">${choices}</div>
+    </div>`;
+  }).join('');
+}
+
+function mqAnswer(el, ci, ans, blockId) {
+  const block = document.getElementById(blockId);
+  block.querySelectorAll('.mq-choice').forEach(c => c.classList.remove('correct','wrong','reveal'));
+  if(ci === ans) {
+    el.classList.add('correct');
+  } else {
+    el.classList.add('wrong');
+    block.querySelectorAll('.mq-choice')[ans].classList.add('reveal');
+  }
+  block.querySelectorAll('.mq-choice').forEach(c => { c.onclick = null; c.style.cursor='default'; });
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = new Array(finalQuizData.length).fill(-1);
+let finalDone = false;
+
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((q, qi) => {
+    const choices = q.choices.map((c, ci) =>
+      `<div class="mq-choice" id="fq${qi}_${ci}" onclick="finalSelect(${qi},${ci})">${ci+1}. ${c}</div>`
+    ).join('');
+    return `<div class="mq-block" style="margin-bottom:20px">
+      <div class="mq-q"><span class="mq-qnum">${qi+1}</span>${q.q}</div>
+      <div class="mq-choices">${choices}</div>
+    </div>`;
+  }).join('');
+}
+
+function finalSelect(qi, ci) {
+  if(finalDone) return;
+  const q = finalQuizData[qi];
+  for(let i = 0; i < q.choices.length; i++) {
+    const el = document.getElementById('fq'+qi+'_'+i);
+    if(el) el.classList.remove('correct','wrong','reveal','selected');
+  }
+  const el = document.getElementById('fq'+qi+'_'+ci);
+  if(el) { el.classList.add('selected'); el.style.background='#fdd9c4'; el.style.borderColor='#8b2500'; }
+  finalAnswers[qi] = ci;
+}
+
+function judgeFinal() {
+  if(finalDone) return;
+  finalDone = true;
+  let score = 0;
+  finalQuizData.forEach((q, qi) => {
+    const ua = finalAnswers[qi];
+    for(let ci = 0; ci < q.choices.length; ci++) {
+      const el = document.getElementById('fq'+qi+'_'+ci);
+      if(!el) continue;
+      el.onclick = null; el.style.cursor = 'default';
+      if(ci === q.ans) {
+        if(ua === ci) { el.classList.add('correct'); el.style.background=''; el.style.borderColor=''; score++; }
+        else { el.classList.add('reveal'); el.style.background=''; el.style.borderColor=''; }
+      } else if(ua === ci) {
+        el.classList.add('wrong'); el.style.background=''; el.style.borderColor='';
+      } else {
+        el.style.background=''; el.style.borderColor='';
+      }
+    }
+  });
+  const pass = score >= 8;
+  const pct = Math.round(score / finalQuizData.length * 100);
+  document.getElementById('final-result-row').innerHTML =
+    `<div style="margin-top:14px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+      <div style="font-size:1.4em;font-weight:bold;color:${pass ? '#1a4015' : '#800'}">
+        ${score} / ${finalQuizData.length} 問正解（${pct}%）${pass ? '　🎉 合格！' : '　📖 もう一度'}
+      </div>
+      <div style="font-size:13px;color:#555;margin-top:4px">合格ライン：8問以上</div>
+    </div>`;
+  if(pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalDone = false;
+  finalAnswers = new Array(finalQuizData.length).fill(-1);
+  document.getElementById('final-result-row').innerHTML = '';
+  buildFinal();
+}
+
+/* ===== チェックリスト ===== */
+let checkStates = new Array(checkItems.length).fill(false);
+
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div onclick="toggleCheck(${i})" id="chk${i}" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;border:1.5px solid #f0c880;margin-bottom:6px;cursor:pointer;background:#fff;transition:all 0.15s">
+      <span id="chk-icon${i}" style="font-size:1.3em">⬜</span>
+      <span style="font-size:14px;line-height:1.6">${item}</span>
+    </div>`
+  ).join('');
+}
+
+function toggleCheck(i) {
+  checkStates[i] = !checkStates[i];
+  const row = document.getElementById('chk'+i);
+  const icon = document.getElementById('chk-icon'+i);
+  if(checkStates[i]) {
+    icon.textContent = '✅';
+    row.style.background = '#d0f0d8';
+    row.style.borderColor = '#1a6b22';
+  } else {
+    icon.textContent = '⬜';
+    row.style.background = '#fff';
+    row.style.borderColor = '#f0c880';
+  }
+  const done = checkStates.filter(Boolean).length;
+  const total = checkItems.length;
+  document.getElementById('check-bar').style.width = (done/total*100) + '%';
+  document.getElementById('check-count').textContent = done + ' / ' + total + ' チェック済み';
+  if(done === total) fireConfetti();
+}
+
+/* ===== Confetti ===== */
+function fireConfetti() {
+  const cols = ['#8b2500','#c87000','#f4a261','#fbbf24','#f87171','#34d399'];
+  for(let i = 0; i < 80; i++) {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      const size = 8 + Math.random() * 10;
+      Object.assign(el.style, {
+        position:'fixed',top:'-10px',left:Math.random()*100+'vw',
+        width:size+'px',height:size+'px',background:cols[Math.floor(Math.random()*cols.length)],
+        borderRadius:'2px',animation:'fall linear forwards',
+        animationDuration:(1.5+Math.random()*1.5)+'s',pointerEvents:'none',zIndex:'9999'
+      });
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 3500);
+    }, i * 20);
+  }
+}
+
+const styleEl = document.createElement('style');
+styleEl.textContent = '@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(styleEl);
+
+/* ===== Modal ===== */
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ===== kw popup (mobile tap) ===== */
+document.addEventListener('click', e => {
+  const kw = e.target.closest('.kw:not(.blank)');
+  document.querySelectorAll('.kw.active').forEach(el => { if(el !== kw) el.classList.remove('active'); });
+  if(kw) kw.classList.toggle('active');
+});
+
+/* ===== Init ===== */
+buildFinal();
+buildChecklist();
+</script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉔ 江戸時代の文化｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch08.html" class="back-to-index">← 第８章テキストへ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🎭 単元㉔　江戸時代の文化——元禄文化と化政文化</h1>
+
+<!-- ===== Section ===== -->
+<div class="section">
+  <span class="section-label">第8章 第１節　単元㉔</span>
+  <h2>庶民の文化が開花——江戸時代に文化が変わった理由</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>江戸時代に入ると，これまで貴族・武士が主役だった文化が大きく変わります。商業の発展で豊かになった<strong>庶民（商人・町人）が文化の担い手</strong>となり，俳諧・小説・浮世絵・歌舞伎など，現代につながる文化が次々と生まれました。江戸時代の文化は大きく「<strong>元禄文化</strong>」と「<strong>化政文化</strong>」の2つに分けられます。</p>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">⏱ この単元の流れ</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">元禄期</span><div class="flow-content">5代将軍・<strong>徳川綱吉</strong>の時代（17世紀末〜18世紀初）。上方（大阪・京都）の商人が豊かになり，<strong>元禄文化</strong>が栄える</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">上方中心</span><div class="flow-content"><strong>松尾芭蕉</strong>（俳諧）・<strong>井原西鶴</strong>（浮世草子）・<strong>近松門左衛門</strong>（人形浄瑠璃）・<strong>菱川師宣</strong>（浮世絵の創始）が活躍</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">中期</span><div class="flow-content">享保の改革（8代将軍・吉宗）を経て，政治の中心が江戸に確立。幕府の統治が安定し，江戸の人口が増大する</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year blue">化政期</span><div class="flow-content">11代将軍・<strong>徳川家斉</strong>の時代（19世紀初め）。江戸の庶民が文化の主役となり，<strong>化政文化</strong>が花開く</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year navy">江戸中心</span><div class="flow-content"><strong>葛飾北斎</strong>（富嶽三十六景）・<strong>歌川広重</strong>（東海道五十三次）・<strong>十返舎一九</strong>（滑稽本）・<strong>伊能忠敬</strong>（全国地図）が活躍</div></div>
+    </div>
+    <div class="flow-note">
+      💡 元禄文化＝<strong>上方（大阪・京都）</strong>中心，化政文化＝<strong>江戸</strong>中心，という地域の違いが入試でよく問われます！
+    </div>
+  </div>
+
+  <div class="cause-box">
+    <span class="label">📈 なぜ庶民の文化が発展したのか</span>
+    ▶ 江戸時代の長い平和の中で，農業・商業・手工業が発展し，<strong>町人（商人・職人）が経済的に豊か</strong>になった<br>
+    ▶ 識字率が向上し，<strong>寺子屋（てらこや）</strong>などで庶民も読み書きを学べるようになった<br>
+    ▶ 出版業（本屋）が発展し，浮世草子・随筆・俳諧集が広く売られるようになった<br>
+    ▶ 歌舞伎・人形浄瑠璃が大衆の娯楽として定着した
+  </div>
+
+  <h2><span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">元禄文化</span><span class="kw-pop"><span class="kw-title">元禄文化（げんろくぶんか）</span><span class="kw-yomi">📖 読み：げんろくぶんか</span><span class="kw-body">17世紀末〜18世紀初めの5代将軍・徳川綱吉の時代に栄えた文化。上方（大阪・京都）の豊かな商人・町人を担い手とする。松尾芭蕉（俳諧）・井原西鶴（浮世草子）・近松門左衛門（人形浄瑠璃）・菱川師宣（浮世絵）などが活躍した。</span></span></span>（A）——上方の町人文化</h2>
+
+  <p><span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">元禄文化</span><span class="kw-pop"><span class="kw-title">元禄文化（げんろくぶんか）</span><span class="kw-yomi">📖 読み：げんろくぶんか</span><span class="kw-body">17世紀末〜18世紀初めの5代将軍・徳川綱吉の時代に栄えた文化。上方（大阪・京都）の豊かな商人・町人を担い手とする。松尾芭蕉（俳諧）・井原西鶴（浮世草子）・近松門左衛門（人形浄瑠璃）・菱川師宣（浮世絵）などが活躍した。</span></span></span>は，5代将軍・徳川綱吉の時代（17世紀末〜18世紀初め）に，<strong>上方（大阪・京都）</strong>を中心に栄えた文化です。商業の発展で財力を持った町人が文化を支え，俳諧・小説・演劇・絵画と多彩な分野で才能が花開きました。</p>
+
+  <div class="why-box">
+    <span class="label">🌿 <span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">松尾芭蕉</span><span class="kw-pop"><span class="kw-title">松尾芭蕉（まつおばしょう）</span><span class="kw-yomi">📖 読み：まつおばしょう</span><span class="kw-body">1644〜1694年。江戸時代前期の俳人。俳諧を芸術として完成させ，「俳聖」と称される。東北・北陸を旅した記録をまとめた紀行文「奥の細道（おくのほそ道）」が代表作。「古池や蛙飛びこむ水の音」「夏草や兵どもが夢の跡」などの名句で有名。</span></span></span>（B）——俳諧の大成</span>
+    <strong>松尾芭蕉（まつおばしょう，1644〜1694年）</strong>は，俳諧（はいかい）を芸術の域まで高め，「<strong>俳聖（はいせい）</strong>」と呼ばれました。<br><br>
+    ▶ 代表作：<strong>「奥の細道（おくのほそ道）」</strong>——東北・北陸を旅した記録をまとめた俳諧紀行文<br>
+    ▶ 名句：「古池や蛙飛びこむ水の音」「夏草や兵どもが夢の跡」<br>
+    ▶ 芭蕉の俳風は「<strong>蕉風（しょうふう）</strong>」と呼ばれ，後世の俳句に大きな影響を与えた
+  </div>
+
+  <div class="why-box">
+    <span class="label">📖 井原西鶴——浮世草子の創始</span>
+    <strong>井原西鶴（いはらさいかく，1642〜1693年）</strong>は，町人の現実の生活を生き生きと描いた小説「<strong>浮世草子（うきよぞうし）</strong>」を確立しました。<br><br>
+    ▶ 代表作：<strong>「好色一代男（こうしょくいちだいおとこ）」</strong>——町人の愛と欲を描いた小説<br>
+    ▶ 「日本永代蔵（にほんえいたいぐら）」——商人の才覚と失敗を描いた経済小説<br>
+    ▶ 町人の欲望・愛・金銭を率直に描いた点で，現代小説の祖ともいえる
+  </div>
+
+  <div class="cause-box">
+    <span class="label">🎭 <span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">近松門左衛門</span><span class="kw-pop"><span class="kw-title">近松門左衛門（ちかまつもんざえもん）</span><span class="kw-yomi">📖 読み：ちかまつもんざえもん</span><span class="kw-body">1653〜1725年。江戸時代前期の劇作家。人形浄瑠璃・歌舞伎の脚本を多数書き，「日本のシェイクスピア」とも呼ばれる。「曾根崎心中（そねざきしんじゅう）」「国性爺合戦（こくせんやかっせん）」などが代表作。町人の悲恋や義理人情を描いた。</span></span></span>（C）——人形浄瑠璃の脚本家</span>
+    <strong>近松門左衛門（ちかまつもんざえもん，1653〜1725年）</strong>は，人形浄瑠璃（にんぎょうじょうるり）・歌舞伎の脚本を多数書き，「<strong>日本のシェイクスピア</strong>」と呼ばれます。<br><br>
+    ▶ 代表作：<strong>「曾根崎心中（そねざきしんじゅう）」</strong>——町人の男女の悲恋を描いた人形浄瑠璃<br>
+    ▶ 「国性爺合戦（こくせんやかっせん）」——英雄・鄭成功（ていせいこう）を題材にした歴史劇<br>
+    ▶ 義理と人情の板挟みになった人物たちのドラマが庶民の共感を呼んだ
+  </div>
+
+  <div class="result-box">
+    <span class="label">🖼️ 菱川師宣——浮世絵の創始者</span>
+    <strong>菱川師宣（ひしかわもろのぶ，1618〜1694年ごろ）</strong>は，庶民の日常・美人・風俗を描いた版画「<strong>浮世絵（うきよえ）</strong>」を確立した人物です。<br><br>
+    ▶ 代表作：<strong>「見返り美人図（みかえりびじんず）」</strong>——振り返る女性を描いた肉筆画（江戸東京博物館所蔵）<br>
+    ▶ 木版画（もくはんが）を活用して，安価に大量印刷・販売できる浮世絵版画を普及させた<br>
+    ▶ その後，浮世絵は鈴木春信・喜多川歌麿・東洲斎写楽・葛飾北斎・歌川広重らへと発展した
+  </div>
+
+  <p style="margin:10px 0">
+    <button onclick="openModal('genroku')" style="background:#c87000;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:bold;cursor:pointer;font-family:inherit;box-shadow:0 2px 0 #8a4e00">🎨 元禄文化の詳細——作品・人物・覚え方のコツを見る</button>
+  </p>
+
+  <h2><span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">化政文化</span><span class="kw-pop"><span class="kw-title">化政文化（かせいぶんか）</span><span class="kw-yomi">📖 読み：かせいぶんか</span><span class="kw-body">19世紀初めの11代将軍・徳川家斉の時代に江戸を中心に栄えた文化。「化政」は文化・文政の年号から。江戸の庶民を担い手とし，葛飾北斎（浮世絵）・歌川広重（浮世絵）・十返舎一九（滑稽本）・伊能忠敬（全国地図）などが活躍した。</span></span></span>（D）——江戸の庶民文化</h2>
+
+  <p><span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">化政文化</span><span class="kw-pop"><span class="kw-title">化政文化（かせいぶんか）</span><span class="kw-yomi">📖 読み：かせいぶんか</span><span class="kw-body">19世紀初めの11代将軍・徳川家斉の時代に江戸を中心に栄えた文化。「化政」は文化・文政の年号から。江戸の庶民を担い手とし，葛飾北斎（浮世絵）・歌川広重（浮世絵）・十返舎一九（滑稽本）・伊能忠敬（全国地図）などが活躍した。</span></span></span>は，11代将軍・徳川家斉（とくがわいえなり）の時代（19世紀初め）に，<strong>江戸</strong>を中心に栄えた文化です。「化政」は文化（ぶんか）・文政（ぶんせい）という年号から取られています。元禄文化が上方中心だったのに対し，化政文化は江戸の庶民が主役となりました。</p>
+
+  <div class="cause-box">
+    <span class="label">🗻 <span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">葛飾北斎</span><span class="kw-pop"><span class="kw-title">葛飾北斎（かつしかほくさい）</span><span class="kw-yomi">📖 読み：かつしかほくさい</span><span class="kw-body">1760〜1849年。化政文化を代表する浮世絵師。富士山を様々な角度・季節から描いた「富嶽三十六景（ふがくさんじゅうろっけい）」で有名。「神奈川沖浪裏（かながわおきなみうら）」は世界中で広く知られる。ゴッホなど西洋画家にも強い影響を与えた。</span></span></span>（E）——富嶽三十六景</span>
+    <strong>葛飾北斎（かつしかほくさい，1760〜1849年）</strong>は，化政文化を代表する浮世絵師です。<br><br>
+    ▶ 代表作：<strong>「富嶽三十六景（ふがくさんじゅうろっけい）」</strong>——富士山を様々な角度・季節から描いた連作浮世絵<br>
+    ▶ 「神奈川沖浪裏（かながわおきなみうら）」は，大波越しに見える富士山を描いた世界的に有名な作品<br>
+    ▶ ゴッホ・モネなどヨーロッパの印象派画家にも大きな影響を与えた（ジャポニスム）
+  </div>
+
+  <div class="cause-box">
+    <span class="label">🚶 歌川広重——東海道五十三次</span>
+    <strong>歌川広重（うたがわひろしげ，1797〜1858年）</strong>は，旅先の風景・季節感を叙情的に描いた浮世絵師です。<br><br>
+    ▶ 代表作：<strong>「東海道五十三次（とうかいどうごじゅうさんつぎ）」</strong>——江戸〜京都の東海道53の宿場を描いた風景画の連作<br>
+    ▶ 雨・雪・霧など気候の変化を情緒豊かに描き，日本的な風景美を確立した<br>
+    ▶ 葛飾北斎とともに，西洋美術に大きな影響を与えた代表的な浮世絵師
+  </div>
+
+  <div class="why-box">
+    <span class="label">😂 十返舎一九——東海道中膝栗毛</span>
+    <strong>十返舎一九（じっぺんしゃいっく，1765〜1831年）</strong>は，庶民の旅の滑稽なやり取りを描いた小説「<strong>滑稽本（こっけいぼん）</strong>」で人気を博した作家です。<br><br>
+    ▶ 代表作：<strong>「東海道中膝栗毛（とうかいどうちゅうひざくりげ）」</strong>——弥次郎兵衛（やじろべえ）と喜多八（きたはち）が東海道を珍道中する笑いの紀行文<br>
+    ▶ 「膝栗毛」とは自分の膝（足）を栗毛の馬の代わりにして歩くこと，つまり「徒歩旅行」の意味<br>
+    ▶ 庶民の旅への憧れと笑いを描き，当時のベストセラーとなった
+  </div>
+
+  <div class="result-box">
+    <span class="label">🗺️ 伊能忠敬——大日本沿海輿地全図</span>
+    <strong>伊能忠敬（いのうただたか，1745〜1818年）</strong>は，50歳を過ぎてから日本全国を実測して歩き，正確な地図を作った人物です。<br><br>
+    ▶ 代表作：<strong>「大日本沿海輿地全図（だいにほんえんかいよちぜんず）」</strong>——約17年間かけて全国を測量して作成した精密な地図<br>
+    ▶ 当時の技術で驚くほど正確な地図を作り，現代の日本地図とほぼ一致する精度を誇った<br>
+    ▶ 忠敬の死後，弟子たちが地図を完成させた（1821年）<br>
+    ▶ 「好学の人」として，50歳を超えてから天文学を学び直したことでも知られる
+  </div>
+
+  <p style="margin:10px 0">
+    <button onclick="openModal('kasei')" style="background:#1a4f7a;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:bold;cursor:pointer;font-family:inherit;box-shadow:0 2px 0 #0d2f4a">🗻 化政文化の詳細——人物・作品・覚え方を見る</button>
+  </p>
+
+  <div class="key-point">
+    <strong>まとめ：元禄文化と化政文化の比較</strong><br><br>
+    ▶ <strong>元禄文化</strong>——時代：17世紀末，場所：<strong>上方（大阪・京都）</strong>，担い手：上方の商人・町人<br>
+    　代表：松尾芭蕉（俳諧）・井原西鶴（浮世草子）・近松門左衛門（人形浄瑠璃）・菱川師宣（浮世絵の創始）<br><br>
+    ▶ <strong>化政文化</strong>——時代：19世紀初め，場所：<strong>江戸</strong>，担い手：江戸の庶民<br>
+    　代表：葛飾北斎（富嶽三十六景）・歌川広重（東海道五十三次）・十返舎一九（滑稽本）・伊能忠敬（全国地図）<br><br>
+    💡 覚え方：元禄＝「<strong>上（かみ）がた</strong>」，化政＝「<strong>江戸（えど）</strong>」と地域でセットで覚えよう！
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">元禄文化</span>
+    <span class="tl-item">松尾芭蕉</span>
+    <span class="tl-item">奥の細道</span>
+    <span class="tl-item">井原西鶴</span>
+    <span class="tl-item">浮世草子</span>
+    <span class="tl-item">近松門左衛門</span>
+    <span class="tl-item">人形浄瑠璃</span>
+    <span class="tl-item">曾根崎心中</span>
+    <span class="tl-item">菱川師宣</span>
+    <span class="tl-item">浮世絵</span>
+    <span class="tl-item">化政文化</span>
+    <span class="tl-item">葛飾北斎</span>
+    <span class="tl-item">富嶽三十六景</span>
+    <span class="tl-item">歌川広重</span>
+    <span class="tl-item">東海道五十三次</span>
+    <span class="tl-item">十返舎一九</span>
+    <span class="tl-item">東海道中膝栗毛</span>
+    <span class="tl-item">伊能忠敬</span>
+    <span class="tl-item">大日本沿海輿地全図</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('genroku')">🎨 元禄文化の詳細——4人の人物と作品をまとめて確認 <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('kasei')" style="background:linear-gradient(135deg,#1a4f7a,#4a1a7a)">🗻 化政文化の詳細——浮世絵・滑稽本・地図をまとめて確認 <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 単元㉔ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉔ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_nh24.html">単元㉔ドリルへ →</a>
+  </div>
+  <div class="drill-link-box" style="margin-top:8px">
+    <span style="font-size:14px;font-weight:bold">📝 第８章テキストへ戻る</span>
+    <a href="nihonshi_ch08.html" style="background:#888">第８章へ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉔ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+
+<!-- 元禄文化詳細 -->
+<div class="modal-overlay" id="modal-genroku" onclick="if(event.target===this)closeModal('genroku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('genroku')">✕</button>
+    <div class="modal-title">🎨 元禄文化——4人の人物と代表作</div>
+    <div class="modal-body">
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 元禄文化の背景</div>
+      <div class="cause-box">
+        <span class="label">🏙️ 上方の商業都市が文化を育てた</span>
+        17世紀末〜18世紀初めの元禄期（5代将軍・徳川綱吉の治世）は，大阪・京都を中心とする上方で商業が発展し，豊かな町人が文化の担い手となりました。<br><br>
+        ▶ <strong>大阪</strong>：全国の米・物資が集まる「天下の台所」として商業が最も盛んな都市<br>
+        ▶ <strong>京都</strong>：伝統的な工芸・学問・芸能の中心地<br>
+        ▶ 豊かな商人が劇場や出版を支援し，文化が急速に発展した<br>
+        ▶ 年号「元禄」（1688〜1704年）からこの文化を「元禄文化」と呼ぶ
+      </div>
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 4人の代表的人物</div>
+      <div class="why-box">
+        <span class="label">🌿 松尾芭蕉（まつおばしょう）——俳諧</span>
+        ▶ 活動期間：1644〜1694年<br>
+        ▶ ジャンル：<strong>俳諧（はいかい）</strong>——5・7・5の17音の詩<br>
+        ▶ 代表作：「<strong>奥の細道</strong>」（東北・北陸の旅の記録）<br>
+        ▶ 名句：「古池や蛙飛びこむ水の音」「松島や ああ松島や 松島や」（実際には諸説あり）<br>
+        ▶ 芭蕉の俳風「<strong>蕉風</strong>」は，後の俳句の基礎となった
+      </div>
+      <div class="why-box">
+        <span class="label">📖 井原西鶴（いはらさいかく）——浮世草子</span>
+        ▶ 活動期間：1642〜1693年<br>
+        ▶ ジャンル：<strong>浮世草子（うきよぞうし）</strong>——町人の生活・恋愛・経済を描いた小説<br>
+        ▶ 代表作：「<strong>好色一代男</strong>」（町人男性の生涯を描く）・「日本永代蔵」（商人の成功と失敗）<br>
+        ▶ 町人の欲望・愛・金銭を率直に描いたリアリスティックな文学
+      </div>
+      <div class="why-box">
+        <span class="label">🎭 近松門左衛門（ちかまつもんざえもん）——人形浄瑠璃</span>
+        ▶ 活動期間：1653〜1725年<br>
+        ▶ ジャンル：<strong>人形浄瑠璃（にんぎょうじょうるり）</strong>・歌舞伎（かぶき）の脚本<br>
+        ▶ 代表作：「<strong>曾根崎心中</strong>」（商人の男と遊女の悲恋）・「国性爺合戦」（英雄物語）<br>
+        ▶ 義理と人情の葛藤を描き，「日本のシェイクスピア」とも称された
+      </div>
+      <div class="why-box">
+        <span class="label">🖼️ 菱川師宣（ひしかわもろのぶ）——浮世絵</span>
+        ▶ 活動期間：1618〜1694年ごろ<br>
+        ▶ ジャンル：<strong>浮世絵（うきよえ）</strong>——木版画で大量印刷した庶民向けの絵<br>
+        ▶ 代表作：「<strong>見返り美人図</strong>」（肉筆画，現在の東京国立博物館所蔵）<br>
+        ▶ 版画技術で安価に量産できる浮世絵を確立した「<strong>浮世絵の祖</strong>」
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 元禄文化の覚え方</div>
+      <div class="result-box">
+        <span class="label">💡 まとめて覚える</span>
+        <strong>松（まつ）尾芭蕉</strong>→俳諧・奥の細道<br>
+        <strong>井（い）原西鶴</strong>→浮世草子・好色一代男<br>
+        <strong>近（ちか）松門左衛門</strong>→人形浄瑠璃・曾根崎心中<br>
+        <strong>菱（ひし）川師宣</strong>→浮世絵・見返り美人図<br><br>
+        ▶ 「<strong>ま・い・ち・ひ</strong>」と頭文字でまとめて，それぞれのジャンル・代表作とセットで覚えよう！
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 化政文化詳細 -->
+<div class="modal-overlay" id="modal-kasei" onclick="if(event.target===this)closeModal('kasei')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kasei')">✕</button>
+    <div class="modal-title">🗻 化政文化——浮世絵・滑稽本・地図の時代</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 化政文化の背景</div>
+      <div class="cause-box">
+        <span class="label">🏙️ 江戸が日本最大の都市に</span>
+        19世紀初め（文化・文政年間，11代将軍・徳川家斉の治世）になると，人口100万人を超えた江戸が文化の中心地となりました。<br><br>
+        ▶ 江戸の庶民（町人・職人・下級武士）が文化の担い手となった<br>
+        ▶ 出版業が発展し，安価な読み物（滑稽本・読本・草紙）が広まった<br>
+        ▶ 浮世絵の多色刷り技術（錦絵：にしきえ）が完成し，安価で美しい絵が大量に販売された<br>
+        ▶ 「化政」は「文化（1804〜1818年）」「文政（1818〜1830年）」の略
+      </div>
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 浮世絵の二大巨匠</div>
+      <div class="why-box">
+        <span class="label">🗻 葛飾北斎（かつしかほくさい）</span>
+        ▶ 1760〜1849年（90歳まで生きた長命の画家）<br>
+        ▶ 代表作：「<strong>富嶽三十六景</strong>」——富士山を36の視点から描いた連作<br>
+        ▶ 特に「<strong>神奈川沖浪裏</strong>」（大波と富士山）は世界的に有名<br>
+        ▶ ゴッホ・ドガ・モネなどに影響を与えた「<strong>ジャポニスム</strong>」のきっかけとなった
+      </div>
+      <div class="why-box">
+        <span class="label">🚶 歌川広重（うたがわひろしげ）</span>
+        ▶ 1797〜1858年<br>
+        ▶ 代表作：「<strong>東海道五十三次</strong>」——東海道の53の宿場を描いた連作（53＋起点・終点＝55枚）<br>
+        ▶ 「大橋あたけの夕立」など雨・雪・霧を情緒豊かに描く<br>
+        ▶ ゴッホが広重の絵を模写したことでも知られる
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 読み物と学問</div>
+      <div class="result-box">
+        <span class="label">😂 十返舎一九（じっぺんしゃいっく）——滑稽本</span>
+        ▶ 1765〜1831年<br>
+        ▶ ジャンル：<strong>滑稽本（こっけいぼん）</strong>——笑いを主体にした読み物<br>
+        ▶ 代表作：「<strong>東海道中膝栗毛</strong>」——弥次さん・喜多さんコンビの珍道中<br>
+        ▶ 「膝栗毛（ひざくりげ）」＝自分の足で歩く旅（徒歩旅行）という意味<br>
+        ▶ 当時の「旅ブーム」を反映したベストセラー
+      </div>
+      <div class="result-box">
+        <span class="label">🗺️ 伊能忠敬（いのうただたか）——全国地図</span>
+        ▶ 1745〜1818年<br>
+        ▶ 50歳を超えてから天文学・測量を学び，55歳から全国測量を開始<br>
+        ▶ 代表作：「<strong>大日本沿海輿地全図</strong>」——約17年間，日本全国を歩き測量して作成<br>
+        ▶ 当時としては驚異的な精度の地図で，現代の日本地図とほぼ一致<br>
+        ▶ 忠敬の死後（1821年）に弟子たちが完成させた
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">④ 化政文化の覚え方</div>
+      <div class="cause-box">
+        <span class="label">💡 まとめて覚える</span>
+        <strong>葛（かつ）飾北斎</strong>→富嶽三十六景（浮世絵）<br>
+        <strong>歌（うた）川広重</strong>→東海道五十三次（浮世絵）<br>
+        <strong>十（じっ）返舎一九</strong>→東海道中膝栗毛（滑稽本）<br>
+        <strong>伊（い）能忠敬</strong>→大日本沿海輿地全図（地図）<br><br>
+        ▶ 「<strong>か・う・じっ・い</strong>」と頭文字でまとめて，それぞれの作品ジャンルとセットで覚えよう！<br>
+        ▶ 北斎と広重は両方「浮世絵」——「北斎＝三十六景」「広重＝五十三次」で区別しよう
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 穴埋めチャレンジ バー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">語句を選んでタップして当てはめてください</span>
+    <span id="ccb-count">残り 5語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"元禄文化", "B":"松尾芭蕉", "C":"近松門左衛門",
+  "D":"化政文化", "E":"葛飾北斎"
+};
+const wordBank = ["元禄文化","松尾芭蕉","近松門左衛門","化政文化","葛飾北斎"];
+
+const miniQuizData = [
+  {q:"①　元禄文化の中心地はどこか？",
+   choices:["江戸","上方（大阪・京都）","京都のみ","長崎"], ans:1,
+   exp:"元禄文化は上方（大阪・京都）の豊かな商人・町人を担い手とする文化です。5代将軍・徳川綱吉の時代（17世紀末）に栄えました。化政文化（江戸中心）との地域の違いが入試でよく問われます。"},
+  {q:"②　松尾芭蕉の代表作として正しいものはどれか？",
+   choices:["曾根崎心中","好色一代男","奥の細道","東海道中膝栗毛"], ans:2,
+   exp:"「奥の細道（おくのほそ道）」は松尾芭蕉が東北・北陸を旅した記録をまとめた俳諧紀行文です。「古池や蛙飛びこむ水の音」などの名句でも有名です。"},
+  {q:"③　浮世絵を確立した，元禄文化の代表的な画家は誰か？",
+   choices:["葛飾北斎","歌川広重","菱川師宣","尾形光琳"], ans:2,
+   exp:"菱川師宣（ひしかわもろのぶ）が浮世絵の祖です。代表作は「見返り美人図」。葛飾北斎・歌川広重は化政文化の浮世絵師です。"},
+  {q:"④　「富嶽三十六景」を描いた化政文化の代表的な浮世絵師は誰か？",
+   choices:["菱川師宣","伊能忠敬","歌川広重","葛飾北斎"], ans:3,
+   exp:"葛飾北斎（かつしかほくさい）が「富嶽三十六景」の作者です。「神奈川沖浪裏」は世界的に有名。歌川広重は「東海道五十三次」と区別して覚えましょう。"}
+];
+
+const finalQuizData = [
+  {q:"① 元禄文化が栄えた時代の将軍は誰か？",
+   choices:["徳川吉宗","徳川家光","徳川綱吉","徳川家斉"], ans:2,
+   exp:"5代将軍・徳川綱吉の時代（17世紀末〜18世紀初め）に元禄文化が栄えました。"},
+  {q:"② 俳諧を芸術の域まで高め「俳聖」と呼ばれた元禄文化の人物は誰か？",
+   choices:["井原西鶴","松尾芭蕉","近松門左衛門","菱川師宣"], ans:1,
+   exp:"松尾芭蕉（まつおばしょう）。「奥の細道」が代表作で，「古池や蛙飛びこむ水の音」などの名句で知られます。"},
+  {q:"③ 浮世草子「好色一代男」を書いた元禄文化の作家は誰か？",
+   choices:["十返舎一九","近松門左衛門","井原西鶴","松尾芭蕉"], ans:2,
+   exp:"井原西鶴（いはらさいかく）。町人の生活・恋愛・経済をリアルに描いた「浮世草子」というジャンルを確立しました。"},
+  {q:"④ 「曾根崎心中」を書いた，人形浄瑠璃の脚本家は誰か？",
+   choices:["菱川師宣","松尾芭蕉","近松門左衛門","井原西鶴"], ans:2,
+   exp:"近松門左衛門（ちかまつもんざえもん）。義理と人情の葛藤を描いた脚本で知られ，「日本のシェイクスピア」とも呼ばれます。"},
+  {q:"⑤ 浮世絵を確立した，元禄文化の代表的な画家の名前は何か？",
+   choices:["葛飾北斎","歌川広重","菱川師宣","尾形光琳"], ans:2,
+   exp:"菱川師宣（ひしかわもろのぶ）が浮世絵の祖。代表作は「見返り美人図」。木版画を活用して安価に大量販売できる浮世絵を普及させました。"},
+  {q:"⑥ 化政文化が栄えた場所はどこか？",
+   choices:["大阪・京都（上方）","江戸","奈良","長崎"], ans:1,
+   exp:"化政文化は江戸の庶民を担い手とする文化です。19世紀初めの11代将軍・徳川家斉の時代に栄えました。元禄文化（上方中心）との違いが重要です。"},
+  {q:"⑦ 「富嶽三十六景」を描いた浮世絵師は誰か？",
+   choices:["歌川広重","菱川師宣","伊能忠敬","葛飾北斎"], ans:3,
+   exp:"葛飾北斎（かつしかほくさい）。「神奈川沖浪裏」が特に有名で，ゴッホなど西洋の画家にも大きな影響を与えました。"},
+  {q:"⑧ 「東海道五十三次」を描いた浮世絵師は誰か？",
+   choices:["葛飾北斎","菱川師宣","歌川広重","十返舎一九"], ans:2,
+   exp:"歌川広重（うたがわひろしげ）。東海道の53の宿場を描いた連作で，雨・雪など情緒豊かな風景画が特徴です。葛飾北斎（富嶽三十六景）と区別して覚えましょう。"},
+  {q:"⑨ 弥次さん・喜多さんの珍道中を描いた滑稽本「東海道中膝栗毛」の作者は誰か？",
+   choices:["伊能忠敬","松尾芭蕉","葛飾北斎","十返舎一九"], ans:3,
+   exp:"十返舎一九（じっぺんしゃいっく）。「膝栗毛」は自分の足で歩く旅（徒歩旅行）という意味で，江戸時代の旅ブームを反映したベストセラーでした。"},
+  {q:"⑩ 全国を測量して「大日本沿海輿地全図」を作成した人物は誰か？",
+   choices:["葛飾北斎","伊能忠敬","井原西鶴","近松門左衛門"], ans:1,
+   exp:"伊能忠敬（いのうただたか）。50歳を過ぎてから天文学・測量を学び，約17年間かけて全国を歩いて測量し，驚くほど精密な地図を作成しました。"}
+];
+
+const checkItems = [
+  "元禄文化が5代将軍・徳川綱吉の時代に上方（大阪・京都）を中心に栄えたことを説明できる",
+  "化政文化が11代将軍・徳川家斉の時代に江戸を中心に栄えたことを説明できる",
+  "松尾芭蕉が俳諧を大成し，「奥の細道」が代表作であることを答えられる",
+  "井原西鶴が浮世草子「好色一代男」を書いた作家であることを説明できる",
+  "近松門左衛門が人形浄瑠璃の脚本家で「曾根崎心中」が代表作であることを答えられる",
+  "菱川師宣が浮世絵を確立した画家で「見返り美人図」が代表作であることを答えられる",
+  "葛飾北斎が「富嶽三十六景」を描き，西洋画家にも影響を与えたことを説明できる",
+  "歌川広重が「東海道五十三次」を描いた浮世絵師であることを答えられる",
+  "十返舎一九が滑稽本「東海道中膝栗毛」の作者であることを答えられる",
+  "伊能忠敬が全国を測量して「大日本沿海輿地全図」を作成したことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  if (allCorrect) {
+    fireConfetti();
+    document.getElementById('sec-status-1').textContent = '🎉 全問正解！';
+    document.getElementById('sec-status-1').className = 'sec-status pass';
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    document.getElementById('sec-status-1').textContent = '❌ もう一度！';
+    document.getElementById('sec-status-1').className = 'sec-status fail';
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('sec-status-1').className = 'sec-status';
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  body.innerHTML = miniQuizData.map((d, i) =>
+    `<div class="mq-block" id="mq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(qi, ci) {
+  const d = miniQuizData[qi];
+  const block = document.getElementById('mq-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildFinal();
+buildChecklist();
+</script>
+</body>
+</html>

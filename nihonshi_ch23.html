@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉓ 享保の改革｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch07.html" class="back-to-index">← 第７章テキストへ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🌾 単元㉓　享保の改革——8代将軍・徳川吉宗の政治</h1>
+
+<!-- ===== Section ===== -->
+<div class="section">
+  <span class="section-label">第7章 第５節　単元㉓</span>
+  <h2>幕府財政の危機——なぜ改革が必要だったのか</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p><span class="kw">元禄時代（げんろくじだい）<span class="kw-pop"><span class="kw-title">元禄時代（げんろくじだい）</span><span class="kw-yomi">📖 読み：げんろくじだい</span><span class="kw-body">5代将軍・徳川綱吉の治世（1688〜1704年ごろ）。上方（京都・大坂）を中心に，経済的に豊かになった武士・商人が担い手となる華やかな文化が花開いた。</span></span></span>（5代将軍・<span class="kw">徳川綱吉（とくがわつなよし）<span class="kw-pop"><span class="kw-title">徳川綱吉（とくがわつなよし）</span><span class="kw-yomi">📖 読み：とくがわつなよし</span><span class="kw-body">江戸幕府5代将軍（在職1680〜1709年）。生類憐みの令を発したことで知られる。元禄文化の時代の将軍だが，豪華な生活や寺社建設で幕府財政を悪化させた。</span></span></span>の時代）には文化が花開いた一方で，豪華な生活や寺社の建設が相次ぎ，<strong>幕府の財政は大きく悪化</strong>していきました。さらに，6代・7代将軍は若くして亡くなり政治が不安定になります。こうした状況を打開するために登場したのが，8代将軍・徳川吉宗です。</p>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">⏱ この単元の流れ</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">元禄期</span><div class="flow-content">5代将軍・徳川綱吉の豪華な政治で<strong>幕府財政が悪化</strong>。元禄文化は栄えたが，財政的な余裕は失われていく</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year blue">1716年</span><div class="flow-content">紀州藩主・<strong>徳川吉宗</strong>が8代将軍に就任。財政再建を最優先課題として政治改革に着手</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">改革初期</span><div class="flow-content"><strong>倹約令</strong>を発し，幕府・大名・庶民すべてに節約を求める。支出の削減を徹底した</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">収入増加策</span><div class="flow-content"><strong>上米の制</strong>で大名から米を徴収，<strong>新田開発</strong>で耕地を拡大し年貢収入を増やす</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year purple">民政・法整備</span><div class="flow-content"><strong>目安箱</strong>で庶民の声を聴き，<strong>公事方御定書</strong>で裁判の基準を全国統一。「法による政治」を進める</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year navy">改革後</span><div class="flow-content">財政は一時改善するも，農村では百姓一揆・都市では打ちこわしが増加。次の<strong>田沼時代</strong>へ移行する</div></div>
+    </div>
+    <div class="flow-note">
+      💡 享保の改革・寛政の改革・天保の改革は「江戸の三大改革」として，入試でまとめて問われる重要テーマです。
+    </div>
+  </div>
+
+  <div class="cause-box">
+    <span class="label">📉 幕府財政悪化の背景</span>
+    ▶ 元禄期の豪華な支出（寺社建設・貨幣改鋳）による出費の増大<br>
+    ▶ 年貢収入の伸び悩み——既存の農地からの収益が限界に近づく<br>
+    ▶ 天災（飢饉・洪水）による農村の疲弊と年貢の減少<br>
+    ▶ 商品経済の発展により，武士・農民より<strong>商人・町人が経済的に豊か</strong>になる格差の拡大
+  </div>
+
+  <h2>8代将軍・<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">徳川吉宗</span><span class="kw-pop"><span class="kw-title">徳川吉宗（とくがわよしむね）</span><span class="kw-yomi">📖 読み：とくがわよしむね</span><span class="kw-body">1684〜1751年。紀州藩主から8代将軍（在職1716〜1745年）に就任。享保の改革を断行して幕府財政を再建し，「米将軍」と呼ばれた。目安箱・公事方御定書など法制度の整備でも知られる。</span></span></span>（A）——「米将軍」の登場</h2>
+
+  <p>4代将軍・家綱（いえつな）以降，将軍の直系が絶えたため，紀州藩主から迎えられた<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">徳川吉宗</span><span class="kw-pop"><span class="kw-title">徳川吉宗（とくがわよしむね）</span><span class="kw-yomi">📖 読み：とくがわよしむね</span><span class="kw-body">1684〜1751年。紀州藩主から8代将軍（在職1716〜1745年）に就任。享保の改革を断行して幕府財政を再建し，「米将軍」と呼ばれた。目安箱・公事方御定書など法制度の整備でも知られる。</span></span></span>が8代将軍に就任しました。吉宗は質素倹約を自ら実践し，幕府財政の立て直しを最優先課題として政治を進めます。年貢増収や米価の安定に特に力を入れたことから，「<strong>米将軍（こめしょうぐん）</strong>」と呼ばれました。</p>
+
+  <p style="margin:10px 0">
+    <button onclick="openModal('yoshimune')" style="background:#1a4f7a;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:bold;cursor:pointer;font-family:inherit;box-shadow:0 2px 0 #0d2f4a">👤 徳川吉宗の詳細——紀州藩主から将軍へのプロフィールを見る</button>
+  </p>
+
+  <h2><span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">享保の改革</span><span class="kw-pop"><span class="kw-title">享保の改革（きょうほうのかいかく）</span><span class="kw-yomi">📖 読み：きょうほうのかいかく</span><span class="kw-body">8代将軍・徳川吉宗が1716〜1745年に行った幕府政治の改革。倹約令・上米の制・新田開発・目安箱・公事方御定書などを実施し，幕府財政の再建と法制度の整備を目指した。享保・寛政・天保の「三大改革」の一つ。</span></span></span>（B）——財政を立て直す三つの柱</h2>
+
+  <p>吉宗が行った<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">享保の改革</span><span class="kw-pop"><span class="kw-title">享保の改革（きょうほうのかいかく）</span><span class="kw-yomi">📖 読み：きょうほうのかいかく</span><span class="kw-body">8代将軍・徳川吉宗が1716〜1745年に行った幕府政治の改革。倹約令・上米の制・新田開発・目安箱・公事方御定書などを実施し，幕府財政の再建と法制度の整備を目指した。享保・寛政・天保の「三大改革」の一つ。</span></span></span>は，主に「支出を減らす」「収入を増やす」「法を整備する」という三つの方向で進められました。</p>
+
+  <div class="why-box">
+    <span class="label">① 倹約令——支出を減らす</span>
+    幕府・大名・武士・庶民すべてに節約を命じた法令。<strong>自ら質素な生活を実践</strong>した吉宗が率先垂範（そっせんすいはん）しました。<br><br>
+    ▶ 贅沢な衣類・食事・娯楽の禁止<br>
+    ▶ 幕府の役人の人員削減と給与の見直し<br>
+    ▶ 大名・旗本にも倹約を義務づけ，費用の節減を求めた
+  </div>
+
+  <div class="why-box">
+    <span class="label">② <span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">上米の制</span><span class="kw-pop"><span class="kw-title">上米の制（あげまいのせい）</span><span class="kw-yomi">📖 読み：あげまいのせい</span><span class="kw-body">1722年，8代将軍・吉宗が実施した財政政策。大名が参勤交代で江戸に滞在する期間（在府期間）を半年短縮する代わりに，1万石につき100石の米を幕府へ上納させた。幕府収入は増えたが，大名にとって経済的負担となった。1730年に廃止。</span></span></span>（C）——収入を増やす</span>
+    大名に幕府へ米を上納させる代わりに，参勤交代の江戸在府期間を短縮した制度です。<br><br>
+    ▶ <strong>1万石につき100石</strong>の米を幕府に納めさせた<br>
+    ▶ 参勤交代で江戸に滞在する期間を<strong>1年→半年</strong>に短縮（大名側の国元への滞在が長くなる）<br>
+    ▶ 幕府の米の収入が大幅に増え，財政の立て直しに貢献した<br>
+    ▶ ただし大名にとっては経済的負担が増し，1730年に廃止された
+  </div>
+
+  <div class="result-box">
+    <span class="label">③ 新田開発——耕地を広げる</span>
+    未開墾の土地を田畑に変える<span class="kw">新田開発（しんでんかいはつ）<span class="kw-pop"><span class="kw-title">新田開発（しんでんかいはつ）</span><span class="kw-yomi">📖 読み：しんでんかいはつ</span><span class="kw-body">未開墾の土地を農地に変えて耕地面積を広げる取り組み。享保の改革で幕府が積極的に奨励し，年貢収入の増加を目指した。</span></span></span>を幕府が積極的に支援しました。<br><br>
+    ▶ 耕地面積の拡大 → <strong>年貢収入の増加</strong><br>
+    ▶ 農業の生産力向上で，農村の安定と幕府収入の両立を目指した<br>
+    ▶ 享保期の新田開発で，全国の耕地面積はさらに拡大した
+  </div>
+
+  <p style="margin:10px 0">
+    <button onclick="openModal('kamimai')" style="background:#c87000;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:bold;cursor:pointer;font-family:inherit;box-shadow:0 2px 0 #8a4e00">🌾 上米の制の詳細——仕組みと財政への影響を見る</button>
+  </p>
+
+  <h2><span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">目安箱</span><span class="kw-pop"><span class="kw-title">目安箱（めやすばこ）</span><span class="kw-yomi">📖 読み：めやすばこ</span><span class="kw-body">8代将軍・吉宗が評定所前などに設置した投書箱。身分を問わず，庶民が幕府への意見・要望・訴えを直接将軍に届けることができた。投書をもとに「小石川養生所（こいしかわようじょうしょ）」が設置されたことで有名。</span></span></span>（D）と<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">公事方御定書</span><span class="kw-pop"><span class="kw-title">公事方御定書（くじかたおさだめがき）</span><span class="kw-yomi">📖 読み：くじかたおさだめがき</span><span class="kw-body">1742年に制定された江戸幕府の基本法令集。裁判や刑罰の基準を全国で統一した。それまでは担当者によって判断が分かれていた刑罰を明文化し，公正な裁きを目指した。御成敗式目（鎌倉時代）以来の大規模な法典。</span></span></span>（E）——民の声と法の整備</h2>
+
+  <p>吉宗が行った改革は，財政だけにとどまりませんでした。庶民の声を政治に活かす<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">目安箱</span><span class="kw-pop"><span class="kw-title">目安箱（めやすばこ）</span><span class="kw-yomi">📖 読み：めやすばこ</span><span class="kw-body">8代将軍・吉宗が評定所前などに設置した投書箱。身分を問わず，庶民が幕府への意見・要望・訴えを直接将軍に届けることができた。投書をもとに「小石川養生所（こいしかわようじょうしょ）」が設置されたことで有名。</span></span></span>の設置と，裁判の基準を統一した<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">公事方御定書</span><span class="kw-pop"><span class="kw-title">公事方御定書（くじかたおさだめがき）</span><span class="kw-yomi">📖 読み：くじかたおさだめがき</span><span class="kw-body">1742年に制定された江戸幕府の基本法令集。裁判や刑罰の基準を全国で統一した。それまでは担当者によって判断が分かれていた刑罰を明文化し，公正な裁きを目指した。御成敗式目（鎌倉時代）以来の大規模な法典。</span></span></span>の制定は，吉宗の政治の中でも特に重要な成果です。</p>
+
+  <div class="why-box">
+    <span class="label">📬 目安箱——庶民の声を将軍へ</span>
+    江戸の評定所（評議・裁判を行う役所）の前などに設置された投書箱です。<br><br>
+    ▶ 身分・身元を問わず，<strong>誰でも意見・不満・要望を投書</strong>できた<br>
+    ▶ 吉宗自身が投書を読み，政治に反映させた<br>
+    ▶ 投書をきっかけに，江戸に貧しい病人を診る医療施設<span class="kw">小石川養生所（こいしかわようじょうしょ）<span class="kw-pop"><span class="kw-title">小石川養生所（こいしかわようじょうしょ）</span><span class="kw-yomi">📖 読み：こいしかわようじょうしょ</span><span class="kw-body">享保の改革中，目安箱への投書をきっかけに吉宗が江戸に設置した医療施設。貧しい病人を無料で診察・治療した。現在の東京大学医学部の前身ともいわれる。</span></span></span>が設置された（これが東京大学医学部の前身といわれる）<br>
+    ▶ 「民の声を聴く政治」を体現した制度として高く評価されている
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 公事方御定書——法で裁く公正な社会へ</span>
+    1742年に制定された江戸幕府の基本的な法令集です。<br><br>
+    ▶ それまで担当者（奉行など）の判断に任されていた<strong>裁判・刑罰の基準を全国で統一</strong><br>
+    ▶ 同じ犯罪には同じ罰が科されるよう明文化した「法の下の平等」を目指した<br>
+    ▶ 御成敗式目（鎌倉時代）以来の大規模な法典として，江戸時代の司法の基礎となった<br>
+    ▶ 死刑・追放・入墨など刑罰の種類と適用基準が細かく規定された
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：享保の改革のポイント</strong><br>
+    享保の改革は，幕府財政の再建を最大の目標とした政治改革です。<br><br>
+    ▶ <strong>倹約令</strong>——支出を減らす（武士・庶民すべてに節約を命令）<br>
+    ▶ <strong>上米の制</strong>——大名から米を徴収（参勤交代の緩和と引き換え）<br>
+    ▶ <strong>新田開発</strong>——耕地を広げて年貢収入を増やす<br>
+    ▶ <strong>目安箱</strong>——庶民の声を政治に活かす（小石川養生所の設置へ）<br>
+    ▶ <strong>公事方御定書</strong>——裁判基準の全国統一（法による公正な政治）
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">徳川吉宗</span>
+    <span class="tl-item">米将軍</span>
+    <span class="tl-item">享保の改革</span>
+    <span class="tl-item">倹約令</span>
+    <span class="tl-item">上米の制</span>
+    <span class="tl-item">新田開発</span>
+    <span class="tl-item">目安箱</span>
+    <span class="tl-item">小石川養生所</span>
+    <span class="tl-item">公事方御定書</span>
+    <span class="tl-item">田沼意次</span>
+    <span class="tl-item">株仲間</span>
+    <span class="tl-item">享保の飢饉</span>
+    <span class="tl-item">天明の飢饉</span>
+    <span class="tl-item">天保の飢饉</span>
+    <span class="tl-item">松平定信</span>
+    <span class="tl-item">寛政の改革</span>
+    <span class="tl-item">水野忠邦</span>
+    <span class="tl-item">天保の改革</span>
+    <span class="tl-item">三大改革</span>
+  </div>
+
+  <h2>享保の改革後の政治——田沼・飢饉・寛政・天保の流れ</h2>
+
+  <p>享保の改革で幕府財政はある程度改善されましたが，その後も政治の動揺とたび重なる<span class="kw">飢饉（ききん）<span class="kw-pop"><span class="kw-title">飢饉（ききん）</span><span class="kw-yomi">📖 読み：ききん</span><span class="kw-body">天災・冷害・害虫の大発生などで農作物が不作となり，食料が極端に不足した社会的危機。農村の荒廃や百姓一揆・打ちこわしの大きな原因となった。</span></span></span>が続きました。倹約中心の改革への反動から<span class="kw">田沼意次（たぬまおきつぐ）<span class="kw-pop"><span class="kw-title">田沼意次（たぬまおきつぐ）</span><span class="kw-yomi">📖 読み：たぬまおきつぐ</span><span class="kw-body">田沼は「農業ではなく商業の力で財政を立て直す」という当時としては斬新な発想で政治を進めました。株仲間の公認で税収を増やし，一定の成果を上げた面もありましたが，役職や利権を求める賄賂が横行し，「賄賂がなければ何も動かない」という腐敗が広まっていきました。さらに天明の大飢饉が追い打ちをかけ，民衆の怒りが高まる中で1786年に失脚しました。</span></span></span>の商業政策が登場し，飢饉と腐敗で失脚した後は<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">寛政の改革</span><span class="kw-pop"><span class="kw-title">寛政の改革（かんせいのかいかく）</span><span class="kw-yomi">📖 読み：かんせいのかいかく</span><span class="kw-body">老中・松平定信が1787〜1793年に行った幕府の改革。田沼時代の腐敗を反省し，倹約・棄捐令・囲米・異学の禁などを実施した。</span></span></span>，さらに<span class="blank kw" data-id="N" onclick="blankClicked(event,'N')"><span class="blank-display">天保の改革</span><span class="kw-pop"><span class="kw-title">天保の改革（てんぽうのかいかく）</span><span class="kw-yomi">📖 読み：てんぽうのかいかく</span><span class="kw-body">老中・水野忠邦が1841〜1843年に行った幕府の改革。株仲間の解散・人返し令などを実施したが，上知令の失敗で水野は失脚した。</span></span></span>と，改革と反動が繰り返されます。これら3つの改革を「<strong>江戸の三大改革</strong>」として合わせて覚えることが，入試の重要ポイントです。</p>
+
+  <div class="cause-box">
+    <span class="label">💰 田沼意次の時代（1772〜1786年ごろ）</span>
+    享保の改革後，老中・<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">田沼意次</span><span class="kw-pop"><span class="kw-title">田沼意次（たぬまおきつぐ）</span><span class="kw-yomi">📖 読み：たぬまおきつぐ</span><span class="kw-body">田沼は「農業ではなく商業の力で財政を立て直す」という当時としては斬新な発想で政治を進めました。株仲間の公認で税収を増やし，一定の成果を上げた面もありましたが，役職や利権を求める賄賂が横行し，「賄賂がなければ何も動かない」という腐敗が広まっていきました。さらに天明の大飢饉が追い打ちをかけ，民衆の怒りが高まる中で1786年に失脚しました。</span></span></span>（たぬまおきつぐ）が実権を握りました。吉宗の「農業重視・倹約」とは逆に，商業の力を活用して財政を立て直そうとしました。<br><br>
+    ▶ <span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">株仲間</span><span class="kw-pop"><span class="kw-title">株仲間（かぶなかま）</span><span class="kw-yomi">📖 読み：かぶなかま</span><span class="kw-body">江戸時代の商人の同業組合。田沼意次が公認し，運上金・冥加金を幕府に納めさせることで財政を補った。天保の改革では解散させられた。</span></span></span>（かぶなかま）の公認——商人の同業組合を公認し，そこから運上金（うんじょうきん）・冥加金（みょうがきん）を徴収して財政を補った<br>
+    ▶ <strong>長崎貿易の拡大</strong>——輸出を増やして金銀の流入を図った<br>
+    ▶ 印旛沼（いんばぬま）の干拓など大規模な新田開発も試みた<br>
+    ▶ しかし<strong>賄賂（わいろ）政治</strong>が横行し，役人の腐敗が広まった<br>
+    ▶ <span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">天明の大飢饉</span><span class="kw-pop"><span class="kw-title">天明の大飢饉（てんめいのだいききん）</span><span class="kw-yomi">📖 読み：てんめいのだいききん</span><span class="kw-body">1782〜1788年。冷害と浅間山の大噴火による日照不足で東日本を中心に大凶作となった大飢饉。餓死者が多数出て，田沼意次の失脚の一因ともなった。</span></span></span>が重なり民心が離れ，田沼は1786年に失脚した
+  </div>
+
+  <div class="why-box">
+    <span class="label">🌾 江戸時代の三大飢饉——繰り返す社会の危機</span>
+    江戸時代には大きな飢饉が三度起き，農村・都市の社会を激しく揺るがしました。<br><br>
+    ▶ <span class="kw">享保の飢饉（きょうほうのききん）<span class="kw-pop"><span class="kw-title">享保の飢饉（1732年）</span><span class="kw-yomi">📖 読み：きょうほうのききん</span><span class="kw-body">1732年，西日本を中心にウンカ（害虫）の大発生で大凶作。農村で百姓一揆，江戸で打ちこわしが起きた。江戸時代の三大飢饉の一つ。</span></span></span>（1732年）——西日本を中心にウンカ（害虫）の大発生で大凶作。農村で百姓一揆，江戸で打ちこわしが起きた<br>
+    ▶ <span class="kw">天明の飢饉（てんめいのききん）<span class="kw-pop"><span class="kw-title">天明の飢饉（1782〜1788年）</span><span class="kw-yomi">📖 読み：てんめいのききん</span><span class="kw-body">1782〜1788年，冷害と浅間山の大噴火（1783年）による日照不足で東日本を直撃。餓死者が多数出て，田沼意次の失脚にもつながった。</span></span></span>（1782〜1788年）——冷害と浅間山の大噴火（1783年）による日照不足で東日本を直撃。餓死者が多数出て，田沼意次の失脚にもつながった<br>
+    ▶ <span class="kw">天保の飢饉（てんぽうのききん）<span class="kw-pop"><span class="kw-title">天保の飢饉（1833〜1839年）</span><span class="kw-yomi">📖 読み：てんぽうのききん</span><span class="kw-body">1833〜1839年，冷害・洪水が続き全国的な不作。大坂では大塩平八郎の乱（1837年）が起きた。江戸時代の三大飢饉の一つ。</span></span></span>（1833〜1839年）——冷害・洪水が続き全国的な不作。大坂では元町奉行所与力・<span class="kw">大塩平八郎（おおしおへいはちろう）<span class="kw-pop"><span class="kw-title">大塩平八郎（おおしおへいはちろう）</span><span class="kw-yomi">📖 読み：おおしおへいはちろう</span><span class="kw-body">天保の飢饉が深刻化する中，大坂の豪商たちは米を買い占め，値を釣り上げていました。農村から逃げてきた飢えた人々が路頭に迷うのを目の当たりにした平八郎は，幕府に救済を訴えましたが，まったく相手にされませんでした。「知ることは行動することだ」とする陽明学の精神に従い，自分の蔵書を売って貧者に分け与え，1837年に反乱を起こします。わずか1日で鎮圧されましたが，元幕府役人が体制に反旗を翻したことは日本中に衝撃を与え，幕府の権威に深刻なひびを入れることになりました。</span></span></span>が民衆を率いて反乱を起こした（1837年：<strong>大塩平八郎の乱</strong>）<br>
+    ▶ 飢饉のたびに百姓一揆・打ちこわしが急増し，幕府の権威と統治能力が揺らいだ
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 寛政の改革（1787〜1793年）——老中・松平定信</span>
+    田沼失脚後，老中・<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">松平定信</span><span class="kw-pop"><span class="kw-title">松平定信（まつだいらさだのぶ）</span><span class="kw-yomi">📖 読み：まつだいらさだのぶ</span><span class="kw-body">定信は将軍家に近い血筋を持つ白河藩の藩主でした。天明の大飢饉の際，他藩で餓死者が続出する中，食料を領民に分け与えて自藩から餓死者を一人も出さなかったという実績があります。田沼時代の腐敗と飢饉への無策で幕府の信頼が失墜した後，「清廉で実績のある人物」として老中に抜擢されました。しかし倹約や道徳の引き締めが厳しすぎて「白河の清きに魚も棲みかねて」と皮肉られ，最終的には失脚しています。</span></span></span>（まつだいらさだのぶ）が行った改革です。田沼時代の腐敗を反省し，倹約と引き締めを徹底しました。<br><br>
+    ▶ <span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">棄捐令</span><span class="kw-pop"><span class="kw-title">棄捐令（きえんれい）</span><span class="kw-yomi">📖 読み：きえんれい</span><span class="kw-body">寛政の改革で松平定信が発した法令。旗本・御家人が商人（札差）に負っていた借金を帳消しにした。武士の生活を救う目的だったが，商人の信用を失わせた。</span></span></span>（きえんれい）——旗本・御家人が商人に負っていた借金を帳消しにした（武士の生活を救う目的）<br>
+    ▶ <span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">囲米</span><span class="kw-pop"><span class="kw-title">囲米（かこいまい）</span><span class="kw-yomi">📖 読み：かこいまい</span><span class="kw-body">寛政の改革で実施された飢饉対策。各地の藩に米を備蓄させ，飢饉に備えた。「囲い米」とも書く。</span></span></span>（かこいまい）——各地の藩に米を備蓄させ，飢饉に備えた<br>
+    ▶ <span class="kw">異学の禁（いがくのきん）<span class="kw-pop"><span class="kw-title">異学の禁（いがくのきん）</span><span class="kw-yomi">📖 読み：いがくのきん</span><span class="kw-body">寛政の改革で松平定信が実施した政策。幕府の学問所（昌平坂学問所）で，朱子学以外の学問を教えることを禁じた。</span></span></span>——幕府の学問所（昌平坂学問所）で朱子学以外の学問を教えることを禁じた<br>
+    ▶ 厳しすぎる改革への不満が高まり，定信は失脚。「白河の清きに魚も棲みかねて　もとの濁りの田沼恋しき」と皮肉られた
+  </div>
+
+  <div class="cause-box">
+    <span class="label">⚡ 天保の改革（1841〜1843年）——老中・水野忠邦</span>
+    老中・<span class="blank kw" data-id="M" onclick="blankClicked(event,'M')"><span class="blank-display">水野忠邦</span><span class="kw-pop"><span class="kw-title">水野忠邦（みずのただくに）</span><span class="kw-yomi">📖 読み：みずのただくに</span><span class="kw-body">水野の大失敗の要因は，最後に出した「上知令」にありました。江戸・大坂周辺の大名・旗本の土地を幕府直轄地にしようとしたこの命令は，土地を取り上げられる側の猛反発を招き，改革を支えるはずの幕府内部の人々が一斉に反対に回りました。また，株仲間の解散は物価を下げるどころか流通を混乱させる逆効果を生み，倹約令による娯楽の規制は庶民の不満も高めていきます。改革の目標は正しくても，根回し不足と強引な手法が災いし，どこにも味方のいない状態に追い込まれて失脚しました。</span></span></span>（みずのただくに）が行った改革です。天保の飢饉と大塩平八郎の乱で社会不安が高まる中，断行されました。<br><br>
+    ▶ <span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">株仲間</span><span class="kw-pop"><span class="kw-title">株仲間（かぶなかま）</span><span class="kw-yomi">📖 読み：かぶなかま</span><span class="kw-body">江戸時代の商人の同業組合。田沼意次が公認し，運上金・冥加金を幕府に納めさせることで財政を補った。天保の改革では解散させられた。</span></span></span>の解散——田沼時代に公認した商人組合を解散させた（物価引き下げが狙いだったが，流通が混乱して逆効果になった）<br>
+    ▶ <span class="kw">人返し令（ひとがえしれい）<span class="kw-pop"><span class="kw-title">人返し令（ひとがえしれい）</span><span class="kw-yomi">📖 読み：ひとがえしれい</span><span class="kw-body">天保の改革で水野忠邦が出した命令。農村を離れて江戸に流入した農民を，故郷に帰らせようとした。農村の労働力を守る目的だったが，効果は限定的だった。</span></span></span>——農村を離れて江戸に流入した農民を故郷に帰らせる命令（農村の労働力を守る目的）<br>
+    ▶ <strong>倹約令</strong>——歌舞伎・寄席・贅沢な衣食を厳しく規制した<br>
+    ▶ <strong>上知令（あげちれい）</strong>の失敗——江戸・大坂周辺の土地を幕府直轄地にしようとして大名・旗本の猛反発を受け撤回，水野は失脚した
+  </div>
+
+  <div class="key-point">
+    <strong>🏆 江戸の三大改革——人物・政策・時期をセットで覚えよう</strong><br><br>
+    ① <span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">享保の改革</span><span class="kw-pop"><span class="kw-title">享保の改革（きょうほうのかいかく）</span><span class="kw-yomi">📖 読み：きょうほうのかいかく</span><span class="kw-body">8代将軍・徳川吉宗が1716〜1745年に行った幕府政治の改革。倹約令・上米の制・新田開発・目安箱・公事方御定書などを実施し，幕府財政の再建を目指した。</span></span></span>——8代将軍・<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">徳川吉宗</span><span class="kw-pop"><span class="kw-title">徳川吉宗（とくがわよしむね）</span><span class="kw-yomi">📖 読み：とくがわよしむね</span><span class="kw-body">1684〜1751年。紀州藩主から8代将軍（在職1716〜1745年）に就任。享保の改革を断行して幕府財政を再建し，「米将軍」と呼ばれた。</span></span></span>（1716〜1745年）<br>
+    　主な政策：倹約令・上米の制・新田開発・目安箱・公事方御定書<br><br>
+    ② <span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">寛政の改革</span><span class="kw-pop"><span class="kw-title">寛政の改革（かんせいのかいかく）</span><span class="kw-yomi">📖 読み：かんせいのかいかく</span><span class="kw-body">老中・松平定信が1787〜1793年に行った幕府の改革。田沼時代の腐敗を反省し，倹約・棄捐令・囲米・異学の禁などを実施した。</span></span></span>——老中・<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">松平定信</span><span class="kw-pop"><span class="kw-title">松平定信（まつだいらさだのぶ）</span><span class="kw-yomi">📖 読み：まつだいらさだのぶ</span><span class="kw-body">定信は将軍家に近い血筋を持つ白河藩の藩主でした。天明の大飢饉の際，他藩で餓死者が続出する中，食料を領民に分け与えて自藩から餓死者を一人も出さなかったという実績があります。田沼時代の腐敗と飢饉への無策で幕府の信頼が失墜した後，「清廉で実績のある人物」として老中に抜擢されました。しかし倹約や道徳の引き締めが厳しすぎて「白河の清きに魚も棲みかねて」と皮肉られ，最終的には失脚しています。</span></span></span>（1787〜1793年）<br>
+    　主な政策：棄捐令・囲米・異学の禁<br><br>
+    ③ <span class="blank kw" data-id="N" onclick="blankClicked(event,'N')"><span class="blank-display">天保の改革</span><span class="kw-pop"><span class="kw-title">天保の改革（てんぽうのかいかく）</span><span class="kw-yomi">📖 読み：てんぽうのかいかく</span><span class="kw-body">老中・水野忠邦が1841〜1843年に行った幕府の改革。株仲間の解散・人返し令などを実施したが，上知令の失敗で水野は失脚した。</span></span></span>——老中・<span class="blank kw" data-id="M" onclick="blankClicked(event,'M')"><span class="blank-display">水野忠邦</span><span class="kw-pop"><span class="kw-title">水野忠邦（みずのただくに）</span><span class="kw-yomi">📖 読み：みずのただくに</span><span class="kw-body">水野の大失敗の要因は，最後に出した「上知令」にありました。江戸・大坂周辺の大名・旗本の土地を幕府直轄地にしようとしたこの命令は，土地を取り上げられる側の猛反発を招き，改革を支えるはずの幕府内部の人々が一斉に反対に回りました。また，株仲間の解散は物価を下げるどころか流通を混乱させる逆効果を生み，倹約令による娯楽の規制は庶民の不満も高めていきます。改革の目標は正しくても，根回し不足と強引な手法が災いし，どこにも味方のいない状態に追い込まれて失脚しました。</span></span></span>（1841〜1843年）<br>
+    　主な政策：株仲間の解散・人返し令・倹約令<br><br>
+    💡 「享保は将軍・吉宗が主役，寛政と天保は老中が主役」という違いも押さえておこう！
+  </div>
+
+
+  <div style="margin:16px 0;text-align:center">
+    <img src="edo8.png" alt="江戸の三大改革まとめ図" style="max-width:100%;border-radius:10px;border:1.5px solid #f4a261;box-shadow:0 4px 12px rgba(0,0,0,0.12)">
+    <div style="font-size:13px;color:#64748b;margin-top:6px">▲ 江戸の三大改革——人物・政策・時期の視覚的まとめ</div>
+  </div>
+  <button class="modal-btn" onclick="openModal('yoshimune')">👤 徳川吉宗のプロフィール——紀州藩主から将軍へ <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('kamimai')" style="background:linear-gradient(135deg,#c87000,#8b2500)">🌾 上米の制の詳細——仕組みと参勤交代との関係 <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('ikki')" style="background:linear-gradient(135deg,#1a4f7a,#4a1a7a)">⚡ 百姓一揆・打ちこわし——改革後の農村と都市の動揺 <span class="btn-arrow">▶</span></button>
+  <button class="modal-btn" onclick="openModal('tanuma')" style="background:linear-gradient(135deg,#1a6b22,#1a4f7a)">📊 田沼意次と寛政の改革——享保の改革のあとに何が起きたか <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 単元㉓ 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉓ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch23.html">単元㉓ドリルへ →</a>
+  </div>
+  <div class="drill-link-box" style="margin-top:8px">
+    <span style="font-size:14px;font-weight:bold">📝 第７章 総合ドリルで全単元を復習！</span>
+    <a href="nihonshi_drill_ch07.html" style="background:#888">総合ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉓ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+
+<!-- 徳川吉宗 -->
+<div class="modal-overlay" id="modal-yoshimune" onclick="if(event.target===this)closeModal('yoshimune')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('yoshimune')">✕</button>
+    <div class="modal-title">👤 徳川吉宗——紀州藩主から将軍へ</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 徳川吉宗のプロフィール</div>
+      <div class="cause-box">
+        <span class="label">👤 吉宗とはどんな人物か</span>
+        徳川吉宗（1684〜1751年）は，紀州藩（現在の和歌山県）の藩主として優れた政治手腕を発揮していました。7代将軍・家継（いえつぐ）が幼くして亡くなると，徳川家の傍流ながら8代将軍として江戸に迎えられました。<br><br>
+        ▶ 「享保の改革」を断行した名君として評価される<br>
+        ▶ 自ら質素な生活を実践し，家臣にも倹約を率先した<br>
+        ▶ 「武家の棟梁（とうりょう）」として武芸を重視し，武士の気風を引き締めた<br>
+        ▶ 在職期間1716〜1745年（約30年）にわたって政治を主導した
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 「米将軍」と呼ばれた理由</div>
+      <div class="why-box">
+        <span class="label">🌾 米への強いこだわり</span>
+        江戸時代の経済は「米本位制」——年貢も大名の石高（こくだか，土地の生産力）も米で計られていました。<br><br>
+        ▶ 吉宗は<strong>年貢の増収</strong>（米の収入アップ）を最重要課題とした<br>
+        ▶ <strong>米の価格（米価）の安定</strong>に特に力を入れた——米が安すぎると農民が困り，高すぎると庶民が困るためバランスが難しい<br>
+        ▶ 米価安定のために「<strong>相対済し令（あいたいすましれい）</strong>」などの政策も実施<br>
+        ▶ こうした米への注力から「米将軍」と呼ばれるようになった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 実学（蘭学）の奨励</div>
+      <div class="result-box">
+        <span class="label">📚 洋書輸入の緩和</span>
+        吉宗はキリスト教と関係のない漢訳洋書の輸入を許可しました。これにより，西洋の実用的な科学・医学・農学の知識が日本に入るようになりました。<br><br>
+        ▶ のちの<strong>蘭学（らんがく）</strong>（オランダ語で西洋の学問を学ぶ）の発展につながった<br>
+        ▶ 前野良沢・杉田玄白らが人体解剖書「解体新書（かいたいしんしょ）」を翻訳（次の時代）<br>
+        ▶ 「実学（じつがく）」——役に立つ学問を重視する姿勢が日本の近代化の基礎をつくった
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 上米の制 -->
+<div class="modal-overlay" id="modal-kamimai" onclick="if(event.target===this)closeModal('kamimai')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kamimai')">✕</button>
+    <div class="modal-title">🌾 上米の制——仕組みと財政への影響</div>
+    <div class="modal-body">
+      <div style="background:#c87000;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 上米の制の仕組み</div>
+      <div class="cause-box">
+        <span class="label">📦 「米を納める」代わりに「参勤を緩和」</span>
+        1722年に始まった上米の制は，大名から幕府への「米の上納」と，参勤交代の「在府期間の短縮」をセットにした取引です。<br><br>
+        ▶ <strong>大名が負担すること</strong>：領地1万石につき100石の米を幕府へ上納<br>
+        ▶ <strong>大名が得るもの</strong>：参勤交代で江戸に滞在する期間を「1年」から「半年」に短縮（国元にいられる期間が増える）<br>
+        ▶ 大名の数は約270家——合計で幕府に大量の米が集まり，財政が大幅に改善された<br>
+        ▶ ただし大名にとって米の上納は重い負担であり，1730年に廃止された
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 参勤交代との関係</div>
+      <div class="why-box">
+        <span class="label">🚶 参勤交代とは何か（復習）</span>
+        3代将軍・徳川家光が制度化した，大名が江戸と領地を1年交代で往来する義務のことです（単元㉑で学習）。<br><br>
+        ▶ 通常は「江戸1年→国元1年」という交代制<br>
+        ▶ 上米の制では「江戸半年→国元半年」に短縮（大名側には行き来の費用が減るメリット）<br>
+        ▶ ただし国元にいる期間が増えることで，大名が力を蓄えるリスクも生じた<br>
+        ▶ このため1730年に廃止され，参勤交代も元の1年交代に戻った
+      </div>
+      <div style="background:#4a6741;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 参勤交代の費用負担</div>
+      <div class="cause-box">
+        <span class="label">💴 なぜ大名財政を圧迫したのか</span>
+        参勤交代には多額の費用がかかり，それが大名にとって「上米を払う代わりに在府を半年にしたい」と思わせる理由でした。<br><br>
+        <strong>主な費用内訳</strong><br>
+        ▶ 往復の旅費（宿代・食費・人件費）<br>
+        ▶ 江戸滞在中の生活費（家臣団を養う費用）<br>
+        ▶ 江戸屋敷の維持費——大名は上屋敷・中屋敷・下屋敷の3か所を持つことが必要だった<br>
+        ▶ 将軍への献上品・儀礼費用<br><br>
+        <strong>財政への影響</strong><br>
+        ▶ 藩の財政支出の <strong>60〜80%</strong> が参勤交代関連費用とも推計される（諸説あり）<br><br>
+        <strong>具体例</strong><br>
+        ▶ <strong>福岡藩</strong>（黒田家，52万石）：1回の参勤で約 <strong>3,000〜5,000両</strong> の出費<br>
+        ▶ <strong>加賀藩</strong>（前田家）：行列が <strong>5,000人超</strong>，江戸の上屋敷は現在の東大本郷キャンパスにあたる広大な敷地
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 百姓一揆・打ちこわし -->
+<div class="modal-overlay" id="modal-ikki" onclick="if(event.target===this)closeModal('ikki')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('ikki')">✕</button>
+    <div class="modal-title">⚡ 百姓一揆・打ちこわし——農村と都市の動揺</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 百姓一揆（農村での抵抗）</div>
+      <div class="cause-box">
+        <span class="label">🌾 農民の集団行動</span>
+        <strong>百姓一揆（ひゃくしょういっき）</strong>は，農民が集団で領主（大名・幕府）に対して年貢の減免や悪政の是正を求めた抵抗運動です。<br><br>
+        ▶ 背景：天災（飢饉・洪水・干ばつ）による収穫不足 → 年貢が払えない<br>
+        ▶ 代官（だいかん）の不正・重すぎる年貢への抗議<br>
+        ▶ 享保期以降，<strong>件数が大幅に増加</strong>。農村の疲弊が深刻になっていった<br>
+        ▶ 一揆の指導者は捕まって処刑されることも多かったが，それでも立ち上がった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 打ちこわし（都市での抵抗）</div>
+      <div class="why-box">
+        <span class="label">🏙️ 米価高騰への怒り</span>
+        <strong>打ちこわし（うちこわし）</strong>は，江戸などの都市で，米屋・質屋などの商人の店を民衆が破壊した暴動です。<br><br>
+        ▶ 飢饉などで米が不足 → 米価が急騰 → 貧しい町人が生活できなくなる<br>
+        ▶ 米を買い占めて高く売る商人（米屋・問屋）への怒りが爆発した<br>
+        ▶ 享保期の大飢饉（享保の飢饉）では，江戸でも打ちこわしが発生した<br>
+        ▶ 幕府にとって，都市の治安維持も大きな課題となった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 社会不安の拡大と改革の限界</div>
+      <div class="result-box">
+        <span class="label">💡 改革が解決できなかったもの</span>
+        享保の改革で幕府財政はある程度改善されましたが，農村・都市の社会不安は解消されませんでした。<br><br>
+        ▶ 商品経済の発展 → 農村にも貧富の差が拡大 → 農村の内部でも格差が広がった<br>
+        ▶ 武士の財政難は続き，貧しい旗本・御家人も増加した<br>
+        ▶ 「倹約だけでは解決できない」という矛盾が，次の<strong>田沼意次の商業重視政策</strong>へと道を開いた
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 田沼意次と寛政の改革 -->
+<div class="modal-overlay" id="modal-tanuma" onclick="if(event.target===this)closeModal('tanuma')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('tanuma')">✕</button>
+    <div class="modal-title">📊 田沼意次と寛政の改革——享保の改革のあとに何が起きたか</div>
+    <div class="modal-body">
+      <div style="background:#4a1a7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 田沼意次（たぬまおきつぐ）の時代</div>
+      <div class="cause-box">
+        <span class="label">💰 商業重視の政治へ</span>
+        享保の改革後，老中・<strong>田沼意次</strong>（1772〜1786年ごろに実権を握る）は，吉宗の「農業重視・倹約」とは異なる方向の政治を進めました。<br><br>
+        ▶ <strong>株仲間（かぶなかま）</strong>を積極的に公認 → 商人の組合から税を徴収して財政を補う<br>
+        ▶ <strong>長崎貿易の拡大</strong>——輸出を増やして金銀の流入を図った<br>
+        ▶ 印旛沼（いんばぬま）の干拓など大規模な新田開発にも取り組んだ<br>
+        ▶ しかし<strong>賄賂（わいろ）政治</strong>が横行し，役人の腐敗が広まった。天明の大飢饉（てんめいのだいききん）も重なり，田沼は失脚した
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 寛政の改革（松平定信）</div>
+      <div class="result-box">
+        <span class="label">📜 田沼政治への反省から</span>
+        田沼失脚後，老中・<strong>松平定信（まつだいらさだのぶ）</strong>が「<strong>寛政の改革</strong>（かんせいのかいかく）」を実施しました（1787〜1793年）。<br><br>
+        ▶ 田沼時代の腐敗を清めるため，<strong>厳しい倹約令</strong>を再び発した<br>
+        ▶ <strong>棄捐令（きえんれい）</strong>——旗本・御家人の借金を帳消しにする法令（武士の生活を救う）<br>
+        ▶ <strong>囲米（かこいまい）</strong>——各地の藩に米を備蓄させ，飢饉に備えた<br>
+        ▶ <strong>異学の禁（いがくのきん）</strong>——朱子学以外の学問を幕府の学校で教えることを禁止した<br>
+        ▶ 厳しすぎる改革への批判が高まり，定信は失脚。「白河の清きに魚も棲みかねて　もとの濁りの田沼恋しき」と皮肉られた
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 江戸の三大改革（まとめ）</div>
+      <div class="why-box">
+        <span class="label">📚 入試で必ず問われるセット</span>
+        <strong>① 享保の改革</strong>——徳川吉宗（8代将軍）・上米の制・目安箱・公事方御定書<br>
+        <strong>② 寛政の改革</strong>——松平定信（老中）・棄捐令・囲米・異学の禁<br>
+        <strong>③ 天保の改革</strong>——水野忠邦（老中）・株仲間の解散・人返し令<br><br>
+        この三つは「<strong>江戸の三大改革</strong>」として，人物名・政策名とともにまとめて覚えることが重要です。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 穴埋めチャレンジ バー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">語句を選んでタップして当てはめてください</span>
+    <span id="ccb-count">残り 14語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"徳川吉宗", "B":"享保の改革", "C":"上米の制",
+  "D":"目安箱", "E":"公事方御定書",
+  "F":"田沼意次", "G":"株仲間", "H":"天明の大飢饉",
+  "I":"松平定信", "J":"寛政の改革", "K":"棄捐令",
+  "L":"囲米", "M":"水野忠邦", "N":"天保の改革"
+};
+const wordBank = ["徳川吉宗","享保の改革","上米の制","目安箱","公事方御定書",
+  "田沼意次","株仲間","天明の大飢饉","松平定信","寛政の改革","棄捐令","囲米","水野忠邦","天保の改革"];
+
+const miniQuizData = [
+  {q:"①　享保の改革を断行した江戸幕府の将軍は誰か？",
+   choices:["徳川吉宗","徳川綱吉","松平定信","徳川家光"], ans:0,
+   exp:"徳川吉宗（とくがわよしむね）。8代将軍として紀州藩から就任し，幕府財政の立て直しを目指して享保の改革（1716〜1745年）を断行しました。米価の安定に力を入れたことから「米将軍」とも呼ばれます。"},
+  {q:"②　大名に参勤交代の江戸在府期間を半年に短縮する代わりに米を幕府へ上納させた制度は何か？",
+   choices:["株仲間の公認","上米の制","棄捐令","囲米"], ans:1,
+   exp:"上米の制（あげまいのせい）。1万石につき100石の米を幕府に上納させる代わりに，参勤交代の江戸在府期間を1年から半年に短縮しました。幕府の財政収入の増加に貢献しましたが，1730年に廃止されました。"},
+  {q:"③　庶民が意見や不満を将軍に直接届けるために設置された投書箱は何か？",
+   choices:["目安箱","高札場","訴訟所","御触書"], ans:0,
+   exp:"目安箱（めやすばこ）。吉宗が評定所前などに設置した投書箱。庶民の意見が政治に反映された例として，貧しい病人を診る「小石川養生所（こいしかわようじょうしょ）」の設置が有名です。"},
+  {q:"④　享保の改革で定められた，裁判・刑罰の基準を全国で統一した幕府の法令集は何か？",
+   choices:["御成敗式目","武家諸法度","公事方御定書","分国法"], ans:2,
+   exp:"公事方御定書（くじかたおさだめがき）。1742年に制定された幕府の基本法令集。それまで担当者の判断に任されていた裁判・刑罰の基準を明文化し，全国で統一された公正な裁きを目指しました。"}
+];
+
+const finalQuizData = [
+  {q:"① 享保の改革を行ったのは，江戸幕府の何代将軍か？",
+   choices:["5代将軍・徳川綱吉","7代将軍・徳川家継","8代将軍・徳川吉宗","11代将軍・徳川家斉"], ans:2,
+   exp:"8代将軍・徳川吉宗が行いました。享保の改革（1716〜1745年）は「江戸の三大改革」の一つです。"},
+  {q:"② 大名に参勤交代の緩和と引き換えに米を幕府へ上納させた制度は何か？",
+   choices:["棄捐令","上米の制","囲米","株仲間の公認"], ans:1,
+   exp:"上米の制（あげまいのせい）。1万石につき100石を上納させる代わりに，江戸在府期間を1年から半年に短縮した制度です。"},
+  {q:"③ 目安箱への投書がきっかけで設置された，貧しい病人を救う医療施設は何か？",
+   choices:["昌平坂学問所","施薬院","小石川養生所","寺子屋"], ans:2,
+   exp:"小石川養生所（こいしかわようじょうしょ）。目安箱への投書「貧しい病人への医療を」が吉宗に届き，江戸に設置されました。現在の東京大学医学部の前身ともいわれます。"},
+  {q:"④ 享保の改革で整備された，裁判・刑罰の基準を全国統一した法令集を何というか？",
+   choices:["御成敗式目","武家諸法度","公事方御定書","大宝律令"], ans:2,
+   exp:"公事方御定書（くじかたおさだめがき）。1742年に制定され，全国で統一した裁判基準を明文化した江戸幕府の基本法令集です。"},
+  {q:"⑤ 享保の改革で奨励された，未開墾地を耕地に変える取り組みは何か？",
+   choices:["株仲間の公認","新田開発","倹約令","参勤交代の廃止"], ans:1,
+   exp:"新田開発（しんでんかいはつ）。耕地面積を拡大することで年貢収入の増加を図りました。"},
+  {q:"⑥ 徳川吉宗が「米将軍」と呼ばれた主な理由はどれか？",
+   choices:["米の輸出を奨励したから","幕府の米倉を増やしたから","米の価格安定と年貢増収に力を入れたから","米を外国に売って財政を再建したから"], ans:2,
+   exp:"年貢米の増収と米価の安定に特に力を入れたことから「米将軍」と呼ばれました。江戸時代の経済は米本位制であったため，米は政治の中心的課題でした。"},
+  {q:"⑦ 享保の改革で支出を抑えるために発令された，節約を求める命令は何か？",
+   choices:["上米の制","倹約令","棄捐令","生類憐みの令"], ans:1,
+   exp:"倹約令（けんやくれい）。幕府・大名・武士・庶民すべてに節約を命じた法令で，吉宗自ら質素な生活を実践して率先垂範しました。"},
+  {q:"⑧ 享保の改革後，商業の振興・株仲間の公認で実権を握った老中は誰か？",
+   choices:["松平定信","水野忠邦","田沼意次","新井白石"], ans:2,
+   exp:"田沼意次（たぬまおきつぐ）。享保の改革後，農業重視・倹約ではなく商業資本を活用した政治を進めましたが，賄賂政治と批判されました。"},
+  {q:"⑨ 江戸時代中期，農村で年貢の引き下げなどを求めて農民が集団行動した運動を何というか？",
+   choices:["打ちこわし","百姓一揆","国一揆","土一揆"], ans:1,
+   exp:"百姓一揆（ひゃくしょういっき）。農民が集団で年貢の減免や悪政の是正を訴えた運動。享保期以降に件数が増加しました。"},
+  {q:"⑩ 享保・寛政・天保の三大改革を正しい順番で並べたものはどれか？",
+   choices:["寛政→享保→天保","享保→天保→寛政","享保→寛政→天保","天保→享保→寛政"], ans:2,
+   exp:"享保の改革（徳川吉宗）→寛政の改革（松平定信）→天保の改革（水野忠邦）の順番です。「三大改革」として人物名とセットで覚えましょう。"}
+];
+
+const checkItems = [
+  "徳川吉宗が8代将軍として紀州藩から就任し，享保の改革を断行したことを説明できる",
+  "上米の制の仕組み（参勤交代の江戸在府期間を半年に短縮する代わりに1万石につき100石の米を上納）を説明できる",
+  "倹約令・新田開発など享保の改革の主要政策を3つ以上あげられる",
+  "目安箱が庶民の意見を将軍に直接届けるための投書箱であったことを説明できる",
+  "目安箱への投書がきっかけで小石川養生所が設置されたことを答えられる",
+  "公事方御定書が裁判・刑罰の基準を全国で統一した法令集であることを説明できる",
+  "享保の改革の主な目的が幕府財政の再建であったことを説明できる",
+  "吉宗が「米将軍」と呼ばれた理由（米価安定と年貢増収への取り組み）を説明できる",
+  "享保の改革後に老中・田沼意次が商業資本を利用した政治を進めたことを説明できる",
+  "享保・寛政・天保の「江戸の三大改革」をそれぞれの中心人物とともに答えられる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  if (allCorrect) {
+    fireConfetti();
+    document.getElementById('sec-status-1').textContent = '🎉 全問正解！';
+    document.getElementById('sec-status-1').className = 'sec-status pass';
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    document.getElementById('sec-status-1').textContent = '❌ もう一度！';
+    document.getElementById('sec-status-1').className = 'sec-status fail';
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  document.getElementById('sec-status-1').textContent = '';
+  document.getElementById('sec-status-1').className = 'sec-status';
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  body.innerHTML = miniQuizData.map((d, i) =>
+    `<div class="mq-block" id="mq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(qi, ci) {
+  const d = miniQuizData[qi];
+  const block = document.getElementById('mq-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildFinal();
+buildChecklist();
+</script>
+</body>
+</html>
