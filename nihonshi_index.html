@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0054)file:///C:/Users/tinbu/Downloads/nihonshi_index_1.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>GAMBA 日本史基礎 単元表</title>
-<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<link href="./nihonshi_index_1_files/css2" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;background:#fdf5ec;color:#1a1a2e;min-height:100vh;font-size:15px}
@@ -179,14 +179,14 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
     <div class="sum-item"><span class="sum-dot sum-dot-a"></span>A 完璧 <span class="sum-count" id="cnt-a">0</span></div>
     <div class="sum-item"><span class="sum-dot sum-dot-b"></span>B 良好 <span class="sum-count" id="cnt-b">0</span></div>
     <div class="sum-item"><span class="sum-dot sum-dot-c"></span>C 要復習 <span class="sum-count" id="cnt-c">0</span></div>
-    <div class="sum-item"><span class="sum-dot sum-dot-n"></span>未学習 <span class="sum-count" id="cnt-n">18</span></div>
+    <div class="sum-item"><span class="sum-dot sum-dot-n"></span>未学習 <span class="sum-count" id="cnt-n">25</span></div>
   </div>
 </div>
 
 <!-- ══ タブ ══ -->
 <div class="tab-nav">
-  <button class="tnav on" onclick="switchTab('tab-units',this)">📋 単元表</button>
-  <button class="tnav"    onclick="switchTab('tab-record',this)">📅 学習記録</button>
+  <button class="tnav on" onclick="switchTab(&#39;tab-units&#39;,this)">📋 単元表</button>
+  <button class="tnav" onclick="switchTab(&#39;tab-record&#39;,this)">📅 学習記録</button>
 </div>
 
 <div class="wrap">
@@ -194,9 +194,9 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
 
   <!-- 進捗バー -->
   <div class="progress-wrap">
-    <div class="progress-lbl">📊 習熟度（全18単元）</div>
+    <div class="progress-lbl">📊 習熟度（全25単元）</div>
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progFill" style="width:0%"></div></div>
-    <div class="progress-pct" id="progPct">0%　A評価 <span id="progNote">0 / 18</span> 単元</div>
+    <div class="progress-pct" id="progPct">0%　A評価 </div>
   </div>
 
   <!-- GAMBAガイド -->
@@ -233,10 +233,10 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
   <div class="drill-banner">
     <div class="drill-icon">📝</div>
     <div class="drill-info">
-      <h3>ドリル＆確認テスト（第１〜６章・全18単元）</h3>
+      <h3>ドリル＆確認テスト（第１〜９章・全25単元）</h3>
       <p>フラッシュカード・4択ドリル・確認テストで理解を定着させよう。単元ごとに分かれているので苦手なところを重点的に。</p>
     </div>
-    <a class="drill-go" href="nihonshi_drill_nh01.html">単元①から →</a>
+    <a class="drill-go" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh01.html">単元①から →</a>
   </div>
 
   <!-- 第1章 -->
@@ -247,7 +247,64 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
       <span class="unit-badge">①〜③</span>
     </div>
     <div class="unit-body">
-      <div class="sec-grid" id="grid-ch1"></div>
+      <div class="sec-grid" id="grid-ch1"><div class="sec-card" data-id="nh01">
+  <div class="sc-hd">
+    <span class="sc-num">①</span>
+    <span class="sc-title">日本列島のはじまり——石器から稲作へ</span>
+    <span class="sc-status" id="st-nh01">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>岩宿遺跡・縄文時代・三内丸山遺跡</li><li>弥生時代・吉野ヶ里遺跡・稲作</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh01">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh01">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch01.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh01.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh01&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh01&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh01&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh02">
+  <div class="sc-hd">
+    <span class="sc-num">②</span>
+    <span class="sc-title">中国の歴史書が伝える「倭国」の姿</span>
+    <span class="sc-status" id="st-nh02">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>奴国の金印・倭国大乱・卑弥呼</li><li>邪馬台国・前方後円墳・大和政権</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh02">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh02">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch01.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh02.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh02&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh02&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh02&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh03">
+  <div class="sc-hd">
+    <span class="sc-num">③</span>
+    <span class="sc-title">天皇中心の国家——聖徳太子と大化の改新</span>
+    <span class="sc-status" id="st-nh03">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>冠位十二階・憲法十七条・遣隋使</li><li>大化の改新・班田収授法・法隆寺</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh03">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh03">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch01.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh03.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh03&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh03&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh03&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
     </div>
   </div>
 
@@ -259,7 +316,64 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
       <span class="unit-badge">④〜⑥</span>
     </div>
     <div class="unit-body">
-      <div class="sec-grid" id="grid-ch2"></div>
+      <div class="sec-grid" id="grid-ch2"><div class="sec-card" data-id="nh04">
+  <div class="sc-hd">
+    <span class="sc-num">④</span>
+    <span class="sc-title">白村江の戦いと天智天皇の防衛政策</span>
+    <span class="sc-status" id="st-nh04">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>水城・大野城・近江大津宮</li><li>庚午年籍・近江令</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh04">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh04">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch02.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh04.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh04&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh04&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh04&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh05">
+  <div class="sc-hd">
+    <span class="sc-num">⑤</span>
+    <span class="sc-title">壬申の乱と天武・持統天皇</span>
+    <span class="sc-status" id="st-nh05">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>壬申の乱・天武天皇・伊勢神宮</li><li>藤原京・飛鳥浄御原令・持統天皇</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh05">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh05">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch02.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh05.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh05&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh05&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh05&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh06">
+  <div class="sc-hd">
+    <span class="sc-num">⑥</span>
+    <span class="sc-title">律令国家の完成——大宝律令と税制</span>
+    <span class="sc-status" id="st-nh06">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>藤原不比等・大宝律令・班田収授法</li><li>租・調・庸・雑徭</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh06">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh06">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch02.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh06.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh06&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh06&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh06&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
     </div>
   </div>
 
@@ -271,7 +385,64 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
       <span class="unit-badge">⑦〜⑨</span>
     </div>
     <div class="unit-body">
-      <div class="sec-grid" id="grid-ch3"></div>
+      <div class="sec-grid" id="grid-ch3"><div class="sec-card" data-id="nh07">
+  <div class="sc-hd">
+    <span class="sc-num">⑦</span>
+    <span class="sc-title">平城京への遷都と土地制度の変化</span>
+    <span class="sc-status" id="st-nh07">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>元明天皇・和同開珎・平城京</li><li>三世一身法・墾田永年私財法・荘園</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh07">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh07">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch03.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh07.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh07&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh07&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh07&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh08">
+  <div class="sc-hd">
+    <span class="sc-num">⑧</span>
+    <span class="sc-title">聖武天皇と仏教による国家鎮護</span>
+    <span class="sc-status" id="st-nh08">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>聖武天皇・国分寺・東大寺</li><li>盧舎那仏・鎮護国家・鑑真</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh08">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh08">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch03.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh08.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh08&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh08&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh08&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh09">
+  <div class="sc-hd">
+    <span class="sc-num">⑨</span>
+    <span class="sc-title">天平文化——国際色豊かな仏教文化</span>
+    <span class="sc-status" id="st-nh09">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>正倉院・天平文化・光明皇后</li><li>万葉集・大伴家持・万葉仮名</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh09">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh09">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch03.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh09.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh09&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh09&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh09&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
     </div>
   </div>
 
@@ -283,7 +454,64 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
       <span class="unit-badge">⑩〜⑫</span>
     </div>
     <div class="unit-body">
-      <div class="sec-grid" id="grid-ch4"></div>
+      <div class="sec-grid" id="grid-ch4"><div class="sec-card" data-id="nh10">
+  <div class="sc-hd">
+    <span class="sc-num">⑩</span>
+    <span class="sc-title">平安京遷都と桓武天皇の政治</span>
+    <span class="sc-status" id="st-nh10">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>桓武天皇・坂上田村麻呂・征夷大将軍</li><li>最澄・空海・菅原道真</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh10">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh10">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch04.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh10.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh10&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh10&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh10&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh11">
+  <div class="sc-hd">
+    <span class="sc-num">⑪</span>
+    <span class="sc-title">摂関政治と院政——藤原氏の全盛と武士の台頭</span>
+    <span class="sc-status" id="st-nh11">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>平将門・藤原道長・摂関政治</li><li>後三条天皇・延久の荘園整理令・白河上皇</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh11">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh11">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch04.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh11.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh11&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh11&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh11&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh12">
+  <div class="sc-hd">
+    <span class="sc-num">⑫</span>
+    <span class="sc-title">国風文化——日本独自の美と文学</span>
+    <span class="sc-status" id="st-nh12">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>紫式部・清少納言・平仮名・国風文化</li><li>末法思想・浄土教・平等院鳳凰堂</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh12">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh12">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch04.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh12.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh12&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh12&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh12&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
     </div>
   </div>
 
@@ -295,7 +523,64 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
       <span class="unit-badge">⑬〜⑮</span>
     </div>
     <div class="unit-body">
-      <div class="sec-grid" id="grid-ch5"></div>
+      <div class="sec-grid" id="grid-ch5"><div class="sec-card" data-id="nh13">
+  <div class="sc-hd">
+    <span class="sc-num">⑬</span>
+    <span class="sc-title">鎌倉幕府の成立——御恩と奉公・承久の乱</span>
+    <span class="sc-status" id="st-nh13">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>守護・地頭・御恩と奉公・執権</li><li>承久の乱・六波羅探題・北条政子</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh13">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh13">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch05.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh13.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh13&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh13&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh13&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh14">
+  <div class="sc-hd">
+    <span class="sc-num">⑭</span>
+    <span class="sc-title">元寇と幕府衰退——御成敗式目・永仁の徳政令</span>
+    <span class="sc-status" id="st-nh14">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>御成敗式目・文永の役・弘安の役</li><li>北条時宗・永仁の徳政令・後醍醐天皇</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh14">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh14">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch05.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh14.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh14&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh14&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh14&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh15">
+  <div class="sc-hd">
+    <span class="sc-num">⑮</span>
+    <span class="sc-title">鎌倉文化——新仏教・武士文学・写実彫刻</span>
+    <span class="sc-status" id="st-nh15">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>浄土宗・浄土真宗・臨済宗・曹洞宗・日蓮宗</li><li>平家物語・運慶快慶・二毛作</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh15">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh15">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch05.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh15.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh15&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh15&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh15&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
       <div class="ch-drill-banner ch-drill-5">
         <div class="ch-drill-info">
           <span class="ch-drill-icon">📝</span>
@@ -304,7 +589,7 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
             <span>単元⑬〜⑮の総まとめ｜フラッシュカード15枚・4択10問・確認テスト12問</span>
           </div>
         </div>
-        <a class="ch-drill-go ch-drill-go-5" href="nihonshi_drill_ch05.html">総合ドリルへ →</a>
+        <a class="ch-drill-go ch-drill-go-5" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch05.html">総合ドリルへ →</a>
       </div>
     </div>
   </div>
@@ -317,7 +602,64 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
       <span class="unit-badge">⑯〜⑱</span>
     </div>
     <div class="unit-body">
-      <div class="sec-grid" id="grid-ch6"></div>
+      <div class="sec-grid" id="grid-ch6"><div class="sec-card" data-id="nh16">
+  <div class="sc-hd">
+    <span class="sc-num">⑯</span>
+    <span class="sc-title">建武の新政・南北朝・室町幕府の成立</span>
+    <span class="sc-status" id="st-nh16">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>足利尊氏・南北朝・足利義満・南北朝統一</li><li>管領・三管領・室町幕府（花の御所）</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh16">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh16">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch06.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh16.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh16&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh16&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh16&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh17">
+  <div class="sc-hd">
+    <span class="sc-num">⑰</span>
+    <span class="sc-title">勘合貿易・惣・一揆・戦国時代</span>
+    <span class="sc-status" id="st-nh17">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>勘合貿易（日明貿易）・惣・寄合</li><li>土一揆・一向一揆・応仁の乱・下剋上</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh17">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh17">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch06.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh17.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh17&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh17&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh17&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh18">
+  <div class="sc-hd">
+    <span class="sc-num">⑱</span>
+    <span class="sc-title">室町文化——金閣・銀閣・能・水墨画</span>
+    <span class="sc-status" id="st-nh18">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>北山文化（金閣）・東山文化（銀閣・書院造）</li><li>能（観阿弥・世阿弥）・雪舟・枯山水</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh18">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh18">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch06.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_nh18.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh18&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh18&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh18&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
       <div class="ch-drill-banner ch-drill-6">
         <div class="ch-drill-info">
           <span class="ch-drill-icon">📝</span>
@@ -326,8 +668,197 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
             <span>単元⑯〜⑱の総まとめ｜フラッシュカード15枚・4択10問・確認テスト12問</span>
           </div>
         </div>
-        <a class="ch-drill-go ch-drill-go-6" href="nihonshi_drill_ch06.html">総合ドリルへ →</a>
+        <a class="ch-drill-go ch-drill-go-6" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch06.html">総合ドリルへ →</a>
       </div>
+    </div>
+  </div>
+
+  <!-- 第7章 -->
+  <div class="unit">
+    <div class="unit-hd" style="background:linear-gradient(90deg,#8b2500,#5a1a00)">
+      <span class="unit-num">第7章</span>
+      <span class="unit-title">戦国・安土桃山時代</span>
+      <span class="unit-badge">⑲〜㉓</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch7"><div class="sec-card" data-id="nh19">
+  <div class="sc-hd">
+    <span class="sc-num">⑲</span>
+    <span class="sc-title">戦国時代と織田信長——天下布武への道</span>
+    <span class="sc-status" id="st-nh19">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>戦国大名・下剋上・分国法</li><li>織田信長・桶狭間の戦い・長篠の戦い・本能寺の変</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh19">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh19">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_nh19.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch19.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh19&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh19&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh19&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh20">
+  <div class="sc-hd">
+    <span class="sc-num">⑳</span>
+    <span class="sc-title">豊臣秀吉の天下統一——百姓から天下人へ</span>
+    <span class="sc-status" id="st-nh20">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>太閤検地・刀狩・兵農分離</li><li>バテレン追放令・朝鮮出兵（文禄・慶長の役）</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh20">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh20">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_nh20.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch20.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh20&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh20&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh20&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh21">
+  <div class="sc-hd">
+    <span class="sc-num">㉑</span>
+    <span class="sc-title">江戸幕府の成立——天下分け目から265年の安定へ</span>
+    <span class="sc-status" id="st-nh21">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>関ヶ原の戦い・徳川家康・幕藩体制</li><li>キリスト教禁止・島原天草一揆・鎖国体制</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh21">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh21">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_nh21.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch21.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh21&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh21&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh21&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="nh22">
+  <div class="sc-hd">
+    <span class="sc-num">㉒</span>
+    <span class="sc-title">元禄文化と産業の発展——町人が主役になる時代</span>
+    <span class="sc-status" id="st-nh22">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>元禄文化（上方の町人）・5代将軍徳川綱吉</li><li>農業・産業の発展・貨幣経済の広がり</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-nh22">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-nh22">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_nh22.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch22.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;nh22&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;nh22&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;nh22&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div><div class="sec-card" data-id="ch23">
+  <div class="sc-hd">
+    <span class="sc-num">㉓</span>
+    <span class="sc-title">享保の改革と江戸の三大改革</span>
+    <span class="sc-status" id="st-ch23">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>徳川吉宗・享保の改革・上米の制・目安箱・公事方御定書</li><li>田沼意次・松平定信（寛政の改革）・水野忠邦（天保の改革）</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-ch23">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-ch23">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch23.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch23.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;ch23&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;ch23&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;ch23&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
+      <div class="ch-drill-banner" style="background:#fff5f0;border-color:#8b2500">
+        <div class="ch-drill-info">
+          <span class="ch-drill-icon">📝</span>
+          <div class="ch-drill-label">
+            <strong>第７章 戦国・安土桃山時代 総合ドリル</strong>
+            <span>単元⑲〜㉓の総まとめ</span>
+          </div>
+        </div>
+        <a class="ch-drill-go" style="background:#8b2500" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch07.html">総合ドリルへ →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第8章 -->
+  <div class="unit">
+    <div class="unit-hd" style="background:linear-gradient(90deg,#c87000,#8a4e00)">
+      <span class="unit-num">第8章</span>
+      <span class="unit-title">江戸時代の文化</span>
+      <span class="unit-badge">㉔</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch8"><div class="sec-card" data-id="ch24">
+  <div class="sc-hd">
+    <span class="sc-num">㉔</span>
+    <span class="sc-title">江戸時代の文化——元禄文化と化政文化</span>
+    <span class="sc-status" id="st-ch24">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>元禄文化（松尾芭蕉・井原西鶴・近松門左衛門・菱川師宣）</li><li>化政文化（葛飾北斎・歌川広重・十返舎一九・伊能忠敬）・蘭学と国学</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-ch24">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-ch24">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch24.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch24.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;ch24&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;ch24&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;ch24&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
+      <div class="ch-drill-banner" style="background:#fff8f0;border-color:#c87000">
+        <div class="ch-drill-info">
+          <span class="ch-drill-icon">📝</span>
+          <div class="ch-drill-label">
+            <strong>第８章 江戸時代の文化 総合ドリル</strong>
+            <span>単元㉔の総まとめ</span>
+          </div>
+        </div>
+        <a class="ch-drill-go" style="background:#c87000" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch08.html">総合ドリルへ →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第9章 -->
+  <div class="unit">
+    <div class="unit-hd" style="background:linear-gradient(90deg,#1a2a6b,#0d1a45)">
+      <span class="unit-num">第9章</span>
+      <span class="unit-title">幕末・明治</span>
+      <span class="unit-badge">㉕〜</span>
+    </div>
+    <div class="unit-body">
+      <div class="sec-grid" id="grid-ch9"><div class="sec-card" data-id="ch25">
+  <div class="sc-hd">
+    <span class="sc-num">㉕</span>
+    <span class="sc-title">開国と江戸幕府の滅亡</span>
+    <span class="sc-status" id="st-ch25">未学習</span>
+  </div>
+  <div class="sc-body"><ul class="sc-topics"><li>ペリー来航・日米和親条約・日米修好通商条約・安政の大獄</li><li>桜田門外の変・薩長同盟・大政奉還・戊辰戦争</li></ul></div>
+  <div class="sc-meta">
+    <div class="sc-meta-item">📚 学習回数：<span class="sc-meta-val" id="cnt-ch25">0</span>回</div>
+    <div class="sc-meta-item">🗓 最終：<span class="sc-meta-val" id="last-ch25">─</span></div>
+  </div>
+  <div class="sc-btn-row"><a class="sc-btn" href="file:///C:/Users/tinbu/Downloads/nihonshi_ch25.html">📖 学習する</a>
+           <a class="sc-btn sc-btn-drill" href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch25.html">✏️ ドリルへ</a></div>
+  <div class="abc-row">
+    <span class="abc-lbl">理解度</span>
+    <button class="abc-btn abc-a" onclick="setABC(&#39;ch25&#39;,&#39;a&#39;,this)">A 完璧</button>
+    <button class="abc-btn abc-b" onclick="setABC(&#39;ch25&#39;,&#39;b&#39;,this)">B 良好</button>
+    <button class="abc-btn abc-c" onclick="setABC(&#39;ch25&#39;,&#39;c&#39;,this)">C 復習</button>
+  </div>
+</div></div>
     </div>
   </div>
 
@@ -361,7 +892,7 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
   <div class="modal-box">
     <div class="modal-emoji" id="achEmoji">🎉</div>
     <div class="modal-title" id="achTitle">達成！</div>
-    <div class="modal-sub"   id="achSub"></div>
+    <div class="modal-sub" id="achSub"></div>
     <button class="modal-close" onclick="closeAchieve()">とじる</button>
   </div>
 </div>
@@ -430,12 +961,39 @@ const UNITS = [
   {id:'nh18',num:'⑱', title:'室町文化——金閣・銀閣・能・水墨画',
    sub:['北山文化（金閣）・東山文化（銀閣・書院造）','能（観阿弥・世阿弥）・雪舟・枯山水'],
    file:'nihonshi_ch06.html', drill:'nihonshi_drill_nh18.html', group:'ch6'},
+  // 第7章
+  {id:'nh19',num:'⑲', title:'戦国時代と織田信長——天下布武への道',
+   sub:['戦国大名・下剋上・分国法','織田信長・桶狭間の戦い・長篠の戦い・本能寺の変'],
+   file:'nihonshi_nh19.html', drill:'nihonshi_drill_ch19.html', group:'ch7'},
+  {id:'nh20',num:'⑳', title:'豊臣秀吉の天下統一——百姓から天下人へ',
+   sub:['太閤検地・刀狩・兵農分離','バテレン追放令・朝鮮出兵（文禄・慶長の役）'],
+   file:'nihonshi_nh20.html', drill:'nihonshi_drill_ch20.html', group:'ch7'},
+  {id:'nh21',num:'㉑', title:'江戸幕府の成立——天下分け目から265年の安定へ',
+   sub:['関ヶ原の戦い・徳川家康・幕藩体制','キリスト教禁止・島原天草一揆・鎖国体制'],
+   file:'nihonshi_nh21.html', drill:'nihonshi_drill_ch21.html', group:'ch7'},
+  {id:'nh22',num:'㉒', title:'元禄文化と産業の発展——町人が主役になる時代',
+   sub:['元禄文化（上方の町人）・5代将軍徳川綱吉','農業・産業の発展・貨幣経済の広がり'],
+   file:'nihonshi_nh22.html', drill:'nihonshi_drill_ch22.html', group:'ch7'},
+  {id:'ch23',num:'㉓', title:'享保の改革と江戸の三大改革',
+   sub:['徳川吉宗・享保の改革・上米の制・目安箱・公事方御定書','田沼意次・松平定信（寛政の改革）・水野忠邦（天保の改革）'],
+   file:'nihonshi_ch23.html', drill:'nihonshi_drill_ch23.html', group:'ch7'},
+  // 第8章
+  {id:'ch24',num:'㉔', title:'江戸時代の文化——元禄文化と化政文化',
+   sub:['元禄文化（松尾芭蕉・井原西鶴・近松門左衛門・菱川師宣）','化政文化（葛飾北斎・歌川広重・十返舎一九・伊能忠敬）・蘭学と国学'],
+   file:'nihonshi_ch24.html', drill:'nihonshi_drill_ch24.html', group:'ch8'},
+  // 第9章
+  {id:'ch25',num:'㉕', title:'開国と江戸幕府の滅亡',
+   sub:['ペリー来航・日米和親条約・日米修好通商条約・安政の大獄','桜田門外の変・薩長同盟・大政奉還・戊辰戦争'],
+   file:'nihonshi_ch25.html', drill:'nihonshi_drill_ch25.html', group:'ch9'},
 ];
 
 const DONE_FILES = [
   'nihonshi_ch01.html','nihonshi_ch02.html',
   'nihonshi_ch03.html','nihonshi_ch04.html',
-  'nihonshi_ch05.html','nihonshi_ch06.html'
+  'nihonshi_ch05.html','nihonshi_ch06.html',
+  'nihonshi_nh19.html','nihonshi_nh20.html',
+  'nihonshi_nh21.html','nihonshi_nh22.html',
+  'nihonshi_ch23.html','nihonshi_ch24.html','nihonshi_ch25.html'
 ];
 
 const LS_KEY = 'nihonshi_gamba_v1';
@@ -449,7 +1007,7 @@ function getLast(id){  return (STATUS[id]||{}).last||''; }
 
 /* ── カード生成 ── */
 function buildCards(){
-  ['ch1','ch2','ch3','ch4','ch5','ch6'].forEach(g => {
+  ['ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8','ch9'].forEach(g => {
     const el = document.getElementById('grid-'+g);
     if(!el) return;
     el.innerHTML = UNITS.filter(u => u.group === g).map(u => {
@@ -554,7 +1112,7 @@ function render(){
     if(g==='a') ca++; else if(g==='b') cb++; else if(g==='c') cc++; else cn++;
   });
 
-  const total = 18;
+  const total = 25;
   document.getElementById('cnt-a').textContent = ca;
   document.getElementById('cnt-b').textContent = cb;
   document.getElementById('cnt-c').textContent = cc;
@@ -634,5 +1192,6 @@ function launchConfetti(){
 buildCards();
 render();
 </script>
-</body>
-</html>
+
+
+</body></html>
