@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch25_2.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉕ 幕末・開国 ドリル｜日本史基礎GAMBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./nihonshi_drill_nh25_files/css2" rel="stylesheet">
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a1c00}
+  .back-link.gray{background:#555}.back-link.gray:hover{background:#333}
+  .back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .unit-header{background:linear-gradient(135deg,#1a3050,#2a5080);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #6a90b8;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#1a3050;transition:all 0.2s;flex:1;min-width:130px;text-align:center;font-family:inherit}
+  .mode-tab.active{background:#2a5080;color:#fff;border-color:#2a5080;box-shadow:0 3px 0 #1a3050}
+  .mode-tab:hover:not(.active){background:#e8f0f8}
+  .panel{background:#fff;border-radius:12px;border:1px solid #6a90b8;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #6a90b8;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#1a3050;transition:all 0.15s;font-family:inherit}
+  .fc-timer-btn.active{background:#2a5080;color:#fff;border-color:#2a5080}
+  .fc-timer-btn:hover:not(.active){background:#e8f0f8}
+  .fc-card{background:linear-gradient(135deg,#f0f5ff,#ddeaff);color:#1a1a2e;border:2px solid #a0c0e0;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(26,48,80,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#2a5080}
+  .fc-card .fc-hint{font-size:13px;color:#2a4060;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#608090;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#2a5080;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15;font-family:inherit}
+  .fc-btn-ng{padding:11px 32px;background:#2a5080;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #1a3050;font-family:inherit}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#e8f0f8;border:2px solid #6a90b8;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#2a5080;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px;font-family:inherit}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #6a90b8;background:#f0f5ff;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s;font-family:inherit;text-align:left}
+  .drill-choice:hover{border-color:#2a5080;background:#ddeaff}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#ddeaff;border-color:#6a90b8;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#a0d0ff;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#2a5080;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #1a3050;display:none;font-family:inherit}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#2a5080;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#2a5080;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#2a5080;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #6a90b8;background:#f0f5ff;cursor:pointer;font-size:14px;transition:all 0.15s;font-family:inherit;text-align:left}
+  .test-choice:hover{border-color:#2a5080;background:#ddeaff}
+  .test-choice.selected{border-color:#2a5080;background:#c0d8f0;color:#1a3050;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#ddeaff;border-color:#6a90b8;pointer-events:none}
+  .test-submit{background:#2a5080;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #1a3050;margin-top:18px;width:100%;font-family:inherit}
+  .test-submit:hover{background:#1a3050}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#2a5080;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#2a5080,#4a80b0);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#2a5080;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #1a3050;font-family:inherit}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #6a90b8;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#1a3050,#2a5080);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#e8f0f8;border-left:5px solid #2a5080;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#2a5080}
+  .setsu-h3{font-size:14px;font-weight:800;color:#2a5080;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #a0c0e0}
+  .setsu-box{background:#f5f8ff;border-radius:8px;border:1px solid #b0c8e0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#2a5080}
+  .setsu-box .lbl{display:inline-block;background:#2a5080;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-note{background:#fffbe8;border-left:4px solid #c8a000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3a00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="file:///C:/Users/tinbu/Downloads/nihonshi_ch25.html" class="back-link" style="background:#2a5080">← 単元㉕ テキストへ</a>
+  <a href="file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch09.html" class="back-link" style="background:#c87000">← 第9章ドリルへ</a>
+  <a href="file:///C:/Users/tinbu/Downloads/nihonshi_index.html" class="back-link gray">← 目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第９章　単元㉕ ドリル</div>
+  <h1>⚓ 幕末・開国</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 14枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 14問</span>
+    <span class="stat-chip">📋 確認テスト 12問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元㉕ のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body" id="setsu-body">
+    <div class="setsu-intro">
+      1853年，アメリカの<strong>ペリー</strong>が浦賀に来航し，江戸幕府に開国を迫りました。翌1854年に<strong>日米和親条約</strong>，1858年に<strong>日米修好通商条約</strong>が結ばれ，約250年の鎖国が終わりを告げました。これに反発する<strong>尊王攘夷運動</strong>が高まる中，幕府の権力は急速に弱まっていきます。
+    </div>
+    <div class="setsu-h3">ペリー来航と開国（1853〜1854年）</div>
+    <div class="setsu-box">
+      1853年，アメリカ東インド艦隊司令長官<strong>ペリー</strong>が4隻の黒船（蒸気船）を率いて浦賀に来航し，開国・通商を求めました。幕府は翌1854年，<strong>日米和親条約</strong>を結んで下田・箱館の2港を開港。200年以上続いた鎖国政策が事実上終わりました。<br>
+      <span class="lbl">下田・箱館</span> 日米和親条約で開港した2港。アメリカ船への食料・水・石炭の補給が目的<br>
+      <span class="lbl orange">ペリー来航の理由</span> 太平洋で操業する捕鯨船・貿易船の補給地の確保，遭難したアメリカ人船員の保護という実利的な理由があった
+    </div>
+    <div class="setsu-h3">日米修好通商条約と安政の大獄（1858年）</div>
+    <div class="setsu-box">
+      1858年，大老<strong>井伊直弼</strong>は朝廷の許可を得ないまま，アメリカ総領事ハリスと<strong>日米修好通商通商条約</strong>を締結しました。この条約は<strong>関税自主権がなく</strong>，<strong>領事裁判権（治外法権）を認める</strong>不平等な内容でした。条約に反対した尊王攘夷派を弾圧した事件が<strong>安政の大獄</strong>（1858〜59年）で，吉田松陰らが処刑されました。<br>
+      <span class="lbl">不平等条約</span> 関税自主権なし＋領事裁判権あり。日本が不利な内容だった<br>
+      <span class="lbl orange">安政の大獄</span> 井伊直弼が反対派を弾圧。吉田松陰・橋本左内らが処刑された<br>
+      <span class="lbl orange">ハリスの説得術</span> 清で起きていたアロー戦争（英仏×清）を持ち出し，「今結ばなければ英仏に占領される」と迫った（誇張を含んでいたとされる）<br>
+      <span class="lbl orange">誰が印を押したか</span> 孝明天皇は勅許を与えなかった。井伊直弼は延期を望んでいたが，交渉担当の井上清直・岩瀬忠震がハリスの圧力を受けて独断で調印した
+    </div>
+    <div class="setsu-h3">桜田門外の変と尊王攘夷運動</div>
+    <div class="setsu-box">
+      1860年，<strong>桜田門外の変</strong>で水戸藩・薩摩藩の脱藩浪士たちが井伊直弼を暗殺しました。これ以降，幕府の権威は急速に低下します。<br>
+      <span class="lbl">尊王攘夷運動</span> 天皇を尊ぶ（尊王）と外国を排除する（攘夷）を組み合わせた思想・運動<br>
+      <span class="lbl orange">薩長同盟（1866年）</span> 坂本龍馬の仲介で薩摩藩（西郷隆盛）と長州藩（木戸孝允）が同盟
+    </div>
+    <div class="setsu-h3">大政奉還と江戸幕府の終焉（1867年）</div>
+    <div class="setsu-box">
+      1867年，第15代将軍<strong>徳川慶喜</strong>は政権を朝廷に返す<strong>大政奉還</strong>を行いました。同年，朝廷は<strong>王政復古の大号令</strong>を発し，天皇中心の新政府の樹立を宣言しました。これにより約260年続いた江戸幕府は事実上終わりを迎えます。<br>
+      <span class="lbl orange">発案の経緯</span> 横井小楠・大久保一翁・勝海舟ら幕臣が早くから提唱→坂本龍馬が後藤象二郎に伝える→後藤が山内容堂に提言→容堂が慶喜へ建白<br>
+      <span class="lbl orange">小御所会議</span> 慶喜本人は出席せず。慶喜擁護の山内容堂に対し，西郷隆盛の強い姿勢が伝わり，最終的に辞官納地（官職辞退・領地の一部返上）が「慶喜みずからの申し出」という形で決定した
+    </div>
+    <div class="setsu-note">💡 <strong>年号セット</strong>：1853 ペリー来航 → 1854 日米和親条約 → 1858 日米修好通商条約・安政の大獄 → 1860 桜田門外の変 → 1866 薩長同盟 → 1867 大政奉還・王政復古の大号令</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode(&#39;flash&#39;)">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode(&#39;drill&#39;)">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode(&#39;test&#39;)">📋 確認テスト</button>
+</div>
+
+<div id="content-area"><div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn active" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap"><div class="fc-progress">📖 1 / 14枚　✅ 0　❌ 0</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">1867年，第15代将軍・徳川慶喜が政権を朝廷に返した出来事を何というか。</div><div class="fc-back">大政奉還（たいせいほうかん）</div><div class="fc-hint">💡 260年続いた江戸幕府が事実上ここで終わった</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div></div></div></div>
+
+<script>
+const UNIT = {
+  title:"単元㉕ 幕末・開国",
+  flashCards:[
+    {q:"1853年，浦賀に来航し幕府に開国を迫ったアメリカ東インド艦隊司令長官はだれか。",a:"ペリー（Perry）",hint:"4隻の黒船（蒸気船）を率いて来航した"},
+    {q:"1854年，幕府がアメリカと結んだ，下田・箱館の2港を開港した条約を何というか。",a:"日米和親条約（にちべいわしんじょうやく）",hint:"鎖国政策が事実上終わった条約"},
+    {q:"1858年に結ばれた，関税自主権がなく領事裁判権を認める不平等な条約を何というか。",a:"日米修好通商条約（にちべいしゅうこうつうしょうじょうやく）",hint:"大老・井伊直弼が朝廷の許可なく締結した"},
+    {q:"1858年に大老・井伊直弼が尊王攘夷派を弾圧し，吉田松陰らを処刑した事件を何というか。",a:"安政の大獄（あんせいのたいごく）",hint:"井伊直弼による強権的な弾圧。反発を招いた"},
+    {q:"1860年，水戸藩・薩摩藩の浪士が井伊直弼を暗殺した事件を何というか。",a:"桜田門外の変（さくらだもんがいのへん）",hint:"江戸城の桜田門外で起きた。幕府の権威が急落した"},
+    {q:"天皇を尊び外国を排除しようとする，幕末に高まった思想・運動を何というか。",a:"尊王攘夷運動（そんのうじょういうんどう）",hint:"「尊王」=天皇を尊ぶ，「攘夷」=外国を打ち払う"},
+    {q:"1866年，坂本龍馬の仲介で結ばれた薩摩藩と長州藩の軍事同盟を何というか。",a:"薩長同盟（さっちょうどうめい）",hint:"西郷隆盛（薩摩）と木戸孝允（長州）が結んだ"},
+    {q:"1867年，第15代将軍・徳川慶喜が政権を朝廷に返した出来事を何というか。",a:"大政奉還（たいせいほうかん）",hint:"260年続いた江戸幕府が事実上ここで終わった"},
+    {q:"日米修好通商条約で定められた不平等な内容を2点あげよ。",a:"関税自主権がない・領事裁判権（治外法権）を認める",hint:"日本側に不利な条約。後の明治政府も改正に苦労した"},
+    {q:"1867年，大政奉還と同年に朝廷が発し，天皇中心の新政府樹立を宣言した命令を何というか。",a:"王政復古の大号令（おうせいふっこのだいごうれい）",hint:"江戸幕府・摂政・関白の廃止を宣言した"},
+    {q:"ペリーが日本に開国を求めた実利的な理由を1つあげよ。",a:"太平洋で操業する捕鯨船・貿易船への燃料補給地の確保（遭難船員の保護も）",hint:"アメリカにとっての現実的な必要から生まれた要求だった"},
+    {q:"ハリスが通商条約の締結を幕府に迫る際に持ち出した，当時清（中国）で起きていた戦争を何というか。",a:"アロー戦争（あろーせんそう）",hint:"1856〜60年，イギリス・フランスが清を攻めた戦争"},
+    {q:"日米修好通商条約に，実際に花押（印）を記した幕府側の交渉担当者2人はだれか。",a:"井上清直（いのうえきよなお）・岩瀬忠震（いわせただなり）",hint:"井伊直弼本人ではなく，現場の担当者が独断で調印した"},
+    {q:"大政奉還のアイデアを幕末の早い段階から提唱していた開明的な幕臣を1人あげよ。",a:"勝海舟（かつかいしゅう）（横井小楠・大久保一翁でも可）",hint:"坂本龍馬より前から，政権を朝廷に返すべきだという議論があった"},
+  ],
+  drillQuiz:[
+    {q:"1853年，浦賀に来航し幕府に開国を迫ったアメリカの人物はだれか。",
+     choices:["ハリス","ペリー","シーボルト","リンカーン"],ans:1,
+     exp:"ペリー（Matthew Perry）はアメリカ東インド艦隊司令長官で，1853年に4隻の黒船（蒸気船）を率いて浦賀（神奈川県）に来航しました。幕府に開国・通商を求める大統領の親書を手渡し，翌1854年に再来航して回答を迫りました。"},
+    {q:"1854年，幕府がアメリカと結んだ，下田・箱館を開港した条約は何か。",
+     choices:["日米修好通商条約","日英和親条約","日米和親条約","日露和親条約"],ans:2,
+     exp:"日米和親条約（1854年）。ペリーの再来航を受けて幕府が締結した条約で，下田（静岡県）と箱館（北海道函館）の2港を開港し，アメリカ船への食料・水・石炭の補給を認めました。これにより約200年続いた鎖国政策は事実上終わりました。"},
+    {q:"1858年に結ばれた日米修好通商条約の不平等な内容として正しいのはどれか。",
+     choices:["日本に関税自主権があった","日本が領事裁判権を持った","関税自主権がなく，領事裁判権をアメリカに認めた","日本に最恵国待遇が与えられた"],ans:2,
+     exp:"日米修好通商条約は，①日本に関税自主権がない（外国商品に自由に関税をかけられない），②アメリカに領事裁判権（治外法権）を認める（アメリカ人が罪を犯しても日本の法律で裁けない）という，日本に不利な不平等条約でした。"},
+    {q:"日米修好通商条約を朝廷の許可なく締結し，反対派を安政の大獄で弾圧した幕府の大老はだれか。",
+     choices:["松平定信","水野忠邦","井伊直弼","田沼意次"],ans:2,
+     exp:"井伊直弼（いいなおすけ，1815〜1860年）は彦根藩主で江戸幕府の大老です。1858年に日米修好通商条約を強引に締結し，反対派（尊王攘夷派）を安政の大獄で弾圧しました。吉田松陰・橋本左内らが処刑されています。"},
+    {q:"1860年，井伊直弼が水戸藩・薩摩藩の浪士に暗殺された事件を何というか。",
+     choices:["禁門の変","安政の大獄","桜田門外の変","池田屋事件"],ans:2,
+     exp:"桜田門外の変（1860年）。水戸藩・薩摩藩の脱藩浪士18人が，江戸城の桜田門外で井伊直弼の行列を襲撃し，暗殺しました。安政の大獄への復讐でした。これ以降，幕府の権威は急速に失墜していきます。"},
+    {q:"幕末に高まった，「天皇を尊び外国を打ち払え」という思想・運動を何というか。",
+     choices:["文明開化","殖産興業","尊王攘夷","富国強兵"],ans:2,
+     exp:"尊王攘夷運動（そんのうじょういうんどう）。「尊王」は天皇を尊ぶ考え，「攘夷」は外国を打ち払う考えです。開国・不平等条約への反発から，倒幕運動へとつながっていきました。"},
+    {q:"1866年，坂本龍馬の仲介により結ばれた薩摩藩と長州藩の同盟を何というか。",
+     choices:["薩英同盟","薩長同盟","公武合体","尊王攘夷同盟"],ans:1,
+     exp:"薩長同盟（1866年）。長州征討で対立していた薩摩藩（西郷隆盛）と長州藩（木戸孝允）が，土佐藩の坂本龍馬の仲介によって軍事同盟を結びました。この同盟が倒幕運動の核心となりました。"},
+    {q:"1867年，第15代将軍・徳川慶喜が政権を朝廷に返した出来事を何というか。",
+     choices:["廃藩置県","版籍奉還","大政奉還","王政復古"],ans:2,
+     exp:"大政奉還（1867年）。第15代将軍・徳川慶喜（よしのぶ）は，薩長を中心とする倒幕運動が高まる中，朝廷に政権を返還しました。土佐藩の山内容堂（坂本龍馬の意見）の進言を受けて決断したといわれています。"},
+    {q:"日米和親条約（1854年）で開港された2つの港はどれか。",
+     choices:["横浜と神戸","長崎と大坂","下田と箱館","新潟と兵庫"],ans:2,
+     exp:"日米和親条約で開港されたのは，下田（静岡県）と箱館（北海道函館）の2港です。アメリカ船への燃料・食料・水の補給が主な目的でした。貿易を本格的に開始したのは，1858年の日米修好通商条約からです。"},
+    {q:"大政奉還と同じ1867年に発せられた，天皇中心の新政府樹立を宣言した命令を何というか。",
+     choices:["廃藩置県","五箇条の御誓文","王政復古の大号令","版籍奉還"],ans:2,
+     exp:"王政復古の大号令（1867年）。大政奉還と同年，薩摩・長州藩を中心とする倒幕派が朝廷を動かし，「天皇中心の新政府を樹立する」と宣言した命令です。江戸幕府・摂政・関白の廃止が宣言され，新しい明治政府への道が開かれました。"},
+    {q:"ペリーが日本に開国を求めた理由として正しいものはどれか。",
+     choices:["日本を植民地にするため","太平洋の捕鯨船・貿易船の燃料補給地を確保するため","日本の金を奪うため","キリスト教を広めるため"],ans:1,
+     exp:"当時のアメリカは太平洋での捕鯨業がさかんで，日本近海を航行する船の燃料・食料・水の補給地，および遭難した船員の保護が必要とされていました。単なる要求ではなく，現実的な必要から開国を求めたのです。"},
+    {q:"日米修好通商条約の交渉で，ハリスが幕府を説得するために持ち出した出来事は何か。",
+     choices:["アヘン戦争","アロー戦争","ペリー来航","薩英戦争"],ans:1,
+     exp:"ハリスは，当時清（中国）で起きていたアロー戦争（英仏と清の戦争）を持ち出し，「今すぐアメリカと条約を結ばなければ日本も英仏に攻められる」と幕府に迫りました。この発言はかなり誇張を含んでいたとされています。"},
+    {q:"孝明天皇が勅許を与えなかったにもかかわらず，日米修好通商条約に実際に印を押したのはだれか。",
+     choices:["井伊直弼本人","徳川慶喜","井上清直・岩瀬忠震","堀田正睦"],ans:2,
+     exp:"大老・井伊直弼は勅許が下りるまで調印を延期するよう指示していましたが，ハリスの圧力を受けた交渉担当の井上清直・岩瀬忠震が独断で調印しました。井伊本人はこれを知り「無念の極み」と述べたと伝えられています。"},
+    {q:"大政奉還のアイデアについて正しい説明はどれか。",
+     choices:["坂本龍馬が突然思いついた独自の発想だった","横井小楠・大久保一翁・勝海舟らが早くから提唱しており，複数の人物を経て実現した","徳川慶喜が自ら考え出したものだった","孝明天皇が幕府に命じたものだった"],ans:1,
+     exp:"大政奉還は「坂本龍馬の発案」として語られることが多いですが，実際には幕末の早い時期から横井小楠・大久保一翁・勝海舟らが提唱しており，坂本龍馬→後藤象二郎→山内容堂→徳川慶喜という複数の段階を経て実現したものです。"},
+  ],
+  testQuiz:[
+    {q:"1853年，浦賀に来航し開国を迫ったアメリカ人はだれか。",choices:["ハリス","シーボルト","ペリー","リンカーン"],ans:2},
+    {q:"1854年，幕府がアメリカと結んだ開国条約を何というか。",choices:["日米修好通商条約","日米和親条約","日英同盟","日露和親条約"],ans:1},
+    {q:"日米修好通商条約（1858年）が不平等だった理由として正しいのはどれか。",choices:["幕府が莫大な賠償金を支払った","日本に関税自主権がなく領事裁判権をアメリカに認めた","日本の軍隊がアメリカに駐留を許可された","領土の一部をアメリカに割譲した"],ans:1},
+    {q:"1858年，日米修好通商条約を締結し，安政の大獄で反対派を弾圧した幕府の大老はだれか。",choices:["松平定信","水野忠邦","田沼意次","井伊直弼"],ans:3},
+    {q:"1860年，井伊直弼が暗殺された事件を何というか。",choices:["安政の大獄","池田屋事件","桜田門外の変","禁門の変"],ans:2},
+    {q:"幕末の「尊王攘夷」とはどういう意味か。",choices:["将軍を尊び諸藩を従わせる","天皇を尊び外国を打ち払う","幕府を倒して共和制にする","朝廷と幕府が協力して政治を行う"],ans:1},
+    {q:"1866年，坂本龍馬の仲介で薩摩藩と長州藩が結んだ軍事同盟を何というか。",choices:["薩英同盟","公武合体","薩長同盟","尊攘同盟"],ans:2},
+    {q:"1867年，第15代将軍・徳川慶喜が政権を朝廷に返した出来事を何というか。",choices:["版籍奉還","廃藩置県","大政奉還","王政復古"],ans:2},
+    {q:"日米和親条約（1854年）で開港された港の組み合わせとして正しいのはどれか。",choices:["横浜と神戸","長崎と大坂","新潟と兵庫","下田と箱館"],ans:3},
+    {q:"大政奉還と同じ1867年に発せられた，天皇中心の新政府樹立を宣言した命令を何というか。",choices:["五箇条の御誓文","廃藩置県","王政復古の大号令","版籍奉還"],ans:2},
+    {q:"ハリスが日米修好通商条約の交渉で持ち出した，当時清（中国）で起きていた戦争は何か。",choices:["アヘン戦争","アロー戦争","日清戦争","薩英戦争"],ans:1},
+    {q:"孝明天皇の勅許がないまま日米修好通商条約に実際に印を押したのはだれか。",choices:["井伊直弼本人","徳川慶喜","井上清直・岩瀬忠震","堀田正睦"],ans:2}
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});renderContent();}
+function renderContent(){const area=document.getElementById('content-area');if(currentMode==='flash')renderFlash(area);else if(currentMode==='drill')renderDrill(area);else renderTest(area);}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){const colors=['#2a5080','#4a80b0','#f4d03f','#2d8a30','#e0eaff','#fff'];for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){initFlash();area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;startCardTimer();}
+function buildFlashCard(){if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#2a5080;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+const card=fcCards[fcIndex];return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+const q=drillQs[drillIndex];const choices=q.choices.map((c,i)=>`<button class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</button>`).join('');return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;}
+function drillAnswer(idx){if(drillAnswered)return;drillAnswered=true;const q=drillQs[drillIndex];document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});if(idx===q.ans)drillScore++;const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){testSelections={};testSubmitted=false;let html='<div class="panel">';UNIT.testQuiz.forEach((q,i)=>{html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;q.choices.forEach((c,ci)=>{html+=`<button class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</button>`;});html+='</div></div>';});html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;area.innerHTML=html;}
+function testSelect(qi,ci){if(testSubmitted)return;testSelections[qi]=ci;document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});}
+function submitTest(){if(testSubmitted)return;const total=UNIT.testQuiz.length;const answered=Object.keys(testSelections).length;if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}testSubmitted=true;let correct=0;let reviewHTML='<div class="test-review">';UNIT.testQuiz.forEach((q,i)=>{const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;});reviewHTML+='</div>';const pct=Math.round(correct/total*100);const pass=correct>=8;document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元㉕ クリア！</div>`:''}<div id="test-review-block">${reviewHTML}</div><button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;document.getElementById('test-result').style.display='block';if(pass)fireConfetti();}
+
+function toggleSetsu(){const body=document.getElementById('setsu-body');const arrow=document.querySelector('.sarrow');body.classList.toggle('open');arrow.textContent=body.classList.contains('open')?'▲':'▼';}
+
+selectMode('flash');
+</script>
+
+</body></html>
