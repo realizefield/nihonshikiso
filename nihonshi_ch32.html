@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉜ 日露戦争｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch31.html" class="back-to-index">← 単元㉛へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>⚔ 単元㉜　日露戦争——大国ロシアとの死闘</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第８節　単元㉜</span>
+  <h2>日英同盟とロシアとの対立——開戦への道</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>三国干渉によって遼東半島を清に返還させられた日本でしたが，そのロシアは，1900年に清で起きた<span class="kw">義和団事件<span class="kw-pop"><span class="kw-title">義和団事件（ぎわだんじけん）</span><span class="kw-yomi">📖 読み：ぎわだんじけん</span><span class="kw-body">1900年，清で「扶清滅洋（清をたすけ，外国勢力を滅ぼす）」を唱えた義和団が外国公使館を包囲した事件。日本をふくむ列強8か国が共同出兵して鎮圧した。この事件をきっかけに，ロシアは満州（中国東北部）に大軍を駐留させ続けた。</span></span></span>をきっかけに満州へ大軍を送り込み，事件がおさまったあとも撤兵しませんでした。ロシアが満州から朝鮮へと勢力を広げてくることを恐れた日本は，1902年，イギリスとの間で<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">日英同盟</span><span class="kw-pop"><span class="kw-title">日英同盟（にちえいどうめい）</span><span class="kw-yomi">📖 読み：にちえいどうめい</span><span class="kw-body">1902年，ロシアの南下政策に対抗するため，日本とイギリスの間で結ばれた同盟。どちらかの国が他の1国と戦争になった場合は中立を守り，2国以上と戦争になった場合は参戦して助け合うことを取り決めた。日本にとっては，ロシアと戦争になった場合に他の国が介入するのを防ぐ意味があった。</span></span></span>（A）を結びました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ ロシアの南下と日英同盟</span>
+    ▶ ロシアは義和団事件後も満州から撤兵せず，さらに朝鮮への進出をうかがう姿勢を見せた<br>
+    ▶ 日本国内では，ロシアと戦ってでも満州・朝鮮での権益を守るべきだという開戦論が高まっていった<br>
+    ▶ 1902年，日本はイギリスと日英同盟を結び，ロシアとの戦争になった場合に他国の介入を防ぐ体制を整えた<br>
+    ▶ 交渉による解決を試みたが失敗し，1904年，ついに日本とロシアは開戦した
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 日英同盟とロシアとの対立 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第８節　単元㉜</span>
+  <h2>日露戦争の開戦と経過——旅順から日本海海戦へ</h2>
+
+  <p>1904年2月，日本はロシア艦隊を奇襲攻撃して<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">日露戦争</span><span class="kw-pop"><span class="kw-title">日露戦争（にちろせんそう）</span><span class="kw-yomi">📖 読み：にちろせんそう</span><span class="kw-body">1904〜05年，満州・朝鮮をめぐる対立から日本とロシアの間で起きた戦争。当時の日本にとって国力・軍事力ともにはるかに上回る大国との戦いであり，国民生活を圧迫するほどの重い負担を強いられた。講和条約としてポーツマス条約が結ばれた。</span></span></span>（B）が始まりました。日本軍は，ロシアの拠点であった<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">旅順</span><span class="kw-pop"><span class="kw-title">旅順（りょじゅん）</span><span class="kw-yomi">📖 読み：りょじゅん</span><span class="kw-body">遼東半島南端の軍港。ロシアが租借して要塞化していた。乃木希典（のぎまれすけ）率いる日本軍が激しい攻防戦の末，1905年1月に旅順を陥落させた。多くの死傷者を出した，日露戦争でもっとも激しい戦いの一つ。</span></span></span>（C）の要塞を，多くの犠牲を払いながら1905年1月に陥落させました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 国力の差をおぎなう総力戦</span>
+    ▶ 陸では，旅順攻略戦や奉天会戦など，満州各地で日本軍とロシア軍が激しく戦った<br>
+    ▶ 1905年5月，ロシアがヨーロッパから派遣したバルチック艦隊を，<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">東郷平八郎</span><span class="kw-pop"><span class="kw-title">東郷平八郎（とうごうへいはちろう）</span><span class="kw-yomi">📖 読み：とうごうへいはちろう</span><span class="kw-body">日本海軍の司令長官。日本海海戦でロシアのバルチック艦隊をほぼ壊滅させ，日露戦争の勝敗を決定づけた。「東洋のネルソン」とも称えられた。</span></span></span>（E）が指揮する連合艦隊が<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">日本海海戦</span><span class="kw-pop"><span class="kw-title">日本海海戦（にほんかいかいせん）</span><span class="kw-yomi">📖 読み：にほんかいかいせん</span><span class="kw-body">1905年5月，対馬沖でおこなわれた日本連合艦隊とロシアのバルチック艦隊の海戦。東郷平八郎の指揮のもと，日本はバルチック艦隊をほぼ壊滅させる大勝利をおさめ，日露戦争の講和交渉を有利に進める決定打となった。</span></span></span>（D）でほぼ壊滅させ，日本優位が決定的になった<br>
+    ▶ しかし日本も国力の限界に近く，これ以上の戦争継続は困難な状況になっていた——両国とも講和を望むようになった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 日露戦争の開戦と経過 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第８節　単元㉜</span>
+  <h2>ポーツマス条約——講和条約の内容</h2>
+
+  <p>1905年，アメリカ大統領<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">セオドア・ルーズベルト</span><span class="kw-pop"><span class="kw-title">セオドア・ルーズベルト</span><span class="kw-yomi">📖 読み：せおどあ・るーずべると</span><span class="kw-body">当時のアメリカ大統領。日露戦争の講和を仲介し，ポーツマス条約の締結に尽力した。この功績により翌1906年にノーベル平和賞を受賞した。</span></span></span>（G）の仲介により，日本全権の<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">小村寿太郎</span><span class="kw-pop"><span class="kw-title">小村寿太郎（こむらじゅたろう）</span><span class="kw-yomi">📖 読み：こむらじゅたろう</span><span class="kw-body">外務大臣として日露戦争の講和交渉にあたった全権。1911年には関税自主権の完全回復（日米通商航海条約の改正）も実現させた人物。</span></span></span>（H）とロシア全権のウィッテとの間で，アメリカの<span class="kw">ポーツマス<span class="kw-pop"><span class="kw-title">ポーツマス</span><span class="kw-yomi">📖 読み：ぽーつます</span><span class="kw-body">アメリカ東海岸，ニューハンプシャー州の都市。1905年，ここで日露講和会議が開かれ，ポーツマス条約が結ばれた。</span></span></span>で<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">ポーツマス条約</span><span class="kw-pop"><span class="kw-title">ポーツマス条約（ぽーつますじょうやく）</span><span class="kw-yomi">📖 読み：ぽーつますじょうやく</span><span class="kw-body">1905年，日露戦争の講和条約としてアメリカのポーツマスで結ばれた条約。ロシアが韓国における日本の優越権を認めること，旅順・大連の租借権や南満州鉄道の利権を日本に譲ること，樺太（サハリン）の南半分を日本に割譲することなどを内容とした。日清戦争の下関条約とちがい，賠償金の支払いは含まれなかった。</span></span></span>（F）が結ばれました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 ポーツマス条約の主な内容</span>
+    ▶ ロシアは韓国における日本の優越権を認める<br>
+    ▶ ロシアは旅順・大連の租借権と，南満州鉄道の利権を日本に譲る<br>
+    ▶ ロシアは<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">樺太</span><span class="kw-pop"><span class="kw-title">樺太（からふと）</span><span class="kw-yomi">📖 読み：からふと</span><span class="kw-body">サハリンとも呼ばれる島。ポーツマス条約により，北緯50度以南の南半分が日本に割譲された。第二次世界大戦後，ソ連（現ロシア）領となった。</span></span></span>（I）の南半分（北緯50度以南）を日本に割譲する<br>
+    ▶ 下関条約とはちがい，<strong>賠償金の支払いは一切ふくまれなかった</strong>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 ポーツマス条約 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第８節　単元㉜</span>
+  <h2>日比谷焼打事件——国民の不満と講和への反発</h2>
+
+  <p>日露戦争では，日本国民も増税や重い犠牲に耐えながら戦争を支えてきました。それにもかかわらず，ポーツマス条約に賠償金の支払いがふくまれなかったことを知った国民の間には，激しい不満が爆発しました。1905年9月，東京では講和条約に反対する民衆が暴徒化する<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">日比谷焼打事件</span><span class="kw-pop"><span class="kw-title">日比谷焼打事件（ひびややきうちじけん）</span><span class="kw-yomi">📖 読み：ひびややきうちじけん</span><span class="kw-body">1905年9月，ポーツマス条約に賠償金がふくまれなかったことへの不満から，東京の日比谷公園に集まった民衆が暴徒化し，警察署や新聞社などを焼き打ちした事件。政府は戒厳令をしいて鎮圧した。国民が重い負担に耐えて戦争を支えたにもかかわらず賠償金を得られなかったことへの怒りが背景にあった。</span></span></span>（J）が起こりました。</p>
+
+  <div class="why-box">
+    <span class="label">😤 「勝ったはずなのに」——重税と犠牲への怒り</span>
+    ▶ 日露戦争は，日清戦争をはるかに上回る戦費と死傷者を出した，国民に大きな負担を強いる戦争だった<br>
+    ▶ 政府は増税や国債でこの戦費をまかなっており，国民は勝利のあかつきには賠償金が得られると期待していた<br>
+    ▶ しかしポーツマス条約には賠償金がふくまれず，国民の期待は裏切られる形となり，不満が日比谷焼打事件として爆発した<br>
+    ▶ 一方，国際的には，アジアの小国とみられていた日本が大国ロシアに勝利したことは，世界に大きな衝撃を与えた
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 日比谷焼打事件 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第８節　単元㉜</span>
+  <h2>韓国併合への道——日本の朝鮮支配の強化</h2>
+
+  <p>ポーツマス条約でロシアに韓国における優越権を認めさせた日本は，日露戦争後，韓国への支配をいっそう強めていきました。1905年，韓国の外交権をうばい，<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">韓国統監府</span><span class="kw-pop"><span class="kw-title">韓国統監府（かんこくとうかんふ）</span><span class="kw-yomi">📖 読み：かんこくとうかんふ</span><span class="kw-body">1905年，日本が韓国の外交権をうばい（第二次日韓協約），韓国を保護国とするために設置した機関。初代統監には伊藤博文が就任した。1910年の韓国併合により，統監府は朝鮮総督府に引き継がれた。</span></span></span>（K）を設置してこれを保護国としました。初代統監には<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">伊藤博文</span><span class="kw-pop"><span class="kw-title">伊藤博文（いとうひろぶみ）</span><span class="kw-yomi">📖 読み：いとうひろぶみ</span><span class="kw-body">大日本帝国憲法の起草や，日清戦争の下関条約全権をつとめた政治家。日露戦争後は初代韓国統監に就任したが，1909年，満州のハルビン駅で韓国の民族運動家・安重根（あんじゅうこん）に暗殺された。この事件は，翌1910年の韓国併合を早める一因となった。</span></span></span>（L）が就任しましたが，1909年，満州のハルビン駅で暗殺されてしまいます。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 伊藤博文暗殺と韓国併合</span>
+    ▶ 韓国国内では，日本による支配の強化に対する抵抗運動（義兵運動など）が各地で起こっていた<br>
+    ▶ 1909年，伊藤博文がハルビン駅で韓国の民族運動家・安重根に暗殺されたことは，日本国内の世論をさらに強硬な方向へ動かした<br>
+    ▶ 1910年，日本は韓国を併合して<span class="blank kw" data-id="M" onclick="blankClicked(event,'M')"><span class="blank-display">韓国併合</span><span class="kw-pop"><span class="kw-title">韓国併合（かんこくへいごう）</span><span class="kw-yomi">📖 読み：かんこくへいごう</span><span class="kw-body">1910年，日本が韓国を植民地として編入したこと。韓国統監府にかわって朝鮮総督府が置かれ，以後1945年の太平洋戦争終結まで，朝鮮は日本の統治下に置かれた。</span></span></span>（M）とし，朝鮮総督府を置いて統治した——この体制は1945年まで続いた
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：日露戦争のポイント</strong><br>
+    日露戦争は，アジアの新興国であった日本が，欧米の大国ロシアに勝利したことで世界に衝撃を与えた戦争でした。しかし賠償金を得られなかったことは国内に強い不満を残し，戦後は韓国支配の強化という新たな道へと進んでいきました。<br><br>
+    ▶ <strong>日英同盟（1902年）</strong>——ロシアの南下政策に対抗するため締結<br>
+    ▶ <strong>日露戦争（1904〜05年）</strong>——旅順陥落，日本海海戦で東郷平八郎がバルチック艦隊を撃破<br>
+    ▶ <strong>ポーツマス条約（1905年）</strong>——韓国での優越権，旅順・大連の租借権，南満州鉄道の利権，樺太南半分を獲得。賠償金なし<br>
+    ▶ <strong>日比谷焼打事件（1905年）</strong>——賠償金なしへの国民の不満が爆発<br>
+    ▶ <strong>韓国併合（1910年）</strong>——韓国統監府（伊藤博文暗殺）を経て，韓国を植民地化
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">日英同盟</span>
+    <span class="tl-item">日露戦争</span>
+    <span class="tl-item">旅順</span>
+    <span class="tl-item">日本海海戦</span>
+    <span class="tl-item">東郷平八郎</span>
+    <span class="tl-item">ポーツマス条約</span>
+    <span class="tl-item">セオドア・ルーズベルト</span>
+    <span class="tl-item">小村寿太郎</span>
+    <span class="tl-item">樺太</span>
+    <span class="tl-item">日比谷焼打事件</span>
+    <span class="tl-item">韓国統監府</span>
+    <span class="tl-item">伊藤博文</span>
+    <span class="tl-item">韓国併合</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('nichiro')">⚔ なぜ日本は大国ロシアに勝てたのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 韓国併合への道 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉜ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch32.html">単元㉜ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉜ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 13 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-nichiro" onclick="if(event.target===this)closeModal('nichiro')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('nichiro')">✕</button>
+    <div class="modal-title">⚔ なぜ日本は大国ロシアに勝てたのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 国力では圧倒的に不利だった日本</div>
+      <div class="cause-box">
+        <span class="label">🎯 人口・国土・軍事力すべてでロシアが上回っていた</span>
+        当時のロシアは，人口・国土・軍事費のいずれにおいても日本をはるかに上回る大国でした。日本にとって日露戦争は，国力のすべてを注ぎ込む総力戦だったのです。<br><br>
+        ▶ 日本は増税や国債の発行で戦費をまかない，国民生活を圧迫しながら戦争を継続した<br>
+        ▶ 日英同盟によって，他国（特にフランス）がロシア側に立って参戦するのを防いだことも，日本にとって有利にはたらいた
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 「限界での勝利」——実は長期戦を続けられなかった日本</div>
+      <div class="why-box">
+        <span class="label">🚩 日本海海戦の大勝利のかげで</span>
+        日本海海戦での圧勝は世界を驚かせましたが，実は日本もこの時点で戦費・兵力ともに限界に近づいており，戦争をこれ以上長く続けることは困難な状況でした。<br><br>
+        ▶ ロシア側も，国内で革命運動（のちのロシア革命につながる社会不安）が起きており，戦争継続が難しい事情をかかえていた<br>
+        ▶ 両国の思わくが一致したことで，アメリカの仲介による講和（ポーツマス条約）が実現した——日本にとっては「薄氷の勝利」だった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 日露戦争が世界とアジアに与えた影響</div>
+      <div class="result-box">
+        <span class="label">🌏 アジアの新興国が欧米の大国に勝った衝撃</span>
+        有色人種の国である日本が，白人国家であるロシアに勝利したことは，欧米列強に衝撃を与えると同時に，欧米の植民地支配のもとにあったアジア・アフリカの人々に大きな希望を与えました。一方で日本は，この勝利を足がかりに韓国支配を強め，1910年の韓国併合，そして満州への進出へと突き進んでいくことになります。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 13語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"日英同盟", "B":"日露戦争", "C":"旅順", "D":"日本海海戦",
+  "E":"東郷平八郎", "F":"ポーツマス条約", "G":"セオドア・ルーズベルト", "H":"小村寿太郎",
+  "I":"樺太", "J":"日比谷焼打事件", "K":"韓国統監府", "L":"伊藤博文", "M":"韓国併合"
+};
+const wordBank = ["日英同盟","日露戦争","旅順","日本海海戦",
+  "東郷平八郎","ポーツマス条約","セオドア・ルーズベルト","小村寿太郎",
+  "樺太","日比谷焼打事件","韓国統監府","伊藤博文","韓国併合"];
+
+const miniQuizData1 = [
+  {q:"①　1900年，清で外国公使館を包囲した事件を何というか。",
+   choices:["義和団事件","甲午農民戦争","辛亥革命","三国干渉"], ans:0,
+   exp:"義和団事件。この事件をきっかけにロシアは満州へ大軍を送り込み，事件後も撤兵しませんでした。"},
+  {q:"②　1902年，ロシアの南下政策に対抗して日本が結んだ同盟はどれか。",
+   choices:["日英同盟","日独伊三国同盟","日米安全保障条約","三国協商"], ans:0,
+   exp:"日英同盟。ロシアと戦争になった場合に他国の介入を防ぐ体制を整えました。"},
+  {q:"③　義和団事件後もロシアが撤兵しなかった地域はどこか。",
+   choices:["満州","台湾","樺太","朝鮮南部"], ans:0,
+   exp:"満州（中国東北部）。ロシアはここから朝鮮への進出をうかがう姿勢を見せていました。"},
+  {q:"④　日本とロシアが開戦したのは何年か。",
+   choices:["1900年","1902年","1904年","1910年"], ans:2,
+   exp:"1904年。交渉による解決が失敗し，日本とロシアは戦争状態に入りました。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1904〜05年，満州・朝鮮をめぐる対立から起きた日本とロシアの戦争を何というか。",
+   choices:["日清戦争","日露戦争","日中戦争","第一次世界大戦"], ans:1,
+   exp:"日露戦争。日本にとって国力で大きく上回るロシアとの総力戦でした。"},
+  {q:"②　1905年1月，乃木希典率いる日本軍が陥落させたロシアの要塞はどこか。",
+   choices:["旅順","奉天","大連","樺太"], ans:0,
+   exp:"旅順。多くの犠牲を払いながら陥落させた，日露戦争でもっとも激しい戦いの一つでした。"},
+  {q:"③　1905年5月，東郷平八郎の指揮する連合艦隊がロシアのバルチック艦隊を破った海戦を何というか。",
+   choices:["黄海海戦","日本海海戦","対馬海峡封鎖","真珠湾攻撃"], ans:1,
+   exp:"日本海海戦。バルチック艦隊をほぼ壊滅させ，日本優位を決定づけました。"},
+  {q:"④　日本海海戦で連合艦隊を指揮した人物は誰か。",
+   choices:["乃木希典","東郷平八郎","伊藤博文","小村寿太郎"], ans:1,
+   exp:"東郷平八郎。「東洋のネルソン」とも称えられました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1905年，日露戦争の講和を仲介したアメリカ大統領は誰か。",
+   choices:["リンカーン","セオドア・ルーズベルト","ウィルソン","ワシントン"], ans:1,
+   exp:"セオドア・ルーズベルト。この功績で翌1906年にノーベル平和賞を受賞しました。"},
+  {q:"②　ポーツマス条約で日本全権をつとめた人物は誰か。",
+   choices:["伊藤博文","陸奥宗光","小村寿太郎","東郷平八郎"], ans:2,
+   exp:"小村寿太郎。1911年には関税自主権の完全回復も実現させました。"},
+  {q:"③　ポーツマス条約でロシアが日本に割譲した地域はどこか。",
+   choices:["台湾","樺太の南半分","遼東半島全域","朝鮮"], ans:1,
+   exp:"樺太（サハリン）の北緯50度以南。南満州鉄道の利権なども日本に譲られました。"},
+  {q:"④　ポーツマス条約が下関条約と大きく異なる点は何か。",
+   choices:["賠償金がふくまれなかった","割譲地がなかった","講和会議が日本で開かれた","清が相手国だった"], ans:0,
+   exp:"賠償金の支払いが一切ふくまれませんでした。これが国内の強い不満を招きました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1905年9月，ポーツマス条約への不満から東京で起きた暴動を何というか。",
+   choices:["日比谷焼打事件","秩父事件","血税一揆","米騒動"], ans:0,
+   exp:"日比谷焼打事件。賠償金がふくまれなかったことへの怒りが爆発しました。"},
+  {q:"②　日比谷焼打事件が起きた直接の原因は何か。",
+   choices:["増税そのもの","賠償金が得られなかったこと","選挙権が制限されたこと","徴兵制の実施"], ans:1,
+   exp:"賠償金が得られなかったこと。重税や犠牲に耐えた国民の期待が裏切られた形となりました。"},
+  {q:"③　日露戦争の勝利が世界に与えた影響として正しいものはどれか。",
+   choices:["アジアの新興国が大国に勝ったことに衝撃を与えた","誰も注目しなかった","ロシアの評価が高まった","日本は敗北したと誤解された"], ans:0,
+   exp:"有色人種の国である日本が白人国家ロシアに勝利したことは，世界に大きな衝撃を与えました。"},
+  {q:"④　日比谷焼打事件に対して政府がとった対応はどれか。",
+   choices:["要求をすべて受け入れた","戒厳令をしいて鎮圧した","賠償金を独自に支払った","講和条約を破棄した"], ans:1,
+   exp:"戒厳令をしいて鎮圧しました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1905年，日本が韓国の外交権をうばい設置した機関を何というか。",
+   choices:["韓国統監府","朝鮮総督府","満州国","関東都督府"], ans:0,
+   exp:"韓国統監府。韓国を保護国とするために設置されました。"},
+  {q:"②　初代韓国統監に就任した人物は誰か。",
+   choices:["小村寿太郎","伊藤博文","東郷平八郎","陸奥宗光"], ans:1,
+   exp:"伊藤博文。1909年，満州のハルビン駅で暗殺されました。"},
+  {q:"③　伊藤博文を暗殺した人物は誰か。",
+   choices:["安重根","乃木希典","ウィッテ","李鴻章"], ans:0,
+   exp:"安重根（あんじゅうこん）。韓国の民族運動家でした。"},
+  {q:"④　日本が韓国を植民地として編入したのは何年か。",
+   choices:["1905年","1909年","1910年","1911年"], ans:2,
+   exp:"1910年。韓国併合により，統治のため朝鮮総督府が置かれました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1902年，ロシアの南下政策に対抗して日本が結んだ同盟はどれか。",
+   choices:["日英同盟","三国同盟","日独伊三国同盟","三国協商"], ans:0,
+   exp:"日英同盟。義和団事件後も満州から撤兵しないロシアへの対抗策でした。"},
+  {q:"② 1904〜05年に日本とロシアの間で起きた戦争を何というか。",
+   choices:["日清戦争","日露戦争","日中戦争","第一次世界大戦"], ans:1,
+   exp:"日露戦争。満州・朝鮮をめぐる対立から始まりました。"},
+  {q:"③ 1905年1月，乃木希典率いる日本軍が陥落させたロシアの要塞はどこか。",
+   choices:["旅順","奉天","大連","仁川"], ans:0,
+   exp:"旅順。日露戦争でもっとも激しい戦いの一つでした。"},
+  {q:"④ 1905年5月，東郷平八郎がバルチック艦隊を破った海戦は何か。",
+   choices:["黄海海戦","日本海海戦","対馬沖海戦","真珠湾攻撃"], ans:1,
+   exp:"日本海海戦。日本優位を決定づける大勝利でした。"},
+  {q:"⑤ 日露戦争の講和会議の仲介をしたアメリカ大統領は誰か。",
+   choices:["リンカーン","セオドア・ルーズベルト","ワシントン","ウィルソン"], ans:1,
+   exp:"セオドア・ルーズベルト。翌年ノーベル平和賞を受賞しました。"},
+  {q:"⑥ ポーツマス条約で日本全権をつとめた人物は誰か。",
+   choices:["伊藤博文","小村寿太郎","陸奥宗光","東郷平八郎"], ans:1,
+   exp:"小村寿太郎。日露戦争の講和交渉にあたりました。"},
+  {q:"⑦ ポーツマス条約の内容として正しくないものはどれか。",
+   choices:["韓国での日本の優越権を承認","樺太南半分を日本に割譲","南満州鉄道の利権を日本に譲渡","多額の賠償金を日本に支払う"], ans:3,
+   exp:"賠償金の支払いは一切ふくまれませんでした。これが日比谷焼打事件を招きました。"},
+  {q:"⑧ 1905年9月，賠償金なしへの不満から東京で起きた暴動を何というか。",
+   choices:["日比谷焼打事件","秩父事件","米騒動","血税一揆"], ans:0,
+   exp:"日比谷焼打事件。政府は戒厳令をしいて鎮圧しました。"},
+  {q:"⑨ 1909年，満州のハルビン駅で暗殺された初代韓国統監は誰か。",
+   choices:["小村寿太郎","伊藤博文","東郷平八郎","陸奥宗光"], ans:1,
+   exp:"伊藤博文。暗殺は翌年の韓国併合を早める一因となりました。"},
+  {q:"⑩ 日本が韓国を植民地として編入した「韓国併合」が行われたのは何年か。",
+   choices:["1905年","1909年","1910年","1915年"], ans:2,
+   exp:"1910年。以後1945年まで朝鮮総督府による統治が続きました。"}
+];
+
+const checkItems = [
+  "義和団事件後もロシアが満州から撤兵しなかったことを説明できる",
+  "日英同盟（1902年）がロシアの南下政策への対抗策であったことを説明できる",
+  "日露戦争（1904〜05年）が満州・朝鮮をめぐる対立から起きたことを説明できる",
+  "旅順攻略戦（1905年1月）の激しさを説明できる",
+  "日本海海戦（1905年5月）で東郷平八郎がバルチック艦隊を破ったことを説明できる",
+  "ポーツマス条約（1905年）がセオドア・ルーズベルトの仲介で結ばれたことを説明できる",
+  "ポーツマス条約で小村寿太郎が日本全権をつとめたことを説明できる",
+  "ポーツマス条約で韓国の優越権・樺太南半分などを獲得したことを説明できる",
+  "ポーツマス条約に賠償金の支払いがふくまれなかったことを説明できる",
+  "日比谷焼打事件（1905年）が賠償金なしへの不満から起きたことを説明できる",
+  "韓国統監府（1905年）が韓国の外交権をうばうために設置されたことを説明できる",
+  "初代韓国統監の伊藤博文が1909年に暗殺されたことを説明できる",
+  "1910年の韓国併合により韓国が日本の植民地となったことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

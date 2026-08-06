@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉝ 第一次世界大戦と日本の外交｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch32.html" class="back-to-index">← 単元㉜へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🌍 単元㉝　第一次世界大戦と日本の外交</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１節　単元㉝</span>
+  <h2>第一次世界大戦と日本の参戦——青島占領</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1914年，オーストリアの皇太子夫妻がサラエボで暗殺された事件をきっかけに，ドイツ・オーストリアなどの同盟国側と，イギリス・フランス・ロシアなどの連合国側に分かれてヨーロッパ全土が戦う<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">第一次世界大戦</span><span class="kw-pop"><span class="kw-title">第一次世界大戦（だいいちじせかいたいせん）</span><span class="kw-yomi">📖 読み：だいいちじせかいたいせん</span><span class="kw-body">1914〜18年，ドイツ・オーストリアなどの同盟国側と，イギリス・フランス・ロシアなどの連合国側に分かれて戦われた，史上初の総力戦・世界規模の戦争。飛行機・戦車・毒ガスなど新兵器が使われ，多くの犠牲者を出した。</span></span></span>（A）が始まりました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ なぜヨーロッパの戦争に日本が参戦したのか</span>
+    ▶ 第一次世界大戦は，本来ヨーロッパを主戦場とする戦争で，日本には直接関係のない出来事だった<br>
+    ▶ しかし日本は，1902年に結んだ日英同盟を参戦の理由として持ち出し，連合国側での参戦を決めた<br>
+    ▶ 実際のねらいは，ヨーロッパ列強が戦争に集中してアジアへの関心が薄れているすきに，中国におけるドイツの権益を奪い，日本の大陸進出をさらに進めることにあった
+  </div>
+
+  <p>日本軍は，ドイツが中国から租借していた山東省の軍港<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">青島</span><span class="kw-pop"><span class="kw-title">青島（チンタオ）</span><span class="kw-yomi">📖 読み：ちんたお</span><span class="kw-body">中国山東省にあった，ドイツの租借地・軍港。第一次世界大戦で日本軍がこれを攻撃・占領した。この占領が，次の二十一か条の要求における山東省権益継承要求の前提となった。</span></span></span>（B）を攻撃・占領し，さらに太平洋にあったドイツ領の南洋諸島（現在のミクロネシアの島々）も占領しました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 わずかな犠牲で得た大きな権益</span>
+    ▶ 日本にとって第一次世界大戦は，ヨーロッパの戦場から遠く離れていたため，人的被害が比較的少なくて済んだ戦争だった<br>
+    ▶ その一方で，ドイツが中国に持っていた権益（青島・山東省など）を，労せずして手に入れることができた<br>
+    ▶ この「棚ぼた」的な権益拡大が，次の二十一か条の要求へとつながっていく
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 第一次世界大戦と日本の参戦 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１節　単元㉝</span>
+  <h2>二十一か条の要求——中国への圧力とその代償</h2>
+
+  <p>青島占領で山東省のドイツ権益を手にした日本は，1915年，さらに大きな利権を得ようと，中国（袁世凱政権）に対して<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">二十一か条の要求</span><span class="kw-pop"><span class="kw-title">二十一か条の要求（にじゅういっかじょうのようきゅう）</span><span class="kw-yomi">📖 読み：にじゅういっかじょうのようきゅう</span><span class="kw-body">1915年，日本が中国（袁世凱政権）に対して突きつけた要求。山東省のドイツ権益の日本への継承，旅順・大連の租借期限延長，南満州における権益強化などを内容とし，中国国内で強い反発を招いた。要求が受け入れられた5月9日は，中国で「国恥記念日」と呼ばれるようになった。</span></span></span>（C）を突きつけました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 要求の内容——満蒙権益の全面的な強化</span>
+    ▶ ドイツが<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">山東省</span><span class="kw-pop"><span class="kw-title">山東省（さんとうしょう）</span><span class="kw-yomi">📖 読み：さんとうしょう</span><span class="kw-body">中国東部の省。ドイツが租借地・権益を持っていたが，第一次世界大戦で日本が占領し，二十一か条の要求でその継承を中国に認めさせた。パリ講和会議でも大きな争点となった。</span></span></span>（D）に持っていた権益を，そのまま日本が引き継ぐことを認めさせた<br>
+    ▶ 旅順・大連の租借期限を大幅に延長させ，南満州・東部内蒙古における日本の権益をさらに強化させた<br>
+    ▶ 中国政府への日本人顧問の採用など，中国の内政に日本が深く関与できる条項もふくまれていた
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 中国の強い反発と，のちに残った火種</span>
+    ▶ 中国国内では，この一方的な要求に対して激しい反発が起こり，反日感情が急速に高まった<br>
+    ▶ 要求が受け入れられた5月9日は，中国で「国恥記念日」と呼ばれ，長く記憶されることになった<br>
+    ▶ この反日感情は，のちのパリ講和会議での中国の反発，そして<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">五・四運動</span><span class="kw-pop"><span class="kw-title">五・四運動（ごしうんどう）</span><span class="kw-yomi">📖 読み：ごしうんどう</span><span class="kw-body">1919年5月4日，パリ講和会議で日本の山東省権益継承が認められたことに反発し，北京の学生を中心に起こった抗議運動。中国全土に広がり，反日・反帝国主義の民族運動として大きな影響を持った。</span></span></span>（E）へとつながっていく
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 二十一か条の要求 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１節　単元㉝</span>
+  <h2>パリ講和会議とベルサイユ条約</h2>
+
+  <p>1919年，第一次世界大戦の講和条件を話し合うため<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">パリ講和会議</span><span class="kw-pop"><span class="kw-title">パリ講和会議（ぱりこうわかいぎ）</span><span class="kw-yomi">📖 読み：ぱりこうわかいぎ</span><span class="kw-body">1919年，第一次世界大戦の講和条件を話し合うためパリで開かれた国際会議。日本も戦勝国として参加し，山東省のドイツ権益の継承を認められた。アメリカ大統領ウィルソンが提唱した十四か条の原則（民族自決など）が理念の柱となった。</span></span></span>（F）が開かれ，戦勝国として参加した日本は，山東省のドイツ権益をそのまま継承することを認められました。この結果として結ばれたのが<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">ベルサイユ条約</span><span class="kw-pop"><span class="kw-title">ベルサイユ条約（べるさいゆじょうやく）</span><span class="kw-yomi">📖 読み：べるさいゆじょうやく</span><span class="kw-body">1919年，パリ講和会議の結果としてフランスのベルサイユ宮殿で結ばれた，第一次世界大戦の講和条約。ドイツに巨額の賠償金や領土の割譲を課し，日本には山東省のドイツ権益の継承が認められた。</span></span></span>（G）です。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 民族自決の理念と，その矛盾</span>
+    ▶ 会議では，アメリカ大統領ウィルソンが提唱した「<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">民族自決</span><span class="kw-pop"><span class="kw-title">民族自決（みんぞくじけつ）</span><span class="kw-yomi">📖 読み：みんぞくじけつ</span><span class="kw-body">それぞれの民族が，他国の支配を受けずに自らの意志で政治のあり方を決めるべきだという考え方。アメリカ大統領ウィルソンがパリ講和会議で提唱した十四か条の原則の柱の一つ。ただし，実際に適用されたのは主に東ヨーロッパの旧オーストリア・ロシア領などに限られ，アジア・アフリカの植民地には適用されなかった。</span></span></span>（H）」の理念が大きく取り上げられた<br>
+    ▶ しかし実際にこの理念が適用されたのは主にヨーロッパにとどまり，アジア・アフリカの植民地には適用されなかった<br>
+    ▶ 日本の山東省権益継承が認められたことも，この矛盾の一つであり，中国の強い反発（五・四運動）を招いた
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 パリ講和会議とベルサイユ条約 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１節　単元㉝</span>
+  <h2>国際連盟の発足——日本の国際的地位向上</h2>
+
+  <p>第一次世界大戦の悲惨な経験への反省から，1920年，世界平和の維持を目的とする<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">国際連盟</span><span class="kw-pop"><span class="kw-title">国際連盟（こくさいれんめい）</span><span class="kw-yomi">📖 読み：こくさいれんめい</span><span class="kw-body">1920年，第一次世界大戦の反省から，世界平和の維持を目的として発足した国際組織。提唱国であるアメリカは，議会の反対で加盟しなかった。侵略行為に対する制裁手段が経済制裁にとどまり，軍事的な強制力を持たなかったことが，のちに大きな弱点となった。</span></span></span>（I）が発足しました。日本はイギリス・フランス・イタリアとともに<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">常任理事国</span><span class="kw-pop"><span class="kw-title">常任理事国（じょうにんりじこく）</span><span class="kw-yomi">📖 読み：じょうにんりじこく</span><span class="kw-body">国際連盟の理事会に常に議席を持つ主要国。日本はイギリス・フランス・イタリアとともに常任理事国となり，アジアで唯一の常任理事国として大きな国際的地位を得た。</span></span></span>（J）となりました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 国際連盟発足がもたらしたもの</span>
+    ▶ 日本はアジアで唯一の常任理事国として，国際社会での発言力を大きく高めた<br>
+    ▶ しかし提唱国のアメリカは議会の反対で加盟せず，国際連盟には侵略行為に対する軍事的な強制力もなかった<br>
+    ▶ このような制度上の弱さは，のちに満州事変などの侵略行為を止められない一因となっていく
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：第一次世界大戦と日本の外交のポイント</strong><br>
+    第一次世界大戦への参戦は，日本にとって少ない犠牲で大きな利権を得る機会となりましたが，二十一か条の要求で中国の強い反発を招き，パリ講和会議・ベルサイユ条約でもその対立は解消されませんでした。国際連盟の常任理事国という地位は，日本の国際的発言力を高める一方，その限界（アメリカ不参加，軍事的強制力の欠如）は，のちの国際協調の破綻の伏線ともなりました。<br><br>
+    ▶ <strong>第一次世界大戦参戦（1914年）</strong>——日英同盟を理由に参戦，青島占領<br>
+    ▶ <strong>二十一か条の要求（1915年）</strong>——山東省権益継承などを要求，中国の強い反発を招く<br>
+    ▶ <strong>パリ講和会議・ベルサイユ条約（1919年）</strong>——民族自決の理念と，アジアには適用されない矛盾<br>
+    ▶ <strong>国際連盟発足（1920年）</strong>——日本は常任理事国に，しかしアメリカ不参加という弱点
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">第一次世界大戦</span>
+    <span class="tl-item">青島</span>
+    <span class="tl-item">二十一か条の要求</span>
+    <span class="tl-item">山東省</span>
+    <span class="tl-item">五・四運動</span>
+    <span class="tl-item">パリ講和会議</span>
+    <span class="tl-item">ベルサイユ条約</span>
+    <span class="tl-item">民族自決</span>
+    <span class="tl-item">国際連盟</span>
+    <span class="tl-item">常任理事国</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('gaikou')">🌏 山東省問題はなぜ長く尾を引いたのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 国際連盟の発足 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉝ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch33.html">単元㉝ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉝ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-gaikou" onclick="if(event.target===this)closeModal('gaikou')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('gaikou')">✕</button>
+    <div class="modal-title">🌏 山東省問題はなぜ長く尾を引いたのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 占領から要求へ——既成事実の積み重ね</div>
+      <div class="cause-box">
+        <span class="label">🎯 「取ってしまえば認められる」という発想</span>
+        日本の外交には，まず軍事的に権益を確保し，あとから外交交渉でそれを正式に認めさせるという手法が繰り返し見られました。<br><br>
+        ▶ 青島の占領（1914年）→ 二十一か条の要求で権益継承を要求（1915年）→ パリ講和会議で国際的に承認（1919年）という流れは，まさにこの手法の典型だった<br>
+        ▶ この「既成事実の積み重ね」による大陸進出のパターンは，のちの満州事変（1931年）でも繰り返されることになる
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 五・四運動という中国側の反撃</div>
+      <div class="why-box">
+        <span class="label">🚩 「国恥」の記憶と民族運動の高まり</span>
+        中国国内では，二十一か条の要求とその後のパリ講和会議での山東省問題を通じて，「国の恥」としての記憶が積み重なっていきました。<br><br>
+        ▶ 1919年5月4日，パリ講和会議の結果に抗議する学生を中心とした五・四運動が北京で起こり，中国全土に広がった<br>
+        ▶ この運動は，単なる一時的な抗議にとどまらず，中国における反日・反帝国主義の民族運動の出発点となった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 国際連盟の限界が意味するもの</div>
+      <div class="result-box">
+        <span class="label">🏗 「話し合いによる平和」の弱さ</span>
+        国際連盟は，戦争を話し合いで防ごうとする画期的な試みでしたが，提唱国のアメリカが加盟せず，侵略行為に対しても経済制裁しかできないという制度上の弱点を抱えていました。こうした国際協調の枠組みの弱さは，1930年代に日本が満州事変を起こし，国際連盟の勧告を無視して脱退するに至る背景の一つとなっていきます。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 10語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"第一次世界大戦", "B":"青島", "C":"二十一か条の要求", "D":"山東省",
+  "E":"五・四運動", "F":"パリ講和会議", "G":"ベルサイユ条約", "H":"民族自決",
+  "I":"国際連盟", "J":"常任理事国"
+};
+const wordBank = ["第一次世界大戦","青島","二十一か条の要求","山東省",
+  "五・四運動","パリ講和会議","ベルサイユ条約","民族自決",
+  "国際連盟","常任理事国"];
+
+const miniQuizData1 = [
+  {q:"①　1914年，オーストリア皇太子夫妻の暗殺をきっかけに始まった戦争を何というか。",
+   choices:["第一次世界大戦","日露戦争","日清戦争","太平洋戦争"], ans:0,
+   exp:"第一次世界大戦。同盟国側と連合国側に分かれてヨーロッパ全土が戦いました。"},
+  {q:"②　日本が第一次世界大戦への参戦を正当化した理由は何か。",
+   choices:["日英同盟","三国干渉","日米安全保障条約","国際連盟規約"], ans:0,
+   exp:"日英同盟。実際のねらいは中国におけるドイツ権益の獲得でした。"},
+  {q:"③　日本軍が占領した，中国山東省のドイツ租借地はどこか。",
+   choices:["青島","旅順","大連","上海"], ans:0,
+   exp:"青島（チンタオ）。太平洋のドイツ領南洋諸島も占領しました。"},
+  {q:"④　日本にとって第一次世界大戦への参戦がもたらした結果として正しいものはどれか。",
+   choices:["少ない犠牲で大きな権益を得た","大きな犠牲を払い何も得られなかった","参戦をきっかけに国が滅んだ","ヨーロッパから強く非難された"], ans:0,
+   exp:"少ない犠牲で大きな権益を得ました。ヨーロッパから遠かったことが背景にあります。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1915年，日本が中国（袁世凱政権）に突きつけた要求を何というか。",
+   choices:["二十一か条の要求","下関条約","ポーツマス条約","ベルサイユ条約"], ans:0,
+   exp:"二十一か条の要求。山東省のドイツ権益継承などを内容としました。"},
+  {q:"②　二十一か条の要求で，日本が継承を求めた権益はどこのものか。",
+   choices:["山東省のドイツ権益","満州のロシア権益","台湾のイギリス権益","朝鮮のアメリカ権益"], ans:0,
+   exp:"山東省のドイツ権益。旅順・大連の租借期限も延長させました。"},
+  {q:"③　二十一か条の要求が受け入れられた日を，中国では何と呼んだか。",
+   choices:["国恥記念日","独立記念日","建国記念日","解放記念日"], ans:0,
+   exp:"国恥記念日。長く中国国民の記憶に残ることになりました。"},
+  {q:"④　二十一か条の要求への反発から，のちに中国で起こった運動は何か。",
+   choices:["五・四運動","義和団事件","辛亥革命","太平天国の乱"], ans:0,
+   exp:"五・四運動（1919年）。パリ講和会議での決定が直接のきっかけでした。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1919年，第一次世界大戦の講和条件を話し合うため開かれた会議を何というか。",
+   choices:["パリ講和会議","ワシントン会議","ポーツマス会議","ヤルタ会談"], ans:0,
+   exp:"パリ講和会議。日本も戦勝国として参加しました。"},
+  {q:"②　パリ講和会議の結果として結ばれた講和条約は何か。",
+   choices:["ベルサイユ条約","下関条約","ポーツマス条約","日英通商航海条約"], ans:0,
+   exp:"ベルサイユ条約。ドイツに巨額の賠償金や領土割譲を課しました。"},
+  {q:"③　アメリカ大統領ウィルソンがパリ講和会議で提唱した理念は何か。",
+   choices:["民族自決","門戸開放","孤立主義","勢力均衡"], ans:0,
+   exp:"民族自決。ただし実際に適用されたのは主にヨーロッパにとどまりました。"},
+  {q:"④　パリ講和会議で日本の山東省権益継承が認められたことに，中国はどう反応したか。",
+   choices:["強く反発した","歓迎した","無関心だった","日本に感謝した"], ans:0,
+   exp:"強く反発しました。これが五・四運動につながりました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1920年に発足した，世界平和の維持を目的とする国際組織は何か。",
+   choices:["国際連盟","国際連合","ASEAN","EU"], ans:0,
+   exp:"国際連盟。日本はイギリス・フランス・イタリアとともに常任理事国となりました。"},
+  {q:"②　国際連盟の常任理事国として正しくない国はどこか。",
+   choices:["アメリカ","日本","イギリス","フランス"], ans:0,
+   exp:"アメリカ。提唱国でありながら，議会の反対で加盟しませんでした。"},
+  {q:"③　国際連盟の制度上の弱点として正しいものはどれか。",
+   choices:["軍事的な強制力を持たなかった","加盟国が多すぎた","日本語しか使えなかった","会議を開けなかった"], ans:0,
+   exp:"軍事的な強制力を持たず，制裁は経済制裁にとどまりました。"},
+  {q:"④　日本が国際連盟で得た地位として正しいものはどれか。",
+   choices:["アジアで唯一の常任理事国","事務局長","名誉会員","オブザーバー"], ans:0,
+   exp:"アジアで唯一の常任理事国となり，国際的発言力を高めました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1914年に始まった，ヨーロッパを主戦場とする世界規模の戦争を何というか。",
+   choices:["第一次世界大戦","日露戦争","日清戦争","太平洋戦争"], ans:0,
+   exp:"第一次世界大戦。日本は日英同盟を理由に参戦しました。"},
+  {q:"② 日本軍が占領した，中国山東省のドイツ租借地はどこか。",
+   choices:["青島","旅順","大連","上海"], ans:0,
+   exp:"青島（チンタオ）。太平洋のドイツ領南洋諸島も占領しました。"},
+  {q:"③ 1915年，日本が中国に突きつけた要求を何というか。",
+   choices:["二十一か条の要求","下関条約","ポーツマス条約","ベルサイユ条約"], ans:0,
+   exp:"二十一か条の要求。中国国内で強い反発を招きました。"},
+  {q:"④ 二十一か条の要求が受け入れられた日を，中国では何と呼んだか。",
+   choices:["国恥記念日","独立記念日","建国記念日","解放記念日"], ans:0,
+   exp:"国恥記念日。長く記憶されることになりました。"},
+  {q:"⑤ 1919年，パリ講和会議の結果に抗議して中国で起こった運動は何か。",
+   choices:["五・四運動","義和団事件","辛亥革命","太平天国の乱"], ans:0,
+   exp:"五・四運動。日本の山東省権益継承への反発が直接のきっかけでした。"},
+  {q:"⑥ 1919年，第一次世界大戦の講和会議として開かれたのは何か。",
+   choices:["パリ講和会議","ワシントン会議","ポーツマス会議","ヤルタ会談"], ans:0,
+   exp:"パリ講和会議。結果としてベルサイユ条約が結ばれました。"},
+  {q:"⑦ アメリカ大統領ウィルソンがパリ講和会議で提唱した理念は何か。",
+   choices:["民族自決","門戸開放","孤立主義","勢力均衡"], ans:0,
+   exp:"民族自決。実際の適用は主にヨーロッパにとどまりました。"},
+  {q:"⑧ 1920年に発足した，世界平和の維持を目的とする国際組織は何か。",
+   choices:["国際連盟","国際連合","ASEAN","EU"], ans:0,
+   exp:"国際連盟。日本はイギリス・フランス・イタリアとともに常任理事国となりました。"},
+  {q:"⑨ 国際連盟の提唱国でありながら加盟しなかった国はどこか。",
+   choices:["アメリカ","日本","イギリス","フランス"], ans:0,
+   exp:"アメリカ。議会の反対で加盟できませんでした。"},
+  {q:"⑩ 国際連盟の制度上の弱点として正しいものはどれか。",
+   choices:["軍事的な強制力を持たなかった","加盟国が多すぎた","日本語しか使えなかった","会議を開けなかった"], ans:0,
+   exp:"軍事的な強制力を持たず，制裁は経済制裁にとどまりました。"}
+];
+
+const checkItems = [
+  "第一次世界大戦（1914年）が日英同盟を理由に日本の参戦を招いたことを説明できる",
+  "日本軍が中国山東省の青島を占領したことを説明できる",
+  "二十一か条の要求（1915年）の内容を説明できる",
+  "二十一か条の要求が中国の強い反発（国恥記念日）を招いたことを説明できる",
+  "パリ講和会議（1919年）で日本の山東省権益継承が認められたことを説明できる",
+  "民族自決の理念がアジアには適用されなかったことを説明できる",
+  "五・四運動が日本への反発から起こったことを説明できる",
+  "国際連盟（1920年）で日本が常任理事国となったことを説明できる",
+  "国際連盟にアメリカが加盟しなかったことを説明できる",
+  "国際連盟が軍事的強制力を持たなかったという弱点を説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

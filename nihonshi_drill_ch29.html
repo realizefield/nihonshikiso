@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉙ 大日本帝国憲法と帝国議会 ドリル｜日本史基礎GAMBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a1c00}
+  .back-link.gray{background:#555}.back-link.gray:hover{background:#333}
+  .back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .unit-header{background:linear-gradient(135deg,#1a2a6b,#2a4090);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #7a90c8;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#1a2a6b;transition:all 0.2s;flex:1;min-width:130px;text-align:center;font-family:inherit}
+  .mode-tab.active{background:#1a2a6b;color:#fff;border-color:#1a2a6b;box-shadow:0 3px 0 #0d1a45}
+  .mode-tab:hover:not(.active){background:#e8ecf8}
+  .panel{background:#fff;border-radius:12px;border:1px solid #7a90c8;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #7a90c8;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#1a2a6b;transition:all 0.15s;font-family:inherit}
+  .fc-timer-btn.active{background:#1a2a6b;color:#fff;border-color:#1a2a6b}
+  .fc-timer-btn:hover:not(.active){background:#e8ecf8}
+  .fc-card{background:linear-gradient(135deg,#f0f2ff,#dde2ff);color:#1a1a2e;border:2px solid #a0aee0;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(26,42,107,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#1a2a6b}
+  .fc-card .fc-hint{font-size:13px;color:#2a2a60;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#6070a0;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#2a4090;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15;font-family:inherit}
+  .fc-btn-ng{padding:11px 32px;background:#1a2a6b;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;font-family:inherit}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#e8ecf8;border:2px solid #7a90c8;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px;font-family:inherit}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #7a90c8;background:#f0f2ff;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s;font-family:inherit;text-align:left}
+  .drill-choice:hover{border-color:#1a2a6b;background:#dde2ff}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#dde2ff;border-color:#7a90c8;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#a0b0ff;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;display:none;font-family:inherit}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#1a2a6b;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#1a2a6b;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #7a90c8;background:#f0f2ff;cursor:pointer;font-size:14px;transition:all 0.15s;font-family:inherit;text-align:left}
+  .test-choice:hover{border-color:#1a2a6b;background:#dde2ff}
+  .test-choice.selected{border-color:#1a2a6b;background:#c8d0f0;color:#1a1a45;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#dde2ff;border-color:#7a90c8;pointer-events:none}
+  .test-submit{background:#1a2a6b;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #0d1a45;margin-top:18px;width:100%;font-family:inherit}
+  .test-submit:hover{background:#0d1a45}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#1a2a6b;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#1a2a6b,#4a5aa0);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;font-family:inherit}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #7a90c8;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#1a2a6b,#2a4090);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#e8ecf8;border-left:5px solid #1a2a6b;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#1a2a6b}
+  .setsu-h3{font-size:14px;font-weight:800;color:#1a2a6b;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #a0aee0}
+  .setsu-box{background:#f5f6ff;border-radius:8px;border:1px solid #b0bce0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#1a2a6b}
+  .setsu-box .lbl{display:inline-block;background:#1a2a6b;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-note{background:#fffbe8;border-left:4px solid #c8a000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3a00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch29.html" class="back-link" style="background:#1a2a6b">← 単元㉙ テキストへ</a>
+  <a href="nihonshi_index.html" class="back-link gray">← 目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第９章　単元㉙ ドリル</div>
+  <h1>🏛 大日本帝国憲法と帝国議会</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 11枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 11問</span>
+    <span class="stat-chip">📋 確認テスト 10問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元㉙ のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body" id="setsu-body">
+    <div class="setsu-intro">
+      1882年，<strong>伊藤博文</strong>がヨーロッパへ憲法調査に渡り，君主権の強い<strong>ドイツ（プロイセン）</strong>流の憲法を学びました。1885年に<strong>内閣制度</strong>を創設して初代内閣総理大臣となり，1889年に<strong>大日本帝国憲法</strong>を発布，1890年には<strong>帝国議会</strong>が開かれました。
+    </div>
+    <div class="setsu-h3">憲法調査と内閣制度（1882〜85年）</div>
+    <div class="setsu-box">
+      <strong>伊藤博文の憲法調査</strong>——1882年，ヨーロッパへ渡りドイツ（プロイセン）流の憲法を学ぶ。君主の権限が強いこの憲法が，天皇中心の国づくりを目指す政府の理想の手本となった<br>
+      <span class="lbl">内閣制度（1885年）</span> 太政官制にかわる新しい行政の仕組み。伊藤博文が初代内閣総理大臣に
+    </div>
+    <div class="setsu-h3">大日本帝国憲法の発布（1889年）</div>
+    <div class="setsu-box">
+      <span class="lbl">欽定憲法</span> 天皇が国民（臣民）に与える形で発布<br>
+      <span class="lbl orange">天皇主権</span> 統治権は天皇にあり，統帥権や議会の召集・解散権など天皇大権を持つ<br>
+      国民の自由・権利は「法律の範囲内」で認められた。アジア初の近代的な憲法
+    </div>
+    <div class="setsu-h3">帝国議会の成立（1890年）</div>
+    <div class="setsu-box">
+      <span class="lbl">衆議院</span> 国民の選挙で選ばれた議員からなる<br>
+      <span class="lbl orange">貴族院</span> 皇族・華族などからなり，選挙は行われない<br>
+      衆議院議員の選挙権は，直接国税15円以上を納める満25歳以上の男子に限られる<strong>制限選挙</strong>だった（全人口の約1.1％）
+    </div>
+    <div class="setsu-note">💡 <strong>年号セット</strong>：1882年 憲法調査 → 1885年 内閣制度 → 1889年 大日本帝国憲法発布 → 1890年 帝国議会開設</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title:"単元㉙ 大日本帝国憲法と帝国議会",
+  flashCards:[
+    {q:"1882年，憲法調査のためヨーロッパへ渡った人物は誰か。",a:"伊藤博文（いとうひろぶみ）",hint:"帰国後，内閣制度を創設し初代内閣総理大臣に就任した"},
+    {q:"伊藤博文が手本とした，君主権の強い憲法はどこの国のものか。",a:"ドイツ（プロイセン）",hint:"議会の力が強いイギリス・フランスとは対照的な仕組みだった"},
+    {q:"1885年に創設された，太政官制にかわる行政の仕組みは何か。",a:"内閣制度（ないかくせいど）",hint:"内閣総理大臣と各省の大臣（国務大臣）が行政を担う"},
+    {q:"日本で初めての内閣総理大臣に就任した人物は誰か。",a:"伊藤博文（いとうひろぶみ）",hint:"憲法調査を行った本人が初代内閣総理大臣となった"},
+    {q:"1889年2月11日に発布された，日本初の近代的な憲法は何か。",a:"大日本帝国憲法（だいにほんていこくけんぽう）",hint:"天皇が国民に与える形（欽定憲法）で発布された"},
+    {q:"大日本帝国憲法の基本原則で，国の統治権が天皇にあるとする考え方を何というか。",a:"天皇主権（てんのうしゅけん）",hint:"統帥権や議会の召集・解散権など広い天皇大権が認められた"},
+    {q:"大日本帝国憲法で，国民（臣民）の自由や権利はどのような制限つきで認められたか。",a:"法律の範囲内",hint:"言論・出版・信教の自由などが対象だった"},
+    {q:"1890年に開設された，日本初の近代議会を何というか。",a:"帝国議会（ていこくぎかい）",hint:"衆議院と貴族院からなる二院制だった"},
+    {q:"国民の選挙で選ばれた議員からなる議院はどちらか。",a:"衆議院（しゅうぎいん）",hint:"直接国税15円以上を納める満25歳以上の男子のみが選挙権を持った"},
+    {q:"皇族・華族などからなり，国民の選挙が行われなかった議院はどちらか。",a:"貴族院（きぞくいん）",hint:"天皇が任命した勅任議員なども含まれた"},
+    {q:"衆議院議員の選挙権を持っていたのはどのような人か。",a:"直接国税15円以上を納める満25歳以上の男子",hint:"選挙権を持つ人は全人口の約1.1％にとどまった（制限選挙）"},
+  ],
+  drillQuiz:[
+    {q:"1882年，憲法調査のためヨーロッパへ渡った人物は誰か。",
+     choices:["大隈重信","伊藤博文","板垣退助","西郷隆盛"],ans:1,
+     exp:"伊藤博文。ドイツ（プロイセン）流の憲法を学び，帰国後に大日本帝国憲法の起草の中心となりました。"},
+    {q:"伊藤博文が手本とした，君主権の強い憲法はどこの国のものか。",
+     choices:["イギリス","フランス","ドイツ（プロイセン）","アメリカ"],ans:2,
+     exp:"ドイツ（プロイセン）。君主（皇帝）の権限が強く，天皇中心の国づくりを目指す政府にとって理想的な手本でした。"},
+    {q:"1885年に創設された，太政官制にかわる行政の仕組みは何か。",
+     choices:["内閣制度","帝国議会","地方自治制","府県制"],ans:0,
+     exp:"内閣制度。内閣総理大臣と各省の大臣（国務大臣）が行政を担う仕組みとなりました。"},
+    {q:"日本で初めての内閣総理大臣に就任した人物は誰か。",
+     choices:["大隈重信","板垣退助","伊藤博文","大久保利通"],ans:2,
+     exp:"伊藤博文。憲法調査を行った本人が，初代内閣総理大臣に就任しました。"},
+    {q:"1889年2月11日に発布された，日本初の近代的な憲法は何か。",
+     choices:["五箇条の御誓文","国会開設の勅諭","大日本帝国憲法","日本国憲法"],ans:2,
+     exp:"大日本帝国憲法。天皇が国民に与える形（欽定憲法）で発布されました。"},
+    {q:"大日本帝国憲法で，国の統治権（主権）を持つとされたのは誰か。",
+     choices:["国民","天皇","内閣総理大臣","貴族院"],ans:1,
+     exp:"天皇。天皇主権のもと，統帥権や議会の召集・解散権など広い権限（天皇大権）を持つとされました。"},
+    {q:"大日本帝国憲法で，国民（臣民）の自由や権利はどのように定められていたか。",
+     choices:["無制限に保障された","法律の範囲内で認められた","一切認められなかった","華族のみに認められた"],ans:1,
+     exp:"言論・出版・信教の自由などは認められましたが，「法律の範囲内」という制限がつけられていました。"},
+    {q:"1890年に開設された，日本初の近代議会を何というか。",
+     choices:["帝国議会","国会期成同盟","立志社","地方議会"],ans:0,
+     exp:"帝国議会。衆議院と貴族院からなる二院制の議会でした。"},
+    {q:"国民の選挙によって選ばれた議員からなる議院はどちらか。",
+     choices:["貴族院","衆議院","元老院","枢密院"],ans:1,
+     exp:"衆議院。皇族・華族などからなる貴族院とあわせて，帝国議会を構成しました。"},
+    {q:"衆議院議員の選挙権を持っていたのはどのような人か。",
+     choices:["満20歳以上のすべての国民","直接国税15円以上を納める満25歳以上の男子","華族と士族のみ","女性のみ"],ans:1,
+     exp:"直接国税15円以上を納める満25歳以上の男子に限られる制限選挙で，選挙権を持つ人は全人口の約1.1％でした。"},
+    {q:"大日本帝国憲法の歴史的な意義として正しいものはどれか。",
+     choices:["世界最初の憲法だった","アジア最初の近代的な憲法だった","効力を持たなかった","国民主権を定めていた"],ans:1,
+     exp:"アジアで最初の近代的な成文憲法として，当時の国際社会からも注目されました。"},
+  ],
+  testQuiz:[
+    {q:"1882年，憲法調査のためヨーロッパへ渡った人物は誰か。",choices:["大隈重信","伊藤博文","板垣退助","大久保利通"],ans:1},
+    {q:"伊藤博文が手本とした憲法はどこの国のものか。",choices:["イギリス","フランス","ドイツ（プロイセン）","アメリカ"],ans:2},
+    {q:"1885年に創設された行政の仕組みは何か。",choices:["太政官制","内閣制度","帝国議会","地方自治制"],ans:1},
+    {q:"日本で初めての内閣総理大臣は誰か。",choices:["大隈重信","板垣退助","伊藤博文","西郷隆盛"],ans:2},
+    {q:"1889年2月11日に発布された憲法は何か。",choices:["国会開設の勅諭","大日本帝国憲法","五箇条の御誓文","日本国憲法"],ans:1},
+    {q:"大日本帝国憲法で国の統治権を持つとされたのは誰か。",choices:["国民","天皇","内閣総理大臣","衆議院"],ans:1},
+    {q:"1890年に開設された日本初の近代議会は何か。",choices:["国会期成同盟","帝国議会","立志社","元老院"],ans:1},
+    {q:"国民の選挙によって選ばれた議員からなる議院はどちらか。",choices:["貴族院","衆議院","枢密院","元老院"],ans:1},
+    {q:"衆議院議員の選挙権を持っていたのはどのような人か。",choices:["すべての成人男女","直接国税15円以上を納める満25歳以上の男子","華族のみ","士族のみ"],ans:1},
+    {q:"大日本帝国憲法の歴史的な意義として正しいものはどれか。",choices:["世界最初の憲法だった","アジア最初の近代的な憲法だった","効力を持たなかった","国民主権を定めていた"],ans:1},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});renderContent();}
+function renderContent(){const area=document.getElementById('content-area');if(currentMode==='flash')renderFlash(area);else if(currentMode==='drill')renderDrill(area);else renderTest(area);}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){const colors=['#1a2a6b','#4a5aa0','#f4d03f','#2d8a30','#e0eaff','#fff'];for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){initFlash();area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;startCardTimer();}
+function buildFlashCard(){if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#1a2a6b;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+const card=fcCards[fcIndex];return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+const q=drillQs[drillIndex];const choices=q.choices.map((c,i)=>`<button class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</button>`).join('');return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;}
+function drillAnswer(idx){if(drillAnswered)return;drillAnswered=true;const q=drillQs[drillIndex];document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});if(idx===q.ans)drillScore++;const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){testSelections={};testSubmitted=false;let html='<div class="panel">';UNIT.testQuiz.forEach((q,i)=>{html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;q.choices.forEach((c,ci)=>{html+=`<button class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</button>`;});html+='</div></div>';});html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;area.innerHTML=html;}
+function testSelect(qi,ci){if(testSubmitted)return;testSelections[qi]=ci;document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});}
+function submitTest(){if(testSubmitted)return;const total=UNIT.testQuiz.length;const answered=Object.keys(testSelections).length;if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}testSubmitted=true;let correct=0;let reviewHTML='<div class="test-review">';UNIT.testQuiz.forEach((q,i)=>{const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;});reviewHTML+='</div>';const pct=Math.round(correct/total*100);const pass=correct>=8;document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元㉙ クリア！</div>`:''}<div id="test-review-block">${reviewHTML}</div><button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;document.getElementById('test-result').style.display='block';if(pass)fireConfetti();}
+
+function toggleSetsu(){const body=document.getElementById('setsu-body');const arrow=document.querySelector('.sarrow');body.classList.toggle('open');arrow.textContent=body.classList.contains('open')?'▲':'▼';}
+
+selectMode('flash');
+</script>
+</body>
+</html>

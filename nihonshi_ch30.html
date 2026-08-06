@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉚ 条約改正への道｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch29.html" class="back-to-index">← 単元㉙へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🤝 単元㉚　条約改正への道——不平等条約からの脱却</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第６節　単元㉚</span>
+  <h2>不平等条約と岩倉使節団——条約改正の出発点</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>幕末に結ばれた<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">安政の五カ国条約</span><span class="kw-pop"><span class="kw-title">安政の五カ国条約（あんせいのごかこくじょうやく）</span><span class="kw-yomi">📖 読み：あんせいのごかこくじょうやく</span><span class="kw-body">1858年，江戸幕府がアメリカ・イギリス・フランス・オランダ・ロシアと結んだ通商条約の総称。日米修好通商条約をはじめとする一連の条約で，日本にとって不利な内容を含んでいたため「不平等条約」と呼ばれる。</span></span></span>（A）などの不平等条約には，大きく二つの問題がありました。一つは，外国人が日本国内で罪を犯しても日本の法律で裁けない<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">治外法権</span><span class="kw-pop"><span class="kw-title">治外法権（ちがいほうけん）</span><span class="kw-yomi">📖 読み：ちがいほうけん</span><span class="kw-body">外国人が滞在国の法律に従わなくてよいとする権利。安政の五カ国条約では，日本国内で外国人が罪を犯しても，日本の裁判所ではなく，その国の領事が自国の法律で裁く「領事裁判権」が認められていた。</span></span></span>（B）（領事裁判権），もう一つは，輸入品にかける税率を日本が自由に決められない<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">関税自主権</span><span class="kw-pop"><span class="kw-title">関税自主権（かんぜいじしゅけん）</span><span class="kw-yomi">📖 読み：かんぜいじしゅけん</span><span class="kw-body">輸入品にかける税率（関税）を，自国が自由に決められる権利。安政の五カ国条約では，日本にはこの権利がなく，相手国との協定によって税率が定められていた（協定関税制）。</span></span></span>（C）の欠如でした。</p>
+
+  <div class="cause-box">
+    <span class="label">🌏 岩倉使節団——条約改正の困難を実感</span>
+    ▶ 1871年，明治政府は岩倉具視を大使とする<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">岩倉使節団</span><span class="kw-pop"><span class="kw-title">岩倉使節団（いわくらしせつだん）</span><span class="kw-yomi">📖 読み：いわくらしせつだん</span><span class="kw-body">1871年，岩倉具視を大使とし，大久保利通・木戸孝允・伊藤博文らを副使として欧米に派遣された使節団。条約改正の予備交渉と欧米諸国の視察が目的だった。条約改正の交渉は，日本の近代化の遅れを理由に相手にされず失敗したが，欧米の進んだ制度や文化を実際に見聞したことは，その後の政府の改革方針に大きな影響を与えた。</span></span></span>（D）を欧米に派遣し，条約改正の交渉を試みた<br>
+    ▶ しかし，日本の近代化がまだ不十分であることを理由に，交渉は相手にされず失敗に終わった<br>
+    ▶ この経験から，政府は「まず日本を欧米に負けない近代国家にすることが，条約改正への近道だ」と痛感した——これが，学制・徴兵令・地租改正・殖産興業といった一連の改革を後押しする一因ともなった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 不平等条約と岩倉使節団 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第６節　単元㉚</span>
+  <h2>鹿鳴館外交と欧化政策——井上馨の条約改正交渉</h2>
+
+  <p>外務卿（のち外務大臣）となった<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">井上馨</span><span class="kw-pop"><span class="kw-title">井上馨（いのうえかおる）</span><span class="kw-yomi">📖 読み：いのうえかおる</span><span class="kw-body">長州藩出身の政治家。外務卿・外務大臣として条約改正交渉を担当し，欧化政策・鹿鳴館外交を進めた。しかし国内外から強い批判を受け，交渉は失敗し辞任した。</span></span></span>（E）は，日本が「文明国」であることを欧米に示せば条約改正の交渉が進むと考え，極端な<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">欧化政策</span><span class="kw-pop"><span class="kw-title">欧化政策（おうかせいさく）</span><span class="kw-yomi">📖 読み：おうかせいさく</span><span class="kw-body">井上馨が条約改正交渉を進めるために採用した政策。西洋の文化・生活様式を積極的に取り入れることで，日本が欧米と対等な「文明国」であることを示そうとした。鹿鳴館での舞踏会などが代表例。表面的な西洋化だとして国内外から強い批判を受けた。</span></span></span>（G）を進めました。</p>
+
+  <div class="why-box">
+    <span class="label">💃 鹿鳴館——欧化政策の象徴</span>
+    ▶ 1883年，東京に西洋風の社交場「<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">鹿鳴館</span><span class="kw-pop"><span class="kw-title">鹿鳴館（ろくめいかん）</span><span class="kw-yomi">📖 読み：ろくめいかん</span><span class="kw-body">1883年，東京に建てられた西洋風の社交場。井上馨の欧化政策の一環として建設され，外国の外交官らを招いた舞踏会などが開かれた。日本が「文明国」であることを演出する場だったが，表面的な模倣にすぎないと批判された。</span></span></span>（F）」が建てられた<br>
+    ▶ 外国の外交官らを招き，舞踏会や夜会を開いて，日本人が西洋式の礼儀作法や服装を身につけていることを示そうとした<br>
+    ▶ しかし，これは表面的な西洋の模倣にすぎず，「日本の伝統や文化を軽視している」という国内からの批判，「本質的な改革がともなっていない」という国外からの批判の両方を受けた<br>
+    ▶ 結局，井上馨の条約改正交渉は失敗し，井上は外相を辞任した
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 鹿鳴館外交と欧化政策 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第６節　単元㉚</span>
+  <h2>ノルマントン号事件——条約改正を求める世論の高まり</h2>
+
+  <p>1886年，治外法権の不合理さを国民に強く印象づける事件が起こりました。イギリス船が紀伊半島沖で沈没した<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">ノルマントン号事件</span><span class="kw-pop"><span class="kw-title">ノルマントン号事件（のるまんとんごうじけん）</span><span class="kw-yomi">📖 読み：のるまんとんごうじけん</span><span class="kw-body">1886年，イギリス船ノルマントン号が紀伊半島沖で沈没した事件。イギリス人船長・乗組員は全員ボートで脱出して助かったが，日本人乗客25名は全員水死した。船長は領事裁判にかけられたが，軽い禁錮刑となり，日本人の命の軽さと治外法権の不合理さを国民に強く印象づけた。</span></span></span>（H）です。</p>
+
+  <div class="result-box">
+    <span class="label">⚖ 事件が示した治外法権の不合理さ</span>
+    ▶ イギリス人の船長・乗組員は全員ボートで脱出して助かったが，日本人乗客25名は全員水死した<br>
+    ▶ 船長は，日本の裁判所ではなく，領事裁判（イギリス側の裁判）にかけられ，軽い禁錮刑を受けたにとどまった<br>
+    ▶ 「同じ事故なのに，日本人の命が軽く扱われている」として世論の怒りが高まり，条約改正——特に治外法権の撤廃を求める声がいっそう強くなった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 ノルマントン号事件 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第６節　単元㉚</span>
+  <h2>陸奥宗光と治外法権の撤廃——条約改正，第一の成果</h2>
+
+  <p>1894年，外相<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">陸奥宗光</span><span class="kw-pop"><span class="kw-title">陸奥宗光（むつむねみつ）</span><span class="kw-yomi">📖 読み：むつむねみつ</span><span class="kw-body">紀州藩出身の政治家・外交官。1894年，外務大臣として日英通商航海条約を締結し，治外法権（領事裁判権）の撤廃に成功した。日清戦争開戦直前という国際情勢の変化を巧みに利用した交渉として知られる。</span></span></span>（I）は，イギリスとの間に<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">日英通商航海条約</span><span class="kw-pop"><span class="kw-title">日英通商航海条約（にちえいつうしょうこうかいじょうやく）</span><span class="kw-yomi">📖 読み：にちえいつうしょうこうかいじょうやく</span><span class="kw-body">1894年，陸奥宗光がイギリスと締結した条約。治外法権（領事裁判権）の撤廃に成功し，条約改正の大きな一歩となった。1899年に発効した。この成功をきっかけに，他の欧米諸国とも同様の条約改正が進んだ。</span></span></span>（J）を結び，長年の懸案であった治外法権の撤廃に成功しました。</p>
+
+  <div class="cause-box">
+    <span class="label">🕐 なぜこのタイミングで交渉が成功したのか</span>
+    ▶ 学制・徴兵令・地租改正・殖産興業などの改革により，日本の近代化が着実に進んでいたこと<br>
+    ▶ 大日本帝国憲法の発布（1889年）・帝国議会の開設（1890年）により，日本が近代的な立憲国家としての体裁を整えていたこと<br>
+    ▶ ロシアの南下政策を警戒するイギリスが，東アジアで日本と良好な関係を築く必要性を感じていたこと（日清戦争開戦は1894年）<br>
+    ▶ こうした条件が重なり，陸奥宗光の交渉は成功し，条約は1899年に発効した
+  </div>
+
+  <button class="modal-btn" onclick="openModal('jouyaku')">🤝 条約改正はなぜ40年以上かかったのか——全体の流れをくわしく <span class="btn-arrow">▶</span></button>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 陸奥宗光と治外法権の撤廃 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第６節　単元㉚</span>
+  <h2>小村寿太郎と関税自主権の回復——条約改正の完成</h2>
+
+  <p>治外法権の撤廃から17年後の1911年，外相<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">小村寿太郎</span><span class="kw-pop"><span class="kw-title">小村寿太郎（こむらじゅたろう）</span><span class="kw-yomi">📖 読み：こむらじゅたろう</span><span class="kw-body">日向（宮崎）出身の政治家・外交官。1911年，外務大臣として関税自主権の完全な回復に成功し，幕末以来の不平等条約を完全に解消した。日露戦争のポーツマス条約交渉にも全権として関わったことで知られる。</span></span></span>（K）が<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">関税自主権の回復</span><span class="kw-pop"><span class="kw-title">関税自主権の回復（かんぜいじしゅけんのかいふく）</span><span class="kw-yomi">📖 読み：かんぜいじしゅけんのかいふく</span><span class="kw-body">1911年，小村寿太郎が実現した，関税を自国の判断で自由に定められる権利の完全な回復。これにより，幕末以来続いていた不平等条約が完全に解消され，条約改正が完成した。</span></span></span>（L）を実現しました。</p>
+
+  <div class="result-box">
+    <span class="label">🏁 半世紀近くをかけた条約改正の完成</span>
+    ▶ これにより，1858年の安政の五カ国条約以来続いていた不平等条約は完全に解消された<br>
+    ▶ 幕末の開国（1858年）から数えて，実に半世紀以上をかけて，日本は欧米諸国と対等な立場を得た<br>
+    ▶ この過程は，学制・徴兵令・地租改正・殖産興業といった国内の近代化改革と，日清・日露戦争を通じた国際的地位の向上が，一体となって進められたことを示している
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：条約改正への道のポイント</strong><br>
+    条約改正は，幕末の開国から半世紀以上をかけて達成された，明治日本の大きな外交課題でした。<br><br>
+    ▶ <strong>不平等条約</strong>——治外法権（領事裁判権）と関税自主権の欠如が二大問題<br>
+    ▶ <strong>岩倉使節団（1871年）</strong>——条約改正交渉は失敗，近代化の必要性を痛感<br>
+    ▶ <strong>鹿鳴館外交・欧化政策</strong>——井上馨による交渉，表面的として批判され失敗<br>
+    ▶ <strong>ノルマントン号事件（1886年）</strong>——治外法権の不合理さが世論を動かす<br>
+    ▶ <strong>治外法権の撤廃（1894年，陸奥宗光）</strong>——日英通商航海条約，1899年発効<br>
+    ▶ <strong>関税自主権の回復（1911年，小村寿太郎）</strong>——条約改正の完成
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">安政の五カ国条約</span>
+    <span class="tl-item">治外法権</span>
+    <span class="tl-item">関税自主権</span>
+    <span class="tl-item">岩倉使節団</span>
+    <span class="tl-item">井上馨</span>
+    <span class="tl-item">鹿鳴館</span>
+    <span class="tl-item">欧化政策</span>
+    <span class="tl-item">ノルマントン号事件</span>
+    <span class="tl-item">陸奥宗光</span>
+    <span class="tl-item">日英通商航海条約</span>
+    <span class="tl-item">小村寿太郎</span>
+    <span class="tl-item">関税自主権の回復</span>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 小村寿太郎と関税自主権の回復 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉚ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch30.html">単元㉚ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉚ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 12 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-jouyaku" onclick="if(event.target===this)closeModal('jouyaku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('jouyaku')">✕</button>
+    <div class="modal-title">🤝 条約改正はなぜ40年以上かかったのか——全体の流れをくわしく</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 条約改正が難しかった根本的な理由</div>
+      <div class="cause-box">
+        <span class="label">⚖ 「対等」を認めてもらうことの難しさ</span>
+        条約改正とは，単なる書類の書き換えではなく，「日本を欧米と対等な文明国として扱ってほしい」という承認を求める外交交渉でした。<br><br>
+        ▶ 当時の欧米列強は，アジア・アフリカの多くを植民地・半植民地としており，「アジアの国は対等な相手ではない」という意識が根強かった<br>
+        ▶ そのため，日本がどれだけ交渉しても，欧米側が「日本はまだ近代化が不十分だ」と判断すれば，条約改正には応じてもらえなかった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 交渉担当者たちの試行錯誤</div>
+      <div class="why-box">
+        <span class="label">🔄 失敗を重ねながら前進した交渉の歴史</span>
+        条約改正の交渉は，岩倉具視・寺島宗則・井上馨・大隈重信・青木周蔵など，多くの政治家が挑んでは失敗を重ねた，長い歴史を持っています。<br><br>
+        ▶ 井上馨——欧化政策による交渉は，国内外の批判により失敗<br>
+        ▶ 大隈重信——外国人裁判官の任用を認める案を検討したが，国内の反発（大隈は襲撃され負傷）で挫折<br>
+        ▶ こうした試行錯誤の末，1894年の陸奥宗光による治外法権撤廃で，ようやく大きな一歩が実現した
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ なぜ最終的に成功したのか</div>
+      <div class="result-box">
+        <span class="label">🏗 国内の近代化と国際情勢の変化が重なって</span>
+        条約改正が最終的に実現した背景には，国内の近代化（学制・徴兵令・地租改正・殖産興業・大日本帝国憲法・帝国議会）が着実に進んだことに加え，ロシアの南下政策を警戒するイギリスが日本に接近するなど，国際情勢の変化も大きく影響しました。日清戦争（1894〜95年）・日露戦争（1904〜05年）での勝利を経て，日本の国際的地位はさらに高まり，1911年の関税自主権回復によって，条約改正はついに完成したのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 12語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"安政の五カ国条約", "B":"治外法権", "C":"関税自主権", "D":"岩倉使節団",
+  "E":"井上馨", "F":"鹿鳴館", "G":"欧化政策", "H":"ノルマントン号事件",
+  "I":"陸奥宗光", "J":"日英通商航海条約", "K":"小村寿太郎", "L":"関税自主権の回復"
+};
+const wordBank = ["安政の五カ国条約","治外法権","関税自主権","岩倉使節団",
+  "井上馨","鹿鳴館","欧化政策","ノルマントン号事件",
+  "陸奥宗光","日英通商航海条約","小村寿太郎","関税自主権の回復"];
+
+const miniQuizData1 = [
+  {q:"①　1858年に幕府が欧米諸国と結んだ，不平等な内容を含む一連の条約を何というか。",
+   choices:["安政の五カ国条約","日英通商航海条約","国会開設の勅諭","大日本帝国憲法"], ans:0,
+   exp:"安政の五カ国条約。アメリカ・イギリス・フランス・オランダ・ロシアと結ばれました。"},
+  {q:"②　外国人が滞在国の法律に従わなくてよいとする権利を何というか。",
+   choices:["関税自主権","治外法権","天皇主権","国民主権"], ans:1,
+   exp:"治外法権（領事裁判権）。日本国内で外国人が罪を犯しても，日本の裁判所では裁けませんでした。"},
+  {q:"③　輸入品にかける税率を自国が自由に決められる権利を何というか。",
+   choices:["治外法権","関税自主権","天皇大権","主権"], ans:1,
+   exp:"関税自主権。安政の五カ国条約では，日本にはこの権利がなく，相手国との協定で税率が定められていました。"},
+  {q:"④　1871年，条約改正の予備交渉のため欧米に派遣された使節団を何というか。",
+   choices:["遣唐使","岩倉使節団","朝鮮通信使","勘合貿易団"], ans:1,
+   exp:"岩倉使節団。交渉は失敗しましたが，欧米の視察が政府のその後の改革方針に大きな影響を与えました。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　欧化政策を進め，鹿鳴館外交を行った外務卿（外相）は誰か。",
+   choices:["陸奥宗光","井上馨","小村寿太郎","大隈重信"], ans:1,
+   exp:"井上馨。日本が「文明国」であることを示すことで条約改正を進めようとしましたが失敗しました。"},
+  {q:"②　1883年，東京に建てられた西洋風の社交場を何というか。",
+   choices:["鹿鳴館","富岡製糸場","立志社","開拓使"], ans:0,
+   exp:"鹿鳴館。舞踏会や夜会が開かれ，欧化政策の象徴となりました。"},
+  {q:"③　井上馨が条約改正のために進めた，西洋の文化を積極的に取り入れる政策を何というか。",
+   choices:["富国強兵","殖産興業","欧化政策","文明開化"], ans:2,
+   exp:"欧化政策。表面的な西洋の模倣にすぎないとして，国内外から強い批判を受けました。"},
+  {q:"④　井上馨の条約改正交渉の結果はどうなったか。",
+   choices:["成功し治外法権が撤廃された","失敗し井上は外相を辞任した","関税自主権が回復した","条約が完全に解消された"], ans:1,
+   exp:"失敗し，井上馨は外相を辞任しました。条約改正の達成は，のちの陸奥宗光・小村寿太郎まで持ち越されました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1886年，イギリス船が紀伊半島沖で沈没した事件を何というか。",
+   choices:["ノルマントン号事件","黒船来航","生麦事件","下関事件"], ans:0,
+   exp:"ノルマントン号事件。治外法権の不合理さを国民に強く印象づけました。"},
+  {q:"②　ノルマントン号事件で，日本人乗客はどうなったか。",
+   choices:["全員無事だった","全員水死した","半数が助かった","イギリスに保護された"], ans:1,
+   exp:"日本人乗客25名は全員水死しましたが，イギリス人船長・乗組員は全員助かりました。"},
+  {q:"③　ノルマントン号事件で，船長はどのように裁かれたか。",
+   choices:["日本の裁判所で重い刑を受けた","領事裁判で軽い禁錮刑となった","無罪となった","死刑となった"], ans:1,
+   exp:"領事裁判（イギリス側の裁判）で軽い禁錮刑となり，治外法権の不合理さが浮き彫りになりました。"},
+  {q:"④　ノルマントン号事件が世論に与えた影響として正しいものはどれか。",
+   choices:["条約改正への関心が薄れた","治外法権撤廃を求める声が強まった","鎖国を求める声が強まった","イギリスへの信頼が高まった"], ans:1,
+   exp:"治外法権の不合理さへの怒りから，条約改正——特に治外法権の撤廃を求める世論が高まりました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1894年，日英通商航海条約を結び，治外法権の撤廃に成功した外相は誰か。",
+   choices:["井上馨","陸奥宗光","小村寿太郎","大隈重信"], ans:1,
+   exp:"陸奥宗光。日清戦争開戦直前という国際情勢の変化を巧みに利用しました。"},
+  {q:"②　1894年に結ばれ，治外法権の撤廃を実現した条約を何というか。",
+   choices:["日米和親条約","日英通商航海条約","下関条約","ポーツマス条約"], ans:1,
+   exp:"日英通商航海条約。1899年に発効しました。"},
+  {q:"③　治外法権撤廃の交渉が成功した背景として正しくないものはどれか。",
+   choices:["国内の近代化が進んでいたこと","大日本帝国憲法が発布されていたこと","ロシアを警戒するイギリスが日本に接近したこと","日本が関税自主権をすでに回復していたこと"], ans:3,
+   exp:"関税自主権の回復は1911年（小村寿太郎）で，治外法権撤廃（1894年）より後のできごとです。"},
+  {q:"④　日英通商航海条約が発効したのは何年か。",
+   choices:["1894年","1899年","1904年","1911年"], ans:1,
+   exp:"1899年。締結（1894年）から5年後に発効しました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1911年，関税自主権の完全な回復に成功した外相は誰か。",
+   choices:["陸奥宗光","井上馨","小村寿太郎","大隈重信"], ans:2,
+   exp:"小村寿太郎。日露戦争のポーツマス条約交渉にも関わった人物です。"},
+  {q:"②　関税自主権の回復により，何が完成したか。",
+   choices:["富国強兵","条約改正","殖産興業","帝国議会"], ans:1,
+   exp:"条約改正。幕末以来続いていた不平等条約が，これによって完全に解消されました。"},
+  {q:"③　治外法権の撤廃（1894年）から関税自主権の回復（1911年）まで，何年かかったか。",
+   choices:["7年","12年","17年","25年"], ans:2,
+   exp:"17年。1894年から1911年までの年月です。"},
+  {q:"④　条約改正が完成するまでの流れとして正しい順番はどれか。",
+   choices:["関税自主権回復→治外法権撤廃","治外法権撤廃→関税自主権回復","岩倉使節団→関税自主権回復→治外法権撤廃","治外法権撤廃→岩倉使節団→関税自主権回復"], ans:1,
+   exp:"岩倉使節団（1871年）→鹿鳴館外交→ノルマントン号事件（1886年）→治外法権撤廃（1894年）→関税自主権回復（1911年）の順です。"}
+];
+
+const finalQuizData = [
+  {q:"① 1858年に幕府が結んだ，不平等な内容を含む条約群を何というか。",
+   choices:["安政の五カ国条約","日英通商航海条約","日米和親条約","大日本帝国憲法"], ans:0,
+   exp:"安政の五カ国条約。治外法権と関税自主権の欠如という二大問題を含んでいました。"},
+  {q:"② 外国人が滞在国の法律に従わなくてよいとする権利は何か。",
+   choices:["関税自主権","治外法権","天皇主権","国民主権"], ans:1,
+   exp:"治外法権（領事裁判権）。ノルマントン号事件でその不合理さが強く印象づけられました。"},
+  {q:"③ 1871年，条約改正交渉のため欧米に派遣された使節団は何か。",
+   choices:["岩倉使節団","遣唐使","朝鮮通信使","勘合貿易団"], ans:0,
+   exp:"岩倉使節団。交渉は失敗しましたが，欧米視察がその後の改革方針に影響しました。"},
+  {q:"④ 欧化政策を進め，鹿鳴館外交を行った外相は誰か。",
+   choices:["陸奥宗光","井上馨","小村寿太郎","大隈重信"], ans:1,
+   exp:"井上馨。1883年に鹿鳴館を建設し，舞踏会などを開きましたが交渉は失敗しました。"},
+  {q:"⑤ 1886年，治外法権の不合理さを印象づけた事件は何か。",
+   choices:["ノルマントン号事件","生麦事件","下関事件","黒船来航"], ans:0,
+   exp:"ノルマントン号事件。日本人乗客が全員水死し，船長は軽い刑罰にとどまりました。"},
+  {q:"⑥ 1894年，治外法権の撤廃に成功した外相は誰か。",
+   choices:["井上馨","陸奥宗光","小村寿太郎","大隈重信"], ans:1,
+   exp:"陸奥宗光。日英通商航海条約を結び，1899年に発効しました。"},
+  {q:"⑦ 1894年に締結された，治外法権撤廃を実現した条約は何か。",
+   choices:["日米和親条約","日英通商航海条約","下関条約","ポーツマス条約"], ans:1,
+   exp:"日英通商航海条約。この成功をきっかけに他の欧米諸国とも条約改正が進みました。"},
+  {q:"⑧ 1911年，関税自主権の完全回復に成功した外相は誰か。",
+   choices:["陸奥宗光","井上馨","小村寿太郎","大隈重信"], ans:2,
+   exp:"小村寿太郎。これにより幕末以来の不平等条約が完全に解消されました。"},
+  {q:"⑨ 関税自主権の回復によって完成したものは何か。",
+   choices:["富国強兵","条約改正","殖産興業","帝国議会"], ans:1,
+   exp:"条約改正。幕末の開国から半世紀以上をかけて達成されました。"},
+  {q:"⑩ 条約改正の流れとして正しい順番はどれか。",
+   choices:["治外法権撤廃→岩倉使節団→関税自主権回復","岩倉使節団→ノルマントン号事件→治外法権撤廃→関税自主権回復","関税自主権回復→治外法権撤廃→岩倉使節団","ノルマントン号事件→岩倉使節団→関税自主権回復"], ans:1,
+   exp:"岩倉使節団（1871年）→ノルマントン号事件（1886年）→治外法権撤廃（1894年）→関税自主権回復（1911年）の順です。"}
+];
+
+const checkItems = [
+  "安政の五カ国条約が治外法権と関税自主権の欠如という問題を持っていたことを説明できる",
+  "治外法権（領事裁判権）の内容を説明できる",
+  "関税自主権の内容を説明できる",
+  "岩倉使節団（1871年）が条約改正交渉に失敗し，近代化の必要性を痛感させたことを説明できる",
+  "井上馨の欧化政策・鹿鳴館外交とその失敗を説明できる",
+  "ノルマントン号事件（1886年）が治外法権の不合理さを示したことを説明できる",
+  "陸奥宗光が1894年に治外法権の撤廃に成功したことを説明できる",
+  "日英通商航海条約（1894年締結，1899年発効）について説明できる",
+  "小村寿太郎が1911年に関税自主権の回復に成功したことを説明できる",
+  "条約改正が半世紀以上をかけて達成されたことを説明できる",
+  "条約改正の成功が国内の近代化と国際情勢の両方に支えられていたことを説明できる",
+  "岩倉使節団→鹿鳴館外交→ノルマントン号事件→治外法権撤廃→関税自主権回復の流れを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉙ 大日本帝国憲法と帝国議会｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.flow-summary{background:#fff5f0;border:1.5px solid #94a3b8;border-radius:10px;padding:14px 16px;margin:14px 0}
+.flow-summary-title{font-size:14px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;border-bottom:1px solid #cbd5e1;padding-bottom:6px}
+.flow-steps{display:flex;flex-direction:column;gap:4px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-year{background:#8b2500;color:#fff;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.flow-year.green{background:#1a6b22}.flow-year.purple{background:#4a1a7a}.flow-year.brown{background:#7a4f00}.flow-year.blue{background:#1a4f7a}.flow-year.navy{background:#1a2a6b}
+.flow-content{font-size:14px;line-height:1.8;flex:1}
+.flow-arrow{font-size:16px;color:#94a3b8;padding-left:40px}
+.flow-note{background:#fff;border-radius:8px;padding:10px 12px;font-size:13px;color:#475569;margin-top:10px;border:1px solid #cbd5e1}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch28.html" class="back-to-index">← 単元㉘へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🏛 単元㉙　大日本帝国憲法と帝国議会——立憲国家の完成</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第５節　単元㉙</span>
+  <h2>伊藤博文の憲法調査——どの国の憲法を手本にするか</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1881年の国会開設の勅諭により，1890年の国会開設が国民に約束されました。政府は，国会を開くにあたって「憲法」を制定する必要があると考え，<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">伊藤博文</span><span class="kw-pop"><span class="kw-title">伊藤博文（いとうひろぶみ）</span><span class="kw-yomi">📖 読み：いとうひろぶみ</span><span class="kw-body">長州藩出身の政治家。1882年，憲法調査のためヨーロッパへ渡り，君主権の強いドイツ（プロイセン）流の憲法を学んだ。帰国後，内閣制度を創設して初代内閣総理大臣となり，大日本帝国憲法の起草の中心となった。</span></span></span>（A）を中心にヨーロッパへ憲法調査に派遣しました。</p>
+
+  <div class="cause-box">
+    <span class="label">🌍 なぜドイツ（プロイセン）を手本にしたのか</span>
+    ▶ 伊藤博文は1882年からヨーロッパに渡り，イギリス・フランス・ドイツなど各国の憲法を調査した<br>
+    ▶ イギリスやフランスは，議会（国民）の力が強い立憲君主制・共和制であり，天皇の権限を維持したい政府の方針には合わなかった<br>
+    ▶ 一方，<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">ドイツ（プロイセン）</span><span class="kw-pop"><span class="kw-title">ドイツ（プロイセン）憲法</span><span class="kw-yomi">📖 読み：どいつ（ぷろいせん）けんぽう</span><span class="kw-body">19世紀のドイツ（プロイセン）で制定されていた憲法。君主（皇帝）の権限が強く，議会の力は制限されていた。伊藤博文はこの憲法を，天皇の権限を維持しながら立憲国家をつくろうとする明治政府にとって最も参考になる手本と考えた。</span></span></span>（B）は，君主（皇帝）の権限が強く，議会の力が制限された仕組みだったため，天皇中心の国づくりを目指す明治政府にとって理想的な手本となった
+  </div>
+
+  <div class="flow-summary">
+    <div class="flow-summary-title">⏱ この単元の流れ</div>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="flow-year">1882年</span><div class="flow-content">伊藤博文が憲法調査のためヨーロッパへ渡り，<strong>ドイツ（プロイセン）流</strong>の憲法を学ぶ</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year blue">1885年</span><div class="flow-content"><strong>内閣制度</strong>を創設——伊藤博文が初代内閣総理大臣に就任</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year green">1889年</span><div class="flow-content"><strong>大日本帝国憲法</strong>発布——天皇が国民に与える形の欽定憲法</div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="flow-year brown">1890年</span><div class="flow-content">第一回<strong>帝国議会</strong>開設——衆議院・貴族院からなる二院制議会が始まる</div></div>
+    </div>
+    <div class="flow-note">
+      💡 1882年（調査）→1885年（内閣制度）→1889年（憲法発布）→1890年（議会開設）の流れを，年号とセットで覚えましょう。
+    </div>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 伊藤博文の憲法調査 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第５節　単元㉙</span>
+  <h2>内閣制度の創設——伊藤博文，初代内閣総理大臣に</h2>
+
+  <p>帰国した伊藤博文は，1885年，太政官制にかわる新しい行政の仕組みとして<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">内閣制度</span><span class="kw-pop"><span class="kw-title">内閣制度（ないかくせいど）</span><span class="kw-yomi">📖 読み：ないかくせいど</span><span class="kw-body">1885年，伊藤博文の主導で創設された行政の仕組み。太政大臣・左大臣・右大臣などからなる太政官制にかわり，内閣総理大臣と各省の大臣（国務大臣）が行政を担う仕組みとなった。伊藤博文が初代内閣総理大臣に就任した。</span></span></span>（C）を創設しました。</p>
+
+  <div class="why-box">
+    <span class="label">👑 内閣制度のポイント</span>
+    ▶ それまでの太政大臣・左大臣・右大臣などからなる<span class="kw">太政官制<span class="kw-pop"><span class="kw-title">太政官制（だじょうかんせい）</span><span class="kw-yomi">📖 読み：だじょうかんせい</span><span class="kw-body">明治初期の行政の仕組み。太政大臣・左大臣・右大臣などが政治を担った。1885年，内閣制度の創設により廃止された。</span></span></span>を廃止し，<strong>内閣総理大臣</strong>と各省の大臣（国務大臣）が行政を担う仕組みに改めた<br>
+    ▶ 伊藤博文が，日本で初めての<strong>内閣総理大臣</strong>に就任した<br>
+    ▶ 憲法の発布に先立って行政の仕組みを整えることで，天皇を頂点とする立憲国家の土台をより確かなものにした
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 内閣制度 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第５節　単元㉙</span>
+  <h2>大日本帝国憲法の発布——アジア初の近代的憲法</h2>
+
+  <p>1889年2月11日，天皇が国民に与える形で<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">大日本帝国憲法</span><span class="kw-pop"><span class="kw-title">大日本帝国憲法（だいにほんていこくけんぽう）</span><span class="kw-yomi">📖 読み：だいにほんていこくけんぽう</span><span class="kw-body">1889年2月11日に発布された，日本で最初の近代的な憲法。伊藤博文らが起草の中心となり，ドイツ（プロイセン）流の憲法を手本とした。天皇が国民に与える形の欽定憲法であり，天皇に統治権が集中する一方，国民（臣民）には法律の範囲内での権利が認められた。アジアで最初の近代的な憲法として知られる。</span></span></span>（D）が発布されました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 大日本帝国憲法の主な内容</span>
+    ▶ <span class="kw"><strong>欽定憲法</strong><span class="kw-pop"><span class="kw-title">欽定憲法（きんていけんぽう）</span><span class="kw-yomi">📖 読み：きんていけんぽう</span><span class="kw-body">君主（天皇）が国民に与えるという形で制定される憲法。国民が制定する「民定憲法」と対になる考え方。大日本帝国憲法はこの形で発布された。</span></span></span>——天皇が国民（臣民）に与えるという形で発布された<br>
+    ▶ <span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">天皇主権</span><span class="kw-pop"><span class="kw-title">天皇主権（てんのうしゅけん）</span><span class="kw-yomi">📖 読み：てんのうしゅけん</span><span class="kw-body">大日本帝国憲法の基本原則。国の統治権（主権）は天皇にあり，天皇は陸海軍の指揮（統帥権），条約の締結，議会の召集・解散など，広い権限（天皇大権）を持つとされた。</span></span></span>（E）——国の統治権は天皇にあり，天皇は陸海軍の統帥権や議会の召集・解散権など，広い権限（天皇大権）を持つとされた<br>
+    ▶ 国民は「臣民」と位置づけられ，言論・出版・信教の自由などが認められたが，これらは「法律の範囲内」という制限つきであった<br>
+    ▶ アジアで最初の近代的な憲法として，当時の国際社会からも注目された
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('kenpou')">📜 大日本帝国憲法をくわしく——なぜドイツ流が選ばれたのか <span class="btn-arrow">▶</span></button>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 大日本帝国憲法 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第9章 第５節　単元㉙</span>
+  <h2>帝国議会の成立——衆議院と貴族院</h2>
+
+  <p>大日本帝国憲法にもとづき，1890年，日本で初めての<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">帝国議会</span><span class="kw-pop"><span class="kw-title">帝国議会（ていこくぎかい）</span><span class="kw-yomi">📖 読み：ていこくぎかい</span><span class="kw-body">大日本帝国憲法にもとづき，1890年に開設された日本初の近代議会。国民が選んだ議員からなる衆議院と，皇族・華族などからなる貴族院の二院制がとられた。1890年11月，第一回帝国議会が開かれた。</span></span></span>（H）が開かれました。帝国議会は，国民が選んだ議員からなる<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">衆議院</span><span class="kw-pop"><span class="kw-title">衆議院（しゅうぎいん）</span><span class="kw-yomi">📖 読み：しゅうぎいん</span><span class="kw-body">帝国議会を構成する二つの議院の一つ。国民（当初は直接国税15円以上を納める満25歳以上の男子）の選挙によって選ばれた議員からなった。</span></span></span>（F）と，皇族・華族などからなる<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">貴族院</span><span class="kw-pop"><span class="kw-title">貴族院（きぞくいん）</span><span class="kw-yomi">📖 読み：きぞくいん</span><span class="kw-body">帝国議会を構成する二つの議院の一つ。皇族・華族や，天皇が任命した勅任議員などからなり，国民の選挙は行われなかった。</span></span></span>（G）の二院制でした。</p>
+
+  <div class="cause-box">
+    <span class="label">🗳 制限選挙のもとで始まった議会政治</span>
+    ▶ 衆議院議員の選挙権は，直接国税を<strong>15円以上</strong>納める満25歳以上の男子に限られていた（<span class="kw"><strong>制限選挙</strong><span class="kw-pop"><span class="kw-title">制限選挙（せいげんせんきょ）</span><span class="kw-yomi">📖 読み：せいげんせんきょ</span><span class="kw-body">納税額や性別などの条件によって，選挙権を持つ人が限定される選挙制度。帝国議会発足当初は，直接国税15円以上を納める満25歳以上の男子のみが選挙権を持ち，全人口の約1.1％にとどまった。1925年の普通選挙法で満25歳以上のすべての男子に拡大された。</span></span></span>）<br>
+    ▶ 選挙権を持つ人は，当時の全人口のわずか約1.1％にとどまった<br>
+    ▶ それでも，国民が選んだ議員が国政に参加できるようになったことは，自由民権運動が求め続けてきた成果であった
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：大日本帝国憲法と帝国議会のポイント</strong><br>
+    国会開設の勅諭（1881年）から数えて約10年をかけて，日本は近代的な立憲国家としての体制を整えました。<br><br>
+    ▶ <strong>伊藤博文の憲法調査（1882年）</strong>——ドイツ（プロイセン）流の憲法を手本にする<br>
+    ▶ <strong>内閣制度（1885年）</strong>——伊藤博文が初代内閣総理大臣に<br>
+    ▶ <strong>大日本帝国憲法発布（1889年）</strong>——欽定憲法，天皇主権，臣民の権利<br>
+    ▶ <strong>帝国議会開設（1890年）</strong>——衆議院・貴族院の二院制，制限選挙
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">伊藤博文</span>
+    <span class="tl-item">ドイツ（プロイセン）憲法</span>
+    <span class="tl-item">内閣制度</span>
+    <span class="tl-item">大日本帝国憲法</span>
+    <span class="tl-item">欽定憲法</span>
+    <span class="tl-item">天皇主権</span>
+    <span class="tl-item">帝国議会</span>
+    <span class="tl-item">衆議院</span>
+    <span class="tl-item">貴族院</span>
+    <span class="tl-item">制限選挙</span>
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 帝国議会 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉙ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch29.html">単元㉙ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉙ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 10 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-kenpou" onclick="if(event.target===this)closeModal('kenpou')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kenpou')">✕</button>
+    <div class="modal-title">📜 大日本帝国憲法をくわしく——なぜドイツ流が選ばれたのか</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 各国の憲法とその違い</div>
+      <div class="cause-box">
+        <span class="label">🌍 立憲君主制にもいろいろな型がある</span>
+        ひとことで「立憲君主制」といっても，国によって君主と議会の力関係は大きく異なります。<br><br>
+        ▶ イギリス——議会の力が強く，国王の権限は儀礼的なものにとどまる（議院内閣制）<br>
+        ▶ フランス——革命を経て共和制（国民主権）へ移行していた<br>
+        ▶ ドイツ（プロイセン）——皇帝の権限が強く，議会の力は限定的
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 明治政府がドイツ流を選んだ理由</div>
+      <div class="why-box">
+        <span class="label">👑 天皇の権限を維持したかった政府の思惑</span>
+        明治政府は，天皇を中心とする国のまとまりを保ちながら，同時に欧米諸国に「日本は近代的な立憲国家である」と示す必要がありました。イギリス流やフランス流を採用すると，議会や国民の力が強くなりすぎ，天皇の権限が大きく制限されてしまいます。<br><br>
+        ▶ ドイツ（プロイセン）流であれば，憲法を制定しつつも，天皇（君主）に大きな権限を残すことができた<br>
+        ▶ 伊藤博文は，ドイツの法学者グナイストやウィーンの法学者シュタインのもとで学び，この考え方を日本に持ち帰った
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 大日本帝国憲法の歴史的な意義</div>
+      <div class="result-box">
+        <span class="label">🏗 アジア初の近代的憲法として</span>
+        天皇の権限が強く残る一方で，議会（帝国議会）が国政に参加する仕組みが整ったことは，日本が近代国家としての体裁を整えるうえで大きな意味を持ちました。大日本帝国憲法は，アジアで最初の近代的な成文憲法として，当時の欧米諸国からも注目を集めました。この憲法は，1947年に日本国憲法が施行されるまで，半世紀以上にわたって日本の統治の基本となりました。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 8語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"伊藤博文", "B":"ドイツ（プロイセン）", "C":"内閣制度", "D":"大日本帝国憲法",
+  "E":"天皇主権", "F":"衆議院", "G":"貴族院", "H":"帝国議会"
+};
+const wordBank = ["伊藤博文","ドイツ（プロイセン）","内閣制度","大日本帝国憲法",
+  "天皇主権","衆議院","貴族院","帝国議会"];
+
+const miniQuizData1 = [
+  {q:"①　1882年，憲法調査のためヨーロッパへ渡った人物は誰か。",
+   choices:["大隈重信","伊藤博文","板垣退助","西郷隆盛"], ans:1,
+   exp:"伊藤博文。ドイツ（プロイセン）流の憲法を学び，帰国後に大日本帝国憲法の起草の中心となりました。"},
+  {q:"②　伊藤博文が手本とした，君主権の強い憲法はどこの国のものか。",
+   choices:["イギリス","フランス","ドイツ（プロイセン）","アメリカ"], ans:2,
+   exp:"ドイツ（プロイセン）。君主（皇帝）の権限が強く，天皇中心の国づくりを目指す政府にとって理想的な手本でした。"},
+  {q:"③　イギリスやフランスの憲法が明治政府に採用されなかった理由として正しいものはどれか。",
+   choices:["言葉が難しかったから","議会や国民の力が強く，天皇の権限が制限されてしまうから","内容が短すぎたから","翻訳されていなかったから"], ans:1,
+   exp:"イギリス・フランスは議会や国民の力が強く，天皇に大きな権限を残したい政府の方針に合いませんでした。"},
+  {q:"④　伊藤博文の憲法調査が行われたのはいつか。",
+   choices:["1874年","1877年","1882年","1889年"], ans:2,
+   exp:"1882年。この調査をもとに，1885年の内閣制度創設，1889年の大日本帝国憲法発布へとつながっていきます。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1885年に創設された，太政官制にかわる新しい行政の仕組みを何というか。",
+   choices:["内閣制度","帝国議会","地方自治制","府県制"], ans:0,
+   exp:"内閣制度。内閣総理大臣と各省の大臣（国務大臣）が行政を担う仕組みとなりました。"},
+  {q:"②　日本で初めての内閣総理大臣に就任した人物は誰か。",
+   choices:["大隈重信","板垣退助","伊藤博文","大久保利通"], ans:2,
+   exp:"伊藤博文。憲法調査を行った本人が，初代内閣総理大臣に就任しました。"},
+  {q:"③　内閣制度創設以前の行政の仕組みを何というか。",
+   choices:["太政官制","幕藩体制","律令制","郡県制"], ans:0,
+   exp:"太政官制。太政大臣・左大臣・右大臣などからなる仕組みで，内閣制度により廃止されました。"},
+  {q:"④　内閣制度が創設された目的として正しいものはどれか。",
+   choices:["江戸幕府を復活させるため","憲法発布に先立って行政の仕組みを整えるため","国会を廃止するため","地方分権を進めるため"], ans:1,
+   exp:"憲法発布に先立って行政の仕組みを整えることで，立憲国家の土台をより確かなものにしました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1889年2月11日に発布された，日本初の近代的な憲法は何か。",
+   choices:["五箇条の御誓文","国会開設の勅諭","大日本帝国憲法","日本国憲法"], ans:2,
+   exp:"大日本帝国憲法。天皇が国民に与える形（欽定憲法）で発布されました。"},
+  {q:"②　大日本帝国憲法で，国の統治権（主権）を持つとされたのは誰か。",
+   choices:["国民","天皇","内閣総理大臣","貴族院"], ans:1,
+   exp:"天皇。天皇主権のもと，統帥権や議会の召集・解散権など広い権限（天皇大権）を持つとされました。"},
+  {q:"③　大日本帝国憲法で，国民（臣民）の自由や権利はどのように定められていたか。",
+   choices:["無制限に保障された","法律の範囲内で認められた","一切認められなかった","華族のみに認められた"], ans:1,
+   exp:"言論・出版・信教の自由などは認められましたが，「法律の範囲内」という制限がつけられていました。"},
+  {q:"④　大日本帝国憲法の歴史的な意義として正しいものはどれか。",
+   choices:["ヨーロッパで最初の憲法だった","アジアで最初の近代的な憲法だった","世界で最初の憲法だった","効力を持たなかった"], ans:1,
+   exp:"アジアで最初の近代的な成文憲法として，当時の国際社会からも注目されました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1890年に開設された，日本初の近代議会を何というか。",
+   choices:["帝国議会","国会期成同盟","立志社","地方議会"], ans:0,
+   exp:"帝国議会。衆議院と貴族院からなる二院制の議会でした。"},
+  {q:"②　国民の選挙によって選ばれた議員からなる議院はどちらか。",
+   choices:["貴族院","衆議院","元老院","枢密院"], ans:1,
+   exp:"衆議院。皇族・華族などからなる貴族院とあわせて，帝国議会を構成しました。"},
+  {q:"③　衆議院議員の選挙権を持っていたのはどのような人か。",
+   choices:["満20歳以上のすべての国民","直接国税15円以上を納める満25歳以上の男子","華族と士族のみ","女性のみ"], ans:1,
+   exp:"直接国税15円以上を納める満25歳以上の男子に限られる制限選挙で，選挙権を持つ人は全人口の約1.1％でした。"},
+  {q:"④　皇族・華族などからなり，国民の選挙が行われなかった議院はどちらか。",
+   choices:["衆議院","貴族院","地方議会","枢密院"], ans:1,
+   exp:"貴族院。天皇が任命した勅任議員なども含まれ，国民の選挙は行われませんでした。"}
+];
+
+const finalQuizData = [
+  {q:"① 1882年，憲法調査のためヨーロッパへ渡った人物は誰か。",
+   choices:["大隈重信","伊藤博文","板垣退助","大久保利通"], ans:1,
+   exp:"伊藤博文。ドイツ（プロイセン）流の憲法を学び，大日本帝国憲法の起草の中心となりました。"},
+  {q:"② 伊藤博文が手本とした，君主権の強い憲法はどこの国のものか。",
+   choices:["イギリス","フランス","ドイツ（プロイセン）","アメリカ"], ans:2,
+   exp:"ドイツ（プロイセン）。天皇中心の国づくりを目指す明治政府にとって理想的な手本でした。"},
+  {q:"③ 1885年に創設された，行政を担う新しい仕組みは何か。",
+   choices:["太政官制","内閣制度","帝国議会","地方自治制"], ans:1,
+   exp:"内閣制度。太政官制にかわり，内閣総理大臣と各省大臣が行政を担う仕組みとなりました。"},
+  {q:"④ 日本で初めての内閣総理大臣は誰か。",
+   choices:["大隈重信","板垣退助","伊藤博文","西郷隆盛"], ans:2,
+   exp:"伊藤博文。憲法調査を行った本人が，初代内閣総理大臣に就任しました。"},
+  {q:"⑤ 1889年2月11日に発布された憲法は何か。",
+   choices:["国会開設の勅諭","大日本帝国憲法","五箇条の御誓文","日本国憲法"], ans:1,
+   exp:"大日本帝国憲法。天皇が国民に与える形（欽定憲法）で発布されました。"},
+  {q:"⑥ 大日本帝国憲法で国の統治権を持つとされたのは誰か。",
+   choices:["国民","天皇","内閣総理大臣","衆議院"], ans:1,
+   exp:"天皇。天皇主権のもと，統帥権や議会の召集・解散権などの天皇大権を持つとされました。"},
+  {q:"⑦ 1890年に開設された日本初の近代議会は何か。",
+   choices:["国会期成同盟","帝国議会","立志社","元老院"], ans:1,
+   exp:"帝国議会。衆議院と貴族院からなる二院制でした。"},
+  {q:"⑧ 国民の選挙によって選ばれた議員からなる議院はどちらか。",
+   choices:["貴族院","衆議院","枢密院","元老院"], ans:1,
+   exp:"衆議院。皇族・華族などからなる貴族院と対をなす議院です。"},
+  {q:"⑨ 衆議院議員の選挙権を持っていたのはどのような人か。",
+   choices:["すべての成人男女","直接国税15円以上を納める満25歳以上の男子","華族のみ","士族のみ"], ans:1,
+   exp:"直接国税15円以上を納める満25歳以上の男子に限られる制限選挙でした。"},
+  {q:"⑩ 大日本帝国憲法の歴史的な意義として正しいものはどれか。",
+   choices:["世界最初の憲法だった","アジア最初の近代的な憲法だった","効力を持たなかった","国民主権を定めていた"], ans:1,
+   exp:"アジアで最初の近代的な成文憲法として，当時の国際社会からも注目されました。"}
+];
+
+const checkItems = [
+  "伊藤博文が1882年に憲法調査のためヨーロッパへ渡ったことを説明できる",
+  "ドイツ（プロイセン）流の憲法が手本に選ばれた理由を説明できる",
+  "内閣制度（1885年）が太政官制にかわる仕組みであったことを説明できる",
+  "伊藤博文が日本初の内閣総理大臣に就任したことを説明できる",
+  "大日本帝国憲法（1889年）が欽定憲法であったことを説明できる",
+  "大日本帝国憲法における天皇主権と天皇大権について説明できる",
+  "国民（臣民）の権利が「法律の範囲内」で認められていたことを説明できる",
+  "帝国議会（1890年）が衆議院と貴族院の二院制であったことを説明できる",
+  "衆議院議員の選挙が制限選挙であったことを説明できる",
+  "大日本帝国憲法がアジア初の近代的な憲法であったことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

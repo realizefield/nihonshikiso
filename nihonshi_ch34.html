@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉞ 大正デモクラシーと政党政治｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch33.html" class="back-to-index">← 単元㉝へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🗳 単元㉞　大正デモクラシーと政党政治</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第２節　単元㉞</span>
+  <h2>大戦景気と国民生活——好況のかげで</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>第一次世界大戦中，ヨーロッパ列強がアジア市場から後退したことで，日本は輸出が急増する<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">大戦景気</span><span class="kw-pop"><span class="kw-title">大戦景気（たいせんけいき）</span><span class="kw-yomi">📖 読み：たいせんけいき</span><span class="kw-body">第一次世界大戦中，ヨーロッパ列強がアジア市場から後退したことで日本の輸出が急増し，好景気が続いたこと。造船業・海運業・紡績業などが大きく成長し，急に大金持ちになった「成金」が多く生まれた。</span></span></span>（A）と呼ばれる好況を迎えました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ なぜ日本にとって「棚ぼた」の好況となったのか</span>
+    ▶ ヨーロッパの列強は，自国が戦場になったことで工業生産や輸出をアジアに振り向ける余裕がなくなった<br>
+    ▶ その空白を埋めるように，日本の造船業・海運業・紡績業などの輸出が急増した<br>
+    ▶ 船成金（船を持っていただけで大金持ちになった人々）など，急に大金持ちになった「成金」が多く生まれた
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 好況の裏側——広がる格差と物価上昇</span>
+    ▶ 好況で利益を得たのは，貿易や重工業に関わる一部の資本家・企業が中心で，庶民の生活が豊かになったわけではなかった<br>
+    ▶ 輸出の急増にともなって国内の物価，特に米価が急激に上昇し，庶民の生活を圧迫するようになった<br>
+    ▶ この物価上昇，とりわけ米価の高騰が，次の米騒動を引き起こす直接の原因となっていく
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 大戦景気と国民生活 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第２節　単元㉞</span>
+  <h2>米騒動——民衆の怒りが動かした政治</h2>
+
+  <p>1918年，米価の急激な高騰に耐えかねた富山県の主婦らが，米の安売りや移出の禁止を求めて行動を起こしたことをきっかけに，全国に広がる<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">米騒動</span><span class="kw-pop"><span class="kw-title">米騒動（こめそうどう）</span><span class="kw-yomi">📖 読み：こめそうどう</span><span class="kw-body">1918年，米価の急激な高騰に対し，富山県の主婦らが米の安売りを求めて行動を起こしたことをきっかけに，全国に広がった暴動。米屋や富商が襲われるなど各地で騒ぎが拡大し，政府は軍隊まで出動させて鎮圧した。責任を取り寺内正毅内閣は退陣した。</span></span></span>（B）が起こりました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 米騒動が広がった背景</span>
+    ▶ 大戦景気による物価上昇に加え，シベリア出兵をみこした米の買い占め・売り惜しみが横行し，米価がさらに急騰した<br>
+    ▶ 富山県の漁村の主婦らが米の安売りを求めて行動を起こしたことが新聞で報じられると，同様の動きが全国の都市・農村に急速に広がった<br>
+    ▶ 各地で米屋や富商が襲われるなど騒ぎは大規模化し，政府はついに軍隊まで出動させて鎮圧にあたった
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 米騒動がもたらした政治的な結果</span>
+    ▶ 軍隊による鎮圧という強硬な対応への批判が高まり，米騒動の責任を取って寺内正毅内閣は退陣に追い込まれた<br>
+    ▶ この内閣崩壊は，藩閥中心の政治から政党中心の政治への転換点となり，次の原敬内閣誕生への道を開いた<br>
+    ▶ 米騒動は，民衆の行動が実際に政治を動かした出来事として，大正デモクラシーの気運を後押しすることにもなった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 米騒動 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第２節　単元㉞</span>
+  <h2>原敬内閣——「平民宰相」と本格的政党内閣</h2>
+
+  <p>米騒動によって寺内正毅内閣が退陣したあと，1918年，立憲政友会総裁の<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">原敬</span><span class="kw-pop"><span class="kw-title">原敬（はらたかし）</span><span class="kw-yomi">📖 読み：はらたかし</span><span class="kw-body">1918年，本格的な政党内閣を組織した政治家。衆議院に議席を持ち，爵位を持たない衆議院議員が首相になったのは初めてで，「平民宰相」と呼ばれ国民から歓迎された。ただし普通選挙の実現には慎重な姿勢を崩さなかった。</span></span></span>（C）が本格的な<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">政党内閣</span><span class="kw-pop"><span class="kw-title">政党内閣（せいとうないかく）</span><span class="kw-yomi">📖 読み：せいとうないかく</span><span class="kw-body">衆議院で多数を占める政党の党首が首相となり，閣僚の大部分もその政党の党員で組織する内閣。原敬内閣は，陸軍・海軍・外務の3大臣以外をすべて立憲政友会の党員で組織した，日本初の本格的な政党内閣とされる。</span></span></span>（D）を組織しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 「平民宰相」誕生の意味</span>
+    ▶ それまでの内閣は，藩閥や華族出身者が首相をつとめることが多く，衆議院での多数派とは無関係に組織されることも珍しくなかった<br>
+    ▶ 原敬は，爵位を持たない衆議院議員として初めて首相になった人物であり，「平民宰相」と呼ばれ国民から大きな期待を集めた<br>
+    ▶ 陸軍・海軍・外務の3大臣以外をすべて立憲政友会の党員で組織したことは，衆議院の多数派の意思を内閣に反映させる，画期的な試みだった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 期待と限界——普通選挙には後ろ向きだった原敬</span>
+    ▶ 「平民宰相」として国民の期待を集めた原敬だったが，普通選挙の実現には慎重な姿勢を崩さなかった<br>
+    ▶ 原敬は，急激な普通選挙の実現は社会主義など急進的な思想の広がりを招くと考え，選挙権の納税資格をわずかに緩和するにとどめた<br>
+    ▶ この慎重な姿勢への不満が，のちの普通選挙運動をさらに高める一因ともなった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 原敬内閣 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第２節　単元㉞</span>
+  <h2>大正デモクラシーの思想——民本主義と天皇機関説</h2>
+
+  <p>この時期，政治学者の<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">吉野作造</span><span class="kw-pop"><span class="kw-title">吉野作造（よしのさくぞう）</span><span class="kw-yomi">📖 読み：よしのさくぞう</span><span class="kw-body">大正時代の政治学者。民本主義を唱え，普通選挙の実現や政党内閣の確立を主張し，大正デモクラシーの思想的な柱となった。</span></span></span>（E）が<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">民本主義</span><span class="kw-pop"><span class="kw-title">民本主義（みんぽんしゅぎ）</span><span class="kw-yomi">📖 読み：みんぽんしゅぎ</span><span class="kw-body">吉野作造が唱えた思想。主権が天皇にあるという大日本帝国憲法の建前は変えないまま，政治の運営は民衆の意向を反映しておこなうべきだと主張した。「民主主義」とは区別され，天皇主権の枠内での民衆重視の考え方だった。</span></span></span>（F）を唱え，普通選挙の実現や政党内閣の確立を主張しました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 民本主義と天皇機関説——二つの理論的支柱</span>
+    ▶ 吉野作造の民本主義は，天皇主権という憲法の建前を変えないまま，政治運営に民衆の意向を反映すべきだという，穏健な立場の思想だった<br>
+    ▶ 同じころ，憲法学者の<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">美濃部達吉</span><span class="kw-pop"><span class="kw-title">美濃部達吉（みのべたつきち）</span><span class="kw-yomi">📖 読み：みのべたつきち</span><span class="kw-body">憲法学者。天皇機関説を唱え，大日本帝国憲法の解釈として広く受け入れられた。昭和初期には軍部や国家主義者から激しく攻撃され，貴族院議員を辞職に追い込まれた（天皇機関説事件，1935年）。</span></span></span>（G）が唱えた<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">天皇機関説</span><span class="kw-pop"><span class="kw-title">天皇機関説（てんのうきかんせつ）</span><span class="kw-yomi">📖 読み：てんのうきかんせつ</span><span class="kw-body">美濃部達吉が唱えた憲法学説。統治権は法人としての国家にあり，天皇はその最高機関として憲法にしたがって統治権を行使すると説いた。大正〜昭和初期の学界・政界で広く通説として受け入れられていたが，1935年に軍部や国家主義者から激しく攻撃され，美濃部は貴族院議員を辞職に追い込まれた。</span></span></span>（H）も，大日本帝国憲法を柔軟に解釈する学説として広く受け入れられていた<br>
+    ▶ これらの思想を背景に，普通選挙運動・労働運動・女性解放運動など，さまざまな社会運動が高まった——これらの動きを大正デモクラシーと呼ぶ
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 大正デモクラシーの思想 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第２節　単元㉞</span>
+  <h2>普通選挙法と治安維持法——光と影</h2>
+
+  <p>大正デモクラシーの高まりを背景に，1925年，<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">加藤高明</span><span class="kw-pop"><span class="kw-title">加藤高明（かとうたかあき）</span><span class="kw-yomi">📖 読み：かとうたかあき</span><span class="kw-body">護憲三派内閣を率い，1925年に普通選挙法を成立させた内閣総理大臣。同時に治安維持法も制定した。</span></span></span>（I）内閣のもとで，満25歳以上のすべての男子に選挙権を認める<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">普通選挙法</span><span class="kw-pop"><span class="kw-title">普通選挙法（ふつうせんきょほう）</span><span class="kw-yomi">📖 読み：ふつうせんきょほう</span><span class="kw-body">1925年，加藤高明内閣のもとで成立した法律。それまでの納税額による制限選挙を廃止し，満25歳以上のすべての男子に選挙権を認めた。有権者数は約4倍に増加した。ただし女性には選挙権が認められなかった。</span></span></span>（J）が成立しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 普通選挙法成立までの長い道のり</span>
+    ▶ 米騒動での民衆の行動，原敬内閣の消極姿勢への不満，吉野作造の民本主義の広がりなど，長年の積み重ねが普通選挙運動を後押しした<br>
+    ▶ 普通選挙法により，それまでの納税額による制限選挙が廃止され，有権者数は約4倍に増加した<br>
+    ▶ ただし女性には選挙権が認められず，男子のみの普通選挙にとどまった——女性参政権の実現は，第二次世界大戦後の1945年まで待たなければならなかった
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 普通選挙法と同時に制定された治安維持法</span>
+    ▶ 有権者の急増により社会主義・共産主義の思想が政治に影響を与えることを政府は強く警戒した<br>
+    ▶ そのため普通選挙法とほぼ同時に，<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">治安維持法</span><span class="kw-pop"><span class="kw-title">治安維持法（ちあんいじほう）</span><span class="kw-yomi">📖 読み：ちあんいじほう</span><span class="kw-body">1925年，普通選挙法と同時に制定された法律。天皇制の変革や私有財産制度の否認をめざす運動（社会主義運動・共産主義運動）を取り締まることを目的とした。のちに拡大解釈され，思想や言論の統制にも用いられるようになった。</span></span></span>（K）が制定され，天皇制の変革や私有財産制度の否認をめざす運動を取り締まる仕組みが作られた<br>
+    ▶ この法律はのちに拡大解釈され，思想・言論そのものを取り締まる方向へと使われていくことになる——選挙権拡大という「光」と，思想統制強化という「影」が同時に生まれた瞬間だった
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：大正デモクラシーと政党政治のポイント</strong><br>
+    大戦景気の反動としての米騒動は，藩閥政治を終わらせ，原敬による本格的な政党内閣の誕生を導きました。吉野作造の民本主義や美濃部達吉の天皇機関説を思想的な柱として大正デモクラシーが高まり，1925年には普通選挙法が実現しましたが，同時に制定された治安維持法は，のちの言論・思想統制の伏線となりました。<br><br>
+    ▶ <strong>大戦景気</strong>——輸出急増で好況，一方で物価・米価が高騰<br>
+    ▶ <strong>米騒動（1918年）</strong>——米価高騰への不満が全国に拡大，寺内内閣退陣<br>
+    ▶ <strong>原敬内閣（1918年）</strong>——「平民宰相」による本格的な政党内閣，ただし普通選挙には消極的<br>
+    ▶ <strong>大正デモクラシー</strong>——吉野作造の民本主義，美濃部達吉の天皇機関説を思想的支柱に社会運動が高まる<br>
+    ▶ <strong>普通選挙法・治安維持法（1925年）</strong>——加藤高明内閣のもとで同時に成立，選挙権拡大と思想統制強化が同時進行
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">大戦景気</span>
+    <span class="tl-item">米騒動</span>
+    <span class="tl-item">原敬</span>
+    <span class="tl-item">政党内閣</span>
+    <span class="tl-item">吉野作造</span>
+    <span class="tl-item">民本主義</span>
+    <span class="tl-item">美濃部達吉</span>
+    <span class="tl-item">天皇機関説</span>
+    <span class="tl-item">加藤高明</span>
+    <span class="tl-item">普通選挙法</span>
+    <span class="tl-item">治安維持法</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('taisho')">🗳 大正デモクラシーはなぜ「男子のみ」で終わったのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 普通選挙法と治安維持法 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㉞ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch34.html">単元㉞ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㉞ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 11 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-taisho" onclick="if(event.target===this)closeModal('taisho')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('taisho')">✕</button>
+    <div class="modal-title">🗳 大正デモクラシーはなぜ「男子のみ」で終わったのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 民本主義は「民主主義」とは違う</div>
+      <div class="cause-box">
+        <span class="label">🎯 天皇主権の枠内での「民衆重視」</span>
+        吉野作造の民本主義は，主権が国民にあるとする「民主主義」とは異なり，大日本帝国憲法が定める天皇主権という建前は変えないまま，政治の運営には民衆の意向を反映すべきだという考え方でした。<br><br>
+        ▶ 憲法の改正までは求めず，現行制度の枠内での改良を主張する，穏健な立場だった<br>
+        ▶ それでも，普通選挙運動や労働運動，女性解放運動など，さまざまな社会運動を後押しする思想的な柱となった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 女性には選挙権が認められなかった理由</div>
+      <div class="why-box">
+        <span class="label">🚩 女性参政権運動はあったが実現しなかった</span>
+        平塚らいてうや市川房枝らによる女性解放運動・女性参政権運動もこの時期に高まりましたが，1925年の普通選挙法では女性の参政権は認められませんでした。<br><br>
+        ▶ 当時の社会には，女性が政治に参加することへの根強い抵抗があった<br>
+        ▶ 日本で女性参政権が実現するのは，第二次世界大戦後の1945年のことになる
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 治安維持法が同時に制定された理由とその後</div>
+      <div class="result-box">
+        <span class="label">🏗 選挙権拡大と引き換えの「取り締まり」</span>
+        普通選挙法によって有権者が大きく増えると，社会主義や共産主義の思想が政治に影響を与えることを政府は強く警戒しました。そのため，普通選挙法とほぼ同時に治安維持法が制定され，天皇制の変革や私有財産制度の否認をめざす運動を取り締まる仕組みが作られました。当初は社会主義運動の取り締まりを主な目的としていましたが，のちに拡大解釈され，1930年代には天皇機関説（美濃部達吉）を唱える学者までもが攻撃の対象となるなど，思想・言論そのものを取り締まる方向へと使われていくことになります。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 11語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"大戦景気", "B":"米騒動", "C":"原敬", "D":"政党内閣",
+  "E":"吉野作造", "F":"民本主義", "G":"美濃部達吉", "H":"天皇機関説",
+  "I":"加藤高明", "J":"普通選挙法", "K":"治安維持法"
+};
+const wordBank = ["大戦景気","米騒動","原敬","政党内閣",
+  "吉野作造","民本主義","美濃部達吉","天皇機関説",
+  "加藤高明","普通選挙法","治安維持法"];
+
+const miniQuizData1 = [
+  {q:"①　第一次世界大戦中，輸出急増で日本が迎えた好況を何というか。",
+   choices:["大戦景気","バブル景気","高度経済成長","岩戸景気"], ans:0,
+   exp:"大戦景気。造船業・海運業・紡績業などが大きく成長しました。"},
+  {q:"②　大戦景気で急に大金持ちになった人々を何と呼んだか。",
+   choices:["成金","財閥","地主","豪商"], ans:0,
+   exp:"成金。船を持っていただけで大金持ちになった「船成金」などが有名です。"},
+  {q:"③　大戦景気の裏側で庶民の生活を圧迫したものは何か。",
+   choices:["物価（特に米価）の上昇","失業の急増","戦争による被害","増税のみ"], ans:0,
+   exp:"物価，特に米価の上昇。これが次の米騒動を引き起こす原因となりました。"},
+  {q:"④　大戦景気で利益を得たのは主にどのような人々だったか。",
+   choices:["貿易や重工業に関わる一部の資本家・企業","すべての国民が平等に","農民が中心","失業者が中心"], ans:0,
+   exp:"貿易や重工業に関わる一部の資本家・企業。庶民の生活は物価上昇でむしろ苦しくなりました。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1918年，米価急騰をきっかけに全国に広がった暴動を何というか。",
+   choices:["米騒動","秩父事件","血税一揆","日比谷焼打事件"], ans:0,
+   exp:"米騒動。富山県の主婦らの行動がきっかけとなりました。"},
+  {q:"②　米騒動が広がった直接のきっかけは何か。",
+   choices:["富山県の主婦らの行動","選挙での敗北","外国からの圧力","内閣の解散"], ans:0,
+   exp:"富山県の主婦らが米の安売りを求めて行動を起こしたことが，全国に急速に広がりました。"},
+  {q:"③　米騒動を鎮圧するため政府がとった対応はどれか。",
+   choices:["軍隊を出動させた","要求をすべて受け入れた","米を無料で配った","選挙をおこなった"], ans:0,
+   exp:"軍隊を出動させて鎮圧しました。この強硬な対応への批判が高まりました。"},
+  {q:"④　米騒動の責任を取って退陣した内閣総理大臣は誰か。",
+   choices:["寺内正毅","原敬","加藤高明","大隈重信"], ans:0,
+   exp:"寺内正毅。この内閣崩壊が原敬内閣誕生への道を開きました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1918年，本格的な政党内閣を組織した政治家は誰か。",
+   choices:["原敬","加藤高明","吉野作造","寺内正毅"], ans:0,
+   exp:"原敬。「平民宰相」と呼ばれ国民から歓迎されました。"},
+  {q:"②　原敬が「平民宰相」と呼ばれた理由は何か。",
+   choices:["爵位を持たない衆議院議員として初めて首相になったため","女性初の首相だったため","軍人出身だったため","天皇の親族だったため"], ans:0,
+   exp:"爵位を持たない衆議院議員として初めて首相になったためです。"},
+  {q:"③　原敬内閣が組織したものを何というか。",
+   choices:["政党内閣","軍事政権","藩閥内閣","貴族内閣"], ans:0,
+   exp:"政党内閣。陸軍・海軍・外務の3大臣以外をすべて立憲政友会の党員で組織しました。"},
+  {q:"④　原敬の普通選挙に対する姿勢として正しいものはどれか。",
+   choices:["慎重で消極的だった","積極的に実現させた","無関心だった","女性参政権を推進した"], ans:0,
+   exp:"慎重で消極的でした。急進的な思想の広がりを警戒し，納税資格をわずかに緩和するにとどめました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　大正時代に民本主義を唱えた政治学者は誰か。",
+   choices:["吉野作造","福沢諭吉","大隈重信","伊藤博文"], ans:0,
+   exp:"吉野作造。普通選挙の実現や政党内閣の確立を主張しました。"},
+  {q:"②　民本主義の内容として正しいものはどれか。",
+   choices:["天皇主権の枠内で民衆の意向を政治に反映すべき","国民主権に憲法を改正すべき","君主制を廃止すべき","女性にのみ参政権を与えるべき"], ans:0,
+   exp:"天皇主権という建前は変えないまま，政治運営に民衆の意向を反映すべきという考え方でした。"},
+  {q:"③　天皇機関説を唱えた憲法学者は誰か。",
+   choices:["美濃部達吉","吉野作造","伊藤博文","井上毅"], ans:0,
+   exp:"美濃部達吉。天皇を国家の最高機関とする学説で，広く通説として受け入れられていました。"},
+  {q:"④　民本主義と天皇機関説を思想的支柱として高まった社会運動の総称は何か。",
+   choices:["大正デモクラシー","明治維新","文明開化","昭和維新"], ans:0,
+   exp:"大正デモクラシー。普通選挙運動・労働運動・女性解放運動などが高まりました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1925年，普通選挙法を成立させた内閣総理大臣は誰か。",
+   choices:["加藤高明","原敬","吉野作造","寺内正毅"], ans:0,
+   exp:"加藤高明。同時に治安維持法も制定しました。"},
+  {q:"②　普通選挙法により選挙権が認められたのはどのような人々か。",
+   choices:["満25歳以上のすべての男子","満25歳以上のすべての国民","納税額の多い男子のみ","満20歳以上のすべての国民"], ans:0,
+   exp:"満25歳以上のすべての男子。有権者数は約4倍に増加しました。"},
+  {q:"③　1925年の普通選挙法で選挙権が認められなかったのは誰か。",
+   choices:["女性","満25歳以上の男子","地主","商人"], ans:0,
+   exp:"女性。日本で女性参政権が実現するのは1945年のことです。"},
+  {q:"④　普通選挙法と同時に制定された，社会主義運動などを取り締まる法律は何か。",
+   choices:["治安維持法","治安警察法","国家総動員法","治安保持法"], ans:0,
+   exp:"治安維持法。天皇制の変革や私有財産制度の否認をめざす運動の取り締まりを目的としました。"}
+];
+
+const finalQuizData = [
+  {q:"① 第一次世界大戦中，輸出急増で日本が迎えた好況を何というか。",
+   choices:["大戦景気","バブル景気","高度経済成長","岩戸景気"], ans:0,
+   exp:"大戦景気。急に大金持ちになった「成金」が多く生まれました。"},
+  {q:"② 大戦景気の裏側で高騰し，国民生活を圧迫したものは何か。",
+   choices:["米価","地価のみ","賃金","為替レート"], ans:0,
+   exp:"米価。この高騰が米騒動の直接の原因となりました。"},
+  {q:"③ 1918年，米価急騰をきっかけに全国に広がった暴動は何か。",
+   choices:["米騒動","秩父事件","血税一揆","日比谷焼打事件"], ans:0,
+   exp:"米騒動。責任を取り寺内正毅内閣が退陣しました。"},
+  {q:"④ 1918年，「平民宰相」と呼ばれ本格的な政党内閣を組織した人物は誰か。",
+   choices:["原敬","加藤高明","吉野作造","寺内正毅"], ans:0,
+   exp:"原敬。爵位を持たない衆議院議員として初めて首相になりました。"},
+  {q:"⑤ 原敬の普通選挙に対する姿勢として正しいものはどれか。",
+   choices:["慎重で消極的だった","積極的に実現させた","無関心だった","女性参政権を推進した"], ans:0,
+   exp:"慎重で消極的でした。納税資格をわずかに緩和するにとどめました。"},
+  {q:"⑥ 大正時代に民本主義を唱えた政治学者は誰か。",
+   choices:["吉野作造","福沢諭吉","大隈重信","伊藤博文"], ans:0,
+   exp:"吉野作造。普通選挙運動などの大正デモクラシーの思想的支柱となりました。"},
+  {q:"⑦ 天皇機関説を唱えた憲法学者は誰か。",
+   choices:["美濃部達吉","吉野作造","伊藤博文","井上毅"], ans:0,
+   exp:"美濃部達吉。1935年に軍部や国家主義者から攻撃されました。"},
+  {q:"⑧ 1925年，満25歳以上のすべての男子に選挙権を認めた法律は何か。",
+   choices:["普通選挙法","治安維持法","治安警察法","国家総動員法"], ans:0,
+   exp:"普通選挙法。加藤高明内閣のもとで成立しました。"},
+  {q:"⑨ 1925年の普通選挙法で選挙権が認められなかったのは誰か。",
+   choices:["女性","満25歳以上の男子","地主","商人"], ans:0,
+   exp:"女性。実現は1945年のことでした。"},
+  {q:"⑩ 普通選挙法と同時に制定され，社会主義運動などを取り締まった法律は何か。",
+   choices:["治安維持法","治安警察法","国家総動員法","治安保持法"], ans:0,
+   exp:"治安維持法。のちに思想・言論の統制にも用いられました。"}
+];
+
+const checkItems = [
+  "大戦景気で輸出が急増し「成金」が生まれたことを説明できる",
+  "大戦景気の裏側で米価が高騰し庶民生活を圧迫したことを説明できる",
+  "米騒動（1918年）が米価高騰への不満から起きたことを説明できる",
+  "米騒動の責任で寺内正毅内閣が退陣したことを説明できる",
+  "原敬（1918年）が「平民宰相」と呼ばれた理由を説明できる",
+  "原敬内閣が本格的な政党内閣であったことを説明できる",
+  "原敬が普通選挙の実現には消極的だったことを説明できる",
+  "吉野作造が民本主義を唱えたことを説明できる",
+  "美濃部達吉が天皇機関説を唱えたことを説明できる",
+  "普通選挙法（1925年）で満25歳以上の男子に選挙権が認められたことを説明できる",
+  "普通選挙法と同時に治安維持法が制定されたことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>
