@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㉟ 金融恐慌 ドリル｜日本史基礎GAMBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a1c00}
+  .back-link.gray{background:#555}.back-link.gray:hover{background:#333}
+  .back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .unit-header{background:linear-gradient(135deg,#1a2a6b,#2a4090);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #7a90c8;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#1a2a6b;transition:all 0.2s;flex:1;min-width:130px;text-align:center;font-family:inherit}
+  .mode-tab.active{background:#1a2a6b;color:#fff;border-color:#1a2a6b;box-shadow:0 3px 0 #0d1a45}
+  .mode-tab:hover:not(.active){background:#e8ecf8}
+  .panel{background:#fff;border-radius:12px;border:1px solid #7a90c8;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #7a90c8;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#1a2a6b;transition:all 0.15s;font-family:inherit}
+  .fc-timer-btn.active{background:#1a2a6b;color:#fff;border-color:#1a2a6b}
+  .fc-timer-btn:hover:not(.active){background:#e8ecf8}
+  .fc-card{background:linear-gradient(135deg,#f0f2ff,#dde2ff);color:#1a1a2e;border:2px solid #a0aee0;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(26,42,107,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#1a2a6b}
+  .fc-card .fc-hint{font-size:13px;color:#2a2a60;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#6070a0;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#2a4090;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15;font-family:inherit}
+  .fc-btn-ng{padding:11px 32px;background:#1a2a6b;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;font-family:inherit}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#e8ecf8;border:2px solid #7a90c8;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px;font-family:inherit}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #7a90c8;background:#f0f2ff;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s;font-family:inherit;text-align:left}
+  .drill-choice:hover{border-color:#1a2a6b;background:#dde2ff}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#dde2ff;border-color:#7a90c8;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#a0b0ff;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;display:none;font-family:inherit}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#1a2a6b;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#1a2a6b;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #7a90c8;background:#f0f2ff;cursor:pointer;font-size:14px;transition:all 0.15s;font-family:inherit;text-align:left}
+  .test-choice:hover{border-color:#1a2a6b;background:#dde2ff}
+  .test-choice.selected{border-color:#1a2a6b;background:#c8d0f0;color:#1a1a45;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#dde2ff;border-color:#7a90c8;pointer-events:none}
+  .test-submit{background:#1a2a6b;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #0d1a45;margin-top:18px;width:100%;font-family:inherit}
+  .test-submit:hover{background:#0d1a45}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#1a2a6b;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#1a2a6b,#4a5aa0);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;font-family:inherit}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #7a90c8;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#1a2a6b,#2a4090);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#e8ecf8;border-left:5px solid #1a2a6b;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#1a2a6b}
+  .setsu-h3{font-size:14px;font-weight:800;color:#1a2a6b;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #a0aee0}
+  .setsu-box{background:#f5f6ff;border-radius:8px;border:1px solid #b0bce0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#1a2a6b}
+  .setsu-box .lbl{display:inline-block;background:#1a2a6b;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-note{background:#fffbe8;border-left:4px solid #c8a000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3a00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch35.html" class="back-link" style="background:#1a2a6b">← 単元㉟ テキストへ</a>
+  <a href="nihonshi_index.html" class="back-link gray">← 目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第１０章　単元㉟ ドリル</div>
+  <h1>🏦 金融恐慌</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 9枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 9問</span>
+    <span class="stat-chip">📋 確認テスト 10問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元㉟ のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body" id="setsu-body">
+    <div class="setsu-intro">
+      関東大震災後の<strong>震災手形</strong>問題が長く先送りされる中，1927年，<strong>片岡直温</strong>大蔵大臣の失言をきっかけに<strong>取り付け騒ぎ</strong>が全国に拡大しました。<strong>台湾銀行</strong>の危機で<strong>若槻礼次郎</strong>内閣は総辞職に追い込まれ，<strong>田中義一</strong>内閣が<strong>モラトリアム</strong>を発令して沈静化させましたが，この過程で<strong>財閥</strong>系銀行への集中が進みました。
+    </div>
+    <div class="setsu-h3">発端（1923〜27年）</div>
+    <div class="setsu-box">
+      <span class="lbl">震災手形問題</span> 関東大震災（1923年）の不良債権処理が先送り<br>
+      <span class="lbl orange">金融恐慌（1927年）</span> 片岡直温の失言→取り付け騒ぎが全国に拡大
+    </div>
+    <div class="setsu-h3">若槻内閣総辞職と田中内閣の対応</div>
+    <div class="setsu-box">
+      <span class="lbl">台湾銀行の危機</span> 若槻礼次郎内閣が緊急勅令を求めるも枢密院が否決→総辞職<br>
+      <span class="lbl orange">モラトリアム</span> 田中義一内閣が3週間の支払猶予令→沈静化，財閥への集中が進む
+    </div>
+    <div class="setsu-note">💡 <strong>年号セット</strong>：1923年 関東大震災 → 1927年 金融恐慌・若槻内閣総辞職・田中内閣モラトリアム</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title:"単元㉟ 金融恐慌",
+  flashCards:[
+    {q:"1923年，関東地方を襲い経済に大きな打撃を与えた地震を何というか。",a:"関東大震災（かんとうだいしんさい）",hint:"多くの企業が手形の決済ができなくなった"},
+    {q:"関東大震災で被災した企業が決済できなくなった手形を何というか。",a:"震災手形（しんさいてがた）",hint:"処理が先送りされ続け，金融恐慌の遠因となった"},
+    {q:"1927年，議会での失言が金融恐慌のきっかけとなった大蔵大臣は誰か。",a:"片岡直温（かたおかなおはる）",hint:"破綻していない銀行を「破綻した」と誤って発言した"},
+    {q:"銀行の経営不安のうわさで預金者が銀行に殺到することを何というか。",a:"取り付け騒ぎ（とりつけさわぎ）",hint:"1927年には全国に連鎖的に広がった"},
+    {q:"金融恐慌で経営危機におちいった，鈴木商店に巨額融資していた特殊銀行はどこか。",a:"台湾銀行（たいわんぎんこう）",hint:"この危機が若槻内閣総辞職につながった"},
+    {q:"台湾銀行救済のため緊急勅令を求めたが，枢密院に否決された内閣総理大臣は誰か。",a:"若槻礼次郎（わかつきれいじろう）",hint:"緊急勅令が否決され，内閣総辞職に追い込まれた"},
+    {q:"若槻内閣にかわって成立し，モラトリアムを発令した内閣総理大臣は誰か。",a:"田中義一（たなかぎいち）",hint:"3週間の支払猶予令で金融恐慌を沈静化させた"},
+    {q:"田中義一内閣が発令した，銀行の支払いを一時猶予する措置を何というか。",a:"モラトリアム（支払猶予令）",hint:"この間に日本銀行が緊急融資をおこなった"},
+    {q:"金融恐慌の結果，預金や経済力の集中が進んだ，三井・三菱などの企業グループを何というか。",a:"財閥（ざいばつ）",hint:"のちに軍部や右翼から批判される一因となった"},
+  ],
+  drillQuiz:[
+    {q:"1923年，関東地方を襲い経済に大きな打撃を与えた地震を何というか。",
+     choices:["関東大震災","阪神淡路大震災","東日本大震災","濃尾地震"],ans:0,
+     exp:"関東大震災。多くの企業が手形の決済ができなくなりました。"},
+    {q:"関東大震災で被災した企業が決済できなくなった手形を何というか。",
+     choices:["震災手形","不渡り手形","約束手形","為替手形"],ans:0,
+     exp:"震災手形。処理が先送りされ続け，金融恐慌の遠因となりました。"},
+    {q:"1927年，議会での失言が金融恐慌のきっかけとなった大蔵大臣は誰か。",
+     choices:["片岡直温","若槻礼次郎","田中義一","高橋是清"],ans:0,
+     exp:"片岡直温。実際には破綻していない銀行を「破綻した」と誤って発言しました。"},
+    {q:"銀行の経営不安のうわさで預金者が銀行に殺到することを何というか。",
+     choices:["取り付け騒ぎ","米騒動","打ちこわし","デモ行進"],ans:0,
+     exp:"取り付け騒ぎ。1927年には全国に連鎖的に広がりました。"},
+    {q:"金融恐慌で経営危機におちいった特殊銀行はどこか。",
+     choices:["台湾銀行","日本銀行","横浜正金銀行","第一国立銀行"],ans:0,
+     exp:"台湾銀行。鈴木商店への巨額融資が不良債権化していました。"},
+    {q:"台湾銀行救済のため緊急勅令を求めた内閣総理大臣は誰か。",
+     choices:["若槻礼次郎","田中義一","片岡直温","加藤高明"],ans:0,
+     exp:"若槻礼次郎。緊急勅令が否決され，内閣総辞職に追い込まれました。"},
+    {q:"若槻内閣が求めた緊急勅令を否決した機関はどこか。",
+     choices:["枢密院","貴族院","衆議院","内閣"],ans:0,
+     exp:"枢密院。天皇の諮問機関で，緊急勅令には枢密院の承認が必要でした。"},
+    {q:"若槻内閣にかわって成立し，モラトリアムを発令した内閣総理大臣は誰か。",
+     choices:["田中義一","若槻礼次郎","片岡直温","浜口雄幸"],ans:0,
+     exp:"田中義一。3週間の支払猶予令を発令し混乱を収拾しました。"},
+    {q:"金融恐慌の結果，預金や経済力が集中していったのはどこか。",
+     choices:["財閥系銀行","地方銀行","農協","外国銀行"],ans:0,
+     exp:"財閥系銀行。中小銀行の淘汰とともに，財閥への集中がいっそう進みました。"},
+  ],
+  testQuiz:[
+    {q:"1923年，関東地方を襲い経済に大きな打撃を与えた地震を何というか。",choices:["関東大震災","阪神淡路大震災","東日本大震災","濃尾地震"],ans:0},
+    {q:"関東大震災で被災した企業が決済できなくなった手形を何というか。",choices:["震災手形","不渡り手形","約束手形","為替手形"],ans:0},
+    {q:"1927年，議会での失言が金融恐慌のきっかけとなった大蔵大臣は誰か。",choices:["片岡直温","若槻礼次郎","田中義一","高橋是清"],ans:0},
+    {q:"銀行の経営不安のうわさで預金者が銀行に殺到することを何というか。",choices:["取り付け騒ぎ","米騒動","打ちこわし","デモ行進"],ans:0},
+    {q:"金融恐慌で経営危機におちいった特殊銀行はどこか。",choices:["台湾銀行","日本銀行","横浜正金銀行","第一国立銀行"],ans:0},
+    {q:"台湾銀行救済のため緊急勅令を求めた内閣総理大臣は誰か。",choices:["若槻礼次郎","田中義一","片岡直温","加藤高明"],ans:0},
+    {q:"若槻内閣が求めた緊急勅令を否決した機関はどこか。",choices:["枢密院","貴族院","衆議院","内閣"],ans:0},
+    {q:"若槻内閣にかわって成立し，モラトリアムを発令した内閣総理大臣は誰か。",choices:["田中義一","若槻礼次郎","片岡直温","浜口雄幸"],ans:0},
+    {q:"田中義一内閣が発令した，銀行の支払いを一時猶予する措置を何というか。",choices:["モラトリアム","デフォルト","インフレーション","ブロック経済"],ans:0},
+    {q:"金融恐慌の結果，預金や経済力が集中していったのはどこか。",choices:["財閥系銀行","地方銀行","農協","外国銀行"],ans:0},
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});renderContent();}
+function renderContent(){const area=document.getElementById('content-area');if(currentMode==='flash')renderFlash(area);else if(currentMode==='drill')renderDrill(area);else renderTest(area);}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){const colors=['#1a2a6b','#4a5aa0','#f4d03f','#2d8a30','#e0eaff','#fff'];for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){initFlash();area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;startCardTimer();}
+function buildFlashCard(){if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#1a2a6b;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+const card=fcCards[fcIndex];return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+const q=drillQs[drillIndex];const choices=q.choices.map((c,i)=>`<button class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</button>`).join('');return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;}
+function drillAnswer(idx){if(drillAnswered)return;drillAnswered=true;const q=drillQs[drillIndex];document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});if(idx===q.ans)drillScore++;const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){testSelections={};testSubmitted=false;let html='<div class="panel">';UNIT.testQuiz.forEach((q,i)=>{html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;q.choices.forEach((c,ci)=>{html+=`<button class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</button>`;});html+='</div></div>';});html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;area.innerHTML=html;}
+function testSelect(qi,ci){if(testSubmitted)return;testSelections[qi]=ci;document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});}
+function submitTest(){if(testSubmitted)return;const total=UNIT.testQuiz.length;const answered=Object.keys(testSelections).length;if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}testSubmitted=true;let correct=0;let reviewHTML='<div class="test-review">';UNIT.testQuiz.forEach((q,i)=>{const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;});reviewHTML+='</div>';const pct=Math.round(correct/total*100);const pass=correct>=8;document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元㉟ クリア！</div>`:''}<div id="test-review-block">${reviewHTML}</div><button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;document.getElementById('test-result').style.display='block';if(pass)fireConfetti();}
+
+function toggleSetsu(){const body=document.getElementById('setsu-body');const arrow=document.querySelector('.sarrow');body.classList.toggle('open');arrow.textContent=body.classList.contains('open')?'▲':'▼';}
+
+selectMode('flash');
+</script>
+</body>
+</html>

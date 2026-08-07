@@ -179,7 +179,7 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
     <div class="sum-item"><span class="sum-dot sum-dot-a"></span>A 完璧 <span class="sum-count" id="cnt-a">0</span></div>
     <div class="sum-item"><span class="sum-dot sum-dot-b"></span>B 良好 <span class="sum-count" id="cnt-b">0</span></div>
     <div class="sum-item"><span class="sum-dot sum-dot-c"></span>C 要復習 <span class="sum-count" id="cnt-c">0</span></div>
-    <div class="sum-item"><span class="sum-dot sum-dot-n"></span>未学習 <span class="sum-count" id="cnt-n">34</span></div>
+    <div class="sum-item"><span class="sum-dot sum-dot-n"></span>未学習 <span class="sum-count" id="cnt-n">36</span></div>
   </div>
 </div>
 
@@ -194,9 +194,9 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
 
   <!-- 進捗バー -->
   <div class="progress-wrap">
-    <div class="progress-lbl">📊 習熟度（全34単元）</div>
+    <div class="progress-lbl">📊 習熟度（全36単元）</div>
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progFill" style="width:0%"></div></div>
-    <div class="progress-pct" id="progPct">0%　A評価 <span id="progNote">0 / 34</span> 単元</div>
+    <div class="progress-pct" id="progPct"><span id="progLabel">0%　A評価 </span><span id="progNote">0 / 36</span> 単元</div>
   </div>
 
   <!-- GAMBAガイド -->
@@ -233,7 +233,7 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
   <div class="drill-banner">
     <div class="drill-icon">📝</div>
     <div class="drill-info">
-      <h3>ドリル＆確認テスト（第１〜10章・全34単元）</h3>
+      <h3>ドリル＆確認テスト（第１〜10章・全36単元）</h3>
       <p>フラッシュカード・4択ドリル・確認テストで理解を定着させよう。単元ごとに分かれているので苦手なところを重点的に。</p>
     </div>
     <a class="drill-go" href="nihonshi_drill_nh01.html">単元①から →</a>
@@ -550,6 +550,12 @@ const UNITS = [
   {id:'ch34',num:'㉞', title:'大正デモクラシーと政党政治',
    sub:['大戦景気と米騒動・原敬内閣（平民宰相）','吉野作造の民本主義・美濃部達吉の天皇機関説・普通選挙法と治安維持法'],
    file:'nihonshi_ch34.html', drill:'nihonshi_drill_ch34.html', group:'ch10'},
+  {id:'ch35',num:'㉟', title:'金融恐慌——銀行がつぶれた1927年',
+   sub:['震災手形問題・片岡直温大蔵大臣の失言と取り付け騒ぎ','台湾銀行の危機と若槻内閣総辞職・田中義一内閣のモラトリアム'],
+   file:'nihonshi_ch35.html', drill:'nihonshi_drill_ch35.html', group:'ch10'},
+  {id:'ch36',num:'㊱', title:'世界恐慌と昭和恐慌',
+   sub:['ウォール街株価大暴落・ニューディール政策とブロック経済','浜口雄幸内閣の金解禁と昭和恐慌・欠食児童と娘の身売り'],
+   file:'nihonshi_ch36.html', drill:'nihonshi_drill_ch36.html', group:'ch10'},
 ];
 
 const DONE_FILES = [
@@ -559,7 +565,7 @@ const DONE_FILES = [
   'nihonshi_nh19.html','nihonshi_nh20.html',
   'nihonshi_nh21.html','nihonshi_nh22.html',
   'nihonshi_ch23.html','nihonshi_ch24.html','nihonshi_ch25.html',
-  'nihonshi_ch26.html','nihonshi_ch27.html','nihonshi_ch28.html','nihonshi_ch29.html','nihonshi_ch30.html','nihonshi_ch31.html','nihonshi_ch32.html','nihonshi_ch33.html','nihonshi_ch34.html'
+  'nihonshi_ch26.html','nihonshi_ch27.html','nihonshi_ch28.html','nihonshi_ch29.html','nihonshi_ch30.html','nihonshi_ch31.html','nihonshi_ch32.html','nihonshi_ch33.html','nihonshi_ch34.html','nihonshi_ch35.html','nihonshi_ch36.html'
 ];
 
 const LS_KEY = 'nihonshi_gamba_v1';
@@ -678,15 +684,15 @@ function render(){
     if(g==='a') ca++; else if(g==='b') cb++; else if(g==='c') cc++; else cn++;
   });
 
-  const total = 34;
+  const total = 36;
   document.getElementById('cnt-a').textContent = ca;
   document.getElementById('cnt-b').textContent = cb;
   document.getElementById('cnt-c').textContent = cc;
   document.getElementById('cnt-n').textContent = cn;
   const pct = Math.round((ca*100 + cb*60 + cc*30) / total);
   document.getElementById('progFill').style.width = pct + '%';
-  document.getElementById('progPct').textContent  = pct + '%　A評価 ';
-  document.getElementById('progNote').textContent = ca + ' / ' + total;
+  document.getElementById('progLabel').textContent = pct + '%　A評価 ';
+  document.getElementById('progNote').textContent  = ca + ' / ' + total;
   renderProgList();
   renderCalendar();
 }
