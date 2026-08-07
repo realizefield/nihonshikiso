@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊴ 日中戦争｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch38.html" class="back-to-index">← 単元㊳へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>⚔️ 単元㊴　日中戦争——終わりの見えない戦争へ</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第７節　単元㊴</span>
+  <h2>盧溝橋事件——日中全面戦争の始まり</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1937年7月7日，北京郊外で日本軍と中国軍（国民政府軍）が武力衝突する<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">盧溝橋事件</span><span class="kw-pop"><span class="kw-title">盧溝橋事件（ろこうきょうじけん）</span><span class="kw-yomi">📖 読み：ろこうきょうじけん</span><span class="kw-body">1937年7月7日，北京郊外の盧溝橋付近で，夜間演習中の日本軍と中国軍との間に起きた武力衝突。これをきっかけに日中両軍の戦闘が拡大し，日中戦争（日華事変）へと発展した。</span></span></span>（A）が起こりました。当時の内閣総理大臣<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">近衛文麿</span><span class="kw-pop"><span class="kw-title">近衛文麿（このえふみまろ）</span><span class="kw-yomi">📖 読み：このえふみまろ</span><span class="kw-body">盧溝橋事件当時の内閣総理大臣。当初は戦火を広げない「不拡大方針」を声明したが，実際には戦闘は拡大し続け，1938年には「国民政府を対手とせず」との声明を出して和平交渉の道を自ら閉ざした。</span></span></span>（B）は，当初「戦火を拡大しない」という不拡大方針を声明しましたが，現地の戦闘はおさまらず，まもなく上海など各地に拡大していきました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 満州事変以降くすぶり続けた緊張</span>
+    ▶ 満州事変（1931年）以降，日本は中国北部（華北）への勢力拡大を進め，現地の日本軍と中国軍（国民政府軍）の間には強い緊張が続いていた<br>
+    ▶ <span class="kw">蒋介石<span class="kw-pop"><span class="kw-title">蒋介石（しょうかいせき）</span><span class="kw-yomi">📖 読み：しょうかいせき</span><span class="kw-body">中国国民政府（国民党）の指導者。日中戦争が始まると首都を南京から重慶へ移し，日本への抗戦を続けた。アメリカ・イギリスなどの支援を受けながら戦い抜いた。</span></span></span>率いる国民政府は，国内の統一と近代化を進めながらも，日本の勢力拡大に強い警戒感を抱いていた<br>
+    ▶ こうした緊張関係の中で，盧溝橋での偶発的な衝突が，全面戦争のきっかけとなってしまった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 「不拡大方針」はなぜ守られなかったのか</span>
+    ▶ 近衛内閣は当初，事態の早期収拾を目指して不拡大方針を声明したが，現地軍の強硬な姿勢や，戦線を広げようとする陸軍中央の意向もあり，方針は徹底されなかった<br>
+    ▶ 日本側は宣戦布告をおこなわないまま戦争状態に入ったため，この戦争は当時「日華事変」「支那事変」と呼ばれた（宣戦布告をすると，中立国からの物資輸入に制限がかかるアメリカの中立法を避ける狙いがあったといわれる）<br>
+    ▶ 戦火はまたたく間に華北から上海周辺（華中）へと広がり，日本と中国は事実上の全面戦争に突入した
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 盧溝橋事件 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第７節　単元㊴</span>
+  <h2>戦線拡大と南京占領</h2>
+
+  <p>戦火は上海方面にも拡大し，日本軍はさらに西へ進撃して，同年12月には国民政府の首都<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">南京占領</span><span class="kw-pop"><span class="kw-title">南京占領（なんきんせんりょう）</span><span class="kw-yomi">📖 読み：なんきんせんりょう</span><span class="kw-body">1937年12月，日本軍が国民政府の首都・南京を占領した出来事。占領の過程で，多数の中国人捕虜や住民が殺害される南京事件が起き，国際的に大きな批判を受けた。</span></span></span>（C）を果たしました。しかし，国民政府は降伏せず，首都を内陸の重慶へ移して抗戦を続ける道を選びました。日本と戦い続けるこの<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">国民政府</span><span class="kw-pop"><span class="kw-title">国民政府（こくみんせいふ）</span><span class="kw-yomi">📖 読み：こくみんせいふ</span><span class="kw-body">蒋介石を中心とする中国の政府。日中戦争が始まると南京から漢口，さらに内陸の重慶へと首都を移しながら，日本への抗戦を続けた。</span></span></span>（D）は，<span class="kw">重慶<span class="kw-pop"><span class="kw-title">重慶（じゅうけい）</span><span class="kw-yomi">📖 読み：じゅうけい</span><span class="kw-body">中国内陸の都市。南京陥落後，国民政府が首都を移し，日本軍の攻撃をしのぎながら戦争末期まで抗戦を続けた拠点となった。</span></span></span>を拠点に戦い続けました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 「南京事件」——占領の陰で起きたこと</span>
+    ▶ 南京占領の過程で，日本軍は投降した兵士や捕虜，多数の一般市民を殺害したとされ，この出来事は「南京事件」と呼ばれている<br>
+    ▶ 犠牲者の正確な数については資料によって見解の差があるが，国際社会から強い批判を受け，日本の国際的な信用は大きく損なわれた<br>
+    ▶ 首都を占領されても国民政府が抗戦をやめなかったことで，日本側が期待した「短期決戦での勝利」というシナリオは崩れていった
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 占領しても終わらない戦争</span>
+    ▶ 日本は軍事的には主要都市を次々と占領していったが，広大な中国大陸を完全に制圧することはできなかった<br>
+    ▶ 国民政府が内陸に退いて抗戦を続けたことで，日本は「点（都市）と線（鉄道）」は押さえられても，「面（広い農村地帯）」までは支配できない状態に陥った<br>
+    ▶ こうして戦争は，日本が想定していたような短期決戦ではなく，出口の見えない長期戦へと向かっていった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 南京占領と抗戦の継続 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第７節　単元㊴</span>
+  <h2>東亜新秩序と汪兆銘政権</h2>
+
+  <p>1938年，近衛文麿首相は，日本・満州国・中国が協力して新しい秩序を作るという<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">東亜新秩序</span><span class="kw-pop"><span class="kw-title">東亜新秩序（とうあしんちつじょ）</span><span class="kw-yomi">📖 読み：とうあしんちつじょ</span><span class="kw-body">1938年，近衛文麿首相が発表した声明。日本・満州国・中国（国民政府にかわる新政権）の3国が提携し，東アジアに新しい秩序を築くことを唱えたが，実態は日本中心の勢力圏づくりだった。</span></span></span>（E）声明を発表しました。これは，日本を中心とした東アジアの新しい支配体制を築こうとするものでした。この方針のもと，国民政府の要人だった<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">汪兆銘</span><span class="kw-pop"><span class="kw-title">汪兆銘（おうちょうめい）</span><span class="kw-yomi">📖 読み：おうちょうめい</span><span class="kw-body">もと国民政府の有力な政治家。日本との和平・協力の道を選び，重慶の蒋介石と対立して脱出。1940年，日本の支援を受けて南京に新しい国民政府（親日政権）を樹立したが，国際的にはほとんど承認されず，日本の傀儡政権とみなされた。</span></span></span>（F）が日本に協力する道を選び，1940年に南京で新しい政権を樹立しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 「和平派」と「抗戦派」の分裂</span>
+    ▶ 国民政府の内部には，日本との戦いを続ける蒋介石ら「抗戦派」と，これ以上の犠牲を避けるため日本と手を結ぼうとする汪兆銘ら「和平派」の対立があった<br>
+    ▶ 日本は，重慶で抗戦を続ける蒋介石政権に代わる「もう一つの中国政府」を作ることで，戦争の正当性と早期終結の道筋を得ようとした<br>
+    ▶ 汪兆銘は重慶を脱出して日本側に合流し，日本の後押しを受けて新政権の樹立に踏み切った
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 国際的に認められなかった「新政府」</span>
+    ▶ 汪兆銘政権は南京を拠点に「中華民国国民政府」を名乗ったが，実質的には日本軍の後ろ盾なしには成り立たない政権であり，多くの国からは日本の傀儡（かいらい）政権とみなされた<br>
+    ▶ 蒋介石の重慶政府は，依然として国際社会から中国の正式な政府として認められ続け，<span class="kw">援蒋ルート<span class="kw-pop"><span class="kw-title">援蒋ルート（えんしょうルート）</span><span class="kw-yomi">📖 読み：えんしょうルート</span><span class="kw-body">アメリカ・イギリス・ソ連などが，抗戦を続ける蒋介石の重慶政府に武器や物資を送り届けた輸送路。ビルマ（現ミャンマー）経由のルートなどが有名で，日本軍はこのルートの遮断を試みた。</span></span></span>を通じてアメリカ・イギリスなどからの支援を受け続けた<br>
+    ▶ 汪兆銘政権の樹立は，日本が期待したような戦争終結にはつながらず，むしろ「もう一つの正統でない政府」を作っただけに終わった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 東亜新秩序と汪兆銘政権 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第７節　単元㊴</span>
+  <h2>戦争の長期化と国家総動員体制</h2>
+
+  <p>戦争が長期化する中，日本国内では戦争遂行のための体制づくりが進みました。1938年，政府は議会の承認を経ずに国民生活や経済を統制できる<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">国家総動員法</span><span class="kw-pop"><span class="kw-title">国家総動員法（こっかそうどういんほう）</span><span class="kw-yomi">📖 読み：こっかそうどういんほう</span><span class="kw-body">1938年制定。戦争遂行のため，政府が議会の承認なしに，勅令によって国民・物資・経済のすべてを統制・動員できるようにした法律。国民生活は戦争のために大きく制限されることになった。</span></span></span>（G）を制定しました。さらに1940年には，既存の政党をすべて解散させて一つにまとめる<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">大政翼賛会</span><span class="kw-pop"><span class="kw-title">大政翼賛会（たいせいよくさんかい）</span><span class="kw-yomi">📖 読み：たいせいよくさんかい</span><span class="kw-body">1940年，既存の政党がすべて解散して合流する形で結成された組織。政府の方針を国民に広く浸透させる役割を担い，この結成により日本の政党政治は事実上消滅した。</span></span></span>（H）が結成され，戦争に協力する挙国一致の体制が国内でも一段と強められていきました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 「短期決戦」の見込みが崩れて</span>
+    ▶ 日本は当初，中国との戦争は短期間で終わると見込んでいたが，国民政府が抗戦を続けたことで戦争は長期化し，多くの兵力・物資・戦費を必要とし続けた<br>
+    ▶ 国家総動員法により，国民生活は物資の配給制や労働力の動員など，戦争のために大きく制限されるようになった<br>
+    ▶ 大政翼賛会の結成により政党政治は事実上終わりを告げ，日本社会全体が戦争遂行のための一枚岩の体制へと組み込まれていった
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：日中戦争のポイント</strong><br>
+    1937年の盧溝橋事件をきっかけに，日本と中国は宣戦布告のないまま全面戦争（日中戦争）に突入しました。日本軍は南京を占領しましたが，国民政府は重慶に首都を移して抗戦を続け，短期決戦の見込みは崩れました。1938年，近衛文麿は東亜新秩序を唱え，1940年には汪兆銘による親日政権が南京に樹立されましたが，国際的な承認は得られませんでした。戦争が長期化する中，国家総動員法や大政翼賛会の結成により，日本国内は戦争遂行のための体制へと組み込まれていきました。<br><br>
+    ▶ <strong>盧溝橋事件（1937年）</strong>——日中両軍の衝突が全面戦争のきっかけに<br>
+    ▶ <strong>南京占領</strong>——国民政府は屈服せず重慶へ移って抗戦を継続<br>
+    ▶ <strong>東亜新秩序・汪兆銘政権</strong>——日本主導の新体制構想は国際的に認められず<br>
+    ▶ <strong>国家総動員法・大政翼賛会</strong>——戦争長期化にともなう国内の総力戦体制
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">盧溝橋事件</span>
+    <span class="tl-item">近衛文麿</span>
+    <span class="tl-item">南京占領</span>
+    <span class="tl-item">国民政府</span>
+    <span class="tl-item">東亜新秩序</span>
+    <span class="tl-item">汪兆銘</span>
+    <span class="tl-item">国家総動員法</span>
+    <span class="tl-item">大政翼賛会</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('senji')">⚔️ なぜ「短期決戦」のはずが終わりの見えない戦争になったのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 戦争の長期化と国内体制 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊴ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch39.html">単元㊴ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊴ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-senji" onclick="if(event.target===this)closeModal('senji')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('senji')">✕</button>
+    <div class="modal-title">⚔️ なぜ「短期決戦」のはずが終わりの見えない戦争になったのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 日本は「すぐ終わる戦争」だと考えていた</div>
+      <div class="cause-box">
+        <span class="label">🎯 都市を取れば勝てるという見込み</span>
+        日本軍は，中国の主要都市（上海・南京など）を占領すれば，国民政府はすぐに降伏し，戦争は短期間で終わると見込んでいました。<br><br>
+        ▶ 実際に日本軍は都市部の攻略には次々と成功し，首都・南京も1937年末に占領した<br>
+        ▶ しかし国民政府は降伏せず，首都を内陸の重慶に移して抗戦を続けるという，日本の想定外の選択をした
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 広すぎる大陸を「面」で支配できなかった</div>
+      <div class="why-box">
+        <span class="label">🚩 「点と線」しか押さえられない</span>
+        中国大陸はあまりに広大で，日本軍は都市（点）と鉄道（線）は占領できても，その間に広がる農村地帯（面）まで完全に支配することはできませんでした。<br><br>
+        ▶ 国民政府軍やゲリラ勢力は，日本軍の支配が及ばない農村地帯を拠点に抵抗を続けた<br>
+        ▶ 汪兆銘政権を樹立して「もう一つの中国政府」を作る試みも，国際的な承認を得られず，戦争終結の決め手にはならなかった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 長期戦は日本社会全体を変えていった</div>
+      <div class="result-box">
+        <span class="label">🏗 総力戦体制へ——後戻りできない道</span>
+        戦争が長引くにつれ，日本は国家総動員法や大政翼賛会の結成を通じて，国民生活・経済のすべてを戦争遂行のために動員する「総力戦体制」を築いていきました。この体制は，一度作られると簡単には後戻りできないものでした。短期決戦の見込みが外れたことで日本は泥沼の長期戦に引きずり込まれ，資源・戦費を確保するためにさらに勢力圏を広げようとする動きが，後の太平洋戦争へとつながっていくことになります。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 8語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"盧溝橋事件", "B":"近衛文麿", "C":"南京占領", "D":"国民政府",
+  "E":"東亜新秩序", "F":"汪兆銘", "G":"国家総動員法", "H":"大政翼賛会"
+};
+const wordBank = ["盧溝橋事件","近衛文麿","南京占領","国民政府",
+  "東亜新秩序","汪兆銘","国家総動員法","大政翼賛会"];
+
+const miniQuizData1 = [
+  {q:"①　1937年7月7日，北京郊外で日中両軍が武力衝突した事件を何というか。",
+   choices:["盧溝橋事件","柳条湖事件","張作霖爆殺事件","五・一五事件"], ans:0,
+   exp:"盧溝橋事件。日中戦争へと発展するきっかけとなりました。"},
+  {q:"②　盧溝橋事件当時の内閣総理大臣は誰か。",
+   choices:["東条英機","近衛文麿","広田弘毅","斎藤実"], ans:1,
+   exp:"近衛文麿。当初は不拡大方針を声明しました。"},
+  {q:"③　近衛内閣が最初に示した方針として正しいものはどれか。",
+   choices:["ただちに全面戦争へ突入する方針","中国への即時宣戦布告","戦火を拡大しない不拡大方針","満州国の放棄"], ans:2,
+   exp:"戦火を拡大しない不拡大方針を声明しましたが，実際には守られませんでした。"},
+  {q:"④　日本が中国との戦争で宣戦布告をおこなわなかった理由として考えられるものはどれか。",
+   choices:["中国側が拒否したため","国際連盟が禁止していたため","天皇が反対したため","宣戦布告するとアメリカの中立法により物資輸入が制限されるおそれがあったため"], ans:3,
+   exp:"宣戦布告をすると中立国からの物資輸入に制限がかかることを避けるためだったといわれます。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1937年12月，日本軍が国民政府の首都を占領した出来事を何というか。",
+   choices:["南京占領","上海占領","北京占領","武漢占領"], ans:0,
+   exp:"南京占領。占領の過程で多数の犠牲者を出した南京事件が起きました。"},
+  {q:"②　南京占領の過程で起きた，多数の中国人捕虜や住民が殺害された出来事を何というか。",
+   choices:["盧溝橋事件","南京事件","柳条湖事件","上海事変"], ans:1,
+   exp:"南京事件。国際社会から強い批判を受けました。"},
+  {q:"③　南京陥落後，蒋介石の国民政府が首都を移した都市はどこか。",
+   choices:["上海","武漢","重慶","広州"], ans:2,
+   exp:"重慶。内陸の重慶を拠点に抗戦を続けました。"},
+  {q:"④　南京占領後の戦争の展開として正しいものはどれか。",
+   choices:["国民政府はただちに降伏した","日本は中国全土を完全に制圧した","戦争はこの時点で終結した","国民政府は抗戦をやめず戦争が長期化した"], ans:3,
+   exp:"国民政府は抗戦をやめず，日本が期待した短期決戦は崩れました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1938年，近衛文麿が発表した，日満支の提携を唱えた声明を何というか。",
+   choices:["東亜新秩序","五族協和","王道楽土","大東亜共栄圏"], ans:0,
+   exp:"東亜新秩序。実態は日本中心の勢力圏づくりでした。"},
+  {q:"②　1940年，日本の支援を受けて南京に新しい政権を樹立した，もと国民政府の政治家は誰か。",
+   choices:["蒋介石","汪兆銘","溥儀","張学良"], ans:1,
+   exp:"汪兆銘。重慶を脱出し日本に協力する道を選びました。"},
+  {q:"③　汪兆銘政権に対する国際社会の見方として正しいものはどれか。",
+   choices:["中国の正式な政府として広く承認された","国際連盟が正式に承認した","日本の傀儡政権とみなされた","アメリカが最も強く支持した"], ans:2,
+   exp:"多くの国から日本の傀儡政権とみなされ，国際的な承認はほとんど得られませんでした。"},
+  {q:"④　重慶の国民政府が抗戦を続けられた理由として正しいものはどれか。",
+   choices:["日本が援助していたため","ソ連が中国を占領したため","国内でテロが頻発したため","援蒋ルートを通じてアメリカ・イギリスなどの支援を受けたため"], ans:3,
+   exp:"援蒋ルートを通じて欧米からの武器・物資の支援を受け続けました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1938年に制定された，議会の承認なしに国民・物資を統制できる法律を何というか。",
+   choices:["国家総動員法","治安維持法","徴兵令","工場法"], ans:0,
+   exp:"国家総動員法。戦争のために国民生活が大きく制限されました。"},
+  {q:"②　1940年，既存の政党が解散して合流し結成された組織を何というか。",
+   choices:["立憲政友会","大政翼賛会","憲政会","国民協会"], ans:1,
+   exp:"大政翼賛会。この結成により政党政治は事実上消滅しました。"},
+  {q:"③　日中戦争が長期化した背景として正しいものはどれか。",
+   choices:["日本が最初から長期戦を計画していたため","中国が早期に降伏したため","国民政府が抗戦を続け短期決戦の見込みが崩れたため","国際連盟が戦争を仲介したため"], ans:2,
+   exp:"国民政府が抗戦を続けたため，日本が見込んでいた短期決戦は実現しませんでした。"},
+  {q:"④　国家総動員法や大政翼賛会の結成が意味することとして正しいものはどれか。",
+   choices:["国民生活への制限がなくなった","政党政治がさらに活発になった","戦争がまもなく終結する見通しが立った","日本社会が戦争遂行のための体制に組み込まれていった"], ans:3,
+   exp:"日本社会全体が，戦争を続けるための総力戦体制に組み込まれていきました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1937年7月7日，北京郊外で日中両軍が武力衝突した事件を何というか。",
+   choices:["盧溝橋事件","柳条湖事件","張作霖爆殺事件","五・一五事件"], ans:0,
+   exp:"盧溝橋事件。日中戦争へと発展するきっかけとなりました。"},
+  {q:"② 盧溝橋事件当時の内閣総理大臣は誰か。",
+   choices:["東条英機","近衛文麿","広田弘毅","斎藤実"], ans:1,
+   exp:"近衛文麿。当初は不拡大方針を声明しました。"},
+  {q:"③ 日本が中国との戦争で宣戦布告をおこなわなかった理由として考えられるものはどれか。",
+   choices:["中国側が拒否したため","国際連盟が禁止していたため","アメリカの中立法による物資輸入制限を避けるためといわれる","天皇が反対したため"], ans:2,
+   exp:"宣戦布告をすると中立国からの物資輸入に制限がかかることを避けるためだったといわれます。"},
+  {q:"④ 1937年12月，日本軍が国民政府の首都を占領した出来事を何というか。",
+   choices:["上海占領","北京占領","武漢占領","南京占領"], ans:3,
+   exp:"南京占領。占領の過程で多数の犠牲者を出した南京事件が起きました。"},
+  {q:"⑤ 南京陥落後，蒋介石の国民政府が首都を移した都市はどこか。",
+   choices:["重慶","上海","広州","北京"], ans:0,
+   exp:"重慶。内陸の重慶を拠点に抗戦を続けました。"},
+  {q:"⑥ 1938年，近衛文麿が発表した，日満支の提携を唱えた声明を何というか。",
+   choices:["五族協和","東亜新秩序","王道楽土","大東亜共栄圏"], ans:1,
+   exp:"東亜新秩序。実態は日本中心の勢力圏づくりでした。"},
+  {q:"⑦ 1940年，日本の支援を受けて南京に新しい政権を樹立した，もと国民政府の政治家は誰か。",
+   choices:["蒋介石","溥儀","汪兆銘","張学良"], ans:2,
+   exp:"汪兆銘。重慶を脱出し日本に協力する道を選びました。"},
+  {q:"⑧ 汪兆銘政権に対する国際社会の見方として正しいものはどれか。",
+   choices:["中国の正式な政府として広く承認された","国際連盟が正式に承認した","アメリカが最も強く支持した","日本の傀儡政権とみなされた"], ans:3,
+   exp:"多くの国から日本の傀儡政権とみなされ，国際的な承認はほとんど得られませんでした。"},
+  {q:"⑨ 1938年に制定された，議会の承認なしに国民・物資を統制できる法律を何というか。",
+   choices:["国家総動員法","治安維持法","徴兵令","工場法"], ans:0,
+   exp:"国家総動員法。戦争のために国民生活が大きく制限されました。"},
+  {q:"⑩ 1940年，既存の政党が解散して合流し結成された組織を何というか。",
+   choices:["立憲政友会","大政翼賛会","憲政会","国民協会"], ans:1,
+   exp:"大政翼賛会。この結成により政党政治は事実上消滅しました。"}
+];
+
+const checkItems = [
+  "1937年，盧溝橋事件をきっかけに日中戦争が始まったことを説明できる",
+  "近衛文麿内閣の不拡大方針が実際には守られなかったことを説明できる",
+  "日本軍が南京を占領し，南京事件が起きたことを説明できる",
+  "国民政府が重慶に首都を移して抗戦を続けたことを説明できる",
+  "近衛文麿が東亜新秩序を唱えたことを説明できる",
+  "汪兆銘が南京に親日政権を樹立したが国際的に承認されなかったことを説明できる",
+  "国家総動員法により国民生活が統制されたことを説明できる",
+  "大政翼賛会の結成により政党政治が事実上終わったことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>
