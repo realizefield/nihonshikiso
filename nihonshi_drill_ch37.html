@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0057)file:///C:/Users/tinbu/Downloads/nihonshi_drill_ch37.html -->
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>単元㊲ 満州事変 ドリル｜日本史基礎GAMBA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="./nihonshi_drill_ch37_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
   .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
@@ -104,8 +104,8 @@
 <body>
 
 <div class="back-row">
-  <a href="file:///C:/Users/tinbu/Downloads/nihonshi_ch37.html" class="back-link" style="background:#1a2a6b">← 単元㊲ テキストへ</a>
-  <a href="file:///C:/Users/tinbu/Downloads/nihonshi_index.html" class="back-link gray">← 目次へ</a>
+  <a href="nihonshi_ch37.html" class="back-link" style="background:#1a2a6b">← 単元㊲ テキストへ</a>
+  <a href="nihonshi_index.html" class="back-link gray">← 目次へ</a>
 </div>
 
 <div class="unit-header">
@@ -141,12 +141,12 @@
 </div>
 
 <div class="mode-tabs">
-  <button class="mode-tab active" onclick="selectMode(&#39;flash&#39;)">🃏 フラッシュカード</button>
-  <button class="mode-tab" onclick="selectMode(&#39;drill&#39;)">✏️ 4択ドリル</button>
-  <button class="mode-tab" onclick="selectMode(&#39;test&#39;)">📋 確認テスト</button>
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
 </div>
 
-<div id="content-area"><div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn active" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap"><div class="fc-progress">📖 1 / 8枚　✅ 0　❌ 0</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">1933年，満州国不承認の勧告案採択を受け日本がおこなったことは何か。</div><div class="fc-back">国際連盟脱退（こくさいれんめいだったい）</div><div class="fc-hint">💡 日本は国際的孤立を深めていった</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div></div></div></div>
+<div id="content-area"></div>
 
 <script>
 const UNIT = {
@@ -163,41 +163,41 @@ const UNIT = {
   ],
   drillQuiz:[
     {q:"1931年，南満州鉄道の線路を自ら爆破し軍事行動を開始した日本軍を何というか。",
-     choices:["関東軍","近衛師団","朝鮮軍","陸軍参謀本部"],ans:0,
+     choices:["関東軍","近衛師団","朝鮮軍","陸軍参謀本部"], ans:0,
      exp:"関東軍。満州に駐留していた日本陸軍の部隊です。"},
     {q:"1931年9月，関東軍が奉天郊外で南満州鉄道の線路を爆破した事件を何というか。",
-     choices:["柳条湖事件","盧溝橋事件","五・一五事件","張作霖爆殺事件"],ans:0,
+     choices:["盧溝橋事件","柳条湖事件","五・一五事件","張作霖爆殺事件"], ans:1,
      exp:"柳条湖事件。満州事変のきっかけとなりました。"},
     {q:"柳条湖事件をきっかけに始まった一連の軍事行動を何というか。",
-     choices:["満州事変","日清戦争","日露戦争","日中戦争"],ans:0,
+     choices:["日清戦争","日露戦争","満州事変","日中戦争"], ans:2,
      exp:"満州事変。1931年から始まりました。"},
     {q:"1932年，関東軍が満州に建国した国家を何というか。",
-     choices:["満州国","中華民国","大韓帝国","台湾民主国"],ans:0,
+     choices:["中華民国","大韓帝国","台湾民主国","満州国"], ans:3,
      exp:"満州国。関東軍の傀儡国家でした。"},
     {q:"満州国の元首に立てられた清朝最後の皇帝は誰か。",
-     choices:["溥儀","光緒帝","宣統帝の弟","西太后"],ans:0,
+     choices:["溥儀","光緒帝","宣統帝の弟","西太后"], ans:0,
      exp:"溥儀。関東軍によって元首に立てられました。"},
     {q:"満州事変の実情を調べるため国際連盟が派遣した調査団を何というか。",
-     choices:["リットン調査団","ハーグ調査団","ワシントン調査団","ジュネーブ調査団"],ans:0,
+     choices:["ハーグ調査団","リットン調査団","ワシントン調査団","ジュネーブ調査団"], ans:1,
      exp:"リットン調査団。イギリスのリットンを団長としました。"},
     {q:"1933年の国際連盟総会で日本首席全権を務め，議場から退場したのは誰か。",
-     choices:["松岡洋右","幣原喜重郎","若槻礼次郎","犬養毅"],ans:0,
+     choices:["幣原喜重郎","若槻礼次郎","松岡洋右","犬養毅"], ans:2,
      exp:"松岡洋右。満州国不承認の勧告案採択を受けて退場しました。"},
     {q:"1933年，日本が国際連盟に対しておこなったことは何か。",
-     choices:["国際連盟からの脱退を通告した","国際連盟の常任理事国に就任した","国際連盟の設立を提案した","国際連盟への加盟を申請した"],ans:0,
-     exp:"国際連盟からの脱退を通告しました。"},
+     choices:["国際連盟の常任理事国に就任した","国際連盟の設立を提案した","国際連盟への加盟を申請した","国際連盟からの脱退を通告した"], ans:3,
+     exp:"国際連盟からの脱退を通告しました。"}
   ],
   testQuiz:[
     {q:"1931年，南満州鉄道の線路を自ら爆破し軍事行動を開始した日本軍を何というか。",choices:["関東軍","近衛師団","朝鮮軍","陸軍参謀本部"],ans:0},
-    {q:"1931年9月，関東軍が奉天郊外で南満州鉄道の線路を爆破した事件を何というか。",choices:["柳条湖事件","盧溝橋事件","五・一五事件","張作霖爆殺事件"],ans:0},
-    {q:"柳条湖事件をきっかけに始まった一連の軍事行動を何というか。",choices:["満州事変","日清戦争","日露戦争","日中戦争"],ans:0},
-    {q:"1932年，関東軍が満州に建国した国家を何というか。",choices:["満州国","中華民国","大韓帝国","台湾民主国"],ans:0},
+    {q:"1931年9月，関東軍が奉天郊外で南満州鉄道の線路を爆破した事件を何というか。",choices:["盧溝橋事件","柳条湖事件","五・一五事件","張作霖爆殺事件"],ans:1},
+    {q:"柳条湖事件をきっかけに始まった一連の軍事行動を何というか。",choices:["日清戦争","日露戦争","満州事変","日中戦争"],ans:2},
+    {q:"1932年，関東軍が満州に建国した国家を何というか。",choices:["中華民国","大韓帝国","台湾民主国","満州国"],ans:3},
     {q:"満州国の元首に立てられた清朝最後の皇帝は誰か。",choices:["溥儀","光緒帝","宣統帝の弟","西太后"],ans:0},
-    {q:"満州事変の実情を調べるため国際連盟が派遣した調査団を何というか。",choices:["リットン調査団","ハーグ調査団","ワシントン調査団","ジュネーブ調査団"],ans:0},
-    {q:"リットン調査団の報告書の内容として正しいものはどれか。",choices:["日本の軍事行動を自衛とは認めなかった","日本の軍事行動を完全に正当と認めた","満州国を正式な独立国と認めた","日本の満州における権益を全面否定した"],ans:0},
-    {q:"1933年の国際連盟総会で日本首席全権を務め，議場から退場したのは誰か。",choices:["松岡洋右","幣原喜重郎","若槻礼次郎","犬養毅"],ans:0},
+    {q:"満州事変の実情を調べるため国際連盟が派遣した調査団を何というか。",choices:["ハーグ調査団","リットン調査団","ワシントン調査団","ジュネーブ調査団"],ans:1},
+    {q:"リットン調査団の報告書の内容として正しいものはどれか。",choices:["日本の軍事行動を完全に正当と認めた","満州国を正式な独立国と認めた","日本の軍事行動を自衛とは認めなかった","日本の満州における権益を全面否定した"],ans:2},
+    {q:"1933年の国際連盟総会で日本首席全権を務め，議場から退場したのは誰か。",choices:["幣原喜重郎","若槻礼次郎","犬養毅","松岡洋右"],ans:3},
     {q:"1933年，日本が国際連盟に対しておこなったことは何か。",choices:["国際連盟からの脱退を通告した","国際連盟の常任理事国に就任した","国際連盟の設立を提案した","国際連盟への加盟を申請した"],ans:0},
-    {q:"国際連盟脱退が日本にもたらした影響として正しいものはどれか。",choices:["国際社会での発言力と信頼を失い孤立を深めた","国際社会での地位がさらに高まった","軍部の政治への影響力が弱まった","中国との関係が改善した"],ans:0},
+    {q:"国際連盟脱退が日本にもたらした影響として正しいものはどれか。",choices:["国際社会での地位がさらに高まった","国際社会での発言力と信頼を失い孤立を深めた","軍部の政治への影響力が弱まった","中国との関係が改善した"],ans:1}
   ]
 };
 
@@ -234,6 +234,5 @@ function toggleSetsu(){const body=document.getElementById('setsu-body');const ar
 
 selectMode('flash');
 </script>
-
-
-</body></html>
+</body>
+</html>
