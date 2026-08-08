@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊺ 公害問題から高度経済成長の終焉へ｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch44.html" class="back-to-index">← 単元㊹へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🏭 単元㊺　公害問題から高度経済成長の終焉へ</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１３節　単元㊺</span>
+  <h2>公害問題の深刻化——四大公害病</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>高度経済成長は国民生活を豊かにする一方，工場からの排水や排煙が周辺の環境や住民の健康に深刻な被害をもたらしました。熊本県で発生した有機水銀中毒による<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">水俣病</span><span class="kw-pop"><span class="kw-title">水俣病（みなまたびょう）</span><span class="kw-yomi">📖 読み：みなまたびょう</span><span class="kw-body">熊本県水俣湾周辺で発生した公害病。工場排水に含まれた有機水銀（メチル水銀）による中毒で，神経に重い障害を引き起こした。四大公害病の一つ。</span></span></span>（B），富山県の<span class="kw">イタイイタイ病<span class="kw-pop"><span class="kw-title">イタイイタイ病（いたいいたいびょう）</span><span class="kw-yomi">📖 読み：いたいいたいびょう</span><span class="kw-body">富山県神通川流域で発生した公害病。鉱山から流出したカドミウムが原因で，骨がもろくなり激しい痛みをともなうことから名づけられた。四大公害病の一つ。</span></span></span>，三重県の<span class="kw">四日市ぜんそく<span class="kw-pop"><span class="kw-title">四日市ぜんそく（よっかいちぜんそく）</span><span class="kw-yomi">📖 読み：よっかいちぜんそく</span><span class="kw-body">三重県四日市市で発生した公害病。石油化学コンビナートから排出された大気汚染物質が原因で，深刻なぜんそく症状を引き起こした。四大公害病の一つ。</span></span></span>，新潟県の第二水俣病をあわせて<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">四大公害病</span><span class="kw-pop"><span class="kw-title">四大公害病（よんだいこうがいびょう）</span><span class="kw-yomi">📖 読み：よんだいこうがいびょう</span><span class="kw-body">高度経済成長期に発生した，水俣病・イタイイタイ病・四日市ぜんそく・新潟水俣病（第二水俣病）の4つの深刻な公害病の総称。企業や国の責任を問う裁判にも発展した。</span></span></span>（A）と呼びます。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 高度経済成長の「影」</span>
+    ▶ 前単元でみたように，重化学工業化が急速に進む中，企業は利益を優先し排水・排煙対策を怠るケースが少なくなかった<br>
+    ▶ 被害を受けた住民は，長期間にわたり健康被害と企業活動との因果関係を立証するという困難な戦いを強いられた<br>
+    ▶ これらの公害病は，のちに国や企業の責任を問う裁判（四大公害訴訟）へと発展していった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 「豊かさ」の代償として</span>
+    ▶ 高度経済成長期の日本は，経済成長を最優先するあまり，環境や住民の健康への配慮が後回しにされがちだった<br>
+    ▶ 四大公害病は，急速な工業化がもたらしたひずみを象徴する出来事として，現在も記憶されている
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 公害問題の深刻化 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１３節　単元㊺</span>
+  <h2>公害対策の本格化——公害対策基本法と環境庁</h2>
+
+  <p>深刻化する公害問題を受け，1967年に公害防止の基本方針を定めた<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">公害対策基本法</span><span class="kw-pop"><span class="kw-title">公害対策基本法（こうがいたいさくきほんほう）</span><span class="kw-yomi">📖 読み：こうがいたいさくきほんほう</span><span class="kw-body">1967年に制定された，公害防止に関する国・地方公共団体・企業の責務などを定めた法律。日本の公害対策の基本的な枠組みをつくった。</span></span></span>（C）が制定されました。1970年には<span class="kw">公害国会<span class="kw-pop"><span class="kw-title">公害国会（こうがいこっかい）</span><span class="kw-yomi">📖 読み：こうがいこっかい</span><span class="kw-body">1970年に開かれた臨時国会の俗称。大気汚染防止法の改正など，公害関連の法律が集中的に整備されたことからこう呼ばれる。</span></span></span>と呼ばれる臨時国会でさまざまな公害関連法が整備され，さらに1971年には，公害対策や環境保全を専門にあつかう<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">環境庁</span><span class="kw-pop"><span class="kw-title">環境庁（かんきょうちょう）</span><span class="kw-yomi">📖 読み：かんきょうちょう</span><span class="kw-body">1971年に設置された，公害対策・環境保全を専門にあつかう行政機関。2001年の中央省庁再編により環境省に格上げされた。</span></span></span>（D）が設置されました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 世論の高まりと政府の対応</span>
+    ▶ 四大公害訴訟などを通じ，公害問題への国民の関心と批判が急速に高まった<br>
+    ▶ 政府もようやく公害対策を国の重要課題として位置づけるようになった
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 公害対策の制度化</span>
+    ▶ 公害対策基本法の制定により，公害防止の基本方針が法律として定められた<br>
+    ▶ 環境庁の設置により，公害対策・環境保全を専門にあつかう行政組織が整った
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 公害対策の本格化 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１３節　単元㊺</span>
+  <h2>非核三原則と沖縄返還</h2>
+
+  <p><span class="kw">佐藤栄作<span class="kw-pop"><span class="kw-title">佐藤栄作（さとうえいさく）</span><span class="kw-yomi">📖 読み：さとうえいさく</span><span class="kw-body">1964年から首相を務めた政治家。非核三原則を掲げ，沖縄返還を実現させた。これらの功績により，のちにノーベル平和賞を受賞した。</span></span></span>内閣は，「核兵器を持たず，つくらず，持ちこませず」という<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">非核三原則</span><span class="kw-pop"><span class="kw-title">非核三原則（ひかくさんげんそく）</span><span class="kw-yomi">📖 読み：ひかくさんげんそく</span><span class="kw-body">佐藤栄作内閣が掲げた，核兵器を「持たず，つくらず，持ちこませず」とする方針。日本の核兵器政策の基本原則となっている。</span></span></span>（E）を掲げました。また，アメリカの統治下に置かれていた沖縄については，<span class="kw">核抜き・本土並み<span class="kw-pop"><span class="kw-title">核抜き・本土並み（かくぬき・ほんどなみ）</span><span class="kw-yomi">📖 読み：かくぬき・ほんどなみ</span><span class="kw-body">沖縄返還交渉における日本政府の基本方針。沖縄からアメリカの核兵器を撤去し，本土と同じ条件で返還させることをめざした。</span></span></span>の返還を求める交渉が続けられ，1972年，ついに<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">沖縄返還</span><span class="kw-pop"><span class="kw-title">沖縄返還（おきなわへんかん）</span><span class="kw-yomi">📖 読み：おきなわへんかん</span><span class="kw-body">1972年5月15日，アメリカの統治下にあった沖縄が日本に復帰したこと。「核抜き・本土並み」の方針のもとで実現した。</span></span></span>（F）が実現しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 戦後も続いた沖縄の分離統治</span>
+    ▶ サンフランシスコ平和条約（前々単元）により日本は主権を回復したが，沖縄はアメリカの統治下に置かれたままだった<br>
+    ▶ 沖縄では祖国復帰を求める住民運動が続き，日本政府もアメリカとの返還交渉を進めていった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 「核抜き・本土並み」という交渉方針</span>
+    ▶ 佐藤栄作内閣は，沖縄にアメリカの核兵器を残さず，本土と同じ条件で返還することを求める方針で交渉にあたった<br>
+    ▶ この方針のもと1971年に沖縄返還協定が結ばれ，1972年5月15日，沖縄は日本に復帰した
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 非核三原則と沖縄返還 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１３節　単元㊺</span>
+  <h2>日中国交正常化</h2>
+
+  <p>1972年，<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">田中角栄</span><span class="kw-pop"><span class="kw-title">田中角栄（たなかかくえい）</span><span class="kw-yomi">📖 読み：たなかかくえい</span><span class="kw-body">1972年から首相を務めた政治家。中国を訪問し，日中共同声明に調印して日中国交正常化を実現させた。</span></span></span>（H）首相は中国を訪問し，中華人民共和国との国交を正常化する<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">日中共同声明</span><span class="kw-pop"><span class="kw-title">日中共同声明（にっちゅうきょうどうせいめい）</span><span class="kw-yomi">📖 読み：にっちゅうきょうどうせいめい</span><span class="kw-body">1972年，田中角栄首相が中国を訪問して調印した文書。日本と中華人民共和国の国交正常化を実現させた。</span></span></span>（G）に調印しました。これにより，戦後長く途絶えていた<span class="kw">日中国交正常化<span class="kw-pop"><span class="kw-title">日中国交正常化（にっちゅうこっこうせいじょうか）</span><span class="kw-yomi">📖 読み：にっちゅうこっこうせいじょうか</span><span class="kw-body">1972年の日中共同声明により，日本と中華人民共和国の国交が正式に樹立されたこと。1978年の日中平和友好条約へとつながっていった。</span></span></span>が実現しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 米中接近という国際情勢の変化</span>
+    ▶ 1971年，アメリカのニクソン大統領が電撃的に中国訪問を発表し（ニクソン・ショック），米中関係の改善が進んだ<br>
+    ▶ こうした国際情勢の変化を受け，日本も中国との関係正常化を急ぐ必要に迫られた
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 台湾との関係変化もともなって</span>
+    ▶ 日中共同声明により，日本は中華人民共和国を中国の唯一の合法政府と認め，台湾（中華民国）との外交関係は断絶した<br>
+    ▶ 日中国交正常化は，のちの日中平和友好条約（1978年）へとつながっていく
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 日中国交正常化 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１３節　単元㊺</span>
+  <h2>第一次石油危機——石油ショックと狂乱物価</h2>
+
+  <p>1973年，<span class="kw">第4次中東戦争<span class="kw-pop"><span class="kw-title">第4次中東戦争（だいよじちゅうとうせんそう）</span><span class="kw-yomi">📖 読み：だいよじちゅうとうせんそう</span><span class="kw-body">1973年に勃発した，イスラエルとアラブ諸国との戦争。この戦争をきっかけに，アラブの産油国が石油戦略を発動し，第一次石油危機を引き起こした。</span></span></span>をきっかけに石油価格が大幅に引き上げられる<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">第一次石油危機</span><span class="kw-pop"><span class="kw-title">第一次石油危機（だいいちじせきゆきき）</span><span class="kw-yomi">📖 読み：だいいちじせきゆきき</span><span class="kw-body">1973年，第4次中東戦争をきっかけにアラブの産油国が原油価格を大幅に引き上げたこと。石油輸入に依存する日本経済に大きな打撃を与えた。</span></span></span>（I）が発生しました。原油価格の急騰は日本経済に大きな打撃を与え，物価が急激に上昇する<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">狂乱物価</span><span class="kw-pop"><span class="kw-title">狂乱物価（きょうらんぶっか）</span><span class="kw-yomi">📖 読み：きょうらんぶっか</span><span class="kw-body">第一次石油危機の影響で，1973年から1974年にかけて日本国内の物価が急激に上昇した状況。トイレットペーパーの買い占め騒動などの混乱も生じた。</span></span></span>（J）と呼ばれる事態を引き起こしました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 中東情勢が世界経済を揺るがす</span>
+    ▶ 1973年，第4次中東戦争が勃発すると，アラブの産油国は石油戦略を発動し，原油価格を大幅に引き上げた<br>
+    ▶ 石油輸入に大きく依存していた日本経済は，この原油価格の急騰から大きな打撃を受けた
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 「狂乱物価」と国民生活の混乱</span>
+    ▶ 原油価格の高騰は，トイレットペーパーの買い占め騒動など，国民生活にも大きな混乱をもたらした<br>
+    ▶ 物価が急激に上昇する「狂乱物価」と呼ばれる状況が生まれ，日本経済は大きな転機を迎えることになった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 第一次石油危機 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+</div>
+
+<!-- ===== Section 6 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１３節　単元㊺</span>
+  <h2>高度経済成長の終焉——安定成長への転換</h2>
+
+  <p>第一次石油危機の影響により，1974年，日本の<span class="kw">実質経済成長率<span class="kw-pop"><span class="kw-title">実質経済成長率（じっしつけいざいせいちょうりつ）</span><span class="kw-yomi">📖 読み：じっしつけいざいせいちょうりつ</span><span class="kw-body">物価変動の影響を除いた経済成長率。1974年，第一次石油危機の影響で戦後初めてマイナスを記録した。</span></span></span>は戦後初めてマイナスを記録し，1950年代後半から続いた<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">高度経済成長の終焉</span><span class="kw-pop"><span class="kw-title">高度経済成長の終焉（こうどけいざいせいちょうのしゅうえん）</span><span class="kw-yomi">📖 読み：こうどけいざいせいちょうのしゅうえん</span><span class="kw-body">1974年，第一次石油危機の影響で実質経済成長率が戦後初めてマイナスとなり，1950年代後半から続いた高度経済成長が終わりを迎えたこと。</span></span></span>（K）を迎えました。以後，日本経済は，省資源・<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">省エネルギー</span><span class="kw-pop"><span class="kw-title">省エネルギー（しょうえねるぎー）</span><span class="kw-yomi">📖 読み：しょうえねるぎー</span><span class="kw-body">石油危機以降，日本の産業界が重視するようになった，エネルギー消費を抑える取り組み。省資源とあわせ，安定成長期の産業構造を特徴づけた。</span></span></span>（L）を重視する型の産業構造への転換を進め，安定成長の時代へと移行していきました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 「成長」から「安定」の時代へ</span>
+    ▶ 公害問題への対応，沖縄返還，日中国交正常化を経て，日本は国際社会での存在感を高めつつあった<br>
+    ▶ しかし1973年の第一次石油危機により，1950年代後半から約20年近く続いた高度経済成長は終わりを迎えた<br>
+    ▶ 以後，日本経済は省資源・省エネルギーを重視する安定成長の時代へと移行していくことになる
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：公害問題から高度経済成長の終焉までのポイント</strong><br>
+    高度経済成長の陰で水俣病・イタイイタイ病・四日市ぜんそく・新潟水俣病からなる四大公害病が深刻化し，1967年の公害対策基本法や1971年の環境庁設置など公害対策が本格化しました。佐藤栄作内閣は非核三原則を掲げ，1972年には「核抜き・本土並み」の方針のもと沖縄返還を実現させました。同じく1972年，田中角栄首相は日中共同声明に調印し，日中国交正常化を果たしました。しかし1973年，第4次中東戦争をきっかけとする第一次石油危機がおこり，狂乱物価と呼ばれる混乱を招くとともに，1974年には実質経済成長率が戦後初めてマイナスとなり，高度経済成長は終焉を迎えました。<br><br>
+    ▶ <strong>四大公害病・水俣病</strong>——高度経済成長のひずみ<br>
+    ▶ <strong>公害対策基本法・環境庁</strong>——公害対策の本格化<br>
+    ▶ <strong>非核三原則・沖縄返還（1972年）</strong>——佐藤内閣の外交成果<br>
+    ▶ <strong>日中共同声明・田中角栄</strong>——日中国交正常化<br>
+    ▶ <strong>第一次石油危機・狂乱物価</strong>——石油ショックの衝撃<br>
+    ▶ <strong>高度経済成長の終焉・省エネルギー</strong>——安定成長への転換
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">四大公害病</span>
+    <span class="tl-item">水俣病</span>
+    <span class="tl-item">公害対策基本法</span>
+    <span class="tl-item">環境庁</span>
+    <span class="tl-item">非核三原則</span>
+    <span class="tl-item">沖縄返還</span>
+    <span class="tl-item">日中共同声明</span>
+    <span class="tl-item">田中角栄</span>
+    <span class="tl-item">第一次石油危機</span>
+    <span class="tl-item">狂乱物価</span>
+    <span class="tl-item">高度経済成長の終焉</span>
+    <span class="tl-item">省エネルギー</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('sekiyukiki')">🏭 なぜ高度経済成長は終わりを迎えたのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq6',this)">
+      📝 高度経済成長の終焉 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq6"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊺ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch45.html">単元㊺ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊺ まとめテスト（全12問）</h2>
+  <p style="font-size:14px;color:#64748b">9問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 12 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-sekiyukiki" onclick="if(event.target===this)closeModal('sekiyukiki')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sekiyukiki')">✕</button>
+    <div class="modal-title">🏭 なぜ高度経済成長は終わりを迎えたのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 公害問題という「負の側面」の露呈</div>
+      <div class="cause-box">
+        <span class="label">🎯 経済成長優先の代償</span>
+        高度経済成長期，企業は生産拡大を最優先し，公害対策を後回しにするケースが少なくありませんでした。四大公害病はその象徴的な結果でした。<br><br>
+        ▶ 公害問題への批判の高まりは，企業に環境対策のコスト負担を求めるようになり，これまでのような利益優先の成長路線に見直しを迫った<br>
+        ▶ 公害対策基本法や環境庁の設置は，経済成長一辺倒からの転換の第一歩だった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 国際情勢の変化——沖縄返還・日中国交正常化</div>
+      <div class="why-box">
+        <span class="label">🚩 対外関係の転機が重なった時期</span>
+        1972年前後は，沖縄返還や日中国交正常化など，日本の対外関係が大きく動いた時期でもありました。<br><br>
+        ▶ こうした外交上の成果は日本の国際的地位を高めた一方，国内では公害問題や物価上昇など，経済成長の負の側面への対応も同時に求められていた<br>
+        ▶ 内政・外交の両面で，日本は新たな課題に直面しつつあった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 石油危機という決定打</div>
+      <div class="result-box">
+        <span class="label">🏗 資源を海外に依存する経済の弱点</span>
+        1973年の第一次石油危機は，石油をほぼ全面的に輸入に頼っていた日本経済の弱点を一気に露呈させました。原油価格の急騰は狂乱物価を招き，1974年には実質経済成長率が戦後初めてマイナスとなり，高度経済成長は終焉を迎えました。公害問題という内なる課題と，石油危機という外からの衝撃が重なり合ったことが，日本経済の大きな転換点となったのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 12語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"四大公害病", "B":"水俣病", "C":"公害対策基本法", "D":"環境庁",
+  "E":"非核三原則", "F":"沖縄返還", "G":"日中共同声明", "H":"田中角栄",
+  "I":"第一次石油危機", "J":"狂乱物価", "K":"高度経済成長の終焉", "L":"省エネルギー"
+};
+const wordBank = ["四大公害病","水俣病","公害対策基本法","環境庁",
+  "非核三原則","沖縄返還","日中共同声明","田中角栄",
+  "第一次石油危機","狂乱物価","高度経済成長の終焉","省エネルギー"];
+
+const miniQuizData1 = [
+  {q:"①　熊本県で発生した有機水銀中毒による公害病を何というか。",
+   choices:["水俣病","イタイイタイ病","四日市ぜんそく","新潟水俣病"], ans:0,
+   exp:"水俣病。工場排水に含まれた有機水銀による中毒でした。"},
+  {q:"②　富山県で発生した，カドミウムを原因とする公害病を何というか。",
+   choices:["水俣病","イタイイタイ病","四日市ぜんそく","新潟水俣病"], ans:1,
+   exp:"イタイイタイ病。骨がもろくなり激しい痛みをともないました。"},
+  {q:"③　四大公害病に含まれないものはどれか。",
+   choices:["水俣病","イタイイタイ病","四日市ぜんそく","足尾銅山鉱毒事件"], ans:3,
+   exp:"足尾銅山鉱毒事件は明治時代の公害事件で，四大公害病には含まれません。"},
+  {q:"④　四大公害病が発生した背景として正しいものはどれか。",
+   choices:["環境対策を優先しすぎたため","急速な工業化で排水・排煙対策が後回しにされたため","農業が衰退したため","人口が減少したため"], ans:1,
+   exp:"急速な工業化の中，企業が排水・排煙対策を怠るケースが多かったためです。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1967年に制定された，公害防止の基本方針を定めた法律を何というか。",
+   choices:["公害対策基本法","環境基本法","大気汚染防止法","水質汚濁防止法"], ans:0,
+   exp:"公害対策基本法。日本の公害対策の基本的な枠組みをつくりました。"},
+  {q:"②　1970年，公害関連法が集中的に整備された臨時国会を俗に何と呼ぶか。",
+   choices:["公害国会","環境国会","福祉国会","所得倍増国会"], ans:0,
+   exp:"公害国会。大気汚染防止法の改正などがおこなわれました。"},
+  {q:"③　1971年に設置された，公害対策・環境保全を専門にあつかう行政組織を何というか。",
+   choices:["環境省","環境庁","厚生省","通商産業省"], ans:1,
+   exp:"環境庁。2001年の中央省庁再編で環境省に格上げされました。"},
+  {q:"④　公害対策基本法や環境庁設置の背景として正しいものはどれか。",
+   choices:["公害問題への国民の関心と批判の高まり","経済成長の鈍化","海外からの圧力のみ","天皇からの指示"], ans:0,
+   exp:"四大公害訴訟などを通じ，公害問題への批判が急速に高まったためです。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　佐藤栄作内閣が掲げた「核兵器を持たず，つくらず，持ちこませず」という方針を何というか。",
+   choices:["非核三原則","五大改革指令","国民所得倍増計画","平和主義"], ans:0,
+   exp:"非核三原則。日本の核兵器政策の基本原則です。"},
+  {q:"②　1972年に日本に復帰した地域はどこか。",
+   choices:["小笠原諸島","沖縄","北方領土","竹島"], ans:1,
+   exp:"沖縄。1972年5月15日にアメリカから日本に復帰しました。"},
+  {q:"③　沖縄返還交渉における日本政府の基本方針を何というか。",
+   choices:["核抜き・本土並み","経済優先","武力による解決","国連への委任"], ans:0,
+   exp:"核抜き・本土並み。核兵器を撤去し本土と同じ条件での返還をめざしました。"},
+  {q:"④　沖縄返還を実現させた首相は誰か。",
+   choices:["池田勇人","岸信介","佐藤栄作","田中角栄"], ans:2,
+   exp:"佐藤栄作。この功績によりのちにノーベル平和賞を受賞しました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1972年，中国を訪問し日中共同声明に調印した首相は誰か。",
+   choices:["佐藤栄作","田中角栄","池田勇人","岸信介"], ans:1,
+   exp:"田中角栄。中国を訪問し国交正常化を実現させました。"},
+  {q:"②　1972年に調印され，日中の国交正常化を実現させた文書を何というか。",
+   choices:["日中共同声明","日中平和友好条約","サンフランシスコ平和条約","日ソ共同宣言"], ans:0,
+   exp:"日中共同声明。1978年の日中平和友好条約へとつながりました。"},
+  {q:"③　日中国交正常化にともない，日本と断交した相手はどこか。",
+   choices:["韓国","台湾（中華民国）","ソ連","アメリカ"], ans:1,
+   exp:"台湾（中華民国）。日本は中華人民共和国を唯一の合法政府と認めました。"},
+  {q:"④　日中国交正常化が実現した国際的背景として正しいものはどれか。",
+   choices:["米中関係の改善（ニクソン・ショック）","日ソ関係の悪化","朝鮮戦争の勃発","石油危機の発生"], ans:0,
+   exp:"1971年のニクソン大統領の中国訪問など，米中関係の改善が背景にありました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1973年，第4次中東戦争をきっかけに発生した石油価格の急騰を何というか。",
+   choices:["第一次石油危機","第二次石油危機","世界恐慌","昭和恐慌"], ans:0,
+   exp:"第一次石油危機。日本経済に大きな打撃を与えました。"},
+  {q:"②　第一次石油危機の直接のきっかけとなった戦争は何か。",
+   choices:["朝鮮戦争","第4次中東戦争","ベトナム戦争","湾岸戦争"], ans:1,
+   exp:"第4次中東戦争。アラブの産油国が石油戦略を発動しました。"},
+  {q:"③　石油危機にともない，日本国内で物価が急激に上昇したことを何と呼んだか。",
+   choices:["狂乱物価","バブル経済","昭和恐慌","インフレ抑制"], ans:0,
+   exp:"狂乱物価。トイレットペーパーの買い占め騒動なども起こりました。"},
+  {q:"④　第一次石油危機が日本経済に与えた影響として正しいものはどれか。",
+   choices:["原油価格の高騰により大きな打撃を受けた","石油の輸入が不要になった","物価が急激に下落した","経済成長がさらに加速した"], ans:0,
+   exp:"石油輸入への依存度が高かったため，大きな打撃を受けました。"}
+];
+
+const miniQuizData6 = [
+  {q:"①　1974年，日本の実質経済成長率が戦後初めて記録した状態はどれか。",
+   choices:["プラス成長","マイナス成長","横ばい","倍増"], ans:1,
+   exp:"マイナス成長。第一次石油危機の影響でした。"},
+  {q:"②　高度経済成長の終焉後，日本経済が重視するようになった方向性はどれか。",
+   choices:["省エネルギー型の産業構造への転換","重化学工業のさらなる拡大","農業中心の経済への転換","鎖国政策"], ans:0,
+   exp:"省エネルギー型の産業構造への転換。安定成長の時代へ移行しました。"},
+  {q:"③　高度経済成長が終わりを迎えた直接の要因は何か。",
+   choices:["第一次石油危機","日中国交正常化","沖縄返還","55年体制の崩壊"], ans:0,
+   exp:"第一次石油危機。原油価格の急騰が日本経済に打撃を与えました。"},
+  {q:"④　この単元で学んだ1960年代末〜1970年代の出来事の全体像として正しいものはどれか。",
+   choices:["公害問題・沖縄返還・日中国交正常化を経て，石油危機により高度経済成長が終わった","高度経済成長はこの時期にさらに加速した","占領統治がこの時期も続いていた","日本は国際社会から孤立した"], ans:0,
+   exp:"公害問題への対応や外交の進展を経て，石油危機により高度経済成長は終わりを迎えました。"}
+];
+
+const finalQuizData = [
+  {q:"① 熊本県で発生した有機水銀中毒による公害病を何というか。",
+   choices:["水俣病","イタイイタイ病","四日市ぜんそく","新潟水俣病"], ans:0,
+   exp:"水俣病。工場排水に含まれた有機水銀による中毒でした。"},
+  {q:"② 富山県で発生した，カドミウムを原因とする公害病を何というか。",
+   choices:["水俣病","イタイイタイ病","四日市ぜんそく","新潟水俣病"], ans:1,
+   exp:"イタイイタイ病。骨がもろくなり激しい痛みをともないました。"},
+  {q:"③ 1967年に制定された，公害防止の基本方針を定めた法律を何というか。",
+   choices:["環境基本法","大気汚染防止法","公害対策基本法","水質汚濁防止法"], ans:2,
+   exp:"公害対策基本法。日本の公害対策の基本的な枠組みをつくりました。"},
+  {q:"④ 1971年に設置された，公害対策・環境保全を専門にあつかう行政組織を何というか。",
+   choices:["厚生省","通商産業省","環境省","環境庁"], ans:3,
+   exp:"環境庁。2001年の中央省庁再編で環境省に格上げされました。"},
+  {q:"⑤ 佐藤栄作内閣が掲げた「核兵器を持たず，つくらず，持ちこませず」という方針を何というか。",
+   choices:["非核三原則","五大改革指令","国民所得倍増計画","平和主義"], ans:0,
+   exp:"非核三原則。日本の核兵器政策の基本原則です。"},
+  {q:"⑥ 1972年に日本に復帰した地域はどこか。",
+   choices:["小笠原諸島","沖縄","北方領土","竹島"], ans:1,
+   exp:"沖縄。1972年5月15日にアメリカから日本に復帰しました。"},
+  {q:"⑦ 1972年に調印され，日中の国交正常化を実現させた文書を何というか。",
+   choices:["日ソ共同宣言","サンフランシスコ平和条約","日中共同声明","日中平和友好条約"], ans:2,
+   exp:"日中共同声明。1978年の日中平和友好条約へとつながりました。"},
+  {q:"⑧ 1972年，中国を訪問し日中共同声明に調印した首相は誰か。",
+   choices:["佐藤栄作","池田勇人","岸信介","田中角栄"], ans:3,
+   exp:"田中角栄。中国を訪問し国交正常化を実現させました。"},
+  {q:"⑨ 1973年，第4次中東戦争をきっかけに発生した石油価格の急騰を何というか。",
+   choices:["第一次石油危機","第二次石油危機","世界恐慌","昭和恐慌"], ans:0,
+   exp:"第一次石油危機。日本経済に大きな打撃を与えました。"},
+  {q:"⑩ 石油危機にともない，日本国内で物価が急激に上昇したことを何と呼んだか。",
+   choices:["バブル経済","狂乱物価","昭和恐慌","インフレ抑制"], ans:1,
+   exp:"狂乱物価。トイレットペーパーの買い占め騒動なども起こりました。"},
+  {q:"⑪ 1974年，日本の実質経済成長率が戦後初めて記録した状態はどれか。",
+   choices:["プラス成長","横ばい","マイナス成長","倍増"], ans:2,
+   exp:"マイナス成長。第一次石油危機の影響で高度経済成長が終焉を迎えました。"},
+  {q:"⑫ 高度経済成長の終焉後，日本経済が重視するようになった方向性はどれか。",
+   choices:["重化学工業のさらなる拡大","農業中心の経済への転換","鎖国政策","省エネルギー型の産業構造への転換"], ans:3,
+   exp:"省エネルギー型の産業構造への転換。安定成長の時代へ移行しました。"}
+];
+
+const checkItems = [
+  "水俣病・イタイイタイ病など四大公害病が発生したことを説明できる",
+  "四大公害病が高度経済成長のひずみであったことを説明できる",
+  "1967年，公害対策基本法が制定されたことを説明できる",
+  "1971年，環境庁が設置されたことを説明できる",
+  "佐藤栄作内閣が非核三原則を掲げたことを説明できる",
+  "1972年，沖縄が日本に返還されたことを説明できる",
+  "「核抜き・本土並み」という沖縄返還の方針を説明できる",
+  "1972年，日中共同声明により日中国交正常化が実現したことを説明できる",
+  "田中角栄が日中国交正常化を実現させたことを説明できる",
+  "1973年，第一次石油危機が発生したことを説明できる",
+  "石油危機により狂乱物価と呼ばれる混乱が生じたことを説明できる",
+  "1974年，高度経済成長が終焉を迎えたことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5, mq6: miniQuizData6 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 9;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（9問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

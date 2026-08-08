@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊶ 太平洋戦争——開戦から敗色濃厚の日々へ｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch40.html" class="back-to-index">← 単元㊵へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>💥 単元㊶　太平洋戦争——開戦から敗色濃厚の日々へ</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第９節　単元㊶</span>
+  <h2>真珠湾攻撃と開戦——1941年12月8日</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1941年12月8日（現地時間7日），日本海軍は<span class="kw">ハワイ<span class="kw-pop"><span class="kw-title">ハワイ</span><span class="kw-yomi">📖 読み：はわい</span><span class="kw-body">太平洋上のアメリカ領。真珠湾（パールハーバー）にはアメリカ太平洋艦隊の基地があり，日本海軍による奇襲攻撃の標的となった。</span></span></span>の米海軍基地を奇襲する<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">真珠湾攻撃</span><span class="kw-pop"><span class="kw-title">真珠湾攻撃（しんじゅわんこうげき）</span><span class="kw-yomi">📖 読み：しんじゅわんこうげき</span><span class="kw-body">1941年12月8日，日本海軍の空母機動部隊がハワイの真珠湾にあるアメリカ太平洋艦隊基地を奇襲攻撃した出来事。この攻撃と同時に日本はアメリカ・イギリスに宣戦布告し，太平洋戦争が始まった。</span></span></span>（A）をおこないました。ほぼ同時に，日本陸軍はイギリス領マレー半島に上陸する<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">マレー作戦</span><span class="kw-pop"><span class="kw-title">マレー作戦（まれーさくせん）</span><span class="kw-yomi">📖 読み：まれーさくせん</span><span class="kw-body">真珠湾攻撃とほぼ同時に開始された，日本陸軍によるイギリス領マレー半島への上陸作戦。東南アジアの資源地帯獲得をめざす南方作戦の一つ。</span></span></span>（B）を開始しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ ハル・ノートの先に選んだ道</span>
+    ▶ 前単元でみたように，日米交渉はハル・ノートで事実上決裂し，東条英機内閣のもとでの御前会議で対米開戦が最終決定されていた<br>
+    ▶ 日本は，石油などの資源を断たれた「ジリ貧」状態から抜け出すため，東南アジアの資源地帯を武力で確保する南方作戦と，アメリカ太平洋艦隊を無力化する真珠湾攻撃を同時に実行する道を選んだ<br>
+    ▶ 開戦は，長年にわたる日中戦争の泥沼化と国際的孤立の果てにたどり着いた，後戻りのできない選択だった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 短期決戦への期待と，長期戦への不安</span>
+    ▶ 日本軍部の一部には，緒戦で大きな戦果をあげ，有利な条件で早期に講和（戦争を終わらせること）に持ち込みたいという期待があった<br>
+    ▶ しかし，アメリカとの国力差（工業生産力・資源量）はきわめて大きく，長期戦になれば日本が不利になることは，開戦前から一部の指導者にも認識されていた<br>
+    ▶ こうした不安を抱えたまま，日本は太平洋の広大な戦線へと突き進んでいくことになる
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 真珠湾攻撃と開戦 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第９節　単元㊶</span>
+  <h2>緒戦の快進撃——シンガポール陥落と大東亜共栄圏</h2>
+
+  <p>マレー半島に上陸した日本軍は，「マレーの虎」と呼ばれた<span class="kw">山下奉文<span class="kw-pop"><span class="kw-title">山下奉文（やましたともゆき）</span><span class="kw-yomi">📖 読み：やましたともゆき</span><span class="kw-body">マレー作戦を指揮した陸軍軍人。自転車部隊などを使った素早い進撃で「マレーの虎」と呼ばれ，1942年2月のシンガポール攻略を成功させた。</span></span></span>の指揮のもと快進撃を続け，1942年2月，イギリスの東南アジアにおける一大拠点である<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">シンガポール陥落</span><span class="kw-pop"><span class="kw-title">シンガポール陥落（しんがぽーるかんらく）</span><span class="kw-yomi">📖 読み：しんがぽーるかんらく</span><span class="kw-body">1942年2月，日本軍がイギリスの東南アジアにおける拠点シンガポールを占領した出来事。マレー作戦の総仕上げとなり，日本国内では大きく祝われた。</span></span></span>（C）を実現させました。日本軍はさらにフィリピンや蘭印（オランダ領東インド）などを次々と占領し，「欧米の植民地支配からアジアを解放し，共に繁栄する」という<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">大東亜共栄圏</span><span class="kw-pop"><span class="kw-title">大東亜共栄圏（だいとうあきょうえいけん）</span><span class="kw-yomi">📖 読み：だいとうあきょうえいけん</span><span class="kw-body">日本が唱えた，欧米の植民地支配からアジアを解放し，日本を中心にアジア諸国が共に繁栄するという構想。実際には，日本が占領地から資源や労働力を収奪する体制という側面が強かった。</span></span></span>（D）という構想を掲げて占領地を統治しました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 「解放」の名の下の占領政策</span>
+    ▶ 日本軍は開戦から半年ほどで東南アジアの広い範囲を占領し，国内では戦況を伝える報道が大きく祝われた<br>
+    ▶ しかし占領地では，資源の強制的な供出や労働力の動員（労務動員）がおこなわれ，「解放」の理想とは裏腹に，現地住民の生活は厳しく統制された<br>
+    ▶ この時期の緒戦の勝利は，日本にとって太平洋戦争でもっとも勢いのあった時期であり，これ以降は戦局が徐々に不利になっていく
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 緒戦の快進撃 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第９節　単元㊶</span>
+  <h2>ミッドウェー海戦——戦局の転換点</h2>
+
+  <p>快進撃を続けていた日本軍でしたが，1942年6月，太平洋上の小島をめぐる<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">ミッドウェー海戦</span><span class="kw-pop"><span class="kw-title">ミッドウェー海戦（みっどうぇーかいせん）</span><span class="kw-yomi">📖 読み：みっどうぇーかいせん</span><span class="kw-body">1942年6月，太平洋のミッドウェー島付近でおこなわれた日米海軍の海戦。日本は主力空母4隻を一度に失う大敗を喫し，太平洋戦争における戦局の転換点となった。</span></span></span>（E）で，日本海軍は主力空母4隻を一度に失う大敗を喫しました。以後，日本軍とアメリカ軍は南太平洋の<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">ガダルカナル島</span><span class="kw-pop"><span class="kw-title">ガダルカナル島（がだるかなるとう）</span><span class="kw-yomi">📖 読み：がだるかなるとう</span><span class="kw-body">ソロモン諸島の島。1942年8月から半年余りにわたり，日米両軍が飛行場をめぐって激しい消耗戦を続けたが，1943年2月，日本軍は多くの犠牲を出して撤退（転進）した。</span></span></span>（F）をめぐって半年余りの激しい消耗戦を繰り広げることになります。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 暗号解読と，失われた熟練搭乗員</span>
+    ▶ ミッドウェー海戦では，アメリカ軍が日本海軍の暗号をあらかじめ解読しており，日本側の作戦はアメリカ側に見抜かれていたといわれる<br>
+    ▶ この海戦で日本は空母だけでなく，多くの熟練したパイロットも失い，その後の海軍の戦力回復を大きく困難にした<br>
+    ▶ ガダルカナル島の攻防では，物資の補給が続かず，多くの兵士が戦闘だけでなく飢えや病気によっても命を落とした
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 攻勢から守勢へ——流れが変わった瞬間</span>
+    ▶ ミッドウェー海戦の大敗により，日本は太平洋の制海権・制空権を徐々に失っていき，それまでの「攻める側」から「守る側」へと立場が入れ替わっていった<br>
+    ▶ ガダルカナル島からの撤退は，日本軍が公式には「転進」と発表したが，実質的には最初の大きな敗北であり，以後アメリカ軍の反攻が本格化していく<br>
+    ▶ この2つの戦いを境に，太平洋戦争の主導権はしだいにアメリカ側へと移っていった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 ミッドウェー海戦とガダルカナル 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第９節　単元㊶</span>
+  <h2>絶対国防圏の崩壊——サイパン島陥落</h2>
+
+  <p>戦局が悪化する中，1943年，日本は「これ以上後退できない」という防衛ラインとして<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">絶対国防圏</span><span class="kw-pop"><span class="kw-title">絶対国防圏（ぜったいこくぼうけん）</span><span class="kw-yomi">📖 読み：ぜったいこくぼうけん</span><span class="kw-body">1943年，戦局悪化を受けて日本が定めた，これ以上後退できないとする防衛ライン。マリアナ諸島（サイパン島など）を含んでいた。</span></span></span>（G）を定めましたが，1944年7月，その要であったマリアナ諸島の<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">サイパン島陥落</span><span class="kw-pop"><span class="kw-title">サイパン島陥落（さいぱんとうかんらく）</span><span class="kw-yomi">📖 読み：さいぱんとうかんらく</span><span class="kw-body">1944年7月，絶対国防圏の要であったサイパン島がアメリカ軍に占領された出来事。これにより日本本土が新型爆撃機B-29の直接攻撃圏内に入り，東条英機内閣は責任を問われ総辞職した。</span></span></span>（H）を許してしまいました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 「絶対」の防衛線が崩れた意味</span>
+    ▶ サイパン島は，アメリカ軍の新型爆撃機B-29が日本本土を直接攻撃できる距離にあり，この島の陥落は日本本土空襲の始まりを意味した<br>
+    ▶ 絶対国防圏の崩壊という重大な事態を受け，開戦以来続いていた東条英機内閣は責任を問われて総辞職した<br>
+    ▶ サイパン島では，多くの民間人も戦闘に巻き込まれ，追い詰められて命を落とすという悲劇も起きた
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 絶対国防圏の崩壊 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第９節　単元㊶</span>
+  <h2>本土空襲の始まりと総力戦体制の強化</h2>
+
+  <p>サイパン島陥落後，アメリカ軍の<span class="kw">B-29<span class="kw-pop"><span class="kw-title">B-29</span><span class="kw-yomi">📖 読み：びーにじゅうく</span><span class="kw-body">アメリカ軍の新型長距離爆撃機。サイパン島などマリアナ諸島の基地から発進し，日本本土の各都市への空襲を可能にした。</span></span></span>爆撃機による本土空襲が本格化し，1945年3月10日には，東京の下町一帯を焼夷弾で無差別に爆撃する<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">東京大空襲</span><span class="kw-pop"><span class="kw-title">東京大空襲（とうきょうだいくうしゅう）</span><span class="kw-yomi">📖 読み：とうきょうだいくうしゅう</span><span class="kw-body">1945年3月10日，アメリカ軍のB-29爆撃機が東京の下町一帯を焼夷弾で無差別爆撃した空襲。一夜で10万人以上が犠牲になったとされ，以後全国の主要都市が同様の空襲にさらされた。</span></span></span>（I）がおこなわれました。戦局の悪化にともない，国内では大学生らを軍に召集する<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">学徒出陣</span><span class="kw-pop"><span class="kw-title">学徒出陣（がくとしゅつじん）</span><span class="kw-yomi">📖 読み：がくとしゅつじん</span><span class="kw-body">1943年，それまで徴兵を猶予されていた文科系大学生らが軍に召集され，戦場に送られたこと。深刻化する兵力不足を背景としておこなわれた。</span></span></span>（J）や，都市部の子どもたちを地方へ避難させる<span class="kw">学童疎開<span class="kw-pop"><span class="kw-title">学童疎開（がくどうそかい）</span><span class="kw-yomi">📖 読み：がくどうそかい</span><span class="kw-body">本土空襲が激しくなる中，都市部の小学生を安全な地方へ集団で避難させた政策。親元を離れての集団生活は，子どもたちに大きな不安と苦労をもたらした。</span></span></span>がおこなわれるなど，国民生活のすべてが戦争遂行のために動員されていきました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 都市が戦場になるという新しい現実</span>
+    ▶ それまで戦場は海外の島々や大陸が中心だったが，本土空襲によって，日本国内の一般市民の生活そのものが戦争の被害に直接さらされるようになった<br>
+    ▶ 木造家屋の多い日本の都市は焼夷弾による火災の被害を受けやすく，東京大空襲をはじめ各地の空襲で膨大な数の民間人が犠牲になった<br>
+    ▶ 学徒出陣や学童疎開は，戦争が国民のあらゆる世代の生活を巻き込む総力戦になっていたことを象徴する出来事だった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 本土空襲と総力戦体制 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+</div>
+
+<!-- ===== Section 6 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第９節　単元㊶</span>
+  <h2>沖縄戦前夜——迫る本土決戦の不安</h2>
+
+  <p>1945年に入ると，アメリカ軍はいよいよ日本本土に近い<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">沖縄戦</span><span class="kw-pop"><span class="kw-title">沖縄戦（おきなわせん）</span><span class="kw-yomi">📖 読み：おきなわせん</span><span class="kw-body">1945年4月，アメリカ軍が沖縄本島に上陸して始まった地上戦。多数の民間人を巻き込む激しい戦闘となり，日本の敗色は決定的となった。戦闘の詳しい経過は次の単元で学習する。</span></span></span>（K）へと迫っていました。国内では，このまま戦争を続ければアメリカ軍が本土に上陸し，国民が直接戦闘に巻き込まれる<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">本土決戦</span><span class="kw-pop"><span class="kw-title">本土決戦（ほんどけっせん）</span><span class="kw-yomi">📖 読み：ほんどけっせん</span><span class="kw-body">戦局がさらに悪化した場合，日本本土でアメリカ軍を迎え撃つとして軍部が準備を進めた作戦構想。国民にも竹槍訓練などの動員がおこなわれ，本土全体が戦場になりかねない緊迫した状況だった。</span></span></span>（L）への不安が現実味を帯びていました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 開戦から3年余り——追い詰められた日本</span>
+    ▶ 真珠湾攻撃からわずか半年ほどの緒戦の勝利のあと，ミッドウェー海戦・ガダルカナル島の敗北を境に日本は守勢に転じ，絶対国防圏も崩壊，本土空襲も本格化した<br>
+    ▶ 資源・兵力・国民生活のすべてを注ぎ込む総力戦を続けても，戦局を好転させることはできず，日本は敗色濃厚な状況に追い詰められていった<br>
+    ▶ 迫る沖縄戦と，本土決戦への不安のなかで，日本は終戦へ向けたさらに厳しい局面を迎えることになる（沖縄戦の経過と戦争の終わりについては次の単元で学習する）
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：太平洋戦争（開戦〜敗色濃厚）のポイント</strong><br>
+    1941年12月8日，日本は真珠湾攻撃とマレー作戦をほぼ同時におこない，太平洋戦争が始まりました。緒戦では日本軍が快進撃を続けシンガポールなどを占領しましたが，1942年6月のミッドウェー海戦で大敗し，ガダルカナル島の攻防を経て戦局は徐々に不利になっていきました。1944年7月には絶対国防圏の要サイパン島が陥落し，東条英機内閣は総辞職，翌1945年3月には東京大空襲をはじめ本土空襲が本格化しました。学徒出陣・学童疎開など国民生活のすべてが戦争に動員される中，日本は沖縄戦と本土決戦への不安を抱えながら，敗色濃厚な局面へと追い詰められていきました。<br><br>
+    ▶ <strong>真珠湾攻撃・マレー作戦（1941年）</strong>——太平洋戦争の開戦<br>
+    ▶ <strong>シンガポール陥落・大東亜共栄圏</strong>——緒戦の快進撃と占領地統治<br>
+    ▶ <strong>ミッドウェー海戦・ガダルカナル島</strong>——攻勢から守勢への転換点<br>
+    ▶ <strong>絶対国防圏・サイパン島陥落</strong>——東条内閣総辞職，本土空襲圏内に<br>
+    ▶ <strong>東京大空襲・学徒出陣</strong>——本土が戦場となる総力戦の現実<br>
+    ▶ <strong>沖縄戦前夜・本土決戦</strong>——敗色濃厚のなかで迫る戦争終盤
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">真珠湾攻撃</span>
+    <span class="tl-item">マレー作戦</span>
+    <span class="tl-item">シンガポール陥落</span>
+    <span class="tl-item">大東亜共栄圏</span>
+    <span class="tl-item">ミッドウェー海戦</span>
+    <span class="tl-item">ガダルカナル島</span>
+    <span class="tl-item">絶対国防圏</span>
+    <span class="tl-item">サイパン島陥落</span>
+    <span class="tl-item">東京大空襲</span>
+    <span class="tl-item">学徒出陣</span>
+    <span class="tl-item">沖縄戦</span>
+    <span class="tl-item">本土決戦</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('taiheiyo')">💥 なぜ緒戦の勝利からわずか数年で敗色濃厚になったのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq6',this)">
+      📝 沖縄戦前夜と本土決戦 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq6"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊶ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch41.html">単元㊶ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊶ まとめテスト（全12問）</h2>
+  <p style="font-size:14px;color:#64748b">9問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 12 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-taiheiyo" onclick="if(event.target===this)closeModal('taiheiyo')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('taiheiyo')">✕</button>
+    <div class="modal-title">💥 なぜ緒戦の勝利からわずか数年で敗色濃厚になったのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 緒戦の勝利は「見た目」ほど盤石ではなかった</div>
+      <div class="cause-box">
+        <span class="label">🎯 資源は取れても，国力の差は埋まらない</span>
+        真珠湾攻撃からわずか半年ほどで，日本は東南アジアの広大な地域を占領しました。しかし，この勝利は日本の国力そのものを強化したわけではありませんでした。<br><br>
+        ▶ アメリカは開戦後もすさまじい速さで軍艦・航空機を量産し続けており，工業生産力の差は開戦当初からすでに大きかった<br>
+        ▶ 日本が占領地から得た資源を実際に本土まで輸送するには，長い航路を守り続ける必要があり，これも徐々に困難になっていった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② ミッドウェーとガダルカナルで流れが変わった</div>
+      <div class="why-box">
+        <span class="label">🚩 空母と熟練搭乗員という「取り返しのつかない損失」</span>
+        ミッドウェー海戦での空母4隻の喪失と，多くの熟練パイロットの死は，海軍の戦力回復を著しく困難にしました。<br><br>
+        ▶ 新しい空母や艦載機は作れても，長年の訓練で育った熟練搭乗員をすぐに補充することはできなかった<br>
+        ▶ ガダルカナル島では，補給が続かず飢えと病気で命を落とす兵士が続出し，「餓島」とまで呼ばれるほどの消耗戦となった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 防衛線の崩壊が本土を戦場に変えた</div>
+      <div class="result-box">
+        <span class="label">🏗 「絶対」に後退できないはずが，突破された</span>
+        絶対国防圏が突破されサイパン島が陥落したことで，日本本土はアメリカ軍の爆撃機の直接攻撃圏内に入り，戦争は日本国内の一般市民の生活を直接おびやかす段階に入りました。東京大空襲をはじめとする本土空襲，学徒出陣や学童疎開といった総力戦体制の強化は，日本がもはや戦局を好転させる手段を失いつつあったことを物語っています。緒戦の勝利からわずか3年余りで，日本は沖縄戦と本土決戦への不安を抱える，敗色濃厚な局面へと追い詰められていったのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 12語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"真珠湾攻撃", "B":"マレー作戦", "C":"シンガポール陥落", "D":"大東亜共栄圏",
+  "E":"ミッドウェー海戦", "F":"ガダルカナル島", "G":"絶対国防圏", "H":"サイパン島陥落",
+  "I":"東京大空襲", "J":"学徒出陣", "K":"沖縄戦", "L":"本土決戦"
+};
+const wordBank = ["真珠湾攻撃","マレー作戦","シンガポール陥落","大東亜共栄圏",
+  "ミッドウェー海戦","ガダルカナル島","絶対国防圏","サイパン島陥落",
+  "東京大空襲","学徒出陣","沖縄戦","本土決戦"];
+
+const miniQuizData1 = [
+  {q:"①　1941年12月8日，日本海軍がハワイの米海軍基地を奇襲した出来事を何というか。",
+   choices:["真珠湾攻撃","マレー作戦","ミッドウェー海戦","沖縄戦"], ans:0,
+   exp:"真珠湾攻撃。同日，日本はアメリカ・イギリスに宣戦布告しました。"},
+  {q:"②　真珠湾攻撃とほぼ同時に，日本陸軍がイギリス領マレー半島に上陸した作戦を何というか。",
+   choices:["ガダルカナル作戦","絶対国防圏作戦","マレー作戦","本土決戦"], ans:1,
+   exp:"マレー作戦。東南アジアの資源地帯獲得をめざす南方作戦の一つでした。"},
+  {q:"③　真珠湾攻撃の直前，日本とアメリカの外交交渉が決裂するきっかけとなった文書は何か。",
+   choices:["ポツダム宣言","ハル・ノート","九カ国条約","大西洋憲章"], ans:2,
+   exp:"ハル・ノート。前単元で学んだとおり，日本はこれを事実上の最後通牒と受け止めました。"},
+  {q:"④　開戦当時の日本の状況として正しいものはどれか。",
+   choices:["資源が豊富で余裕があった","国際社会から高く評価されていた","石油などの資源を断たれ追い詰められていた","戦争をする予定はなかった"], ans:3,
+   exp:"ABCD包囲網などにより資源を断たれ，追い詰められた末の開戦でした。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1942年2月，日本軍が占領したイギリスの東南アジアにおける拠点はどこか。",
+   choices:["マニラ","シンガポール","バタビア","香港"], ans:0,
+   exp:"シンガポール。マレー作戦の総仕上げとして陥落させました。"},
+  {q:"②　マレー作戦を指揮し「マレーの虎」と呼ばれた陸軍軍人は誰か。",
+   choices:["東条英機","山下奉文","山本五十六","松岡洋右"], ans:1,
+   exp:"山下奉文。素早い進撃でシンガポール攻略を成功させました。"},
+  {q:"③　日本が唱えた，欧米の植民地支配からアジアを解放するという構想を何というか。",
+   choices:["大東亜共栄圏","絶対国防圏","五族協和","東亜新秩序"], ans:2,
+   exp:"大東亜共栄圏。実際には日本が資源や労働力を収奪する体制という側面が強かったです。"},
+  {q:"④　占領地における日本の統治の実態として正しいものはどれか。",
+   choices:["現地住民に完全な自治を与えた","資源の供出や労働力の動員が課された","占領地の経済的負担はまったくなかった","欧米諸国と対等な関係を築いた"], ans:1,
+   exp:"資源の強制的な供出や労働力の動員がおこなわれ，統治は厳しいものでした。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1942年6月，日本海軍が空母4隻を失う大敗を喫した海戦を何というか。",
+   choices:["ミッドウェー海戦","日本海海戦","黄海海戦","対馬海戦"], ans:0,
+   exp:"ミッドウェー海戦。太平洋戦争における戦局の転換点となりました。"},
+  {q:"②　ミッドウェー海戦で日本が大敗した背景として正しいものはどれか。",
+   choices:["兵力がもともと不足していた","アメリカ軍に暗号を解読されていた","天候不良で作戦を実行できなかった","日本軍が戦意を失っていた"], ans:1,
+   exp:"アメリカ軍が日本海軍の暗号をあらかじめ解読していたといわれます。"},
+  {q:"③　1942年8月から半年余り，日米両軍が消耗戦を続けたソロモン諸島の島はどこか。",
+   choices:["サイパン島","ガダルカナル島","沖縄島","硫黄島"], ans:2,
+   exp:"ガダルカナル島。1943年2月，日本軍は多くの犠牲を出して撤退しました。"},
+  {q:"④　ミッドウェー海戦とガダルカナル島の戦いが太平洋戦争にもたらした意味として正しいものはどれか。",
+   choices:["日本の勢いがさらに増した","日本が攻勢から守勢へと転じる転換点となった","アメリカ軍が撤退を決めた","戦争がまもなく終結した"], ans:1,
+   exp:"この2つの戦いを境に，戦争の主導権はアメリカ側へと移っていきました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1943年，日本が「これ以上後退できない」と定めた防衛ラインを何というか。",
+   choices:["絶対国防圏","大東亜共栄圏","東亜新秩序","五族協和"], ans:0,
+   exp:"絶対国防圏。マリアナ諸島（サイパン島など）を含んでいました。"},
+  {q:"②　1944年7月に陥落し，日本本土がB-29の攻撃圏内に入るきっかけとなった島はどこか。",
+   choices:["ガダルカナル島","沖縄島","サイパン島","硫黄島"], ans:1,
+   exp:"サイパン島。絶対国防圏の要でした。"},
+  {q:"③　サイパン島陥落を受けて総辞職した内閣の首相は誰か。",
+   choices:["近衛文麿","東条英機","広田弘毅","若槻礼次郎"], ans:2,
+   exp:"東条英機。絶対国防圏崩壊の責任を問われ内閣は総辞職しました。"},
+  {q:"④　サイパン島陥落が日本にもたらした影響として正しいものはどれか。",
+   choices:["日本本土が空襲の危険から遠ざかった","日本本土がB-29の直接攻撃圏内に入った","戦争終結が早まり和平が実現した","資源不足が一気に解消された"], ans:1,
+   exp:"日本本土がB-29爆撃機の直接攻撃圏内に入り，本土空襲が本格化しました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1945年3月10日，東京の下町一帯を焼夷弾で無差別爆撃した出来事を何というか。",
+   choices:["東京大空襲","広島原爆投下","沖縄戦","本土決戦"], ans:0,
+   exp:"東京大空襲。一夜で10万人以上が犠牲になったとされます。"},
+  {q:"②　東京大空襲などの本土空襲をおこなったアメリカ軍の爆撃機を何というか。",
+   choices:["B-17","B-25","B-29","F-4"], ans:1,
+   exp:"B-29。サイパン島などマリアナ諸島の基地から発進しました。"},
+  {q:"③　1943年，文科系大学生らが軍に召集され戦場に送られたことを何というか。",
+   choices:["学徒出陣","学童疎開","国家総動員","徴兵制"], ans:2,
+   exp:"学徒出陣。深刻化する兵力不足を背景としておこなわれました。"},
+  {q:"④　本土空襲が激しくなる中，都市部の小学生を地方へ避難させた政策を何というか。",
+   choices:["学徒出陣","学童疎開","満蒙開拓","勤労動員"], ans:1,
+   exp:"学童疎開。親元を離れての集団生活は子どもたちに大きな不安をもたらしました。"}
+];
+
+const miniQuizData6 = [
+  {q:"①　1945年4月，アメリカ軍が上陸し地上戦が始まった沖縄をめぐる戦いを何というか。",
+   choices:["沖縄戦","硫黄島の戦い","サイパンの戦い","本土決戦"], ans:0,
+   exp:"沖縄戦。多数の民間人を巻き込む激しい戦闘となりました（詳細は次の単元）。"},
+  {q:"②　沖縄戦後を見据え，日本本土でアメリカ軍を迎え撃つとして軍部が準備した構想を何というか。",
+   choices:["絶対国防圏","本土決戦","大東亜共栄圏","南進政策"], ans:1,
+   exp:"本土決戦。国民にも竹槍訓練などの動員がおこなわれました。"},
+  {q:"③　太平洋戦争の緒戦から敗色濃厚に至る流れとして正しいものはどれか。",
+   choices:["開戦直後からずっと劣勢だった","緒戦は優勢だったがミッドウェー海戦を境に劣勢へ転じた","終戦までずっと優勢だった","ガダルカナル島の勝利で戦局が好転した"], ans:1,
+   exp:"緒戦の快進撃のあと，ミッドウェー海戦・ガダルカナル島を境に守勢に転じました。"},
+  {q:"④　この単元で学んだ一連の出来事が示す日本の状況として正しいものはどれか。",
+   choices:["国力に余裕を持って戦争を続けていた","資源・兵力・国民生活すべてを注ぎ込んでも戦局を好転できずにいた","国際社会からの支援が増えていた","戦争はすでに終結していた"], ans:2,
+   exp:"総力戦を続けても戦局を好転させられず，敗色濃厚な状況に追い詰められていました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1941年12月8日，日本海軍がハワイの米海軍基地を奇襲した出来事を何というか。",
+   choices:["真珠湾攻撃","マレー作戦","ミッドウェー海戦","沖縄戦"], ans:0,
+   exp:"真珠湾攻撃。同日，日本はアメリカ・イギリスに宣戦布告しました。"},
+  {q:"② 真珠湾攻撃とほぼ同時に，日本陸軍がイギリス領マレー半島に上陸した作戦を何というか。",
+   choices:["ガダルカナル作戦","マレー作戦","絶対国防圏作戦","本土決戦"], ans:1,
+   exp:"マレー作戦。東南アジアの資源地帯獲得をめざす南方作戦の一つでした。"},
+  {q:"③ 1942年2月，日本軍が占領したイギリスの東南アジアにおける拠点はどこか。",
+   choices:["マニラ","バタビア","シンガポール","香港"], ans:2,
+   exp:"シンガポール。マレー作戦の総仕上げとして陥落させました。"},
+  {q:"④ 日本が唱えた，欧米の植民地支配からアジアを解放するという構想を何というか。",
+   choices:["絶対国防圏","五族協和","東亜新秩序","大東亜共栄圏"], ans:3,
+   exp:"大東亜共栄圏。実際には日本が資源や労働力を収奪する体制という側面が強かったです。"},
+  {q:"⑤ 1942年6月，日本海軍が空母4隻を失う大敗を喫した海戦を何というか。",
+   choices:["ミッドウェー海戦","日本海海戦","黄海海戦","対馬海戦"], ans:0,
+   exp:"ミッドウェー海戦。太平洋戦争における戦局の転換点となりました。"},
+  {q:"⑥ 1942年8月から半年余り，日米両軍が消耗戦を続けたソロモン諸島の島はどこか。",
+   choices:["サイパン島","沖縄島","ガダルカナル島","硫黄島"], ans:2,
+   exp:"ガダルカナル島。1943年2月，日本軍は多くの犠牲を出して撤退しました。"},
+  {q:"⑦ 1943年，日本が「これ以上後退できない」と定めた防衛ラインを何というか。",
+   choices:["大東亜共栄圏","東亜新秩序","絶対国防圏","五族協和"], ans:2,
+   exp:"絶対国防圏。マリアナ諸島（サイパン島など）を含んでいました。"},
+  {q:"⑧ 1944年7月に陥落し，日本本土がB-29の攻撃圏内に入るきっかけとなった島はどこか。",
+   choices:["ガダルカナル島","沖縄島","硫黄島","サイパン島"], ans:3,
+   exp:"サイパン島。絶対国防圏の要でした。"},
+  {q:"⑨ 1945年3月10日，東京の下町一帯を焼夷弾で無差別爆撃した出来事を何というか。",
+   choices:["東京大空襲","広島原爆投下","沖縄戦","本土決戦"], ans:0,
+   exp:"東京大空襲。一夜で10万人以上が犠牲になったとされます。"},
+  {q:"⑩ 1943年，文科系大学生らが軍に召集され戦場に送られたことを何というか。",
+   choices:["学童疎開","国家総動員","学徒出陣","徴兵制"], ans:1,
+   exp:"学徒出陣。深刻化する兵力不足を背景としておこなわれました。"},
+  {q:"⑪ 1945年4月，アメリカ軍が上陸し地上戦が始まった戦いを何というか。",
+   choices:["硫黄島の戦い","サイパンの戦い","本土決戦","沖縄戦"], ans:3,
+   exp:"沖縄戦。多数の民間人を巻き込む激しい戦闘となりました。"},
+  {q:"⑫ 沖縄戦後を見据え，日本本土でアメリカ軍を迎え撃つとして軍部が準備した構想を何というか。",
+   choices:["絶対国防圏","大東亜共栄圏","南進政策","本土決戦"], ans:3,
+   exp:"本土決戦。国民にも竹槍訓練などの動員がおこなわれました。"}
+];
+
+const checkItems = [
+  "1941年12月，真珠湾攻撃とマレー作戦により太平洋戦争が始まったことを説明できる",
+  "緒戦で日本がシンガポールなど東南アジアを占領したことを説明できる",
+  "大東亜共栄圏の構想と，その実態のちがいを説明できる",
+  "1942年6月，ミッドウェー海戦で日本が大敗したことを説明できる",
+  "ガダルカナル島の攻防を経て日本が守勢に転じたことを説明できる",
+  "1943年，絶対国防圏が定められたことを説明できる",
+  "1944年7月，サイパン島陥落で東条内閣が総辞職したことを説明できる",
+  "サイパン島陥落により本土空襲が本格化したことを説明できる",
+  "1945年3月，東京大空襲が起きたことを説明できる",
+  "学徒出陣・学童疎開など総力戦体制が強化されたことを説明できる",
+  "1945年4月，沖縄戦が始まったことを説明できる",
+  "本土決戦への不安が日本国内で高まっていたことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5, mq6: miniQuizData6 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 9;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（9問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

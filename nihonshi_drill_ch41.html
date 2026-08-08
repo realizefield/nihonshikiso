@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊶ 太平洋戦争 ドリル｜日本史基礎GAMBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:"BIZ UDPGothic","Meiryo",sans-serif;max-width:860px;margin:20px auto;background:#fdf5ec;font-size:16px;padding:0 16px 80px;line-height:1.8}
+  .back-link{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:bold;text-decoration:none;margin-bottom:14px}
+  .back-link:hover{background:#6a1c00}
+  .back-link.gray{background:#555}.back-link.gray:hover{background:#333}
+  .back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .unit-header{background:linear-gradient(135deg,#1a2a6b,#2a4090);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  .unit-header .unit-num{font-size:13px;opacity:0.85;margin-bottom:4px}
+  .unit-header h1{font-size:20px;margin:0 0 10px;line-height:1.5}
+  .stat-bar{display:flex;gap:8px;flex-wrap:wrap}
+  .stat-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;border-radius:20px;padding:3px 13px;font-size:12px;font-weight:bold}
+  .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .mode-tab{padding:10px 22px;border:2px solid #7a90c8;border-radius:22px;font-size:15px;font-weight:bold;cursor:pointer;background:#fff;color:#1a2a6b;transition:all 0.2s;flex:1;min-width:130px;text-align:center;font-family:inherit}
+  .mode-tab.active{background:#1a2a6b;color:#fff;border-color:#1a2a6b;box-shadow:0 3px 0 #0d1a45}
+  .mode-tab:hover:not(.active){background:#e8ecf8}
+  .panel{background:#fff;border-radius:12px;border:1px solid #7a90c8;padding:22px;margin-bottom:14px}
+  .fc-progress{font-size:13px;color:#888;margin-bottom:8px;text-align:center}
+  .fc-timer-row{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .fc-timer-btn{padding:6px 16px;border:2px solid #7a90c8;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;background:#fff;color:#1a2a6b;transition:all 0.15s;font-family:inherit}
+  .fc-timer-btn.active{background:#1a2a6b;color:#fff;border-color:#1a2a6b}
+  .fc-timer-btn:hover:not(.active){background:#e8ecf8}
+  .fc-card{background:linear-gradient(135deg,#f0f2ff,#dde2ff);color:#1a1a2e;border:2px solid #a0aee0;border-radius:18px;padding:36px 28px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;user-select:none;margin-bottom:14px;position:relative;box-shadow:0 4px 18px rgba(26,42,107,0.12);transition:background 0.3s,border-color 0.3s}
+  .fc-card .fc-front{font-size:19px;line-height:1.8;font-weight:bold;color:#1a1a2e}
+  .fc-card .fc-back{display:none;font-size:26px;font-weight:bold;color:#1a2a6b}
+  .fc-card .fc-hint{font-size:13px;color:#2a2a60;margin-top:10px;display:none;background:rgba(255,255,255,0.6);border-radius:8px;padding:5px 12px}
+  .fc-card.flipped{background:linear-gradient(135deg,#f0fff4,#d0f0d8);border-color:#6aab72}
+  .fc-card.flipped .fc-front{display:none}
+  .fc-card.flipped .fc-back{display:block}
+  .fc-card.flipped .fc-hint{display:block}
+  .fc-card .tap-hint{font-size:12px;color:#6070a0;position:absolute;bottom:12px;right:16px}
+  .fc-countdown{position:absolute;top:12px;right:16px;font-size:28px;font-weight:bold;color:#2a4090;opacity:0.7;line-height:1;min-width:30px;text-align:center}
+  .fc-btns{display:flex;gap:12px;margin-bottom:18px;justify-content:center}
+  .fc-btn-ok{padding:11px 32px;background:#1a6b22;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d4f15;font-family:inherit}
+  .fc-btn-ng{padding:11px 32px;background:#1a2a6b;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;font-family:inherit}
+  .fc-score-bar{background:#eee;border-radius:20px;height:12px;margin:10px 0;overflow:hidden}
+  .fc-score-fill{height:100%;background:linear-gradient(90deg,#1a6b22,#2d8a30);border-radius:20px;transition:width 0.4s}
+  .fc-result{background:#e8ecf8;border:2px solid #7a90c8;border-radius:12px;padding:20px;text-align:center;font-size:15px;display:none}
+  .fc-restart{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px;font-family:inherit}
+  .drill-q-num{font-size:12px;color:#888;margin-bottom:6px}
+  .drill-q{font-size:17px;font-weight:bold;color:#1a1a2e;margin-bottom:14px;line-height:1.7}
+  .drill-choices{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .drill-choice{padding:12px 16px;border-radius:9px;border:1.5px solid #7a90c8;background:#f0f2ff;cursor:pointer;font-size:15px;line-height:1.6;transition:all 0.15s;font-family:inherit;text-align:left}
+  .drill-choice:hover{border-color:#1a2a6b;background:#dde2ff}
+  .drill-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+  .drill-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .drill-choice.reveal{background:#dde2ff;border-color:#7a90c8;pointer-events:none}
+  .drill-exp{background:#1a1a2e;color:#f0f0f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;margin-bottom:12px;display:none}
+  .drill-exp.show{display:block}
+  .drill-exp .exp-ans{color:#a0b0ff;font-weight:bold;display:block;margin-bottom:4px}
+  .drill-next-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;display:none;font-family:inherit}
+  .drill-result{text-align:center;padding:28px;display:none}
+  .drill-result-score{font-size:44px;font-weight:bold;color:#1a2a6b;margin-bottom:8px}
+  .drill-result-msg{font-size:16px;color:#555;margin-bottom:18px}
+  .drill-restart-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+  .drill-prog{font-size:13px;color:#888;text-align:right;margin-bottom:8px}
+  .test-q-block{border-bottom:1px solid #eee;padding:16px 0}
+  .test-q-block:last-child{border-bottom:none}
+  .test-q{font-size:15px;font-weight:bold;color:#1a1a2e;margin-bottom:10px;line-height:1.7}
+  .test-q-num{display:inline-block;background:#1a2a6b;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;font-weight:bold;margin-right:8px}
+  .test-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  @media(max-width:560px){.test-choices{grid-template-columns:1fr}}
+  .test-choice{padding:9px 12px;border-radius:8px;border:1.5px solid #7a90c8;background:#f0f2ff;cursor:pointer;font-size:14px;transition:all 0.15s;font-family:inherit;text-align:left}
+  .test-choice:hover{border-color:#1a2a6b;background:#dde2ff}
+  .test-choice.selected{border-color:#1a2a6b;background:#c8d0f0;color:#1a1a45;font-weight:bold}
+  .test-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;font-weight:bold;pointer-events:none}
+  .test-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+  .test-choice.reveal{background:#dde2ff;border-color:#7a90c8;pointer-events:none}
+  .test-submit{background:#1a2a6b;color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 3px 0 #0d1a45;margin-top:18px;width:100%;font-family:inherit}
+  .test-submit:hover{background:#0d1a45}
+  .test-result-wrap{display:none;text-align:center;padding:30px 0}
+  .test-result-score{font-size:52px;font-weight:bold;color:#1a2a6b;line-height:1.2}
+  .test-result-sub{font-size:16px;color:#555;margin:8px 0 18px}
+  .test-badge{display:inline-block;background:linear-gradient(135deg,#1a2a6b,#4a5aa0);color:#fff;border-radius:12px;padding:8px 20px;font-size:15px;font-weight:bold;margin-bottom:14px}
+  .test-restart-btn{background:#1a2a6b;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 2px 0 #0d1a45;font-family:inherit}
+  .test-review{margin-top:22px;text-align:left}
+  .test-review-item{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:14px;line-height:1.7}
+  .test-review-item.ok{background:#d0f0d8;border-left:4px solid #1a6b22}
+  .test-review-item.ng{background:#fdd;border-left:4px solid #c00}
+  .setsu-section{background:#fff;border-radius:12px;border:1.5px solid #7a90c8;margin-bottom:20px;overflow:hidden}
+  .setsu-hd{background:linear-gradient(135deg,#1a2a6b,#2a4090);color:#fff;padding:12px 18px;font-size:15px;font-weight:bold;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;justify-content:space-between}
+  .setsu-hd .sarrow{font-size:13px;transition:transform .2s}
+  .setsu-body{padding:18px 20px;display:none}
+  .setsu-body.open{display:block}
+  .setsu-intro{background:#e8ecf8;border-left:5px solid #1a2a6b;border-radius:0 8px 8px 0;padding:12px 16px;font-size:15px;line-height:2.0;margin-bottom:16px;color:#1a1a2e}
+  .setsu-intro strong{color:#1a2a6b}
+  .setsu-h3{font-size:14px;font-weight:800;color:#1a2a6b;margin:16px 0 8px;padding-bottom:5px;border-bottom:2px solid #a0aee0}
+  .setsu-box{background:#f5f6ff;border-radius:8px;border:1px solid #b0bce0;padding:12px 16px;font-size:14px;line-height:1.95;margin-bottom:10px;color:#1a1a2e}
+  .setsu-box strong{color:#1a2a6b}
+  .setsu-box .lbl{display:inline-block;background:#1a2a6b;color:#fff;border-radius:4px;padding:1px 9px;font-size:12px;font-weight:bold;margin-right:6px;vertical-align:middle}
+  .setsu-box .lbl.orange{background:#c87000}
+  .setsu-note{background:#fffbe8;border-left:4px solid #c8a000;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.9;margin-top:10px;color:#4a3a00}
+  .confetti-piece{position:fixed;top:-20px;border-radius:3px;animation:confettiFall linear forwards;z-index:9999;pointer-events:none}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch41.html" class="back-link" style="background:#1a2a6b">← 単元㊶ テキストへ</a>
+  <a href="nihonshi_index.html" class="back-link gray">← 目次へ</a>
+</div>
+
+<div class="unit-header">
+  <div class="unit-num">第１０章　単元㊶ ドリル</div>
+  <h1>💥 太平洋戦争——開戦から敗色濃厚の日々へ</h1>
+  <div class="stat-bar">
+    <span class="stat-chip">🃏 フラッシュカード 12枚</span>
+    <span class="stat-chip">✏️ 4択ドリル 12問</span>
+    <span class="stat-chip">📋 確認テスト 12問</span>
+  </div>
+</div>
+
+<div class="setsu-section">
+  <div class="setsu-hd" id="setsu-hd" onclick="toggleSetsu()">
+    📚 単元㊶ のまとめ（まず読もう）<span class="sarrow">▼</span>
+  </div>
+  <div class="setsu-body" id="setsu-body">
+    <div class="setsu-intro">
+      1941年12月，日本は<strong>真珠湾攻撃</strong>と<strong>マレー作戦</strong>をほぼ同時におこない，太平洋戦争が始まりました。緒戦では<strong>シンガポール陥落</strong>など快進撃を続け<strong>大東亜共栄圏</strong>を掲げましたが，1942年6月の<strong>ミッドウェー海戦</strong>で大敗し，<strong>ガダルカナル島</strong>の攻防を経て戦局は悪化していきました。1944年7月には<strong>絶対国防圏</strong>の要<strong>サイパン島陥落</strong>で東条内閣が総辞職，1945年3月には<strong>東京大空襲</strong>など本土空襲が本格化，<strong>学徒出陣</strong>など総力戦体制が強まる中，日本は<strong>沖縄戦</strong>と<strong>本土決戦</strong>への不安を抱える敗色濃厚な局面へ追い詰められました。
+    </div>
+    <div class="setsu-h3">開戦から緒戦の快進撃</div>
+    <div class="setsu-box">
+      <span class="lbl">真珠湾攻撃・マレー作戦（1941年）</span> 太平洋戦争の開戦<br>
+      <span class="lbl orange">シンガポール陥落・大東亜共栄圏</span> 緒戦の快進撃と占領地統治
+    </div>
+    <div class="setsu-h3">戦局の転換と敗色濃厚</div>
+    <div class="setsu-box">
+      <span class="lbl">ミッドウェー海戦・ガダルカナル島</span> 攻勢から守勢への転換点<br>
+      <span class="lbl orange">絶対国防圏・サイパン島陥落・本土空襲</span> 東条内閣総辞職，本土が戦場に
+    </div>
+    <div class="setsu-note">💡 <strong>年号セット</strong>：1941年12月 開戦 → 1942年6月 ミッドウェー海戦 → 1943年2月 ガダルカナル撤退 → 1944年7月 サイパン島陥落 → 1945年3月 東京大空襲 → 1945年4月 沖縄戦</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="selectMode('flash')">🃏 フラッシュカード</button>
+  <button class="mode-tab" onclick="selectMode('drill')">✏️ 4択ドリル</button>
+  <button class="mode-tab" onclick="selectMode('test')">📋 確認テスト</button>
+</div>
+
+<div id="content-area"></div>
+
+<script>
+const UNIT = {
+  title:"単元㊶ 太平洋戦争——開戦から敗色濃厚の日々へ",
+  flashCards:[
+    {q:"1941年12月8日，日本海軍がハワイの米海軍基地を奇襲した出来事を何というか。",a:"真珠湾攻撃（しんじゅわんこうげき）",hint:"同日，日本はアメリカ・イギリスに宣戦布告した"},
+    {q:"真珠湾攻撃とほぼ同時に，日本陸軍がイギリス領マレー半島に上陸した作戦を何というか。",a:"マレー作戦（まれーさくせん）",hint:"東南アジアの資源地帯獲得をめざした"},
+    {q:"1942年2月，日本軍が占領したイギリスの東南アジアにおける拠点はどこか。",a:"シンガポール陥落（しんがぽーるかんらく）",hint:"「マレーの虎」山下奉文が指揮した"},
+    {q:"日本が唱えた，欧米の植民地支配からアジアを解放するという構想を何というか。",a:"大東亜共栄圏（だいとうあきょうえいけん）",hint:"実際は資源や労働力を収奪する体制だった"},
+    {q:"1942年6月，日本海軍が空母4隻を失う大敗を喫した海戦を何というか。",a:"ミッドウェー海戦（みっどうぇーかいせん）",hint:"太平洋戦争における戦局の転換点"},
+    {q:"1942年8月から半年余り，日米両軍が消耗戦を続けたソロモン諸島の島はどこか。",a:"ガダルカナル島（がだるかなるとう）",hint:"1943年2月，日本軍は撤退した"},
+    {q:"1943年，日本が定めた「これ以上後退できない」防衛ラインを何というか。",a:"絶対国防圏（ぜったいこくぼうけん）",hint:"マリアナ諸島を含んでいた"},
+    {q:"1944年7月に陥落し，日本本土がB-29の攻撃圏内に入るきっかけとなった島はどこか。",a:"サイパン島陥落（さいぱんとうかんらく）",hint:"東条英機内閣が総辞職した"},
+    {q:"1945年3月10日，東京の下町一帯を焼夷弾で爆撃した出来事を何というか。",a:"東京大空襲（とうきょうだいくうしゅう）",hint:"一夜で10万人以上が犠牲になったとされる"},
+    {q:"1943年，文科系大学生らが軍に召集され戦場に送られたことを何というか。",a:"学徒出陣（がくとしゅつじん）",hint:"深刻化する兵力不足が背景にあった"},
+    {q:"1945年4月，アメリカ軍が上陸し地上戦が始まった戦いを何というか。",a:"沖縄戦（おきなわせん）",hint:"多数の民間人を巻き込む戦闘となった"},
+    {q:"沖縄戦後を見据え，日本本土でアメリカ軍を迎え撃つとして準備された構想を何というか。",a:"本土決戦（ほんどけっせん）",hint:"国民にも竹槍訓練などの動員がおこなわれた"},
+  ],
+  drillQuiz:[
+    {q:"1941年12月8日，日本海軍がハワイの米海軍基地を奇襲した出来事を何というか。",
+     choices:["真珠湾攻撃","マレー作戦","ミッドウェー海戦","沖縄戦"], ans:0,
+     exp:"真珠湾攻撃。同日，日本はアメリカ・イギリスに宣戦布告しました。"},
+    {q:"真珠湾攻撃とほぼ同時に，日本陸軍がイギリス領マレー半島に上陸した作戦を何というか。",
+     choices:["ガダルカナル作戦","マレー作戦","絶対国防圏作戦","本土決戦"], ans:1,
+     exp:"マレー作戦。東南アジアの資源地帯獲得をめざす南方作戦の一つでした。"},
+    {q:"1942年2月，日本軍が占領したイギリスの東南アジアにおける拠点はどこか。",
+     choices:["マニラ","バタビア","シンガポール","香港"], ans:2,
+     exp:"シンガポール。マレー作戦の総仕上げとして陥落させました。"},
+    {q:"日本が唱えた，欧米の植民地支配からアジアを解放するという構想を何というか。",
+     choices:["絶対国防圏","五族協和","東亜新秩序","大東亜共栄圏"], ans:3,
+     exp:"大東亜共栄圏。実際には資源や労働力を収奪する体制という側面が強かったです。"},
+    {q:"1942年6月，日本海軍が空母4隻を失う大敗を喫した海戦を何というか。",
+     choices:["ミッドウェー海戦","日本海海戦","黄海海戦","対馬海戦"], ans:0,
+     exp:"ミッドウェー海戦。太平洋戦争における戦局の転換点となりました。"},
+    {q:"1942年8月から半年余り，日米両軍が消耗戦を続けたソロモン諸島の島はどこか。",
+     choices:["サイパン島","沖縄島","ガダルカナル島","硫黄島"], ans:2,
+     exp:"ガダルカナル島。1943年2月，日本軍は多くの犠牲を出して撤退しました。"},
+    {q:"1943年，日本が「これ以上後退できない」と定めた防衛ラインを何というか。",
+     choices:["大東亜共栄圏","東亜新秩序","絶対国防圏","五族協和"], ans:2,
+     exp:"絶対国防圏。マリアナ諸島（サイパン島など）を含んでいました。"},
+    {q:"1944年7月に陥落し，日本本土がB-29の攻撃圏内に入るきっかけとなった島はどこか。",
+     choices:["ガダルカナル島","沖縄島","硫黄島","サイパン島"], ans:3,
+     exp:"サイパン島。絶対国防圏の要でした。"},
+    {q:"1945年3月10日，東京の下町一帯を焼夷弾で爆撃した出来事を何というか。",
+     choices:["東京大空襲","広島原爆投下","沖縄戦","本土決戦"], ans:0,
+     exp:"東京大空襲。一夜で10万人以上が犠牲になったとされます。"},
+    {q:"1943年，文科系大学生らが軍に召集され戦場に送られたことを何というか。",
+     choices:["学童疎開","国家総動員","学徒出陣","徴兵制"], ans:2,
+     exp:"学徒出陣。深刻化する兵力不足を背景としておこなわれました。"},
+    {q:"1945年4月，アメリカ軍が上陸し地上戦が始まった戦いを何というか。",
+     choices:["硫黄島の戦い","サイパンの戦い","本土決戦","沖縄戦"], ans:3,
+     exp:"沖縄戦。多数の民間人を巻き込む激しい戦闘となりました。"},
+    {q:"沖縄戦後を見据え，日本本土でアメリカ軍を迎え撃つとして準備された構想を何というか。",
+     choices:["絶対国防圏","大東亜共栄圏","南進政策","本土決戦"], ans:0,
+     exp:"※正解は本土決戦です。国民にも竹槍訓練などの動員がおこなわれました。"}
+  ],
+  testQuiz:[
+    {q:"1941年12月8日，日本海軍がハワイの米海軍基地を奇襲した出来事を何というか。",choices:["真珠湾攻撃","マレー作戦","ミッドウェー海戦","沖縄戦"],ans:0},
+    {q:"真珠湾攻撃とほぼ同時に，日本陸軍がイギリス領マレー半島に上陸した作戦を何というか。",choices:["ガダルカナル作戦","マレー作戦","絶対国防圏作戦","本土決戦"],ans:1},
+    {q:"1942年2月，日本軍が占領したイギリスの東南アジアにおける拠点はどこか。",choices:["マニラ","バタビア","シンガポール","香港"],ans:2},
+    {q:"日本が唱えた，欧米の植民地支配からアジアを解放するという構想を何というか。",choices:["絶対国防圏","五族協和","東亜新秩序","大東亜共栄圏"],ans:3},
+    {q:"1942年6月，日本海軍が空母4隻を失う大敗を喫した海戦を何というか。",choices:["ミッドウェー海戦","日本海海戦","黄海海戦","対馬海戦"],ans:0},
+    {q:"1942年8月から半年余り，日米両軍が消耗戦を続けたソロモン諸島の島はどこか。",choices:["サイパン島","沖縄島","ガダルカナル島","硫黄島"],ans:2},
+    {q:"1943年，日本が「これ以上後退できない」と定めた防衛ラインを何というか。",choices:["大東亜共栄圏","東亜新秩序","絶対国防圏","五族協和"],ans:2},
+    {q:"1944年7月に陥落し，日本本土がB-29の攻撃圏内に入るきっかけとなった島はどこか。",choices:["ガダルカナル島","沖縄島","硫黄島","サイパン島"],ans:3},
+    {q:"1945年3月10日，東京の下町一帯を焼夷弾で爆撃した出来事を何というか。",choices:["東京大空襲","広島原爆投下","沖縄戦","本土決戦"],ans:0},
+    {q:"1943年，文科系大学生らが軍に召集され戦場に送られたことを何というか。",choices:["学童疎開","国家総動員","学徒出陣","徴兵制"],ans:2},
+    {q:"1945年4月，アメリカ軍が上陸し地上戦が始まった戦いを何というか。",choices:["硫黄島の戦い","サイパンの戦い","本土決戦","沖縄戦"],ans:3},
+    {q:"サイパン島陥落を受けて総辞職した内閣の首相は誰か。",choices:["近衛文麿","広田弘毅","若槻礼次郎","東条英機"],ans:3}
+  ]
+};
+
+let currentMode='flash';
+let fcCards=[],fcIndex=0,fcOk=0,fcNg=0,fcFlipped=false,fcTimerSec=0,fcTimerCount=0,fcTimerInterval=null;
+let drillQs=[],drillIndex=0,drillScore=0,drillAnswered=false;
+let testSelections={},testSubmitted=false;
+
+function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-tab').forEach((t,i)=>{t.classList.toggle('active',['flash','drill','test'][i]===mode);});renderContent();}
+function renderContent(){const area=document.getElementById('content-area');if(currentMode==='flash')renderFlash(area);else if(currentMode==='drill')renderDrill(area);else renderTest(area);}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fireConfetti(){const colors=['#1a2a6b','#4a5aa0','#f4d03f','#2d8a30','#e0eaff','#fff'];for(let i=0;i<80;i++){const el=document.createElement('div');el.className='confetti-piece';const size=8+Math.random()*10;el.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*0.6}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),4000);}}
+
+function initFlash(){fcCards=shuffle([...UNIT.flashCards]);fcIndex=0;fcOk=0;fcNg=0;fcFlipped=false;}
+function renderFlash(area){initFlash();area.innerHTML=`<div class="panel"><div class="fc-timer-row"><span style="font-size:13px;color:#888;margin-right:4px">⏱ 自動めくり：</span><button class="fc-timer-btn${fcTimerSec===2?' active':''}" data-sec="2" onclick="setFcTimer(2)">2秒</button><button class="fc-timer-btn${fcTimerSec===3?' active':''}" data-sec="3" onclick="setFcTimer(3)">3秒</button><button class="fc-timer-btn${fcTimerSec===5?' active':''}" data-sec="5" onclick="setFcTimer(5)">5秒</button><button class="fc-timer-btn${fcTimerSec===0?' active':''}" data-sec="0" onclick="setFcTimer(0)">手動</button></div><div id="fc-wrap">${buildFlashCard()}</div></div>`;startCardTimer();}
+function buildFlashCard(){if(fcIndex>=fcCards.length){const total=fcCards.length;const pct=Math.round(fcOk/total*100);clearInterval(fcTimerInterval);fcTimerInterval=null;if(pct===100)fireConfetti();return`<div class="fc-result" style="display:block"><div style="font-size:40px;font-weight:bold;color:#1a2a6b;margin-bottom:8px">${pct}%</div><div class="fc-score-bar"><div class="fc-score-fill" style="width:${pct}%"></div></div><p style="color:#555;margin:10px 0">正解 ${fcOk} / ${total}枚${pct===100?' 🎉 パーフェクト！':''}</p><button class="fc-restart" onclick="renderFlash(document.getElementById('content-area'))">もう一度</button></div>`;}
+const card=fcCards[fcIndex];return`<div class="fc-progress">📖 ${fcIndex+1} / ${fcCards.length}枚　✅ ${fcOk}　❌ ${fcNg}</div><div class="fc-card" id="fc-card" onclick="flipCard()"><span id="fc-countdown" class="fc-countdown" style="display:none"></span><div class="fc-front">${card.q}</div><div class="fc-back">${card.a}</div><div class="fc-hint">💡 ${card.hint}</div><span class="tap-hint">タップして確認</span></div><div class="fc-btns" id="fc-btns" style="display:none"><button class="fc-btn-ok" onclick="fcAnswer(true)">✅ 正解</button><button class="fc-btn-ng" onclick="fcAnswer(false)">❌ もう一度</button></div>`;}
+function flipCard(){if(fcFlipped)return;fcFlipped=true;clearInterval(fcTimerInterval);fcTimerInterval=null;const card=document.getElementById('fc-card');if(card)card.classList.add('flipped');const cd=document.getElementById('fc-countdown');if(cd)cd.style.display='none';const btns=document.getElementById('fc-btns');if(btns)btns.style.display='flex';}
+function fcAnswer(ok){if(ok)fcOk++;else fcNg++;fcIndex++;fcFlipped=false;clearInterval(fcTimerInterval);fcTimerInterval=null;document.getElementById('fc-wrap').innerHTML=buildFlashCard();startCardTimer();}
+function setFcTimer(sec){fcTimerSec=sec;document.querySelectorAll('.fc-timer-btn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.sec)===sec);});clearInterval(fcTimerInterval);fcTimerInterval=null;if(!fcFlipped)startCardTimer();}
+function startCardTimer(){clearInterval(fcTimerInterval);fcTimerInterval=null;if(fcTimerSec===0||fcFlipped)return;fcTimerCount=fcTimerSec;const cd=document.getElementById('fc-countdown');if(cd){cd.style.display='block';cd.textContent=fcTimerCount;}fcTimerInterval=setInterval(()=>{fcTimerCount--;const el=document.getElementById('fc-countdown');if(el)el.textContent=fcTimerCount>0?fcTimerCount:'';if(fcTimerCount<=0){clearInterval(fcTimerInterval);fcTimerInterval=null;flipCard();}},1000);}
+
+function renderDrill(area){drillQs=shuffle([...UNIT.drillQuiz]);drillIndex=0;drillScore=0;drillAnswered=false;area.innerHTML=`<div class="panel" id="drill-panel">${buildDrillQ()}</div>`;}
+function buildDrillQ(){if(drillIndex>=drillQs.length){const pct=Math.round(drillScore/drillQs.length*100);if(pct===100)fireConfetti();return`<div class="drill-result" style="display:block"><div class="drill-result-score">${drillScore} / ${drillQs.length}</div><div class="drill-result-msg">${pct>=80?'🎉 よくできました！':pct>=60?'👍 もう少しです！':'📚 復習しましょう！'}</div><button class="drill-restart-btn" onclick="renderDrill(document.getElementById('content-area'))">もう一度</button></div>`;}
+const q=drillQs[drillIndex];const choices=q.choices.map((c,i)=>`<button class="drill-choice" onclick="drillAnswer(${i})">${['ア','イ','ウ','エ'][i]}．${c}</button>`).join('');return`<div class="drill-prog">${drillIndex+1} / ${drillQs.length}問</div><div class="drill-q-num">問題 ${drillIndex+1}</div><div class="drill-q">${q.q}</div><div class="drill-choices" id="drill-choices">${choices}</div><div class="drill-exp" id="drill-exp"></div><button class="drill-next-btn" id="drill-next" onclick="drillNext()">次の問題 →</button>`;}
+function drillAnswer(idx){if(drillAnswered)return;drillAnswered=true;const q=drillQs[drillIndex];document.querySelectorAll('.drill-choice').forEach((el,i)=>{if(i===q.ans)el.classList.add('correct');else if(i===idx)el.classList.add('wrong');else el.classList.add('reveal');});if(idx===q.ans)drillScore++;const exp=document.getElementById('drill-exp');exp.innerHTML=`<span class="exp-ans">✅ 正解：${q.choices[q.ans]}</span>${q.exp}`;exp.classList.add('show');const btn=document.getElementById('drill-next');if(btn)btn.style.display='inline-block';}
+function drillNext(){drillIndex++;drillAnswered=false;document.getElementById('drill-panel').innerHTML=buildDrillQ();}
+
+function renderTest(area){testSelections={};testSubmitted=false;let html='<div class="panel">';UNIT.testQuiz.forEach((q,i)=>{html+=`<div class="test-q-block"><div class="test-q"><span class="test-q-num">${i+1}</span>${q.q}</div><div class="test-choices" id="tc-${i}">`;q.choices.forEach((c,ci)=>{html+=`<button class="test-choice" onclick="testSelect(${i},${ci})">${['ア','イ','ウ','エ'][ci]}．${c}</button>`;});html+='</div></div>';});html+=`<button class="test-submit" onclick="submitTest()">📋 採点する</button><div class="test-result-wrap" id="test-result"></div></div>`;area.innerHTML=html;}
+function testSelect(qi,ci){if(testSubmitted)return;testSelections[qi]=ci;document.querySelectorAll(`#tc-${qi} .test-choice`).forEach((el,i)=>{el.classList.toggle('selected',i===ci);});}
+function submitTest(){if(testSubmitted)return;const total=UNIT.testQuiz.length;const answered=Object.keys(testSelections).length;if(answered<total){alert(`まだ${total-answered}問が未回答です。`);return;}testSubmitted=true;let correct=0;let reviewHTML='<div class="test-review">';UNIT.testQuiz.forEach((q,i)=>{const sel=testSelections[i];const ans=q.ans;const ok=sel===ans;if(ok)correct++;document.querySelectorAll(`#tc-${i} .test-choice`).forEach((el,ci)=>{el.classList.remove('selected');if(ci===ans)el.classList.add('correct');else if(ci===sel)el.classList.add('wrong');else el.classList.add('reveal');});reviewHTML+=`<div class="test-review-item ${ok?'ok':'ng'}">${ok?'✅':'❌'} 問${i+1}：${q.q}<br><strong>正解：${['ア','イ','ウ','エ'][ans]}．${q.choices[ans]}</strong>${!ok?`<br>あなたの答え：${['ア','イ','ウ','エ'][sel]}．${q.choices[sel]}`:''}</div>`;});reviewHTML+='</div>';const pct=Math.round(correct/total*100);const pass=correct>=9;document.getElementById('test-result').innerHTML=`<div class="test-result-score">${correct} / ${total}</div><div class="test-result-sub">${pct}点${pass?' 🎉 合格！':' 😅 もう一度挑戦！'}</div>${pass?`<div class="test-badge">✨ 単元㊶ クリア！</div>`:''}<div id="test-review-block">${reviewHTML}</div><button class="test-restart-btn" onclick="renderTest(document.getElementById('content-area'))">もう一度</button>`;document.getElementById('test-result').style.display='block';if(pass)fireConfetti();}
+
+function toggleSetsu(){const body=document.getElementById('setsu-body');const arrow=document.querySelector('.sarrow');body.classList.toggle('open');arrow.textContent=body.classList.contains('open')?'▲':'▼';}
+
+selectMode('flash');
+</script>
+</body>
+</html>

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊷ 沖縄戦から戦後改革の始まりへ｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch41.html" class="back-to-index">← 単元㊶へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🌺 単元㊷　沖縄戦から戦後改革の始まりへ</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１０節　単元㊷</span>
+  <h2>沖縄戦——「鉄の暴風」と学徒隊</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1945年4月，アメリカ軍はついに日本本土に近い沖縄本島へ上陸し，<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">沖縄戦</span><span class="kw-pop"><span class="kw-title">沖縄戦（おきなわせん）</span><span class="kw-yomi">📖 読み：おきなわせん</span><span class="kw-body">1945年4月から6月にかけて，アメリカ軍が沖縄本島に上陸しておこなわれた地上戦。日本軍だけでなく，多数の民間人が戦闘に巻き込まれて犠牲となった，太平洋戦争で唯一の本格的な国内地上戦。</span></span></span>（A）が始まりました。激しい艦砲射撃と空襲は「鉄の暴風」と呼ばれ，戦場となった沖縄では，中学生や女学生までもが戦闘に動員され，看護要員として活動した女子学徒隊は<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">ひめゆり学徒隊</span><span class="kw-pop"><span class="kw-title">ひめゆり学徒隊（ひめゆりがくとたい）</span><span class="kw-yomi">📖 読み：ひめゆりがくとたい</span><span class="kw-body">沖縄戦で看護要員として動員された，沖縄師範学校女子部・県立第一高等女学校の女子学徒隊の通称。多くの生徒が戦火の中で命を落とした。</span></span></span>（B）と呼ばれました。男子生徒も<span class="kw">鉄血勤皇隊<span class="kw-pop"><span class="kw-title">鉄血勤皇隊（てっけつきんのうたい）</span><span class="kw-yomi">📖 読み：てっけつきんのうたい</span><span class="kw-body">沖縄戦で動員された，沖縄の男子中学生らによる学徒隊。通信や陣地構築，戦闘そのものにも投入され，多くの犠牲者を出した。</span></span></span>として戦闘に投入されました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 本土防衛の最後の砦とされた沖縄</span>
+    ▶ 前単元でみたように，絶対国防圏の崩壊とサイパン島陥落によって本土空襲が本格化し，日本軍は沖縄を「本土防衛の最後の砦」と位置づけて持久戦を計画した<br>
+    ▶ 沖縄には十分な援軍を送る余力がすでになく，地元の中学生・女学生までもが戦力として動員される，追い詰められた状況だった<br>
+    ▶ 沖縄戦は，日本国内で一般住民を巻き込んだ唯一の本格的な地上戦となった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 「集団自決」という悲劇</span>
+    ▶ 戦闘が激しくなる中，「アメリカ軍に捕らえられるくらいなら」という追い詰められた心理や軍の指示・強制などが複雑に絡み合い，家族や住民が集団で自らの命を絶つ「集団自決」という悲劇が各地で起きた<br>
+    ▶ 沖縄戦では，日本軍人・民間人あわせて20万人近くが犠牲になったとされ，沖縄県民の犠牲者は当時の人口の4人に1人にものぼったといわれる<br>
+    ▶ 沖縄戦は1945年6月に組織的な戦闘が終結したが，その後も散発的な戦闘や住民の被害は続いた
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 沖縄戦 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１０節　単元㊷</span>
+  <h2>広島・長崎への原爆投下</h2>
+
+  <p>沖縄戦の後もなお日本が降伏しない中，1945年8月6日，アメリカ軍は広島に人類史上初めて実戦で使用される<span class="kw">新型爆弾<span class="kw-pop"><span class="kw-title">新型爆弾</span><span class="kw-yomi">📖 読み：しんがたばくだん</span><span class="kw-body">当時，原子爆弾は「新型爆弾」とも呼ばれた。1発でそれまでの爆弾とはけた違いの破壊力を持ち，熱線・爆風・放射線により広範囲に壊滅的な被害をもたらした。</span></span></span>，すなわち原子爆弾を投下する<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">広島原爆投下</span><span class="kw-pop"><span class="kw-title">広島原爆投下（ひろしまげんばくとうか）</span><span class="kw-yomi">📖 読み：ひろしまげんばくとうか</span><span class="kw-body">1945年8月6日，アメリカ軍が広島市に原子爆弾を投下した出来事。市街地は一瞬にして壊滅し，その年のうちに約14万人が亡くなったと推定されている。</span></span></span>（C）をおこないました。さらに3日後の8月9日には，長崎にも原子爆弾が投下される<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">長崎原爆投下</span><span class="kw-pop"><span class="kw-title">長崎原爆投下（ながさきげんばくとうか）</span><span class="kw-yomi">📖 読み：ながさきげんばくとうか</span><span class="kw-body">1945年8月9日，アメリカ軍が長崎市に原子爆弾を投下した出来事。広島に続く2発目の原爆投下となり，その年のうちに約7万人が亡くなったと推定されている。</span></span></span>（D）がおこなわれました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 一瞬で失われた，数えきれない命</span>
+    ▶ 広島・長崎への原爆投下により，市街地は一瞬で壊滅し，熱線・爆風・放射線によって膨大な数の命が奪われた<br>
+    ▶ 生き延びた人々も，やけどや放射線障害などの後遺症に長期間苦しめられることになった<br>
+    ▶ 世界で初めて実戦使用された核兵器による惨禍は，戦後も長く語り継がれる人類史上の大きな悲劇となった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 広島・長崎原爆投下 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１０節　単元㊷</span>
+  <h2>ソ連参戦とポツダム宣言受諾</h2>
+
+  <p>広島への原爆投下の翌日，1945年8月8日，ソ連は日本と結んでいた<span class="kw">日ソ中立条約<span class="kw-pop"><span class="kw-title">日ソ中立条約（にっそちゅうりつじょうやく）</span><span class="kw-yomi">📖 読み：にっそちゅうりつじょうやく</span><span class="kw-body">1941年に日本とソ連が結んだ，互いに中立を守ることを約束した条約。しかし1945年8月，ソ連は条約を破って日本への参戦に踏み切った。</span></span></span>を破って日本に宣戦布告し，満州や樺太などへ侵攻する<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">ソ連参戦</span><span class="kw-pop"><span class="kw-title">ソ連参戦（それんさんせん）</span><span class="kw-yomi">📖 読み：それんさんせん</span><span class="kw-body">1945年8月8日，ソ連が日ソ中立条約を破って日本に宣戦布告し，満州・樺太・千島列島などへ侵攻したこと。日本にとって，最後の交渉の望みが絶たれる大きな打撃となった。</span></span></span>（E）に踏み切りました。日本はすでに7月の時点で，アメリカ・イギリス・中国が発表していた日本に無条件降伏を求める<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">ポツダム宣言</span><span class="kw-pop"><span class="kw-title">ポツダム宣言（ぽつだむせんげん）</span><span class="kw-yomi">📖 読み：ぽつだむせんげん</span><span class="kw-body">1945年7月，アメリカ・イギリス・中国（後にソ連も参加）が発表した，日本に無条件降伏を求める宣言。日本は当初黙殺したが，原爆投下とソ連参戦を受けて8月14日に受諾を決定した。</span></span></span>（F）を黙殺していましたが，原爆投下とソ連参戦という二重の衝撃を受け，ついに8月14日，御前会議でこれを受諾することを決定しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 最後の望みが絶たれた瞬間</span>
+    ▶ 日本の指導部の一部には，ソ連を仲介役として有利な条件での終戦交渉をおこなえないかという期待が残っていた<br>
+    ▶ しかしそのソ連自身が日本に宣戦布告したことで，この望みは完全に絶たれることになった<br>
+    ▶ 広島・長崎への原爆投下という圧倒的な衝撃と，ソ連参戦という外交的な打撃が同時に重なり，日本は降伏を決断せざるを得なくなった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 ソ連参戦とポツダム宣言 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１０節　単元㊷</span>
+  <h2>終戦——玉音放送とGHQによる占領開始</h2>
+
+  <p>ポツダム宣言受諾の決定を受け，1945年8月15日正午，昭和天皇がラジオを通じて国民に敗戦を伝える<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">玉音放送</span><span class="kw-pop"><span class="kw-title">玉音放送（ぎょくおんほうそう）</span><span class="kw-yomi">📖 読み：ぎょくおんほうそう</span><span class="kw-body">1945年8月15日正午，昭和天皇の肉声で戦争終結（ポツダム宣言受諾）を国民に伝えたラジオ放送。「終戦の詔書」を読み上げるもので，多くの国民がこれを聞いて敗戦を知った。</span></span></span>（G）がおこなわれました。<span class="kw">8月15日<span class="kw-pop"><span class="kw-title">8月15日</span><span class="kw-yomi">📖 読み：はちがつじゅうごにち</span><span class="kw-body">玉音放送により国民が敗戦を知った日。日本では「終戦記念日」として，戦争の犠牲者を追悼し平和を誓う日とされている。</span></span></span>をもって，日本は長く続いた戦争の終わりを迎えたのです。まもなく，アメリカ軍最高司令官の<span class="kw">マッカーサー<span class="kw-pop"><span class="kw-title">マッカーサー</span><span class="kw-yomi">📖 読み：まっかーさー</span><span class="kw-body">連合国軍最高司令官として日本占領の最高責任者となったアメリカの軍人。厚木飛行場に降り立ち，天皇に代わって日本を間接統治する占領政策を主導した。</span></span></span>が日本に到着し，占領政策をおこなう<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">GHQ</span><span class="kw-pop"><span class="kw-title">GHQ（じーえいちきゅー）</span><span class="kw-yomi">📖 読み：じーえいちきゅー</span><span class="kw-body">連合国軍最高司令官総司令部（General Headquarters）の略称。マッカーサーを最高司令官とし，日本政府を通じて指示を出す間接統治というかたちで，戦後日本の占領政策を進めた機関。</span></span></span>（H）による占領統治が始まりました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 戦争の終わりと，占領という新しい現実</span>
+    ▶ 玉音放送を聞いた国民の多くは，安堵と虚脱感，そしてこれからの生活への不安が入り混じった複雑な思いを抱いた<br>
+    ▶ GHQは日本政府をそのまま存続させたうえで指示を出す「間接統治」というかたちをとり，日本の非軍事化と民主化を占領政策の大きな目標に掲げた<br>
+    ▶ こうして日本は，独立国としての主権を一時的に失いながらも，戦後の新しい歩みを始めることになる
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 終戦とGHQによる占領開始 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１０節　単元㊷</span>
+  <h2>非軍事化・民主化——財閥解体と農地改革</h2>
+
+  <p>GHQは，日本が再び戦争をおこなう国にならないようにするため，非軍事化・民主化を柱とする<span class="kw">五大改革指令<span class="kw-pop"><span class="kw-title">五大改革指令（ごだいかいかくしれい）</span><span class="kw-yomi">📖 読み：ごだいかいかくしれい</span><span class="kw-body">1945年10月，GHQが日本政府に示した5つの改革方針。女性参政権の付与，労働組合の結成奨励，教育の自由主義化，圧政的諸制度の撤廃，経済機構の民主化を柱とした。</span></span></span>を日本政府に示しました。その一つとして，戦争を支えたとされる巨大企業グループを解体する<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">財閥解体</span><span class="kw-pop"><span class="kw-title">財閥解体（ざいばつかいたい）</span><span class="kw-yomi">📖 読み：ざいばつかいたい</span><span class="kw-body">三井・三菱・住友・安田などの巨大企業グループ（財閥）を，GHQの指令によって解体した経済民主化政策。財閥による経済の独占が軍国主義を支えたと考えられたためおこなわれた。</span></span></span>（I）がおこなわれ，また，地主が持つ土地を政府が買い上げて小作人に安く売り渡す<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">農地改革</span><span class="kw-pop"><span class="kw-title">農地改革（のうちかいかく）</span><span class="kw-yomi">📖 読み：のうちかいかく</span><span class="kw-body">地主が所有する農地を政府が強制的に買い上げ，実際に耕作していた小作人に安く売り渡した改革。これにより多くの小作人が自作農となり，農村の地主制が解体された。</span></span></span>（J）も進められました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ なぜ財閥と地主制が標的になったのか</span>
+    ▶ GHQは，一部の財閥が軍需産業と結びつき戦争遂行を経済的に支えたと考え，その経済力を解体することで再軍備を防ごうとした<br>
+    ▶ 農村では，地主が土地を持ち小作人が高い小作料を納める仕組みが続いており，こうした貧しさが軍国主義を支える土壌になったとも考えられていた<br>
+    ▶ これらの改革は，戦前の日本社会の構造そのものを大きく変えようとする，非常に大がかりなものだった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 戦後日本の社会を大きく変えた改革</span>
+    ▶ 財閥解体により，戦前のような一部企業グループによる経済支配は解体され，後の経済発展は多くの企業が競争するかたちで進んでいくことになった<br>
+    ▶ 農地改革によって多くの小作人が自分の土地を持つ自作農となり，農村の貧しさや地主・小作関係にもとづく社会構造は大きく変化した<br>
+    ▶ こうした改革は，戦後日本の経済や社会のありかたを方向づける重要な出発点となった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 財閥解体と農地改革 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+</div>
+
+<!-- ===== Section 6 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１０節　単元㊷</span>
+  <h2>戦後改革のひろがり——選挙権拡大と新しい日本へ</h2>
+
+  <p>民主化政策はさらに広がり，1945年，20歳以上の男女すべてに選挙権を認める<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">選挙権拡大</span><span class="kw-pop"><span class="kw-title">選挙権拡大（せんきょけんかくだい）</span><span class="kw-yomi">📖 読み：せんきょけんかくだい</span><span class="kw-body">1945年，選挙法が改正され，20歳以上の男女すべてに選挙権が認められたこと。それまで選挙権を持たなかった女性が初めて参政権を得た，大きな民主化の一歩。</span></span></span>（K）がおこなわれ，翌1946年の総選挙では日本で初めて女性議員も誕生しました。また，戦前・戦中に政府への批判や社会運動を厳しく取り締まっていた<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">治安維持法廃止</span><span class="kw-pop"><span class="kw-title">治安維持法廃止（ちあんいじほうはいし）</span><span class="kw-yomi">📖 読み：ちあんいじほうはいし</span><span class="kw-body">1925年に制定され，共産主義運動や政府批判の取り締まりに使われてきた治安維持法が，GHQの指令により1945年に廃止されたこと。あわせて政治犯として捕らえられていた人々も釈放された。</span></span></span>（L）もおこなわれ，思想や言論の自由が回復に向かいました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 敗色濃厚から，新しい日本のはじまりへ</span>
+    ▶ 沖縄戦の悲劇，広島・長崎への原爆投下，ソ連参戦という三重の打撃を受け，日本はポツダム宣言を受諾して戦争を終えた<br>
+    ▶ 玉音放送とともに始まったGHQの占領のもとで，財閥解体・農地改革・選挙権拡大・治安維持法廃止など，日本社会を大きく変える戦後改革が次々と進められていった<br>
+    ▶ これらの改革は，戦後日本が民主的な国家として歩み直していく，大きな出発点となった（日本国憲法の制定など，改革のその後の展開は次の単元で学習する）
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：沖縄戦から戦後改革の始まりまでのポイント</strong><br>
+    1945年4月，アメリカ軍が沖縄本島に上陸し，ひめゆり学徒隊など多くの民間人・学徒を巻き込む沖縄戦が始まりました。それでも降伏しない日本に対し，8月6日に広島，8月9日に長崎へ原爆が投下され，8月8日にはソ連も参戦しました。これらの衝撃を受け，日本は8月14日にポツダム宣言受諾を決定し，8月15日の玉音放送で国民に敗戦が伝えられました。まもなくマッカーサー率いるGHQによる占領統治が始まり，財閥解体・農地改革・選挙権拡大・治安維持法廃止など，非軍事化と民主化を柱とする戦後改革が次々と進められていきました。<br><br>
+    ▶ <strong>沖縄戦・ひめゆり学徒隊（1945年4〜6月）</strong>——本土唯一の地上戦と民間人の犠牲<br>
+    ▶ <strong>広島原爆投下・長崎原爆投下</strong>——人類史上初の核兵器実戦使用<br>
+    ▶ <strong>ソ連参戦・ポツダム宣言</strong>——最後の望みが絶たれ，降伏を決断<br>
+    ▶ <strong>玉音放送・GHQ</strong>——終戦とマッカーサーによる占領統治の開始<br>
+    ▶ <strong>財閥解体・農地改革</strong>——経済の民主化と地主制の解体<br>
+    ▶ <strong>選挙権拡大・治安維持法廃止</strong>——政治的自由の回復と新しい日本の出発点
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">沖縄戦</span>
+    <span class="tl-item">ひめゆり学徒隊</span>
+    <span class="tl-item">広島原爆投下</span>
+    <span class="tl-item">長崎原爆投下</span>
+    <span class="tl-item">ソ連参戦</span>
+    <span class="tl-item">ポツダム宣言</span>
+    <span class="tl-item">玉音放送</span>
+    <span class="tl-item">GHQ</span>
+    <span class="tl-item">財閥解体</span>
+    <span class="tl-item">農地改革</span>
+    <span class="tl-item">選挙権拡大</span>
+    <span class="tl-item">治安維持法廃止</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('sengokaikaku')">🕊 わずか数週間で降伏が決まったのはなぜか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq6',this)">
+      📝 選挙権拡大と新しい日本 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq6"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊷ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch42.html">単元㊷ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊷ まとめテスト（全12問）</h2>
+  <p style="font-size:14px;color:#64748b">9問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 12 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-sengokaikaku" onclick="if(event.target===this)closeModal('sengokaikaku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('sengokaikaku')">✕</button>
+    <div class="modal-title">🕊 わずか数週間で降伏が決まったのはなぜか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 沖縄戦がもたらした，本土決戦の現実味</div>
+      <div class="cause-box">
+        <span class="label">🎯 「本土決戦」がすでに始まっていた</span>
+        沖縄戦は，アメリカ軍が本土に上陸した場合に何が起こるかを日本の指導部に強く印象づけました。<br><br>
+        ▶ 民間人までもが戦闘に巻き込まれ，20万人近くが犠牲になったという事実は，本土決戦がどれほど悲惨な結果を招くかを示していた<br>
+        ▶ それでも軍部の中には本土決戦を主張する声が根強く残っており，降伏の決断はなかなか下されなかった
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 原爆とソ連参戦という「二重の衝撃」</div>
+      <div class="why-box">
+        <span class="label">🚩 抵抗の余地を一気に奪った2つの出来事</span>
+        広島・長崎への原爆投下は，これまでの兵器とは比較にならない破壊力で日本に衝撃を与えました。さらにソ連参戦は，日本にとって最後の外交的な望みを断ち切るものでした。<br><br>
+        ▶ 原爆投下により，これ以上戦争を続ければ他の都市も同様の被害を受けるという現実が突きつけられた<br>
+        ▶ ソ連仲介による有利な講和という期待が完全に消え，日本にはポツダム宣言受諾以外の選択肢がほぼ残されていなかった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 終戦から，占領・戦後改革へ</div>
+      <div class="result-box">
+        <span class="label">🏗 敗戦国から，民主的な国家への出発</span>
+        8月15日の玉音放送で戦争は終わりましたが，日本の歩みはそこで終わったわけではありません。GHQによる占領のもとで，財閥解体・農地改革・選挙権拡大・治安維持法廃止といった戦後改革が次々と進められ，戦前の日本社会の仕組みは大きく変えられていきました。これらの改革は，やがて日本国憲法の制定へとつながっていく，戦後日本の出発点だったのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 12語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"沖縄戦", "B":"ひめゆり学徒隊", "C":"広島原爆投下", "D":"長崎原爆投下",
+  "E":"ソ連参戦", "F":"ポツダム宣言", "G":"玉音放送", "H":"GHQ",
+  "I":"財閥解体", "J":"農地改革", "K":"選挙権拡大", "L":"治安維持法廃止"
+};
+const wordBank = ["沖縄戦","ひめゆり学徒隊","広島原爆投下","長崎原爆投下",
+  "ソ連参戦","ポツダム宣言","玉音放送","GHQ",
+  "財閥解体","農地改革","選挙権拡大","治安維持法廃止"];
+
+const miniQuizData1 = [
+  {q:"①　1945年4月，アメリカ軍が沖縄本島に上陸して始まった地上戦を何というか。",
+   choices:["沖縄戦","本土決戦","硫黄島の戦い","サイパンの戦い"], ans:0,
+   exp:"沖縄戦。太平洋戦争で唯一，国内で本格的におこなわれた地上戦でした。"},
+  {q:"②　沖縄戦で看護要員として動員された女子学徒隊は何と呼ばれたか。",
+   choices:["鉄血勤皇隊","女子挺身隊","ひめゆり学徒隊","勤労動員隊"], ans:2,
+   exp:"ひめゆり学徒隊。多くの生徒が戦火の中で命を落としました。"},
+  {q:"③　沖縄戦で動員された男子中学生らの学徒隊は何と呼ばれたか。",
+   choices:["鉄血勤皇隊","ひめゆり学徒隊","学徒出陣隊","国民義勇隊"], ans:0,
+   exp:"鉄血勤皇隊。通信や陣地構築，戦闘そのものにも投入されました。"},
+  {q:"④　沖縄戦の被害の説明として正しいものはどれか。",
+   choices:["軍人のみが犠牲になった","民間人は戦闘に巻き込まれなかった","多数の民間人が犠牲になった","被害はごく少数にとどまった"], ans:2,
+   exp:"日本軍人・民間人あわせて20万人近くが犠牲になったとされます。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1945年8月6日，アメリカ軍が世界で初めて実戦使用の原子爆弾を投下した都市はどこか。",
+   choices:["東京","広島","長崎","大阪"], ans:1,
+   exp:"広島。市街地は一瞬にして壊滅しました。"},
+  {q:"②　広島に続き，1945年8月9日に原子爆弾が投下された都市はどこか。",
+   choices:["京都","神戸","長崎","福岡"], ans:2,
+   exp:"長崎。広島に続く2発目の原爆投下でした。"},
+  {q:"③　原子爆弾がもたらした被害の説明として正しいものはどれか。",
+   choices:["建物の被害のみで人的被害はなかった","熱線・爆風・放射線により膨大な命が失われた","被害は投下直後だけで終わった","放射線障害は発生しなかった"], ans:1,
+   exp:"熱線・爆風・放射線により，投下直後も，その後も多くの命が失われました。"},
+  {q:"④　当時，原子爆弾は日本国内でどのように呼ばれることがあったか。",
+   choices:["新型爆弾","焼夷弾","化学兵器","毒ガス弾"], ans:0,
+   exp:"新型爆弾。それまでの爆弾とはけた違いの破壊力を持っていました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1945年8月8日，日ソ中立条約を破って日本に宣戦布告した国はどこか。",
+   choices:["中国","ソ連","イギリス","フランス"], ans:1,
+   exp:"ソ連。満州・樺太・千島列島などへ侵攻しました。"},
+  {q:"②　1945年7月に発表された，日本に無条件降伏を求める宣言を何というか。",
+   choices:["ハル・ノート","大西洋憲章","ポツダム宣言","九カ国条約"], ans:2,
+   exp:"ポツダム宣言。日本は当初これを黙殺していました。"},
+  {q:"③　日本がポツダム宣言の受諾を決定した直接のきっかけとして正しいものはどれか。",
+   choices:["国内の食料が豊富になったため","原爆投下とソ連参戦という二重の打撃を受けたため","アメリカとの貿易が再開したため","国際連盟に復帰できたため"], ans:1,
+   exp:"原爆投下とソ連参戦により，最後の望みが絶たれ受諾を決断しました。"},
+  {q:"④　ソ連参戦が日本に与えた影響として正しいものはどれか。",
+   choices:["ソ連の仲介による有利な講和の望みが絶たれた","ソ連が日本を全面的に支援した","戦争がすぐに終わり被害はなかった","満州や樺太の防衛が強化された"], ans:0,
+   exp:"ソ連を仲介とした有利な終戦交渉への期待が完全に絶たれました。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1945年8月15日正午，昭和天皇がラジオで戦争終結を伝えた放送を何というか。",
+   choices:["終戦演説","玉音放送","国民放送","戦況放送"], ans:1,
+   exp:"玉音放送。「終戦の詔書」が読み上げられました。"},
+  {q:"②　連合国軍最高司令官として日本占領の最高責任者となった人物は誰か。",
+   choices:["ルーズベルト","トルーマン","マッカーサー","アイゼンハワー"], ans:2,
+   exp:"マッカーサー。厚木飛行場に降り立ち占領政策を主導しました。"},
+  {q:"③　マッカーサーを最高司令官とする占領統治機関の略称は何か。",
+   choices:["GHQ","UN","NATO","EU"], ans:0,
+   exp:"GHQ（連合国軍最高司令官総司令部）。日本政府を通じた間接統治をおこないました。"},
+  {q:"④　GHQによる占領統治の方法として正しいものはどれか。",
+   choices:["日本政府を廃止し直接統治した","日本政府を存続させ間接統治した","占領統治はおこなわれなかった","天皇が全権を握り続けた"], ans:1,
+   exp:"GHQは日本政府をそのまま存続させたうえで指示を出す間接統治をおこないました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　1945年10月，GHQが日本政府に示した5つの改革方針を何というか。",
+   choices:["五大改革指令","国家総動員法","大政翼賛体制","戦後三大改革"], ans:0,
+   exp:"五大改革指令。女性参政権や労働組合結成の奨励などを柱としました。"},
+  {q:"②　三井・三菱・住友・安田などの巨大企業グループを解体した政策を何というか。",
+   choices:["農地改革","財閥解体","国家総動員","産業統制"], ans:1,
+   exp:"財閥解体。財閥による経済の独占が軍国主義を支えたと考えられたためです。"},
+  {q:"③　地主の土地を政府が買い上げ小作人に安く売り渡した改革を何というか。",
+   choices:["財閥解体","五大改革指令","農地改革","選挙権拡大"], ans:2,
+   exp:"農地改革。多くの小作人が自作農となりました。"},
+  {q:"④　財閥解体・農地改革がおこなわれた目的として正しいものはどれか。",
+   choices:["日本の再軍備を後押しするため","戦前の経済構造を維持するため","非軍事化・民主化を進めるため","天皇の権限を強化するため"], ans:2,
+   exp:"戦争を支えた経済構造を解体し，非軍事化・民主化を進めることが目的でした。"}
+];
+
+const miniQuizData6 = [
+  {q:"①　1945年，20歳以上の男女すべてに選挙権が認められたことを何というか。",
+   choices:["普通選挙法制定","選挙権拡大","治安維持法制定","国会開設"], ans:1,
+   exp:"選挙権拡大。女性が初めて参政権を得た大きな民主化の一歩でした。"},
+  {q:"②　1925年に制定され，1945年にGHQの指令により廃止された法律は何か。",
+   choices:["治安維持法","国家総動員法","工場法","徴兵令"], ans:0,
+   exp:"治安維持法。共産主義運動や政府批判の取り締まりに使われてきました。"},
+  {q:"③　1946年の総選挙で初めて実現したこととして正しいものはどれか。",
+   choices:["天皇による選挙","女性議員の誕生","選挙の廃止","一党独裁の確立"], ans:1,
+   exp:"20歳以上の女性にも選挙権が認められ，女性議員が誕生しました。"},
+  {q:"④　沖縄戦から戦後改革に至る一連の流れとして正しいものはどれか。",
+   choices:["沖縄戦の勝利で戦争が続いた","原爆・ソ連参戦を経て降伏し，戦後改革が始まった","戦後改革はおこなわれなかった","占領統治はすぐに終わった"], ans:1,
+   exp:"沖縄戦のあと，原爆投下・ソ連参戦を経て降伏し，GHQのもとで戦後改革が始まりました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1945年4月，アメリカ軍が沖縄本島に上陸して始まった地上戦を何というか。",
+   choices:["沖縄戦","本土決戦","硫黄島の戦い","サイパンの戦い"], ans:0,
+   exp:"沖縄戦。太平洋戦争で唯一，国内で本格的におこなわれた地上戦でした。"},
+  {q:"② 沖縄戦で看護要員として動員された女子学徒隊は何と呼ばれたか。",
+   choices:["鉄血勤皇隊","ひめゆり学徒隊","女子挺身隊","国民義勇隊"], ans:1,
+   exp:"ひめゆり学徒隊。多くの生徒が戦火の中で命を落としました。"},
+  {q:"③ 1945年8月6日，アメリカ軍が世界で初めて実戦使用の原子爆弾を投下した都市はどこか。",
+   choices:["東京","長崎","広島","大阪"], ans:2,
+   exp:"広島。市街地は一瞬にして壊滅しました。"},
+  {q:"④ 広島に続き，1945年8月9日に原子爆弾が投下された都市はどこか。",
+   choices:["京都","神戸","福岡","長崎"], ans:3,
+   exp:"長崎。広島に続く2発目の原爆投下でした。"},
+  {q:"⑤ 1945年8月8日，日ソ中立条約を破って日本に宣戦布告した国はどこか。",
+   choices:["ソ連","中国","イギリス","フランス"], ans:0,
+   exp:"ソ連。満州・樺太・千島列島などへ侵攻しました。"},
+  {q:"⑥ 1945年7月に発表された，日本に無条件降伏を求める宣言を何というか。",
+   choices:["ハル・ノート","ポツダム宣言","大西洋憲章","九カ国条約"], ans:1,
+   exp:"ポツダム宣言。日本は8月14日にこれを受諾しました。"},
+  {q:"⑦ 1945年8月15日正午，昭和天皇がラジオで戦争終結を伝えた放送を何というか。",
+   choices:["終戦演説","国民放送","玉音放送","戦況放送"], ans:2,
+   exp:"玉音放送。「終戦の詔書」が読み上げられました。"},
+  {q:"⑧ 連合国軍最高司令官として日本占領の最高責任者となった人物は誰か。",
+   choices:["ルーズベルト","トルーマン","アイゼンハワー","マッカーサー"], ans:3,
+   exp:"マッカーサー。占領政策を主導しました。"},
+  {q:"⑨ マッカーサーを最高司令官とする占領統治機関の略称は何か。",
+   choices:["GHQ","UN","NATO","EU"], ans:0,
+   exp:"GHQ（連合国軍最高司令官総司令部）。日本政府を通じた間接統治をおこないました。"},
+  {q:"⑩ 三井・三菱・住友・安田などの巨大企業グループを解体した政策を何というか。",
+   choices:["農地改革","財閥解体","国家総動員","産業統制"], ans:1,
+   exp:"財閥解体。財閥による経済の独占が軍国主義を支えたと考えられたためです。"},
+  {q:"⑪ 地主の土地を政府が買い上げ小作人に安く売り渡した改革を何というか。",
+   choices:["財閥解体","五大改革指令","農地改革","選挙権拡大"], ans:2,
+   exp:"農地改革。多くの小作人が自作農となりました。"},
+  {q:"⑫ 1925年に制定され，1945年にGHQの指令により廃止された法律は何か。",
+   choices:["国家総動員法","工場法","徴兵令","治安維持法"], ans:3,
+   exp:"治安維持法。あわせて政治犯として捕らえられていた人々も釈放されました。"}
+];
+
+const checkItems = [
+  "1945年4月，アメリカ軍が沖縄本島に上陸し沖縄戦が始まったことを説明できる",
+  "沖縄戦でひめゆり学徒隊など多くの民間人・学徒が犠牲になったことを説明できる",
+  "1945年8月6日，広島に原子爆弾が投下されたことを説明できる",
+  "1945年8月9日，長崎に原子爆弾が投下されたことを説明できる",
+  "1945年8月8日，ソ連が日ソ中立条約を破って参戦したことを説明できる",
+  "日本がポツダム宣言を受諾し降伏を決定した経緯を説明できる",
+  "1945年8月15日，玉音放送により終戦が国民に伝えられたことを説明できる",
+  "マッカーサー率いるGHQによる占領統治が始まったことを説明できる",
+  "財閥解体がおこなわれたことを説明できる",
+  "農地改革がおこなわれたことを説明できる",
+  "1945年，20歳以上の男女に選挙権が認められたことを説明できる",
+  "治安維持法が廃止されたことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5, mq6: miniQuizData6 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 9;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（9問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

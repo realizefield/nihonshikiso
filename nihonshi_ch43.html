@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊸ 日本国憲法から主権回復へ｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch42.html" class="back-to-index">← 単元㊷へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>📜 単元㊸　日本国憲法から主権回復へ</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１１節　単元㊸</span>
+  <h2>日本国憲法の制定——GHQ草案から公布へ</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>終戦後，GHQは日本政府に対し，戦前の<span class="kw">大日本帝国憲法改正<span class="kw-pop"><span class="kw-title">大日本帝国憲法改正（だいにっぽんていこくけんぽうかいせい）</span><span class="kw-yomi">📖 読み：だいにっぽんていこくけんぽうかいせい</span><span class="kw-body">GHQは当初，日本政府に大日本帝国憲法の改正というかたちで新しい憲法づくりを求めた。しかし日本政府の当初案は天皇の権限を残す保守的な内容だったため，GHQは自ら草案を作成することになった。</span></span></span>という形での憲法改正を求めましたが，日本政府の案が保守的だったため，GHQ自らが草案（マッカーサー草案）を作成しました。この草案をもとに帝国議会で審議・修正がおこなわれ，1946年11月3日，<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">日本国憲法</span><span class="kw-pop"><span class="kw-title">日本国憲法（にほんこくけんぽう）</span><span class="kw-yomi">📖 読み：にほんこくけんぽう</span><span class="kw-body">1946年11月3日に公布され，1947年5月3日に施行された日本の新しい憲法。GHQが作成した草案（マッカーサー草案）をもとに，国民主権・平和主義・基本的人権の尊重を柱として制定された。</span></span></span>（A）が公布され，翌1947年5月3日から施行されました。この草案作成の中心となったのが<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">マッカーサー草案</span><span class="kw-pop"><span class="kw-title">マッカーサー草案（まっかーさーそうあん）</span><span class="kw-yomi">📖 読み：まっかーさーそうあん</span><span class="kw-body">日本政府案が保守的だったことを受け，GHQが約1週間という短期間で作成した憲法草案。天皇主権から国民主権への転換など，戦後日本の憲法の骨格を定めた。</span></span></span>（B）でした。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 天皇主権から国民主権への大転換</span>
+    ▶ 前単元でみたように，GHQは非軍事化・民主化を占領政策の柱としており，憲法改正はその総仕上げにあたる重要な課題だった<br>
+    ▶ 日本政府がまとめた当初の改正案は，天皇の統治権をほぼそのまま残す内容であり，GHQはこれでは不十分と判断した<br>
+    ▶ そこでGHQは自ら草案を作成し，これをもとに日本政府・帝国議会が審議するという，異例の手順で新しい憲法がつくられた
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 国民が主役の憲法へ</span>
+    ▶ マッカーサー草案は，天皇を「日本国および日本国民統合の象徴」と位置づけ，主権を国民に置くという大きな転換を打ち出した<br>
+    ▶ この草案をもとにした帝国議会での審議には，国民の間でも大きな関心が寄せられた<br>
+    ▶ こうして誕生した日本国憲法は，戦前の大日本帝国憲法とは根本的に性格の異なる憲法となった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 日本国憲法の制定 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１１節　単元㊸</span>
+  <h2>日本国憲法の三大原則</h2>
+
+  <p>日本国憲法は，3つの基本原理のうえに成り立っています。1つ目は，主権が国民にあるとする<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">国民主権</span><span class="kw-pop"><span class="kw-title">国民主権（こくみんしゅけん）</span><span class="kw-yomi">📖 読み：こくみんしゅけん</span><span class="kw-body">政治のあり方を最終的に決める権限（主権）が国民にあるとする原則。大日本帝国憲法における天皇主権から大きく転換した，日本国憲法の柱の一つ。</span></span></span>（C）です。2つ目は，戦争を放棄し戦力を持たないことを定めた第9条を中心とする<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">平和主義</span><span class="kw-pop"><span class="kw-title">平和主義（へいわしゅぎ）</span><span class="kw-yomi">📖 読み：へいわしゅぎ</span><span class="kw-body">憲法第9条で戦争の放棄・戦力の不保持・交戦権の否認を定めた原則。日本国憲法の大きな特徴の一つとされる。</span></span></span>（D）です。そして3つ目が，すべての国民が生まれながらに持つ権利を保障する<span class="kw">基本的人権の尊重<span class="kw-pop"><span class="kw-title">基本的人権の尊重（きほんてきじんけんのそんちょう）</span><span class="kw-yomi">📖 読み：きほんてきじんけんのそんちょう</span><span class="kw-body">すべての国民が生まれながらに持つ自由・平等などの権利（基本的人権）を，国家が最大限尊重しなければならないとする原則。日本国憲法の三大原則の一つ。</span></span></span>です。</p>
+
+  <div class="result-box">
+    <span class="label">📜 戦前との決定的なちがい</span>
+    ▶ 大日本帝国憲法では天皇に主権があり，軍隊の統帥権も天皇に属していたが，日本国憲法ではこれらが根本的に転換された<br>
+    ▶ 平和主義（憲法第9条）は，二度と戦争をおこなわないという決意を憲法に明記した，世界的にも珍しい規定である<br>
+    ▶ 基本的人権の尊重により，思想・言論の自由や男女平等など，国民一人ひとりの権利が憲法上明確に保障されることになった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 日本国憲法の三大原則 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１１節　単元㊸</span>
+  <h2>教育の民主化——教育基本法と学校制度改革</h2>
+
+  <p>戦前の教育は，天皇への忠誠を説く<span class="kw">修身の廃止<span class="kw-pop"><span class="kw-title">修身の廃止（しゅうしんのはいし）</span><span class="kw-yomi">📖 読み：しゅうしんのはいし</span><span class="kw-body">戦前・戦中の学校でおこなわれていた，天皇への忠誠や国家への奉仕を説く道徳教育科目「修身」が，GHQの指令により廃止されたこと。軍国主義的な教育内容の一掃を目的とした。</span></span></span>など，軍国主義的な内容を含んでいましたが，GHQのもとで教育の民主化も進められました。1947年，教育の機会均等や男女共学などを定めた<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">教育基本法</span><span class="kw-pop"><span class="kw-title">教育基本法（きょういくきほんほう）</span><span class="kw-yomi">📖 読み：きょういくきほんほう</span><span class="kw-body">1947年に制定された，戦後の教育の基本理念を定めた法律。教育の機会均等，男女共学，個人の尊厳の尊重などを掲げ，軍国主義的な教育からの脱却をめざした。</span></span></span>（E）が制定され，学校制度も小学校6年・中学校3年・高校3年・大学4年からなる<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">六・三・三・四制</span><span class="kw-pop"><span class="kw-title">六・三・三・四制（ろく・さん・さん・よんせい）</span><span class="kw-yomi">📖 読み：ろく・さん・さん・よんせい</span><span class="kw-body">小学校6年・中学校3年・高校3年・大学4年からなる，戦後新たに導入された学校制度。義務教育が小学校6年から中学校までの9年間に延長された。</span></span></span>（F）に改められました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 教育も「軍国主義の温床」とみなされた</span>
+    ▶ GHQは，戦前の教育が軍国主義的な思想を子どもたちに植えつける役割を果たしたと考え，非軍事化・民主化の一環として教育制度そのものの改革に踏み込んだ<br>
+    ▶ 修身のほか，国史（歴史）や地理の授業も一時停止され，教科書の内容も大きく見直された<br>
+    ▶ こうした教育改革は，財閥解体・農地改革と並ぶ，戦後日本社会を変えた重要な柱の一つとなった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 教育基本法と学校制度改革 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１１節　単元㊸</span>
+  <h2>東京裁判——戦争責任の追及</h2>
+
+  <p>1946年から，戦争を指導した責任者を裁く<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">東京裁判</span><span class="kw-pop"><span class="kw-title">東京裁判（とうきょうさいばん）</span><span class="kw-yomi">📖 読み：とうきょうさいばん</span><span class="kw-body">正式名称は極東国際軍事裁判。1946年から1948年にかけて，連合国が日本の戦争指導者の責任を裁いた裁判。東条英機ら多くの指導者が起訴された。</span></span></span>（G）（正式名称：極東国際軍事裁判）が<span class="kw">巣鴨拘置所<span class="kw-pop"><span class="kw-title">巣鴨拘置所（すがもこうちしょ）</span><span class="kw-yomi">📖 読み：すがもこうちしょ</span><span class="kw-body">東京裁判で起訴されたA級戦犯容疑者らが収容された東京の拘置所。裁判の被告人の多くがここに収監された。</span></span></span>に収容された被告人らに対しておこなわれました。この裁判で，開戦時の首相であった東条英機をはじめとする戦争指導者は<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">A級戦犯</span><span class="kw-pop"><span class="kw-title">A級戦犯（えーきゅうせんぱん）</span><span class="kw-yomi">📖 読み：えーきゅうせんぱん</span><span class="kw-body">東京裁判で「平和に対する罪」を問われた戦争指導者たち。東条英機ら7名が死刑判決を受け，1948年に処刑された。</span></span></span>（H）として裁かれ，東条英機ら7名が死刑判決を受けました。</p>
+
+  <div class="why-box">
+    <span class="label">🚩 「勝者による裁き」という指摘も</span>
+    ▶ 東京裁判は，戦争の責任の所在を明らかにし，二度と同じ過ちを繰り返させないという目的でおこなわれた<br>
+    ▶ 一方で，連合国側の行為（原爆投下など）は裁判の対象とされなかったことなどから，「勝者が敗者を裁く裁判ではないか」という指摘も根強くある<br>
+    ▶ こうした評価をめぐる議論は，現在に至るまで続いている
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 東京裁判 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１１節　単元㊸</span>
+  <h2>冷戦の始まりと占領政策の転換——逆コース</h2>
+
+  <p>1940年代後半，アメリカを中心とする資本主義陣営とソ連を中心とする社会主義陣営が対立する<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">冷戦</span><span class="kw-pop"><span class="kw-title">冷戦（れいせん）</span><span class="kw-yomi">📖 読み：れいせん</span><span class="kw-body">第二次世界大戦後，アメリカを中心とする資本主義陣営とソ連を中心とする社会主義陣営が，直接の武力衝突（熱戦）を避けながら激しく対立した状態。この対立はGHQの日本占領政策にも大きな影響を与えた。</span></span></span>（I）が始まりました。<span class="kw">朝鮮戦争<span class="kw-pop"><span class="kw-title">朝鮮戦争（ちょうせんせんそう）</span><span class="kw-yomi">📖 読み：ちょうせんせんそう</span><span class="kw-body">1950年に始まった，朝鮮半島を舞台とした戦争。冷戦の対立が実際の戦闘に発展した代表例で，日本の占領政策の転換を決定的にした。</span></span></span>が1950年に始まると，アメリカは日本を東アジアにおける社会主義陣営への防波堤にしようと考え，それまでの非軍事化中心の政策から一転する<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">逆コース</span><span class="kw-pop"><span class="kw-title">逆コース（ぎゃくこーす）</span><span class="kw-yomi">📖 読み：ぎゃくこーす</span><span class="kw-body">冷戦の激化を受け，GHQの占領政策が非軍事化・民主化重視から一転し，日本の再軍備や経済復興を優先する方向へ転換したこと。</span></span></span>（J）と呼ばれる政策転換がおこなわれました。この一環として，<span class="kw">警察予備隊<span class="kw-pop"><span class="kw-title">警察予備隊（けいさつよびたい）</span><span class="kw-yomi">📖 読み：けいさつよびたい</span><span class="kw-body">1950年，朝鮮戦争の勃発を受けてGHQの指示により新設された組織。事実上の軍隊であり，後の自衛隊の前身となった。</span></span></span>も新設されました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 占領政策，180度の方向転換</span>
+    ▶ それまでGHQは，日本の再軍備を防ぐことを重視し，財閥解体や農地改革など非軍事化・民主化を進めてきた<br>
+    ▶ しかし冷戦が激化し，さらに朝鮮戦争が始まると，アメリカは日本を社会主義陣営に対する重要な拠点として位置づけ直した<br>
+    ▶ 財閥解体が途中で緩和されたり，公職追放されていた人物の一部が復帰したりするなど，占領政策の方向性は大きく変化した
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 冷戦と逆コース 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+</div>
+
+<!-- ===== Section 6 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１１節　単元㊸</span>
+  <h2>主権回復——サンフランシスコ平和条約と日米安全保障条約</h2>
+
+  <p>1951年，日本は連合国48カ国との間で<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">サンフランシスコ平和条約</span><span class="kw-pop"><span class="kw-title">サンフランシスコ平和条約（さんふらんしすこへいわじょうやく）</span><span class="kw-yomi">📖 読み：さんふらんしすこへいわじょうやく</span><span class="kw-body">1951年，日本が連合国48カ国と結んだ講和条約。この条約の発効により，日本は独立国としての主権を回復した。ソ連や中国など一部の国は条約に参加しなかった。</span></span></span>（K）を結び，翌1952年の発効により，7年近くにおよんだ占領統治が終わり，独立国としての主権を回復しました。同時に，アメリカ軍が引き続き日本国内に駐留することを定めた<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">日米安全保障条約</span><span class="kw-pop"><span class="kw-title">日米安全保障条約（にちべいあんぜんほしょうじょうやく）</span><span class="kw-yomi">📖 読み：にちべいあんぜんほしょうじょうやく</span><span class="kw-body">サンフランシスコ平和条約と同時に結ばれた条約。日本の主権回復後もアメリカ軍が日本国内に駐留を続けることを定めた。日本の安全保障政策の基盤となっている。</span></span></span>（L）も結ばれました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 独立の回復と，新しい課題のはじまり</span>
+    ▶ 日本国憲法の制定から東京裁判，冷戦下の逆コースを経て，日本は1952年についに独立国としての主権を回復した<br>
+    ▶ しかし日米安全保障条約により，独立後もアメリカ軍基地が日本国内に残ることになり，これは後々まで続く日本の安全保障をめぐる大きな論点となった<br>
+    ▶ こうして戦後日本は，占領期を終え，国際社会の一員として新たな歩みを始めることになる
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：日本国憲法から主権回復までのポイント</strong><br>
+    1946年11月，GHQ草案（マッカーサー草案）をもとに日本国憲法が公布され，翌1947年5月に施行されました。国民主権・平和主義・基本的人権の尊重を三大原則とし，教育基本法や六・三・三・四制など教育の民主化も進められました。一方，東京裁判では戦争指導者の責任が追及され，東条英機らA級戦犯が処罰されました。1950年に朝鮮戦争が始まると，冷戦の激化を背景に占領政策は逆コースへと転換し，警察予備隊も新設されました。そして1951年，サンフランシスコ平和条約と日米安全保障条約が結ばれ，1952年の発効により日本は独立国としての主権を回復しました。<br><br>
+    ▶ <strong>日本国憲法・マッカーサー草案（1946年）</strong>——GHQ主導の憲法制定<br>
+    ▶ <strong>国民主権・平和主義</strong>——日本国憲法の三大原則<br>
+    ▶ <strong>教育基本法・六・三・三・四制</strong>——教育の民主化<br>
+    ▶ <strong>東京裁判・A級戦犯</strong>——戦争責任の追及<br>
+    ▶ <strong>冷戦・逆コース</strong>——占領政策の転換<br>
+    ▶ <strong>サンフランシスコ平和条約・日米安全保障条約</strong>——独立国としての主権回復
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">日本国憲法</span>
+    <span class="tl-item">マッカーサー草案</span>
+    <span class="tl-item">国民主権</span>
+    <span class="tl-item">平和主義</span>
+    <span class="tl-item">教育基本法</span>
+    <span class="tl-item">六・三・三・四制</span>
+    <span class="tl-item">東京裁判</span>
+    <span class="tl-item">A級戦犯</span>
+    <span class="tl-item">冷戦</span>
+    <span class="tl-item">逆コース</span>
+    <span class="tl-item">サンフランシスコ平和条約</span>
+    <span class="tl-item">日米安全保障条約</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('shukenkaifuku')">📜 なぜ占領政策は「逆コース」へと転換したのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq6',this)">
+      📝 主権回復 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq6"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊸ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch43.html">単元㊸ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊸ まとめテスト（全12問）</h2>
+  <p style="font-size:14px;color:#64748b">9問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 12 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-shukenkaifuku" onclick="if(event.target===this)closeModal('shukenkaifuku')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('shukenkaifuku')">✕</button>
+    <div class="modal-title">📜 なぜ占領政策は「逆コース」へと転換したのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 憲法制定から東京裁判までは「非軍事化・民主化」路線</div>
+      <div class="cause-box">
+        <span class="label">🎯 二度と戦争をおこなわせないための改革</span>
+        日本国憲法の制定，教育基本法による教育の民主化，東京裁判による戦争責任の追及は，いずれも「日本を二度と戦争をおこなえない国にする」というGHQの一貫した方針のもとで進められました。<br><br>
+        ▶ 財閥解体・農地改革（前単元）とあわせ，日本社会のあらゆる面から軍国主義の土台を取り除こうとした<br>
+        ▶ この時期のGHQの政策は，日本の非軍事化を最優先する，一貫した方向性を持っていた
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 冷戦という「想定外の国際情勢」</div>
+      <div class="why-box">
+        <span class="label">🚩 「弱い日本」から「頼れる日本」へ</span>
+        ところが1940年代後半，アメリカとソ連の対立（冷戦）が激しくなると，アメリカの世界戦略にとって，日本を弱いままにしておくことが得策ではなくなっていきました。<br><br>
+        ▶ 特に1950年の朝鮮戦争勃発により，東アジアで社会主義陣営と直接対峙することになったアメリカは，日本を東アジアの防波堤として強化する必要に迫られた<br>
+        ▶ こうして，非軍事化を進めてきたGHQの方針は，警察予備隊の新設など，一転して日本の軍事的な役割を認める方向へと転換した
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 主権回復後も残った，占領期の宿題</div>
+      <div class="result-box">
+        <span class="label">🏗 独立と同時に結ばれた，もう一つの条約</span>
+        1951年のサンフランシスコ平和条約により日本は主権を回復しましたが，同時に結ばれた日米安全保障条約により，アメリカ軍基地は独立後も日本国内に残ることになりました。占領期に築かれた日米の関係は，主権回復後も形を変えて続いていくことになったのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 12語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"日本国憲法", "B":"マッカーサー草案", "C":"国民主権", "D":"平和主義",
+  "E":"教育基本法", "F":"六・三・三・四制", "G":"東京裁判", "H":"A級戦犯",
+  "I":"冷戦", "J":"逆コース", "K":"サンフランシスコ平和条約", "L":"日米安全保障条約"
+};
+const wordBank = ["日本国憲法","マッカーサー草案","国民主権","平和主義",
+  "教育基本法","六・三・三・四制","東京裁判","A級戦犯",
+  "冷戦","逆コース","サンフランシスコ平和条約","日米安全保障条約"];
+
+const miniQuizData1 = [
+  {q:"①　1946年11月3日に公布された，戦後日本の新しい憲法を何というか。",
+   choices:["日本国憲法","大日本帝国憲法","教育基本法","治安維持法"], ans:0,
+   exp:"日本国憲法。翌1947年5月3日から施行されました。"},
+  {q:"②　日本政府案が保守的だったためGHQが自ら作成した憲法草案を何というか。",
+   choices:["五大改革指令","マッカーサー草案","ポツダム宣言","五箇条の御誓文"], ans:1,
+   exp:"マッカーサー草案。天皇主権から国民主権への転換などを盛り込んでいました。"},
+  {q:"③　日本国憲法が施行された日はいつか。",
+   choices:["1946年11月3日","1947年5月3日","1945年8月15日","1952年4月28日"], ans:1,
+   exp:"1947年5月3日。公布は前年の11月3日でした。"},
+  {q:"④　GHQが日本政府の当初の憲法改正案を不十分と判断した理由として正しいものはどれか。",
+   choices:["内容が複雑すぎたため","天皇の権限をほぼそのまま残す内容だったため","財政負担が大きすぎたため","国際社会の理解が得られなかったため"], ans:1,
+   exp:"天皇の統治権をほぼそのまま残す保守的な内容だったためです。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　日本国憲法において，主権が国民にあるとする原則を何というか。",
+   choices:["国民主権","天皇主権","基本的人権の尊重","平和主義"], ans:0,
+   exp:"国民主権。大日本帝国憲法の天皇主権から大きく転換しました。"},
+  {q:"②　日本国憲法第9条を中心とする原則を何というか。",
+   choices:["国民主権","基本的人権の尊重","平和主義","三権分立"], ans:2,
+   exp:"平和主義。戦争の放棄・戦力の不保持を定めています。"},
+  {q:"③　すべての国民が生まれながらに持つ権利を保障する原則を何というか。",
+   choices:["国民主権","基本的人権の尊重","平和主義","地方自治"], ans:1,
+   exp:"基本的人権の尊重。日本国憲法の三大原則の一つです。"},
+  {q:"④　日本国憲法と大日本帝国憲法のちがいとして正しいものはどれか。",
+   choices:["どちらも天皇に主権があった","日本国憲法では主権が国民に移った","大日本帝国憲法にも平和主義があった","内容にほとんど違いはない"], ans:1,
+   exp:"日本国憲法では，天皇主権から国民主権へと根本的に転換しました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1947年に制定された，戦後教育の基本理念を定めた法律を何というか。",
+   choices:["教育基本法","学校教育法","国家総動員法","治安維持法"], ans:0,
+   exp:"教育基本法。教育の機会均等や男女共学などを定めました。"},
+  {q:"②　戦後導入された，小学校6年・中学校3年・高校3年・大学4年の学校制度を何というか。",
+   choices:["四・四制","六・三・三・四制","五・五制","三・三・四制"], ans:1,
+   exp:"六・三・三・四制。義務教育が中学校までの9年間に延長されました。"},
+  {q:"③　GHQの指令により廃止された，天皇への忠誠を説く戦前の道徳教育科目を何というか。",
+   choices:["修身","国史","地理","算術"], ans:0,
+   exp:"修身。軍国主義的な教育内容の一掃を目的として廃止されました。"},
+  {q:"④　戦後の教育改革の目的として正しいものはどれか。",
+   choices:["軍国主義教育をさらに強化するため","教育の機会均等と民主化を進めるため","教育制度を戦前のまま維持するため","義務教育を廃止するため"], ans:1,
+   exp:"教育の機会均等や男女共学など，民主化を進めることが目的でした。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1946年から，戦争指導者の責任を裁いた裁判を何というか（正式名称：極東国際軍事裁判）。",
+   choices:["東京裁判","ニュルンベルク裁判","大審院裁判","軍法会議"], ans:0,
+   exp:"東京裁判。1946年から1948年にかけておこなわれました。"},
+  {q:"②　東京裁判で「平和に対する罪」を問われ処罰された戦争指導者らを何というか。",
+   choices:["B級戦犯","A級戦犯","C級戦犯","一般戦犯"], ans:1,
+   exp:"A級戦犯。東条英機ら7名が死刑判決を受けました。"},
+  {q:"③　東京裁判で起訴されたA級戦犯容疑者らが収容された東京の拘置所はどこか。",
+   choices:["巣鴨拘置所","小菅拘置所","府中刑務所","豊多摩監獄"], ans:0,
+   exp:"巣鴨拘置所。裁判の被告人の多くがここに収監されました。"},
+  {q:"④　東京裁判に対する評価として指摘されることがある内容として正しいものはどれか。",
+   choices:["連合国側の行為も等しく裁かれた","「勝者が敗者を裁く裁判」という指摘がある","日本国内では一切話題にならなかった","裁判は即日終了した"], ans:1,
+   exp:"連合国側の行為は対象とされなかったことなどから，そうした指摘があります。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　第二次世界大戦後，資本主義陣営と社会主義陣営が対立した状態を何というか。",
+   choices:["冷戦","熱戦","内戦","代理戦争"], ans:0,
+   exp:"冷戦。アメリカとソ連を中心とする対立でした。"},
+  {q:"②　1950年に始まり，日本の占領政策の転換を決定的にした戦争を何というか。",
+   choices:["日中戦争","太平洋戦争","朝鮮戦争","ベトナム戦争"], ans:2,
+   exp:"朝鮮戦争。冷戦の対立が実際の戦闘に発展した代表例です。"},
+  {q:"③　冷戦の激化を受け，GHQの占領政策が非軍事化重視から一転した動きを何というか。",
+   choices:["逆コース","五大改革指令","戦後改革","民主化政策"], ans:0,
+   exp:"逆コース。日本の再軍備や経済復興を優先する方向へ転換しました。"},
+  {q:"④　朝鮮戦争勃発を受けGHQの指示により新設された，事実上の軍隊にあたる組織を何というか。",
+   choices:["自衛隊","警察予備隊","国民義勇隊","在郷軍人会"], ans:1,
+   exp:"警察予備隊。後の自衛隊の前身となりました。"}
+];
+
+const miniQuizData6 = [
+  {q:"①　1951年，日本が連合国48カ国と結んだ講和条約を何というか。",
+   choices:["ポツダム宣言","サンフランシスコ平和条約","ヴェルサイユ条約","日ソ中立条約"], ans:1,
+   exp:"サンフランシスコ平和条約。翌1952年の発効で日本は主権を回復しました。"},
+  {q:"②　サンフランシスコ平和条約と同時に結ばれ，アメリカ軍の日本駐留を定めた条約を何というか。",
+   choices:["日米和親条約","日米安全保障条約","日米修好通商条約","日英同盟"], ans:1,
+   exp:"日米安全保障条約。日本の安全保障政策の基盤となっています。"},
+  {q:"③　サンフランシスコ平和条約が発効し，日本が主権を回復した年はいつか。",
+   choices:["1945年","1950年","1952年","1956年"], ans:2,
+   exp:"1952年。約7年近くにおよんだ占領統治が終わりました。"},
+  {q:"④　日本国憲法制定から主権回復までの流れとして正しいものはどれか。",
+   choices:["憲法制定後すぐに主権を回復した","冷戦下で占領政策が転換し，条約締結を経て主権を回復した","占領統治は一度も転換しなかった","主権回復は東京裁判より前だった"], ans:1,
+   exp:"冷戦の激化・朝鮮戦争を経て逆コースへ転換し，条約締結により主権を回復しました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1946年11月3日に公布された，戦後日本の新しい憲法を何というか。",
+   choices:["日本国憲法","大日本帝国憲法","教育基本法","治安維持法"], ans:0,
+   exp:"日本国憲法。翌1947年5月3日から施行されました。"},
+  {q:"② 日本政府案が保守的だったためGHQが自ら作成した憲法草案を何というか。",
+   choices:["五大改革指令","マッカーサー草案","ポツダム宣言","五箇条の御誓文"], ans:1,
+   exp:"マッカーサー草案。天皇主権から国民主権への転換などを盛り込んでいました。"},
+  {q:"③ 日本国憲法において，主権が国民にあるとする原則を何というか。",
+   choices:["天皇主権","基本的人権の尊重","国民主権","三権分立"], ans:2,
+   exp:"国民主権。大日本帝国憲法の天皇主権から大きく転換しました。"},
+  {q:"④ 日本国憲法第9条を中心とする原則を何というか。",
+   choices:["国民主権","基本的人権の尊重","三権分立","平和主義"], ans:3,
+   exp:"平和主義。戦争の放棄・戦力の不保持を定めています。"},
+  {q:"⑤ 1947年に制定された，戦後教育の基本理念を定めた法律を何というか。",
+   choices:["教育基本法","学校教育法","国家総動員法","治安維持法"], ans:0,
+   exp:"教育基本法。教育の機会均等や男女共学などを定めました。"},
+  {q:"⑥ 戦後導入された，小学校6年・中学校3年・高校3年・大学4年の学校制度を何というか。",
+   choices:["四・四制","六・三・三・四制","五・五制","三・三・四制"], ans:1,
+   exp:"六・三・三・四制。義務教育が中学校までの9年間に延長されました。"},
+  {q:"⑦ 1946年から，戦争指導者の責任を裁いた裁判を何というか（正式名称：極東国際軍事裁判）。",
+   choices:["ニュルンベルク裁判","大審院裁判","東京裁判","軍法会議"], ans:2,
+   exp:"東京裁判。1946年から1948年にかけておこなわれました。"},
+  {q:"⑧ 東京裁判で「平和に対する罪」を問われ処罰された戦争指導者らを何というか。",
+   choices:["B級戦犯","C級戦犯","一般戦犯","A級戦犯"], ans:3,
+   exp:"A級戦犯。東条英機ら7名が死刑判決を受けました。"},
+  {q:"⑨ 第二次世界大戦後，資本主義陣営と社会主義陣営が対立した状態を何というか。",
+   choices:["冷戦","内戦","代理戦争","熱戦"], ans:0,
+   exp:"冷戦。アメリカとソ連を中心とする対立でした。"},
+  {q:"⑩ 冷戦の激化を受け，GHQの占領政策が非軍事化重視から一転した動きを何というか。",
+   choices:["五大改革指令","逆コース","戦後改革","民主化政策"], ans:1,
+   exp:"逆コース。日本の再軍備や経済復興を優先する方向へ転換しました。"},
+  {q:"⑪ 1951年，日本が連合国48カ国と結んだ講和条約を何というか。",
+   choices:["ポツダム宣言","ヴェルサイユ条約","サンフランシスコ平和条約","日ソ中立条約"], ans:2,
+   exp:"サンフランシスコ平和条約。翌1952年の発効で日本は主権を回復しました。"},
+  {q:"⑫ サンフランシスコ平和条約と同時に結ばれ，アメリカ軍の日本駐留を定めた条約を何というか。",
+   choices:["日米和親条約","日米修好通商条約","日英同盟","日米安全保障条約"], ans:3,
+   exp:"日米安全保障条約。日本の安全保障政策の基盤となっています。"}
+];
+
+const checkItems = [
+  "1946年11月，日本国憲法が公布されたことを説明できる",
+  "マッカーサー草案が憲法制定の基盤になったことを説明できる",
+  "国民主権が日本国憲法の柱の一つであることを説明できる",
+  "平和主義（憲法第9条）の内容を説明できる",
+  "教育基本法により教育の民主化が進められたことを説明できる",
+  "六・三・三・四制という学校制度が導入されたことを説明できる",
+  "東京裁判で戦争指導者の責任が追及されたことを説明できる",
+  "東条英機らがA級戦犯として処罰されたことを説明できる",
+  "冷戦が日本の占領政策に影響を与えたことを説明できる",
+  "朝鮮戦争を機に占領政策が逆コースへ転換したことを説明できる",
+  "1951年，サンフランシスコ平和条約が結ばれたことを説明できる",
+  "日米安全保障条約により日本の主権回復後もアメリカ軍が駐留を続けたことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5, mq6: miniQuizData6 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 9;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（9問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

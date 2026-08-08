@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊻ プラザ合意からバブル崩壊へ｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch45.html" class="back-to-index">← 単元㊺へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>💹 単元㊻　プラザ合意からバブル崩壊へ</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１４節　単元㊻</span>
+  <h2>プラザ合意——円高の始まり</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1985年，アメリカの財政赤字とドル高是正を目的に，日本・アメリカ・西ドイツ・イギリス・フランスの5か国の財務相・中央銀行総裁が集まる<span class="kw">G5（先進5カ国財務相・中央銀行総裁会議）<span class="kw-pop"><span class="kw-title">G5（先進5カ国財務相・中央銀行総裁会議）（じーふぁいぶ）</span><span class="kw-yomi">📖 読み：じーふぁいぶ</span><span class="kw-body">日本・アメリカ・西ドイツ・イギリス・フランスの5か国の財務相・中央銀行総裁による会議。1985年，この会議でプラザ合意が結ばれた。</span></span></span>がニューヨークで開かれ，ドル安・円高へ協調して為替市場に介入することで合意する<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">プラザ合意</span><span class="kw-pop"><span class="kw-title">プラザ合意（ぷらざごうい）</span><span class="kw-yomi">📖 読み：ぷらざごうい</span><span class="kw-body">1985年，G5がニューヨークのプラザホテルで開いた会議で結ばれた合意。ドル安・円高へ協調して為替市場に介入することを取り決めた。</span></span></span>（A）が結ばれました。この合意以降，円相場は急速に円高が進み，輸出産業を中心に日本経済は<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">円高不況</span><span class="kw-pop"><span class="kw-title">円高不況（えんだかふきょう）</span><span class="kw-yomi">📖 読み：えんだかふきょう</span><span class="kw-body">プラザ合意後の急激な円高により，輸出産業を中心に日本経済が直面した不況。1985年から1986年ごろにかけて深刻化した。</span></span></span>（B）に直面しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ アメリカの貿易赤字と「双子の赤字」</span>
+    ▶ 1980年代前半，アメリカは財政赤字と貿易赤字（「双子の赤字」）に苦しみ，割高なドルが輸出競争力を弱めているとの批判が高まっていた<br>
+    ▶ 前単元でみたように，日本の対米貿易黒字の拡大も，日米間の貿易摩擦を深刻化させる要因の一つとなっていた
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 急激な円高が輸出産業を直撃</span>
+    ▶ プラザ合意からわずか数年で，円相場は1ドル=240円台からおよそ半分の120円台へと急騰した<br>
+    ▶ 輸出関連企業を中心に，日本経済は一時的に円高不況と呼ばれる景気の落ち込みに見舞われた
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 プラザ合意 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１４節　単元㊻</span>
+  <h2>低金利政策と財テクの広がり</h2>
+
+  <p>円高不況への対策として，<span class="kw">日本銀行<span class="kw-pop"><span class="kw-title">日本銀行（にっぽんぎんこう）</span><span class="kw-yomi">📖 読み：にっぽんぎんこう</span><span class="kw-body">日本の中央銀行。円高不況への対策として，1980年代後半に大幅な金融緩和（低金利政策）を実施した。</span></span></span>は金利を大きく引き下げる<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">低金利政策</span><span class="kw-pop"><span class="kw-title">低金利政策（ていきんりせいさく）</span><span class="kw-yomi">📖 読み：ていきんりせいさく</span><span class="kw-body">円高不況への対策として，日本銀行が公定歩合を段階的に引き下げた金融緩和政策。企業や個人が資金を借りやすくなった一方，のちのバブル経済の土台にもなった。</span></span></span>（C）を実施しました。金融緩和により企業や個人の手元には余剰資金があふれ，その資金を株式や不動産に投じて利益を得ようとする<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">財テク</span><span class="kw-pop"><span class="kw-title">財テク（ざいてく）</span><span class="kw-yomi">📖 読み：ざいてく</span><span class="kw-body">低金利で調達した資金を株式や不動産などに投資し，利益を得ようとする行為。1980年代後半，企業だけでなく一般家庭にも急速に広がった。</span></span></span>（D）が急速に広がっていきました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 不況対策としての金融緩和</span>
+    ▶ 円高不況に対応するため，日本銀行は公定歩合を段階的に引き下げ，金融を大幅に緩和した<br>
+    ▶ 低金利のもとで銀行からの融資も受けやすくなり，企業は余剰資金を本業以外の投資に振り向けるようになった
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 「財テク」ブームの広がり</span>
+    ▶ 低金利で借りた資金を株式や土地に投資して利益を得る「財テク」が，企業だけでなく一般家庭にも広がった<br>
+    ▶ こうした投資マネーの流入が，のちのバブル経済の直接の土台となった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 低金利政策と財テク 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１４節　単元㊻</span>
+  <h2>バブル経済の膨張——地価・株価の異常な高騰</h2>
+
+  <p>余剰資金が株式・不動産市場に集中して流れ込んだ結果，地価や株価が実体経済とかけ離れて異常に高騰する<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">バブル経済</span><span class="kw-pop"><span class="kw-title">バブル経済（ばぶるけいざい）</span><span class="kw-yomi">📖 読み：ばぶるけいざい</span><span class="kw-body">1980年代後半，投資マネーの流入により地価・株価が実体経済とかけ離れて異常に高騰した経済状況。1991年ごろから崩壊した。</span></span></span>（E）が発生しました。「地価は必ず上がり続ける」という<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">土地神話</span><span class="kw-pop"><span class="kw-title">土地神話（とちしんわ）</span><span class="kw-yomi">📖 読み：とちしんわ</span><span class="kw-body">「地価は必ず上がり続ける」という，バブル期に広く信じられた考え方。投機的な土地取引をさらに過熱させる要因となった。</span></span></span>（F）が信じられ，<span class="kw">日経平均株価<span class="kw-pop"><span class="kw-title">日経平均株価（にっけいへいきんかぶか）</span><span class="kw-yomi">📖 読み：にっけいへいきんかぶか</span><span class="kw-body">東京証券取引所に上場する代表的な225銘柄の平均株価を示す指数。1989年末に史上最高値を記録した。</span></span></span>は1989年末に史上最高値を記録しました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 実体経済とかけ離れた資産価格の高騰</span>
+    ▶ 低金利政策と財テクの広がりを背景に，投資マネーが株式・不動産に集中し，地価・株価は実体経済の成長を大きく上回るペースで上昇した<br>
+    ▶ 「土地の値段は必ず上がる」という土地神話が広く信じられ，投機的な土地取引がさらに地価を押し上げた
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 史上最高値をつけた株式市場</span>
+    ▶ 1989年末，日経平均株価は史上最高値を記録し，日本経済は空前の好況に沸いた<br>
+    ▶ しかしこの好況は，実体経済の裏付けを欠いた「泡（バブル）」のようなものだった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 バブル経済の膨張 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１４節　単元㊻</span>
+  <h2>バブル期の世相——内需拡大とリゾート開発ブーム</h2>
+
+  <p>貿易摩擦の緩和をめざし，政府は輸出依存の経済構造を見直し，国内需要を高める<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">内需拡大</span><span class="kw-pop"><span class="kw-title">内需拡大（ないじゅかくだい）</span><span class="kw-yomi">📖 読み：ないじゅかくだい</span><span class="kw-body">貿易摩擦の緩和をめざし，輸出主導から国内需要主導の経済成長へ転換をはかった政策方針。公共投資の拡大などがおこなわれた。</span></span></span>（G）政策を進めました。この流れの中，各地で大規模なゴルフ場やホテルを建設する<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">リゾート開発</span><span class="kw-pop"><span class="kw-title">リゾート開発（りぞーとかいはつ）</span><span class="kw-yomi">📖 読み：りぞーとかいはつ</span><span class="kw-body">バブル期に各地で相次いだ，ゴルフ場やホテルなどの大規模な観光施設建設。投機的な土地取引ともあいまって全国的なブームとなった。</span></span></span>（H）が相次ぎ，<span class="kw">海外旅行ブーム<span class="kw-pop"><span class="kw-title">海外旅行ブーム（かいがいりょこうぶーむ）</span><span class="kw-yomi">📖 読み：かいがいりょこうぶーむ</span><span class="kw-body">バブル期，円高や所得の増加を背景に，日本人による海外旅行が急増した現象。バブル期の消費社会を象徴する動きの一つ。</span></span></span>も広がるなど，消費が活発化する「バブル景気」の世相が広がりました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 貿易摩擦解消への政策転換</span>
+    ▶ 対米貿易黒字の拡大が貿易摩擦を深めていたことから，政府は輸出主導から内需主導の経済成長への転換をめざした<br>
+    ▶ 公共投資の拡大や低金利政策も，内需拡大を後押しした
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 「一億総中流」からさらに進んだ消費社会</span>
+    ▶ リゾート開発や海外旅行ブームに象徴されるように，国民の消費行動は一段と活発化した<br>
+    ▶ 一方で，投機的な土地取引や過剰な設備投資など，バブル経済の膨張はさらに進んでいった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 バブル期の世相 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+</div>
+
+<!-- ===== Section 5 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１４節　単元㊻</span>
+  <h2>バブル崩壊——株価・地価の暴落</h2>
+
+  <p>資産価格の異常な高騰を抑えるため，日本銀行は1989年から金融引き締めに転じ，公定歩合を段階的に引き上げました。これにより1990年以降，株価は急落し，続いて地価も下落に転じる<span class="blank kw" data-id="I" onclick="blankClicked(event,'I')"><span class="blank-display">バブル崩壊</span><span class="kw-pop"><span class="kw-title">バブル崩壊（ばぶるほうかい）</span><span class="kw-yomi">📖 読み：ばぶるほうかい</span><span class="kw-body">1990年以降，日本銀行の金融引き締めをきっかけに株価が急落し，続いて地価も下落に転じたこと。バブル経済の終わりを意味した。</span></span></span>（I）が始まりました。多くの金融機関は，返済が見込めなくなった融資である<span class="blank kw" data-id="J" onclick="blankClicked(event,'J')"><span class="blank-display">不良債権</span><span class="kw-pop"><span class="kw-title">不良債権（ふりょうさいけん）</span><span class="kw-yomi">📖 読み：ふりょうさいけん</span><span class="kw-body">バブル崩壊により担保にしていた土地の価値が下落し，回収が見込めなくなった金融機関の融資。1990年代の金融危機の大きな原因となった。</span></span></span>（J）を大量に抱えることになりました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 金融引き締めという「バブルつぶし」</span>
+    ▶ 資産価格の異常な高騰への懸念から，日本銀行は1989年から公定歩合を段階的に引き上げる金融引き締めに転じた<br>
+    ▶ 政府も土地取引への融資規制（総量規制）を導入し，地価の抑制に乗り出した
+  </div>
+
+  <div class="result-box">
+    <span class="label">📜 「泡」が消えたあとに残ったもの</span>
+    ▶ 金融引き締めをきっかけに株価は1990年から急落し，地価もその後下落に転じ，バブル経済は崩壊した<br>
+    ▶ 多くの金融機関は，担保割れした不動産融資などの不良債権を大量に抱えることになり，のちの金融危機の原因となった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq5',this)">
+      📝 バブル崩壊 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq5"></div>
+  </div>
+</div>
+
+<!-- ===== Section 6 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第１４節　単元㊻</span>
+  <h2>平成不況——「失われた10年」の始まり</h2>
+
+  <p>バブル崩壊後，日本経済は長期にわたる深刻な不況に陥りました。この不況は<span class="blank kw" data-id="K" onclick="blankClicked(event,'K')"><span class="blank-display">平成不況</span><span class="kw-pop"><span class="kw-title">平成不況（へいせいふきょう）</span><span class="kw-yomi">📖 読み：へいせいふきょう</span><span class="kw-body">バブル崩壊後の1990年代を中心とした，日本経済の長期にわたる深刻な不況。不良債権処理の遅れなどにより回復が長引いた。</span></span></span>（K）と呼ばれ，<span class="kw">金融機関の破綻<span class="kw-pop"><span class="kw-title">金融機関の破綻（きんゆうきかんのはたん）</span><span class="kw-yomi">📖 読み：きんゆうきかんのはたん</span><span class="kw-body">1990年代後半，不良債権問題の深刻化により，大手銀行や証券会社が相次いで経営破綻したこと。平成不況を象徴する出来事の一つ。</span></span></span>が相次ぐなど，1990年代の日本経済は低迷を続けました。この長期低迷期は，のちに<span class="blank kw" data-id="L" onclick="blankClicked(event,'L')"><span class="blank-display">失われた10年</span><span class="kw-pop"><span class="kw-title">失われた10年（うしなわれたじゅうねん）</span><span class="kw-yomi">📖 読み：うしなわれたじゅうねん</span><span class="kw-body">バブル崩壊後の1990年代，日本経済が長期にわたり低迷を続けた期間を指す呼び名。のちにこの低迷がさらに続いたことから「失われた20年」とも呼ばれるようになった。</span></span></span>（L）と呼ばれるようになりました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 「バブル」から「失われた時代」へ</span>
+    ▶ プラザ合意を機に始まった円高不況・低金利政策・財テクの広がりが，バブル経済という空前の好況を生み出した<br>
+    ▶ しかし実体経済の裏付けを欠いたバブルは長続きせず，1990年代初めに崩壊し，日本経済は平成不況と呼ばれる長期低迷に陥った<br>
+    ▶ この時期は，のちに「失われた10年」と呼ばれ，日本経済の大きな転換点として記憶されている
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：プラザ合意からバブル崩壊までのポイント</strong><br>
+    1985年のプラザ合意により急速な円高が進み，日本経済は円高不況に直面しました。日本銀行はこれに対応して低金利政策をとり，余剰資金が財テクを通じて株式・不動産市場に流れ込んだ結果，バブル経済が発生し，土地神話とともに地価・株価が異常に高騰しました。政府は内需拡大政策を進め，リゾート開発ブームなど消費が活発化しましたが，1989年からの金融引き締めをきっかけに1990年以降バブルは崩壊し，多くの金融機関が不良債権を抱えることになりました。その後の日本経済は平成不況と呼ばれる長期低迷に陥り，1990年代は「失われた10年」と呼ばれるようになりました。<br><br>
+    ▶ <strong>プラザ合意・円高不況（1985年）</strong>——急速な円高への転換<br>
+    ▶ <strong>低金利政策・財テク</strong>——余剰資金の株式・不動産市場への流入<br>
+    ▶ <strong>バブル経済・土地神話</strong>——地価・株価の異常な高騰<br>
+    ▶ <strong>内需拡大・リゾート開発</strong>——バブル期の世相<br>
+    ▶ <strong>バブル崩壊・不良債権</strong>——資産価格の暴落と金融機関への打撃<br>
+    ▶ <strong>平成不況・失われた10年</strong>——長期低迷への突入
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">プラザ合意</span>
+    <span class="tl-item">円高不況</span>
+    <span class="tl-item">低金利政策</span>
+    <span class="tl-item">財テク</span>
+    <span class="tl-item">バブル経済</span>
+    <span class="tl-item">土地神話</span>
+    <span class="tl-item">内需拡大</span>
+    <span class="tl-item">リゾート開発</span>
+    <span class="tl-item">バブル崩壊</span>
+    <span class="tl-item">不良債権</span>
+    <span class="tl-item">平成不況</span>
+    <span class="tl-item">失われた10年</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('baburu')">💹 なぜバブル経済は生まれ，そして崩壊したのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq6',this)">
+      📝 平成不況 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq6"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊻ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch46.html">単元㊻ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊻ まとめテスト（全12問）</h2>
+  <p style="font-size:14px;color:#64748b">9問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 12 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-baburu" onclick="if(event.target===this)closeModal('baburu')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('baburu')">✕</button>
+    <div class="modal-title">💹 なぜバブル経済は生まれ，そして崩壊したのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 円高不況への対応が招いた「行き過ぎた緩和」</div>
+      <div class="cause-box">
+        <span class="label">🎯 不況対策のはずが，投機マネーの温床に</span>
+        プラザ合意後の円高不況に対応するため，日本銀行は大幅な金融緩和（低金利政策）をおこないました。この政策自体は不況対策として理にかなったものでしたが，緩和が長期間続いたことで，あふれた資金が実体経済ではなく株式や不動産への投機（財テク）に向かってしまいました。<br><br>
+        ▶ 低金利で借りた資金が本業の設備投資ではなく，資産の売買による利益を狙う投機に使われるようになった<br>
+        ▶ 「土地神話」への強い信頼も，投機的な土地取引をさらに加速させた
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 実体経済から離れた「泡」の膨張</div>
+      <div class="why-box">
+        <span class="label">🚩 「上がり続ける」という思い込みの危うさ</span>
+        地価や株価が実体経済の成長を大きく上回るペースで上昇し続けたことで，人々は「これからも上がり続ける」と信じ込み，さらに投資が投資を呼ぶ悪循環が生まれました。<br><br>
+        ▶ 内需拡大政策やリゾート開発ブームも，こうした過熱した投資マインドを後押しした<br>
+        ▶ しかし，この好況は実体経済の裏付けを欠いた「泡（バブル）」にすぎなかった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ 金融引き締めという「針」が泡を割った</div>
+      <div class="result-box">
+        <span class="label">🏗 急激な引き締めが招いた反動</span>
+        資産価格の異常な高騰を危険視した日本銀行が1989年から金融引き締めに転じると，これがきっかけとなって株価は急落し，地価もその後下落に転じました。バブル経済が崩壊すると，多くの金融機関が不良債権を抱え，日本経済は平成不況と呼ばれる長期低迷（「失われた10年」）に陥ることになったのです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 12語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"プラザ合意", "B":"円高不況", "C":"低金利政策", "D":"財テク",
+  "E":"バブル経済", "F":"土地神話", "G":"内需拡大", "H":"リゾート開発",
+  "I":"バブル崩壊", "J":"不良債権", "K":"平成不況", "L":"失われた10年"
+};
+const wordBank = ["プラザ合意","円高不況","低金利政策","財テク",
+  "バブル経済","土地神話","内需拡大","リゾート開発",
+  "バブル崩壊","不良債権","平成不況","失われた10年"];
+
+const miniQuizData1 = [
+  {q:"①　1985年，ドル安・円高へ協調介入することで合意した会議を何というか。",
+   choices:["プラザ合意","ワシントン合意","ルーブル合意","サミット合意"], ans:0,
+   exp:"プラザ合意。この合意以降，急速に円高が進みました。"},
+  {q:"②　プラザ合意に参加した先進5カ国の会議を俗に何というか。",
+   choices:["G5","G7","G8","G20"], ans:0,
+   exp:"G5。日本・アメリカ・西ドイツ・イギリス・フランスの5か国です。"},
+  {q:"③　プラザ合意以降，日本の輸出産業が直面した不況を何というか。",
+   choices:["昭和恐慌","円高不況","平成不況","狂乱物価"], ans:1,
+   exp:"円高不況。急激な円高が輸出産業を直撃しました。"},
+  {q:"④　プラザ合意がおこなわれた背景として正しいものはどれか。",
+   choices:["アメリカの貿易赤字と財政赤字の是正","日本の石油危機","ソ連の崩壊","日中国交正常化"], ans:0,
+   exp:"アメリカの「双子の赤字」の是正が背景にありました。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　円高不況対策として日本銀行が実施した政策を何というか。",
+   choices:["低金利政策","高金利政策","緊縮財政","金融引き締め"], ans:0,
+   exp:"低金利政策。金融を大幅に緩和しました。"},
+  {q:"②　低金利政策のもとで広がった，株式や不動産への投資を何というか。",
+   choices:["財テク","内需拡大","土地神話","不良債権"], ans:0,
+   exp:"財テク。企業だけでなく一般家庭にも広がりました。"},
+  {q:"③　低金利政策を実施した機関はどこか。",
+   choices:["大蔵省","日本銀行","環境庁","通商産業省"], ans:1,
+   exp:"日本銀行。日本の中央銀行です。"},
+  {q:"④　財テクが広がった背景として正しいものはどれか。",
+   choices:["低金利で余剰資金があふれたため","石油危機で物価が急騰したため","公害問題が深刻化したため","55年体制が崩壊したため"], ans:0,
+   exp:"低金利政策により，企業や個人の手元に余剰資金があふれたためです。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　地価や株価が実体経済とかけ離れて異常に高騰した経済状況を何というか。",
+   choices:["バブル経済","高度経済成長","昭和恐慌","平成不況"], ans:0,
+   exp:"バブル経済。1991年ごろから崩壊しました。"},
+  {q:"②　「地価は必ず上がり続ける」という考え方を何というか。",
+   choices:["土地神話","財テク","内需拡大","不良債権"], ans:0,
+   exp:"土地神話。投機的な土地取引を過熱させました。"},
+  {q:"③　日経平均株価が史上最高値を記録したのはいつごろか。",
+   choices:["1985年","1989年末","1991年","1995年"], ans:1,
+   exp:"1989年末。バブル経済が頂点に達した時期でした。"},
+  {q:"④　バブル経済の特徴として正しいものはどれか。",
+   choices:["実体経済の裏付けを欠いた資産価格の高騰","物価と地価がともに下落","輸出が完全に停止","人口が急減"], ans:0,
+   exp:"実体経済とかけ離れた資産価格の異常な高騰が特徴でした。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　貿易摩擦の緩和をめざし政府が進めた，国内需要を高める政策を何というか。",
+   choices:["内需拡大","緊縮財政","鎖国政策","五大改革指令"], ans:0,
+   exp:"内需拡大。輸出主導から国内需要主導への転換をめざしました。"},
+  {q:"②　バブル期に各地で相次いだ，ゴルフ場やホテルの建設を何というか。",
+   choices:["リゾート開発","財閥解体","農地改革","殖産興業"], ans:0,
+   exp:"リゾート開発。投機的な土地取引ともあいまってブームとなりました。"},
+  {q:"③　バブル期の世相として正しいものはどれか。",
+   choices:["海外旅行ブームなど消費が活発化した","国民全員が節約に努めた","輸出産業のみが繁栄した","農業が経済の中心となった"], ans:0,
+   exp:"海外旅行ブームなど，消費が活発化した時期でした。"},
+  {q:"④　内需拡大政策が進められた背景として正しいものはどれか。",
+   choices:["対米貿易黒字による貿易摩擦の深刻化","石油危機","沖縄返還","日中国交正常化"], ans:0,
+   exp:"対米貿易黒字の拡大による貿易摩擦の深刻化が背景にありました。"}
+];
+
+const miniQuizData5 = [
+  {q:"①　資産価格の高騰を抑えるため日本銀行がとった政策を何というか。",
+   choices:["金融引き締め","低金利政策","内需拡大","五大改革指令"], ans:0,
+   exp:"金融引き締め。1989年から公定歩合を引き上げました。"},
+  {q:"②　1990年以降，株価・地価が急落したことを何というか。",
+   choices:["バブル崩壊","昭和恐慌","狂乱物価","円高不況"], ans:0,
+   exp:"バブル崩壊。バブル経済の終わりを意味しました。"},
+  {q:"③　多くの金融機関が抱えることになった，返済が見込めなくなった融資を何というか。",
+   choices:["不良債権","国債","財テク","内需"], ans:0,
+   exp:"不良債権。1990年代の金融危機の大きな原因となりました。"},
+  {q:"④　バブル崩壊の直接のきっかけとして正しいものはどれか。",
+   choices:["日本銀行による金融引き締め","石油危機","沖縄返還","日中国交正常化"], ans:0,
+   exp:"日本銀行の金融引き締めが直接のきっかけとなりました。"}
+];
+
+const miniQuizData6 = [
+  {q:"①　バブル崩壊後の日本経済の長期不況を何というか。",
+   choices:["平成不況","昭和恐慌","円高不況","狂乱物価"], ans:0,
+   exp:"平成不況。1990年代を中心に続きました。"},
+  {q:"②　1990年代の日本経済の長期低迷期を後年何と呼ぶようになったか。",
+   choices:["失われた10年","高度経済成長期","バブル景気","安定成長期"], ans:0,
+   exp:"失われた10年。のちに「失われた20年」とも呼ばれました。"},
+  {q:"③　平成不況期に相次いだ現象として正しいものはどれか。",
+   choices:["金融機関の破綻","株価の急騰","地価のさらなる高騰","人口の急増"], ans:0,
+   exp:"金融機関の破綻。不良債権問題が深刻化しました。"},
+  {q:"④　この単元で学んだ1985年〜1990年代初めの流れとして正しいものはどれか。",
+   choices:["プラザ合意による円高からバブル経済が生まれ，その後崩壊して長期不況に陥った","高度経済成長がこの時期に始まった","石油危機がこの時期に発生した","沖縄返還がこの時期に実現した"], ans:0,
+   exp:"プラザ合意→バブル経済→バブル崩壊→平成不況という流れでした。"}
+];
+
+const finalQuizData = [
+  {q:"① 1985年，ドル安・円高へ協調介入することで合意した会議を何というか。",
+   choices:["プラザ合意","ワシントン合意","ルーブル合意","サミット合意"], ans:0,
+   exp:"プラザ合意。この合意以降，急速に円高が進みました。"},
+  {q:"② プラザ合意以降，日本の輸出産業が直面した不況を何というか。",
+   choices:["昭和恐慌","円高不況","平成不況","狂乱物価"], ans:1,
+   exp:"円高不況。急激な円高が輸出産業を直撃しました。"},
+  {q:"③ 円高不況対策として日本銀行が実施した政策を何というか。",
+   choices:["高金利政策","緊縮財政","低金利政策","金融引き締め"], ans:2,
+   exp:"低金利政策。金融を大幅に緩和しました。"},
+  {q:"④ 低金利政策のもとで広がった，株式や不動産への投資を何というか。",
+   choices:["内需拡大","土地神話","不良債権","財テク"], ans:3,
+   exp:"財テク。企業だけでなく一般家庭にも広がりました。"},
+  {q:"⑤ 地価や株価が実体経済とかけ離れて異常に高騰した経済状況を何というか。",
+   choices:["バブル経済","高度経済成長","昭和恐慌","平成不況"], ans:0,
+   exp:"バブル経済。1991年ごろから崩壊しました。"},
+  {q:"⑥ 「地価は必ず上がり続ける」という考え方を何というか。",
+   choices:["財テク","土地神話","内需拡大","不良債権"], ans:1,
+   exp:"土地神話。投機的な土地取引を過熱させました。"},
+  {q:"⑦ 貿易摩擦の緩和をめざし政府が進めた，国内需要を高める政策を何というか。",
+   choices:["緊縮財政","鎖国政策","内需拡大","五大改革指令"], ans:2,
+   exp:"内需拡大。輸出主導から国内需要主導への転換をめざしました。"},
+  {q:"⑧ バブル期に各地で相次いだ，ゴルフ場やホテルの建設を何というか。",
+   choices:["財閥解体","農地改革","殖産興業","リゾート開発"], ans:3,
+   exp:"リゾート開発。投機的な土地取引ともあいまってブームとなりました。"},
+  {q:"⑨ 1990年以降，株価・地価が急落したことを何というか。",
+   choices:["バブル崩壊","昭和恐慌","狂乱物価","円高不況"], ans:0,
+   exp:"バブル崩壊。バブル経済の終わりを意味しました。"},
+  {q:"⑩ 多くの金融機関が抱えることになった，返済が見込めなくなった融資を何というか。",
+   choices:["国債","不良債権","財テク","内需"], ans:1,
+   exp:"不良債権。1990年代の金融危機の大きな原因となりました。"},
+  {q:"⑪ バブル崩壊後の日本経済の長期不況を何というか。",
+   choices:["昭和恐慌","円高不況","平成不況","狂乱物価"], ans:2,
+   exp:"平成不況。1990年代を中心に続きました。"},
+  {q:"⑫ 1990年代の日本経済の長期低迷期を後年何と呼ぶようになったか。",
+   choices:["高度経済成長期","バブル景気","安定成長期","失われた10年"], ans:3,
+   exp:"失われた10年。のちに「失われた20年」とも呼ばれました。"}
+];
+
+const checkItems = [
+  "1985年，プラザ合意が結ばれたことを説明できる",
+  "プラザ合意後，円高不況が生じたことを説明できる",
+  "日本銀行が低金利政策をとったことを説明できる",
+  "財テクが広がったことを説明できる",
+  "バブル経済が発生したことを説明できる",
+  "土地神話が信じられたことを説明できる",
+  "内需拡大政策が進められたことを説明できる",
+  "リゾート開発ブームが起きたことを説明できる",
+  "1990年以降，バブル崩壊が起きたことを説明できる",
+  "金融機関が不良債権を抱えたことを説明できる",
+  "平成不況が生じたことを説明できる",
+  "1990年代が「失われた10年」と呼ばれることを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4, mq5: miniQuizData5, mq6: miniQuizData6 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 9;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（9問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>
