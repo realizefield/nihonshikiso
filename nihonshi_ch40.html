@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単元㊵ 日独伊三国同盟と日米交渉の決裂｜日本史基礎GAMBA</title>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',Meiryo,sans-serif;max-width:960px;margin:20px auto;line-height:2.0;background-color:#fdf5ec;font-size:16px;padding:0 14px 220px}
+h1{border-bottom:3px solid #8b2500;padding-bottom:8px;font-size:22px;color:#1a1a2e;margin:16px 0 8px}
+h2{margin-top:20px;margin-bottom:8px;font-size:18px;border-left:5px solid #8b2500;padding-left:10px;color:#1a1a2e}
+.back-to-index{display:inline-flex;align-items:center;gap:6px;background:#8b2500;color:#fff!important;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-bottom:6px;text-decoration:none}
+.back-to-index:hover{background:#6a1c00}
+.back-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section{background-color:#fff;border-radius:8px;padding:20px;border:1px solid #94a3b8;margin-bottom:16px;position:relative}
+.section-label{display:inline-block;color:#fff;font-size:13px;font-weight:bold;padding:3px 14px;border-radius:12px;margin-bottom:10px;background:#8b2500}
+
+.blank{display:inline-block;min-width:90px;min-height:26px;border-bottom:2px solid #8b2500;margin:0 4px;text-align:center;cursor:pointer;font-weight:bold;color:#8b2500;vertical-align:middle;position:relative;padding:0 2px}
+.blank-display{display:inline-block}
+.blank.correct{background-color:#fde8e8}.blank.wrong{background-color:#fdd;border-color:#c00}.blank.demo-fill{background-color:#d0f0d8;border-color:#1a6b22;color:#1a4015}.blank.placed{background-color:#fff5f0}
+
+.kw{display:inline-block;position:relative;border-bottom:2px dashed #8b2500;cursor:help;color:#8b2500;font-weight:bold;line-height:1.4}
+.blank.kw{border-bottom:2px solid #8b2500;cursor:pointer}
+.kw .kw-pop{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:270px;max-width:92vw;background:#1a1a2e;color:#f0f0f0;border-radius:12px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.32);z-index:3000;font-weight:normal;font-size:13px;line-height:1.8;text-align:left;white-space:normal;transition:opacity 0.15s,visibility 0.15s}
+.kw .kw-pop::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#1a1a2e}
+@media(hover:hover){.kw:not(.blank):hover .kw-pop{visibility:visible;opacity:1}}
+.kw.active .kw-pop{visibility:visible;opacity:1}
+.kw-title{display:block;font-weight:bold;font-size:14px;color:#fca5a5;margin-bottom:4px;border-bottom:1px solid #444;padding-bottom:4px}
+.kw-yomi{display:block;font-size:12px;color:#fcd4d4;margin-bottom:4px}
+.kw-body{display:block;font-size:13px;color:#ddd}
+
+.why-box{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.why-box .label{font-weight:bold;color:#8b2500;margin-right:4px}
+.result-box{background:#efffea;border-left:5px solid #1a6b22;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.result-box .label{font-weight:bold;color:#1a6b22;margin-right:4px}
+.cause-box{background:#fff8e8;border-left:5px solid #c87000;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.cause-box .label{font-weight:bold;color:#c87000;margin-right:4px}
+.key-point{background:#fff5f0;border-left:5px solid #8b2500;padding:10px 16px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px;line-height:2.0}
+.key-point strong{color:#8b2500}
+.timeline-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tl-item{background:#fff5f0;border:1.5px solid #f4a261;border-radius:6px;padding:4px 10px;font-size:13px;color:#8b2500;font-weight:bold}
+
+.sec-challenge-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 14px;margin-top:14px}
+.sec-btn{padding:7px 16px;border-radius:8px;border:none;font-size:14px;font-weight:bold;cursor:pointer;background:#8b2500;color:#fff;box-shadow:0 2px 0 #6a1c00;font-family:inherit}
+.sec-btn.challenge{background:#c87000;box-shadow:0 2px 0 #8a4e00}
+.sec-btn.challenge:hover{background:#a85e00}
+.sec-status{font-size:13px;font-weight:bold;margin-left:4px}
+.sec-status.pass{color:#1a6b22}.sec-status.fail{color:#c00}
+
+.demo-banner{display:none;background:linear-gradient(90deg,#1a6b22,#2d8a30);color:#fff;text-align:center;padding:10px 16px;border-radius:8px;margin:10px 0;font-weight:bold;font-size:14px;cursor:pointer;letter-spacing:0.04em}
+.demo-banner:hover{background:linear-gradient(90deg,#145218,#236a26)}
+
+#challenge-chip-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:linear-gradient(180deg,#1a0808,#2d1a1a);border-top:3px solid #e74c3c;z-index:1500;box-shadow:0 -4px 20px rgba(0,0,0,0.4);padding:8px 14px 10px;box-sizing:border-box}
+#challenge-chip-bar.visible{display:block}
+#ccb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;gap:8px;flex-wrap:wrap}
+#ccb-label{font-size:13px;font-weight:bold;color:#fca5a5}
+#ccb-hint{font-size:12px;color:#fcd4d4;flex:1;text-align:center}
+#ccb-count{font-size:12px;color:#fcd4d4;white-space:nowrap}
+#ccb-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;margin-bottom:8px}
+.challenge-chip{padding:7px 14px;border-radius:18px;border:1.5px solid #e74c3c;background:#7a1a1a;color:#f0f0f0;cursor:pointer;font-size:14px;font-weight:bold;transition:all 0.15s;user-select:none}
+.challenge-chip:hover{border-color:#fca5a5;background:#8b2500}
+.challenge-chip.selected{border-color:#f4d03f;background:#8b2500;color:#f4d03f;box-shadow:0 0 0 2px #f4d03f}
+#ccb-controls{display:flex;gap:8px;flex-wrap:wrap}
+#ccb-controls button{padding:6px 14px;font-size:13px;box-shadow:0 2px 0 #333;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-family:inherit;color:#fff}
+#ccb-btn-demo{background:#1a6b22;box-shadow:0 2px 0 #0d4f15}
+#ccb-btn-reset{background:#888;box-shadow:0 2px 0 #555}
+#ccb-btn-judge{background:#c87000;box-shadow:0 2px 0 #7a4500}
+#ccb-demo-return{display:none;margin-top:6px;text-align:center}
+#ccb-demo-return button{background:#1a6b22;font-size:13px;padding:7px 18px;box-shadow:0 2px 0 #0d4f15;border:none;border-radius:8px;cursor:pointer;font-weight:bold;color:#fff;font-family:inherit}
+
+#oshii-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a2e,#2d1a1a);border:3px solid #fca5a5;border-radius:20px;padding:28px 40px;text-align:center;z-index:9000;box-shadow:0 10px 40px rgba(0,0,0,0.5);cursor:pointer;min-width:200px}
+.oshii-main{font-size:32px;font-weight:bold;color:#f4d03f;margin-bottom:8px}
+.oshii-sub{font-size:16px;color:#f0f0f0;margin-bottom:6px}
+#oshii-msg{font-size:14px;color:#fca5a5;margin-top:6px}
+
+.mini-quiz-wrap{margin-top:14px}
+.mini-quiz-toggle{width:100%;text-align:left;background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:bold;cursor:pointer;color:#8b2500;display:flex;align-items:center;justify-content:space-between;font-family:inherit}
+.mini-quiz-toggle .arrow{transition:transform 0.2s}
+.mini-quiz-toggle.open .arrow{transform:rotate(90deg)}
+.mini-quiz-body{display:none;margin-top:10px;padding:14px;background:#fff;border:1.5px solid #94a3b8;border-radius:10px}
+.mini-quiz-body.open{display:block}
+.mq-block{margin-bottom:18px}
+.mq-q{font-size:15px;font-weight:bold;margin-bottom:8px;color:#1a1a2e;line-height:1.7}
+.mq-qnum{display:inline-block;background:#8b2500;color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:13px;font-weight:bold;margin-right:8px}
+.mq-choices{display:flex;flex-direction:column;gap:7px}
+.mq-choice{padding:9px 14px;border-radius:8px;border:1.5px solid #94a3b8;background:#fff5f0;cursor:pointer;font-size:14px;line-height:1.6;transition:all 0.15s}
+.mq-choice:hover{border-color:#8b2500;background:#fdd9c4}
+.mq-choice.correct{background:#d0f0d8;border-color:#1a6b22;color:#1a4015;pointer-events:none;font-weight:bold}
+.mq-choice.wrong{background:#fdd;border-color:#c00;color:#800;pointer-events:none}
+.mq-choice.reveal{background:#fdebd0;border-color:#c87000;pointer-events:none}.mq-choice.placed{background:#f4d0b8;border-color:#8b2500;color:#1a1a2e;font-weight:bold}
+.mq-exp{margin-top:8px;padding:8px 12px;background:#fff;border-radius:8px;border:1.5px solid #94a3b8;font-size:13px;color:#475569;line-height:1.7}
+
+.final-section{background:#fff;border-radius:8px;padding:20px;border:1.5px solid #8b2500;margin-bottom:16px}
+.final-section h2{border-left:5px solid #8b2500;padding-left:10px;margin-top:0}
+.mq-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mq-btn{padding:10px 24px;background:#8b2500;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer;font-family:inherit}
+.mq-btn:hover{background:#6a1c00}
+.mq-btn.reset{background:#888}
+.mq-btn.reset:hover{background:#666}
+.check-bar-wrap{height:10px;background:#fdd9c4;border-radius:20px;overflow:hidden;margin-bottom:6px}
+#check-bar{height:100%;background:linear-gradient(90deg,#8b2500,#c87000);border-radius:20px;transition:.4s}
+#check-count{font-size:13px;color:#64748b;margin-bottom:10px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4000;overflow-y:auto;align-items:flex-start;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:680px;width:100%;margin:auto;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:12px;background:#8b2500;color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:16px;font-weight:bold}
+.modal-title{font-size:17px;font-weight:bold;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f4a261;color:#8b2500}
+.modal-body{font-size:14px;line-height:1.9;color:#1a1a2e}
+.modal-btn{display:flex;width:100%;text-align:left;background:linear-gradient(135deg,#8b2500,#c87000);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit;align-items:center;justify-content:space-between}
+.modal-btn:hover{opacity:.9}
+.btn-arrow{font-size:12px;opacity:.8}
+
+.drill-link-box{background:#fff5f0;border:1.5px solid #f4a261;border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.drill-link-box a{background:#8b2500;color:#fff;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:bold;text-decoration:none}
+.drill-link-box a:hover{background:#6a1c00}
+
+@media(max-width:480px){h1{font-size:18px}h2{font-size:16px}.mq-choices{gap:5px}.back-row{gap:6px}}
+</style>
+</head>
+<body>
+
+<div class="back-row">
+  <a href="nihonshi_ch39.html" class="back-to-index">← 単元㊴へ</a>
+  <a href="nihonshi_index.html" class="back-to-index" style="background:#555">← 目次へ</a>
+</div>
+
+<h1>🌏 単元㊵　日独伊三国同盟と日米交渉の決裂——開戦前夜</h1>
+
+<!-- ===== Section 1 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第８節　単元㊵</span>
+  <h2>日独伊三国同盟の締結——ドイツ・イタリアとの提携</h2>
+
+  <div class="demo-banner" id="demo-banner-1" onclick="exitDemo()">📖 手本です — タップしてチャレンジに戻る ▶</div>
+
+  <p>1940年9月，日本はドイツ・イタリアと軍事同盟である<span class="blank kw" data-id="A" onclick="blankClicked(event,'A')"><span class="blank-display">日独伊三国同盟</span><span class="kw-pop"><span class="kw-title">日独伊三国同盟（にちどくいさんごくどうめい）</span><span class="kw-yomi">📖 読み：にちどくいさんごくどうめい</span><span class="kw-body">1940年9月，日本・ドイツ・イタリアが結んだ軍事同盟。互いにアメリカを仮想敵国として想定しており，この同盟によって日本とアメリカの対立はさらに深まった。</span></span></span>（A）を結びました。同じころ，日本軍は中国への補給路（援蒋ルート）を断ち，資源確保のため東南アジアへ進出する足がかりとして，フランス領インドシナ北部に軍を進める<span class="blank kw" data-id="B" onclick="blankClicked(event,'B')"><span class="blank-display">北部仏印進駐</span><span class="kw-pop"><span class="kw-title">北部仏印進駐（ほくぶふついんしんちゅう）</span><span class="kw-yomi">📖 読み：ほくぶふついんしんちゅう</span><span class="kw-body">1940年，日本軍がフランス領インドシナ（仏印）北部に進駐した出来事。援蒋ルートの遮断と，東南アジアの資源地帯への足がかりを得る狙いがあった。</span></span></span>（B）をおこないました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 資源を求めて南へ——日中戦争長期化の副産物</span>
+    ▶ 日中戦争が長期化する中，日本は石油・ゴム・すずなど戦争継続に不可欠な資源の多くを海外からの輸入に頼っていた<br>
+    ▶ 資源が豊富な東南アジアへの進出（南進）を求める声が軍部を中心に強まっていた<br>
+    ▶ ヨーロッパではドイツが快進撃を続けており，外相<span class="kw">松岡洋右<span class="kw-pop"><span class="kw-title">松岡洋右（まつおかようすけ）</span><span class="kw-yomi">📖 読み：まつおかようすけ</span><span class="kw-body">当時の外務大臣。満州事変後の国際連盟脱退にも深く関わった人物で，日独伊三国同盟の締結や日ソ中立条約の締結を主導した。</span></span></span>らはドイツ・イタリアと結ぶことで国際的な立場を強化しようとした
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 「仮想敵国アメリカ」を共有する同盟</span>
+    ▶ 日独伊三国同盟は，実質的にアメリカを仮想敵国として想定した同盟であり，締結によって日本とアメリカの対立は決定的に深まった<br>
+    ▶ 北部仏印進駐は，中国への補給路を断つと同時に，日本が東南アジアへ勢力を広げる意図を国際社会に示す出来事となった<br>
+    ▶ こうした動きに対し，アメリカは日本への警戒をいっそう強め，経済的な圧力を強めていくことになる
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-1" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-1"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq1',this)">
+      📝 日独伊三国同盟 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq1"></div>
+  </div>
+</div>
+
+<!-- ===== Section 2 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第８節　単元㊵</span>
+  <h2>南進政策とABCD包囲網</h2>
+
+  <p>1941年7月，日本軍はさらに南へと進み，フランス領インドシナ南部（現在の南ベトナムなど）に軍を進める<span class="blank kw" data-id="C" onclick="blankClicked(event,'C')"><span class="blank-display">南部仏印進駐</span><span class="kw-pop"><span class="kw-title">南部仏印進駐（なんぶふついんしんちゅう）</span><span class="kw-yomi">📖 読み：なんぶふついんしんちゅう</span><span class="kw-body">1941年7月，日本軍がフランス領インドシナ南部に進駐した出来事。石油やゴムなど東南アジアの資源地帯に近づく南進政策の一環だったが，アメリカの強い反発を招いた。</span></span></span>（C）をおこないました。これに対しアメリカは，日本への石油輸出を全面的に禁止するなど強い経済制裁で応じ，アメリカ・イギリス・中国・オランダの4か国が日本を経済的に締め上げる<span class="blank kw" data-id="D" onclick="blankClicked(event,'D')"><span class="blank-display">ABCD包囲網</span><span class="kw-pop"><span class="kw-title">ABCD包囲網（エービーシーディーほういもう）</span><span class="kw-yomi">📖 読み：エービーシーディーほういもう</span><span class="kw-body">アメリカ（America）・イギリス（Britain）・中国（China）・オランダ（Dutch）の頭文字をとった呼び名。4か国が対日輸出制限や資産凍結などで日本を経済的に包囲した体制を指す。</span></span></span>（D）が形づくられました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 石油を止められた日本の危機感</span>
+    ▶ 当時の日本は，石油のほとんどをアメリカからの輸入に頼っており，石油輸出の全面禁止は日本の軍事力・経済に致命的な打撃を与えかねなかった<br>
+    ▶ 南部仏印進駐は，石油やゴムなど東南アジアの資源地帯へさらに近づく狙いがあったが，結果的にアメリカをいっそう強く刺激することになった<br>
+    ▶ 「このままでは石油の備蓄が尽きる」という焦りが，日本の軍部・政府の中で強まっていった
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 ジリ貧か，開戦か——追い詰められる日本</span>
+    ▶ ABCD包囲網により，日本は必要な資源の多くを断たれ，「このまま外交交渉を続けても状況は悪化する一方（ジリ貧）」という危機感が強まった<br>
+    ▶ 一方で，アメリカとの全面戦争に踏み切れば，国力の差から長期戦は不利であることも軍部内では認識されていた<br>
+    ▶ 日本は，外交交渉によって危機を打開する道と，武力による資源確保の道との間で，難しい選択を迫られることになった
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq2',this)">
+      📝 南進政策とABCD包囲網 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq2"></div>
+  </div>
+</div>
+
+<!-- ===== Section 3 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第８節　単元㊵</span>
+  <h2>日ソ中立条約と日米交渉</h2>
+
+  <p>1941年4月，日本は北方の安全を確保するため，ソ連と<span class="blank kw" data-id="E" onclick="blankClicked(event,'E')"><span class="blank-display">日ソ中立条約</span><span class="kw-pop"><span class="kw-title">日ソ中立条約（にっソちゅうりつじょうやく）</span><span class="kw-yomi">📖 読み：にっソちゅうりつじょうやく</span><span class="kw-body">1941年4月，日本とソ連が結んだ条約。互いに中立を保つことを約束し，日本は南方進出に専念するため北方の安全を確保しようとした。松岡洋右外相が締結を主導した。</span></span></span>（E）を結びました。一方，近衛文麿内閣は，戦争回避の道を探るため，野村吉三郎大使を通じてアメリカと<span class="blank kw" data-id="F" onclick="blankClicked(event,'F')"><span class="blank-display">日米交渉</span><span class="kw-pop"><span class="kw-title">日米交渉（にちべいこうしょう）</span><span class="kw-yomi">📖 読み：にちべいこうしょう</span><span class="kw-body">1941年，日本とアメリカの間でおこなわれた，戦争回避を目指す外交交渉。近衛文麿内閣のもとで野村吉三郎大使が担当したが，中国・仏印からの撤兵をめぐって双方の立場は大きく隔たっていた。</span></span></span>（F）を続けていました。</p>
+
+  <div class="cause-box">
+    <span class="label">⚡ 北の安全を固め，南に集中する</span>
+    ▶ 日本は南方（東南アジア）への進出を進める一方，満州国境などで<span class="kw">ソ連<span class="kw-pop"><span class="kw-title">ソ連（それん）</span><span class="kw-yomi">📖 読み：それん</span><span class="kw-body">ソビエト連邦。1939年のノモンハン事件で日本軍と衝突しており，日本は北方でソ連と戦端を開くことを避けたいと考えていた。</span></span></span>との緊張関係が続いており，同時に南北両方向で戦争になる事態は避けたいと考えていた<br>
+    ▶ 日ソ中立条約の締結により，日本は北方の安全をひとまず確保し，南方進出に専念できる状況を整えた<br>
+    ▶ 一方でアメリカとの関係悪化は深刻で，近衛内閣は<span class="kw">野村吉三郎<span class="kw-pop"><span class="kw-title">野村吉三郎（のむらきちさぶろう）</span><span class="kw-yomi">📖 読み：のむらきちさぶろう</span><span class="kw-body">日米交渉にあたった日本の駐米大使。海軍出身で，戦争回避のためアメリカ側と粘り強く交渉を続けたが，最終的に交渉はまとまらなかった。</span></span></span>を駐米大使としてアメリカに送り，戦争を避ける道を模索した
+  </div>
+
+  <div class="why-box">
+    <span class="label">🚩 埋まらない立場の隔たり</span>
+    ▶ 日米交渉では，日本の中国・仏印からの撤兵や，日独伊三国同盟の扱いなどが焦点となったが，日本側は満州国の維持や中国での既得権益を手放すつもりはなかった<br>
+    ▶ アメリカは，日本が中国大陸から全面的に撤退することを強く求めており，双方の主張には大きな隔たりがあった<br>
+    ▶ 交渉は長期化する一方で，日本国内では「交渉が不調に終われば武力行使もやむを得ない」という空気も強まっていった
+  </div>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-2" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-2"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq3',this)">
+      📝 日ソ中立条約と日米交渉 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq3"></div>
+  </div>
+</div>
+
+<!-- ===== Section 4 ===== -->
+<div class="section">
+  <span class="section-label">第10章 第８節　単元㊵</span>
+  <h2>ハル・ノートと開戦への道</h2>
+
+  <p>1941年11月，アメリカ国務長官ハルが日本側に提示した文書<span class="blank kw" data-id="G" onclick="blankClicked(event,'G')"><span class="blank-display">ハル・ノート</span><span class="kw-pop"><span class="kw-title">ハル・ノート</span><span class="kw-yomi">📖 読み：ハル・ノート</span><span class="kw-body">1941年11月，アメリカ国務長官ハルが日本に提示した外交文書。中国・仏印からの全面撤兵など，日本にとって受け入れがたい要求が含まれており，日本側は事実上の「最後通牒」と受け止めた。</span></span></span>（G）は，中国・仏印からの全面撤退などを求める内容で，日本側はこれを事実上の最後通牒と受け止めました。同年，首相は陸軍大臣の<span class="blank kw" data-id="H" onclick="blankClicked(event,'H')"><span class="blank-display">東条英機</span><span class="kw-pop"><span class="kw-title">東条英機（とうじょうひでき）</span><span class="kw-yomi">📖 読み：とうじょうひでき</span><span class="kw-body">1941年10月に内閣総理大臣となった陸軍軍人。日米交渉が行き詰まる中で首相に就任し，同年12月，御前会議での決定を経て対米開戦に踏み切った。</span></span></span>（H）に代わり，同年12月，天皇臨席のもとで開かれる<span class="kw">御前会議<span class="kw-pop"><span class="kw-title">御前会議（ごぜんかいぎ）</span><span class="kw-yomi">📖 読み：ごぜんかいぎ</span><span class="kw-body">天皇臨席のもと，政府と軍の首脳が国家の重要方針を決定する会議。1941年12月の御前会議で，日本はアメリカ・イギリスとの開戦を最終決定した。</span></span></span>で対米開戦が決定されました。</p>
+
+  <div class="result-box">
+    <span class="label">📜 交渉から開戦へ——後戻りできない選択</span>
+    ▶ ハル・ノートを受け取った日本側は，これ以上の交渉継続は困難と判断し，戦争準備を最終段階へと進めた<br>
+    ▶ 東条英機内閣のもとで開かれた御前会議では，外交交渉の期限を区切ったうえで，交渉が不調に終わればアメリカ・イギリスとの開戦に踏み切ることが決定された<br>
+    ▶ こうして日本は，日中戦争の泥沼化から始まった資源不足と国際的孤立の果てに，さらに大きな戦争へと突き進んでいくことになる
+  </div>
+
+  <div class="key-point">
+    <strong>まとめ：日独伊三国同盟と日米交渉決裂のポイント</strong><br>
+    1940年，日本は日独伊三国同盟を結び，北部仏印進駐をおこないました。1941年には南部仏印進駐をきっかけにアメリカが石油輸出を禁止し，ABCD包囲網が形成されました。日本は日ソ中立条約で北方の安全を確保しつつ，野村吉三郎大使を通じて日米交渉を続けましたが，立場の隔たりは埋まりませんでした。1941年11月のハル・ノートを最後通牒と受け止めた日本は，東条英機内閣のもとでの御前会議を経て，対米開戦を決定しました。<br><br>
+    ▶ <strong>日独伊三国同盟（1940年）</strong>——アメリカを仮想敵国とする軍事同盟<br>
+    ▶ <strong>南部仏印進駐・ABCD包囲網</strong>——アメリカの対日石油禁輸で危機感が高まる<br>
+    ▶ <strong>日ソ中立条約・日米交渉</strong>——北方の安全確保と戦争回避の模索<br>
+    ▶ <strong>ハル・ノート・御前会議</strong>——交渉決裂を受け対米開戦を決定
+  </div>
+
+  <div class="timeline-bar">
+    <span class="tl-item">日独伊三国同盟</span>
+    <span class="tl-item">北部仏印進駐</span>
+    <span class="tl-item">南部仏印進駐</span>
+    <span class="tl-item">ABCD包囲網</span>
+    <span class="tl-item">日ソ中立条約</span>
+    <span class="tl-item">日米交渉</span>
+    <span class="tl-item">ハル・ノート</span>
+    <span class="tl-item">東条英機</span>
+  </div>
+
+  <button class="modal-btn" onclick="openModal('kaisen')">🌏 なぜ日米交渉は決裂し戦争へ向かったのか——くわしく見る <span class="btn-arrow">▶</span></button>
+
+  <div class="sec-challenge-bar">
+    <button class="sec-btn challenge" id="chal-btn-3" onclick="startChallenge()">🎯 穴埋めチャレンジ！</button>
+    <span class="sec-status" id="sec-status-3"></span>
+  </div>
+
+  <div class="mini-quiz-wrap">
+    <button class="mini-quiz-toggle" onclick="toggleMQ('mq4',this)">
+      📝 ハル・ノートと開戦への道 確認ミニクイズ（4問）<span class="arrow">▶</span>
+    </button>
+    <div class="mini-quiz-body" id="mq4"></div>
+  </div>
+
+  <div class="drill-link-box" style="margin-top:14px">
+    <span style="font-size:14px;font-weight:bold">📝 単元㊵ ドリルで練習しよう！</span>
+    <a href="nihonshi_drill_ch40.html">単元㊵ドリルへ →</a>
+  </div>
+</div>
+
+<!-- ===== まとめテスト ===== -->
+<div class="final-section">
+  <h2>🏆 単元㊵ まとめテスト（全10問）</h2>
+  <p style="font-size:14px;color:#64748b">8問以上で合格！全問に答えてから「採点する」を押してください。</p>
+  <div id="final-quiz-area"></div>
+  <div id="final-result-row"></div>
+  <div class="mq-btn-row">
+    <button class="mq-btn" onclick="judgeFinal()">✅ 採点する</button>
+    <button class="mq-btn reset" onclick="resetFinal()">↩ リセット</button>
+  </div>
+</div>
+
+<!-- ===== チェックリスト ===== -->
+<div class="section">
+  <h2>✅ 理解度チェックリスト</h2>
+  <div class="check-bar-wrap"><div id="check-bar" style="width:0%"></div></div>
+  <div id="check-count">0 / 8 チェック済み</div>
+  <div id="checklist-area"></div>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-overlay" id="modal-kaisen" onclick="if(event.target===this)closeModal('kaisen')">
+  <div class="modal-box" style="max-width:720px">
+    <button class="modal-close" onclick="closeModal('kaisen')">✕</button>
+    <div class="modal-title">🌏 なぜ日米交渉は決裂し戦争へ向かったのか——くわしく見る</div>
+    <div class="modal-body">
+      <div style="background:#1a4f7a;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:0 0 12px">① 同盟と進駐が対米関係を悪化させていた</div>
+      <div class="cause-box">
+        <span class="label">🎯 一歩ずつアメリカを刺激していった日本</span>
+        日独伊三国同盟の締結，北部・南部への仏印進駐と，日本は交渉を有利に進めるための「布石」のつもりで行動を重ねましたが，そのたびにアメリカとの関係は悪化していきました。<br><br>
+        ▶ 日独伊三国同盟は，事実上アメリカを仮想敵国とする軍事同盟であり，アメリカの警戒を決定的に強めた<br>
+        ▶ 南部仏印進駐は，アメリカによる石油輸出全面禁止という，日本にとって最も避けたい事態を招いた
+      </div>
+      <div style="background:#8b2500;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">② 交渉と戦争準備が同時に進んでいた</div>
+      <div class="why-box">
+        <span class="label">🚩 「交渉」と「開戦準備」の綱引き</span>
+        近衛内閣は日米交渉を続けながらも，軍部は並行して開戦の準備を進めており，交渉に残された時間は限られていました。<br><br>
+        ▶ 日本側は中国・満州での既得権益を手放すつもりがなく，アメリカ側は中国からの全面撤退を譲らなかったため，交渉は実質的に平行線をたどった<br>
+        ▶ 石油の備蓄が減り続ける中，「交渉が長引くほど日本が不利になる」という焦りが，交渉の決裂を早める一因になった
+      </div>
+      <div style="background:#1a6b22;color:#fff;border-radius:8px;padding:8px 16px;font-weight:bold;font-size:15px;margin:16px 0 12px">③ ハル・ノートが交渉の扉を閉じた</div>
+      <div class="result-box">
+        <span class="label">🏗 「最後通牒」と受け止められた文書</span>
+        ハル・ノートは，日本に中国・仏印からの全面撤兵などを求める内容でしたが，これを受け入れることは，日中戦争以来積み上げてきた権益をすべて放棄することを意味し，日本側には到底受け入れがたいものでした。日本はこれを事実上の最後通牒と受け止め，御前会議で対米開戦を最終的に決定しました。日中戦争の長期化から始まった資源不足と国際的孤立の連鎖は，こうして日本を，より大きな戦争（太平洋戦争）へと向かわせていくことになります。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== チャレンジバー ===== -->
+<div id="challenge-chip-bar">
+  <div id="ccb-top">
+    <span id="ccb-label">🎯 穴埋めチャレンジ</span>
+    <span id="ccb-hint">下の言葉から選んで，空欄をタップして埋めよう</span>
+    <span id="ccb-count">残り 8語</span>
+  </div>
+  <div id="ccb-chips"></div>
+  <div id="ccb-controls">
+    <button id="ccb-btn-demo" onclick="showDemo()">📖 手本を見る</button>
+    <button id="ccb-btn-reset" onclick="resetChallenge()">↩ リセット</button>
+    <button id="ccb-btn-judge" onclick="judgeChallenge()">✅ 判定する</button>
+  </div>
+  <div id="ccb-demo-return"><button onclick="exitDemo()">▶ チャレンジに戻る</button></div>
+</div>
+
+<!-- ===== おしい！ポップアップ ===== -->
+<div id="oshii-popup" onclick="this.style.display='none'">
+  <div class="oshii-main">おしい！</div>
+  <div class="oshii-sub">もう一度確認しよう</div>
+  <div id="oshii-msg"></div>
+</div>
+
+<script>
+/* ===== データ ===== */
+const allAnswers = {
+  "A":"日独伊三国同盟", "B":"北部仏印進駐", "C":"南部仏印進駐", "D":"ABCD包囲網",
+  "E":"日ソ中立条約", "F":"日米交渉", "G":"ハル・ノート", "H":"東条英機"
+};
+const wordBank = ["日独伊三国同盟","北部仏印進駐","南部仏印進駐","ABCD包囲網",
+  "日ソ中立条約","日米交渉","ハル・ノート","東条英機"];
+
+const miniQuizData1 = [
+  {q:"①　1940年9月，日本がドイツ・イタリアと結んだ軍事同盟を何というか。",
+   choices:["日独伊三国同盟","日ソ中立条約","日英同盟","三国協商"], ans:0,
+   exp:"日独伊三国同盟。事実上アメリカを仮想敵国とする同盟でした。"},
+  {q:"②　日独伊三国同盟が事実上仮想敵国として想定していた国はどこか。",
+   choices:["イギリス","アメリカ","中国","ソ連"], ans:1,
+   exp:"アメリカ。この同盟により日米対立はさらに深まりました。"},
+  {q:"③　1940年，中国への補給路遮断と南進の足がかりとして日本軍が進駐した地域はどこか。",
+   choices:["南部仏印進駐","満州事変","北部仏印進駐","盧溝橋事件"], ans:2,
+   exp:"北部仏印進駐。フランス領インドシナ北部に軍を進めました。"},
+  {q:"④　当時の日本が東南アジアへの進出（南進）を進めた背景として正しいものはどれか。",
+   choices:["中国と同盟を結ぶため","ソ連と戦うため","アメリカを支援するため","石油やゴムなど戦争継続に必要な資源を確保するため"], ans:3,
+   exp:"日中戦争の長期化で不足していた資源を求めて，南進政策が進められました。"}
+];
+
+const miniQuizData2 = [
+  {q:"①　1941年7月，日本軍がフランス領インドシナ南部に進駐した出来事を何というか。",
+   choices:["南部仏印進駐","北部仏印進駐","満州国建国","盧溝橋事件"], ans:0,
+   exp:"南部仏印進駐。アメリカの強い反発を招きました。"},
+  {q:"②　南部仏印進駐を受け，アメリカが日本に対しておこなった措置として正しいものはどれか。",
+   choices:["武器援助を停止した","石油輸出を全面禁止した","経済制裁を解除した","日本と新たな同盟を締結した"], ans:1,
+   exp:"石油輸出の全面禁止。日本にとって致命的な打撃となりました。"},
+  {q:"③　日本を経済的に包囲したABCD包囲網の組み合わせとして正しいものはどれか。",
+   choices:["日本・ドイツ・イタリア・ソ連","中国・ソ連・イギリス・アメリカ","アメリカ・イギリス・中国・オランダ","ドイツ・イタリア・日本・満州国"], ans:2,
+   exp:"アメリカ・イギリス・中国・オランダの4か国による経済包囲網でした。"},
+  {q:"④　ABCD包囲網によって日本が直面した状況として正しいものはどれか。",
+   choices:["中国が降伏した","ソ連が参戦した","ドイツが敗北した","石油などの資源を断たれる危機に陥った"], ans:3,
+   exp:"石油の輸入が止まり，資源不足という深刻な危機に直面しました。"}
+];
+
+const miniQuizData3 = [
+  {q:"①　1941年4月，北方の安全確保のため日本がソ連と結んだ条約を何というか。",
+   choices:["日ソ中立条約","日独伊三国同盟","ポーツマス条約","下関条約"], ans:0,
+   exp:"日ソ中立条約。南進に専念するため北方の安全を確保しました。"},
+  {q:"②　日米交渉にあたった日本の駐米大使は誰か。",
+   choices:["松岡洋右","野村吉三郎","近衛文麿","東条英機"], ans:1,
+   exp:"野村吉三郎。戦争回避のため粘り強く交渉を続けました。"},
+  {q:"③　日米交渉における主な争点として正しいものはどれか。",
+   choices:["石油輸出の再開","ソ連との関係","中国・仏印からの撤兵","天皇制の存続"], ans:2,
+   exp:"中国・仏印からの撤兵をめぐり，日米双方の立場は大きく隔たっていました。"},
+  {q:"④　日米交渉の結果として正しいものはどれか。",
+   choices:["ただちに戦争回避で合意した","日本が全面的に譲歩した","アメリカが要求を撤回した","双方の立場の隔たりが埋まらなかった"], ans:3,
+   exp:"交渉は長期化しましたが，立場の隔たりは最後まで埋まりませんでした。"}
+];
+
+const miniQuizData4 = [
+  {q:"①　1941年11月，アメリカ国務長官が日本に提示した文書を何というか。",
+   choices:["ハル・ノート","ポツダム宣言","九カ国条約","大西洋憲章"], ans:0,
+   exp:"ハル・ノート。日本側は事実上の最後通牒と受け止めました。"},
+  {q:"②　1941年10月に内閣総理大臣となった陸軍軍人は誰か。",
+   choices:["近衛文麿","東条英機","広田弘毅","若槻礼次郎"], ans:1,
+   exp:"東条英機。日米交渉が行き詰まる中で首相に就任しました。"},
+  {q:"③　ハル・ノートの内容として正しいものはどれか。",
+   choices:["満州国の承認","ソ連との同盟要求","中国・仏印からの全面撤兵要求","石油輸出の増加"], ans:2,
+   exp:"中国・仏印からの全面撤兵などを求める内容で，日本側には受け入れがたいものでした。"},
+  {q:"④　1941年12月，対米開戦が最終的に決定された会議を何というか。",
+   choices:["帝国議会","枢密院会議","内閣会議のみ","御前会議"], ans:3,
+   exp:"御前会議。天皇臨席のもとで対米開戦が決定されました。"}
+];
+
+const finalQuizData = [
+  {q:"① 1940年9月，日本がドイツ・イタリアと結んだ軍事同盟を何というか。",
+   choices:["日独伊三国同盟","日ソ中立条約","日英同盟","三国協商"], ans:0,
+   exp:"日独伊三国同盟。事実上アメリカを仮想敵国とする同盟でした。"},
+  {q:"② 日独伊三国同盟が事実上仮想敵国として想定していた国はどこか。",
+   choices:["イギリス","アメリカ","中国","ソ連"], ans:1,
+   exp:"アメリカ。この同盟により日米対立はさらに深まりました。"},
+  {q:"③ 1940年，中国への補給路遮断と南進の足がかりとして日本軍が進駐した地域はどこか。",
+   choices:["南部仏印進駐","満州事変","北部仏印進駐","盧溝橋事件"], ans:2,
+   exp:"北部仏印進駐。フランス領インドシナ北部に軍を進めました。"},
+  {q:"④ 1941年7月，日本軍がフランス領インドシナ南部に進駐した出来事を何というか。",
+   choices:["北部仏印進駐","満州国建国","盧溝橋事件","南部仏印進駐"], ans:3,
+   exp:"南部仏印進駐。アメリカの強い反発を招きました。"},
+  {q:"⑤ 日本を経済的に包囲した，アメリカ・イギリス・中国・オランダによる体制を何というか。",
+   choices:["ABCD包囲網","日独伊三国同盟","国際連盟","ポツダム宣言"], ans:0,
+   exp:"ABCD包囲網。石油をはじめ資源の多くを断たれました。"},
+  {q:"⑥ 1941年4月，北方の安全確保のため日本がソ連と結んだ条約を何というか。",
+   choices:["日独伊三国同盟","日ソ中立条約","ポーツマス条約","下関条約"], ans:1,
+   exp:"日ソ中立条約。南進に専念するため北方の安全を確保しました。"},
+  {q:"⑦ 日米交渉にあたった日本の駐米大使は誰か。",
+   choices:["松岡洋右","近衛文麿","野村吉三郎","東条英機"], ans:2,
+   exp:"野村吉三郎。戦争回避のため粘り強く交渉を続けました。"},
+  {q:"⑧ 日米交渉における主な争点として正しいものはどれか。",
+   choices:["石油輸出の再開","ソ連との関係","天皇制の存続","中国・仏印からの撤兵"], ans:3,
+   exp:"中国・仏印からの撤兵をめぐり，日米双方の立場は大きく隔たっていました。"},
+  {q:"⑨ 1941年11月，アメリカ国務長官が日本に提示した文書を何というか。",
+   choices:["ハル・ノート","ポツダム宣言","九カ国条約","大西洋憲章"], ans:0,
+   exp:"ハル・ノート。日本側は事実上の最後通牒と受け止めました。"},
+  {q:"⑩ 1941年10月に内閣総理大臣となった陸軍軍人は誰か。",
+   choices:["近衛文麿","東条英機","広田弘毅","若槻礼次郎"], ans:1,
+   exp:"東条英機。日米交渉が行き詰まる中で首相に就任しました。"}
+];
+
+const checkItems = [
+  "1940年，日独伊三国同盟が締結されたことを説明できる",
+  "日独伊三国同盟によって日米の対立がさらに深まったことを説明できる",
+  "北部仏印進駐・南部仏印進駐の目的を説明できる",
+  "南部仏印進駐を受けアメリカが石油輸出を禁止し，ABCD包囲網が形成されたことを説明できる",
+  "日ソ中立条約が北方の安全確保のために結ばれたことを説明できる",
+  "近衛内閣が野村吉三郎大使を通じて日米交渉を続けたことを説明できる",
+  "ハル・ノートが日本に事実上の最後通牒と受け止められたことを説明できる",
+  "御前会議で対米開戦が決定されたことを説明できる"
+];
+
+/* ===== チャレンジ機能 ===== */
+let selectedChip = null;
+let challengeActive = false;
+let demoMode = false;
+
+function startChallenge() {
+  challengeActive = true;
+  demoMode = false;
+  document.getElementById('challenge-chip-bar').classList.add('visible');
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('correct','wrong','demo-fill','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function buildChips() {
+  const bar = document.getElementById('ccb-chips');
+  bar.innerHTML = '';
+  const placed = getPlacedAnswers();
+  wordBank.forEach(w => {
+    if (!placed.includes(w)) {
+      const c = document.createElement('span');
+      c.className = 'challenge-chip';
+      c.textContent = w;
+      c.onclick = () => selectChip(c, w);
+      bar.appendChild(c);
+    }
+  });
+}
+
+function getPlacedAnswers() {
+  const result = [];
+  document.querySelectorAll('.blank').forEach(el => {
+    const t = el.querySelector('.blank-display').textContent.trim();
+    if (t && t !== '　　　　') result.push(t);
+  });
+  return result;
+}
+
+function selectChip(el, word) {
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  selectedChip = word;
+  el.classList.add('selected');
+}
+
+function blankClicked(event, id) {
+  if (!challengeActive || demoMode) return;
+  event.stopPropagation();
+  if (!selectedChip) return;
+  const blanks = document.querySelectorAll(`.blank[data-id="${id}"]`);
+  blanks.forEach(el => {
+    el.querySelector('.blank-display').textContent = selectedChip;
+    el.classList.add('placed');
+    el.classList.remove('correct','wrong');
+  });
+  selectedChip = null;
+  document.querySelectorAll('.challenge-chip').forEach(c => c.classList.remove('selected'));
+  buildChips();
+  updateCount();
+}
+
+function updateCount() {
+  const placed = getPlacedAnswers();
+  const remain = wordBank.filter(w => !placed.includes(w)).length;
+  document.getElementById('ccb-count').textContent = '残り ' + remain + '語';
+}
+
+function judgeChallenge() {
+  let allCorrect = true;
+  const judged = new Set();
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    if (judged.has(id)) return;
+    judged.add(id);
+    const ans = allAnswers[id];
+    const cur = el.querySelector('.blank-display').textContent.trim();
+    const ok = cur === ans;
+    if (!ok) allCorrect = false;
+    document.querySelectorAll(`.blank[data-id="${id}"]`).forEach(b => {
+      b.classList.remove('placed','wrong','correct');
+      b.classList.add(ok ? 'correct' : 'wrong');
+    });
+  });
+  const statusEls = [document.getElementById('sec-status-1'), document.getElementById('sec-status-2'), document.getElementById('sec-status-3')];
+  if (allCorrect) {
+    fireConfetti();
+    statusEls.forEach(el => { if (el) { el.textContent = '🎉 全問正解！'; el.className = 'sec-status pass'; } });
+  } else {
+    const wrong = [];
+    document.querySelectorAll('.blank.wrong').forEach(el => {
+      const id = el.dataset.id;
+      if (!wrong.includes(id)) wrong.push(id);
+    });
+    document.getElementById('oshii-msg').textContent = wrong.map(id => `（${id}）正解は「${allAnswers[id]}」`).join('　');
+    document.getElementById('oshii-popup').style.display = 'block';
+    statusEls.forEach(el => { if (el) { el.textContent = '❌ もう一度！'; el.className = 'sec-status fail'; } });
+  }
+}
+
+function showDemo() {
+  demoMode = true;
+  document.getElementById('demo-banner-1').style.display = 'block';
+  document.getElementById('ccb-demo-return').style.display = 'block';
+  document.querySelectorAll('.blank').forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector('.blank-display').textContent = allAnswers[id];
+    el.classList.add('demo-fill');
+    el.classList.remove('placed','correct','wrong');
+  });
+  document.getElementById('ccb-chips').innerHTML = '';
+}
+
+function exitDemo() {
+  demoMode = false;
+  document.getElementById('demo-banner-1').style.display = 'none';
+  document.getElementById('ccb-demo-return').style.display = 'none';
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  buildChips();
+  updateCount();
+}
+
+function resetChallenge() {
+  document.querySelectorAll('.blank').forEach(el => {
+    el.querySelector('.blank-display').textContent = '　　　　';
+    el.classList.remove('demo-fill','correct','wrong','placed');
+  });
+  selectedChip = null;
+  buildChips();
+  updateCount();
+  ['sec-status-1','sec-status-2','sec-status-3'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.className = 'sec-status'; }
+  });
+}
+
+/* ===== ミニクイズ ===== */
+function toggleMQ(id, btn) {
+  const body = document.getElementById(id);
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  if (isOpen && body.innerHTML.trim() === '') buildMQ(id);
+}
+
+const mqDataMap = { mq1: miniQuizData1, mq2: miniQuizData2, mq3: miniQuizData3, mq4: miniQuizData4 };
+
+function buildMQ(id) {
+  const body = document.getElementById(id);
+  const data = mqDataMap[id];
+  body.innerHTML = data.map((d, i) =>
+    `<div class="mq-block" id="${id}-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" onclick="mqAnswer('${id}',${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function mqAnswer(id, qi, ci) {
+  const d = mqDataMap[id][qi];
+  const block = document.getElementById(id + '-block-' + qi);
+  const choices = block.querySelectorAll('.mq-choice');
+  choices.forEach((c, j) => {
+    c.onclick = null;
+    if (j === d.ans) c.classList.add('correct');
+    else if (j === ci && ci !== d.ans) c.classList.add('wrong');
+    else c.classList.add('reveal');
+  });
+  if (!block.querySelector('.mq-exp')) {
+    const exp = document.createElement('div');
+    exp.className = 'mq-exp';
+    exp.textContent = '💡 ' + d.exp;
+    block.appendChild(exp);
+  }
+}
+
+/* ===== まとめテスト ===== */
+let finalAnswers = {};
+function buildFinal() {
+  const area = document.getElementById('final-quiz-area');
+  area.innerHTML = finalQuizData.map((d, i) =>
+    `<div class="mq-block" id="fq-block-${i}">
+      <div class="mq-q"><span class="mq-qnum">${i+1}</span>${d.q}</div>
+      <div class="mq-choices">${d.choices.map((c, j) =>
+        `<div class="mq-choice" id="fq-${i}-${j}" onclick="finalSelect(${i},${j})">${c}</div>`
+      ).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+function finalSelect(qi, ci) {
+  finalAnswers[qi] = ci;
+  const block = document.getElementById('fq-block-' + qi);
+  block.querySelectorAll('.mq-choice').forEach((c, j) => {
+    c.classList.remove('correct','wrong','reveal');
+    if (j === ci) c.classList.add('placed');
+  });
+}
+
+function judgeFinal() {
+  let correct = 0;
+  finalQuizData.forEach((d, i) => {
+    const block = document.getElementById('fq-block-' + i);
+    const choices = block.querySelectorAll('.mq-choice');
+    const chosen = finalAnswers[i];
+    choices.forEach((c, j) => {
+      c.onclick = null;
+      c.classList.remove('placed');
+      if (j === d.ans) c.classList.add('correct');
+      else if (j === chosen && chosen !== d.ans) c.classList.add('wrong');
+    });
+    if (chosen === d.ans) correct++;
+    if (!block.querySelector('.mq-exp')) {
+      const exp = document.createElement('div');
+      exp.className = 'mq-exp';
+      exp.textContent = '💡 ' + d.exp;
+      block.appendChild(exp);
+    }
+  });
+  const pass = correct >= 8;
+  const row = document.getElementById('final-result-row');
+  row.innerHTML = `<div style="margin-top:16px;padding:16px;border-radius:10px;background:${pass ? '#d0f0d8' : '#fdd'};border:2px solid ${pass ? '#1a6b22' : '#c00'};text-align:center">
+    <div style="font-size:22px;font-weight:bold;color:${pass ? '#1a6b22' : '#c00'}">${pass ? '🎉 合格！' : '❌ もう一度！'}</div>
+    <div style="font-size:16px;margin-top:6px">正解数：${correct} / ${finalQuizData.length}問　（8問以上で合格）</div>
+  </div>`;
+  if (pass) fireConfetti();
+}
+
+function resetFinal() {
+  finalAnswers = {};
+  buildFinal();
+  document.getElementById('final-result-row').innerHTML = '';
+}
+
+/* ===== チェックリスト ===== */
+function buildChecklist() {
+  const area = document.getElementById('checklist-area');
+  area.innerHTML = checkItems.map((item, i) =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f1f5f9;cursor:pointer" onclick="toggleCheck(${i})">
+      <div id="chk-${i}" style="flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid #94a3b8;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s"></div>
+      <div style="font-size:14px;line-height:1.8;color:#1a1a2e">${item}</div>
+    </div>`
+  ).join('');
+}
+
+const checked = new Set();
+function toggleCheck(i) {
+  if (checked.has(i)) { checked.delete(i); } else { checked.add(i); }
+  const el = document.getElementById('chk-' + i);
+  el.style.background = checked.has(i) ? '#1a6b22' : '#fff';
+  el.style.borderColor = checked.has(i) ? '#1a6b22' : '#94a3b8';
+  el.textContent = checked.has(i) ? '✓' : '';
+  el.style.color = '#fff';
+  const pct = Math.round(checked.size / checkItems.length * 100);
+  document.getElementById('check-bar').style.width = pct + '%';
+  document.getElementById('check-count').textContent = checked.size + ' / ' + checkItems.length + ' チェック済み';
+}
+
+/* ===== モーダル ===== */
+function openModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  const el = document.getElementById('modal-' + id);
+  if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
+/* ===== キーワードポップアップ（タップ） ===== */
+document.addEventListener('click', function(e) {
+  const kw = e.target.closest('.kw:not(.blank)');
+  if (kw) { kw.classList.toggle('active'); return; }
+  document.querySelectorAll('.kw.active').forEach(el => el.classList.remove('active'));
+});
+
+/* ===== コンフェッティ ===== */
+function fireConfetti() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+  const colors = ['#f4d03f','#e74c3c','#1a6b22','#3498db','#8b2500','#ff69b4'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `position:fixed;top:0;left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;z-index:9999;animation:fall ${1.5+Math.random()*2}s linear ${Math.random()*0.8}s forwards;pointer-events:none`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+/* ===== 初期化 ===== */
+buildMQ('mq1');
+buildChecklist();
+buildFinal();
+</script>
+</body>
+</html>

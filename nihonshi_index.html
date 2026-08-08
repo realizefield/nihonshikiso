@@ -194,9 +194,9 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
 
   <!-- 進捗バー -->
   <div class="progress-wrap">
-    <div class="progress-lbl">📊 習熟度（全39単元）</div>
+    <div class="progress-lbl">📊 習熟度（全40単元）</div>
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progFill" style="width:0%"></div></div>
-    <div class="progress-pct" id="progPct"><span id="progLabel">0%　A評価 </span><span id="progNote">0 / 39</span> 単元</div>
+    <div class="progress-pct" id="progPct"><span id="progLabel">0%　A評価 </span><span id="progNote">0 / 40</span> 単元</div>
   </div>
 
   <!-- GAMBAガイド -->
@@ -233,7 +233,7 @@ canvas#cnf{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:
   <div class="drill-banner">
     <div class="drill-icon">📝</div>
     <div class="drill-info">
-      <h3>ドリル＆確認テスト（第１〜10章・全39単元）</h3>
+      <h3>ドリル＆確認テスト（第１〜10章・全40単元）</h3>
       <p>フラッシュカード・4択ドリル・確認テストで理解を定着させよう。単元ごとに分かれているので苦手なところを重点的に。</p>
     </div>
     <a class="drill-go" href="nihonshi_drill_nh01.html">単元①から →</a>
@@ -565,6 +565,9 @@ const UNITS = [
   {id:'ch39',num:'㊴', title:'日中戦争——終わりの見えない戦争へ',
    sub:['盧溝橋事件と近衛文麿の不拡大方針・南京占領と重慶への抗戦継続','東亜新秩序と汪兆銘政権・国家総動員法と大政翼賛会'],
    file:'nihonshi_ch39.html', drill:'nihonshi_drill_ch39.html', group:'ch10'},
+  {id:'ch40',num:'㊵', title:'日独伊三国同盟と日米交渉の決裂——開戦前夜',
+   sub:['日独伊三国同盟の締結・南進政策とABCD包囲網','日ソ中立条約と日米交渉の決裂・ハル・ノートと開戦への道'],
+   file:'nihonshi_ch40.html', drill:'nihonshi_drill_ch40.html', group:'ch10'},
 ];
 
 const DONE_FILES = [
@@ -574,7 +577,7 @@ const DONE_FILES = [
   'nihonshi_nh19.html','nihonshi_nh20.html',
   'nihonshi_nh21.html','nihonshi_nh22.html',
   'nihonshi_ch23.html','nihonshi_ch24.html','nihonshi_ch25.html',
-  'nihonshi_ch26.html','nihonshi_ch27.html','nihonshi_ch28.html','nihonshi_ch29.html','nihonshi_ch30.html','nihonshi_ch31.html','nihonshi_ch32.html','nihonshi_ch33.html','nihonshi_ch34.html','nihonshi_ch35.html','nihonshi_ch36.html','nihonshi_ch37.html','nihonshi_ch38.html','nihonshi_ch39.html'
+  'nihonshi_ch26.html','nihonshi_ch27.html','nihonshi_ch28.html','nihonshi_ch29.html','nihonshi_ch30.html','nihonshi_ch31.html','nihonshi_ch32.html','nihonshi_ch33.html','nihonshi_ch34.html','nihonshi_ch35.html','nihonshi_ch36.html','nihonshi_ch37.html','nihonshi_ch38.html','nihonshi_ch39.html','nihonshi_ch40.html'
 ];
 
 const LS_KEY = 'nihonshi_gamba_v1';
@@ -693,7 +696,7 @@ function render(){
     if(g==='a') ca++; else if(g==='b') cb++; else if(g==='c') cc++; else cn++;
   });
 
-  const total = 39;
+  const total = 40;
   document.getElementById('cnt-a').textContent = ca;
   document.getElementById('cnt-b').textContent = cb;
   document.getElementById('cnt-c').textContent = cc;
